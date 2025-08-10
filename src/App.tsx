@@ -12,7 +12,7 @@ const App: React.FC = () => {
   return (
     <OntologyProvider>
       <DemoProvider>
-        <Router basename="/breeze-in-action">
+        <Router basename={process.env.PUBLIC_URL}>
           <div className="app min-h-screen bg-gray-50">
             <Routes>
               <Route path="/" element={<LandingPage />} />

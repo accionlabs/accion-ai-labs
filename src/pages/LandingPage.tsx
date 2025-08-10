@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRightIcon, PlayIcon } from '@heroicons/react/24/outline';
+import { getPublicAssetUrl } from '../utils/assetHelper';
 
 interface LandingPageProps {
   customLogo?: string;
@@ -65,7 +66,7 @@ const LandingPage: React.FC<LandingPageProps> = ({
                   muted
                   playsInline
                 >
-                  <source src="/assets/ai-driven-ux-rationalization.mp4" type="video/mp4" />
+                  <source src={getPublicAssetUrl("assets/ai-driven-ux-rationalization.mp4")} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
                 

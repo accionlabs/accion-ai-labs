@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useOntology } from '../contexts/OntologyContext';
 import RationalizationProcessDiagram from './diagrams/RationalizationProcessDiagram';
 import AppHeader from './common/AppHeader';
+import { getPublicAssetUrl } from '../utils/assetHelper';
 
 const Dashboard: React.FC = () => {
 
@@ -99,7 +100,7 @@ const Dashboard: React.FC = () => {
           </p>
           <div className="border border-gray-200 rounded-lg p-4 bg-gray-50 overflow-x-auto">
             <img 
-              src="/assets/fourOntologies.svg" 
+              src={getPublicAssetUrl("assets/fourOntologies.svg")} 
               alt="Four Ontology Framework" 
               className="w-full h-auto"
               style={{ maxWidth: '100%', height: 'auto' }}
