@@ -45,13 +45,22 @@ const LandingPage: React.FC<LandingPageProps> = ({
               Identify inconsistencies, standardize components, and accelerate development 
               across your entire UI ecosystem.
             </p>
-            <Link
-              to="/dashboard"
-              className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg"
-            >
-              Launch Demo
-              <ArrowRightIcon className="ml-2 h-5 w-5" />
-            </Link>
+            <div className="flex justify-center gap-4">
+              <Link
+                to="/technical-debt"
+                className="inline-flex items-center px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-orange-500 to-red-500 rounded-xl hover:from-orange-600 hover:to-red-600 transition-all transform hover:scale-105 shadow-lg"
+              >
+                Technical Debt Analysis
+                <ArrowRightIcon className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                to="/portfolio"
+                className="inline-flex items-center px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg"
+              >
+                Portfolio Rationalization
+                <ArrowRightIcon className="ml-2 h-5 w-5" />
+              </Link>
+            </div>
           </div>
 
           {/* Demo Video/Screenshot */}

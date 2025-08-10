@@ -1,17 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useOntology } from '../contexts/OntologyContext';
-import RationalizationProcessDiagram from './diagrams/RationalizationProcessDiagram';
-import AppHeader from './common/AppHeader';
-import { getPublicAssetUrl } from '../utils/assetHelper';
+import RationalizationProcessDiagram from '../diagrams/RationalizationProcessDiagram';
+import { getPublicAssetUrl } from '../../utils/assetHelper';
 
-const Dashboard: React.FC = () => {
+const PortfolioOverview: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <AppHeader />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Page Header */}
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold text-gray-900">Portfolio Rationalization</h1>
+          <p className="mt-2 text-gray-600">
+            Analyze and optimize your product portfolio through systematic UX rationalization
+          </p>
+        </div>
+
         {/* Demo Scenario */}
         <div id="demo-scenario" className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
           <h2 className="text-xl font-semibold text-gray-900 mb-2">Demo Scenario: Enterprise Authentication</h2>
@@ -100,7 +104,7 @@ const Dashboard: React.FC = () => {
           </p>
           <div className="border border-gray-200 rounded-lg p-4 bg-gray-50 overflow-x-auto">
             <img 
-              src={getPublicAssetUrl("assets/fourOntologies.svg")} 
+              src={getPublicAssetUrl("assets/diagrams/fourOntologies.svg")} 
               alt="Four Ontology Framework" 
               className="w-full h-auto"
               style={{ maxWidth: '100%', height: 'auto' }}
@@ -113,7 +117,7 @@ const Dashboard: React.FC = () => {
           <h2 className="text-xl font-semibold text-gray-900 mb-6">Interactive Analysis Tools</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <Link 
-              to="/graph-explorer" 
+              to="/portfolio/graph-explorer" 
               className="block p-6 border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-md transition-all"
             >
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
@@ -125,7 +129,7 @@ const Dashboard: React.FC = () => {
             </Link>
 
             <Link 
-              to="/component-comparator" 
+              to="/portfolio/component-comparator" 
               className="block p-6 border border-gray-200 rounded-lg hover:border-purple-300 hover:shadow-md transition-all"
             >
               <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
@@ -137,7 +141,7 @@ const Dashboard: React.FC = () => {
             </Link>
 
             <Link 
-              to="/rationalization-roadmap" 
+              to="/portfolio/rationalization-roadmap" 
               className="block p-6 border border-gray-200 rounded-lg hover:border-green-300 hover:shadow-md transition-all"
             >
               <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
@@ -154,4 +158,4 @@ const Dashboard: React.FC = () => {
   );
 };
 
-export default Dashboard;
+export default PortfolioOverview;

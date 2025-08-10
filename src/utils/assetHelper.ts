@@ -27,8 +27,14 @@ export const getAssetUrl = (path: string): string => {
 // Helper specifically for public assets
 export const getPublicAssetUrl = (path: string): string => {
   // For assets in public folder
-  const cleanPath = path.startsWith('/') ? path.substring(1) : path;
-  return getAssetUrl(cleanPath);
+  const basePath = getBasePath();
+  
+  // Ensure path starts with /
+  const pathWithSlash = path.startsWith('/') ? path : `/${path}`;
+  
+  // In production (with basePath), concatenate basePath + path
+  // In development (no basePath), just return the path
+  return basePath ? `${basePath}${pathWithSlash}` : pathWithSlash;
 };
 
 export default {

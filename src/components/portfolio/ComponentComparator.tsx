@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { useOntology } from '../contexts/OntologyContext';
-import { OntologyNode } from '../types/ontology';
-import { OverlapAnalysisEngine, FunctionalOverlapAnalysis, CodeImpactByLevel } from '../utils/overlapAnalysisAlgorithm';
-import AppHeader from './common/AppHeader';
+import { useOntology } from '../../contexts/OntologyContext';
+import { OntologyNode } from '../../types/ontology';
+import { OverlapAnalysisEngine, FunctionalOverlapAnalysis, CodeImpactByLevel } from '../../utils/overlapAnalysisAlgorithm';
 
 interface ComponentGroup {
   level: string;
@@ -712,8 +711,6 @@ const ComponentComparator: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <AppHeader />
-      
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <h2 className="text-xl font-semibold text-gray-900">Graph Overlap Comparator</h2>
