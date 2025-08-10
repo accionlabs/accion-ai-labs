@@ -1,26 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { OntologyProvider } from './contexts/OntologyContext';
+import { DemoProvider } from './contexts/DemoContext';
+import LandingPage from './pages/LandingPage';
+import Dashboard from './components/Dashboard';
+import GraphExplorer from './components/GraphExplorer';
+import ComponentComparator from './components/ComponentComparator';
+import RationalizationRoadmap from './components/RationalizationRoadmap';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <OntologyProvider>
+      <DemoProvider>
+        <Router>
+          <div className="app min-h-screen bg-gray-50">
+            <Routes>
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/graph-explorer" element={<GraphExplorer />} />
+              <Route path="/component-comparator" element={<ComponentComparator />} />
+              <Route path="/rationalization-roadmap" element={<RationalizationRoadmap />} />
+            </Routes>
+          </div>
+        </Router>
+      </DemoProvider>
+    </OntologyProvider>
   );
-}
+};
 
 export default App;

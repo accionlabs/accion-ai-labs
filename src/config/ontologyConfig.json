@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "description": "Ontology nodes and edges configuration for UI Rationalization Demo",
+    "lastUpdated": "2025-01-06"
+  },
+  "nodes": {
+    "phoenix": {
+      "functional": [],
+      "design": [],
+      "architecture": [],
+      "code": []
+    },
+    "apollo": {
+      "functional": [],
+      "design": [],
+      "architecture": [],
+      "code": []
+    },
+    "voyager": {
+      "functional": [],
+      "design": [],
+      "architecture": [],
+      "code": []
+    }
+  },
+  "edges": {
+    "phoenix": [],
+    "apollo": [],
+    "voyager": [],
+    "cross_ontology": []
+  },
+  "edgeTypes": [
+    "implements",
+    "supports", 
+    "requires",
+    "triggers",
+    "validates",
+    "realizes",
+    "renders",
+    "manages"
+  ],
+  "nodeTypes": [
+    "functional",
+    "design",
+    "architecture", 
+    "code"
+  ],
+  "products": [
+    "phoenix",
+    "apollo",
+    "voyager"
+  ]
+}
