@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "./static/css/main.a099174d.css",
-    "main.js": "./static/js/main.a8c76951.js",
-    "static/js/453.2fb3670a.chunk.js": "./static/js/453.2fb3670a.chunk.js",
-    "index.html": "./index.html",
-    "main.a099174d.css.map": "./static/css/main.a099174d.css.map",
-    "main.a8c76951.js.map": "./static/js/main.a8c76951.js.map",
-    "453.2fb3670a.chunk.js.map": "./static/js/453.2fb3670a.chunk.js.map"
+    "main.css": "/breeze-in-action/static/css/main.a099174d.css",
+    "main.js": "/breeze-in-action/static/js/main.46e91319.js",
+    "static/js/453.2fb3670a.chunk.js": "/breeze-in-action/static/js/453.2fb3670a.chunk.js",
+    "index.html": "/breeze-in-action/index.html",
+    "main.a099174d.css.map": "/breeze-in-action/static/css/main.a099174d.css.map",
+    "main.46e91319.js.map": "/breeze-in-action/static/js/main.46e91319.js.map",
+    "453.2fb3670a.chunk.js.map": "/breeze-in-action/static/js/453.2fb3670a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a099174d.css",
-    "static/js/main.a8c76951.js"
+    "static/js/main.46e91319.js"
   ]
 }
