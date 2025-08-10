@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { useOntology } from '../../contexts/OntologyContext';
 import { OntologyNode } from '../../types/ontology';
 import { OverlapAnalysisEngine, FunctionalOverlapAnalysis, CodeImpactByLevel } from '../../utils/overlapAnalysisAlgorithm';

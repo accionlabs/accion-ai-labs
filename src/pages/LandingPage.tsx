@@ -35,15 +35,15 @@ const LandingPage: React.FC<LandingPageProps> = ({
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mt-6 mb-6">
-              UI Rationalization
+              Application Analysis & 
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-                Made Simple
+                Portfolio Rationalization
               </span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Transform your enterprise product portfolio with our four-ontology framework. 
-              Identify inconsistencies, standardize components, and accelerate development 
-              across your entire UI ecosystem.
+              Analyze a single application for technical debt or rationalize an entire portfolio 
+              of applications. Our AI-powered four-ontology framework identifies inconsistencies, 
+              measures technical debt, and provides actionable remediation strategies.
             </p>
             <div className="flex justify-center gap-4">
               <Link
@@ -82,7 +82,7 @@ const LandingPage: React.FC<LandingPageProps> = ({
                 {/* Title overlay at the top */}
                 <div className="absolute top-0 left-0 right-0 bg-gradient-to-b from-black/70 to-transparent p-8">
                   <h2 className="text-3xl lg:text-4xl font-bold text-white text-center">
-                    Breeze.AI UI Rationalization
+                    Breeze.AI Application Analysis Platform
                   </h2>
                 </div>
               </div>

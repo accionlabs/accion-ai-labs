@@ -160,12 +160,6 @@ const AgentAnalysisView: React.FC = () => {
         {/* Extraction Process Diagram */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 mb-8">
           <h2 className="text-xl font-semibold text-gray-900 mb-6">Extraction Process Flow</h2>
-          
-          <img 
-            src={getPublicAssetUrl('/assets/diagrams/agent-extraction-flow.svg')} 
-            alt="Agent-Based Extraction Process"
-            className="w-full max-w-5xl mx-auto mb-6"
-          />
 
           <div className="mt-6 grid md:grid-cols-2 gap-4">
             <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">

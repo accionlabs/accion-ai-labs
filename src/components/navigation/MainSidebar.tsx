@@ -96,8 +96,8 @@ const menuItems: MenuItem[] = [
         path: '/portfolio/component-comparator'
       },
       {
-        id: 'ux-roadmap',
-        label: 'UX Rationalization Roadmap',
+        id: 'rationalization-roadmap',
+        label: 'Rationalization Roadmap',
         icon: MapIcon,
         path: '/portfolio/rationalization-roadmap'
       }

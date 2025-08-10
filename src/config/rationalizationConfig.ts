@@ -14,7 +14,7 @@ export interface UnifiedNodeConfig {
   id: string;
   name: string;
   level: string;
-  type: 'design' | 'code';
+  type: 'design' | 'code' | 'architecture';
   description: string;
   sourceMappings: {
     phoenix: string[];

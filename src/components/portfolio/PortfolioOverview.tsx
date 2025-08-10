@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import RationalizationProcessDiagram from '../diagrams/RationalizationProcessDiagram';
 import { getPublicAssetUrl } from '../../utils/assetHelper';
 
 const PortfolioOverview: React.FC = () => {
@@ -83,29 +82,40 @@ const PortfolioOverview: React.FC = () => {
           </div>
         </div>
 
-        {/* UX Rationalization Process */}
+        {/* Step 1: Agent-Based Extraction Process */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-2">UX Rationalization Process</h2>
+          <div className="flex items-center mb-2">
+            <span className="bg-blue-100 text-blue-700 font-bold px-3 py-1 rounded-full mr-3">Step 1</span>
+            <h2 className="text-xl font-semibold text-gray-900">Agent-Based Extraction</h2>
+          </div>
           <p className="text-gray-600 mb-6">
-            A systematic four-step approach to transform your product portfolio from fragmented implementations 
-            to a unified, efficient design system.
+            AI agents automatically extract four ontology graphs (Code, Functional, Design, Architecture) from each product's 
+            codebase and documentation, creating structured knowledge graphs for analysis.
           </p>
-          <div className="border border-gray-200 rounded-lg p-4 bg-gray-50 overflow-x-auto">
-            <RationalizationProcessDiagram />
+          <div className="border border-gray-200 rounded-lg p-4 bg-gray-50">
+            <img 
+              src={getPublicAssetUrl("assets/diagrams/portfolio-extraction-process.svg")} 
+              alt="Portfolio Extraction Process" 
+              className="w-full h-auto"
+              style={{ maxWidth: '100%', height: 'auto' }}
+            />
           </div>
         </div>
 
-        {/* Four Ontology Framework */}
+        {/* Step 2: Portfolio Rationalization Process */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-2">Four Ontology Framework</h2>
+          <div className="flex items-center mb-2">
+            <span className="bg-green-100 text-green-700 font-bold px-3 py-1 rounded-full mr-3">Step 2</span>
+            <h2 className="text-xl font-semibold text-gray-900">Rationalization &amp; Strategy Selection</h2>
+          </div>
           <p className="text-gray-600 mb-6">
-            Our comprehensive framework maps your entire product ecosystem across four interconnected layers,
-            providing complete visibility into how your applications are structured.
+            The extracted graphs are analyzed for overlaps, then split into parallel design and architecture 
+            rationalization tracks. Three implementation strategies are compared showing their respective code impact.
           </p>
           <div className="border border-gray-200 rounded-lg p-4 bg-gray-50 overflow-x-auto">
             <img 
-              src={getPublicAssetUrl("assets/diagrams/fourOntologies.svg")} 
-              alt="Four Ontology Framework" 
+              src={getPublicAssetUrl("assets/diagrams/portfolio-rationalization-process.svg")} 
+              alt="Portfolio Rationalization Process" 
               className="w-full h-auto"
               style={{ maxWidth: '100%', height: 'auto' }}
             />
@@ -147,8 +157,8 @@ const PortfolioOverview: React.FC = () => {
               <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-green-600 text-xl">🎯</span>
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">UX Rationalization Roadmap</h3>
-              <p className="text-sm text-gray-600">Complete roadmap from overlap analysis to unified design system</p>
+              <h3 className="font-semibold text-gray-900 mb-2">Rationalization Roadmap</h3>
+              <p className="text-sm text-gray-600">Complete roadmap with strategy comparison, design & architecture tracks</p>
               <span className="inline-block mt-3 text-xs bg-green-100 text-green-600 px-2 py-1 rounded">Planning</span>
             </Link>
           </div>
