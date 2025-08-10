@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/breeze-in-action/static/css/main.aed17969.css",
-    "main.js": "/breeze-in-action/static/js/main.b9c93f5c.js",
+    "main.js": "/breeze-in-action/static/js/main.3d545c30.js",
     "static/js/453.2fb3670a.chunk.js": "/breeze-in-action/static/js/453.2fb3670a.chunk.js",
     "index.html": "/breeze-in-action/index.html",
     "main.aed17969.css.map": "/breeze-in-action/static/css/main.aed17969.css.map",
-    "main.b9c93f5c.js.map": "/breeze-in-action/static/js/main.b9c93f5c.js.map",
+    "main.3d545c30.js.map": "/breeze-in-action/static/js/main.3d545c30.js.map",
     "453.2fb3670a.chunk.js.map": "/breeze-in-action/static/js/453.2fb3670a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.aed17969.css",
-    "static/js/main.b9c93f5c.js"
+    "static/js/main.3d545c30.js"
   ]
 }

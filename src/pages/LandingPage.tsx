@@ -75,7 +75,7 @@ const LandingPage: React.FC<LandingPageProps> = ({
                   muted
                   playsInline
                 >
-                  <source src={getPublicAssetUrl("assets/ai-driven-ux-rationalization.mp4")} type="video/mp4" />
+                  <source src={getPublicAssetUrl("assets/videos/ai-driven-ux-rationalization.mp4")} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
                 
