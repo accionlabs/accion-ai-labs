@@ -3,21 +3,23 @@ import { Link, useLocation } from 'react-router-dom';
 import { useNavigation } from '../../contexts/NavigationContext';
 import { 
   HomeIcon, 
-  ChartBarIcon, 
-  BeakerIcon,
-  DocumentChartBarIcon,
-  MapIcon,
-  ScaleIcon,
-  CubeTransparentIcon,
+  CpuChipIcon,
+  LightBulbIcon,
+  WrenchScrewdriverIcon,
   PuzzlePieceIcon,
   ChevronRightIcon,
   ChevronLeftIcon,
   Bars3Icon,
   XMarkIcon,
-  CpuChipIcon,
+  PhoneIcon,
+  ChartBarIcon,
   SparklesIcon,
-  WrenchScrewdriverIcon,
-  ArrowTrendingUpIcon
+  ScaleIcon,
+  ArrowTrendingUpIcon,
+  CubeTransparentIcon,
+  DocumentChartBarIcon,
+  MapIcon,
+  RectangleStackIcon
 } from '@heroicons/react/24/outline';
 
 interface MenuItem {
@@ -36,79 +38,104 @@ const menuItems: MenuItem[] = [
     path: '/'
   },
   {
-    id: 'technical-debt',
-    label: 'Technical Debt Analysis',
-    icon: WrenchScrewdriverIcon,
+    id: 'core-technology',
+    label: 'Core Technology',
+    icon: CpuChipIcon,
+    path: '/core-technology'
+  },
+  {
+    id: 'solutions',
+    label: 'Solution Showcase',
+    icon: LightBulbIcon,
+    path: '/solutions'
+  },
+  {
+    id: 'live-examples',
+    label: 'Live Examples',
+    icon: RectangleStackIcon,
     children: [
       {
-        id: 'td-overview',
-        label: 'Overview',
-        icon: ChartBarIcon,
-        path: '/technical-debt'
+        id: 'technical-debt',
+        label: 'Technical Debt Analysis',
+        icon: WrenchScrewdriverIcon,
+        children: [
+          {
+            id: 'td-overview',
+            label: 'Overview',
+            icon: ChartBarIcon,
+            path: '/technical-debt'
+          },
+          {
+            id: 'agent-analysis',
+            label: 'Agent-Based Extraction',
+            icon: SparklesIcon,
+            path: '/technical-debt/agent-analysis'
+          },
+          {
+            id: 'td-graph',
+            label: 'Graph Explorer',
+            icon: CpuChipIcon,
+            path: '/technical-debt/graph-explorer'
+          },
+          {
+            id: 'debt-assessment',
+            label: 'Debt Assessment',
+            icon: ScaleIcon,
+            path: '/technical-debt/assessment'
+          },
+          {
+            id: 'remediation',
+            label: 'Remediation Roadmap',
+            icon: ArrowTrendingUpIcon,
+            path: '/technical-debt/remediation'
+          }
+        ]
       },
       {
-        id: 'agent-analysis',
-        label: 'Agent-Based Extraction',
-        icon: SparklesIcon,
-        path: '/technical-debt/agent-analysis'
-      },
-      {
-        id: 'td-graph',
-        label: 'Graph Explorer',
-        icon: CpuChipIcon,
-        path: '/technical-debt/graph-explorer'
-      },
-      {
-        id: 'debt-assessment',
-        label: 'Debt Assessment',
-        icon: ScaleIcon,
-        path: '/technical-debt/assessment'
-      },
-      {
-        id: 'remediation',
-        label: 'Remediation Roadmap',
-        icon: ArrowTrendingUpIcon,
-        path: '/technical-debt/remediation'
+        id: 'portfolio',
+        label: 'Portfolio Rationalization',
+        icon: PuzzlePieceIcon,
+        children: [
+          {
+            id: 'portfolio-overview',
+            label: 'Overview',
+            icon: DocumentChartBarIcon,
+            path: '/portfolio'
+          },
+          {
+            id: 'graph-explorer',
+            label: 'Ontology Graph Explorer',
+            icon: CubeTransparentIcon,
+            path: '/portfolio/graph-explorer'
+          },
+          {
+            id: 'component-comparator',
+            label: 'Component Comparator',
+            icon: ScaleIcon,
+            path: '/portfolio/component-comparator'
+          },
+          {
+            id: 'rationalization-roadmap',
+            label: 'Rationalization Roadmap',
+            icon: MapIcon,
+            path: '/portfolio/rationalization-roadmap'
+          }
+        ]
       }
     ]
   },
   {
-    id: 'portfolio',
-    label: 'Portfolio Rationalization',
-    icon: PuzzlePieceIcon,
-    children: [
-      {
-        id: 'portfolio-overview',
-        label: 'Overview',
-        icon: DocumentChartBarIcon,
-        path: '/portfolio'
-      },
-      {
-        id: 'graph-explorer',
-        label: 'Ontology Graph Explorer',
-        icon: CubeTransparentIcon,
-        path: '/portfolio/graph-explorer'
-      },
-      {
-        id: 'component-comparator',
-        label: 'Component Comparator',
-        icon: ScaleIcon,
-        path: '/portfolio/component-comparator'
-      },
-      {
-        id: 'rationalization-roadmap',
-        label: 'Rationalization Roadmap',
-        icon: MapIcon,
-        path: '/portfolio/rationalization-roadmap'
-      }
-    ]
+    id: 'contact',
+    label: 'Get Started',
+    icon: PhoneIcon,
+    path: '/contact'
   }
 ];
 
 const MainSidebar: React.FC = () => {
   const location = useLocation();
   const { sidebarMode, toggleSidebar } = useNavigation();
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['technical-debt', 'portfolio']));
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['live-examples']));
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleSection = (sectionId: string) => {
@@ -123,11 +150,7 @@ const MainSidebar: React.FC = () => {
 
   const isActive = (path?: string) => {
     if (!path) return false;
-    // Exact match
-    if (location.pathname === path) return true;
-    // For child paths, only mark as active if it's an exact child path match
-    // This prevents parent routes from being highlighted when child routes are active
-    return false;
+    return location.pathname === path || location.pathname.startsWith(path + '/');
   };
 
   const renderMenuItem = (item: MenuItem, depth = 0, isMobile = false) => {
@@ -174,23 +197,32 @@ const MainSidebar: React.FC = () => {
       );
     }
 
+    const marginClass = depth === 1 ? 'ml-8' : depth === 2 ? 'ml-12' : depth > 2 ? 'ml-16' : '';
+    
     return (
       <Link
         key={item.id}
         to={item.path || '#'}
         onClick={() => isMobile && setIsMobileMenuOpen(false)}
         className={`
-          flex items-center px-3 py-2 rounded-lg mb-1 transition-colors
-          ${depth > 0 ? 'ml-8' : ''}
+          flex items-center px-3 py-2 rounded-lg mb-1 transition-colors relative group
+          ${marginClass}
           ${isActive(item.path) 
             ? 'bg-blue-50 text-blue-600 border-l-4 border-blue-600' 
             : 'text-gray-700 hover:bg-gray-100'
           }
         `}
+        title={sidebarMode === 'collapsed' && !isMobile ? item.label : undefined}
       >
-        <Icon className={`h-5 w-5 mr-3 ${isActive(item.path) ? 'text-blue-600' : 'text-gray-500'}`} />
+        <Icon className={`h-5 w-5 ${(isMobile || sidebarMode === 'expanded') ? 'mr-3' : ''} ${isActive(item.path) ? 'text-blue-600' : 'text-gray-500'}`} />
         {(isMobile || sidebarMode === 'expanded') && (
           <span className="text-sm font-medium">{item.label}</span>
+        )}
+        {/* Tooltip for collapsed sidebar */}
+        {sidebarMode === 'collapsed' && !isMobile && (
+          <div className="absolute left-full ml-2 px-2 py-1 bg-gray-800 text-white text-xs rounded opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity whitespace-nowrap z-50">
+            {item.label}
+          </div>
         )}
       </Link>
     );

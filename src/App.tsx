@@ -14,6 +14,9 @@ import TechnicalDebtGraphExplorer from './components/technicalDebt/TechnicalDebt
 import AgentAnalysisView from './components/technicalDebt/AgentAnalysisView';
 import DebtAssessmentDashboard from './components/technicalDebt/DebtAssessmentDashboard';
 import RemediationRoadmap from './components/technicalDebt/RemediationRoadmap';
+import CoreTechnologyOverview from './components/coreTechnology/CoreTechnologyOverview';
+import SolutionShowcase from './components/solutions/SolutionShowcase';
+import ContactPage from './components/contact/ContactPage';
 
 const App: React.FC = () => {
   return (
@@ -24,6 +27,27 @@ const App: React.FC = () => {
             <Routes>
               {/* Landing page without sidebar */}
               <Route path="/" element={<LandingPage />} />
+              
+              {/* Core Technology Section */}
+              <Route path="/core-technology" element={
+                <AppLayout>
+                  <CoreTechnologyOverview />
+                </AppLayout>
+              } />
+              
+              {/* Solutions Showcase */}
+              <Route path="/solutions" element={
+                <AppLayout>
+                  <SolutionShowcase />
+                </AppLayout>
+              } />
+              
+              {/* Contact Page */}
+              <Route path="/contact" element={
+                <AppLayout>
+                  <ContactPage />
+                </AppLayout>
+              } />
               
               {/* Technical Debt Section */}
               <Route path="/technical-debt" element={
