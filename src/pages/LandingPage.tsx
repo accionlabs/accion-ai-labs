@@ -97,7 +97,7 @@ const LandingPage: React.FC<LandingPageProps> = ({
                     </div>
                     <div className="ml-4">
                       <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">Technical Debt Analysis</h3>
-                      <span className="text-xs text-gray-500">Live Example</span>
+                      <span className="text-xs text-gray-500">Deep Dive</span>
                     </div>
                   </div>
                   <p className="text-sm text-gray-600">
@@ -118,7 +118,7 @@ const LandingPage: React.FC<LandingPageProps> = ({
                     </div>
                     <div className="ml-4">
                       <h3 className="font-semibold text-gray-900 group-hover:text-purple-600">Portfolio Rationalization</h3>
-                      <span className="text-xs text-gray-500">Live Example</span>
+                      <span className="text-xs text-gray-500">Deep Dive</span>
                     </div>
                   </div>
                   <p className="text-sm text-gray-600">
