@@ -12,7 +12,7 @@ import {
   CircleStackIcon,
   ArrowPathIcon
 } from '@heroicons/react/24/outline';
-import AnimatedExtractionProcess from '../technicalDebt/AnimatedExtractionProcess';
+import GeneralAnimatedExtraction from './GeneralAnimatedExtraction';
 
 const CoreTechnologyOverview: React.FC = () => {
   return (
@@ -154,7 +154,7 @@ const CoreTechnologyOverview: React.FC = () => {
           </p>
           
           {/* Animated Extraction Process */}
-          <AnimatedExtractionProcess />
+          <GeneralAnimatedExtraction />
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
             <div>

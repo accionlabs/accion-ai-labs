@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 900 650"
+   version="1.1"
+   id="svg58"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <!-- Input Sources -->
+  <text
+     x="450"
+     y="30"
+     text-anchor="middle"
+     font-size="14px"
+     font-weight="600"
+     fill="#111827"
+     id="text1">Input Artifacts</text>
+  <g
+     id="input-artifacts">
+    <g
+       id="g60">
+      <rect
+         x="350"
+         y="50"
+         width="200"
+         height="80"
+         rx="8"
+         fill="#dbeafe"
+         stroke="#2563eb"
+         stroke-width="3"
+         id="rect1" />
+      <text
+         x="450"
+         y="75"
+         text-anchor="middle"
+         font-size="12px"
+         font-weight="600"
+         fill="#1e40af"
+         id="text2">Code Repository (Primary)</text>
+      <text
+         x="450"
+         y="95"
+         text-anchor="middle"
+         font-size="10px"
+         fill="#2563eb"
+         id="text3">• Source Files (Any Language)</text>
+      <text
+         x="450"
+         y="110"
+         text-anchor="middle"
+         font-size="10px"
+         fill="#2563eb"
+         id="text4">• Configurations • Dependencies</text>
+    </g>
+    <g
+       id="g58">
+      <rect
+         x="50"
+         y="60"
+         width="120"
+         height="60"
+         rx="6"
+         fill="#ede9fe"
+         stroke="#a78bfa"
+         stroke-width="1.5"
+         id="rect4" />
+      <text
+         x="110"
+         y="80"
+         text-anchor="middle"
+         font-size="10px"
+         font-weight="500"
+         fill="#5b21b6"
+         id="text5">Requirements</text>
+      <text
+         x="110"
+         y="95"
+         text-anchor="middle"
+         font-size="9px"
+         fill="#7c3aed"
+         id="text6">• PRDs</text>
+      <text
+         x="110"
+         y="108"
+         text-anchor="middle"
+         font-size="9px"
+         fill="#7c3aed"
+         id="text7">• User Stories</text>
+    </g>
+    <g
+       id="g59"
+       transform="translate(420.79113)">
+      <rect
+         x="180"
+         y="60"
+         width="120"
+         height="60"
+         rx="6"
+         fill="#fce7f3"
+         stroke="#f9a8d4"
+         stroke-width="1.5"
+         id="rect7" />
+      <text
+         x="240"
+         y="80"
+         text-anchor="middle"
+         font-size="10px"
+         font-weight="500"
+         fill="#831843"
+         id="text8">Design Docs</text>
+      <text
+         x="240"
+         y="95"
+         text-anchor="middle"
+         font-size="9px"
+         fill="#be185d"
+         id="text9">• Mockups</text>
+      <text
+         x="240"
+         y="108"
+         text-anchor="middle"
+         font-size="9px"
+         fill="#be185d"
+         id="text10">• Style Guides</text>
+    </g>
+    <g
+       id="g61"
+       transform="translate(160)">
+      <rect
+         x="600"
+         y="60"
+         width="120"
+         height="60"
+         rx="6"
+         fill="#d1fae5"
+         stroke="#34d399"
+         stroke-width="1.5"
+         id="rect10" />
+      <text
+         x="660"
+         y="80"
+         text-anchor="middle"
+         font-size="10px"
+         font-weight="500"
+         fill="#14532d"
+         id="text11">Architecture</text>
+      <text
+         x="660"
+         y="95"
+         text-anchor="middle"
+         font-size="9px"
+         fill="#15803d"
+         id="text12">• System Design</text>
+      <text
+         x="660"
+         y="108"
+         text-anchor="middle"
+         font-size="9px"
+         fill="#15803d"
+         id="text13">• API Specs</text>
+    </g>
+    <g
+       id="g62"
+       transform="translate(-541.01344)">
+      <rect
+         x="730"
+         y="60"
+         width="120"
+         height="60"
+         rx="6"
+         fill="#fef3c7"
+         stroke="#fcd34d"
+         stroke-width="1.5"
+         id="rect13" />
+      <text
+         x="790"
+         y="80"
+         text-anchor="middle"
+         font-size="10px"
+         font-weight="500"
+         fill="#78350f"
+         id="text14">User Manuals</text>
+      <text
+         x="790"
+         y="95"
+         text-anchor="middle"
+         font-size="9px"
+         fill="#92400e"
+         id="text15">• Guides</text>
+      <text
+         x="790"
+         y="108"
+         text-anchor="middle"
+         font-size="9px"
+         fill="#92400e"
+         id="text16">• Help Docs</text>
+    </g>
+  </g>
+  <!-- Primary Code Agent Processing -->
+  <!-- Code Graph Generation -->
+  <!-- Secondary Agents (receive Code Graph + Docs) -->
+  <g
+     id="functional-agent">
+    <path
+       d="M 350,375 240,470"
+       stroke="#2563eb"
+       stroke-width="2"
+       fill="none"
+       marker-end="url(#arrowhead-blue)"
+       stroke-dasharray="4, 2"
+       id="path25" />
+    <path
+       d="m 110,120 c 1.40766,217.7485 58.9241,123.89317 60,350"
+       stroke="#a78bfa"
+       stroke-width="1.5"
+       fill="none"
+       marker-end="url(#arrowhead-purple)"
+       id="path28" />
+    <path
+       d="m 248.98656,120 c 0,75.84925 -60.04509,292.19225 -58.98656,335.23912"
+       stroke="#fcd34d"
+       stroke-width="1.5"
+       fill="none"
+       marker-end="url(#arrowhead-yellow)"
+       id="path31" />
+    <g
+       id="g2">
+      <rect
+         x="100"
+         y="470"
+         width="140"
+         height="100"
+         rx="8"
+         fill="#ddd6fe"
+         stroke="#7c3aed"
+         stroke-width="2"
+         id="rect31" />
+      <circle
+         cx="170"
+         cy="500"
+         r="20"
+         fill="#7c3aed"
+         id="circle31" />
+      <text
+         x="170"
+         y="505"
+         text-anchor="middle"
+         font-size="12px"
+         font-weight="bold"
+         fill="#ffffff"
+         id="text31">F</text>
+      <text
+         x="170"
+         y="535"
+         text-anchor="middle"
+         font-size="11px"
+         font-weight="500"
+         fill="#4c1d95"
+         id="text32">Functional Agent</text>
+      <text
+         x="170"
+         y="550"
+         text-anchor="middle"
+         font-size="9px"
+         fill="#5b21b6"
+         id="text33">Maps requirements</text>
+      <text
+         x="170"
+         y="563"
+         text-anchor="middle"
+         font-size="9px"
+         fill="#5b21b6"
+         id="text34">to code graph</text>
+    </g>
+  </g>
+  <g
+     id="design-agent">
+    <path
+       d="m 450,420 v 50"
+       stroke="#2563eb"
+       stroke-width="2"
+       fill="none"
+       marker-end="url(#arrowhead-blue)"
+       stroke-dasharray="4, 2"
+       id="path26" />
+    <path
+       d="m 660.79113,120 c 0.55772,69.15666 -22.30614,400 -126.68945,400"
+       stroke="#f9a8d4"
+       stroke-width="1.5"
+       fill="none"
+       marker-end="url(#arrowhead-pink)"
+       id="path29" />
+    <g
+       id="g3">
+      <rect
+         x="380"
+         y="470"
+         width="140"
+         height="100"
+         rx="8"
+         fill="#fbcfe8"
+         stroke="#ec4899"
+         stroke-width="2"
+         id="rect34" />
+      <circle
+         cx="450"
+         cy="500"
+         r="20"
+         fill="#ec4899"
+         id="circle34" />
+      <text
+         x="450"
+         y="505"
+         text-anchor="middle"
+         font-size="12px"
+         font-weight="bold"
+         fill="#ffffff"
+         id="text35">D</text>
+      <text
+         x="450"
+         y="535"
+         text-anchor="middle"
+         font-size="11px"
+         font-weight="500"
+         fill="#831843"
+         id="text36">Design Agent</text>
+      <text
+         x="450"
+         y="550"
+         text-anchor="middle"
+         font-size="9px"
+         fill="#be185d"
+         id="text37">Maps UI patterns</text>
+      <text
+         x="450"
+         y="563"
+         text-anchor="middle"
+         font-size="9px"
+         fill="#be185d"
+         id="text38">to code components</text>
+    </g>
+  </g>
+  <g
+     id="architecture-agent">
+    <path
+       d="m 550,375 132.12744,95"
+       stroke="#2563eb"
+       stroke-width="2"
+       fill="none"
+       marker-end="url(#arrowhead-blue)"
+       stroke-dasharray="4, 2"
+       id="path27" />
+    <path
+       d="m 820,120 c 0,65.25266 -67.87256,225.88281 -67.87256,334.71816"
+       stroke="#34d399"
+       stroke-width="1.5"
+       fill="none"
+       marker-end="url(#arrowhead-green)"
+       id="path30" />
+    <g
+       id="g4">
+      <rect
+         x="682.12744"
+         y="470"
+         width="140"
+         height="100"
+         rx="8"
+         fill="#a7f3d0"
+         stroke="#10b981"
+         stroke-width="2"
+         id="rect38" />
+      <circle
+         cx="752.12744"
+         cy="500"
+         r="20"
+         fill="#10b981"
+         id="circle38" />
+      <text
+         x="752.12744"
+         y="505"
+         text-anchor="middle"
+         font-size="12px"
+         font-weight="bold"
+         fill="#ffffff"
+         id="text39">A</text>
+      <text
+         x="752.12744"
+         y="535"
+         text-anchor="middle"
+         font-size="11px"
+         font-weight="500"
+         fill="#14532d"
+         id="text40">Architecture Agent</text>
+      <text
+         x="752.12744"
+         y="550"
+         text-anchor="middle"
+         font-size="9px"
+         fill="#15803d"
+         id="text41">Maps layers</text>
+      <text
+         x="752.12744"
+         y="563"
+         text-anchor="middle"
+         font-size="9px"
+         fill="#15803d"
+         id="text42">to code structure</text>
+    </g>
+  </g>
+  <!-- Final Output -->
+  <g
+     id="knowledge-graph">
+    <!-- Arrows to final output -->
+    <path
+       d="m 170,570 180,55"
+       stroke="#9ca3af"
+       stroke-width="2"
+       fill="none"
+       marker-end="url(#arrowhead)"
+       id="path45" />
+    <path
+       d="M 450 570 L 450 610"
+       stroke="#9CA3AF"
+       stroke-width="2"
+       fill="none"
+       marker-end="url(#arrowhead)"
+       id="path46" />
+    <path
+       d="M 752.12744,570 550,625"
+       stroke="#9ca3af"
+       stroke-width="2"
+       fill="none"
+       marker-end="url(#arrowhead)"
+       id="path47" />
+    <rect
+       x="350"
+       y="610"
+       width="200"
+       height="30"
+       rx="8"
+       fill="url(#gradient)"
+       stroke="#4B5563"
+       stroke-width="2"
+       id="rect47" />
+    <text
+       x="450"
+       y="630"
+       text-anchor="middle"
+       font-size="13px"
+       font-weight="600"
+       fill="#ffffff"
+       id="text47">Unified Semantic Model</text>
+  </g>
+  <!-- Info Box -->
+  <g
+     id="code-agent">
+    <path
+       d="m 450,130 v 50"
+       stroke="#2563eb"
+       stroke-width="3"
+       fill="none"
+       marker-end="url(#arrowhead-blue)"
+       id="path16" />
+    <g
+       id="g1">
+      <rect
+         x="380"
+         y="180"
+         width="140"
+         height="100"
+         rx="8"
+         fill="#bfdbfe"
+         stroke="#2563eb"
+         stroke-width="3"
+         id="rect16" />
+      <circle
+         cx="450"
+         cy="210"
+         r="20"
+         fill="#2563eb"
+         id="circle16" />
+      <text
+         x="450"
+         y="215"
+         text-anchor="middle"
+         font-size="12px"
+         font-weight="bold"
+         fill="#ffffff"
+         id="text17">C</text>
+      <text
+         x="450"
+         y="245"
+         text-anchor="middle"
+         font-size="11px"
+         font-weight="600"
+         fill="#1e3a8a"
+         id="text18">Code Agent</text>
+      <text
+         x="450"
+         y="260"
+         text-anchor="middle"
+         font-size="9px"
+         fill="#1e40af"
+         id="text19">Parses analyzes</text>
+      <text
+         x="450"
+         y="273"
+         text-anchor="middle"
+         font-size="9px"
+         fill="#1e40af"
+         id="text20">source code</text>
+    </g>
+    <g
+       id="code-graph">
+      <!-- Arrow to Code Graph -->
+      <path
+         d="m 450,280 v 50"
+         stroke="#2563eb"
+         stroke-width="3"
+         fill="none"
+         marker-end="url(#arrowhead-blue)"
+         id="path21" />
+      <!-- Code Graph (GROUND TRUTH) -->
+      <rect
+         x="350"
+         y="330"
+         width="200"
+         height="90"
+         rx="8"
+         fill="#dbeafe"
+         stroke="#3b82f6"
+         stroke-width="3"
+         id="rect21" />
+      <text
+         x="450"
+         y="355"
+         text-anchor="middle"
+         font-size="12px"
+         font-weight="600"
+         fill="#1e3a8a"
+         id="text22">Code Graph</text>
+      <text
+         x="450"
+         y="375"
+         text-anchor="middle"
+         font-size="10px"
+         fill="#1e40af"
+         id="text23">17 nodes • 15 edges</text>
+      <rect
+         x="390"
+         y="385"
+         width="120"
+         height="25"
+         rx="12"
+         fill="#2563eb"
+         id="rect23" />
+      <text
+         x="450"
+         y="402"
+         text-anchor="middle"
+         font-size="11px"
+         font-weight="bold"
+         fill="#ffffff"
+         id="text24">GROUND TRUTH</text>
+    </g>
+    <g
+       id="info"
+       transform="translate(-739.28389,-0.75682301)">
+      <rect
+         x="750"
+         y="330"
+         width="130"
+         height="90"
+         rx="6"
+         fill="#fef3c7"
+         stroke="#f59e0b"
+         stroke-width="1.5"
+         id="rect48" />
+      <text
+         x="815"
+         y="350"
+         text-anchor="middle"
+         font-size="10px"
+         font-weight="600"
+         fill="#92400e"
+         id="text48">Key Insight</text>
+      <text
+         x="760"
+         y="370"
+         font-size="9px"
+         fill="#78350f"
+         id="text49">Code Graph serves</text>
+      <text
+         x="760"
+         y="383"
+         font-size="9px"
+         fill="#78350f"
+         id="text50">as ground truth for</text>
+      <text
+         x="760"
+         y="396"
+         font-size="9px"
+         fill="#78350f"
+         id="text51">all other ontology</text>
+      <text
+         x="760"
+         y="409"
+         font-size="9px"
+         fill="#78350f"
+         id="text52">extractions</text>
+    </g>
+  </g>
+  <!-- Arrow marker definitions -->
+  <defs
+     id="defs58">
+    <marker
+       id="arrowhead"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#9CA3AF"
+         id="polygon52" />
+    </marker>
+    <marker
+       id="arrowhead-blue"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#2563EB"
+         id="polygon53" />
+    </marker>
+    <marker
+       id="arrowhead-purple"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#A78BFA"
+         id="polygon54" />
+    </marker>
+    <marker
+       id="arrowhead-pink"
+       markerWidth="10"
+       markerHeight="7"
+       refX="1"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#F9A8D4"
+         id="polygon55" />
+    </marker>
+    <marker
+       id="arrowhead-green"
+       markerWidth="10"
+       markerHeight="7"
+       refX="0"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#34D399"
+         id="polygon56" />
+    </marker>
+    <marker
+       id="arrowhead-yellow"
+       markerWidth="10"
+       markerHeight="7"
+       refX="0"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#FCD34D"
+         id="polygon57" />
+    </marker>
+    <linearGradient
+       id="gradient"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="0%">
+      <stop
+         offset="0%"
+         style="stop-color:#3B82F6;stop-opacity:1"
+         id="stop57" />
+      <stop
+         offset="100%"
+         style="stop-color:#8B5CF6;stop-opacity:1"
+         id="stop58" />
+    </linearGradient>
+  </defs>
+</svg>

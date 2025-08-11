@@ -51,7 +51,7 @@ const menuItems: MenuItem[] = [
   },
   {
     id: 'live-examples',
-    label: 'Live Examples',
+    label: 'Solution Deep Dives',
     icon: RectangleStackIcon,
     children: [
       {
