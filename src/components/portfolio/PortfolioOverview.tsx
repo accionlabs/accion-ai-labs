@@ -6,7 +6,7 @@ const PortfolioOverview: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 py-4 sm:py-6 lg:py-8">
         {/* Page Header */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-gray-900">Portfolio Rationalization</h1>
@@ -22,7 +22,7 @@ const PortfolioOverview: React.FC = () => {
             Explore how three different products in an enterprise portfolio handle 
             user authentication, revealing opportunities for standardization and optimization.
           </p>
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="border border-gray-200 rounded-lg p-4 bg-red-50">
               <div className="flex items-center mb-3">
                 <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center mr-3">
@@ -125,7 +125,7 @@ const PortfolioOverview: React.FC = () => {
         {/* Interactive Tools */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
           <h2 className="text-xl font-semibold text-gray-900 mb-6">Interactive Analysis Tools</h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <Link 
               to="/portfolio/graph-explorer" 
               className="block p-6 border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-md transition-all"

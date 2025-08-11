@@ -11,7 +11,15 @@ interface NavigationContextType {
 const NavigationContext = createContext<NavigationContextType | undefined>(undefined);
 
 export const NavigationProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [sidebarMode, setSidebarMode] = useState<'expanded' | 'collapsed' | 'hidden'>('expanded');
+  // Set default sidebar mode based on screen size
+  const getInitialSidebarMode = (): 'expanded' | 'collapsed' | 'hidden' => {
+    if (typeof window !== 'undefined') {
+      return window.innerWidth < 768 ? 'hidden' : 'expanded';
+    }
+    return 'expanded';
+  };
+  
+  const [sidebarMode, setSidebarMode] = useState<'expanded' | 'collapsed' | 'hidden'>(getInitialSidebarMode);
   const [currentSection, setCurrentSection] = useState<'technical-debt' | 'portfolio' | null>(null);
 
   // Auto-collapse sidebar for specific routes will be handled by the AppLayout component

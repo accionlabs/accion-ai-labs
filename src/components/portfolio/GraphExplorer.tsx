@@ -394,7 +394,7 @@ const GraphExplorer: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 py-2 sm:py-4">
           <h2 className="text-xl font-semibold text-gray-900">Graph Explorer</h2>
           <p className="text-gray-600 text-sm mt-1">
             Interactive visualization of {getFilteredNodes().length} nodes and {getFilteredEdges().length} relationships
@@ -402,9 +402,9 @@ const GraphExplorer: React.FC = () => {
         </div>
       </div>
       
-      <div className="flex h-screen">
-        {/* Sidebar */}
-        <div className="w-80 bg-gray-50 border-r border-gray-200 p-6 overflow-y-auto">
+      <div className="flex flex-col md:flex-row h-screen">
+        {/* Tool Sidebar - collapsible on mobile */}
+        <div className="w-full md:w-80 bg-gray-50 border-r border-gray-200 p-4 md:p-6 overflow-y-auto md:h-full max-h-96 md:max-h-none">
           <FilterPanel 
             showInconsistencies={showInconsistencies}
             onToggleInconsistencies={() => setShowInconsistencies(!showInconsistencies)}
@@ -517,7 +517,7 @@ const GraphExplorer: React.FC = () => {
         </div>
 
         {/* Main Graph Area */}
-        <div className="flex-1 relative">
+        <div className="flex-1 relative min-h-96">
           {isLoading && (
             <div className="absolute inset-0 bg-white bg-opacity-75 flex items-center justify-center z-10">
               <div className="text-center">
@@ -527,12 +527,12 @@ const GraphExplorer: React.FC = () => {
             </div>
           )}
           
-          <div className="h-full bg-white">
-            <svg ref={svgRef} className="w-full h-full"></svg>
+          <div className="h-full bg-white min-h-96">
+            <svg ref={svgRef} className="w-full h-full min-h-96"></svg>
           </div>
 
           {/* Graph Controls */}
-          <div className="absolute top-4 right-4 bg-white rounded-lg shadow-sm border border-gray-200 p-2">
+          <div className="absolute top-4 right-4 bg-white rounded-lg shadow-sm border border-gray-200 p-2 hidden sm:block">
             <div className="text-xs text-gray-500 text-center mb-2">Graph Controls</div>
             <div className="space-y-1 text-xs text-gray-600">
               <div>• Drag nodes to reposition</div>
@@ -546,10 +546,39 @@ const GraphExplorer: React.FC = () => {
         </div>
 
         {/* Node Details Panel */}
-        <NodeDetailsPanel 
-          nodeId={selectedNodeId} 
-          onClose={() => setSelectedNodeId(null)} 
-        />
+        <div className="hidden md:block">
+          <NodeDetailsPanel 
+            nodeId={selectedNodeId} 
+            onClose={() => setSelectedNodeId(null)} 
+          />
+        </div>
+        
+        {/* Mobile Node Details Modal */}
+        {selectedNodeId && (
+          <div className="md:hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+            <div className="bg-white rounded-lg shadow-lg w-full max-w-md max-h-96 overflow-y-auto">
+              <div className="p-4 border-b border-gray-200">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-lg font-semibold">Node Details</h3>
+                  <button
+                    onClick={() => setSelectedNodeId(null)}
+                    className="p-2 hover:bg-gray-100 rounded"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div className="p-4">
+                <NodeDetailsPanel 
+                  nodeId={selectedNodeId} 
+                  onClose={() => setSelectedNodeId(null)} 
+                />
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

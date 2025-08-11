@@ -397,7 +397,7 @@ const ComponentComparator: React.FC = () => {
           </div>
         </div>
         <div className="p-4">
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
             <ComponentCard node={group.phoenix} product="phoenix" />
             <ComponentCard node={group.apollo} product="apollo" />
             <ComponentCard node={group.voyager} product="voyager" />
@@ -409,7 +409,7 @@ const ComponentComparator: React.FC = () => {
               <h5 className="text-sm font-semibold text-gray-900 mb-3">
                 {isOverlap ? 'Overlapping Nodes (Used by Algorithm)' : isDivergence ? 'Divergent Nodes (Why Algorithm Stopped)' : 'Nodes at This Level'}
               </h5>
-              <div className="grid md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
                 <div>
                   <h6 className="text-xs font-medium text-red-700 mb-2">
                     Phoenix {isOverlap ? 'Overlapping' : 'Nodes'} ({(group as any).allNodes.phoenix.length})
@@ -501,7 +501,7 @@ const ComponentComparator: React.FC = () => {
         {(group as any).allNodes && (
           <div>
             <h5 className="text-sm font-semibold text-gray-900 mb-3">All Impacted Code Nodes at {group.level.replace('_', ' ')} Level</h5>
-            <div className="grid md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
               <div>
                 <h6 className="text-xs font-medium text-red-700 mb-2">Phoenix ({(group as any).allNodes.phoenix.length} nodes)</h6>
                 <div className="space-y-1 max-h-48 overflow-y-auto">
@@ -578,7 +578,7 @@ const ComponentComparator: React.FC = () => {
         {(group as any).allNodes && (
           <div>
             <h5 className="text-sm font-semibold text-gray-900 mb-3">All Impacted Architecture Nodes at {group.level.replace('_', ' ')} Level</h5>
-            <div className="grid md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
               <div>
                 <h6 className="text-xs font-medium text-red-700 mb-2">Phoenix ({(group as any).allNodes.phoenix.length} nodes)</h6>
                 <div className="space-y-1 max-h-48 overflow-y-auto">
@@ -655,7 +655,7 @@ const ComponentComparator: React.FC = () => {
         {(group as any).allNodes && (
           <div>
             <h5 className="text-sm font-semibold text-gray-900 mb-3">All Impacted Design Nodes at {group.level.replace('_', ' ')} Level</h5>
-            <div className="grid md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
               <div>
                 <h6 className="text-xs font-medium text-red-700 mb-2">Phoenix ({(group as any).allNodes.phoenix.length} nodes)</h6>
                 <div className="space-y-1 max-h-48 overflow-y-auto">
@@ -711,7 +711,7 @@ const ComponentComparator: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 py-2 sm:py-4">
           <h2 className="text-xl font-semibold text-gray-900">Graph Overlap Comparator</h2>
           <p className="text-gray-600 text-sm mt-1">
             {overlapAnalysis ? (
@@ -729,7 +729,7 @@ const ComponentComparator: React.FC = () => {
         </div>
       </div>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 py-2 sm:py-4 lg:py-8">
         {/* Analysis Flow Indicator */}
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
           <h2 className="text-lg font-semibold text-gray-900 mb-4">Analysis Flow Progression</h2>
@@ -769,7 +769,7 @@ const ComponentComparator: React.FC = () => {
               </button>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-4">
               <div className="text-center p-4 bg-blue-50 rounded-lg">
                 <div className="text-2xl font-bold text-blue-600 capitalize">
                   Persona
@@ -815,7 +815,7 @@ const ComponentComparator: React.FC = () => {
                           </h4>
                           <span className="text-sm text-yellow-600">{divergence.divergenceReason}</span>
                         </div>
-                        <div className="grid md:grid-cols-3 gap-3 text-sm">
+                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 text-sm">
                           <div>
                             <div className="font-medium text-red-700">Phoenix Approach ({divergence.phoenixApproach.length})</div>
                             <div className="text-gray-600">

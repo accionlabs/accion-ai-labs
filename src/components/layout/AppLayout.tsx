@@ -20,9 +20,10 @@ const AppLayout: React.FC<AppLayoutProps> = ({ children, showToolSidebar }) => {
   }, [location.pathname]);
 
   const getMainContentMargin = () => {
+    // No margins on mobile, proper margins on desktop
     if (sidebarMode === 'hidden') return 'ml-0';
-    if (sidebarMode === 'collapsed') return 'ml-16';
-    return 'ml-64';
+    if (sidebarMode === 'collapsed') return 'ml-0 md:ml-16';
+    return 'ml-0 md:ml-64';
   };
 
   return (
@@ -32,6 +33,7 @@ const AppLayout: React.FC<AppLayoutProps> = ({ children, showToolSidebar }) => {
         className={`
           transition-all duration-300
           ${getMainContentMargin()}
+          pt-16 md:pt-0
         `}
       >
         {children}

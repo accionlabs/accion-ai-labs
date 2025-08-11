@@ -49,7 +49,7 @@ const AnimatedExtractionProcess: React.FC = () => {
     <AnimatedSVG
       svgPath={getPublicAssetUrl('/assets/diagrams/extraction-process-improved.svg')}
       animationSteps={animationSteps}
-      title="Interactive Extraction Process"
+      title=""
       stepLabels={stepLabels}
       showStepButtons={true}
       showProgressBar={true}

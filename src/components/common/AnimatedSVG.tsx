@@ -134,7 +134,7 @@ const AnimatedSVG: React.FC<AnimatedSVGProps> = ({
   const labels = stepLabels || defaultStepLabels;
 
   return (
-    <div className={`bg-white rounded-xl shadow-sm border border-gray-200 p-6 ${className}`}>
+    <div className={`${className}`}>
       {title && (
         <h3 className="text-lg font-semibold text-gray-900 mb-4">{title}</h3>
       )}
@@ -142,7 +142,7 @@ const AnimatedSVG: React.FC<AnimatedSVGProps> = ({
       {/* SVG Container */}
       <div 
         ref={svgContainerRef}
-        className="w-full mb-6 bg-gray-50 rounded-lg p-4 min-h-[400px] flex items-center justify-center"
+        className="w-full mb-4 bg-gray-50 rounded-lg p-2 sm:p-3 min-h-[250px] sm:min-h-[350px] md:min-h-[400px] flex items-center justify-center overflow-x-auto"
       >
         {!svgLoaded && (
           <div className="text-gray-500">Loading visualization...</div>
@@ -152,12 +152,12 @@ const AnimatedSVG: React.FC<AnimatedSVGProps> = ({
       {/* Controls */}
       <div className="space-y-4">
         {/* Navigation controls */}
-        <div className="flex items-center justify-center gap-4">
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4">
           <button
             onClick={handlePrevious}
             disabled={currentStep === 0}
             className={`
-              p-3 rounded-lg transition-colors flex items-center gap-2
+              p-2 sm:p-3 rounded-lg transition-colors flex items-center gap-1 sm:gap-2
               ${currentStep === 0 
                 ? 'bg-gray-100 text-gray-400 cursor-not-allowed' 
                 : 'bg-blue-600 hover:bg-blue-700 text-white'
@@ -165,12 +165,12 @@ const AnimatedSVG: React.FC<AnimatedSVGProps> = ({
             `}
             title="Previous Step"
           >
-            <ChevronLeftIcon className="h-5 w-5" />
-            <span className="font-medium">Previous</span>
+            <ChevronLeftIcon className="h-4 sm:h-5 w-4 sm:w-5" />
+            <span className="font-medium text-sm sm:text-base">Previous</span>
           </button>
 
-          <div className="px-4 py-2 bg-gray-100 rounded-lg">
-            <div className="text-lg font-semibold text-gray-900">
+          <div className="px-2 sm:px-4 py-1 sm:py-2 bg-gray-100 rounded-lg">
+            <div className="text-sm sm:text-lg font-semibold text-gray-900">
               Step {currentStep + 1} of {animationSteps.length}
             </div>
           </div>
@@ -179,7 +179,7 @@ const AnimatedSVG: React.FC<AnimatedSVGProps> = ({
             onClick={handleNext}
             disabled={currentStep === animationSteps.length - 1}
             className={`
-              p-3 rounded-lg transition-colors flex items-center gap-2
+              p-2 sm:p-3 rounded-lg transition-colors flex items-center gap-1 sm:gap-2
               ${currentStep === animationSteps.length - 1 
                 ? 'bg-gray-100 text-gray-400 cursor-not-allowed' 
                 : 'bg-blue-600 hover:bg-blue-700 text-white'
@@ -187,16 +187,16 @@ const AnimatedSVG: React.FC<AnimatedSVGProps> = ({
             `}
             title="Next Step"
           >
-            <span className="font-medium">Next</span>
-            <ChevronRightIcon className="h-5 w-5" />
+            <span className="font-medium text-sm sm:text-base">Next</span>
+            <ChevronRightIcon className="h-4 sm:h-5 w-4 sm:w-5" />
           </button>
           
           <button
             onClick={handleReset}
-            className="p-3 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors"
+            className="p-2 sm:p-3 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors"
             title="Reset to Step 1"
           >
-            <ArrowPathIcon className="h-5 w-5 text-gray-700" />
+            <ArrowPathIcon className="h-4 sm:h-5 w-4 sm:w-5 text-gray-700" />
           </button>
         </div>
 
@@ -221,14 +221,14 @@ const AnimatedSVG: React.FC<AnimatedSVGProps> = ({
 
         {/* Step buttons */}
         {showStepButtons && (
-          <div className={`grid gap-2`} style={{ gridTemplateColumns: `repeat(${Math.min(animationSteps.length, 8)}, 1fr)` }}>
+          <div className="grid gap-1 sm:gap-2 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
             {animationSteps.map((step, index) => {
               return (
                 <button
                   key={step.id}
                   onClick={() => handleStepClick(index)}
                   className={`
-                    p-3 rounded text-xs font-medium transition-all
+                    px-2 py-1.5 sm:p-2 md:p-3 rounded text-xs font-medium transition-all
                     ${index === currentStep 
                       ? 'bg-blue-600 text-white' 
                       : index <= currentStep 
@@ -238,9 +238,9 @@ const AnimatedSVG: React.FC<AnimatedSVGProps> = ({
                   `}
                   title={step.description}
                 >
-                  <div className="font-semibold">{labels[index]}</div>
+                  <div className="font-semibold text-xs">{labels[index]}</div>
                   {labels[index] !== `Step ${index + 1}` && (
-                    <div className="text-xs opacity-75 mt-1">Step {index + 1}</div>
+                    <div className="text-xs opacity-75 mt-0.5 hidden sm:block">Step {index + 1}</div>
                   )}
                 </button>
               );

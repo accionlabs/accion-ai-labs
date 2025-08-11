@@ -318,7 +318,7 @@ const TechnicalDebtGraphExplorer: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 py-2 sm:py-4">
           <h2 className="text-xl font-semibold text-gray-900">Phoenix CRM Graph Explorer</h2>
           <p className="text-gray-600 text-sm mt-1">
             Visualizing complete four-ontology structure and code relationships
@@ -326,9 +326,9 @@ const TechnicalDebtGraphExplorer: React.FC = () => {
         </div>
       </div>
 
-      <div className="flex h-[calc(100vh-8rem)]">
-        {/* Filter Panel */}
-        <div className="w-64 bg-white border-r border-gray-200 p-4 overflow-y-auto">
+      <div className="flex flex-col md:flex-row h-[calc(100vh-8rem)]">
+        {/* Filter Panel - collapsible on mobile */}
+        <div className="w-full md:w-64 bg-white border-r border-gray-200 p-4 overflow-y-auto md:h-full max-h-96 md:max-h-none">
           <h3 className="font-semibold text-gray-900 mb-4">Ontology Filters</h3>
           
           <div className="space-y-3">
@@ -448,12 +448,12 @@ const TechnicalDebtGraphExplorer: React.FC = () => {
         </div>
 
         {/* Graph Area */}
-        <div className="flex-1 relative">
-          <svg ref={svgRef} className="w-full h-full"></svg>
+        <div className="flex-1 relative min-h-96">
+          <svg ref={svgRef} className="w-full h-full min-h-96"></svg>
           
-          {/* Node Details */}
+          {/* Node Details - Desktop */}
           {selectedNode && (
-            <div className="absolute top-4 right-4 bg-white rounded-lg shadow-lg p-4 w-80">
+            <div className="hidden md:block absolute top-4 right-4 bg-white rounded-lg shadow-lg p-4 w-80">
               <h3 className="font-semibold text-gray-900 mb-2">{selectedNode.name}</h3>
               <div className="space-y-1 text-sm">
                 <div><span className="font-medium">Type:</span> {selectedNode.type}</div>
@@ -509,6 +509,48 @@ const TechnicalDebtGraphExplorer: React.FC = () => {
               >
                 Close
               </button>
+            </div>
+          )}
+          
+          {/* Node Details - Mobile Modal */}
+          {selectedNode && (
+            <div className="md:hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+              <div className="bg-white rounded-lg shadow-lg w-full max-w-md max-h-96 overflow-y-auto">
+                <div className="p-4 border-b border-gray-200">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-lg font-semibold">Node Details</h3>
+                    <button
+                      onClick={() => setSelectedNode(null)}
+                      className="p-2 hover:bg-gray-100 rounded"
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <h3 className="font-semibold text-gray-900 mb-2">{selectedNode.name}</h3>
+                  <div className="space-y-1 text-sm">
+                    <div><span className="font-medium">Type:</span> {selectedNode.type}</div>
+                    <div><span className="font-medium">Subtype:</span> {selectedNode.subtype}</div>
+                    <div><span className="font-medium">File:</span> <code className="text-xs bg-gray-100 px-1">{selectedNode.file}</code></div>
+                    <div><span className="font-medium">Language:</span> {selectedNode.language}</div>
+                    {selectedNode.framework && (
+                      <div><span className="font-medium">Framework:</span> {selectedNode.framework}</div>
+                    )}
+                    <div><span className="font-medium">Lines of Code:</span> {selectedNode.linesOfCode}</div>
+                    {selectedNode.complexity && (
+                      <div>
+                        <span className="font-medium">Complexity:</span> 
+                        <span className={`ml-2 ${selectedNode.complexity > 10 ? 'text-red-600 font-bold' : ''}`}>
+                          {selectedNode.complexity}
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
             </div>
           )}
         </div>

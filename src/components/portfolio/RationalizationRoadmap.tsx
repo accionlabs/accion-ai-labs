@@ -1084,7 +1084,7 @@ const RationalizationRoadmap: React.FC = () => {
     <div className="min-h-screen bg-gray-50">
       
       <div className="bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 py-2 sm:py-4">
           <h2 className="text-xl font-semibold text-gray-900">Rationalization Roadmap</h2>
           <p className="text-gray-600 text-sm mt-1">
             Strategy comparison, design & architecture rationalization tracks for unified portfolio
@@ -1092,7 +1092,7 @@ const RationalizationRoadmap: React.FC = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 py-2 sm:py-4 lg:py-8">
         {/* Rationalization Strategy Comparison */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
           <h2 className="text-xl font-semibold text-gray-900 mb-6">Rationalization Strategy Comparison</h2>
@@ -1111,7 +1111,7 @@ const RationalizationRoadmap: React.FC = () => {
                 </div>
               </div>
               
-              <div className="grid md:grid-cols-2 gap-4 mb-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div>
                   <h4 className="text-sm font-semibold text-gray-700 mb-2">Approach</h4>
                   <p className="text-sm text-gray-600">Replace all three products with unified solution at once</p>
@@ -1122,7 +1122,7 @@ const RationalizationRoadmap: React.FC = () => {
                 </div>
               </div>
               
-              <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <h4 className="text-sm font-semibold text-gray-700 mb-2">Design Impact</h4>
                   <ul className="text-sm text-gray-600 space-y-1">
@@ -1159,7 +1159,7 @@ const RationalizationRoadmap: React.FC = () => {
                 </div>
               </div>
               
-              <div className="grid md:grid-cols-2 gap-4 mb-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div>
                   <h4 className="text-sm font-semibold text-gray-700 mb-2">Approach</h4>
                   <p className="text-sm text-gray-600">Migrate products one by one, starting with Phoenix (most legacy)</p>
@@ -1170,7 +1170,7 @@ const RationalizationRoadmap: React.FC = () => {
                 </div>
               </div>
               
-              <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <h4 className="text-sm font-semibold text-gray-700 mb-2">Design Impact</h4>
                   <ul className="text-sm text-gray-600 space-y-1">
@@ -1211,7 +1211,7 @@ const RationalizationRoadmap: React.FC = () => {
                 </div>
               </div>
               
-              <div className="grid md:grid-cols-2 gap-4 mb-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div>
                   <h4 className="text-sm font-semibold text-gray-700 mb-2">Approach</h4>
                   <p className="text-sm text-gray-600">Build unified components alongside existing, gradually replace</p>
@@ -1222,7 +1222,7 @@ const RationalizationRoadmap: React.FC = () => {
                 </div>
               </div>
               
-              <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <h4 className="text-sm font-semibold text-gray-700 mb-2">Design Impact</h4>
                   <ul className="text-sm text-gray-600 space-y-1">
@@ -1256,7 +1256,7 @@ const RationalizationRoadmap: React.FC = () => {
 
         {/* View Selector */}
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 mb-6">
-          <div className="flex space-x-4">
+          <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
             <button
               onClick={() => setSelectedView('architecture')}
               className={`px-4 py-2 rounded-lg font-medium transition-colors ${
@@ -1300,7 +1300,7 @@ const RationalizationRoadmap: React.FC = () => {
                 Consolidated architecture patterns derived from overlapping functionality analysis
               </p>
               
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {/* Service Layer */}
                 <div className="border border-green-200 bg-green-50 rounded-lg p-4">
                   <div className="flex items-center justify-between mb-2">
@@ -1449,7 +1449,7 @@ const RationalizationRoadmap: React.FC = () => {
               <p className="text-sm text-gray-600 mb-4">
                 Mapping from existing architecture components to unified architecture patterns
               </p>
-              <div className="overflow-x-auto">
+              <div className="overflow-x-auto -mx-4 px-4">
                 <svg ref={architectureMappingRef}></svg>
               </div>
             </div>
@@ -1463,7 +1463,7 @@ const RationalizationRoadmap: React.FC = () => {
                 <div className="border-l-4 border-blue-500 pl-4">
                   <h3 className="font-semibold text-gray-900 mb-2">Phase 1: Service Consolidation</h3>
                   <p className="text-sm text-gray-600 mb-3">Consolidate authentication and user management services</p>
-                  <div className="grid md:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className="bg-gray-50 rounded p-3">
                       <h4 className="text-xs font-semibold text-gray-700 mb-1">Phoenix</h4>
                       <ul className="text-xs text-gray-600 space-y-1">
@@ -1492,7 +1492,7 @@ const RationalizationRoadmap: React.FC = () => {
                 <div className="border-l-4 border-orange-500 pl-4">
                   <h3 className="font-semibold text-gray-900 mb-2">Phase 2: API Unification</h3>
                   <p className="text-sm text-gray-600 mb-3">Create unified API gateway with versioned endpoints</p>
-                  <div className="grid md:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className="bg-gray-50 rounded p-3">
                       <h4 className="text-xs font-semibold text-gray-700 mb-1">API Design</h4>
                       <ul className="text-xs text-gray-600 space-y-1">
@@ -1521,7 +1521,7 @@ const RationalizationRoadmap: React.FC = () => {
                 <div className="border-l-4 border-green-500 pl-4">
                   <h3 className="font-semibold text-gray-900 mb-2">Phase 3: Data Layer Integration</h3>
                   <p className="text-sm text-gray-600 mb-3">Implement unified data access patterns</p>
-                  <div className="grid md:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className="bg-gray-50 rounded p-3">
                       <h4 className="text-xs font-semibold text-gray-700 mb-1">Data Abstraction</h4>
                       <ul className="text-xs text-gray-600 space-y-1">
@@ -1556,7 +1556,7 @@ const RationalizationRoadmap: React.FC = () => {
             {/* Unified Design Components */}
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
               <h2 className="text-lg font-semibold text-gray-900 mb-4">Unified Design System Components</h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {unifiedDesignNodes.map(node => (
                   <div key={node.id} className="border border-purple-200 bg-purple-50 rounded-lg p-4">
                     <div className="flex items-center justify-between mb-2">
@@ -1582,7 +1582,7 @@ const RationalizationRoadmap: React.FC = () => {
             {/* Design Mapping Visualization */}
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
               <h2 className="text-lg font-semibold text-gray-900 mb-4">Design Mapping Visualization</h2>
-              <div className="overflow-x-auto">
+              <div className="overflow-x-auto -mx-4 px-4">
                 <svg ref={designMappingRef}></svg>
               </div>
             </div>
@@ -1595,7 +1595,7 @@ const RationalizationRoadmap: React.FC = () => {
             {/* Unified Code Structure */}
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
               <h2 className="text-lg font-semibold text-gray-900 mb-4">Unified Code Implementation</h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {unifiedCodeNodes.map(node => {
                   const totalMappings = node.sourceMappings.phoenix.length + 
                                        node.sourceMappings.apollo.length + 
@@ -1635,7 +1635,7 @@ const RationalizationRoadmap: React.FC = () => {
               <p className="text-sm text-gray-600 mb-4">
                 Code mappings are derived from design connections: Existing Code → Existing Design → Unified Design → Unified Code
               </p>
-              <div className="overflow-x-auto">
+              <div className="overflow-x-auto -mx-4 px-4">
                 <svg ref={codeMappingRef}></svg>
               </div>
             </div>
@@ -1657,7 +1657,7 @@ const RationalizationRoadmap: React.FC = () => {
                 <div className="flex-1">
                   <h3 className="font-semibold text-gray-900 mb-2">Phase 1: Architecture Foundation</h3>
                   <p className="text-sm text-gray-600 mb-3">Establish unified architecture patterns and service boundaries</p>
-                  <div className="grid md:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className="bg-gray-50 rounded p-3">
                       <h4 className="text-xs font-semibold text-gray-700 mb-1">Services Layer</h4>
                       <ul className="text-xs text-gray-600 space-y-1">
@@ -1694,7 +1694,7 @@ const RationalizationRoadmap: React.FC = () => {
                 <div className="flex-1">
                   <h3 className="font-semibold text-gray-900 mb-2">Phase 2: Unified Design System</h3>
                   <p className="text-sm text-gray-600 mb-3">Create atomic design components consolidating UI patterns</p>
-                  <div className="grid md:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className="bg-gray-50 rounded p-3">
                       <h4 className="text-xs font-semibold text-gray-700 mb-1">Component Library</h4>
                       <ul className="text-xs text-gray-600 space-y-1">
@@ -1731,7 +1731,7 @@ const RationalizationRoadmap: React.FC = () => {
                 <div className="flex-1">
                   <h3 className="font-semibold text-gray-900 mb-2">Phase 3: Code Consolidation</h3>
                   <p className="text-sm text-gray-600 mb-3">Implement unified components and services across products</p>
-                  <div className="grid md:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className="bg-gray-50 rounded p-3">
                       <h4 className="text-xs font-semibold text-gray-700 mb-1">Frontend Code</h4>
                       <ul className="text-xs text-gray-600 space-y-1">
@@ -1768,7 +1768,7 @@ const RationalizationRoadmap: React.FC = () => {
                 <div className="flex-1">
                   <h3 className="font-semibold text-gray-900 mb-2">Phase 4: Migration & Deployment</h3>
                   <p className="text-sm text-gray-600 mb-3">Gradual migration following selected rationalization strategy</p>
-                  <div className="grid md:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className="bg-gray-50 rounded p-3">
                       <h4 className="text-xs font-semibold text-gray-700 mb-1">Strangler Fig Pattern</h4>
                       <ul className="text-xs text-gray-600 space-y-1">

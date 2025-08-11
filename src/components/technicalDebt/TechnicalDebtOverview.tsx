@@ -19,7 +19,7 @@ const TechnicalDebtOverview: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 py-4 sm:py-6 lg:py-8">
         {/* Page Header */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-gray-900">Technical Debt Analysis Process</h1>
@@ -29,8 +29,8 @@ const TechnicalDebtOverview: React.FC = () => {
         </div>
 
         {/* Process Overview */}
-        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-6">How the Process Works</h2>
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-3 sm:p-6 lg:p-8 mb-8">
+          <h2 className="text-xl font-semibold text-gray-900 mb-4 sm:mb-6">How the Process Works</h2>
           
           {/* Animated Extraction Process */}
           <AnimatedExtractionProcess />
@@ -41,7 +41,7 @@ const TechnicalDebtOverview: React.FC = () => {
               four interconnected ontologies from your codebase and documentation:
             </p>
             
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">1. Input Collection</h3>
                 <p className="text-sm">
@@ -81,7 +81,7 @@ const TechnicalDebtOverview: React.FC = () => {
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
           <h2 className="text-xl font-semibold text-gray-900 mb-6">The Four Ontologies</h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="border-l-4 border-blue-500 pl-4">
               <div className="flex items-center mb-2">
                 <CodeBracketIcon className="h-6 w-6 text-blue-600 mr-2" />
@@ -132,7 +132,7 @@ const TechnicalDebtOverview: React.FC = () => {
         <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border border-blue-200 p-6 mb-8">
           <h2 className="text-xl font-semibold text-gray-900 mb-6">What This Process Identifies</h2>
           
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div>
               <h3 className="font-semibold text-gray-900 mb-3 flex items-center">
                 <span className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-2">
@@ -207,7 +207,7 @@ const TechnicalDebtOverview: React.FC = () => {
         {/* Analysis Tools */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
           <h2 className="text-xl font-semibold text-gray-900 mb-6">Explore the Analysis Components</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <Link 
               to="/technical-debt/agent-analysis"
               className="block p-4 border-2 border-gray-200 rounded-lg hover:border-blue-400 hover:shadow-md transition-all group"
