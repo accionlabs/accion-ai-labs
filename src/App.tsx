@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { OntologyProvider } from './contexts/OntologyContext';
 import { DemoProvider } from './contexts/DemoContext';
 import { NavigationProvider } from './contexts/NavigationContext';
+import ScrollToTop from './components/common/ScrollToTop';
 import AppLayout from './components/layout/AppLayout';
 import LandingPage from './pages/LandingPage';
 import PortfolioOverview from './components/portfolio/PortfolioOverview';
@@ -24,6 +25,7 @@ const App: React.FC = () => {
       <DemoProvider>
         <NavigationProvider>
           <Router basename={process.env.PUBLIC_URL}>
+            <ScrollToTop />
             <Routes>
               {/* Landing page without sidebar */}
               <Route path="/" element={<LandingPage />} />
