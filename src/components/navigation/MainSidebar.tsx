@@ -169,15 +169,16 @@ const MainSidebar: React.FC = () => {
           <button
             onClick={() => !isMobile && toggleSection(item.id)}
             className={`
-              w-full flex items-center justify-between px-3 py-2 rounded-lg
+              w-full flex items-center justify-between px-3 py-2 rounded-lg relative group
               ${hasActiveChild ? 'bg-blue-50 text-blue-700' : 'text-gray-700'} 
               hover:bg-gray-100 transition-colors
               ${depth > 0 ? 'ml-3' : ''}
               ${isMobile ? 'cursor-default' : ''}
             `}
+            title={sidebarMode === 'collapsed' && !isMobile ? item.label : undefined}
           >
             <div className="flex items-center">
-              <Icon className={`h-5 w-5 mr-3 ${hasActiveChild ? 'text-blue-600' : 'text-gray-500'}`} />
+              <Icon className={`h-5 w-5 ${(isMobile || sidebarMode === 'expanded') ? 'mr-3' : ''} ${hasActiveChild ? 'text-blue-600' : 'text-gray-500'}`} />
               {(isMobile || sidebarMode === 'expanded') && (
                 <span className="text-sm font-medium">{item.label}</span>
               )}
@@ -186,6 +187,12 @@ const MainSidebar: React.FC = () => {
               <ChevronRightIcon 
                 className={`h-4 w-4 text-gray-400 transition-transform ${isExpanded ? 'rotate-90' : ''}`}
               />
+            )}
+            {/* Tooltip for collapsed sidebar */}
+            {sidebarMode === 'collapsed' && !isMobile && (
+              <div className="absolute left-full ml-2 px-2 py-1 bg-gray-800 text-white text-xs rounded opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity whitespace-nowrap z-50">
+                {item.label}
+              </div>
             )}
           </button>
           {((isMobile || (isExpanded && sidebarMode === 'expanded'))) && item.children && (
