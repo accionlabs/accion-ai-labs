@@ -19,7 +19,8 @@ import {
   CubeTransparentIcon,
   DocumentChartBarIcon,
   MapIcon,
-  RectangleStackIcon
+  RectangleStackIcon,
+  BeakerIcon
 } from '@heroicons/react/24/outline';
 
 interface MenuItem {
@@ -119,6 +120,12 @@ const menuItems: MenuItem[] = [
             label: 'Rationalization Roadmap',
             icon: MapIcon,
             path: '/portfolio/rationalization-roadmap'
+          },
+          {
+            id: 'unified-product',
+            label: 'Unified Product View',
+            icon: BeakerIcon,
+            path: '/portfolio/unified-product'
           }
         ]
       }

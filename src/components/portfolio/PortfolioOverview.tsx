@@ -161,6 +161,18 @@ const PortfolioOverview: React.FC = () => {
               <p className="text-sm text-gray-600">Complete roadmap with strategy comparison, design & architecture tracks</p>
               <span className="inline-block mt-3 text-xs bg-green-100 text-green-600 px-2 py-1 rounded">Planning</span>
             </Link>
+
+            <Link 
+              to="/portfolio/unified-product" 
+              className="block p-6 border border-gray-200 rounded-lg hover:border-emerald-300 hover:shadow-md transition-all"
+            >
+              <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-emerald-600 text-xl">🔬</span>
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">Unified Product View</h3>
+              <p className="text-sm text-gray-600">See how rationalization creates a unified product combining all functionality</p>
+              <span className="inline-block mt-3 text-xs bg-emerald-100 text-emerald-600 px-2 py-1 rounded">Outcome</span>
+            </Link>
           </div>
         </div>
       </div>

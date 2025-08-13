@@ -10,6 +10,7 @@ import PortfolioOverview from './components/portfolio/PortfolioOverview';
 import GraphExplorer from './components/portfolio/GraphExplorer';
 import ComponentComparator from './components/portfolio/ComponentComparator';
 import RationalizationRoadmap from './components/portfolio/RationalizationRoadmap';
+import UnifiedProductView from './components/portfolio/UnifiedProductView';
 import TechnicalDebtOverview from './components/technicalDebt/TechnicalDebtOverview';
 import TechnicalDebtGraphExplorer from './components/technicalDebt/TechnicalDebtGraphExplorer';
 import AgentAnalysisView from './components/technicalDebt/AgentAnalysisView';
@@ -97,6 +98,11 @@ const App: React.FC = () => {
               <Route path="/portfolio/rationalization-roadmap" element={
                 <AppLayout>
                   <RationalizationRoadmap />
+                </AppLayout>
+              } />
+              <Route path="/portfolio/unified-product" element={
+                <AppLayout>
+                  <UnifiedProductView />
                 </AppLayout>
               } />
               
