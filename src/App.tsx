@@ -27,7 +27,8 @@ import CustomerServiceDeepDive from './components/solutions/CustomerServiceDeepD
 import CustomerServiceOverview from './components/solutions/customerService/CustomerServiceOverview';
 import AppModernizationShowcase from './components/solutions/AppModernizationShowcase';
 import DataEngineeringShowcase from './components/solutions/DataEngineeringShowcase';
-import AgentsAsServiceShowcase from './components/solutions/AgentsAsServiceShowcase';
+import TechnicalDebtShowcase from './components/solutions/TechnicalDebtShowcase';
+import PortfolioRationalizationShowcase from './components/solutions/PortfolioRationalizationShowcase';
 import ASIMOVOverview from './components/solutions/asimov/ASIMOVOverview';
 import DiscoveryAnalysis from './components/solutions/asimov/DiscoveryAnalysis';
 import TransformationEngine from './components/solutions/asimov/TransformationEngine';
@@ -123,9 +124,14 @@ const App: React.FC = () => {
                   <DataEngineeringShowcase />
                 </AppLayout>
               } />
-              <Route path="/solutions/agents-as-service" element={
+              <Route path="/solutions/technical-debt" element={
                 <AppLayout>
-                  <AgentsAsServiceShowcase />
+                  <TechnicalDebtShowcase />
+                </AppLayout>
+              } />
+              <Route path="/solutions/portfolio-rationalization" element={
+                <AppLayout>
+                  <PortfolioRationalizationShowcase />
                 </AppLayout>
               } />
               

@@ -22,12 +22,12 @@ const CoreTechnologyOverview: React.FC = () => {
         {/* Page Header */}
         <div className="mb-8">
           <div className="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold mb-4">
-            Our Methodology
+            Our Platform
           </div>
-          <h1 className="text-3xl font-bold text-gray-900">The Breeze.AI Approach</h1>
+          <h1 className="text-3xl font-bold text-gray-900">The Breeze.AI Platform</h1>
           <p className="mt-2 text-gray-600 max-w-3xl">
-            Building reliable AI agents for enterprise software requires deep context. We've developed 
-            a graph-based methodology that gives LLMs the comprehensive understanding they need to solve 
+            Building reliable AI agents for enterprise software requires deep context. Breeze.AI is our comprehensive 
+            platform with a graph-based methodology that gives LLMs the deep understanding they need to solve 
             complex problems accurately.
           </p>
         </div>

@@ -323,7 +323,7 @@ const KAPSFramework: React.FC = () => {
           <h2 className="text-xl font-semibold text-gray-900 mb-4">Agentic AI Architecture Overview</h2>
           <div className="flex justify-center mb-6">
             <img 
-              src={`${process.env.PUBLIC_URL}/assets/diagrams/kaps-framework-static.svg`}
+              src={`${process.env.PUBLIC_URL}/assets/diagrams/kaps-framework.svg`}
               alt="KAPS Framework - AI Agent Portfolios"
               className="w-full max-w-5xl h-auto"
             />

@@ -1,23 +1,25 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  CpuChipIcon,
-  ChartBarIcon,
-  UserGroupIcon,
-  SparklesIcon,
-  CommandLineIcon,
-  WrenchScrewdriverIcon,
-  ShieldCheckIcon,
+  WrenchScrewdriverIcon, 
+  CpuChipIcon, 
   DocumentMagnifyingGlassIcon,
-  DocumentTextIcon,
   ArrowPathIcon,
+  SparklesIcon,
+  ChartBarIcon,
+  PhoneIcon,
   ClipboardDocumentCheckIcon,
-  UserPlusIcon,
-  ChartPieIcon,
   ChatBubbleBottomCenterTextIcon,
   MicrophoneIcon,
+  BeakerIcon,
+  ShieldCheckIcon,
+  DocumentTextIcon,
+  BoltIcon,
   ArrowRightIcon,
-  CheckCircleIcon
+  CheckIcon,
+  CircleStackIcon,
+  RocketLaunchIcon,
+  CloudArrowUpIcon
 } from '@heroicons/react/24/outline';
 
 interface Solution {
@@ -29,17 +31,17 @@ interface Solution {
   color: string;
   capabilities: string[];
   outcomes: string[];
-  status: 'live' | 'possible';
+  status: 'live' | 'deep-dive' | 'possible';
   link?: string;
   caseStudy?: string;
 }
 
 const solutions: Solution[] = [
-  // Engineering Excellence
+  // Deep Dive Solutions (Featured)
   {
     id: 'tech-debt',
-    category: 'Engineering Excellence',
-    title: 'Technical Debt Analysis',
+    category: 'Featured Deep Dives',
+    title: 'Technical Debt Management',
     description: 'AI agents that analyze codebases to identify technical debt, architectural violations, and provide prioritized remediation strategies.',
     icon: WrenchScrewdriverIcon,
     color: 'orange',
@@ -54,13 +56,13 @@ const solutions: Solution[] = [
       '60% faster feature delivery',
       'Clear remediation roadmap'
     ],
-    status: 'live',
-    link: '/technical-debt',
+    status: 'deep-dive',
+    link: '/solutions/technical-debt',
     caseStudy: 'Fortune 500 Financial Services'
   },
   {
     id: 'portfolio-rat',
-    category: 'Engineering Excellence',
+    category: 'Featured Deep Dives',
     title: 'Portfolio Rationalization',
     description: 'Intelligent agents that analyze multiple applications to identify overlaps, redundancies, and consolidation opportunities.',
     icon: CpuChipIcon,
@@ -76,9 +78,77 @@ const solutions: Solution[] = [
       'Eliminated duplicate functionality',
       'Unified technology stack'
     ],
-    status: 'live',
-    link: '/portfolio',
+    status: 'deep-dive',
+    link: '/solutions/portfolio-rationalization',
     caseStudy: 'Global E-commerce Platform'
+  },
+  {
+    id: 'asimov-migration',
+    category: 'Featured Deep Dives',
+    title: 'ASIMOV Legacy Migration',
+    description: 'AI-powered application modernization platform using autonomous agents for code analysis, transformation, and cloud migration.',
+    icon: ArrowPathIcon,
+    color: 'purple',
+    capabilities: [
+      'Automated code translation (COBOL to Java)',
+      'Dependency mapping and analysis',
+      'Incremental migration patterns',
+      'Zero-downtime deployment'
+    ],
+    outcomes: [
+      '70% reduction in migration time',
+      '60% cost savings',
+      '99.9% uptime during migration'
+    ],
+    status: 'deep-dive',
+    link: '/solutions/asimov',
+    caseStudy: 'Global Financial Institution'
+  },
+  {
+    id: 'customer-service-ai',
+    category: 'Featured Deep Dives',
+    title: 'Customer Service AI',
+    description: 'Comprehensive autonomous support system with self-healing bots, agent augmentation, and business optimization.',
+    icon: PhoneIcon,
+    color: 'green',
+    capabilities: [
+      'Self Heal Bot for L0 automation',
+      'Assisted Heal Bot for L1 agents',
+      'Business Optimization Hub',
+      'Multi-channel support'
+    ],
+    outcomes: [
+      '60% auto-resolution rate',
+      '150% agent productivity',
+      '40% cost reduction'
+    ],
+    status: 'deep-dive',
+    link: '/solutions/customer-service',
+    caseStudy: 'Fortune 500 Telecom'
+  },
+  
+  // Engineering Excellence
+  {
+    id: 'app-modernization',
+    category: 'Engineering Excellence',
+    title: 'App Modernization',
+    description: 'Transform legacy applications into modern, cloud-native architectures using AI-driven analysis and migration.',
+    icon: CloudArrowUpIcon,
+    color: 'blue',
+    capabilities: [
+      'Microservices extraction',
+      'Containerization automation',
+      'Cloud migration planning',
+      'Performance optimization'
+    ],
+    outcomes: [
+      '10x deployment frequency',
+      '70% infrastructure cost reduction',
+      'Improved scalability'
+    ],
+    status: 'live',
+    link: '/solutions/app-modernization',
+    caseStudy: 'Enterprise Retail'
   },
   {
     id: 'code-review',
@@ -100,161 +170,121 @@ const solutions: Solution[] = [
     ],
     status: 'possible'
   },
-  {
-    id: 'migration',
-    category: 'Engineering Excellence',
-    title: 'Migration Planning',
-    description: 'Agents that analyze legacy systems and create detailed migration plans to modern architectures.',
-    icon: ArrowPathIcon,
-    color: 'blue',
-    capabilities: [
-      'Legacy system analysis',
-      'Dependency mapping',
-      'Risk assessment',
-      'Phased migration planning'
-    ],
-    outcomes: [
-      'Zero-downtime migrations',
-      'Reduced migration risks',
-      'Clear timelines and milestones'
-    ],
-    status: 'possible'
-  },
   
-  // Operational Intelligence
+  // Data & Analytics
   {
-    id: 'support-auto',
-    category: 'Operational Intelligence',
-    title: 'L0/L1/L2 Support Automation',
-    description: 'Tiered support agents that handle monitoring, triage, and technical resolution with intelligent escalation.',
-    icon: ShieldCheckIcon,
-    color: 'amber',
+    id: 'data-engineering',
+    category: 'Data & Analytics',
+    title: 'Enterprise Data Transformation',
+    description: 'AI-powered data engineering platform with autonomous agents for ingestion, processing, and governance.',
+    icon: CircleStackIcon,
+    color: 'indigo',
     capabilities: [
-      'Automated incident detection (L0)',
-      'Smart ticket classification (L1)',
-      'Root cause analysis (L2)',
-      'Intelligent escalation'
+      'Intelligent data ingestion',
+      'Automated pipeline orchestration',
+      'Real-time stream processing',
+      'Data quality monitoring'
     ],
     outcomes: [
-      '70% reduction in MTTR',
-      '80% first-contact resolution',
-      '24/7 automated coverage'
+      '10TB/hour processing',
+      '99.99% pipeline uptime',
+      '70% cost reduction'
     ],
-    status: 'possible'
+    status: 'live',
+    link: '/solutions/data-engineering',
+    caseStudy: 'Global Analytics Platform'
   },
-  {
-    id: 'incident-response',
-    category: 'Operational Intelligence',
-    title: 'Incident Response Orchestration',
-    description: 'Agents that coordinate incident response, automate runbooks, and facilitate team communication.',
-    icon: ChartBarIcon,
-    color: 'amber',
-    capabilities: [
-      'Automated runbook execution',
-      'Team coordination',
-      'Impact analysis',
-      'Post-mortem generation'
-    ],
-    outcomes: [
-      'Faster incident resolution',
-      'Reduced human error',
-      'Comprehensive documentation'
-    ],
-    status: 'possible'
-  },
-  
-  // Business Process Automation
-  {
-    id: 'customer-onboard',
-    category: 'Business Automation',
-    title: 'Customer Onboarding Automation',
-    description: 'Agents that automate B2B platform setup, configuration, and integration for new enterprise customers.',
-    icon: UserPlusIcon,
-    color: 'green',
-    capabilities: [
-      'Environment provisioning',
-      'Configuration validation',
-      'Integration testing',
-      'Documentation generation'
-    ],
-    outcomes: [
-      '90% faster onboarding',
-      'Zero configuration errors',
-      'Improved customer satisfaction'
-    ],
-    status: 'possible'
-  },
-  {
-    id: 'compliance',
-    category: 'Business Automation',
-    title: 'Compliance Validation',
-    description: 'Agents that continuously monitor and validate compliance with regulations and standards.',
-    icon: ClipboardDocumentCheckIcon,
-    color: 'green',
-    capabilities: [
-      'Policy enforcement',
-      'Audit trail generation',
-      'Gap analysis',
-      'Remediation tracking'
-    ],
-    outcomes: [
-      '100% compliance coverage',
-      'Automated audit reports',
-      'Proactive risk mitigation'
-    ],
-    status: 'possible'
-  },
-  
-  // Intelligent Analytics
   {
     id: 'jit-dashboards',
-    category: 'Intelligent Analytics',
-    title: 'Just-in-Time Dashboards',
-    description: 'Agents that create custom dashboards and visualizations on-demand based on natural language queries.',
-    icon: ChartPieIcon,
+    category: 'Data & Analytics',
+    title: 'Just-In-Time Dashboards',
+    description: 'Dynamic dashboard generation based on user queries and context, powered by intelligent visualization agents.',
+    icon: ChartBarIcon,
     color: 'purple',
     capabilities: [
-      'Natural language to visualization',
-      'Data source integration',
-      'Real-time updates',
-      'Export capabilities'
+      'Natural language queries',
+      'Automatic visualization selection',
+      'Real-time data connection',
+      'Collaborative insights'
     ],
     outcomes: [
-      'Instant insights',
-      'No dashboard backlog',
+      '80% faster insights',
+      'No dashboard maintenance',
       'Self-service analytics'
     ],
     status: 'possible'
   },
   {
     id: 'predictive',
-    category: 'Intelligent Analytics',
+    category: 'Data & Analytics',
     title: 'Predictive Analytics',
-    description: 'Agents that analyze patterns and predict future trends, issues, and opportunities.',
+    description: 'ML-powered agents that identify patterns, predict outcomes, and recommend actions.',
     icon: SparklesIcon,
     color: 'purple',
     capabilities: [
-      'Trend analysis',
       'Anomaly detection',
-      'Forecasting',
-      'Risk prediction'
+      'Trend forecasting',
+      'Root cause analysis',
+      'Prescriptive recommendations'
     ],
     outcomes: [
-      'Proactive decision making',
-      'Early issue detection',
-      'Optimized resource allocation'
+      'Proactive issue resolution',
+      'Data-driven decisions',
+      'Reduced operational risks'
     ],
     status: 'possible'
   },
   
-  // Next-Gen Interfaces
+  // Platform & Infrastructure
+  {
+    id: 'test-automation',
+    category: 'Platform & Infrastructure',
+    title: 'Intelligent Test Automation',
+    description: 'Self-learning agents that generate, execute, and maintain test suites automatically.',
+    icon: BeakerIcon,
+    color: 'green',
+    capabilities: [
+      'Test case generation',
+      'Visual regression testing',
+      'Self-healing tests',
+      'Coverage optimization'
+    ],
+    outcomes: [
+      '90% test coverage',
+      '70% reduction in test maintenance',
+      'Faster release cycles'
+    ],
+    status: 'possible'
+  },
+  {
+    id: 'security-analysis',
+    category: 'Platform & Infrastructure',
+    title: 'Security Analysis',
+    description: 'Continuous security scanning and vulnerability assessment with intelligent remediation.',
+    icon: ShieldCheckIcon,
+    color: 'red',
+    capabilities: [
+      'Code vulnerability scanning',
+      'Dependency risk analysis',
+      'Compliance validation',
+      'Automated patching'
+    ],
+    outcomes: [
+      'Zero-day vulnerability detection',
+      'Compliance assurance',
+      'Reduced security incidents'
+    ],
+    status: 'possible'
+  },
+  
+  // User Experience
   {
     id: 'conversational-ui',
-    category: 'Next-Gen Interfaces',
+    category: 'User Experience',
     title: 'Conversational UI',
-    description: 'Replace traditional forms and workflows with natural conversation interfaces.',
+    description: 'Natural language interfaces that understand context and intent to simplify complex interactions.',
     icon: ChatBubbleBottomCenterTextIcon,
-    color: 'pink',
+    color: 'green',
     capabilities: [
       'Natural language understanding',
       'Context preservation',
@@ -262,313 +292,195 @@ const solutions: Solution[] = [
       'Action execution'
     ],
     outcomes: [
-      'Intuitive user experience',
-      'Reduced training time',
-      'Higher user satisfaction'
-    ],
-    status: 'possible'
-  },
-  {
-    id: 'voice-nav',
-    category: 'Next-Gen Interfaces',
-    title: 'Voice-Enabled Navigation',
-    description: 'Navigate existing applications using natural voice commands for improved accessibility and efficiency.',
-    icon: MicrophoneIcon,
-    color: 'pink',
-    capabilities: [
-      'Voice-to-action mapping',
-      'Multi-language support',
-      'Context-aware commands',
-      'Accessibility compliance'
-    ],
-    outcomes: [
-      'Hands-free operation',
-      'ADA/WCAG compliance',
-      'Faster task completion'
-    ],
-    status: 'possible'
-  },
-  
-  // Additional Engineering Solutions
-  {
-    id: 'test-automation',
-    category: 'Engineering Excellence',
-    title: 'Intelligent Test Generation',
-    description: 'AI agents that generate comprehensive test suites based on code analysis and requirements.',
-    icon: ClipboardDocumentCheckIcon,
-    color: 'blue',
-    capabilities: [
-      'Unit test generation',
-      'Integration test scenarios',
-      'Edge case identification',
-      'Test coverage optimization'
-    ],
-    outcomes: [
-      '90% code coverage',
-      '60% reduction in test writing time',
-      'Caught edge cases early'
-    ],
-    status: 'possible'
-  },
-  {
-    id: 'security-analysis',
-    category: 'Engineering Excellence',
-    title: 'Security Vulnerability Scanner',
-    description: 'Deep semantic analysis to identify security vulnerabilities beyond static analysis tools.',
-    icon: ShieldCheckIcon,
-    color: 'blue',
-    capabilities: [
-      'OWASP vulnerability detection',
-      'Data flow analysis',
-      'Dependency risk assessment',
-      'Compliance checking'
-    ],
-    outcomes: [
-      'Zero-day vulnerability prevention',
-      'Compliance assurance',
-      'Reduced security incidents'
+      'Improved user adoption',
+      'Reduced training needs',
+      'Higher satisfaction scores'
     ],
     status: 'possible'
   },
   {
     id: 'api-docs',
-    category: 'Engineering Excellence',
-    title: 'API Documentation Generator',
-    description: 'Automatically generate and maintain API documentation from code and usage patterns.',
+    category: 'User Experience',
+    title: 'Interactive API Documentation',
+    description: 'Self-updating documentation with live examples and intelligent search.',
     icon: DocumentTextIcon,
-    color: 'blue',
+    color: 'indigo',
     capabilities: [
-      'OpenAPI/Swagger generation',
-      'Usage examples extraction',
-      'Change detection',
-      'Interactive documentation'
+      'Auto-generated from code',
+      'Live API testing',
+      'Intelligent search',
+      'Version management'
     ],
     outcomes: [
       'Always up-to-date docs',
-      'Improved API adoption',
+      'Faster integration',
       'Reduced support tickets'
-    ],
-    status: 'possible'
-  },
-  {
-    id: 'perf-optimization',
-    category: 'Engineering Excellence',
-    title: 'Performance Optimization Agent',
-    description: 'Identify and fix performance bottlenecks using code and runtime analysis.',
-    icon: ChartBarIcon,
-    color: 'blue',
-    capabilities: [
-      'Bottleneck identification',
-      'Database query optimization',
-      'Memory leak detection',
-      'Caching recommendations'
-    ],
-    outcomes: [
-      '50% latency reduction',
-      'Improved scalability',
-      'Lower infrastructure costs'
     ],
     status: 'possible'
   }
 ];
 
-const categories = [
-  { name: 'All Solutions', color: 'gray' },
-  { name: 'Engineering Excellence', color: 'blue' },
-  { name: 'Operational Intelligence', color: 'amber' },
-  { name: 'Business Automation', color: 'green' },
-  { name: 'Intelligent Analytics', color: 'purple' },
-  { name: 'Next-Gen Interfaces', color: 'pink' }
-];
+const categories = ['Featured Deep Dives', 'Engineering Excellence', 'Data & Analytics', 'Platform & Infrastructure', 'User Experience'];
 
 const SolutionShowcase: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All Solutions');
-  
-  const filteredSolutions = selectedCategory === 'All Solutions' 
+  const [selectedCategory, setSelectedCategory] = useState<string>('Featured Deep Dives');
+  const filteredSolutions = selectedCategory === 'All' 
     ? solutions 
     : solutions.filter(s => s.category === selectedCategory);
-  
-  const getColorClasses = (color: string) => {
-    const colors: { [key: string]: string } = {
-      blue: 'bg-blue-100 text-blue-600',
-      orange: 'bg-orange-100 text-orange-600',
-      amber: 'bg-amber-100 text-amber-600',
-      green: 'bg-green-100 text-green-600',
-      purple: 'bg-purple-100 text-purple-600',
-      pink: 'bg-pink-100 text-pink-600',
-      gray: 'bg-gray-100 text-gray-600'
+
+  const getColorClasses = (color: string, status: string) => {
+    const isLive = status === 'live' || status === 'deep-dive';
+    const colorMap: { [key: string]: string } = {
+      orange: isLive ? 'from-orange-400 to-red-500' : 'from-orange-200 to-red-300',
+      blue: isLive ? 'from-blue-400 to-indigo-500' : 'from-blue-200 to-indigo-300',
+      green: isLive ? 'from-green-400 to-teal-500' : 'from-green-200 to-teal-300',
+      purple: isLive ? 'from-purple-400 to-pink-500' : 'from-purple-200 to-pink-300',
+      indigo: isLive ? 'from-indigo-400 to-purple-500' : 'from-indigo-200 to-purple-300',
+      red: isLive ? 'from-red-400 to-pink-500' : 'from-red-200 to-pink-300',
     };
-    return colors[color] || colors.gray;
-  };
-  
-  const getBorderColor = (color: string) => {
-    const colors: { [key: string]: string } = {
-      blue: 'border-blue-200 hover:border-blue-400',
-      orange: 'border-orange-200 hover:border-orange-400',
-      amber: 'border-amber-200 hover:border-amber-400',
-      green: 'border-green-200 hover:border-green-400',
-      purple: 'border-purple-200 hover:border-purple-400',
-      pink: 'border-pink-200 hover:border-pink-400',
-      gray: 'border-gray-200 hover:border-gray-400'
-    };
-    return colors[color] || colors.gray;
+    return colorMap[color] || (isLive ? 'from-gray-400 to-gray-500' : 'from-gray-200 to-gray-300');
   };
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 py-4 sm:py-6 lg:py-8">
-        {/* Page Header */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Header */}
         <div className="mb-8">
-          <div className="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold mb-4">
-            Custom Solutions
-          </div>
-          <h1 className="text-3xl font-bold text-gray-900">Solution Showcase</h1>
-          <p className="mt-2 text-gray-600 max-w-3xl">
-            Every enterprise is unique. These examples demonstrate the types of custom AI agents 
-            we can build for your specific challenges.
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">Solution Showcase</h1>
+          <p className="text-lg text-gray-600 max-w-3xl">
+            Explore how our AI agents solve real enterprise challenges. Each solution represents actual 
+            implementations or proven capabilities ready for deployment.
           </p>
         </div>
 
         {/* Category Filter */}
         <div className="mb-8">
           <div className="flex flex-wrap gap-2">
-            {categories.map(category => (
+            {categories.map((category) => (
               <button
-                key={category.name}
-                onClick={() => setSelectedCategory(category.name)}
-                className={`px-4 py-2 rounded-lg font-medium transition-all ${
-                  selectedCategory === category.name
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+                  selectedCategory === category
                     ? 'bg-blue-600 text-white'
                     : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-300'
                 }`}
               >
-                {category.name}
-                {category.name !== 'All Solutions' && (
-                  <span className="ml-2 text-xs opacity-75">
-                    ({solutions.filter(s => s.category === category.name).length})
-                  </span>
-                )}
+                {category}
+                <span className="ml-2 text-sm opacity-80">
+                  ({solutions.filter(s => s.category === category).length})
+                </span>
               </button>
             ))}
           </div>
         </div>
 
         {/* Solutions Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {filteredSolutions.map(solution => {
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredSolutions.map((solution) => {
             const Icon = solution.icon;
-            const colorClasses = getColorClasses(solution.color);
-            const borderClasses = getBorderColor(solution.color);
+            const isLive = solution.status === 'live' || solution.status === 'deep-dive';
             
             return (
               <div
                 key={solution.id}
-                className={`bg-white rounded-xl border-2 ${borderClasses} p-6 hover:shadow-xl transition-all relative`}
+                className={`bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden hover:shadow-xl transition-all ${
+                  isLive ? 'hover:scale-105' : ''
+                }`}
               >
-                {/* Status Badge */}
-                {solution.status === 'live' && (
-                  <div className="absolute top-4 right-4">
-                    <span className="inline-flex items-center px-2 py-1 bg-green-100 text-green-700 rounded-full text-xs font-semibold">
-                      <CheckCircleIcon className="h-3 w-3 mr-1" />
-                      Deep Dive
-                    </span>
-                  </div>
-                )}
+                {/* Card Header */}
+                <div className={`h-2 bg-gradient-to-r ${getColorClasses(solution.color, solution.status)}`} />
                 
-                {/* Icon and Title */}
-                <div className="flex items-start mb-4">
-                  <div className={`w-12 h-12 ${colorClasses} rounded-lg flex items-center justify-center flex-shrink-0`}>
-                    <Icon className="h-6 w-6" />
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="font-semibold text-gray-900">{solution.title}</h3>
-                    <span className="text-xs text-gray-500">{solution.category}</span>
-                  </div>
-                </div>
-                
-                {/* Description */}
-                <p className="text-sm text-gray-600 mb-4">
-                  {solution.description}
-                </p>
-                
-                {/* Capabilities */}
-                <div className="mb-4">
-                  <h4 className="text-xs font-semibold text-gray-700 mb-2">What We Can Build:</h4>
-                  <ul className="text-xs text-gray-600 space-y-1">
-                    {solution.capabilities.slice(0, 3).map((capability, idx) => (
-                      <li key={idx} className="flex items-start">
-                        <span className="text-gray-400 mr-1">•</span>
-                        {capability}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                {/* Outcomes */}
-                <div className="mb-4">
-                  <h4 className="text-xs font-semibold text-gray-700 mb-2">Expected Outcomes:</h4>
-                  <div className="flex flex-wrap gap-1">
-                    {solution.outcomes.slice(0, 2).map((outcome, idx) => (
-                      <span key={idx} className="inline-block px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">
-                        {outcome}
+                {/* Card Body */}
+                <div className="p-6">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className={`p-3 rounded-lg bg-gradient-to-br ${getColorClasses(solution.color, solution.status)}`}>
+                      <Icon className="h-6 w-6 text-white" />
+                    </div>
+                    {solution.status === 'deep-dive' && (
+                      <span className="px-2 py-1 bg-purple-100 text-purple-700 text-xs font-semibold rounded-full">
+                        Deep Dive
                       </span>
-                    ))}
+                    )}
+                    {solution.status === 'live' && (
+                      <span className="px-2 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded-full">
+                        Live
+                      </span>
+                    )}
+                    {solution.status === 'possible' && (
+                      <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs font-semibold rounded-full">
+                        Available
+                      </span>
+                    )}
                   </div>
+
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{solution.title}</h3>
+                  <p className="text-sm text-gray-600 mb-4">{solution.description}</p>
+
+                  {/* Capabilities */}
+                  <div className="mb-4">
+                    <h4 className="text-xs font-semibold text-gray-700 uppercase tracking-wide mb-2">Key Capabilities</h4>
+                    <ul className="space-y-1">
+                      {solution.capabilities.slice(0, 3).map((capability, index) => (
+                        <li key={index} className="flex items-start text-xs text-gray-600">
+                          <CheckIcon className="h-3 w-3 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                          {capability}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Outcomes */}
+                  <div className="mb-4">
+                    <h4 className="text-xs font-semibold text-gray-700 uppercase tracking-wide mb-2">Business Outcomes</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {solution.outcomes.slice(0, 2).map((outcome, index) => (
+                        <span key={index} className="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded">
+                          {outcome}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Case Study */}
+                  {solution.caseStudy && (
+                    <div className="text-xs text-gray-500 mb-4">
+                      <span className="font-semibold">Case Study:</span> {solution.caseStudy}
+                    </div>
+                  )}
+
+                  {/* Action Button */}
+                  {solution.link && (
+                    <Link
+                      to={solution.link}
+                      className={`inline-flex items-center text-sm font-medium ${
+                        isLive ? 'text-blue-600 hover:text-blue-700' : 'text-gray-600 hover:text-gray-700'
+                      }`}
+                    >
+                      {solution.status === 'deep-dive' ? 'Explore Deep Dive' : 'Learn More'}
+                      <ArrowRightIcon className="ml-1 h-4 w-4" />
+                    </Link>
+                  )}
                 </div>
-                
-                {/* Case Study */}
-                {solution.caseStudy && (
-                  <div className="text-xs text-gray-500 mb-4">
-                    <strong>Built for:</strong> {solution.caseStudy}
-                  </div>
-                )}
-                
-                {/* CTA */}
-                {solution.status === 'live' && solution.link ? (
-                  <Link
-                    to={solution.link}
-                    className="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-700"
-                  >
-                    Explore Deep Dive
-                    <ArrowRightIcon className="ml-1 h-4 w-4" />
-                  </Link>
-                ) : (
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center text-sm font-semibold text-gray-600 hover:text-gray-700"
-                  >
-                    Discuss This Solution
-                    <ArrowRightIcon className="ml-1 h-4 w-4" />
-                  </Link>
-                )}
               </div>
             );
           })}
         </div>
 
-        {/* Custom Solution CTA */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 sm:p-12 text-white text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-            Don't See Your Challenge Here?
-          </h2>
-          <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
-            These are just examples. We specialize in creating custom AI agents 
-            tailored to your unique requirements and challenges.
+        {/* Call to Action */}
+        <div className="mt-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-center text-white">
+          <h2 className="text-2xl font-bold mb-4">Ready to Transform Your Enterprise?</h2>
+          <p className="text-lg mb-6 max-w-2xl mx-auto">
+            These solutions represent just a fraction of what's possible. Let's discuss how AI agents 
+            can solve your specific challenges.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center justify-center px-8 py-3 text-lg font-semibold bg-white text-blue-600 rounded-xl hover:bg-gray-100 transition-all"
-            >
-              Start Your Custom Solution
-            </Link>
-            <Link
-              to="/core-technology"
-              className="inline-flex items-center justify-center px-8 py-3 text-lg font-semibold bg-white/20 text-white border-2 border-white/50 rounded-xl hover:bg-white/30 transition-all"
-            >
-              Learn About Our Technology
-            </Link>
-          </div>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+          >
+            Schedule a Consultation
+            <ArrowRightIcon className="ml-2 h-5 w-5" />
+          </Link>
         </div>
       </div>
     </div>

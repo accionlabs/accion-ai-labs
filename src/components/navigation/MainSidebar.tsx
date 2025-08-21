@@ -50,12 +50,6 @@ const menuItems: MenuItem[] = [
     icon: CpuChipIcon,
     children: [
       {
-        id: 'core-overview',
-        label: 'Overview',
-        icon: CpuChipIcon,
-        path: '/core-technology'
-      },
-      {
         id: 'kaps-framework',
         label: 'KAPS Framework',
         icon: RectangleStackIcon,
@@ -66,6 +60,12 @@ const menuItems: MenuItem[] = [
         label: 'Agent Architecture',
         icon: CubeTransparentIcon,
         path: '/core-technology/agent-architecture'
+      },
+      {
+        id: 'core-overview',
+        label: 'Breeze.AI',
+        icon: CpuChipIcon,
+        path: '/core-technology'
       },
       {
         id: 'gen-ai-box',
@@ -93,6 +93,18 @@ const menuItems: MenuItem[] = [
         path: '/solutions'
       },
       {
+        id: 'tech-debt-showcase',
+        label: 'Technical Debt Management',
+        icon: WrenchScrewdriverIcon,
+        path: '/solutions/technical-debt'
+      },
+      {
+        id: 'portfolio-showcase',
+        label: 'Portfolio Rationalization',
+        icon: PuzzlePieceIcon,
+        path: '/solutions/portfolio-rationalization'
+      },
+      {
         id: 'customer-service',
         label: 'Customer Service',
         icon: PhoneIcon,
@@ -109,12 +121,6 @@ const menuItems: MenuItem[] = [
         label: 'Data Engineering',
         icon: CircleStackIcon,
         path: '/solutions/data-engineering'
-      },
-      {
-        id: 'agents-as-service',
-        label: 'Agents as Service',
-        icon: RocketLaunchIcon,
-        path: '/solutions/agents-as-service'
       }
     ]
   },
@@ -508,7 +514,7 @@ const MainSidebar: React.FC = () => {
           {/* Always show full header on mobile */}
           <div className="flex items-center md:hidden">
             <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg mr-2" />
-            <span className="font-bold text-gray-900">Breeze.AI</span>
+            <span className="font-bold text-gray-900">Accion AI Labs</span>
           </div>
           
           {/* Desktop header with collapse/expand */}
@@ -517,7 +523,7 @@ const MainSidebar: React.FC = () => {
               <>
                 <div className="flex items-center">
                   <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg mr-2" />
-                  <span className="font-bold text-gray-900">Breeze.AI</span>
+                  <span className="font-bold text-gray-900">Accion AI Labs</span>
                 </div>
                 <button
                   onClick={toggleSidebar}
