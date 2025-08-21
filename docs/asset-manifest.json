@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/breeze-in-action/static/css/main.dbdb32f9.css",
-    "main.js": "/breeze-in-action/static/js/main.55ef5f03.js",
-    "static/js/453.2fb3670a.chunk.js": "/breeze-in-action/static/js/453.2fb3670a.chunk.js",
-    "index.html": "/breeze-in-action/index.html",
-    "main.dbdb32f9.css.map": "/breeze-in-action/static/css/main.dbdb32f9.css.map",
-    "main.55ef5f03.js.map": "/breeze-in-action/static/js/main.55ef5f03.js.map",
-    "453.2fb3670a.chunk.js.map": "/breeze-in-action/static/js/453.2fb3670a.chunk.js.map"
+    "main.css": "/accion-ai-labs/static/css/main.dbdb32f9.css",
+    "main.js": "/accion-ai-labs/static/js/main.e7971966.js",
+    "static/js/453.2fb3670a.chunk.js": "/accion-ai-labs/static/js/453.2fb3670a.chunk.js",
+    "index.html": "/accion-ai-labs/index.html",
+    "main.dbdb32f9.css.map": "/accion-ai-labs/static/css/main.dbdb32f9.css.map",
+    "main.e7971966.js.map": "/accion-ai-labs/static/js/main.e7971966.js.map",
+    "453.2fb3670a.chunk.js.map": "/accion-ai-labs/static/js/453.2fb3670a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dbdb32f9.css",
-    "static/js/main.55ef5f03.js"
+    "static/js/main.e7971966.js"
   ]
 }

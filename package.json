@@ -2,7 +2,7 @@
   "name": "breeze-demo",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://accionlabs.github.io/breeze-in-action",
+  "homepage": "https://accionlabs.github.io/accion-ai-labs",
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "@testing-library/dom": "^10.4.1",
