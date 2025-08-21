@@ -54,12 +54,12 @@ const App: React.FC = () => {
               {/* Core Technology Section */}
               <Route path="/core-technology" element={
                 <AppLayout>
-                  <CoreTechnologyOverview />
+                  <KAPSFramework />
                 </AppLayout>
               } />
-              <Route path="/core-technology/kaps-framework" element={
+              <Route path="/core-technology/breeze-ai" element={
                 <AppLayout>
-                  <KAPSFramework />
+                  <CoreTechnologyOverview />
                 </AppLayout>
               } />
               <Route path="/core-technology/agentic-architecture" element={

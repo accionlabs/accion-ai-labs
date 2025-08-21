@@ -53,7 +53,7 @@ const menuItems: MenuItem[] = [
         id: 'kaps-framework',
         label: 'KAPS Framework',
         icon: RectangleStackIcon,
-        path: '/core-technology/kaps-framework'
+        path: '/core-technology'
       },
       {
         id: 'agentic-architecture',
@@ -65,7 +65,7 @@ const menuItems: MenuItem[] = [
         id: 'core-overview',
         label: 'Breeze.AI',
         icon: CpuChipIcon,
-        path: '/core-technology'
+        path: '/core-technology/breeze-ai'
       },
       {
         id: 'gen-ai-box',
@@ -504,7 +504,7 @@ const MainSidebar: React.FC = () => {
       <div
         className={`
           fixed left-0 top-0 h-full bg-white border-r border-gray-200 transition-transform duration-300 z-40
-          w-64
+          w-full md:w-64
           ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}
           md:translate-x-0 ${sidebarMode === 'expanded' ? 'md:w-64' : 'md:w-16'}
         `}
@@ -513,18 +513,24 @@ const MainSidebar: React.FC = () => {
         <div className="h-16 border-b border-gray-200 flex items-center justify-between px-4">
           {/* Always show full header on mobile */}
           <div className="flex items-center md:hidden">
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg mr-2" />
-            <span className="font-bold text-gray-900">Accion AI Labs</span>
+            <Link to="/" className="flex items-center">
+              <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg mr-2 flex items-center justify-center">
+                <span className="text-white font-bold text-lg">A</span>
+              </div>
+              <span className="font-bold text-gray-900">Accion AI Labs</span>
+            </Link>
           </div>
           
           {/* Desktop header with collapse/expand */}
           <div className="hidden md:flex md:items-center md:justify-between md:w-full">
             {sidebarMode === 'expanded' ? (
               <>
-                <div className="flex items-center">
-                  <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg mr-2" />
+                <Link to="/" className="flex items-center">
+                  <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg mr-2 flex items-center justify-center">
+                    <span className="text-white font-bold text-lg">A</span>
+                  </div>
                   <span className="font-bold text-gray-900">Accion AI Labs</span>
-                </div>
+                </Link>
                 <button
                   onClick={toggleSidebar}
                   className="p-1 rounded hover:bg-gray-100"
@@ -534,13 +540,11 @@ const MainSidebar: React.FC = () => {
                 </button>
               </>
             ) : (
-              <button
-                onClick={toggleSidebar}
-                className="p-1 rounded hover:bg-gray-100 mx-auto"
-                title="Expand sidebar (⌘B)"
-              >
-                <Bars3Icon className="h-5 w-5 text-gray-500" />
-              </button>
+              <Link to="/" className="p-1 rounded hover:bg-gray-100 mx-auto" title="Accion AI Labs Home">
+                <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-lg">A</span>
+                </div>
+              </Link>
             )}
           </div>
         </div>
