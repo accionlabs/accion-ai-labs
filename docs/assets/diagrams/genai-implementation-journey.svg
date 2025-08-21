@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1200 300"
+   version="1.1"
+   id="svg49"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect
+     width="1200"
+     height="300"
+     fill="#f9fafb"
+     rx="8"
+     id="rect1" />
+  <!-- Title -->
+  <text
+     x="600"
+     y="30"
+     text-anchor="middle"
+     font-size="20"
+     font-weight="bold"
+     fill="#111827"
+     id="text1">
+    Implementation Journey
+  </text>
+  <!-- Progress Line -->
+  <line
+     x1="100"
+     y1="150"
+     x2="1100"
+     y2="150"
+     stroke="#e5e7eb"
+     stroke-width="3"
+     id="line1" />
+  <!-- Arrow markers -->
+  <defs
+     id="defs1">
+    <marker
+       id="arrowhead"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#6b7280"
+         id="polygon1" />
+    </marker>
+  </defs>
+  <!-- Connecting arrows between phases -->
+  <path
+     d="M 280 150 L 380 150"
+     stroke="#6b7280"
+     stroke-width="2"
+     marker-end="url(#arrowhead)"
+     opacity="0.5"
+     id="path1" />
+  <path
+     d="M 480 150 L 580 150"
+     stroke="#6b7280"
+     stroke-width="2"
+     marker-end="url(#arrowhead)"
+     opacity="0.5"
+     id="path2" />
+  <path
+     d="M 680 150 L 780 150"
+     stroke="#6b7280"
+     stroke-width="2"
+     marker-end="url(#arrowhead)"
+     opacity="0.5"
+     id="path3" />
+  <path
+     d="M 880 150 L 980 150"
+     stroke="#6b7280"
+     stroke-width="2"
+     marker-end="url(#arrowhead)"
+     opacity="0.5"
+     id="path4" />
+  <!-- Phase 1: Assessment -->
+  <g
+     transform="translate(100, 80)"
+     id="g12">
+    <!-- Phase circle -->
+    <circle
+       cx="80"
+       cy="70"
+       r="8"
+       fill="#3b82f6"
+       stroke="#ffffff"
+       stroke-width="3"
+       id="circle4" />
+    <!-- Phase box -->
+    <rect
+       x="0"
+       y="0"
+       width="160"
+       height="140"
+       rx="8"
+       fill="#ffffff"
+       stroke="#3b82f6"
+       stroke-width="1.5"
+       id="rect4" />
+    <!-- Phase number -->
+    <rect
+       x="0"
+       y="0"
+       width="30"
+       height="30"
+       rx="4"
+       fill="#3b82f6"
+       id="rect5" />
+    <text
+       x="15"
+       y="20"
+       text-anchor="middle"
+       font-size="14"
+       font-weight="bold"
+       fill="#ffffff"
+       id="text5">1</text>
+    <!-- Phase title -->
+    <text
+       x="80"
+       y="25"
+       text-anchor="middle"
+       font-size="14"
+       font-weight="600"
+       fill="#1f2937"
+       id="text6">Assessment</text>
+    <!-- Duration -->
+    <text
+       x="80"
+       y="45"
+       text-anchor="middle"
+       font-size="11"
+       fill="#3b82f6"
+       id="text7">1-2 weeks</text>
+    <!-- Activities -->
+    <text
+       x="10"
+       y="65"
+       font-size="10"
+       fill="#374151"
+       id="text8">• Infrastructure review</text>
+    <text
+       x="10"
+       y="80"
+       font-size="10"
+       fill="#374151"
+       id="text9">• Use case identification</text>
+    <text
+       x="10"
+       y="95"
+       font-size="10"
+       fill="#374151"
+       id="text10">• Capacity planning</text>
+    <text
+       x="10"
+       y="110"
+       font-size="10"
+       fill="#374151"
+       id="text11">• Security assessment</text>
+    <!-- Output -->
+    <rect
+       x="5"
+       y="120"
+       width="150"
+       height="15"
+       rx="3"
+       fill="#eff6ff"
+       id="rect11" />
+    <text
+       x="80"
+       y="130"
+       text-anchor="middle"
+       font-size="9"
+       font-weight="500"
+       fill="#3b82f6"
+       id="text12">Feasibility Report</text>
+  </g>
+  <!-- Phase 2: Design -->
+  <g
+     transform="translate(300, 80)"
+     id="g20">
+    <!-- Phase circle -->
+    <circle
+       cx="80"
+       cy="70"
+       r="8"
+       fill="#8b5cf6"
+       stroke="#ffffff"
+       stroke-width="3"
+       id="circle12" />
+    <!-- Phase box -->
+    <rect
+       x="0"
+       y="0"
+       width="160"
+       height="140"
+       rx="8"
+       fill="#ffffff"
+       stroke="#8b5cf6"
+       stroke-width="1.5"
+       id="rect12" />
+    <!-- Phase number -->
+    <rect
+       x="0"
+       y="0"
+       width="30"
+       height="30"
+       rx="4"
+       fill="#8b5cf6"
+       id="rect13" />
+    <text
+       x="15"
+       y="20"
+       text-anchor="middle"
+       font-size="14"
+       font-weight="bold"
+       fill="#ffffff"
+       id="text13">2</text>
+    <!-- Phase title -->
+    <text
+       x="80"
+       y="25"
+       text-anchor="middle"
+       font-size="14"
+       font-weight="600"
+       fill="#1f2937"
+       id="text14">Design</text>
+    <!-- Duration -->
+    <text
+       x="80"
+       y="45"
+       text-anchor="middle"
+       font-size="11"
+       fill="#8b5cf6"
+       id="text15">2-3 weeks</text>
+    <!-- Activities -->
+    <text
+       x="10"
+       y="65"
+       font-size="10"
+       fill="#374151"
+       id="text16">• Architecture design</text>
+    <text
+       x="10"
+       y="80"
+       font-size="10"
+       fill="#374151"
+       id="text17">• Model selection</text>
+    <text
+       x="10"
+       y="95"
+       font-size="10"
+       fill="#374151"
+       id="text18">• API design</text>
+    <text
+       x="10"
+       y="110"
+       font-size="10"
+       fill="#374151"
+       id="text19">• Security protocols</text>
+    <!-- Output -->
+    <rect
+       x="5"
+       y="120"
+       width="150"
+       height="15"
+       rx="3"
+       fill="#f3f0ff"
+       id="rect19" />
+    <text
+       x="80"
+       y="130"
+       text-anchor="middle"
+       font-size="9"
+       font-weight="500"
+       fill="#8b5cf6"
+       id="text20">Technical Blueprint</text>
+  </g>
+  <!-- Phase 3: Build -->
+  <g
+     transform="translate(500, 80)"
+     id="g28">
+    <!-- Phase circle -->
+    <circle
+       cx="80"
+       cy="70"
+       r="8"
+       fill="#10b981"
+       stroke="#ffffff"
+       stroke-width="3"
+       id="circle20" />
+    <!-- Phase box -->
+    <rect
+       x="0"
+       y="0"
+       width="160"
+       height="140"
+       rx="8"
+       fill="#ffffff"
+       stroke="#10b981"
+       stroke-width="1.5"
+       id="rect20" />
+    <!-- Phase number -->
+    <rect
+       x="0"
+       y="0"
+       width="30"
+       height="30"
+       rx="4"
+       fill="#10b981"
+       id="rect21" />
+    <text
+       x="15"
+       y="20"
+       text-anchor="middle"
+       font-size="14"
+       font-weight="bold"
+       fill="#ffffff"
+       id="text21">3</text>
+    <!-- Phase title -->
+    <text
+       x="80"
+       y="25"
+       text-anchor="middle"
+       font-size="14"
+       font-weight="600"
+       fill="#1f2937"
+       id="text22">Build</text>
+    <!-- Duration -->
+    <text
+       x="80"
+       y="45"
+       text-anchor="middle"
+       font-size="11"
+       fill="#10b981"
+       id="text23">4-6 weeks</text>
+    <!-- Activities -->
+    <text
+       x="10"
+       y="65"
+       font-size="10"
+       fill="#374151"
+       id="text24">• Infrastructure setup</text>
+    <text
+       x="10"
+       y="80"
+       font-size="10"
+       fill="#374151"
+       id="text25">• Model deployment</text>
+    <text
+       x="10"
+       y="95"
+       font-size="10"
+       fill="#374151"
+       id="text26">• API implementation</text>
+    <text
+       x="10"
+       y="110"
+       font-size="10"
+       fill="#374151"
+       id="text27">• Testing  validation</text>
+    <!-- Output -->
+    <rect
+       x="5"
+       y="120"
+       width="150"
+       height="15"
+       rx="3"
+       fill="#ecfdf5"
+       id="rect27" />
+    <text
+       x="80"
+       y="130"
+       text-anchor="middle"
+       font-size="9"
+       font-weight="500"
+       fill="#10b981"
+       id="text28">Working Platform</text>
+  </g>
+  <!-- Phase 4: Deploy -->
+  <g
+     transform="translate(700, 80)"
+     id="g36">
+    <!-- Phase circle -->
+    <circle
+       cx="80"
+       cy="70"
+       r="8"
+       fill="#f97316"
+       stroke="#ffffff"
+       stroke-width="3"
+       id="circle28" />
+    <!-- Phase box -->
+    <rect
+       x="0"
+       y="0"
+       width="160"
+       height="140"
+       rx="8"
+       fill="#ffffff"
+       stroke="#f97316"
+       stroke-width="1.5"
+       id="rect28" />
+    <!-- Phase number -->
+    <rect
+       x="0"
+       y="0"
+       width="30"
+       height="30"
+       rx="4"
+       fill="#f97316"
+       id="rect29" />
+    <text
+       x="15"
+       y="20"
+       text-anchor="middle"
+       font-size="14"
+       font-weight="bold"
+       fill="#ffffff"
+       id="text29">4</text>
+    <!-- Phase title -->
+    <text
+       x="80"
+       y="25"
+       text-anchor="middle"
+       font-size="14"
+       font-weight="600"
+       fill="#1f2937"
+       id="text30">Deploy</text>
+    <!-- Duration -->
+    <text
+       x="80"
+       y="45"
+       text-anchor="middle"
+       font-size="11"
+       fill="#f97316"
+       id="text31">1-2 weeks</text>
+    <!-- Activities -->
+    <text
+       x="10"
+       y="65"
+       font-size="10"
+       fill="#374151"
+       id="text32">• Production rollout</text>
+    <text
+       x="10"
+       y="80"
+       font-size="10"
+       fill="#374151"
+       id="text33">• User training</text>
+    <text
+       x="10"
+       y="95"
+       font-size="10"
+       fill="#374151"
+       id="text34">• Documentation</text>
+    <text
+       x="10"
+       y="110"
+       font-size="10"
+       fill="#374151"
+       id="text35">• Go-live support</text>
+    <!-- Output -->
+    <rect
+       x="5"
+       y="120"
+       width="150"
+       height="15"
+       rx="3"
+       fill="#fff7ed"
+       id="rect35" />
+    <text
+       x="80"
+       y="130"
+       text-anchor="middle"
+       font-size="9"
+       font-weight="500"
+       fill="#f97316"
+       id="text36">Live System</text>
+  </g>
+  <!-- Phase 5: Optimize -->
+  <g
+     transform="translate(900, 80)"
+     id="g44">
+    <!-- Phase circle -->
+    <circle
+       cx="80"
+       cy="70"
+       r="8"
+       fill="#06b6d4"
+       stroke="#ffffff"
+       stroke-width="3"
+       id="circle36" />
+    <!-- Phase box -->
+    <rect
+       x="0"
+       y="0"
+       width="160"
+       height="140"
+       rx="8"
+       fill="#ffffff"
+       stroke="#06b6d4"
+       stroke-width="1.5"
+       id="rect36" />
+    <!-- Phase number -->
+    <rect
+       x="0"
+       y="0"
+       width="30"
+       height="30"
+       rx="4"
+       fill="#06b6d4"
+       id="rect37" />
+    <text
+       x="15"
+       y="20"
+       text-anchor="middle"
+       font-size="14"
+       font-weight="bold"
+       fill="#ffffff"
+       id="text37">5</text>
+    <!-- Phase title -->
+    <text
+       x="80"
+       y="25"
+       text-anchor="middle"
+       font-size="14"
+       font-weight="600"
+       fill="#1f2937"
+       id="text38">Optimize</text>
+    <!-- Duration -->
+    <text
+       x="80"
+       y="45"
+       text-anchor="middle"
+       font-size="11"
+       fill="#06b6d4"
+       id="text39">Ongoing</text>
+    <!-- Activities -->
+    <text
+       x="10"
+       y="65"
+       font-size="10"
+       fill="#374151"
+       id="text40">• Performance tuning</text>
+    <text
+       x="10"
+       y="80"
+       font-size="10"
+       fill="#374151"
+       id="text41">• Model fine-tuning</text>
+    <text
+       x="10"
+       y="95"
+       font-size="10"
+       fill="#374151"
+       id="text42">• Cost optimization</text>
+    <text
+       x="10"
+       y="110"
+       font-size="10"
+       fill="#374151"
+       id="text43">• Feature expansion</text>
+    <!-- Output -->
+    <rect
+       x="5"
+       y="120"
+       width="150"
+       height="15"
+       rx="3"
+       fill="#ecfeff"
+       id="rect43" />
+    <text
+       x="80"
+       y="130"
+       text-anchor="middle"
+       font-size="9"
+       font-weight="500"
+       fill="#06b6d4"
+       id="text44">Continuous Improvement</text>
+  </g>
+  <!-- Timeline Summary -->
+  <g
+     transform="translate(0, 250)"
+     id="g46">
+    <text
+       x="600"
+       y="0"
+       text-anchor="middle"
+       font-size="12"
+       font-weight="600"
+       fill="#374151"
+       id="text45">Total Implementation Time: 8-14 weeks to production</text>
+    <text
+       x="600"
+       y="20"
+       text-anchor="middle"
+       font-size="11"
+       fill="#6b7280"
+       id="text46">Followed by continuous optimization and expansion</text>
+  </g>
+  <!-- Success Indicators -->
+  <g
+     transform="translate(100, 50)"
+     id="g47">
+    <circle
+       cx="0"
+       cy="0"
+       r="3"
+       fill="#10b981"
+       id="circle46" />
+    <text
+       x="10"
+       y="3"
+       font-size="10"
+       fill="#6b7280"
+       id="text47">Quick Win</text>
+  </g>
+  <g
+     transform="translate(500, 50)"
+     id="g48">
+    <circle
+       cx="0"
+       cy="0"
+       r="3"
+       fill="#10b981"
+       id="circle47" />
+    <text
+       x="10"
+       y="3"
+       font-size="10"
+       fill="#6b7280"
+       id="text48">Value Delivery</text>
+  </g>
+  <g
+     transform="translate(900, 50)"
+     id="g49">
+    <circle
+       cx="0"
+       cy="0"
+       r="3"
+       fill="#10b981"
+       id="circle48" />
+    <text
+       x="10"
+       y="3"
+       font-size="10"
+       fill="#6b7280"
+       id="text49">Full Transformation</text>
+  </g>
+</svg>
