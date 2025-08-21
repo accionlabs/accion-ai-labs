@@ -1473,45 +1473,45 @@
      fill-rule="evenodd"
      id="path112"
      clip-path="url(#clipPath253)"
-     transform="translate(-3.5466831,-70.943764)" /><text
+     transform="translate(-3.5466831,-70.943764)" /><text font-family="Inter, system-ui, sans-serif"
      xml:space="preserve"
-     style="font-weight:bold;font-size:18.6667px;line-height:1.25;font-family:Arial, sans-serif;-inkscape-font-specification:'Arial, sans-serif Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
+     style="font-weight:bold;font-size:18.6667px;line-height:1.25;font-family: Inter, system-ui, sans-serif;-inkscape-font-specification:'Arial, sans-serif Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
      x="590.63745"
      y="100.2099"
      id="text365"><tspan
        id="tspan365"
        x="590.63745"
        y="100.2099"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.6667px;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#000000">KAPS Guardrails Config Block</tspan></text><text
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.6667px;font-family: Inter, system-ui, sans-serif;-inkscape-font-specification:'Arial Bold';fill:#000000">KAPS Guardrails Config Block</tspan></text><text
      xml:space="preserve"
-     style="font-weight:bold;font-size:13.3333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
+     style="font-weight:bold;font-size:13.3333px;line-height:1.25;font-family: Inter, system-ui, sans-serif;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
      x="127.31933"
      y="209.34837"
      id="text366"><tspan
        id="tspan366"
        x="127.31933"
        y="209.34837"
-       style="fill:#000000">Data Pipeline</tspan></text><text
+       style="fill:#000000">Data Pipeline</tspan></text><text font-family="Inter, system-ui, sans-serif"
      xml:space="preserve"
-     style="font-weight:bold;font-size:13.3333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
+     style="font-weight:bold;font-size:13.3333px;line-height:1.25;font-family: Inter, system-ui, sans-serif;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
      x="127.31933"
      y="353.34839"
      id="text367"><tspan
        id="tspan367"
        x="127.31933"
        y="353.34839"
-       style="fill:#000000">User Prompts</tspan></text><text
+       style="fill:#000000">User Prompts</tspan></text><text font-family="Inter, system-ui, sans-serif"
      xml:space="preserve"
-     style="font-weight:bold;font-size:13.3333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
+     style="font-weight:bold;font-size:13.3333px;line-height:1.25;font-family: Inter, system-ui, sans-serif;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
      x="127.31933"
      y="503.34839"
      id="text368"><tspan
        id="tspan368"
        x="127.31933"
        y="503.34839"
-       style="fill:#000000">Data Chunks</tspan></text><text
+       style="fill:#000000">Data Chunks</tspan></text><text font-family="Inter, system-ui, sans-serif"
      xml:space="preserve"
-     style="font-weight:bold;font-size:13.3333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
+     style="font-weight:bold;font-size:13.3333px;line-height:1.25;font-family: Inter, system-ui, sans-serif;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
      x="329.31934"
      y="209.34837"
      id="text369"><tspan
@@ -1522,9 +1522,9 @@
        x="329.31934"
        y="226.015"
        style="fill:#000000"
-       id="tspan372">Rails</tspan></text><text
+       id="tspan372">Rails</tspan></text><text font-family="Inter, system-ui, sans-serif"
      xml:space="preserve"
-     style="font-weight:bold;font-size:13.3333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
+     style="font-weight:bold;font-size:13.3333px;line-height:1.25;font-family: Inter, system-ui, sans-serif;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
      x="329.31934"
      y="353.34839"
      id="text370"><tspan
@@ -1535,9 +1535,9 @@
        x="329.31934"
        y="370.01501"
        style="fill:#000000"
-       id="tspan373">Rails</tspan></text><text
+       id="tspan373">Rails</tspan></text><text font-family="Inter, system-ui, sans-serif"
      xml:space="preserve"
-     style="font-weight:bold;font-size:13.3333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
+     style="font-weight:bold;font-size:13.3333px;line-height:1.25;font-family: Inter, system-ui, sans-serif;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
      x="329.31934"
      y="503.34839"
      id="text371"><tspan
@@ -1548,9 +1548,9 @@
        x="329.31934"
        y="520.01501"
        style="fill:#000000"
-       id="tspan374">Rails</tspan></text><text
+       id="tspan374">Rails</tspan></text><text font-family="Inter, system-ui, sans-serif"
      xml:space="preserve"
-     style="font-weight:bold;font-size:13.3333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
+     style="font-weight:bold;font-size:13.3333px;line-height:1.25;font-family: Inter, system-ui, sans-serif;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
      x="511.31934"
      y="209.34837"
      id="text376"><tspan
@@ -1561,9 +1561,9 @@
        x="511.31934"
        y="226.015"
        style="fill:#000000"
-       id="tspan381">Rails</tspan></text><text
+       id="tspan381">Rails</tspan></text><text font-family="Inter, system-ui, sans-serif"
      xml:space="preserve"
-     style="font-weight:bold;font-size:13.3333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
+     style="font-weight:bold;font-size:13.3333px;line-height:1.25;font-family: Inter, system-ui, sans-serif;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
      x="511.31934"
      y="353.34839"
      id="text378"><tspan
@@ -1578,9 +1578,9 @@
        x="511.31934"
        y="386.68164"
        style="fill:#000000"
-       id="tspan383">Rails</tspan></text><text
+       id="tspan383">Rails</tspan></text><text font-family="Inter, system-ui, sans-serif"
      xml:space="preserve"
-     style="font-weight:bold;font-size:13.3333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
+     style="font-weight:bold;font-size:13.3333px;line-height:1.25;font-family: Inter, system-ui, sans-serif;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
      x="511.31934"
      y="503.34839"
      id="text380"><tspan
@@ -1591,9 +1591,9 @@
        x="511.31934"
        y="520.01501"
        style="fill:#000000"
-       id="tspan384">Recovery</tspan></text><text
+       id="tspan384">Recovery</tspan></text><text font-family="Inter, system-ui, sans-serif"
      xml:space="preserve"
-     style="font-weight:bold;font-size:13.3333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
+     style="font-weight:bold;font-size:13.3333px;line-height:1.25;font-family: Inter, system-ui, sans-serif;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
      x="669.31934"
      y="209.34837"
      id="text386"><tspan
@@ -1604,9 +1604,9 @@
        x="669.31934"
        y="226.015"
        style="fill:#000000"
-       id="tspan392">Rails</tspan></text><text
+       id="tspan392">Rails</tspan></text><text font-family="Inter, system-ui, sans-serif"
      xml:space="preserve"
-     style="font-weight:bold;font-size:13.3333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
+     style="font-weight:bold;font-size:13.3333px;line-height:1.25;font-family: Inter, system-ui, sans-serif;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
      x="669.31934"
      y="353.34839"
      id="text389"><tspan
@@ -1621,9 +1621,9 @@
        x="669.31934"
        y="386.68164"
        style="fill:#000000"
-       id="tspan395">Rails</tspan></text><text
+       id="tspan395">Rails</tspan></text><text font-family="Inter, system-ui, sans-serif"
      xml:space="preserve"
-     style="font-weight:bold;font-size:13.3333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
+     style="font-weight:bold;font-size:13.3333px;line-height:1.25;font-family: Inter, system-ui, sans-serif;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
      x="669.31934"
      y="503.34839"
      id="text391"><tspan
@@ -1634,9 +1634,9 @@
        x="669.31934"
        y="520.01501"
        style="fill:#000000"
-       id="tspan396">Optimization</tspan></text><text
+       id="tspan396">Optimization</tspan></text><text font-family="Inter, system-ui, sans-serif"
      xml:space="preserve"
-     style="font-weight:bold;font-size:13.3333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
+     style="font-weight:bold;font-size:13.3333px;line-height:1.25;font-family: Inter, system-ui, sans-serif;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
      x="857.31934"
      y="209.34837"
      id="text398"><tspan
@@ -1651,9 +1651,9 @@
        x="857.31934"
        y="242.68163"
        style="fill:#000000"
-       id="tspan405">Rails</tspan></text><text
+       id="tspan405">Rails</tspan></text><text font-family="Inter, system-ui, sans-serif"
      xml:space="preserve"
-     style="font-weight:bold;font-size:13.3333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
+     style="font-weight:bold;font-size:13.3333px;line-height:1.25;font-family: Inter, system-ui, sans-serif;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
      x="857.31934"
      y="353.34839"
      id="text401"><tspan
@@ -1668,9 +1668,9 @@
        x="857.31934"
        y="386.68164"
        style="fill:#000000"
-       id="tspan408">Rails</tspan></text><text
+       id="tspan408">Rails</tspan></text><text font-family="Inter, system-ui, sans-serif"
      xml:space="preserve"
-     style="font-weight:bold;font-size:13.3333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
+     style="font-weight:bold;font-size:13.3333px;line-height:1.25;font-family: Inter, system-ui, sans-serif;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
      x="857.31934"
      y="503.34839"
      id="text403"><tspan
@@ -1681,9 +1681,9 @@
        x="857.31934"
        y="520.01501"
        style="fill:#000000"
-       id="tspan409">Rails</tspan></text><text
+       id="tspan409">Rails</tspan></text><text font-family="Inter, system-ui, sans-serif"
      xml:space="preserve"
-     style="font-weight:bold;font-size:13.3333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
+     style="font-weight:bold;font-size:13.3333px;line-height:1.25;font-family: Inter, system-ui, sans-serif;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
      x="1083.3193"
      y="209.34837"
      id="text412"><tspan
@@ -1698,9 +1698,9 @@
        x="1083.3193"
        y="242.68163"
        style="fill:#000000"
-       id="tspan422">Systems</tspan></text><text
+       id="tspan422">Systems</tspan></text><text font-family="Inter, system-ui, sans-serif"
      xml:space="preserve"
-     style="font-weight:bold;font-size:13.3333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
+     style="font-weight:bold;font-size:13.3333px;line-height:1.25;font-family: Inter, system-ui, sans-serif;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
      x="1083.3193"
      y="353.34839"
      id="text415"><tspan
@@ -1711,9 +1711,9 @@
        x="1083.3193"
        y="370.01501"
        style="fill:#000000"
-       id="tspan425">Output</tspan></text><text
+       id="tspan425">Output</tspan></text><text font-family="Inter, system-ui, sans-serif"
      xml:space="preserve"
-     style="font-weight:bold;font-size:13.3333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
+     style="font-weight:bold;font-size:13.3333px;line-height:1.25;font-family: Inter, system-ui, sans-serif;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
      x="1083.3193"
      y="503.34839"
      id="text417"><tspan
@@ -1870,9 +1870,9 @@
      id="image1-1"
      x="1051.6168"
      y="424.3992"
-     style="stroke-width:1.41224" /><text
+     style="stroke-width:1.41224" /><text font-family="Inter, system-ui, sans-serif"
      xml:space="preserve"
-     style="font-weight:bold;font-size:16px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
+     style="font-weight:bold;font-size:16px;line-height:1.25;font-family: Inter, system-ui, sans-serif;-inkscape-font-specification:'Arial Bold';font-variant-ligatures:none;text-align:center;text-anchor:middle"
      x="627.13452"
      y="577.89227"
      id="text431"><tspan

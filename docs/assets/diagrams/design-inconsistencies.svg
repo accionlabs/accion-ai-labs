@@ -11,78 +11,78 @@
   </defs>
 
   <!-- Title -->
-  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="600" fill="#111827">
+  <text font-family="Inter, system-ui, sans-serif" x="400" y="30" text-anchor="middle" font-size="16" font-weight="600" fill="#111827">
     Design Inconsistency Detection
   </text>
 
   <!-- Button Styles Section -->
   <g id="button-styles">
-    <text x="50" y="70" font-size="14" font-weight="600" fill="#111827">Button Implementations (12 different styles found)</text>
+    <text font-family="Inter, system-ui, sans-serif" x="50" y="70" font-size="14" font-weight="600" fill="#111827">Button Implementations (12 different styles found)</text>
     
     <!-- Different button styles -->
     <rect x="50" y="85" width="100" height="35" rx="4" fill="#3B82F6" />
-    <text x="100" y="107" text-anchor="middle" font-size="11" fill="white">Primary</text>
+    <text font-family="Inter, system-ui, sans-serif" x="100" y="107" text-anchor="middle" font-size="11" fill="white">Primary</text>
     
     <rect x="160" y="85" width="100" height="35" rx="18" fill="#10B981" />
-    <text x="210" y="107" text-anchor="middle" font-size="11" fill="white">Submit</text>
+    <text font-family="Inter, system-ui, sans-serif" x="210" y="107" text-anchor="middle" font-size="11" fill="white">Submit</text>
     
     <rect x="270" y="85" width="100" height="35" rx="0" fill="#EF4444" />
-    <text x="320" y="107" text-anchor="middle" font-size="11" fill="white">Delete</text>
+    <text font-family="Inter, system-ui, sans-serif" x="320" y="107" text-anchor="middle" font-size="11" fill="white">Delete</text>
     
     <rect x="380" y="85" width="100" height="35" rx="8" fill="url(#gradient1)" />
-    <text x="430" y="107" text-anchor="middle" font-size="11" fill="white">Action</text>
+    <text font-family="Inter, system-ui, sans-serif" x="430" y="107" text-anchor="middle" font-size="11" fill="white">Action</text>
     
     <rect x="490" y="85" width="100" height="35" rx="4" fill="white" stroke="#D1D5DB" stroke-width="2" />
-    <text x="540" y="107" text-anchor="middle" font-size="11" fill="#374151">Cancel</text>
+    <text font-family="Inter, system-ui, sans-serif" x="540" y="107" text-anchor="middle" font-size="11" fill="#374151">Cancel</text>
     
     <rect x="600" y="85" width="100" height="35" rx="20" fill="#FBBF24" />
-    <text x="650" y="107" text-anchor="middle" font-size="11" fill="#78350F">Warning</text>
+    <text font-family="Inter, system-ui, sans-serif" x="650" y="107" text-anchor="middle" font-size="11" fill="#78350F">Warning</text>
     
     <!-- Problem indicator -->
     <rect x="710" y="85" width="40" height="35" rx="4" fill="#FEE2E2" stroke="#EF4444" stroke-width="2" stroke-dasharray="2,2" />
-    <text x="730" y="107" text-anchor="middle" font-size="11" fill="#EF4444">+6</text>
+    <text font-family="Inter, system-ui, sans-serif" x="730" y="107" text-anchor="middle" font-size="11" fill="#EF4444">+6</text>
   </g>
 
   <!-- Form Validation Section -->
   <g id="form-validation">
-    <text x="50" y="160" font-size="14" font-weight="600" fill="#111827">Form Validation Patterns (8 different approaches)</text>
+    <text font-family="Inter, system-ui, sans-serif" x="50" y="160" font-size="14" font-weight="600" fill="#111827">Form Validation Patterns (8 different approaches)</text>
     
     <!-- Validation examples -->
     <g transform="translate(50, 180)">
       <!-- Inline error -->
       <rect x="0" y="0" width="150" height="60" rx="4" fill="#FEF2F2" stroke="#EF4444" />
-      <text x="10" y="20" font-size="10" fill="#374151">Email:</text>
+      <text font-family="Inter, system-ui, sans-serif" x="10" y="20" font-size="10" fill="#374151">Email:</text>
       <rect x="10" y="25" width="130" height="20" rx="2" fill="white" stroke="#EF4444" />
-      <text x="10" y="55" font-size="9" fill="#EF4444">Invalid email format</text>
+      <text font-family="Inter, system-ui, sans-serif" x="10" y="55" font-size="9" fill="#EF4444">Invalid email format</text>
     </g>
     
     <g transform="translate(210, 180)">
       <!-- Tooltip error -->
       <rect x="0" y="0" width="150" height="60" rx="4" fill="#F3F4F6" stroke="#D1D5DB" />
-      <text x="10" y="20" font-size="10" fill="#374151">Password:</text>
+      <text font-family="Inter, system-ui, sans-serif" x="10" y="20" font-size="10" fill="#374151">Password:</text>
       <rect x="10" y="25" width="130" height="20" rx="2" fill="white" stroke="#D1D5DB" />
       <rect x="80" y="5" width="80" height="25" rx="3" fill="#1F2937" />
-      <text x="120" y="22" text-anchor="middle" font-size="9" fill="white">Too short!</text>
+      <text font-family="Inter, system-ui, sans-serif" x="120" y="22" text-anchor="middle" font-size="9" fill="white">Too short!</text>
     </g>
     
     <g transform="translate(370, 180)">
       <!-- Alert box -->
       <rect x="0" y="0" width="150" height="60" rx="4" fill="#FEF3C7" stroke="#F59E0B" />
       <rect x="10" y="10" width="130" height="40" rx="2" fill="#FED7AA" />
-      <text x="75" y="25" text-anchor="middle" font-size="9" fill="#92400E">⚠ Form has errors</text>
-      <text x="75" y="40" text-anchor="middle" font-size="9" fill="#92400E">Please check fields</text>
+      <text font-family="Inter, system-ui, sans-serif" x="75" y="25" text-anchor="middle" font-size="9" fill="#92400E">⚠ Form has errors</text>
+      <text font-family="Inter, system-ui, sans-serif" x="75" y="40" text-anchor="middle" font-size="9" fill="#92400E">Please check fields</text>
     </g>
     
     <g transform="translate(530, 180)">
       <!-- No validation indicator -->
       <rect x="0" y="0" width="150" height="60" rx="4" fill="#F9FAFB" stroke="#D1D5DB" stroke-dasharray="3,3" />
-      <text x="75" y="35" text-anchor="middle" font-size="10" fill="#9CA3AF">No validation</text>
+      <text font-family="Inter, system-ui, sans-serif" x="75" y="35" text-anchor="middle" font-size="10" fill="#9CA3AF">No validation</text>
     </g>
   </g>
 
   <!-- Modal Implementations Section -->
   <g id="modal-styles">
-    <text x="50" y="280" font-size="14" font-weight="600" fill="#111827">Modal Dialog Implementations (5 different types)</text>
+    <text font-family="Inter, system-ui, sans-serif" x="50" y="280" font-size="14" font-weight="600" fill="#111827">Modal Dialog Implementations (5 different types)</text>
     
     <!-- Different modal styles -->
     <g transform="translate(50, 300)">
@@ -90,7 +90,7 @@
       <rect x="0" y="0" width="140" height="80" rx="4" fill="#1F2937" opacity="0.5" />
       <rect x="10" y="10" width="120" height="60" rx="4" fill="white" />
       <rect x="10" y="10" width="120" height="20" rx="4" fill="#E5E7EB" />
-      <text x="70" y="25" text-anchor="middle" font-size="10" fill="#374151">Bootstrap Modal</text>
+      <text font-family="Inter, system-ui, sans-serif" x="70" y="25" text-anchor="middle" font-size="10" fill="#374151">Bootstrap Modal</text>
       <circle cx="115" cy="20" r="5" fill="#EF4444" />
     </g>
     
@@ -98,29 +98,29 @@
       <!-- Custom jQuery modal -->
       <rect x="0" y="0" width="140" height="80" rx="0" fill="#000000" opacity="0.3" />
       <rect x="20" y="15" width="100" height="50" rx="8" fill="white" stroke="#3B82F6" stroke-width="2" />
-      <text x="70" y="45" text-anchor="middle" font-size="10" fill="#374151">jQuery Modal</text>
+      <text font-family="Inter, system-ui, sans-serif" x="70" y="45" text-anchor="middle" font-size="10" fill="#374151">jQuery Modal</text>
     </g>
     
     <g transform="translate(350, 300)">
       <!-- Native alert -->
       <rect x="0" y="0" width="140" height="80" rx="4" fill="#F3F4F6" />
       <rect x="25" y="20" width="90" height="40" rx="2" fill="white" stroke="#6B7280" stroke-width="1" />
-      <text x="70" y="35" text-anchor="middle" font-size="9" fill="#374151">alert()</text>
+      <text font-family="Inter, system-ui, sans-serif" x="70" y="35" text-anchor="middle" font-size="9" fill="#374151">alert()</text>
       <rect x="45" y="45" width="50" height="12" rx="2" fill="#3B82F6" />
-      <text x="70" y="53" text-anchor="middle" font-size="8" fill="white">OK</text>
+      <text font-family="Inter, system-ui, sans-serif" x="70" y="53" text-anchor="middle" font-size="8" fill="white">OK</text>
     </g>
     
     <g transform="translate(500, 300)">
       <!-- React Portal -->
       <rect x="0" y="0" width="140" height="80" rx="4" fill="url(#gradient2)" opacity="0.2" />
       <rect x="15" y="10" width="110" height="60" rx="12" fill="white" />
-      <text x="70" y="45" text-anchor="middle" font-size="10" fill="#374151">React Portal</text>
+      <text font-family="Inter, system-ui, sans-serif" x="70" y="45" text-anchor="middle" font-size="10" fill="#374151">React Portal</text>
     </g>
   </g>
 
   <!-- Table Components Section -->
   <g id="table-styles">
-    <text x="50" y="410" font-size="14" font-weight="600" fill="#111827">Table/Grid Components (7 different implementations)</text>
+    <text font-family="Inter, system-ui, sans-serif" x="50" y="410" font-size="14" font-weight="600" fill="#111827">Table/Grid Components (7 different implementations)</text>
     
     <!-- Table representations -->
     <g transform="translate(50, 430)">
@@ -131,14 +131,14 @@
       <line x1="0" y1="50" x2="160" y2="50" stroke="#E5E7EB" />
       <line x1="40" y1="20" x2="40" y2="70" stroke="#D1D5DB" />
       <line x1="100" y1="20" x2="100" y2="70" stroke="#D1D5DB" />
-      <text x="80" y="12" text-anchor="middle" font-size="9" fill="#6B7280">HTML Table</text>
+      <text font-family="Inter, system-ui, sans-serif" x="80" y="12" text-anchor="middle" font-size="9" fill="#6B7280">HTML Table</text>
     </g>
     
     <g transform="translate(220, 430)">
       <!-- DataTables -->
       <rect x="0" y="0" width="160" height="70" rx="4" fill="#EBF8FF" stroke="#3B82F6" />
       <rect x="0" y="0" width="160" height="20" rx="4" fill="#3B82F6" />
-      <text x="80" y="13" text-anchor="middle" font-size="9" fill="white">DataTables</text>
+      <text font-family="Inter, system-ui, sans-serif" x="80" y="13" text-anchor="middle" font-size="9" fill="white">DataTables</text>
       <line x1="0" y1="35" x2="160" y2="35" stroke="#BFDBFE" />
       <line x1="0" y1="50" x2="160" y2="50" stroke="#BFDBFE" />
       <rect x="140" y="25" width="15" height="40" rx="2" fill="#3B82F6" opacity="0.3" />
@@ -147,7 +147,7 @@
     <g transform="translate(390, 430)">
       <!-- Custom Grid -->
       <rect x="0" y="0" width="160" height="70" rx="4" fill="#F0FDF4" stroke="#22C55E" />
-      <text x="80" y="12" text-anchor="middle" font-size="9" fill="#16A34A">Custom Grid</text>
+      <text font-family="Inter, system-ui, sans-serif" x="80" y="12" text-anchor="middle" font-size="9" fill="#16A34A">Custom Grid</text>
       <g transform="translate(10, 20)">
         <rect x="0" y="0" width="35" height="20" fill="#BBF7D0" />
         <rect x="40" y="0" width="35" height="20" fill="#BBF7D0" />
@@ -163,17 +163,16 @@
     <g transform="translate(560, 430)">
       <!-- More indicators -->
       <rect x="0" y="0" width="80" height="70" rx="4" fill="#FEF2F2" stroke="#EF4444" stroke-width="2" stroke-dasharray="3,3" />
-      <text x="40" y="40" text-anchor="middle" font-size="14" font-weight="600" fill="#EF4444">+4</text>
-      <text x="40" y="55" text-anchor="middle" font-size="9" fill="#EF4444">more</text>
+      <text font-family="Inter, system-ui, sans-serif" x="40" y="40" text-anchor="middle" font-size="14" font-weight="600" fill="#EF4444">+4</text>
+      <text font-family="Inter, system-ui, sans-serif" x="40" y="55" text-anchor="middle" font-size="9" fill="#EF4444">more</text>
     </g>
   </g>
 
   <!-- Impact Summary -->
   <g id="impact">
     <rect x="50" y="520" width="700" height="60" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2" />
-    <text x="70" y="545" font-size="12" font-weight="600" fill="#92400E">Impact of Design Inconsistencies:</text>
-    <text x="70" y="565" font-size="11" fill="#78350F">
+    <text font-family="Inter, system-ui, sans-serif" x="70" y="545" font-size="12" font-weight="600" fill="#92400E">Impact of Design Inconsistencies:</text>
+    <text font-family="Inter, system-ui, sans-serif" x="70" y="565" font-size="11" fill="#78350F">
       • Poor user experience  • Increased maintenance cost  • Duplicated code  • Accessibility issues  • Brand inconsistency
     </text>
   </g>
-</svg>

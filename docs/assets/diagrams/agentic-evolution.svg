@@ -21,7 +21,7 @@
   </defs>
   
   <!-- Title -->
-  <text x="450" y="40" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold" fill="#1f2937">
+  <text x="450" y="40" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1f2937">
     Evolution to Agentic Graph RAG
   </text>
   
@@ -34,30 +34,30 @@
     
     <!-- Icon placeholder -->
     <circle cx="150" cy="190" r="15" fill="#3b82f6" opacity="0.2" />
-    <text x="150" y="195" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#3b82f6">
+    <text x="150" y="195" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="20" fill="#3b82f6">
       🔍
     </text>
     
     <!-- Stage name -->
-    <text x="150" y="280" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#1f2937">
+    <text x="150" y="280" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#1f2937">
       Vector Search (RAG)
     </text>
     
     <!-- Accuracy -->
-    <text x="150" y="300" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#3b82f6">
+    <text x="150" y="300" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#3b82f6">
       60% Accuracy
     </text>
     
     <!-- Description -->
-    <text x="150" y="320" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#6b7280">
+    <text x="150" y="320" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#6b7280">
       Document retrieval
     </text>
-    <text x="150" y="335" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#6b7280">
+    <text x="150" y="335" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#6b7280">
       Similarity search
     </text>
     
     <!-- Limitations -->
-    <text x="150" y="355" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#ef4444">
+    <text x="150" y="355" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#ef4444">
       ⚠ Hallucination issues
     </text>
     
@@ -71,30 +71,30 @@
     
     <!-- Icon placeholder -->
     <circle cx="450" cy="190" r="15" fill="#9333ea" opacity="0.2" />
-    <text x="450" y="195" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#9333ea">
+    <text x="450" y="195" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="20" fill="#9333ea">
       🔗
     </text>
     
     <!-- Stage name -->
-    <text x="450" y="280" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#1f2937">
+    <text x="450" y="280" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#1f2937">
       Graph-RAG
     </text>
     
     <!-- Accuracy -->
-    <text x="450" y="300" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#9333ea">
+    <text x="450" y="300" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#9333ea">
       80% Accuracy
     </text>
     
     <!-- Description -->
-    <text x="450" y="320" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#6b7280">
+    <text x="450" y="320" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#6b7280">
       Entity relationships
     </text>
-    <text x="450" y="335" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#6b7280">
+    <text x="450" y="335" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#6b7280">
       Pattern detection
     </text>
     
     <!-- Limitations -->
-    <text x="450" y="355" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#f59e0b">
+    <text x="450" y="355" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#f59e0b">
       ⚠ Limited reasoning
     </text>
     
@@ -108,48 +108,47 @@
     
     <!-- Icon placeholder -->
     <circle cx="750" cy="190" r="18" fill="#22c55e" opacity="0.2" />
-    <text x="750" y="195" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="24" fill="#22c55e">
+    <text x="750" y="195" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="24" fill="#22c55e">
       🤖
     </text>
     
     <!-- Stage name -->
-    <text x="750" y="280" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#1f2937">
+    <text x="750" y="280" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#1f2937">
       Agentic Graph RAG
     </text>
     
     <!-- Accuracy -->
-    <text x="750" y="300" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#22c55e">
+    <text x="750" y="300" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#22c55e">
       95% Accuracy
     </text>
     
     <!-- Description -->
-    <text x="750" y="320" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#6b7280">
+    <text x="750" y="320" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#6b7280">
       Function/Tool calling
     </text>
-    <text x="750" y="335" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#6b7280">
+    <text x="750" y="335" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#6b7280">
       Advanced reasoning
     </text>
     
     <!-- Achievement -->
-    <text x="750" y="355" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#22c55e">
+    <text x="750" y="355" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#22c55e">
       ✓ Production Ready
     </text>
   </g>
   
   <!-- Progress indicators -->
   <g id="progress">
-    <text x="300" y="170" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#6b7280" font-style="italic">
+    <text x="300" y="170" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#6b7280" font-style="italic">
       +20% accuracy
     </text>
-    <text x="600" y="170" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#6b7280" font-style="italic">
+    <text x="600" y="170" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#6b7280" font-style="italic">
       +15% accuracy
     </text>
   </g>
   
   <!-- Key benefits at bottom -->
   <g id="benefits" transform="translate(450, 380)">
-    <text x="0" y="0" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#374151">
+    <text x="0" y="0" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#374151">
       Key Benefits: Reduced Hallucination | Contextual Understanding | Autonomous Reasoning | Tool Integration
     </text>
   </g>
-</svg>
