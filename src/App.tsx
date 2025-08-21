@@ -17,7 +17,26 @@ import AgentAnalysisView from './components/technicalDebt/AgentAnalysisView';
 import DebtAssessmentDashboard from './components/technicalDebt/DebtAssessmentDashboard';
 import RemediationRoadmap from './components/technicalDebt/RemediationRoadmap';
 import CoreTechnologyOverview from './components/coreTechnology/CoreTechnologyOverview';
+import KAPSFramework from './components/coreTechnology/KAPSFramework';
+import AgenticGraphArchitecture from './components/coreTechnology/AgenticGraphArchitecture';
+import AgenticArchitecture from './components/coreTechnology/AgenticArchitecture';
+import GenAIInABox from './components/coreTechnology/GenAIInABox';
+import StrategicGuardrails from './components/coreTechnology/StrategicGuardrails';
 import SolutionShowcase from './components/solutions/SolutionShowcase';
+import CustomerServiceDeepDive from './components/solutions/CustomerServiceDeepDive';
+import CustomerServiceOverview from './components/solutions/customerService/CustomerServiceOverview';
+import AppModernizationShowcase from './components/solutions/AppModernizationShowcase';
+import DataEngineeringShowcase from './components/solutions/DataEngineeringShowcase';
+import AgentsAsServiceShowcase from './components/solutions/AgentsAsServiceShowcase';
+import ASIMOVOverview from './components/solutions/asimov/ASIMOVOverview';
+import DiscoveryAnalysis from './components/solutions/asimov/DiscoveryAnalysis';
+import TransformationEngine from './components/solutions/asimov/TransformationEngine';
+import MigrationPatterns from './components/solutions/asimov/MigrationPatterns';
+import SuccessStories from './components/solutions/asimov/SuccessStories';
+import SelfHealBot from './components/solutions/customerService/SelfHealBot';
+import AssistedHealBot from './components/solutions/customerService/AssistedHealBot';
+import BusinessOptimizationHub from './components/solutions/customerService/BusinessOptimizationHub';
+import ImplementationRoadmap from './components/solutions/customerService/ImplementationRoadmap';
 import ContactPage from './components/contact/ContactPage';
 
 const App: React.FC = () => {
@@ -37,11 +56,103 @@ const App: React.FC = () => {
                   <CoreTechnologyOverview />
                 </AppLayout>
               } />
+              <Route path="/core-technology/kaps-framework" element={
+                <AppLayout>
+                  <KAPSFramework />
+                </AppLayout>
+              } />
+              <Route path="/core-technology/agentic-architecture" element={
+                <AppLayout>
+                  <AgenticGraphArchitecture />
+                </AppLayout>
+              } />
+              <Route path="/core-technology/agent-architecture" element={
+                <AppLayout>
+                  <AgenticArchitecture />
+                </AppLayout>
+              } />
+              <Route path="/core-technology/gen-ai-box" element={
+                <AppLayout>
+                  <GenAIInABox />
+                </AppLayout>
+              } />
+              <Route path="/core-technology/guardrails" element={
+                <AppLayout>
+                  <StrategicGuardrails />
+                </AppLayout>
+              } />
               
               {/* Solutions Showcase */}
               <Route path="/solutions" element={
                 <AppLayout>
                   <SolutionShowcase />
+                </AppLayout>
+              } />
+              <Route path="/solutions/customer-service" element={
+                <AppLayout>
+                  <CustomerServiceOverview />
+                </AppLayout>
+              } />
+              <Route path="/solutions/customer-service/self-heal-bot" element={
+                <AppLayout>
+                  <SelfHealBot />
+                </AppLayout>
+              } />
+              <Route path="/solutions/customer-service/assisted-heal-bot" element={
+                <AppLayout>
+                  <AssistedHealBot />
+                </AppLayout>
+              } />
+              <Route path="/solutions/customer-service/optimization-hub" element={
+                <AppLayout>
+                  <BusinessOptimizationHub />
+                </AppLayout>
+              } />
+              <Route path="/solutions/customer-service/implementation" element={
+                <AppLayout>
+                  <ImplementationRoadmap />
+                </AppLayout>
+              } />
+              <Route path="/solutions/app-modernization" element={
+                <AppLayout>
+                  <AppModernizationShowcase />
+                </AppLayout>
+              } />
+              <Route path="/solutions/data-engineering" element={
+                <AppLayout>
+                  <DataEngineeringShowcase />
+                </AppLayout>
+              } />
+              <Route path="/solutions/agents-as-service" element={
+                <AppLayout>
+                  <AgentsAsServiceShowcase />
+                </AppLayout>
+              } />
+              
+              {/* ASIMOV Legacy Migration Deep Dive */}
+              <Route path="/solutions/asimov" element={
+                <AppLayout>
+                  <ASIMOVOverview />
+                </AppLayout>
+              } />
+              <Route path="/solutions/asimov/discovery" element={
+                <AppLayout>
+                  <DiscoveryAnalysis />
+                </AppLayout>
+              } />
+              <Route path="/solutions/asimov/transformation" element={
+                <AppLayout>
+                  <TransformationEngine />
+                </AppLayout>
+              } />
+              <Route path="/solutions/asimov/patterns" element={
+                <AppLayout>
+                  <MigrationPatterns />
+                </AppLayout>
+              } />
+              <Route path="/solutions/asimov/success-stories" element={
+                <AppLayout>
+                  <SuccessStories />
                 </AppLayout>
               } />
               

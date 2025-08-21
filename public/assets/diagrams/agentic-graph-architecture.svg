@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#6b7280" />
+    </marker>
+    
+    <!-- Gradients for visual appeal -->
+    <linearGradient id="nodeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0.3" />
+    </linearGradient>
+    
+    <linearGradient id="centralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0.4" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" fill="#1f2937">
+    Multi-Agent Graph Architecture
+  </text>
+  
+  <!-- Central Orchestrator Node -->
+  <g id="central-orchestrator">
+    <circle cx="450" cy="200" r="60" fill="url(#centralGradient)" stroke="#8b5cf6" stroke-width="3" />
+    <text x="450" y="195" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#1f2937">
+      Orchestrator
+    </text>
+    <text x="450" y="210" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#6b7280">
+      Agent
+    </text>
+  </g>
+  
+  <!-- Knowledge Agent (Top Left) -->
+  <g id="knowledge-agent">
+    <circle cx="250" cy="100" r="45" fill="url(#nodeGradient)" stroke="#3b82f6" stroke-width="2" />
+    <text x="250" y="95" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#1f2937">
+      Knowledge
+    </text>
+    <text x="250" y="110" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#6b7280">
+      Agent
+    </text>
+    <!-- Connection to Orchestrator -->
+    <line x1="285" y1="125" x2="400" y2="175" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow)" opacity="0.6" />
+    
+    <!-- Sub-agents -->
+    <circle cx="150" cy="80" r="25" fill="white" stroke="#93c5fd" stroke-width="1.5" />
+    <text x="150" y="85" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#1f2937">
+      RAG
+    </text>
+    <line x1="175" y1="80" x2="205" y2="90" stroke="#93c5fd" stroke-width="1.5" />
+    
+    <circle cx="180" cy="140" r="25" fill="white" stroke="#93c5fd" stroke-width="1.5" />
+    <text x="180" y="145" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#1f2937">
+      Memory
+    </text>
+    <line x1="205" y1="130" x2="220" y2="115" stroke="#93c5fd" stroke-width="1.5" />
+  </g>
+  
+  <!-- Analytics Agent (Top Right) -->
+  <g id="analytics-agent">
+    <circle cx="650" cy="100" r="45" fill="url(#nodeGradient)" stroke="#10b981" stroke-width="2" />
+    <text x="650" y="95" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#1f2937">
+      Analytics
+    </text>
+    <text x="650" y="110" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#6b7280">
+      Agent
+    </text>
+    <!-- Connection to Orchestrator -->
+    <line x1="615" y1="125" x2="500" y2="175" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow)" opacity="0.6" />
+    
+    <!-- Sub-agents -->
+    <circle cx="750" cy="80" r="25" fill="white" stroke="#86efac" stroke-width="1.5" />
+    <text x="750" y="85" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#1f2937">
+      Insights
+    </text>
+    <line x1="725" y1="80" x2="695" y2="90" stroke="#86efac" stroke-width="1.5" />
+    
+    <circle cx="720" cy="140" r="25" fill="white" stroke="#86efac" stroke-width="1.5" />
+    <text x="720" y="145" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#1f2937">
+      Predict
+    </text>
+    <line x1="695" y1="130" x2="680" y2="115" stroke="#86efac" stroke-width="1.5" />
+  </g>
+  
+  <!-- Process Agent (Bottom Left) -->
+  <g id="process-agent">
+    <circle cx="250" cy="300" r="45" fill="url(#nodeGradient)" stroke="#f59e0b" stroke-width="2" />
+    <text x="250" y="295" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#1f2937">
+      Process
+    </text>
+    <text x="250" y="310" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#6b7280">
+      Agent
+    </text>
+    <!-- Connection to Orchestrator -->
+    <line x1="285" y1="275" x2="400" y2="225" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow)" opacity="0.6" />
+    
+    <!-- Sub-agents -->
+    <circle cx="150" cy="320" r="25" fill="white" stroke="#fcd34d" stroke-width="1.5" />
+    <text x="150" y="325" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#1f2937">
+      Workflow
+    </text>
+    <line x1="175" y1="320" x2="205" y2="310" stroke="#fcd34d" stroke-width="1.5" />
+    
+    <circle cx="180" cy="260" r="25" fill="white" stroke="#fcd34d" stroke-width="1.5" />
+    <text x="180" y="265" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#1f2937">
+      Task
+    </text>
+    <line x1="205" y1="270" x2="220" y2="285" stroke="#fcd34d" stroke-width="1.5" />
+  </g>
+  
+  <!-- Systems Agent (Bottom Right) -->
+  <g id="systems-agent">
+    <circle cx="650" cy="300" r="45" fill="url(#nodeGradient)" stroke="#ef4444" stroke-width="2" />
+    <text x="650" y="295" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#1f2937">
+      Systems
+    </text>
+    <text x="650" y="310" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#6b7280">
+      Agent
+    </text>
+    <!-- Connection to Orchestrator -->
+    <line x1="615" y1="275" x2="500" y2="225" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow)" opacity="0.6" />
+    
+    <!-- Sub-agents -->
+    <circle cx="750" cy="320" r="25" fill="white" stroke="#fca5a5" stroke-width="1.5" />
+    <text x="750" y="325" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#1f2937">
+      API
+    </text>
+    <line x1="725" y1="320" x2="695" y2="310" stroke="#fca5a5" stroke-width="1.5" />
+    
+    <circle cx="720" cy="260" r="25" fill="white" stroke="#fca5a5" stroke-width="1.5" />
+    <text x="720" y="265" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#1f2937">
+      Tools
+    </text>
+    <line x1="695" y1="270" x2="680" y2="285" stroke="#fca5a5" stroke-width="1.5" />
+  </g>
+  
+  <!-- Inter-agent Communication Lines (dashed) -->
+  <line x1="295" y1="100" x2="605" y2="100" stroke="#6b7280" stroke-width="1" stroke-dasharray="5,5" opacity="0.3" />
+  <line x1="295" y1="300" x2="605" y2="300" stroke="#6b7280" stroke-width="1" stroke-dasharray="5,5" opacity="0.3" />
+  <line x1="250" y1="145" x2="250" y2="255" stroke="#6b7280" stroke-width="1" stroke-dasharray="5,5" opacity="0.3" />
+  <line x1="650" y1="145" x2="650" y2="255" stroke="#6b7280" stroke-width="1" stroke-dasharray="5,5" opacity="0.3" />
+  
+  <!-- Legend -->
+  <g id="legend" transform="translate(50, 360)">
+    <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#374151">
+      Legend:
+    </text>
+    <circle cx="80" cy="-5" r="8" fill="url(#centralGradient)" stroke="#8b5cf6" stroke-width="1.5" />
+    <text x="95" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#6b7280">Orchestrator</text>
+    
+    <circle cx="200" cy="-5" r="8" fill="url(#nodeGradient)" stroke="#3b82f6" stroke-width="1.5" />
+    <text x="215" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#6b7280">Primary Agent</text>
+    
+    <circle cx="330" cy="-5" r="6" fill="white" stroke="#93c5fd" stroke-width="1" />
+    <text x="345" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#6b7280">Sub-Agent</text>
+    
+    <line x1="440" y1="-5" x2="470" y2="-5" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow)" />
+    <text x="480" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#6b7280">Control Flow</text>
+    
+    <line x1="590" y1="-5" x2="620" y2="-5" stroke="#6b7280" stroke-width="1" stroke-dasharray="5,5" />
+    <text x="630" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#6b7280">Communication</text>
+  </g>
+</svg>

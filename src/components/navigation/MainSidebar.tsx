@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useNavigation } from '../../contexts/NavigationContext';
 import { 
@@ -20,7 +20,13 @@ import {
   DocumentChartBarIcon,
   MapIcon,
   RectangleStackIcon,
-  BeakerIcon
+  BeakerIcon,
+  UserGroupIcon,
+  ArrowPathIcon,
+  CircleStackIcon,
+  RocketLaunchIcon,
+  DocumentMagnifyingGlassIcon,
+  CodeBracketIcon
 } from '@heroicons/react/24/outline';
 
 interface MenuItem {
@@ -42,19 +48,155 @@ const menuItems: MenuItem[] = [
     id: 'core-technology',
     label: 'Core Technology',
     icon: CpuChipIcon,
-    path: '/core-technology'
+    children: [
+      {
+        id: 'core-overview',
+        label: 'Overview',
+        icon: CpuChipIcon,
+        path: '/core-technology'
+      },
+      {
+        id: 'kaps-framework',
+        label: 'KAPS Framework',
+        icon: RectangleStackIcon,
+        path: '/core-technology/kaps-framework'
+      },
+      {
+        id: 'agentic-architecture',
+        label: 'Agent Architecture',
+        icon: CubeTransparentIcon,
+        path: '/core-technology/agent-architecture'
+      },
+      {
+        id: 'gen-ai-box',
+        label: 'Gen AI in a Box',
+        icon: BeakerIcon,
+        path: '/core-technology/gen-ai-box'
+      },
+      {
+        id: 'guardrails',
+        label: 'Strategic Guardrails',
+        icon: ScaleIcon,
+        path: '/core-technology/guardrails'
+      }
+    ]
   },
   {
     id: 'solutions',
     label: 'Solution Showcase',
     icon: LightBulbIcon,
-    path: '/solutions'
+    children: [
+      {
+        id: 'solutions-overview',
+        label: 'Overview',
+        icon: LightBulbIcon,
+        path: '/solutions'
+      },
+      {
+        id: 'customer-service',
+        label: 'Customer Service',
+        icon: PhoneIcon,
+        path: '/solutions/customer-service'
+      },
+      {
+        id: 'app-modernization',
+        label: 'App Modernization',
+        icon: ArrowPathIcon,
+        path: '/solutions/app-modernization'
+      },
+      {
+        id: 'data-engineering',
+        label: 'Data Engineering',
+        icon: CircleStackIcon,
+        path: '/solutions/data-engineering'
+      },
+      {
+        id: 'agents-as-service',
+        label: 'Agents as Service',
+        icon: RocketLaunchIcon,
+        path: '/solutions/agents-as-service'
+      }
+    ]
   },
   {
     id: 'live-examples',
     label: 'Solution Deep Dives',
     icon: RectangleStackIcon,
     children: [
+      {
+        id: 'asimov-migration',
+        label: 'ASIMOV Migration',
+        icon: ArrowPathIcon,
+        children: [
+          {
+            id: 'asimov-overview',
+            label: 'Overview',
+            icon: ArrowPathIcon,
+            path: '/solutions/asimov'
+          },
+          {
+            id: 'discovery-analysis',
+            label: 'Discovery & Analysis',
+            icon: DocumentMagnifyingGlassIcon,
+            path: '/solutions/asimov/discovery'
+          },
+          {
+            id: 'transformation-engine',
+            label: 'Transformation Engine',
+            icon: CpuChipIcon,
+            path: '/solutions/asimov/transformation'
+          },
+          {
+            id: 'migration-patterns',
+            label: 'Migration Patterns',
+            icon: CodeBracketIcon,
+            path: '/solutions/asimov/patterns'
+          },
+          {
+            id: 'success-stories',
+            label: 'Success Stories',
+            icon: ChartBarIcon,
+            path: '/solutions/asimov/success-stories'
+          }
+        ]
+      },
+      {
+        id: 'customer-service-deep',
+        label: 'Customer Service AI',
+        icon: PhoneIcon,
+        children: [
+          {
+            id: 'cs-overview',
+            label: 'Overview',
+            icon: PhoneIcon,
+            path: '/solutions/customer-service'
+          },
+          {
+            id: 'self-heal-bot',
+            label: 'Self Heal Bot',
+            icon: SparklesIcon,
+            path: '/solutions/customer-service/self-heal-bot'
+          },
+          {
+            id: 'assisted-heal-bot',
+            label: 'Assisted Heal Bot',
+            icon: UserGroupIcon,
+            path: '/solutions/customer-service/assisted-heal-bot'
+          },
+          {
+            id: 'optimization-hub',
+            label: 'Optimization Hub',
+            icon: ChartBarIcon,
+            path: '/solutions/customer-service/optimization-hub'
+          },
+          {
+            id: 'implementation',
+            label: 'Implementation',
+            icon: MapIcon,
+            path: '/solutions/customer-service/implementation'
+          }
+        ]
+      },
       {
         id: 'technical-debt',
         label: 'Technical Debt Analysis',
@@ -142,8 +284,81 @@ const menuItems: MenuItem[] = [
 const MainSidebar: React.FC = () => {
   const location = useLocation();
   const { sidebarMode, toggleSidebar } = useNavigation();
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['live-examples']));
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
+  // Initialize expanded sections based on current path
+  const getInitialExpandedSections = () => {
+    const expanded = new Set<string>(['live-examples']);
+    
+    // Auto-expand sections that contain the active path
+    menuItems.forEach(item => {
+      if (item.children) {
+        const shouldExpand = item.children.some(child => {
+          if (child.path && location.pathname.startsWith(child.path)) return true;
+          if (child.children) {
+            return child.children.some(grandchild => 
+              grandchild.path && location.pathname.startsWith(grandchild.path)
+            );
+          }
+          return false;
+        });
+        if (shouldExpand) {
+          expanded.add(item.id);
+          // Also expand child sections if needed
+          item.children.forEach(child => {
+            if (child.children) {
+              const shouldExpandChild = child.children.some(grandchild =>
+                grandchild.path && location.pathname.startsWith(grandchild.path)
+              );
+              if (shouldExpandChild) {
+                expanded.add(child.id);
+              }
+            }
+          });
+        }
+      }
+    });
+    
+    return expanded;
+  };
+  
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(getInitialExpandedSections());
+
+  // Update expanded sections when location changes
+  useEffect(() => {
+    const expanded = new Set<string>(['live-examples']);
+    
+    // Auto-expand sections that contain the active path
+    menuItems.forEach(item => {
+      if (item.children) {
+        const shouldExpand = item.children.some(child => {
+          if (child.path && location.pathname.startsWith(child.path)) return true;
+          if (child.children) {
+            return child.children.some(grandchild => 
+              grandchild.path && location.pathname.startsWith(grandchild.path)
+            );
+          }
+          return false;
+        });
+        if (shouldExpand) {
+          expanded.add(item.id);
+          // Also expand child sections if needed
+          item.children.forEach(child => {
+            if (child.children) {
+              const shouldExpandChild = child.children.some(grandchild =>
+                grandchild.path && location.pathname.startsWith(grandchild.path)
+              );
+              if (shouldExpandChild) {
+                expanded.add(child.id);
+              }
+            }
+          });
+        }
+      }
+    });
+    
+    setExpandedSections(expanded);
+  }, [location.pathname]);
 
   const toggleSection = (sectionId: string) => {
     const newExpanded = new Set(expandedSections);
@@ -157,7 +372,26 @@ const MainSidebar: React.FC = () => {
 
   const isActive = (path?: string) => {
     if (!path) return false;
-    return location.pathname === path || location.pathname.startsWith(path + '/');
+    // Exact match for specific paths
+    return location.pathname === path;
+  };
+
+  const isParentActive = (item: MenuItem) => {
+    // Check if current path matches the parent path
+    if (item.path && location.pathname.startsWith(item.path)) {
+      return true;
+    }
+    // Check if any child or grandchild is active
+    if (item.children) {
+      return item.children.some(child => {
+        if (isActive(child.path)) return true;
+        if (child.children) {
+          return child.children.some(grandchild => isActive(grandchild.path));
+        }
+        return false;
+      });
+    }
+    return false;
   };
 
   const renderMenuItem = (item: MenuItem, depth = 0, isMobile = false) => {
@@ -165,10 +399,8 @@ const MainSidebar: React.FC = () => {
     const isExpanded = expandedSections.has(item.id);
     const Icon = item.icon;
     
-    // Check if any child is active
-    const hasActiveChild = hasChildren && item.children?.some(child => 
-      isActive(child.path) || (child.children?.some(grandchild => isActive(grandchild.path)))
-    );
+    // Check if this parent item should be highlighted
+    const hasActiveChild = hasChildren && isParentActive(item);
 
     if (hasChildren) {
       return (

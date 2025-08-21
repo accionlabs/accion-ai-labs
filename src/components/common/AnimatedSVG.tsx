@@ -59,6 +59,20 @@ const AnimatedSVG: React.FC<AnimatedSVGProps> = ({
     
     const svgElement = container.querySelector('svg');
     if (!svgElement) return;
+    
+    // Apply consistent font family to all text elements - preserve original colors
+    const textElements = svgElement.querySelectorAll('text, tspan');
+    textElements.forEach((text) => {
+      const textElem = text as SVGTextElement;
+      
+      // Remove any existing font-family from inline styles
+      if (textElem.style.cssText) {
+        textElem.style.cssText = textElem.style.cssText.replace(/font-family:\s*[^;]+;?/gi, '');
+      }
+      
+      // Apply our font family only - don't change colors
+      textElem.style.fontFamily = '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif';
+    });
 
     // Set initial visibility - hide all animated elements
     animationSteps.forEach((step, stepIndex) => {

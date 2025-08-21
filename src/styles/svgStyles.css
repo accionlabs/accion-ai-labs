@@ -1,0 +1,26 @@
+/* Global SVG Text Styles to match UI fonts */
+
+/* Apply system font stack to all SVG text elements */
+svg text,
+svg tspan {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Consistent text rendering */
+svg {
+  text-rendering: optimizeLegibility;
+  shape-rendering: geometricPrecision;
+}
+
+/* Ensure embedded SVGs also get the styles */
+embed svg text,
+object svg text,
+iframe svg text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif !important;
+}

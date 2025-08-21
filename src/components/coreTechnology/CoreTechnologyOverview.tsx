@@ -389,6 +389,73 @@ const CoreTechnologyOverview: React.FC = () => {
           </div>
         </div>
 
+        {/* Platform Integration Section */}
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 sm:p-8 mb-8">
+          <h2 className="text-2xl font-semibold text-gray-900 mb-6">Integration with Breeze.AI Platform</h2>
+          <p className="text-gray-600 mb-8">
+            Our Core Technology components work together to deliver production-quality AI solutions. 
+            Explore each component to understand how they enable enterprise-grade deployments.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <Link
+              to="/core-technology/kaps-framework"
+              className="group border rounded-lg p-4 hover:shadow-lg transition-all hover:border-purple-300"
+            >
+              <CircleStackIcon className="h-8 w-8 text-purple-600 mb-2" />
+              <h3 className="font-semibold text-gray-900 mb-1">KAPS Framework</h3>
+              <p className="text-sm text-gray-600">
+                AI adoption framework with four specialized portfolios
+              </p>
+              <span className="text-purple-600 text-sm mt-2 inline-flex items-center group-hover:gap-2 transition-all">
+                Learn more <ArrowRightIcon className="h-4 w-4 ml-1" />
+              </span>
+            </Link>
+
+            <Link
+              to="/core-technology/agentic-architecture"
+              className="group border rounded-lg p-4 hover:shadow-lg transition-all hover:border-green-300"
+            >
+              <CubeIcon className="h-8 w-8 text-green-600 mb-2" />
+              <h3 className="font-semibold text-gray-900 mb-1">Agentic Architecture</h3>
+              <p className="text-sm text-gray-600">
+                Evolution from RAG to production-quality solutions
+              </p>
+              <span className="text-green-600 text-sm mt-2 inline-flex items-center group-hover:gap-2 transition-all">
+                Learn more <ArrowRightIcon className="h-4 w-4 ml-1" />
+              </span>
+            </Link>
+
+            <Link
+              to="/core-technology/gen-ai-box"
+              className="group border rounded-lg p-4 hover:shadow-lg transition-all hover:border-orange-300"
+            >
+              <BeakerIcon className="h-8 w-8 text-orange-600 mb-2" />
+              <h3 className="font-semibold text-gray-900 mb-1">Gen AI in a Box</h3>
+              <p className="text-sm text-gray-600">
+                Pre-configured deployment packages with hardware
+              </p>
+              <span className="text-orange-600 text-sm mt-2 inline-flex items-center group-hover:gap-2 transition-all">
+                Learn more <ArrowRightIcon className="h-4 w-4 ml-1" />
+              </span>
+            </Link>
+
+            <Link
+              to="/core-technology/guardrails"
+              className="group border rounded-lg p-4 hover:shadow-lg transition-all hover:border-red-300"
+            >
+              <DocumentTextIcon className="h-8 w-8 text-red-600 mb-2" />
+              <h3 className="font-semibold text-gray-900 mb-1">Strategic Guardrails</h3>
+              <p className="text-sm text-gray-600">
+                Security and governance for production AI
+              </p>
+              <span className="text-red-600 text-sm mt-2 inline-flex items-center group-hover:gap-2 transition-all">
+                Learn more <ArrowRightIcon className="h-4 w-4 ml-1" />
+              </span>
+            </Link>
+          </div>
+        </div>
+
         {/* CTA Section */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">

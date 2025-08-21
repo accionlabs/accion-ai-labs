@@ -120,6 +120,15 @@ const PortfolioOverview: React.FC = () => {
               style={{ maxWidth: '100%', height: 'auto' }}
             />
           </div>
+          <div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+            <p className="text-sm text-blue-900">
+              <strong>Note on Product-Specific Ontologies:</strong> While the core rationalization framework focuses on 
+              the four primary ontologies (Code, Functional, Design, Architecture), real-world products often include 
+              additional product-specific ontologies such as user context graphs, master data models, workflows, and 
+              business rules. The rationalization strategy accommodates these product-specific data models by applying 
+              the same systematic analysis and consolidation principles to ensure complete unification without ambiguity.
+            </p>
+          </div>
         </div>
 
         {/* Interactive Tools */}
