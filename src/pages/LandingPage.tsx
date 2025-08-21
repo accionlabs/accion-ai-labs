@@ -260,14 +260,20 @@ const LandingPage: React.FC<LandingPageProps> = ({
                   muted
                   playsInline
                 >
-                  <source src={getPublicAssetUrl("assets/videos/ai-driven-ux-rationalization.mp4")} type="video/mp4" />
+                  <source src={getPublicAssetUrl("assets/videos/ai-agents-autonomous-business.mp4")} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
                 
-                <div className="absolute top-0 left-0 right-0 bg-gradient-to-b from-black/70 to-transparent p-4 sm:p-8">
-                  <h2 className="text-lg sm:text-2xl lg:text-3xl font-bold text-white text-center">
-                    Semantic Knowledge Graphs in Action
-                  </h2>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/60 flex items-center justify-center">
+                  <div className="text-center px-6 sm:px-12 max-w-4xl">
+                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
+                      Building Autonomous Enterprises
+                    </h2>
+                    <p className="text-base sm:text-lg lg:text-xl text-white/90">
+                      Accion's AI Agents create Autonomous Enterprises where humans guide, monitor, and validate 
+                      intelligent agents that handle the groundwork — transforming how businesses operate at scale.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
