@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { useNavigation } from '../../contexts/NavigationContext';
 import { 
   HomeIcon, 
   CpuChipIcon,
@@ -8,7 +7,6 @@ import {
   WrenchScrewdriverIcon,
   PuzzlePieceIcon,
   ChevronRightIcon,
-  ChevronLeftIcon,
   Bars3Icon,
   XMarkIcon,
   PhoneIcon,
@@ -289,7 +287,6 @@ const menuItems: MenuItem[] = [
 
 const MainSidebar: React.FC = () => {
   const location = useLocation();
-  const { sidebarMode, toggleSidebar } = useNavigation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
   // Initialize expanded sections based on current path
@@ -420,27 +417,19 @@ const MainSidebar: React.FC = () => {
               ${depth > 0 ? 'ml-3' : ''}
               ${isMobile ? 'cursor-default' : ''}
             `}
-            title={sidebarMode === 'collapsed' && !isMobile ? item.label : undefined}
+            title={undefined}
           >
             <div className="flex items-center">
-              <Icon className={`h-5 w-5 ${(isMobile || sidebarMode === 'expanded') ? 'mr-3' : ''} ${hasActiveChild ? 'text-blue-600' : 'text-gray-500'}`} />
-              {(isMobile || sidebarMode === 'expanded') && (
-                <span className="text-sm font-medium">{item.label}</span>
-              )}
+              <Icon className={`h-5 w-5 mr-3 ${hasActiveChild ? 'text-blue-600' : 'text-gray-500'}`} />
+              <span className="text-sm font-medium">{item.label}</span>
             </div>
-            {!isMobile && sidebarMode === 'expanded' && (
+            {!isMobile && (
               <ChevronRightIcon 
                 className={`h-4 w-4 text-gray-400 transition-transform ${isExpanded ? 'rotate-90' : ''}`}
               />
             )}
-            {/* Tooltip for collapsed sidebar */}
-            {sidebarMode === 'collapsed' && !isMobile && (
-              <div className="absolute left-full ml-2 px-2 py-1 bg-gray-800 text-white text-xs rounded opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity whitespace-nowrap z-50">
-                {item.label}
-              </div>
-            )}
           </button>
-          {((isMobile || (isExpanded && sidebarMode === 'expanded'))) && item.children && (
+          {((isMobile || isExpanded)) && item.children && (
             <div className="mt-1">
               {item.children.map(child => renderMenuItem(child, depth + 1, isMobile))}
             </div>
@@ -464,24 +453,12 @@ const MainSidebar: React.FC = () => {
             : 'text-gray-700 hover:bg-gray-100'
           }
         `}
-        title={sidebarMode === 'collapsed' && !isMobile ? item.label : undefined}
       >
-        <Icon className={`h-5 w-5 ${(isMobile || sidebarMode === 'expanded') ? 'mr-3' : ''} ${isActive(item.path) ? 'text-blue-600' : 'text-gray-500'}`} />
-        {(isMobile || sidebarMode === 'expanded') && (
-          <span className="text-sm font-medium">{item.label}</span>
-        )}
-        {/* Tooltip for collapsed sidebar */}
-        {sidebarMode === 'collapsed' && !isMobile && (
-          <div className="absolute left-full ml-2 px-2 py-1 bg-gray-800 text-white text-xs rounded opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity whitespace-nowrap z-50">
-            {item.label}
-          </div>
-        )}
+        <Icon className={`h-5 w-5 mr-3 ${isActive(item.path) ? 'text-blue-600' : 'text-gray-500'}`} />
+        <span className="text-sm font-medium">{item.label}</span>
       </Link>
     );
   };
-
-  // Don't render anything on desktop if sidebar is hidden
-  if (sidebarMode === 'hidden') return null;
 
   return (
     <>
@@ -506,7 +483,7 @@ const MainSidebar: React.FC = () => {
           fixed left-0 top-0 h-full bg-white border-r border-gray-200 transition-transform duration-300 z-40
           w-full md:w-64
           ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}
-          md:translate-x-0 ${sidebarMode === 'expanded' ? 'md:w-64' : 'md:w-16'}
+          md:translate-x-0
         `}
       >
         {/* Header */}
@@ -521,31 +498,14 @@ const MainSidebar: React.FC = () => {
             </Link>
           </div>
           
-          {/* Desktop header with collapse/expand */}
+          {/* Desktop header */}
           <div className="hidden md:flex md:items-center md:justify-between md:w-full">
-            {sidebarMode === 'expanded' ? (
-              <>
-                <Link to="/" className="flex items-center">
-                  <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg mr-2 flex items-center justify-center">
-                    <span className="text-white font-bold text-lg">A</span>
-                  </div>
-                  <span className="font-bold text-gray-900">Accion AI Labs</span>
-                </Link>
-                <button
-                  onClick={toggleSidebar}
-                  className="p-1 rounded hover:bg-gray-100"
-                  title="Collapse sidebar (⌘B)"
-                >
-                  <ChevronLeftIcon className="h-5 w-5 text-gray-500" />
-                </button>
-              </>
-            ) : (
-              <Link to="/" className="p-1 rounded hover:bg-gray-100 mx-auto" title="Accion AI Labs Home">
-                <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">A</span>
-                </div>
-              </Link>
-            )}
+            <Link to="/" className="flex items-center">
+              <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg mr-2 flex items-center justify-center">
+                <span className="text-white font-bold text-lg">A</span>
+              </div>
+              <span className="font-bold text-gray-900">Accion AI Labs</span>
+            </Link>
           </div>
         </div>
 
