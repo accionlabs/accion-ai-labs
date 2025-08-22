@@ -467,20 +467,20 @@ const MainSidebar: React.FC = () => {
         onClick={() => {
           setIsMobileMenuOpen(!isMobileMenuOpen);
         }}
-        className="md:hidden fixed top-4 left-4 z-50 p-2 bg-white rounded-lg shadow-md border border-gray-200"
+        className="md:hidden fixed top-4 left-4 z-[9999] p-3 bg-white rounded-lg shadow-lg border border-gray-300 hover:bg-gray-50 active:bg-gray-100"
         aria-label="Toggle navigation menu"
       >
         {isMobileMenuOpen ? (
-          <XMarkIcon className="h-6 w-6 text-gray-700" />
+          <XMarkIcon className="h-6 w-6 text-gray-800" />
         ) : (
-          <Bars3Icon className="h-6 w-6 text-gray-700" />
+          <Bars3Icon className="h-6 w-6 text-gray-800" />
         )}
       </button>
 
       {/* Sidebar - Hidden on mobile by default, slides in when menu is open */}
       <div
         className={`
-          fixed left-0 top-0 h-full bg-white border-r border-gray-200 transition-transform duration-300 z-40
+          fixed left-0 top-0 h-full bg-white border-r border-gray-200 transition-transform duration-300 z-[9998]
           w-full md:w-64
           ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}
           md:translate-x-0
@@ -525,7 +525,7 @@ const MainSidebar: React.FC = () => {
       {/* Overlay for mobile */}
       {isMobileMenuOpen && (
         <div 
-          className="fixed inset-0 bg-black bg-opacity-50 z-30 md:hidden"
+          className="fixed inset-0 bg-black bg-opacity-50 z-[9997] md:hidden"
           onClick={() => setIsMobileMenuOpen(false)}
         />
       )}
