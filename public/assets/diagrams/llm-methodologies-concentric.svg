@@ -1,0 +1,94 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="semanticGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:0.2" />
+    </linearGradient>
+    <linearGradient id="ragGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10B981;stop-opacity:0.15" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:0.25" />
+    </linearGradient>
+    <linearGradient id="finetuneGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#D97706;stop-opacity:0.3" />
+    </linearGradient>
+    <linearGradient id="promptGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EF4444;stop-opacity:0.25" />
+      <stop offset="100%" style="stop-color:#DC2626;stop-opacity:0.35" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" class="text-2xl font-bold" fill="#1F2937">
+    Evolution of LLM Application Methodologies
+  </text>
+  
+  <!-- Semantic Engineering (outermost) -->
+  <circle cx="400" cy="320" r="220" fill="url(#semanticGradient)" stroke="#3B82F6" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="400" y="120" text-anchor="middle" class="text-lg font-semibold" fill="#3B82F6">
+    Semantic Engineering
+  </text>
+  <text x="400" y="140" text-anchor="middle" class="text-sm" fill="#6B7280">
+    Graph-based context + All methodologies
+  </text>
+  
+  <!-- RAG -->
+  <circle cx="400" cy="320" r="170" fill="url(#ragGradient)" stroke="#10B981" stroke-width="2" stroke-dasharray="4,4"/>
+  <text x="280" y="200" text-anchor="middle" class="text-base font-semibold" fill="#059669">
+    RAG
+  </text>
+  <text x="280" y="218" text-anchor="middle" class="text-xs" fill="#6B7280">
+    + Retrieval
+  </text>
+  
+  <!-- Fine-tuning -->
+  <circle cx="400" cy="320" r="120" fill="url(#finetuneGradient)" stroke="#F59E0B" stroke-width="2" stroke-dasharray="3,3"/>
+  <text x="520" y="250" text-anchor="middle" class="text-base font-semibold" fill="#D97706">
+    Fine-tuning
+  </text>
+  <text x="520" y="268" text-anchor="middle" class="text-xs" fill="#6B7280">
+    + Domain training
+  </text>
+  
+  <!-- Prompt Engineering (core) -->
+  <circle cx="400" cy="320" r="70" fill="url(#promptGradient)" stroke="#EF4444" stroke-width="2"/>
+  <text x="400" y="315" text-anchor="middle" class="text-base font-semibold" fill="#DC2626">
+    Prompt
+  </text>
+  <text x="400" y="330" text-anchor="middle" class="text-base font-semibold" fill="#DC2626">
+    Engineering
+  </text>
+  <text x="400" y="348" text-anchor="middle" class="text-xs" fill="#6B7280">
+    Core LLM
+  </text>
+  
+  <!-- Legend -->
+  <g transform="translate(50, 480)">
+    <text x="0" y="0" class="text-sm font-semibold" fill="#1F2937">Each layer builds upon and includes inner layers:</text>
+    
+    <circle cx="10" cy="25" r="5" fill="#EF4444"/>
+    <text x="20" y="30" class="text-xs" fill="#6B7280">Prompt Engineering: Direct LLM interaction</text>
+    
+    <circle cx="10" cy="45" r="5" fill="#F59E0B"/>
+    <text x="20" y="50" class="text-xs" fill="#6B7280">+ Fine-tuning: Specialized domain knowledge</text>
+    
+    <circle cx="10" cy="65" r="5" fill="#10B981"/>
+    <text x="20" y="70" class="text-xs" fill="#6B7280">+ RAG: External knowledge retrieval</text>
+    
+    <circle cx="10" cy="85" r="5" fill="#3B82F6"/>
+    <text x="20" y="90" class="text-xs" fill="#6B7280">+ Semantic Engineering: Graph-based relationships & context</text>
+  </g>
+  
+  <!-- Arrows showing evolution -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6B7280" />
+    </marker>
+  </defs>
+  
+  <path d="M 470 320 L 530 320" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arrowhead)" opacity="0.5"/>
+  <path d="M 520 320 L 570 320" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arrowhead)" opacity="0.5"/>
+  <path d="M 570 320 L 620 320" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arrowhead)" opacity="0.5"/>
+  
+  <text x="670" y="325" text-anchor="middle" class="text-sm font-semibold" fill="#6B7280">Evolution</text>
+</svg>

@@ -48,10 +48,16 @@ const menuItems: MenuItem[] = [
     icon: CpuChipIcon,
     children: [
       {
+        id: 'semantic-engineering',
+        label: 'Overview',
+        icon: SparklesIcon,
+        path: '/core-technology'
+      },
+      {
         id: 'kaps-framework',
         label: 'KAPS Framework',
         icon: RectangleStackIcon,
-        path: '/core-technology'
+        path: '/core-technology/kaps-framework'
       },
       {
         id: 'agentic-architecture',

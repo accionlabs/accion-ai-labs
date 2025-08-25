@@ -6,7 +6,7 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <!-- Title -->
-  <text
+  <text font-family="Inter, system-ui, sans-serif"
      x="349.80811"
      y="30.398924"
      text-anchor="middle"
@@ -15,7 +15,7 @@
      fill="#111827"
      id="text1">Portfolio Rationalization Process</text>
   <!-- Subtitle -->
-  <text
+  <text font-family="Inter, system-ui, sans-serif"
      x="350"
      y="50.649902"
      text-anchor="middle"
@@ -23,7 +23,7 @@
      fill="#6b7280"
      id="text2">Design &amp; Architecture Rationalization Tracks</text>
   <!-- Input: Three Product Graphs -->
-  <text
+  <text font-family="Inter, system-ui, sans-serif"
      x="339.69458"
      y="76.583984"
      text-anchor="middle"
@@ -67,7 +67,7 @@
        stroke="#f59e0b"
        stroke-width="2"
        id="rect18" />
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="350"
        y="255"
        text-anchor="middle"
@@ -75,7 +75,7 @@
        font-weight="600"
        fill="#92400e"
        id="text18">Step 1: Functional Overlap Analysis</text>
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="350"
        y="275"
        text-anchor="middle"
@@ -96,7 +96,7 @@
          fill="#fed7aa"
          stroke="#f59e0b"
          id="rect19" />
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="45"
          y="15"
          text-anchor="middle"
@@ -104,7 +104,7 @@
          font-weight="600"
          fill="#92400e"
          id="text20">Persona</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="45"
          y="28"
          text-anchor="middle"
@@ -128,7 +128,7 @@
          fill="#fed7aa"
          stroke="#f59e0b"
          id="rect21" />
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="155"
          y="15"
          text-anchor="middle"
@@ -136,7 +136,7 @@
          font-weight="600"
          fill="#92400e"
          id="text22">Outcomes</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="155"
          y="28"
          text-anchor="middle"
@@ -168,7 +168,7 @@
          stroke-width="2"
          id="rect66" />
       <!-- Scenarios -->
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="265"
          y="15"
          text-anchor="middle"
@@ -176,7 +176,7 @@
          font-weight="600"
          fill="#92400e"
          id="text24">Scenarios</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="265"
          y="28"
          text-anchor="middle"
@@ -195,7 +195,7 @@
          id="rect67" />
       <!-- Arrow -->
       <!-- Steps -->
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="375"
          y="15"
          text-anchor="middle"
@@ -203,7 +203,7 @@
          font-weight="600"
          fill="#92400e"
          id="text26">Steps</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="375"
          y="28"
          text-anchor="middle"
@@ -229,7 +229,7 @@
          stroke="#dc2626"
          stroke-dasharray="3, 2"
          id="rect27" />
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="485"
          y="15"
          text-anchor="middle"
@@ -237,7 +237,7 @@
          font-weight="600"
          fill="#dc2626"
          id="text28">Actions</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="485"
          y="28"
          text-anchor="middle"
@@ -245,7 +245,7 @@
          fill="#991b1b"
          id="text29">No overlap</text>
     </g>
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="350"
        y="340"
        text-anchor="middle"
@@ -276,7 +276,7 @@
        stroke="#2563eb"
        stroke-width="2"
        id="rect30" />
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="350"
        y="385"
        text-anchor="middle"
@@ -284,7 +284,7 @@
        font-weight="600"
        fill="#1e40af"
        id="text31">Step 2: Code Subgraph Extraction</text>
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="350"
        y="405"
        text-anchor="middle"
@@ -300,19 +300,19 @@
     <g
        transform="translate(220,421)"
        id="g35">
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="0"
          y="15"
          font-size="9px"
          fill="#1e3a8a"
          id="text33">• Multiple code levels</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="100"
          y="15"
          font-size="9px"
          fill="#1e3a8a"
          id="text34">• Components per product</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="210"
          y="15"
          font-size="9px"
@@ -352,7 +352,7 @@
          stroke="#10b981"
          stroke-width="2"
          id="rect36" />
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="180"
          y="515"
          text-anchor="middle"
@@ -360,7 +360,7 @@
          font-weight="600"
          fill="#14532d"
          id="text36">Step 3A: Architecture Subgraph</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="180"
          y="535"
          text-anchor="middle"
@@ -370,37 +370,37 @@
       <g
          transform="translate(50,545)"
          id="g43">
-        <text
+        <text font-family="Inter, system-ui, sans-serif"
            x="0"
            y="15"
            font-size="9px"
            fill="#15803d"
            id="text38">• Services level components</text>
-        <text
+        <text font-family="Inter, system-ui, sans-serif"
            x="0"
            y="30"
            font-size="9px"
            fill="#15803d"
            id="text39">• Layers level components</text>
-        <text
+        <text font-family="Inter, system-ui, sans-serif"
            x="0"
            y="45"
            font-size="9px"
            fill="#15803d"
            id="text40">• Modules level components</text>
-        <text
+        <text font-family="Inter, system-ui, sans-serif"
            x="150"
            y="15"
            font-size="9px"
            fill="#15803d"
            id="text41">• API integration</text>
-        <text
+        <text font-family="Inter, system-ui, sans-serif"
            x="150"
            y="30"
            font-size="9px"
            fill="#15803d"
            id="text42">• Data layers</text>
-        <text
+        <text font-family="Inter, system-ui, sans-serif"
            x="150"
            y="45"
            font-size="9px"
@@ -421,7 +421,7 @@
          stroke="#ec4899"
          stroke-width="2"
          id="rect43" />
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="520"
          y="515"
          text-anchor="middle"
@@ -429,7 +429,7 @@
          font-weight="600"
          fill="#831843"
          id="text44">Step 3B: Design Subgraph</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="520"
          y="535"
          text-anchor="middle"
@@ -439,37 +439,37 @@
       <g
          transform="translate(390,545)"
          id="g51">
-        <text
+        <text font-family="Inter, system-ui, sans-serif"
            x="0"
            y="15"
            font-size="9px"
            fill="#be185d"
            id="text46">• Atoms level components</text>
-        <text
+        <text font-family="Inter, system-ui, sans-serif"
            x="0"
            y="30"
            font-size="9px"
            fill="#be185d"
            id="text47">• Molecules level components</text>
-        <text
+        <text font-family="Inter, system-ui, sans-serif"
            x="0"
            y="45"
            font-size="9px"
            fill="#be185d"
            id="text48">• Organisms level components</text>
-        <text
+        <text font-family="Inter, system-ui, sans-serif"
            x="150"
            y="15"
            font-size="9px"
            fill="#be185d"
            id="text49">• Templates</text>
-        <text
+        <text font-family="Inter, system-ui, sans-serif"
            x="150"
            y="30"
            font-size="9px"
            fill="#be185d"
            id="text50">• Pages</text>
-        <text
+        <text font-family="Inter, system-ui, sans-serif"
            x="150"
            y="45"
            font-size="9px"
@@ -507,7 +507,7 @@
        stroke="#6b7280"
        stroke-width="2"
        id="rect52" />
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="350"
        y="665"
        text-anchor="middle"
@@ -515,7 +515,7 @@
        font-weight="600"
        fill="#374151"
        id="text52">Step 4: Strategy Selection</text>
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="350"
        y="685"
        text-anchor="middle"
@@ -525,31 +525,31 @@
     <g
        transform="translate(220,695)"
        id="g58">
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="0"
          y="15"
          font-size="10px"
          fill="#374151"
          id="text54">Impact Analysis:</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="0"
          y="30"
          font-size="9px"
          fill="#6b7280"
          id="text55">• Total code components affected</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="0"
          y="45"
          font-size="9px"
          fill="#6b7280"
          id="text56">• Technical debt assessment</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="150"
          y="30"
          font-size="9px"
          fill="#6b7280"
          id="text57">• Architecture changes</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="150"
          y="45"
          font-size="9px"
@@ -580,7 +580,7 @@
        stroke-width="2"
        id="rect58"
        style="fill:url(#gradient)" />
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="350"
        y="825"
        text-anchor="middle"
@@ -588,7 +588,7 @@
        font-weight="bold"
        fill="#ffffff"
        id="text59">Unified Portfolio Solution</text>
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="350"
        y="845"
        text-anchor="middle"
@@ -698,7 +698,7 @@
          stroke="#dc2626"
          stroke-width="1.5"
          id="rect37" />
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="90"
          y="20"
          text-anchor="middle"
@@ -712,7 +712,7 @@
          r="8"
          fill="#2563eb"
          id="circle37" />
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="40"
          y="54"
          text-anchor="middle"
@@ -725,7 +725,7 @@
          r="8"
          fill="#7c3aed"
          id="circle38" />
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="80"
          y="54"
          text-anchor="middle"
@@ -738,7 +738,7 @@
          r="8"
          fill="#ec4899"
          id="circle39" />
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="120"
          y="54"
          text-anchor="middle"
@@ -751,21 +751,21 @@
          r="8"
          fill="#10b981"
          id="circle40" />
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="160"
          y="54"
          text-anchor="middle"
          font-size="8px"
          fill="#ffffff"
          id="text41-5">A</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="90"
          y="75"
          text-anchor="middle"
          font-size="9px"
          fill="#7f1d1d"
          id="text42-7">17 nodes • 15 edges</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="90"
          y="90"
          text-anchor="middle"
@@ -787,7 +787,7 @@
          stroke="#2563eb"
          stroke-width="1.5"
          id="rect43-0" />
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="90"
          y="20"
          text-anchor="middle"
@@ -801,7 +801,7 @@
          r="8"
          fill="#2563eb"
          id="circle44" />
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="40"
          y="54"
          text-anchor="middle"
@@ -814,7 +814,7 @@
          r="8"
          fill="#7c3aed"
          id="circle45" />
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="80"
          y="54"
          text-anchor="middle"
@@ -827,7 +827,7 @@
          r="8"
          fill="#ec4899"
          id="circle46" />
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="120"
          y="54"
          text-anchor="middle"
@@ -840,21 +840,21 @@
          r="8"
          fill="#10b981"
          id="circle47" />
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="160"
          y="54"
          text-anchor="middle"
          font-size="8px"
          fill="#ffffff"
          id="text48-0">A</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="90"
          y="75"
          text-anchor="middle"
          font-size="9px"
          fill="#1e3a8a"
          id="text49-6">22 nodes • 20 edges</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="90"
          y="90"
          text-anchor="middle"
@@ -876,7 +876,7 @@
          stroke="#7c3aed"
          stroke-width="1.5"
          id="rect50" />
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="90"
          y="20"
          text-anchor="middle"
@@ -890,7 +890,7 @@
          r="8"
          fill="#2563eb"
          id="circle51" />
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="40"
          y="54"
          text-anchor="middle"
@@ -903,7 +903,7 @@
          r="8"
          fill="#7c3aed"
          id="circle52" />
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="80"
          y="54"
          text-anchor="middle"
@@ -916,7 +916,7 @@
          r="8"
          fill="#ec4899"
          id="circle53" />
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="120"
          y="54"
          text-anchor="middle"
@@ -929,21 +929,21 @@
          r="8"
          fill="#10b981"
          id="circle54" />
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="160"
          y="54"
          text-anchor="middle"
          font-size="8px"
          fill="#ffffff"
          id="text55-0">A</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="90"
          y="75"
          text-anchor="middle"
          font-size="9px"
          fill="#4c1d95"
          id="text56-4">19 nodes • 17 edges</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="90"
          y="90"
          text-anchor="middle"

@@ -6,7 +6,7 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <!-- Input Sources -->
-  <text
+  <text font-family="Inter, system-ui, sans-serif"
      x="450"
      y="30"
      text-anchor="middle"
@@ -28,7 +28,7 @@
          stroke="#2563eb"
          stroke-width="3"
          id="rect1" />
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="450"
          y="75"
          text-anchor="middle"
@@ -36,14 +36,14 @@
          font-weight="600"
          fill="#1e40af"
          id="text2">Code Repository (Primary)</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="450"
          y="95"
          text-anchor="middle"
          font-size="10px"
          fill="#2563eb"
          id="text3">• Source Files (Any Language)</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="450"
          y="110"
          text-anchor="middle"
@@ -63,7 +63,7 @@
          stroke="#a78bfa"
          stroke-width="1.5"
          id="rect4" />
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="110"
          y="80"
          text-anchor="middle"
@@ -71,14 +71,14 @@
          font-weight="500"
          fill="#5b21b6"
          id="text5">Requirements</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="110"
          y="95"
          text-anchor="middle"
          font-size="9px"
          fill="#7c3aed"
          id="text6">• PRDs</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="110"
          y="108"
          text-anchor="middle"
@@ -99,7 +99,7 @@
          stroke="#f9a8d4"
          stroke-width="1.5"
          id="rect7" />
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="240"
          y="80"
          text-anchor="middle"
@@ -107,14 +107,14 @@
          font-weight="500"
          fill="#831843"
          id="text8">Design Docs</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="240"
          y="95"
          text-anchor="middle"
          font-size="9px"
          fill="#be185d"
          id="text9">• Mockups</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="240"
          y="108"
          text-anchor="middle"
@@ -135,7 +135,7 @@
          stroke="#34d399"
          stroke-width="1.5"
          id="rect10" />
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="660"
          y="80"
          text-anchor="middle"
@@ -143,14 +143,14 @@
          font-weight="500"
          fill="#14532d"
          id="text11">Architecture</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="660"
          y="95"
          text-anchor="middle"
          font-size="9px"
          fill="#15803d"
          id="text12">• System Design</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="660"
          y="108"
          text-anchor="middle"
@@ -171,7 +171,7 @@
          stroke="#fcd34d"
          stroke-width="1.5"
          id="rect13" />
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="790"
          y="80"
          text-anchor="middle"
@@ -179,14 +179,14 @@
          font-weight="500"
          fill="#78350f"
          id="text14">User Manuals</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="790"
          y="95"
          text-anchor="middle"
          font-size="9px"
          fill="#92400e"
          id="text15">• Guides</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="790"
          y="108"
          text-anchor="middle"
@@ -240,7 +240,7 @@
          r="20"
          fill="#7c3aed"
          id="circle31" />
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="170"
          y="505"
          text-anchor="middle"
@@ -248,7 +248,7 @@
          font-weight="bold"
          fill="#ffffff"
          id="text31">F</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="170"
          y="535"
          text-anchor="middle"
@@ -256,14 +256,14 @@
          font-weight="500"
          fill="#4c1d95"
          id="text32">Functional Agent</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="170"
          y="550"
          text-anchor="middle"
          font-size="9px"
          fill="#5b21b6"
          id="text33">Maps requirements</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="170"
          y="563"
          text-anchor="middle"
@@ -307,7 +307,7 @@
          r="20"
          fill="#ec4899"
          id="circle34" />
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="450"
          y="505"
          text-anchor="middle"
@@ -315,7 +315,7 @@
          font-weight="bold"
          fill="#ffffff"
          id="text35">D</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="450"
          y="535"
          text-anchor="middle"
@@ -323,14 +323,14 @@
          font-weight="500"
          fill="#831843"
          id="text36">Design Agent</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="450"
          y="550"
          text-anchor="middle"
          font-size="9px"
          fill="#be185d"
          id="text37">Maps UI patterns</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="450"
          y="563"
          text-anchor="middle"
@@ -374,7 +374,7 @@
          r="20"
          fill="#10b981"
          id="circle38" />
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="752.12744"
          y="505"
          text-anchor="middle"
@@ -382,7 +382,7 @@
          font-weight="bold"
          fill="#ffffff"
          id="text39">A</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="752.12744"
          y="535"
          text-anchor="middle"
@@ -390,14 +390,14 @@
          font-weight="500"
          fill="#14532d"
          id="text40">Architecture Agent</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="752.12744"
          y="550"
          text-anchor="middle"
          font-size="9px"
          fill="#15803d"
          id="text41">Maps layers</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="752.12744"
          y="563"
          text-anchor="middle"
@@ -441,7 +441,7 @@
        stroke="#4B5563"
        stroke-width="2"
        id="rect47" />
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="450"
        y="630"
        text-anchor="middle"
@@ -478,7 +478,7 @@
          r="20"
          fill="#2563eb"
          id="circle16" />
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="450"
          y="215"
          text-anchor="middle"
@@ -486,7 +486,7 @@
          font-weight="bold"
          fill="#ffffff"
          id="text17">C</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="450"
          y="245"
          text-anchor="middle"
@@ -494,14 +494,14 @@
          font-weight="600"
          fill="#1e3a8a"
          id="text18">Code Agent</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="450"
          y="260"
          text-anchor="middle"
          font-size="9px"
          fill="#1e40af"
          id="text19">Parses analyzes</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="450"
          y="273"
          text-anchor="middle"
@@ -530,7 +530,7 @@
          stroke="#3b82f6"
          stroke-width="3"
          id="rect21" />
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="450"
          y="355"
          text-anchor="middle"
@@ -538,7 +538,7 @@
          font-weight="600"
          fill="#1e3a8a"
          id="text22">Code Graph</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="450"
          y="375"
          text-anchor="middle"
@@ -553,7 +553,7 @@
          rx="12"
          fill="#2563eb"
          id="rect23" />
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="450"
          y="402"
          text-anchor="middle"
@@ -575,7 +575,7 @@
          stroke="#f59e0b"
          stroke-width="1.5"
          id="rect48" />
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="815"
          y="350"
          text-anchor="middle"
@@ -583,25 +583,25 @@
          font-weight="600"
          fill="#92400e"
          id="text48">Key Insight</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="760"
          y="370"
          font-size="9px"
          fill="#78350f"
          id="text49">Code Graph serves</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="760"
          y="383"
          font-size="9px"
          fill="#78350f"
          id="text50">as ground truth for</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="760"
          y="396"
          font-size="9px"
          fill="#78350f"
          id="text51">all other ontology</text>
-      <text
+      <text font-family="Inter, system-ui, sans-serif"
          x="760"
          y="409"
          font-size="9px"

@@ -13,7 +13,7 @@
      rx="8"
      id="rect1" />
   <!-- Title -->
-  <text
+  <text font-family="Inter, system-ui, sans-serif"
      x="600"
      y="30"
      text-anchor="middle"
@@ -110,7 +110,7 @@
        rx="4"
        fill="#3b82f6"
        id="rect5" />
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="15"
        y="20"
        text-anchor="middle"
@@ -119,7 +119,7 @@
        fill="#ffffff"
        id="text5">1</text>
     <!-- Phase title -->
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="80"
        y="25"
        text-anchor="middle"
@@ -128,7 +128,7 @@
        fill="#1f2937"
        id="text6">Assessment</text>
     <!-- Duration -->
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="80"
        y="45"
        text-anchor="middle"
@@ -136,25 +136,25 @@
        fill="#3b82f6"
        id="text7">1-2 weeks</text>
     <!-- Activities -->
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="10"
        y="65"
        font-size="10"
        fill="#374151"
        id="text8">• Infrastructure review</text>
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="10"
        y="80"
        font-size="10"
        fill="#374151"
        id="text9">• Use case identification</text>
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="10"
        y="95"
        font-size="10"
        fill="#374151"
        id="text10">• Capacity planning</text>
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="10"
        y="110"
        font-size="10"
@@ -169,7 +169,7 @@
        rx="3"
        fill="#eff6ff"
        id="rect11" />
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="80"
        y="130"
        text-anchor="middle"
@@ -211,7 +211,7 @@
        rx="4"
        fill="#8b5cf6"
        id="rect13" />
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="15"
        y="20"
        text-anchor="middle"
@@ -220,7 +220,7 @@
        fill="#ffffff"
        id="text13">2</text>
     <!-- Phase title -->
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="80"
        y="25"
        text-anchor="middle"
@@ -229,7 +229,7 @@
        fill="#1f2937"
        id="text14">Design</text>
     <!-- Duration -->
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="80"
        y="45"
        text-anchor="middle"
@@ -237,25 +237,25 @@
        fill="#8b5cf6"
        id="text15">2-3 weeks</text>
     <!-- Activities -->
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="10"
        y="65"
        font-size="10"
        fill="#374151"
        id="text16">• Architecture design</text>
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="10"
        y="80"
        font-size="10"
        fill="#374151"
        id="text17">• Model selection</text>
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="10"
        y="95"
        font-size="10"
        fill="#374151"
        id="text18">• API design</text>
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="10"
        y="110"
        font-size="10"
@@ -270,7 +270,7 @@
        rx="3"
        fill="#f3f0ff"
        id="rect19" />
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="80"
        y="130"
        text-anchor="middle"
@@ -312,7 +312,7 @@
        rx="4"
        fill="#10b981"
        id="rect21" />
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="15"
        y="20"
        text-anchor="middle"
@@ -321,7 +321,7 @@
        fill="#ffffff"
        id="text21">3</text>
     <!-- Phase title -->
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="80"
        y="25"
        text-anchor="middle"
@@ -330,7 +330,7 @@
        fill="#1f2937"
        id="text22">Build</text>
     <!-- Duration -->
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="80"
        y="45"
        text-anchor="middle"
@@ -338,25 +338,25 @@
        fill="#10b981"
        id="text23">4-6 weeks</text>
     <!-- Activities -->
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="10"
        y="65"
        font-size="10"
        fill="#374151"
        id="text24">• Infrastructure setup</text>
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="10"
        y="80"
        font-size="10"
        fill="#374151"
        id="text25">• Model deployment</text>
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="10"
        y="95"
        font-size="10"
        fill="#374151"
        id="text26">• API implementation</text>
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="10"
        y="110"
        font-size="10"
@@ -371,7 +371,7 @@
        rx="3"
        fill="#ecfdf5"
        id="rect27" />
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="80"
        y="130"
        text-anchor="middle"
@@ -413,7 +413,7 @@
        rx="4"
        fill="#f97316"
        id="rect29" />
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="15"
        y="20"
        text-anchor="middle"
@@ -422,7 +422,7 @@
        fill="#ffffff"
        id="text29">4</text>
     <!-- Phase title -->
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="80"
        y="25"
        text-anchor="middle"
@@ -431,7 +431,7 @@
        fill="#1f2937"
        id="text30">Deploy</text>
     <!-- Duration -->
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="80"
        y="45"
        text-anchor="middle"
@@ -439,25 +439,25 @@
        fill="#f97316"
        id="text31">1-2 weeks</text>
     <!-- Activities -->
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="10"
        y="65"
        font-size="10"
        fill="#374151"
        id="text32">• Production rollout</text>
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="10"
        y="80"
        font-size="10"
        fill="#374151"
        id="text33">• User training</text>
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="10"
        y="95"
        font-size="10"
        fill="#374151"
        id="text34">• Documentation</text>
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="10"
        y="110"
        font-size="10"
@@ -472,7 +472,7 @@
        rx="3"
        fill="#fff7ed"
        id="rect35" />
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="80"
        y="130"
        text-anchor="middle"
@@ -514,7 +514,7 @@
        rx="4"
        fill="#06b6d4"
        id="rect37" />
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="15"
        y="20"
        text-anchor="middle"
@@ -523,7 +523,7 @@
        fill="#ffffff"
        id="text37">5</text>
     <!-- Phase title -->
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="80"
        y="25"
        text-anchor="middle"
@@ -532,7 +532,7 @@
        fill="#1f2937"
        id="text38">Optimize</text>
     <!-- Duration -->
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="80"
        y="45"
        text-anchor="middle"
@@ -540,25 +540,25 @@
        fill="#06b6d4"
        id="text39">Ongoing</text>
     <!-- Activities -->
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="10"
        y="65"
        font-size="10"
        fill="#374151"
        id="text40">• Performance tuning</text>
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="10"
        y="80"
        font-size="10"
        fill="#374151"
        id="text41">• Model fine-tuning</text>
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="10"
        y="95"
        font-size="10"
        fill="#374151"
        id="text42">• Cost optimization</text>
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="10"
        y="110"
        font-size="10"
@@ -573,7 +573,7 @@
        rx="3"
        fill="#ecfeff"
        id="rect43" />
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="80"
        y="130"
        text-anchor="middle"
@@ -586,7 +586,7 @@
   <g
      transform="translate(0, 250)"
      id="g46">
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="600"
        y="0"
        text-anchor="middle"
@@ -594,7 +594,7 @@
        font-weight="600"
        fill="#374151"
        id="text45">Total Implementation Time: 8-14 weeks to production</text>
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="600"
        y="20"
        text-anchor="middle"
@@ -612,7 +612,7 @@
        r="3"
        fill="#10b981"
        id="circle46" />
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="10"
        y="3"
        font-size="10"
@@ -628,7 +628,7 @@
        r="3"
        fill="#10b981"
        id="circle47" />
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="10"
        y="3"
        font-size="10"
@@ -644,7 +644,7 @@
        r="3"
        fill="#10b981"
        id="circle48" />
-    <text
+    <text font-family="Inter, system-ui, sans-serif"
        x="10"
        y="3"
        font-size="10"

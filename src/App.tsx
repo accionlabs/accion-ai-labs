@@ -17,6 +17,7 @@ import AgentAnalysisView from './components/technicalDebt/AgentAnalysisView';
 import DebtAssessmentDashboard from './components/technicalDebt/DebtAssessmentDashboard';
 import RemediationRoadmap from './components/technicalDebt/RemediationRoadmap';
 import CoreTechnologyOverview from './components/coreTechnology/CoreTechnologyOverview';
+import SemanticEngineeringOverview from './components/coreTechnology/SemanticEngineeringOverview';
 import KAPSFramework from './components/coreTechnology/KAPSFramework';
 import AgenticGraphArchitecture from './components/coreTechnology/AgenticGraphArchitecture';
 import AgenticArchitecture from './components/coreTechnology/AgenticArchitecture';
@@ -53,6 +54,11 @@ const App: React.FC = () => {
               
               {/* Core Technology Section */}
               <Route path="/core-technology" element={
+                <AppLayout>
+                  <SemanticEngineeringOverview />
+                </AppLayout>
+              } />
+              <Route path="/core-technology/kaps-framework" element={
                 <AppLayout>
                   <KAPSFramework />
                 </AppLayout>
