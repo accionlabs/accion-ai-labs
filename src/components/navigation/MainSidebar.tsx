@@ -92,7 +92,7 @@ const menuItems: MenuItem[] = [
     children: [
       {
         id: 'solutions-overview',
-        label: 'Overview',
+        label: 'All Solutions',
         icon: LightBulbIcon,
         path: '/solutions'
       },
@@ -109,16 +109,16 @@ const menuItems: MenuItem[] = [
         path: '/solutions/portfolio-rationalization'
       },
       {
-        id: 'customer-service',
-        label: 'Customer Service',
-        icon: PhoneIcon,
-        path: '/solutions/customer-service'
+        id: 'asimov-showcase',
+        label: 'ASIMOV Legacy Migration',
+        icon: ArrowPathIcon,
+        path: '/solutions/asimov'
       },
       {
-        id: 'app-modernization',
-        label: 'App Modernization',
-        icon: ArrowPathIcon,
-        path: '/solutions/app-modernization'
+        id: 'customer-service-showcase',
+        label: 'Customer Service AI',
+        icon: PhoneIcon,
+        path: '/solutions/customer-service'
       },
       {
         id: 'data-engineering',
@@ -134,82 +134,8 @@ const menuItems: MenuItem[] = [
     icon: RectangleStackIcon,
     children: [
       {
-        id: 'asimov-migration',
-        label: 'ASIMOV Migration',
-        icon: ArrowPathIcon,
-        children: [
-          {
-            id: 'asimov-overview',
-            label: 'Overview',
-            icon: ArrowPathIcon,
-            path: '/solutions/asimov'
-          },
-          {
-            id: 'discovery-analysis',
-            label: 'Discovery & Analysis',
-            icon: DocumentMagnifyingGlassIcon,
-            path: '/solutions/asimov/discovery'
-          },
-          {
-            id: 'transformation-engine',
-            label: 'Transformation Engine',
-            icon: CpuChipIcon,
-            path: '/solutions/asimov/transformation'
-          },
-          {
-            id: 'migration-patterns',
-            label: 'Migration Patterns',
-            icon: CodeBracketIcon,
-            path: '/solutions/asimov/patterns'
-          },
-          {
-            id: 'success-stories',
-            label: 'Success Stories',
-            icon: ChartBarIcon,
-            path: '/solutions/asimov/success-stories'
-          }
-        ]
-      },
-      {
-        id: 'customer-service-deep',
-        label: 'Customer Service AI',
-        icon: PhoneIcon,
-        children: [
-          {
-            id: 'cs-overview',
-            label: 'Overview',
-            icon: PhoneIcon,
-            path: '/solutions/customer-service'
-          },
-          {
-            id: 'self-heal-bot',
-            label: 'Self Heal Bot',
-            icon: SparklesIcon,
-            path: '/solutions/customer-service/self-heal-bot'
-          },
-          {
-            id: 'assisted-heal-bot',
-            label: 'Assisted Heal Bot',
-            icon: UserGroupIcon,
-            path: '/solutions/customer-service/assisted-heal-bot'
-          },
-          {
-            id: 'optimization-hub',
-            label: 'Optimization Hub',
-            icon: ChartBarIcon,
-            path: '/solutions/customer-service/optimization-hub'
-          },
-          {
-            id: 'implementation',
-            label: 'Implementation',
-            icon: MapIcon,
-            path: '/solutions/customer-service/implementation'
-          }
-        ]
-      },
-      {
         id: 'technical-debt',
-        label: 'Technical Debt Analysis',
+        label: 'Technical Debt Management',
         icon: WrenchScrewdriverIcon,
         children: [
           {
@@ -278,6 +204,80 @@ const menuItems: MenuItem[] = [
             label: 'Unified Product View',
             icon: BeakerIcon,
             path: '/portfolio/unified-product'
+          }
+        ]
+      },
+      {
+        id: 'asimov-migration',
+        label: 'ASIMOV Legacy Migration',
+        icon: ArrowPathIcon,
+        children: [
+          {
+            id: 'asimov-overview',
+            label: 'Overview',
+            icon: ArrowPathIcon,
+            path: '/solutions/asimov'
+          },
+          {
+            id: 'discovery-analysis',
+            label: 'Discovery & Analysis',
+            icon: DocumentMagnifyingGlassIcon,
+            path: '/solutions/asimov/discovery'
+          },
+          {
+            id: 'transformation-engine',
+            label: 'Transformation Engine',
+            icon: CpuChipIcon,
+            path: '/solutions/asimov/transformation'
+          },
+          {
+            id: 'migration-patterns',
+            label: 'Migration Patterns',
+            icon: CodeBracketIcon,
+            path: '/solutions/asimov/patterns'
+          },
+          {
+            id: 'success-stories',
+            label: 'Success Stories',
+            icon: ChartBarIcon,
+            path: '/solutions/asimov/success-stories'
+          }
+        ]
+      },
+      {
+        id: 'customer-service-deep',
+        label: 'Customer Service AI',
+        icon: PhoneIcon,
+        children: [
+          {
+            id: 'cs-overview',
+            label: 'Overview',
+            icon: PhoneIcon,
+            path: '/solutions/customer-service'
+          },
+          {
+            id: 'self-heal-bot',
+            label: 'Self Heal Bot',
+            icon: SparklesIcon,
+            path: '/solutions/customer-service/self-heal-bot'
+          },
+          {
+            id: 'assisted-heal-bot',
+            label: 'Assisted Heal Bot',
+            icon: UserGroupIcon,
+            path: '/solutions/customer-service/assisted-heal-bot'
+          },
+          {
+            id: 'optimization-hub',
+            label: 'Optimization Hub',
+            icon: ChartBarIcon,
+            path: '/solutions/customer-service/optimization-hub'
+          },
+          {
+            id: 'implementation',
+            label: 'Implementation',
+            icon: MapIcon,
+            path: '/solutions/customer-service/implementation'
           }
         ]
       }

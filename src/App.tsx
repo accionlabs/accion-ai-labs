@@ -26,7 +26,6 @@ import StrategicGuardrails from './components/coreTechnology/StrategicGuardrails
 import SolutionShowcase from './components/solutions/SolutionShowcase';
 import CustomerServiceDeepDive from './components/solutions/CustomerServiceDeepDive';
 import CustomerServiceOverview from './components/solutions/customerService/CustomerServiceOverview';
-import AppModernizationShowcase from './components/solutions/AppModernizationShowcase';
 import DataEngineeringShowcase from './components/solutions/DataEngineeringShowcase';
 import TechnicalDebtShowcase from './components/solutions/TechnicalDebtShowcase';
 import PortfolioRationalizationShowcase from './components/solutions/PortfolioRationalizationShowcase';
@@ -118,11 +117,6 @@ const App: React.FC = () => {
               <Route path="/solutions/customer-service/implementation" element={
                 <AppLayout>
                   <ImplementationRoadmap />
-                </AppLayout>
-              } />
-              <Route path="/solutions/app-modernization" element={
-                <AppLayout>
-                  <AppModernizationShowcase />
                 </AppLayout>
               } />
               <Route path="/solutions/data-engineering" element={

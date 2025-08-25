@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   CodeBracketIcon,
@@ -22,6 +22,8 @@ import {
 
 const SemanticEngineeringOverview: React.FC = () => {
   const [visibleMilestones, setVisibleMilestones] = useState(0);
+  const [hasStartedAnimation, setHasStartedAnimation] = useState(false);
+  const timelineRef = useRef<HTMLDivElement>(null);
 
   const journeyMilestones = [
     {
@@ -76,19 +78,57 @@ const SemanticEngineeringOverview: React.FC = () => {
     }
   ];
 
-  // Animation for timeline
+  // Animation for timeline triggered by scroll visibility
   useEffect(() => {
+    const currentRef = timelineRef.current;
+    
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setHasStartedAnimation(true);
+          } else {
+            // Reset animation when scrolled out of view
+            setHasStartedAnimation(false);
+            setVisibleMilestones(0);
+          }
+        });
+      },
+      { 
+        threshold: 0.1,
+        rootMargin: '0px'
+      }
+    );
+
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
+
+  // Start the milestone animation when timeline becomes visible
+  useEffect(() => {
+    if (!hasStartedAnimation) {
+      return;
+    }
+
+    let currentIndex = 0;
     const timer = setInterval(() => {
-      setVisibleMilestones(prev => {
-        if (prev < journeyMilestones.length) {
-          return prev + 1;
-        }
-        return prev;
-      });
+      if (currentIndex < journeyMilestones.length) {
+        setVisibleMilestones(currentIndex + 1);
+        currentIndex++;
+      } else {
+        clearInterval(timer);
+      }
     }, 800);
 
     return () => clearInterval(timer);
-  }, [journeyMilestones.length]);
+  }, [hasStartedAnimation, journeyMilestones.length]);
 
   const platformComponents = [
     {
@@ -158,14 +198,14 @@ const SemanticEngineeringOverview: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {/* LLM Integration/Prompt Engineering */}
-              <div className="bg-white p-6 rounded-lg border-2 border-gray-200 hover:shadow-lg transition-shadow">
+              <div className="bg-white p-6 rounded-lg border-2 border-gray-200 hover:shadow-lg transition-shadow flex flex-col">
                 <div className="text-red-500 mb-3">
                   <CommandLineIcon className="h-6 w-6" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">LLM Integration</h3>
                 <p className="text-xs text-gray-500 mb-2">Prompt Engineering</p>
                 <p className="text-sm text-gray-600 mb-3">Trained on External Data</p>
-                <div className="mb-3">
+                <div className="flex-1 mb-3">
                   <p className="text-xs font-semibold text-gray-500 mb-1">Characteristics:</p>
                   <ul className="text-xs text-gray-600 space-y-1">
                     <li className="flex items-start">
@@ -182,7 +222,7 @@ const SemanticEngineeringOverview: React.FC = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="pt-3 border-t border-gray-200">
+                <div className="pt-3 border-t border-gray-200 mt-auto">
                   <p className="text-xs text-gray-500">
                     <strong>Closed Book Approach</strong>
                   </p>
@@ -190,13 +230,14 @@ const SemanticEngineeringOverview: React.FC = () => {
               </div>
 
               {/* Fine Tuned Models */}
-              <div className="bg-white p-6 rounded-lg border-2 border-gray-200 hover:shadow-lg transition-shadow">
+              <div className="bg-white p-6 rounded-lg border-2 border-gray-200 hover:shadow-lg transition-shadow flex flex-col">
                 <div className="text-orange-500 mb-3">
                   <CogIcon className="h-6 w-6" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Fine Tuned Models</h3>
+                <p className="text-xs text-gray-500 mb-2">&nbsp;</p>
                 <p className="text-sm text-gray-600 mb-3">Trained with domain or specific use case</p>
-                <div className="mb-3">
+                <div className="flex-1 mb-3">
                   <p className="text-xs font-semibold text-gray-500 mb-1">Characteristics:</p>
                   <ul className="text-xs text-gray-600 space-y-1">
                     <li className="flex items-start">
@@ -213,7 +254,7 @@ const SemanticEngineeringOverview: React.FC = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="pt-3 border-t border-gray-200">
+                <div className="pt-3 border-t border-gray-200 mt-auto">
                   <p className="text-xs text-gray-500">
                     <strong>Closed Book Approach</strong>
                   </p>
@@ -221,13 +262,14 @@ const SemanticEngineeringOverview: React.FC = () => {
               </div>
 
               {/* RAG */}
-              <div className="bg-white p-6 rounded-lg border-2 border-gray-200 hover:shadow-lg transition-shadow">
+              <div className="bg-white p-6 rounded-lg border-2 border-gray-200 hover:shadow-lg transition-shadow flex flex-col">
                 <div className="text-green-600 mb-3">
                   <DocumentTextIcon className="h-6 w-6" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">RAG</h3>
+                <p className="text-xs text-gray-500 mb-2">&nbsp;</p>
                 <p className="text-sm text-gray-600 mb-3">Retrieval Augmented Generation</p>
-                <div className="mb-3">
+                <div className="flex-1 mb-3">
                   <p className="text-xs font-semibold text-gray-500 mb-1">Characteristics:</p>
                   <ul className="text-xs text-gray-600 space-y-1">
                     <li className="flex items-start">
@@ -244,7 +286,7 @@ const SemanticEngineeringOverview: React.FC = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="pt-3 border-t border-gray-200">
+                <div className="pt-3 border-t border-gray-200 mt-auto">
                   <p className="text-xs text-gray-500">
                     <strong>Open Book Approach</strong>
                   </p>
@@ -252,14 +294,14 @@ const SemanticEngineeringOverview: React.FC = () => {
               </div>
 
               {/* AG-RAG Context Engineering */}
-              <div className="bg-white p-6 rounded-lg border-2 border-gray-200 hover:shadow-lg transition-shadow">
+              <div className="bg-white p-6 rounded-lg border-2 border-gray-200 hover:shadow-lg transition-shadow flex flex-col">
                 <div className="text-purple-600 mb-3">
                   <CircleStackIcon className="h-6 w-6" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">AG-RAG</h3>
                 <p className="text-xs text-gray-500 mb-2">Context Engineering</p>
                 <p className="text-sm text-gray-600 mb-3">Agentic Graph RAG</p>
-                <div className="mb-3">
+                <div className="flex-1 mb-3">
                   <p className="text-xs font-semibold text-gray-500 mb-1">Characteristics:</p>
                   <ul className="text-xs text-gray-600 space-y-1">
                     <li className="flex items-start">
@@ -276,7 +318,7 @@ const SemanticEngineeringOverview: React.FC = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="pt-3 border-t border-gray-200">
+                <div className="pt-3 border-t border-gray-200 mt-auto">
                   <p className="text-xs text-gray-500">
                     <strong>Open Book Approach</strong>
                   </p>
@@ -387,7 +429,7 @@ const SemanticEngineeringOverview: React.FC = () => {
         </div>
 
         {/* Our Journey */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl shadow-sm p-8 mb-8 text-white">
+        <div ref={timelineRef} className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl shadow-sm p-8 mb-8 text-white">
           <h2 className="text-2xl font-semibold mb-6">Our Semantic Engineering Journey</h2>
           
           <div className="relative">
