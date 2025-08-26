@@ -419,7 +419,7 @@ const CoreTechnologyOverview: React.FC = () => {
               <CubeIcon className="h-8 w-8 text-green-600 mb-2" />
               <h3 className="font-semibold text-gray-900 mb-1">Agentic Architecture</h3>
               <p className="text-sm text-gray-600">
-                Evolution from RAG to production-quality solutions
+                Multi-agent orchestration architecture
               </p>
               <span className="text-green-600 text-sm mt-2 inline-flex items-center group-hover:gap-2 transition-all">
                 Learn more <ArrowRightIcon className="h-4 w-4 ml-1" />
@@ -433,7 +433,7 @@ const CoreTechnologyOverview: React.FC = () => {
               <BeakerIcon className="h-8 w-8 text-orange-600 mb-2" />
               <h3 className="font-semibold text-gray-900 mb-1">Gen AI in a Box</h3>
               <p className="text-sm text-gray-600">
-                Pre-configured deployment packages with hardware
+                On-premise installation for secure, local semantic engineering
               </p>
               <span className="text-orange-600 text-sm mt-2 inline-flex items-center group-hover:gap-2 transition-all">
                 Learn more <ArrowRightIcon className="h-4 w-4 ml-1" />
@@ -447,7 +447,7 @@ const CoreTechnologyOverview: React.FC = () => {
               <DocumentTextIcon className="h-8 w-8 text-red-600 mb-2" />
               <h3 className="font-semibold text-gray-900 mb-1">Strategic Guardrails</h3>
               <p className="text-sm text-gray-600">
-                Security and governance for production AI
+                Control structures for safe, compliant AI operations
               </p>
               <span className="text-red-600 text-sm mt-2 inline-flex items-center group-hover:gap-2 transition-all">
                 Learn more <ArrowRightIcon className="h-4 w-4 ml-1" />

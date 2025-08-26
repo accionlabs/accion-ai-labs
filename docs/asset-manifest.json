@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/accion-ai-labs/static/css/main.dce973f8.css",
-    "main.js": "/accion-ai-labs/static/js/main.a6806201.js",
+    "main.js": "/accion-ai-labs/static/js/main.53e1bd9f.js",
     "static/js/453.2fb3670a.chunk.js": "/accion-ai-labs/static/js/453.2fb3670a.chunk.js",
     "index.html": "/accion-ai-labs/index.html",
     "main.dce973f8.css.map": "/accion-ai-labs/static/css/main.dce973f8.css.map",
-    "main.a6806201.js.map": "/accion-ai-labs/static/js/main.a6806201.js.map",
+    "main.53e1bd9f.js.map": "/accion-ai-labs/static/js/main.53e1bd9f.js.map",
     "453.2fb3670a.chunk.js.map": "/accion-ai-labs/static/js/453.2fb3670a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dce973f8.css",
-    "static/js/main.a6806201.js"
+    "static/js/main.53e1bd9f.js"
   ]
 }

@@ -136,7 +136,7 @@ const SemanticEngineeringOverview: React.FC = () => {
       path: "/core-technology/kaps-framework",
       icon: <RectangleStackIcon className="h-8 w-8" />,
       role: "Adoption Framework",
-      description: "Four-ontology methodology for systematic knowledge extraction and representation",
+      description: "AI adoption framework with four specialized portfolios",
       color: "blue"
     },
     {
@@ -144,7 +144,7 @@ const SemanticEngineeringOverview: React.FC = () => {
       path: "/core-technology/agent-architecture",
       icon: <CubeTransparentIcon className="h-8 w-8" />,
       role: "Solution Architecture",
-      description: "Multi-agent orchestration for complex problem-solving",
+      description: "Multi-agent orchestration architecture",
       color: "purple"
     },
     {
@@ -152,7 +152,7 @@ const SemanticEngineeringOverview: React.FC = () => {
       path: "/core-technology/breeze-ai",
       icon: <CpuChipIcon className="h-8 w-8" />,
       role: "Delivery Framework",
-      description: "End-to-end semantic engineering platform for enterprise solutions",
+      description: "End-to-end semantic engineering framework",
       color: "green"
     },
     {
