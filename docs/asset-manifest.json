@@ -1,15 +1,32 @@
 {
   "files": {
-    "main.css": "/accion-ai-labs/static/css/main.dce973f8.css",
-    "main.js": "/accion-ai-labs/static/js/main.53e1bd9f.js",
+    "main.css": "/accion-ai-labs/static/css/main.8e5a35b0.css",
+    "main.js": "/accion-ai-labs/static/js/main.fa492c83.js",
     "static/js/453.2fb3670a.chunk.js": "/accion-ai-labs/static/js/453.2fb3670a.chunk.js",
+    "static/media/crossModalConsistency.svg": "/accion-ai-labs/static/media/crossModalConsistency.5d8d8c8e5911018fb3b3e9b26304479d.svg",
+    "static/media/functionalOntologyLayers.svg": "/accion-ai-labs/static/media/functionalOntologyLayers.4a3c2dff5bd78505bf444ef0cc8704d9.svg",
+    "static/media/integrationFlow.svg": "/accion-ai-labs/static/media/integrationFlow.02641f2cf4cf673e40145906912b19eb.svg",
+    "static/media/integrationArchitecture.svg": "/accion-ai-labs/static/media/integrationArchitecture.c58a75052ab4bc1e08502ef9e046f7c3.svg",
+    "static/media/designBreakdownExample.svg": "/accion-ai-labs/static/media/designBreakdownExample.af6a44e5478a90d93fde9abcaf18b9e3.svg",
+    "static/media/implementationHierarchy.svg": "/accion-ai-labs/static/media/implementationHierarchy.38e4cc7863000da647a3bddd5d92d4ec.svg",
+    "static/media/modalityIndependence.svg": "/accion-ai-labs/static/media/modalityIndependence.f39c134f26cac0984543d0670c19d5cd.svg",
+    "static/media/securityLayers.svg": "/accion-ai-labs/static/media/securityLayers.9aeb538f5ddd1cfe00fba73e37d5698c.svg",
+    "static/media/ontologyConnectionFlow.svg": "/accion-ai-labs/static/media/ontologyConnectionFlow.fe7a3aceef0266fde003a5054a8695b9.svg",
+    "static/media/ecommerceJourney.svg": "/accion-ai-labs/static/media/ecommerceJourney.759fdba6c191155e0c4b0f14df206b92.svg",
+    "static/media/fourOntologies.svg": "/accion-ai-labs/static/media/fourOntologies.fa3a2eb98b66492c407194a6f92da38e.svg",
+    "static/media/atomicDesignHierarchy.svg": "/accion-ai-labs/static/media/atomicDesignHierarchy.f2137732d1f046ae6b37fdb06fa935e3.svg",
+    "static/media/componentInteractionsDiagram.svg": "/accion-ai-labs/static/media/componentInteractionsDiagram.8bd84c37ad8b22eceb503efd316688e0.svg",
+    "static/media/accessControlMatrix.svg": "/accion-ai-labs/static/media/accessControlMatrix.1ddb68a9e79259f51847dad97eee528f.svg",
+    "static/media/securityMetrics.svg": "/accion-ai-labs/static/media/securityMetrics.822d3031662dae7ae22f947c933ea359.svg",
+    "static/media/specificationProcessFlow.svg": "/accion-ai-labs/static/media/specificationProcessFlow.a7cb50f4f7f80f0ec42b8e5090acbbad.svg",
+    "static/media/layeredArchitecture.svg": "/accion-ai-labs/static/media/layeredArchitecture.0468b334369ae4ebb24b5ef6e24c24b3.svg",
     "index.html": "/accion-ai-labs/index.html",
-    "main.dce973f8.css.map": "/accion-ai-labs/static/css/main.dce973f8.css.map",
-    "main.53e1bd9f.js.map": "/accion-ai-labs/static/js/main.53e1bd9f.js.map",
+    "main.8e5a35b0.css.map": "/accion-ai-labs/static/css/main.8e5a35b0.css.map",
+    "main.fa492c83.js.map": "/accion-ai-labs/static/js/main.fa492c83.js.map",
     "453.2fb3670a.chunk.js.map": "/accion-ai-labs/static/js/453.2fb3670a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dce973f8.css",
-    "static/js/main.53e1bd9f.js"
+    "static/css/main.8e5a35b0.css",
+    "static/js/main.fa492c83.js"
   ]
 }

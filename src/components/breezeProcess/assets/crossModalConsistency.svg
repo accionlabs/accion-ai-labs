@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg viewBox="0 0 950 580" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" style="max-width: 100%; height: auto;">
+  <defs>
+    <linearGradient id="modalBg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f0f9ff;stop-opacity:1" />
+      <stop offset="33%" style="stop-color:#f3e8ff;stop-opacity:1" />
+      <stop offset="66%" style="stop-color:#dcfce7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fef3c7;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Arrow marker -->
+    <marker id="modalArrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,8 L8,4 z" fill="#6366f1"/>
+    </marker>
+  </defs>
+  
+  <rect width="950" height="580" fill="url(#modalBg)"/>
+  
+  <!-- Title -->
+  <text x="475" y="25" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#374151">Cross-Modal Design Consistency: Same Function, Different Forms</text>
+  
+  <!-- Central Functional Action -->
+  <rect x="375" y="60" width="200" height="60" rx="12" fill="#f3e8ff" stroke="#7c3aed" stroke-width="3"/>
+  <text x="475" y="85" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#7c3aed">🎯 Functional Action</text>
+  <text x="475" y="105" text-anchor="middle" font-family="Arial" font-size="14" fill="#6d28d9">"Complete Product Purchase"</text>
+  
+  <!-- Web Implementation -->
+  <rect x="50" y="160" width="200" height="320" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="150" y="185" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#2563eb">💻 Web Interface</text>
+  
+  <!-- Web Journey -->
+  <rect x="70" y="200" width="160" height="30" rx="4" fill="#ffffff" stroke="#2563eb" stroke-width="1"/>
+  <text x="150" y="220" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1e40af">Journey: Shopping Experience</text>
+  
+  <!-- Web Flows -->
+  <rect x="70" y="240" width="160" height="50" rx="4" fill="#f8fafc" stroke="#2563eb" stroke-width="1"/>
+  <text x="150" y="255" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#1e40af">Flows:</text>
+  <text x="150" y="270" text-anchor="middle" font-family="Arial" font-size="9" fill="#1d4ed8">• Product Discovery Flow</text>
+  <text x="150" y="282" text-anchor="middle" font-family="Arial" font-size="9" fill="#1d4ed8">• Purchase Flow</text>
+  
+  <!-- Web Pages -->
+  <rect x="70" y="300" width="160" height="60" rx="4" fill="#f1f5f9" stroke="#2563eb" stroke-width="1"/>
+  <text x="150" y="315" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#1e40af">Pages:</text>
+  <text x="150" y="328" text-anchor="middle" font-family="Arial" font-size="9" fill="#1d4ed8">• Search Results Page</text>
+  <text x="150" y="340" text-anchor="middle" font-family="Arial" font-size="9" fill="#1d4ed8">• Product Detail Page</text>
+  <text x="150" y="352" text-anchor="middle" font-family="Arial" font-size="9" fill="#1d4ed8">• Checkout Page</text>
+  
+  <!-- Web Organisms -->
+  <rect x="70" y="370" width="160" height="50" rx="4" fill="#e2e8f0" stroke="#2563eb" stroke-width="1"/>
+  <text x="150" y="385" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#1e40af">Organisms:</text>
+  <text x="150" y="398" text-anchor="middle" font-family="Arial" font-size="9" fill="#1d4ed8">Product Grid, Navigation Header</text>
+  <text x="150" y="410" text-anchor="middle" font-family="Arial" font-size="9" fill="#1d4ed8">Payment Form, Shopping Cart</text>
+  
+  <!-- Web Molecules & Atoms -->
+  <rect x="70" y="430" width="160" height="40" rx="4" fill="#cbd5e1" stroke="#2563eb" stroke-width="1"/>
+  <text x="150" y="445" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#1e40af">Molecules & Atoms:</text>
+  <text x="150" y="458" text-anchor="middle" font-family="Arial" font-size="9" fill="#1d4ed8">Product Cards, Search Box, Buttons</text>
+  
+  <!-- Mobile Implementation -->
+  <rect x="270" y="160" width="200" height="320" rx="10" fill="#f3e8ff" stroke="#a855f7" stroke-width="2"/>
+  <text x="370" y="185" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#a855f7">📱 Mobile App</text>
+  
+  <!-- Mobile Journey -->
+  <rect x="290" y="200" width="160" height="30" rx="4" fill="#ffffff" stroke="#a855f7" stroke-width="1"/>
+  <text x="370" y="220" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#7c3aed">Journey: Shopping Experience</text>
+  
+  <!-- Mobile Flows -->
+  <rect x="290" y="240" width="160" height="50" rx="4" fill="#faf5ff" stroke="#a855f7" stroke-width="1"/>
+  <text x="370" y="255" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#7c3aed">Flows:</text>
+  <text x="370" y="270" text-anchor="middle" font-family="Arial" font-size="9" fill="#6d28d9">• Touch-Optimized Discovery</text>
+  <text x="370" y="282" text-anchor="middle" font-family="Arial" font-size="9" fill="#6d28d9">• Simplified Purchase Flow</text>
+  
+  <!-- Mobile Pages -->
+  <rect x="290" y="300" width="160" height="60" rx="4" fill="#f5f3ff" stroke="#a855f7" stroke-width="1"/>
+  <text x="370" y="315" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#7c3aed">Screens:</text>
+  <text x="370" y="328" text-anchor="middle" font-family="Arial" font-size="9" fill="#6d28d9">• Search Screen</text>
+  <text x="370" y="340" text-anchor="middle" font-family="Arial" font-size="9" fill="#6d28d9">• Product Detail Screen</text>
+  <text x="370" y="352" text-anchor="middle" font-family="Arial" font-size="9" fill="#6d28d9">• Checkout Screen</text>
+  
+  <!-- Mobile Organisms -->
+  <rect x="290" y="370" width="160" height="50" rx="4" fill="#e9d5ff" stroke="#a855f7" stroke-width="1"/>
+  <text x="370" y="385" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#7c3aed">Components:</text>
+  <text x="370" y="398" text-anchor="middle" font-family="Arial" font-size="9" fill="#6d28d9">Swipeable Cards, Tab Navigation</text>
+  <text x="370" y="410" text-anchor="middle" font-family="Arial" font-size="9" fill="#6d28d9">Touch Forms, Mobile Cart</text>
+  
+  <!-- Mobile Molecules & Atoms -->
+  <rect x="290" y="430" width="160" height="40" rx="4" fill="#c4b5fd" stroke="#a855f7" stroke-width="1"/>
+  <text x="370" y="445" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#7c3aed">Touch Elements:</text>
+  <text x="370" y="458" text-anchor="middle" font-family="Arial" font-size="9" fill="#6d28d9">Touch Buttons, Gesture Controls</text>
+  
+  <!-- Voice Implementation -->
+  <rect x="490" y="160" width="200" height="320" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="590" y="185" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#16a34a">🎤 Voice Interface</text>
+  
+  <!-- Voice Journey -->
+  <rect x="510" y="200" width="160" height="30" rx="4" fill="#ffffff" stroke="#16a34a" stroke-width="1"/>
+  <text x="590" y="220" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#15803d">Journey: Voice Shopping</text>
+  
+  <!-- Voice Flows -->
+  <rect x="510" y="240" width="160" height="50" rx="4" fill="#f0fdf4" stroke="#16a34a" stroke-width="1"/>
+  <text x="590" y="255" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#15803d">Conversations:</text>
+  <text x="590" y="270" text-anchor="middle" font-family="Arial" font-size="9" fill="#166534">• Product Search Dialog</text>
+  <text x="590" y="282" text-anchor="middle" font-family="Arial" font-size="9" fill="#166534">• Purchase Confirmation</text>
+  
+  <!-- Voice Pages -->
+  <rect x="510" y="300" width="160" height="60" rx="4" fill="#ecfdf5" stroke="#16a34a" stroke-width="1"/>
+  <text x="590" y="315" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#15803d">Dialogs:</text>
+  <text x="590" y="328" text-anchor="middle" font-family="Arial" font-size="9" fill="#166534">• "Search for products"</text>
+  <text x="590" y="340" text-anchor="middle" font-family="Arial" font-size="9" fill="#166534">• "Tell me about this item"</text>
+  <text x="590" y="352" text-anchor="middle" font-family="Arial" font-size="9" fill="#166534">• "Complete my purchase"</text>
+  
+  <!-- Voice Organisms -->
+  <rect x="510" y="370" width="160" height="50" rx="4" fill="#d1fae5" stroke="#16a34a" stroke-width="1"/>
+  <text x="590" y="385" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#15803d">Patterns:</text>
+  <text x="590" y="398" text-anchor="middle" font-family="Arial" font-size="9" fill="#166534">Intent Recognition, Confirmation</text>
+  <text x="590" y="410" text-anchor="middle" font-family="Arial" font-size="9" fill="#166534">Error Handling, Context</text>
+  
+  <!-- Voice Molecules & Atoms -->
+  <rect x="510" y="430" width="160" height="40" rx="4" fill="#a7f3d0" stroke="#16a34a" stroke-width="1"/>
+  <text x="590" y="445" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#15803d">Speech Elements:</text>
+  <text x="590" y="458" text-anchor="middle" font-family="Arial" font-size="9" fill="#166534">Prompts, Responses, Commands</text>
+  
+  <!-- API Implementation -->
+  <rect x="710" y="160" width="200" height="320" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="810" y="185" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#f59e0b">🔌 API Interface</text>
+  
+  <!-- API Journey -->
+  <rect x="730" y="200" width="160" height="30" rx="4" fill="#ffffff" stroke="#f59e0b" stroke-width="1"/>
+  <text x="810" y="220" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#d97706">Journey: Integration Flow</text>
+  
+  <!-- API Flows -->
+  <rect x="730" y="240" width="160" height="50" rx="4" fill="#fffbeb" stroke="#f59e0b" stroke-width="1"/>
+  <text x="810" y="255" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#d97706">Workflows:</text>
+  <text x="810" y="270" text-anchor="middle" font-family="Arial" font-size="9" fill="#b45309">• Product Search API</text>
+  <text x="810" y="282" text-anchor="middle" font-family="Arial" font-size="9" fill="#b45309">• Order Processing API</text>
+  
+  <!-- API Pages -->
+  <rect x="730" y="300" width="160" height="60" rx="4" fill="#fef7cd" stroke="#f59e0b" stroke-width="1"/>
+  <text x="810" y="315" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#d97706">Endpoints:</text>
+  <text x="810" y="328" text-anchor="middle" font-family="Arial" font-size="9" fill="#b45309">GET /products/search</text>
+  <text x="810" y="340" text-anchor="middle" font-family="Arial" font-size="9" fill="#b45309">GET /products/{id}</text>
+  <text x="810" y="352" text-anchor="middle" font-family="Arial" font-size="9" fill="#b45309">POST /orders</text>
+  
+  <!-- API Organisms -->
+  <rect x="730" y="370" width="160" height="50" rx="4" fill="#fed7aa" stroke="#f59e0b" stroke-width="1"/>
+  <text x="810" y="385" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#d97706">Resources:</text>
+  <text x="810" y="398" text-anchor="middle" font-family="Arial" font-size="9" fill="#b45309">Product Resource, Order Resource</text>
+  <text x="810" y="410" text-anchor="middle" font-family="Arial" font-size="9" fill="#b45309">User Resource, Cart Resource</text>
+  
+  <!-- API Molecules & Atoms -->
+  <rect x="730" y="430" width="160" height="40" rx="4" fill="#fdba74" stroke="#f59e0b" stroke-width="1"/>
+  <text x="810" y="445" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#d97706">Data Elements:</text>
+  <text x="810" y="458" text-anchor="middle" font-family="Arial" font-size="9" fill="#b45309">JSON Fields, Schema Types</text>
+  
+  <!-- Arrows from central function to implementations -->
+  <path d="M 375 90 L 250 180" stroke="#6366f1" stroke-width="2" fill="none" marker-end="url(#modalArrow)"/>
+  <path d="M 425 120 L 370 160" stroke="#6366f1" stroke-width="2" fill="none" marker-end="url(#modalArrow)"/>
+  <path d="M 525 120 L 590 160" stroke="#6366f1" stroke-width="2" fill="none" marker-end="url(#modalArrow)"/>
+  <path d="M 575 90 L 710 180" stroke="#6366f1" stroke-width="2" fill="none" marker-end="url(#modalArrow)"/>
+  
+  <!-- Key insight -->
+  <rect x="200" y="510" width="550" height="50" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="475" y="530" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#7c3aed">Key Principle:</text>
+  <text x="475" y="548" text-anchor="middle" font-family="Arial" font-size="12" fill="#6b7280">Same functional requirements map to optimized design implementations for each modality</text>
+  <text x="475" y="562" text-anchor="middle" font-family="Arial" font-size="11" fill="#9ca3af">Maintaining consistent experience principles while adapting to platform constraints</text>
+</svg>

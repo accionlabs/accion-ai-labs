@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" style="max-width: 100%; height: auto;">
+  <defs>
+    <linearGradient id="tableBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dbeafe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dcfce7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="500" height="300" fill="url(#tableBg)"/>
+  
+  <!-- Title -->
+  <text x="250" y="25" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#374151">Access Control Matrix</text>
+  
+  <!-- Table Header -->
+  <rect x="50" y="50" width="100" height="40" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="100" y="75" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#374151">Role</text>
+  
+  <rect x="150" y="50" width="100" height="40" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="200" y="75" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#374151">Specifications</text>
+  
+  <rect x="250" y="50" width="100" height="40" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="300" y="75" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#374151">Generation</text>
+  
+  <rect x="350" y="50" width="100" height="40" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="400" y="75" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#374151">Admin</text>
+  
+  <!-- Developer Row -->
+  <rect x="50" y="90" width="100" height="35" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="100" y="112" text-anchor="middle" font-family="Arial" font-size="11" font-weight="semibold" fill="#374151">Developer</text>
+  
+  <rect x="150" y="90" width="100" height="35" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="200" y="112" text-anchor="middle" font-family="Arial" font-size="11" fill="#6b7280">Read</text>
+  
+  <rect x="250" y="90" width="100" height="35" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="300" y="112" text-anchor="middle" font-family="Arial" font-size="11" fill="#6b7280">Execute</text>
+  
+  <rect x="350" y="90" width="100" height="35" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="400" y="112" text-anchor="middle" font-family="Arial" font-size="16" fill="#dc2626">❌</text>
+  
+  <!-- Architect Row -->
+  <rect x="50" y="125" width="100" height="35" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="100" y="147" text-anchor="middle" font-family="Arial" font-size="11" font-weight="semibold" fill="#374151">Architect</text>
+  
+  <rect x="150" y="125" width="100" height="35" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="200" y="147" text-anchor="middle" font-family="Arial" font-size="11" fill="#6b7280">Write</text>
+  
+  <rect x="250" y="125" width="100" height="35" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="300" y="147" text-anchor="middle" font-family="Arial" font-size="11" fill="#6b7280">Execute</text>
+  
+  <rect x="350" y="125" width="100" height="35" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="400" y="147" text-anchor="middle" font-family="Arial" font-size="16" fill="#dc2626">❌</text>
+  
+  <!-- Product Owner Row -->
+  <rect x="50" y="160" width="100" height="35" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="100" y="177" text-anchor="middle" font-family="Arial" font-size="10" font-weight="semibold" fill="#374151">Product</text>
+  <text x="100" y="187" text-anchor="middle" font-family="Arial" font-size="10" font-weight="semibold" fill="#374151">Owner</text>
+  
+  <rect x="150" y="160" width="100" height="35" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="200" y="182" text-anchor="middle" font-family="Arial" font-size="11" fill="#6b7280">Approve</text>
+  
+  <rect x="250" y="160" width="100" height="35" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="300" y="182" text-anchor="middle" font-family="Arial" font-size="11" fill="#6b7280">Review</text>
+  
+  <rect x="350" y="160" width="100" height="35" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="400" y="182" text-anchor="middle" font-family="Arial" font-size="16" fill="#dc2626">❌</text>
+  
+  <!-- Admin Row -->
+  <rect x="50" y="195" width="100" height="35" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="100" y="217" text-anchor="middle" font-family="Arial" font-size="11" font-weight="semibold" fill="#374151">Admin</text>
+  
+  <rect x="150" y="195" width="100" height="35" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="200" y="217" text-anchor="middle" font-family="Arial" font-size="11" fill="#6b7280">Full</text>
+  
+  <rect x="250" y="195" width="100" height="35" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="300" y="217" text-anchor="middle" font-family="Arial" font-size="11" fill="#6b7280">Full</text>
+  
+  <rect x="350" y="195" width="100" height="35" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="400" y="217" text-anchor="middle" font-family="Arial" font-size="16" fill="#16a34a">✓</text>
+  
+  <!-- Footer Note -->
+  <rect x="50" y="245" width="400" height="40" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1" rx="4"/>
+  <text x="250" y="260" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#374151">Dynamic Permissions:</text>
+  <text x="250" y="275" text-anchor="middle" font-family="Arial" font-size="9" fill="#6b7280">Permissions can be dynamically granted based on project assignment,</text>
+  <text x="250" y="285" text-anchor="middle" font-family="Arial" font-size="9" fill="#6b7280">time constraints, and approval workflows.</text>
+</svg>

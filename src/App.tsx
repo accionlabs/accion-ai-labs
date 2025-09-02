@@ -40,6 +40,34 @@ import BusinessOptimizationHub from './components/solutions/customerService/Busi
 import ImplementationRoadmap from './components/solutions/customerService/ImplementationRoadmap';
 import ContactPage from './components/contact/ContactPage';
 
+// Breeze Process Model imports
+import ManualTranslationTaxPage from './components/breezeProcess/challenge/ManualTranslationTaxPage';
+import TraditionalApproachesPage from './components/breezeProcess/challenge/TraditionalApproachesPage';
+import BreezeBreakthroughPage from './components/breezeProcess/challenge/BreezeBreakthroughPage';
+import RevolutionaryCapabilitiesPage from './components/breezeProcess/challenge/RevolutionaryCapabilitiesPage';
+import LegacyTransformationPage from './components/breezeProcess/challenge/LegacyTransformationPage';
+import CompetitiveAdvantagesPage from './components/breezeProcess/challenge/CompetitiveAdvantagesPage';
+
+import ArchitectureOverviewPage from './components/breezeProcess/architecture/OverviewPage';
+import CoreComponentsPage from './components/breezeProcess/architecture/CoreComponentsPage';
+import ComponentInteractionsPage from './components/breezeProcess/architecture/ComponentInteractionsPage';
+import IntegrationPointsPage from './components/breezeProcess/architecture/IntegrationPointsPage';
+import ScalabilityPerformancePage from './components/breezeProcess/architecture/ScalabilityPerformancePage';
+import SecurityCompliancePage from './components/breezeProcess/architecture/SecurityCompliancePage';
+
+import SemanticOverviewPage from './components/breezeProcess/semantic/OverviewPage';
+import FunctionalOntologyPage from './components/breezeProcess/semantic/FunctionalOntologyPage';
+import DesignOntologyPage from './components/breezeProcess/semantic/DesignOntologyPage';
+import ArchitectureOntologyPage from './components/breezeProcess/semantic/ArchitectureOntologyPage';
+import CodeOntologyPage from './components/breezeProcess/semantic/CodeOntologyPage';
+import RelationshipsPage from './components/breezeProcess/semantic/RelationshipsPage';
+import AgentsLayerPage from './components/breezeProcess/semantic/AgentsLayerPage';
+
+import ProcessOverviewPage from './components/breezeProcess/flow/OverviewPage';
+import Phase1Page from './components/breezeProcess/flow/Phase1Page';
+import Phase2Page from './components/breezeProcess/flow/Phase2Page';
+import Phase3Page from './components/breezeProcess/flow/Phase3Page';
+
 const App: React.FC = () => {
   return (
     <OntologyProvider>
@@ -220,6 +248,130 @@ const App: React.FC = () => {
               <Route path="/portfolio/unified-product" element={
                 <AppLayout>
                   <UnifiedProductView />
+                </AppLayout>
+              } />
+              
+              {/* Breeze Process Model Section */}
+              {/* Challenge & Solution */}
+              <Route path="/breeze-process/challenge/manual-translation-tax" element={
+                <AppLayout>
+                  <ManualTranslationTaxPage />
+                </AppLayout>
+              } />
+              <Route path="/breeze-process/challenge/traditional-approaches" element={
+                <AppLayout>
+                  <TraditionalApproachesPage />
+                </AppLayout>
+              } />
+              <Route path="/breeze-process/challenge/breakthrough" element={
+                <AppLayout>
+                  <BreezeBreakthroughPage />
+                </AppLayout>
+              } />
+              <Route path="/breeze-process/challenge/capabilities" element={
+                <AppLayout>
+                  <RevolutionaryCapabilitiesPage />
+                </AppLayout>
+              } />
+              <Route path="/breeze-process/challenge/legacy" element={
+                <AppLayout>
+                  <LegacyTransformationPage />
+                </AppLayout>
+              } />
+              <Route path="/breeze-process/challenge/advantages" element={
+                <AppLayout>
+                  <CompetitiveAdvantagesPage />
+                </AppLayout>
+              } />
+              
+              {/* Architecture */}
+              <Route path="/breeze-process/architecture/overview" element={
+                <AppLayout>
+                  <ArchitectureOverviewPage />
+                </AppLayout>
+              } />
+              <Route path="/breeze-process/architecture/components" element={
+                <AppLayout>
+                  <CoreComponentsPage />
+                </AppLayout>
+              } />
+              <Route path="/breeze-process/architecture/interactions" element={
+                <AppLayout>
+                  <ComponentInteractionsPage />
+                </AppLayout>
+              } />
+              <Route path="/breeze-process/architecture/integration" element={
+                <AppLayout>
+                  <IntegrationPointsPage />
+                </AppLayout>
+              } />
+              <Route path="/breeze-process/architecture/scalability" element={
+                <AppLayout>
+                  <ScalabilityPerformancePage />
+                </AppLayout>
+              } />
+              <Route path="/breeze-process/architecture/security" element={
+                <AppLayout>
+                  <SecurityCompliancePage />
+                </AppLayout>
+              } />
+              
+              {/* Semantic Model */}
+              <Route path="/breeze-process/semantic/overview" element={
+                <AppLayout>
+                  <SemanticOverviewPage />
+                </AppLayout>
+              } />
+              <Route path="/breeze-process/semantic/functional" element={
+                <AppLayout>
+                  <FunctionalOntologyPage />
+                </AppLayout>
+              } />
+              <Route path="/breeze-process/semantic/design" element={
+                <AppLayout>
+                  <DesignOntologyPage />
+                </AppLayout>
+              } />
+              <Route path="/breeze-process/semantic/architecture" element={
+                <AppLayout>
+                  <ArchitectureOntologyPage />
+                </AppLayout>
+              } />
+              <Route path="/breeze-process/semantic/code" element={
+                <AppLayout>
+                  <CodeOntologyPage />
+                </AppLayout>
+              } />
+              <Route path="/breeze-process/semantic/relationships" element={
+                <AppLayout>
+                  <RelationshipsPage />
+                </AppLayout>
+              } />
+              <Route path="/breeze-process/semantic/agents" element={
+                <AppLayout>
+                  <AgentsLayerPage />
+                </AppLayout>
+              } />
+              
+              {/* Process Flow */}
+              <Route path="/breeze-process/flow/overview" element={
+                <AppLayout>
+                  <ProcessOverviewPage />
+                </AppLayout>
+              } />
+              <Route path="/breeze-process/flow/phase1" element={
+                <AppLayout>
+                  <Phase1Page />
+                </AppLayout>
+              } />
+              <Route path="/breeze-process/flow/phase2" element={
+                <AppLayout>
+                  <Phase2Page />
+                </AppLayout>
+              } />
+              <Route path="/breeze-process/flow/phase3" element={
+                <AppLayout>
+                  <Phase3Page />
                 </AppLayout>
               } />
               

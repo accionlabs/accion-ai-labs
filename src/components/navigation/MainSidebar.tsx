@@ -284,6 +284,179 @@ const menuItems: MenuItem[] = [
     ]
   },
   {
+    id: 'breeze-process-model',
+    label: 'Breeze Process Model',
+    icon: Bars3Icon,
+    children: [
+      {
+        id: 'breeze-challenge',
+        label: 'The Challenge & Solution',
+        icon: LightBulbIcon,
+        children: [
+          {
+            id: 'manual-translation-tax',
+            label: 'Manual Translation Tax',
+            icon: DocumentChartBarIcon,
+            path: '/breeze-process/challenge/manual-translation-tax'
+          },
+          {
+            id: 'traditional-approaches',
+            label: 'Why Traditional Fails',
+            icon: XMarkIcon,
+            path: '/breeze-process/challenge/traditional-approaches'
+          },
+          {
+            id: 'breeze-breakthrough',
+            label: 'Breeze.AI Breakthrough',
+            icon: SparklesIcon,
+            path: '/breeze-process/challenge/breakthrough'
+          },
+          {
+            id: 'revolutionary-capabilities',
+            label: 'Revolutionary Capabilities',
+            icon: RocketLaunchIcon,
+            path: '/breeze-process/challenge/capabilities'
+          },
+          {
+            id: 'legacy-transformation',
+            label: 'Legacy Transformation',
+            icon: ArrowPathIcon,
+            path: '/breeze-process/challenge/legacy'
+          },
+          {
+            id: 'competitive-advantages',
+            label: 'Competitive Advantages',
+            icon: ChartBarIcon,
+            path: '/breeze-process/challenge/advantages'
+          }
+        ]
+      },
+      {
+        id: 'breeze-architecture',
+        label: 'System Architecture',
+        icon: CpuChipIcon,
+        children: [
+          {
+            id: 'architecture-overview',
+            label: 'Architecture Overview',
+            icon: CubeTransparentIcon,
+            path: '/breeze-process/architecture/overview'
+          },
+          {
+            id: 'core-components',
+            label: 'Core Components',
+            icon: PuzzlePieceIcon,
+            path: '/breeze-process/architecture/components'
+          },
+          {
+            id: 'component-interactions',
+            label: 'Component Interactions',
+            icon: ArrowPathIcon,
+            path: '/breeze-process/architecture/interactions'
+          },
+          {
+            id: 'integration-points',
+            label: 'Integration Points',
+            icon: CircleStackIcon,
+            path: '/breeze-process/architecture/integration'
+          },
+          {
+            id: 'scalability-performance',
+            label: 'Scalability & Performance',
+            icon: ArrowTrendingUpIcon,
+            path: '/breeze-process/architecture/scalability'
+          },
+          {
+            id: 'security-compliance',
+            label: 'Security & Compliance',
+            icon: ScaleIcon,
+            path: '/breeze-process/architecture/security'
+          }
+        ]
+      },
+      {
+        id: 'breeze-semantic-model',
+        label: 'Semantic Model',
+        icon: CircleStackIcon,
+        children: [
+          {
+            id: 'semantic-overview',
+            label: 'Framework Overview',
+            icon: DocumentChartBarIcon,
+            path: '/breeze-process/semantic/overview'
+          },
+          {
+            id: 'functional-ontology',
+            label: 'Functional Ontology',
+            icon: BeakerIcon,
+            path: '/breeze-process/semantic/functional'
+          },
+          {
+            id: 'design-ontology',
+            label: 'Design Ontology',
+            icon: PuzzlePieceIcon,
+            path: '/breeze-process/semantic/design'
+          },
+          {
+            id: 'architecture-ontology',
+            label: 'Architecture Ontology',
+            icon: CubeTransparentIcon,
+            path: '/breeze-process/semantic/architecture'
+          },
+          {
+            id: 'code-ontology',
+            label: 'Code Ontology',
+            icon: CodeBracketIcon,
+            path: '/breeze-process/semantic/code'
+          },
+          {
+            id: 'cross-relationships',
+            label: 'Cross-Ontology Relationships',
+            icon: ArrowPathIcon,
+            path: '/breeze-process/semantic/relationships'
+          },
+          {
+            id: 'agents-layer',
+            label: 'Agents Layer',
+            icon: SparklesIcon,
+            path: '/breeze-process/semantic/agents'
+          }
+        ]
+      },
+      {
+        id: 'breeze-process-flow',
+        label: 'Process Flow',
+        icon: ArrowTrendingUpIcon,
+        children: [
+          {
+            id: 'process-overview',
+            label: 'Process Overview',
+            icon: DocumentChartBarIcon,
+            path: '/breeze-process/flow/overview'
+          },
+          {
+            id: 'phase1-foundation',
+            label: 'Phase 1: Foundation',
+            icon: CubeTransparentIcon,
+            path: '/breeze-process/flow/phase1'
+          },
+          {
+            id: 'phase2-evolution',
+            label: 'Phase 2: Evolution',
+            icon: ArrowTrendingUpIcon,
+            path: '/breeze-process/flow/phase2'
+          },
+          {
+            id: 'phase3-semantic-first',
+            label: 'Phase 3: Semantic First',
+            icon: RocketLaunchIcon,
+            path: '/breeze-process/flow/phase3'
+          }
+        ]
+      }
+    ]
+  },
+  {
     id: 'contact',
     label: 'Get Started',
     icon: PhoneIcon,

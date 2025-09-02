@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 700 400"
+   preserveAspectRatio="xMidYMid meet"
+   style="max-width: 100%; height: auto;"
+   version="1.1"
+   id="svg38"
+   xmlns="http://www.w3.org/2000/svg"
+  >
+  <defs
+     id="defs4">
+    <marker
+       style="overflow:visible"
+       id="RoundedArrow"
+       refX="5"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="m -0.21114562,-4.1055728 6.42229122,3.21114561 a 1,1 90 0 1 0,1.78885438 L -0.21114562,4.1055728 A 1.236068,1.236068 31.717474 0 1 -2,3 v -6 a 1.236068,1.236068 148.28253 0 1 1.78885438,-1.1055728 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path8" />
+    </marker>
+    <linearGradient
+       id="flowBg"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="0%">
+      <stop
+         offset="0%"
+         style="stop-color:#faf5ff;stop-opacity:1"
+         id="stop1" />
+      <stop
+         offset="33%"
+         style="stop-color:#dbeafe;stop-opacity:1"
+         id="stop2" />
+      <stop
+         offset="66%"
+         style="stop-color:#dcfce7;stop-opacity:1"
+         id="stop3" />
+      <stop
+         offset="100%"
+         style="stop-color:#fed7aa;stop-opacity:1"
+         id="stop4" />
+    </linearGradient>
+    <!-- Arrow marker -->
+    <marker
+       id="connectionArrow"
+       markerWidth="12"
+       markerHeight="12"
+       refX="10"
+       refY="6"
+       orient="auto"
+       markerUnits="strokeWidth">
+      <path
+         d="M0,0 L0,12 L12,6 z"
+         fill="#4f46e5"
+         id="path4" />
+    </marker>
+  </defs>
+  <rect
+     width="700"
+     height="400"
+     fill="url(#flowBg)"
+     id="rect4" />
+  <!-- Title -->
+  <!-- Step 1: User Intent -->
+  <rect
+     x="30"
+     y="70"
+     width="130"
+     height="100"
+     rx="10"
+     fill="#f3e8ff"
+     stroke="#9333ea"
+     stroke-width="2"
+     id="rect5" />
+  <text
+     x="95"
+     y="95"
+     text-anchor="middle"
+     font-family="Arial"
+     font-size="14"
+     font-weight="bold"
+     fill="#9333ea"
+     id="text5">User Intent</text>
+  <text
+     x="95"
+     y="115"
+     text-anchor="middle"
+     font-family="Arial"
+     font-size="11"
+     fill="#7c3aed"
+     id="text6">🎯 Functional</text>
+  <text
+     x="95"
+     y="130"
+     text-anchor="middle"
+     font-family="Arial"
+     font-size="10"
+     fill="#6d28d9"
+     id="text7">&quot;I want to buy</text>
+  <text
+     x="95"
+     y="143"
+     text-anchor="middle"
+     font-family="Arial"
+     font-size="10"
+     fill="#6d28d9"
+     id="text8">a product&quot;</text>
+  <text
+     x="95"
+     y="158"
+     text-anchor="middle"
+     font-family="Arial"
+     font-size="9"
+     fill="#581c87"
+     id="text9">What users need</text>
+  <!-- Arrow 1 -->
+  <path
+     d="M 160 120 L 200 120"
+     stroke="#4f46e5"
+     stroke-width="3"
+     fill="none"
+     marker-end="url(#connectionArrow)"
+     id="path9"
+     style="marker-end:url(#RoundedArrow)" />
+  <text
+     x="180"
+     y="110"
+     text-anchor="middle"
+     font-family="Arial"
+     font-size="9"
+     fill="#4f46e5"
+     id="text10">drives</text>
+  <!-- Step 2: User Experience -->
+  <rect
+     x="200"
+     y="70"
+     width="130"
+     height="100"
+     rx="10"
+     fill="#dbeafe"
+     stroke="#2563eb"
+     stroke-width="2"
+     id="rect10" />
+  <text
+     x="265"
+     y="95"
+     text-anchor="middle"
+     font-family="Arial"
+     font-size="14"
+     font-weight="bold"
+     fill="#2563eb"
+     id="text11">User Experience</text>
+  <text
+     x="265"
+     y="115"
+     text-anchor="middle"
+     font-family="Arial"
+     font-size="11"
+     fill="#1e40af"
+     id="text12">🎨 Design</text>
+  <text
+     x="265"
+     y="130"
+     text-anchor="middle"
+     font-family="Arial"
+     font-size="10"
+     fill="#1d4ed8"
+     id="text13">&quot;Product search</text>
+  <text
+     x="265"
+     y="143"
+     text-anchor="middle"
+     font-family="Arial"
+     font-size="10"
+     fill="#1d4ed8"
+     id="text14">interface&quot;</text>
+  <text
+     x="265"
+     y="158"
+     text-anchor="middle"
+     font-family="Arial"
+     font-size="9"
+     fill="#1e3a8a"
+     id="text15">How it looks  feels</text>
+  <!-- Arrow 2 -->
+  <path
+     d="M 330 120 L 370 120"
+     stroke="#4f46e5"
+     stroke-width="3"
+     fill="none"
+     marker-end="url(#connectionArrow)"
+     id="path15"
+     style="marker-end:url(#RoundedArrow)" />
+  <text
+     x="350"
+     y="110"
+     text-anchor="middle"
+     font-family="Arial"
+     font-size="9"
+     fill="#4f46e5"
+     id="text16">defines</text>
+  <!-- Step 3: Technical Design -->
+  <rect
+     x="370"
+     y="70"
+     width="130"
+     height="100"
+     rx="10"
+     fill="#dcfce7"
+     stroke="#16a34a"
+     stroke-width="2"
+     id="rect16" />
+  <text
+     x="435"
+     y="95"
+     text-anchor="middle"
+     font-family="Arial"
+     font-size="14"
+     font-weight="bold"
+     fill="#16a34a"
+     id="text17">Technical Design</text>
+  <text
+     x="435"
+     y="115"
+     text-anchor="middle"
+     font-family="Arial"
+     font-size="11"
+     fill="#15803d"
+     id="text18">🏗️ Architecture</text>
+  <text
+     x="435"
+     y="130"
+     text-anchor="middle"
+     font-family="Arial"
+     font-size="10"
+     fill="#166534"
+     id="text19">&quot;Product catalog</text>
+  <text
+     x="435"
+     y="143"
+     text-anchor="middle"
+     font-family="Arial"
+     font-size="10"
+     fill="#166534"
+     id="text20">service&quot;</text>
+  <text
+     x="435"
+     y="158"
+     text-anchor="middle"
+     font-family="Arial"
+     font-size="9"
+     fill="#14532d"
+     id="text21">System structure</text>
+  <!-- Arrow 3 -->
+  <path
+     d="M 500 120 L 540 120"
+     stroke="#4f46e5"
+     stroke-width="3"
+     fill="none"
+     marker-end="url(#connectionArrow)"
+     id="path21"
+     style="marker-end:url(#RoundedArrow)" />
+  <text
+     x="520"
+     y="110"
+     text-anchor="middle"
+     font-family="Arial"
+     font-size="9"
+     fill="#4f46e5"
+     id="text22">guides</text>
+  <!-- Step 4: Implementation -->
+  <rect
+     x="540"
+     y="70"
+     width="130"
+     height="100"
+     rx="10"
+     fill="#fed7aa"
+     stroke="#f59e0b"
+     stroke-width="2"
+     id="rect22" />
+  <text
+     x="605"
+     y="95"
+     text-anchor="middle"
+     font-family="Arial"
+     font-size="14"
+     font-weight="bold"
+     fill="#f59e0b"
+     id="text23">Implementation</text>
+  <text
+     x="605"
+     y="115"
+     text-anchor="middle"
+     font-family="Arial"
+     font-size="11"
+     fill="#d97706"
+     id="text24">⚙️ Code</text>
+  <text
+     x="605"
+     y="130"
+     text-anchor="middle"
+     font-family="Arial"
+     font-size="10"
+     fill="#b45309"
+     id="text25">&quot;ProductService</text>
+  <text
+     x="605"
+     y="143"
+     text-anchor="middle"
+     font-family="Arial"
+     font-size="10"
+     fill="#b45309"
+     id="text26">.search()&quot;</text>
+  <text
+     x="605"
+     y="158"
+     text-anchor="middle"
+     font-family="Arial"
+     font-size="9"
+     fill="#92400e"
+     id="text27">Executable code</text>
+  <!-- Traceability Arrows (bidirectional) -->
+  <text
+     x="349.51929"
+     y="34.83638"
+     text-anchor="middle"
+     font-family="Arial"
+     font-size="16px"
+     font-weight="bold"
+     fill="#374151"
+     id="text28">Formal Relationships Enable Traceability</text>
+  <!-- Bidirectional arrows showing traceability -->
+  <path
+     d="M 95 190 L 265 190"
+     stroke="#9ca3af"
+     stroke-width="2"
+     stroke-dasharray="3,3"
+     fill="none"
+     id="path28" />
+  <path
+     d="M 250 185 L 265 190 L 250 195"
+     stroke="#9ca3af"
+     stroke-width="2"
+     fill="none"
+     id="path29" />
+  <path
+     d="M 110 195 L 95 190 L 110 185"
+     stroke="#9ca3af"
+     stroke-width="2"
+     fill="none"
+     id="path30" />
+  <text
+     x="180"
+     y="205"
+     text-anchor="middle"
+     font-family="Arial"
+     font-size="9"
+     fill="#9ca3af"
+     id="text30">traces to/from</text>
+  <path
+     d="M 265 250 L 435 250"
+     stroke="#9ca3af"
+     stroke-width="2"
+     stroke-dasharray="3,3"
+     fill="none"
+     id="path31" />
+  <path
+     d="M 420 245 L 435 250 L 420 255"
+     stroke="#9ca3af"
+     stroke-width="2"
+     fill="none"
+     id="path32" />
+  <path
+     d="M 280 255 L 265 250 L 280 245"
+     stroke="#9ca3af"
+     stroke-width="2"
+     fill="none"
+     id="path33" />
+  <text
+     x="350"
+     y="265"
+     text-anchor="middle"
+     font-family="Arial"
+     font-size="9"
+     fill="#9ca3af"
+     id="text33">maps to/from</text>
+  <path
+     d="M 435 310 L 605 310"
+     stroke="#9ca3af"
+     stroke-width="2"
+     stroke-dasharray="3,3"
+     fill="none"
+     id="path34" />
+  <path
+     d="M 590 305 L 605 310 L 590 315"
+     stroke="#9ca3af"
+     stroke-width="2"
+     fill="none"
+     id="path35" />
+  <path
+     d="M 450 315 L 435 310 L 450 305"
+     stroke="#9ca3af"
+     stroke-width="2"
+     fill="none"
+     id="path36" />
+  <text
+     x="520"
+     y="325"
+     text-anchor="middle"
+     font-family="Arial"
+     font-size="9"
+     fill="#9ca3af"
+     id="text36">implements/validates</text>
+  <!-- Benefits box -->
+  <rect
+     x="150"
+     y="340"
+     width="400"
+     height="45"
+     rx="8"
+     fill="#f8fafc"
+     stroke="#e2e8f0"
+     stroke-width="1"
+     id="rect36" />
+  <text
+     x="350"
+     y="360"
+     text-anchor="middle"
+     font-family="Arial"
+     font-size="12"
+     font-weight="bold"
+     fill="#1e293b"
+     id="text37">Cross-Ontology Analytics Enable:</text>
+  <text
+     x="350"
+     y="375"
+     text-anchor="middle"
+     font-family="Arial"
+     font-size="10"
+     fill="#475569"
+     id="text38">Impact analysis • Consistency validation • Governance metrics • Change propagation</text>
+</svg>
