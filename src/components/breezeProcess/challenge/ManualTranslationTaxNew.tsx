@@ -22,7 +22,7 @@ const manualTranslationTaxConfig: TopicConfig = {
             "title": "The Manual Translation Tax",
             "subtitle": "Crisis",
             "variant": "header",
-            "titleGradient": "from-red-600 to-orange-600",
+            "titleGradient": "from-error to-warning",
             "description": "Every software project pays a hidden tax: the cost of manually translating requirements into implementation. This tax creates technical debt, delays, and quality issues that plague the industry.",
             "alignment": "center"
           }
@@ -36,40 +36,40 @@ const manualTranslationTaxConfig: TopicConfig = {
             "variant": "detailed-list",
             "layout": "grid-2",
             "containerStyle": "gradient",
-            "backgroundColor": "from-red-50 to-orange-50",
-            "borderColor": "border-red-500",
+            "backgroundColor": "from-error-50 to-brand-orange-50",
+            "borderColor": "border-error-500",
             "items": [
               {
                 "id": "interpretation",
                 "title": "Interpretation Overhead",
                 "description": "Every developer must manually interpret written specifications, introducing variability and misunderstanding",
                 "backgroundColor": "bg-white",
-                "titleColor": "text-red-800",
-                "textColor": "text-red-700"
+                "titleColor": "text-error-800",
+                "textColor": "text-error-700"
               },
               {
                 "id": "ambiguity",
                 "title": "Ambiguity Resolution",
                 "description": "Unclear specifications require time-consuming clarification cycles between developers, architects, and product owners",
                 "backgroundColor": "bg-white",
-                "titleColor": "text-orange-800",
-                "textColor": "text-orange-700"
+                "titleColor": "text-warning-800",
+                "textColor": "text-warning-700"
               },
               {
                 "id": "traceability",
                 "title": "Traceability Loss",
                 "description": "No systematic way to verify that implementation actually follows the specified requirements",
                 "backgroundColor": "bg-white",
-                "titleColor": "text-red-800",
-                "textColor": "text-red-700"
+                "titleColor": "text-error-800",
+                "textColor": "text-error-700"
               },
               {
                 "id": "change-propagation",
                 "title": "Change Propagation Failure",
                 "description": "When specifications evolve, there's no automatic mechanism to identify what implementation changes are required",
                 "backgroundColor": "bg-white",
-                "titleColor": "text-orange-800",
-                "textColor": "text-orange-700"
+                "titleColor": "text-warning-800",
+                "textColor": "text-warning-700"
               }
             ]
           }
@@ -87,8 +87,8 @@ const manualTranslationTaxConfig: TopicConfig = {
                 "number": 1,
                 "title": "Business Requirements Created",
                 "description": "Product owners define what the system should do",
-                "backgroundColor": "bg-blue-50",
-                "circleColor": "bg-blue-500",
+                "backgroundColor": "bg-brand-blue-50",
+                "circleColor": "bg-brand-blue-500",
                 "textColor": "text-gray-800",
                 "icon": "📄"
               },
@@ -97,8 +97,8 @@ const manualTranslationTaxConfig: TopicConfig = {
                 "number": 2,
                 "title": "Written Specifications",
                 "description": "Requirements documented in human language with inherent ambiguity",
-                "backgroundColor": "bg-yellow-50",
-                "circleColor": "bg-yellow-500",
+                "backgroundColor": "bg-warning-50",
+                "circleColor": "bg-warning-500",
                 "textColor": "text-gray-800",
                 "icon": "📋"
               },
@@ -107,12 +107,12 @@ const manualTranslationTaxConfig: TopicConfig = {
                 "number": 3,
                 "title": "Human Interpretation & Variability",
                 "description": "Each developer interprets specifications differently, creating inconsistent implementations",
-                "backgroundColor": "bg-red-50",
-                "circleColor": "bg-red-500",
-                "textColor": "text-red-800",
+                "backgroundColor": "bg-error-50",
+                "circleColor": "bg-error-500",
+                "textColor": "text-error-800",
                 "icon": "⚠️",
                 "isHighlight": true,
-                "borderColor": "border-red-200"
+                "borderColor": "border-error-200"
               }
             ],
             "multipleOutcomes": {
@@ -123,27 +123,27 @@ const manualTranslationTaxConfig: TopicConfig = {
                   "title": "Implementation A",
                   "subtitle": "Developer's interpretation",
                   "letter": "A",
-                  "backgroundColor": "bg-orange-50",
-                  "borderColor": "border-orange-200",
-                  "textColor": "text-orange-800"
+                  "backgroundColor": "bg-warning-50",
+                  "borderColor": "border-warning-200",
+                  "textColor": "text-warning-800"
                 },
                 {
                   "id": "impl-b",
                   "title": "Implementation B",
                   "subtitle": "Different interpretation",
                   "letter": "B",
-                  "backgroundColor": "bg-orange-50",
-                  "borderColor": "border-orange-200",
-                  "textColor": "text-orange-800"
+                  "backgroundColor": "bg-warning-50",
+                  "borderColor": "border-warning-200",
+                  "textColor": "text-warning-800"
                 },
                 {
                   "id": "impl-c",
                   "title": "Implementation C",
                   "subtitle": "Yet another interpretation",
                   "letter": "C",
-                  "backgroundColor": "bg-orange-50",
-                  "borderColor": "border-orange-200",
-                  "textColor": "text-orange-800"
+                  "backgroundColor": "bg-warning-50",
+                  "borderColor": "border-warning-200",
+                  "textColor": "text-warning-800"
                 }
               ]
             },
@@ -166,20 +166,20 @@ const manualTranslationTaxConfig: TopicConfig = {
                 "id": "functional-success",
                 "title": "Functional Alignment Success",
                 "description": "Misalignment between implementation and functional requirements is relatively rare because the testing process naturally catches and corrects such gaps. When a feature doesn't work as expected, it's immediately obvious and gets fixed.",
-                "backgroundColor": "bg-green-50",
-                "borderColor": "border-green-200",
-                "titleColor": "text-green-800",
-                "textColor": "text-green-700",
+                "backgroundColor": "bg-success-50",
+                "borderColor": "border-success-200",
+                "titleColor": "text-success-800",
+                "textColor": "text-success-700",
                 "icon": "✅"
               },
               {
                 "id": "arch-design-failure",
                 "title": "Architectural & Design Alignment Failure",
                 "description": "Misalignment between implementation and architectural or design requirements occurs frequently and often goes undetected because these misalignments don't typically cause immediate functional failures but accumulate as technical debt over time.",
-                "backgroundColor": "bg-red-50",
-                "borderColor": "border-red-200",
-                "titleColor": "text-red-800",
-                "textColor": "text-red-700",
+                "backgroundColor": "bg-error-50",
+                "borderColor": "border-error-200",
+                "titleColor": "text-error-800",
+                "textColor": "text-error-700",
                 "icon": "❌"
               }
             ],
@@ -192,22 +192,22 @@ const manualTranslationTaxConfig: TopicConfig = {
                   "id": "year1",
                   "title": "Year 1",
                   "description": "Specs match best practices<br/>Implementation follows specs",
-                  "backgroundColor": "bg-blue-100",
-                  "textColor": "text-blue-800"
+                  "backgroundColor": "bg-brand-blue-100",
+                  "textColor": "text-secondary-800"
                 },
                 {
                   "id": "year3",
                   "title": "Year 3",
                   "description": "Specs getting outdated<br/>Implementation drifting",
-                  "backgroundColor": "bg-yellow-100",
-                  "textColor": "text-yellow-800"
+                  "backgroundColor": "bg-warning-100",
+                  "textColor": "text-warning-800"
                 },
                 {
                   "id": "year5",
                   "title": "Year 5",
                   "description": "Specs obsolete<br/>Implementation legacy",
-                  "backgroundColor": "bg-red-100",
-                  "textColor": "text-red-800"
+                  "backgroundColor": "bg-error-100",
+                  "textColor": "text-error-800"
                 }
               ]
             },
@@ -221,33 +221,33 @@ const manualTranslationTaxConfig: TopicConfig = {
           "content": {
             "title": "The Impossible Economics",
             "description": "In traditional development approaches, keeping specifications current with evolving best practices is often <strong>economically unfeasible</strong> because:",
-            "backgroundColor": "from-gray-50 to-blue-50",
-            "borderColor": "border-l-4 border-blue-500",
+            "backgroundColor": "from-gray-50 to-brand-blue-50",
+            "borderColor": "border-l-4 border-secondary-500",
             "variant": "detailed-list",
             "items": [
               {
                 "id": "analysis-paralysis",
                 "title": "Analysis Paralysis",
                 "description": "Understanding the impact of updating specifications requires extensive manual analysis",
-                "bulletColor": "bg-blue-500"
+                "bulletColor": "bg-brand-blue-500"
               },
               {
                 "id": "implementation-uncertainty",
                 "title": "Implementation Uncertainty",
                 "description": "Teams can't predict the full scope of changes required",
-                "bulletColor": "bg-purple-500"
+                "bulletColor": "bg-brand-purple-500"
               },
               {
                 "id": "risk-aversion",
                 "title": "Risk Aversion",
                 "description": "Uncertainty about evolution impact makes teams reluctant to modernize",
-                "bulletColor": "bg-orange-500"
+                "bulletColor": "bg-warning-500"
               },
               {
                 "id": "resource-competition",
                 "title": "Resource Competition",
                 "description": "Specification evolution competes with feature development—features usually win",
-                "bulletColor": "bg-red-500"
+                "bulletColor": "bg-error-500"
               }
             ],
             "layout": "grid-2",
@@ -266,7 +266,7 @@ const manualTranslationTaxConfig: TopicConfig = {
               "backgroundColor": "bg-white/20"
             },
             "buttonText": "See How Traditional Approaches Fail",
-            "backgroundGradient": "from-red-600 to-orange-600",
+            "backgroundGradient": "from-error to-warning",
             "variant": "cta"
           }
         }

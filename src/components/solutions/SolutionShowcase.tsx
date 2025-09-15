@@ -193,7 +193,7 @@ const SolutionShowcase: React.FC = () => {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                   selectedCategory === category
-                    ? 'bg-blue-600 text-white'
+                    ? 'bg-secondary text-white'
                     : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-300'
                 }`}
               >
@@ -229,7 +229,7 @@ const SolutionShowcase: React.FC = () => {
                       <Icon className="h-6 w-6 text-white" />
                     </div>
                     {solution.status === 'deep-dive' && (
-                      <span className="px-2 py-1 bg-purple-100 text-purple-700 text-xs font-semibold rounded-full">
+                      <span className="px-2 py-1 bg-brand-purple-100 text-brand-purple-600 text-xs font-semibold rounded-full">
                         Deep Dive
                       </span>
                     )}
@@ -244,7 +244,7 @@ const SolutionShowcase: React.FC = () => {
                     <ul className="space-y-1">
                       {solution.capabilities.slice(0, 3).map((capability, index) => (
                         <li key={index} className="flex items-start text-xs text-gray-600">
-                          <CheckIcon className="h-3 w-3 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                          <CheckIcon className="h-3 w-3 text-success mr-2 mt-0.5 flex-shrink-0" />
                           {capability}
                         </li>
                       ))}
@@ -256,7 +256,7 @@ const SolutionShowcase: React.FC = () => {
                     <h4 className="text-xs font-semibold text-gray-700 uppercase tracking-wide mb-2">Business Outcomes</h4>
                     <div className="flex flex-wrap gap-2">
                       {solution.outcomes.slice(0, 2).map((outcome, index) => (
-                        <span key={index} className="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded">
+                        <span key={index} className="text-xs bg-secondary/10 text-secondary px-2 py-1 rounded">
                           {outcome}
                         </span>
                       ))}
@@ -275,7 +275,7 @@ const SolutionShowcase: React.FC = () => {
                     <Link
                       to={solution.link}
                       className={`inline-flex items-center text-sm font-medium ${
-                        isDeepDive ? 'text-blue-600 hover:text-blue-700' : 'text-gray-600 hover:text-gray-700'
+                        isDeepDive ? 'text-secondary hover:text-brand-blue-700' : 'text-gray-600 hover:text-gray-700'
                       }`}
                     >
                       {solution.status === 'deep-dive' ? 'Explore Deep Dive' : 'Learn More'}
@@ -289,7 +289,7 @@ const SolutionShowcase: React.FC = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="mt-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-center text-white">
+        <div className="mt-12 bg-innovation-gradient rounded-xl p-8 text-center text-white">
           <h2 className="text-2xl font-bold mb-4">Ready to Transform Your Enterprise?</h2>
           <p className="text-lg mb-6 max-w-2xl mx-auto">
             These solutions represent just a fraction of what's possible. Let's discuss how AI agents 
@@ -297,7 +297,7 @@ const SolutionShowcase: React.FC = () => {
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+            className="inline-flex items-center px-6 py-3 bg-white text-secondary font-semibold rounded-lg hover:bg-gray-100 transition-colors"
           >
             Schedule a Consultation
             <ArrowRightIcon className="ml-2 h-5 w-5" />

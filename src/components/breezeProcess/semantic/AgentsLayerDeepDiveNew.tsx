@@ -12,28 +12,28 @@ const AgentsLayerDeepDiveNew: React.FC<AgentsLayerDeepDiveNewProps> = () => {
       purpose: "Orchestrate complete end-to-end business workflows",
       capabilities: "Multi-step coordination, decision making, exception handling",
       examples: ["Purchase Completion Agent", "Customer Onboarding Agent", "Incident Response Agent"],
-      color: "bg-blue-50 border-blue-200 text-blue-800"
+      color: "bg-brand-blue-50 border-secondary text-secondary"
     },
     {
       type: "Domain Agents", 
       purpose: "Provide specialized intelligence within specific domains",
       capabilities: "Domain expertise, optimization, pattern recognition",
       examples: ["Product Discovery Agent", "System Optimization Agent", "Risk Assessment Agent"],
-      color: "bg-purple-50 border-purple-200 text-purple-800"
+      color: "bg-brand-purple-50 border-brand-purple-600 text-brand-purple-800"
     },
     {
       type: "Integration Agents",
       purpose: "Coordinate interactions with external systems", 
       capabilities: "Protocol translation, error recovery, data transformation",
       examples: ["External System Integration Agent", "Partner API Agent", "Legacy System Bridge Agent"],
-      color: "bg-green-50 border-green-200 text-green-800"
+      color: "bg-success-50 border-success text-success-800"
     },
     {
       type: "Assistant Agents",
       purpose: "Support user interactions and queries",
       capabilities: "Natural language processing, context understanding, task guidance", 
       examples: ["Customer Support Agent", "Operations Assistant Agent", "Developer Helper Agent"],
-      color: "bg-orange-50 border-orange-200 text-orange-800"
+      color: "bg-warning-50 border-warning text-warning-800"
     }
   ];
 
@@ -42,7 +42,7 @@ const AgentsLayerDeepDiveNew: React.FC<AgentsLayerDeepDiveNewProps> = () => {
       {/* Header */}
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-gray-800 mb-4">
-          <span className="bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
+          <span className="bg-innovation-gradient bg-clip-text text-transparent">
             Agents Layer Deep Dive
           </span>
         </h1>
@@ -59,28 +59,28 @@ const AgentsLayerDeepDiveNew: React.FC<AgentsLayerDeepDiveNewProps> = () => {
         <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">Agents Layer in Architecture</h3>
         
         <div className="flex flex-col items-center space-y-4">
-          <div className="p-4 bg-purple-100 rounded-lg border-2 border-purple-300 w-full max-w-md text-center">
-            <div className="font-bold text-purple-800">User Experience Layer</div>
-            <div className="text-sm text-purple-600">Frontend applications and user interfaces</div>
+          <div className="p-4 bg-brand-purple-100 rounded-lg border-2 border-brand-purple-600 w-full max-w-md text-center">
+            <div className="font-bold text-brand-purple-800">User Experience Layer</div>
+            <div className="text-sm text-brand-purple-600">Frontend applications and user interfaces</div>
           </div>
           
           <div className="text-gray-400 text-2xl">↓</div>
           
-          <div className="p-4 bg-green-100 rounded-lg border-2 border-green-400 w-full max-w-md text-center ring-4 ring-green-200">
-            <div className="font-bold text-green-800 text-lg">🤖 AGENTS LAYER</div>
-            <div className="text-sm text-green-700 font-semibold">Intelligent orchestration and autonomous decision-making</div>
+          <div className="p-4 bg-success-100 rounded-lg border-2 border-success w-full max-w-md text-center ring-4 ring-success-200">
+            <div className="font-bold text-success-800 text-lg">🤖 AGENTS LAYER</div>
+            <div className="text-sm text-success-700 font-semibold">Intelligent orchestration and autonomous decision-making</div>
           </div>
           
           <div className="text-gray-400 text-2xl">↓</div>
           
-          <div className="p-4 bg-yellow-100 rounded-lg border-2 border-yellow-300 w-full max-w-md text-center">
-            <div className="font-bold text-yellow-800">Services Layer</div>
-            <div className="text-sm text-yellow-600">Business logic and platform capabilities</div>
+          <div className="p-4 bg-warning-100 rounded-lg border-2 border-warning w-full max-w-md text-center">
+            <div className="font-bold text-warning-800">Services Layer</div>
+            <div className="text-sm text-warning-600">Business logic and platform capabilities</div>
           </div>
         </div>
         
-        <div className="mt-6 p-4 bg-green-50 rounded-lg border border-green-200">
-          <p className="text-green-800 text-center">
+        <div className="mt-6 p-4 bg-success-50 rounded-lg border border-success">
+          <p className="text-success-800 text-center">
             <strong>Key Innovation:</strong> The Agents layer provides intelligent coordination between the User Experience layer and Services layer, 
             enabling autonomous task completion and complex workflow orchestration.
           </p>
@@ -124,8 +124,8 @@ const AgentsLayerDeepDiveNew: React.FC<AgentsLayerDeepDiveNewProps> = () => {
         
         <div className="space-y-8">
           {/* Service Coordination Flow */}
-          <div className="p-6 bg-blue-50 rounded-lg border border-blue-200">
-            <h4 className="text-lg font-bold text-blue-800 mb-4">Service Coordination Flow</h4>
+          <div className="p-6 bg-brand-blue-50 rounded-lg border border-secondary">
+            <h4 className="text-lg font-bold text-secondary mb-4">Service Coordination Flow</h4>
             <div className="space-y-4">
               <div className="text-center p-4 bg-white rounded-lg border">
                 <div className="text-lg font-semibold text-gray-800 mb-2">"Complete my order for the red shoes"</div>
@@ -134,17 +134,17 @@ const AgentsLayerDeepDiveNew: React.FC<AgentsLayerDeepDiveNewProps> = () => {
               
               <div className="text-center text-2xl text-gray-400">↓</div>
               
-              <div className="p-4 bg-green-100 rounded-lg border border-green-300">
-                <div className="font-semibold text-green-800 mb-2">Purchase Completion Agent</div>
-                <div className="text-sm text-green-700">Receives request and orchestrates multiple services</div>
+              <div className="p-4 bg-success-100 rounded-lg border border-success">
+                <div className="font-semibold text-success-800 mb-2">Purchase Completion Agent</div>
+                <div className="text-sm text-success-700">Receives request and orchestrates multiple services</div>
               </div>
               
               <div className="text-center text-2xl text-gray-400">↓</div>
               
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {["Product Service", "Inventory Service", "Payment Service", "Shipping Service"].map((service, index) => (
-                  <div key={index} className="p-3 bg-yellow-100 rounded-lg border border-yellow-300 text-center">
-                    <div className="font-semibold text-yellow-800 text-sm">{service}</div>
+                  <div key={index} className="p-3 bg-warning-100 rounded-lg border border-warning text-center">
+                    <div className="font-semibold text-warning-800 text-sm">{service}</div>
                   </div>
                 ))}
               </div>
@@ -159,8 +159,8 @@ const AgentsLayerDeepDiveNew: React.FC<AgentsLayerDeepDiveNewProps> = () => {
           </div>
 
           {/* Agent Collaboration */}
-          <div className="p-6 bg-purple-50 rounded-lg border border-purple-200">
-            <h4 className="text-lg font-bold text-purple-800 mb-4">Multi-Agent Collaboration</h4>
+          <div className="p-6 bg-brand-purple-50 rounded-lg border border-brand-purple-600">
+            <h4 className="text-lg font-bold text-brand-purple-800 mb-4">Multi-Agent Collaboration</h4>
             <div className="space-y-4">
               <div className="text-center p-4 bg-white rounded-lg border">
                 <div className="text-lg font-semibold text-gray-800 mb-2">"Find and order the best running shoes for my marathon training"</div>
@@ -170,25 +170,25 @@ const AgentsLayerDeepDiveNew: React.FC<AgentsLayerDeepDiveNewProps> = () => {
               <div className="text-center text-2xl text-gray-400">↓</div>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="p-4 bg-purple-100 rounded-lg border border-purple-300">
-                  <div className="font-semibold text-purple-800 mb-2">Product Discovery Agent</div>
-                  <div className="text-sm text-purple-700">Analyzes preferences, finds recommendations</div>
+                <div className="p-4 bg-brand-purple-100 rounded-lg border border-brand-purple-600">
+                  <div className="font-semibold text-brand-purple-800 mb-2">Product Discovery Agent</div>
+                  <div className="text-sm text-brand-purple-700">Analyzes preferences, finds recommendations</div>
                 </div>
-                <div className="p-4 bg-blue-100 rounded-lg border border-blue-300">
-                  <div className="font-semibold text-blue-800 mb-2">Purchase Completion Agent</div>
-                  <div className="text-sm text-blue-700">Handles order processing</div>
+                <div className="p-4 bg-brand-blue-100 rounded-lg border border-secondary">
+                  <div className="font-semibold text-secondary mb-2">Purchase Completion Agent</div>
+                  <div className="text-sm text-brand-blue-700">Handles order processing</div>
                 </div>
-                <div className="p-4 bg-orange-100 rounded-lg border border-orange-300">
-                  <div className="font-semibold text-orange-800 mb-2">Customer Support Agent</div>
-                  <div className="text-sm text-orange-700">Provides training advice and support</div>
+                <div className="p-4 bg-warning-100 rounded-lg border border-warning">
+                  <div className="font-semibold text-warning-800 mb-2">Customer Support Agent</div>
+                  <div className="text-sm text-warning-700">Provides training advice and support</div>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Agent Decision Making */}
-          <div className="p-6 bg-green-50 rounded-lg border border-green-200">
-            <h4 className="text-lg font-bold text-green-800 mb-4">Autonomous Decision Making</h4>
+          <div className="p-6 bg-success-50 rounded-lg border border-success">
+            <h4 className="text-lg font-bold text-success-800 mb-4">Autonomous Decision Making</h4>
             <div className="space-y-4">
               <div className="text-center p-4 bg-white rounded-lg border">
                 <div className="text-lg font-semibold text-gray-800 mb-2">Order Processing Complication</div>
@@ -197,8 +197,8 @@ const AgentsLayerDeepDiveNew: React.FC<AgentsLayerDeepDiveNewProps> = () => {
               
               <div className="text-center text-2xl text-gray-400">↓</div>
               
-              <div className="p-4 bg-green-100 rounded-lg border border-green-300">
-                <div className="font-semibold text-green-800 mb-2">Purchase Completion Agent Decisions</div>
+              <div className="p-4 bg-success-100 rounded-lg border border-success">
+                <div className="font-semibold text-success-800 mb-2">Purchase Completion Agent Decisions</div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                   <div className="p-3 bg-white rounded border">
                     <div className="font-semibold text-sm text-gray-800">Stock Issue</div>
@@ -223,28 +223,28 @@ const AgentsLayerDeepDiveNew: React.FC<AgentsLayerDeepDiveNewProps> = () => {
       </div>
 
       {/* Agent Capabilities & Benefits */}
-      <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-8 border-l-4 border-green-500 mb-8">
+      <div className="bg-gradient-to-r from-success-50 to-brand-blue-50 rounded-xl p-8 border-l-4 border-success mb-8">
         <h3 className="text-2xl font-bold text-gray-800 mb-6">Agents Layer Benefits</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <h4 className="font-bold text-lg text-gray-800 mb-3">Intelligence & Autonomy</h4>
             <div className="space-y-2">
               <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                <div className="w-2 h-2 bg-success rounded-full mt-2"></div>
                 <div>
                   <span className="font-semibold text-gray-800">Intelligent Orchestration:</span>
                   <span className="text-gray-700"> Agents decide which services to call and in what order</span>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
+                <div className="w-2 h-2 bg-secondary rounded-full mt-2"></div>
                 <div>
                   <span className="font-semibold text-gray-800">Autonomous Problem Solving:</span>
                   <span className="text-gray-700"> Handle exceptions and edge cases without user intervention</span>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                <div className="w-2 h-2 bg-brand-purple-600 rounded-full mt-2"></div>
                 <div>
                   <span className="font-semibold text-gray-800">Adaptive Behavior:</span>
                   <span className="text-gray-700"> Learn and optimize orchestration patterns over time</span>
@@ -256,21 +256,21 @@ const AgentsLayerDeepDiveNew: React.FC<AgentsLayerDeepDiveNewProps> = () => {
             <h4 className="font-bold text-lg text-gray-800 mb-3">User Experience & Architecture</h4>
             <div className="space-y-2">
               <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
+                <div className="w-2 h-2 bg-warning rounded-full mt-2"></div>
                 <div>
                   <span className="font-semibold text-gray-800">Enhanced UX:</span>
                   <span className="text-gray-700"> Complex processes appear as simple single interactions</span>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
+                <div className="w-2 h-2 bg-error rounded-full mt-2"></div>
                 <div>
                   <span className="font-semibold text-gray-800">Context Preservation:</span>
                   <span className="text-gray-700"> Maintain conversation and task context across service calls</span>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-teal-500 rounded-full mt-2"></div>
+                <div className="w-2 h-2 bg-info rounded-full mt-2"></div>
                 <div>
                   <span className="font-semibold text-gray-800">Business Logic Abstraction:</span>
                   <span className="text-gray-700"> Complex rules encapsulated in agents, not scattered across services</span>

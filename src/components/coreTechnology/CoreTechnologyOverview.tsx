@@ -21,7 +21,7 @@ const CoreTechnologyOverview: React.FC = () => {
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 py-4 sm:py-6 lg:py-8">
         {/* Page Header */}
         <div className="mb-8">
-          <div className="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold mb-4">
+          <div className="inline-block px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs font-semibold mb-4">
             Our Platform
           </div>
           <h1 className="text-3xl font-bold text-gray-900">The Breeze.AI Platform</h1>
@@ -74,7 +74,7 @@ const CoreTechnologyOverview: React.FC = () => {
               <h3 className="text-lg font-semibold text-gray-900 mb-4">The Graph Advantage</h3>
               <div className="space-y-3">
                 <div className="flex items-start">
-                  <span className="text-blue-500 mr-2 mt-1">✓</span>
+                  <span className="text-secondary mr-2 mt-1">✓</span>
                   <div>
                     <strong className="text-gray-900">Complete Context:</strong>
                     <p className="text-sm text-gray-600 mt-1">
@@ -83,7 +83,7 @@ const CoreTechnologyOverview: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <span className="text-blue-500 mr-2 mt-1">✓</span>
+                  <span className="text-secondary mr-2 mt-1">✓</span>
                   <div>
                     <strong className="text-gray-900">Semantic Relationships:</strong>
                     <p className="text-sm text-gray-600 mt-1">
@@ -92,7 +92,7 @@ const CoreTechnologyOverview: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <span className="text-blue-500 mr-2 mt-1">✓</span>
+                  <span className="text-secondary mr-2 mt-1">✓</span>
                   <div>
                     <strong className="text-gray-900">Traversable Structure:</strong>
                     <p className="text-sm text-gray-600 mt-1">
@@ -104,8 +104,8 @@ const CoreTechnologyOverview: React.FC = () => {
             </div>
           </div>
 
-          <div className="p-4 bg-blue-50 rounded-lg">
-            <p className="text-sm text-blue-900">
+          <div className="p-4 bg-secondary/10 rounded-lg">
+            <p className="text-sm text-secondary">
               <strong>The Key Insight:</strong> LLMs perform best when they have access to structured, 
               interconnected knowledge. Our semantic graphs provide this structure by converting your 
               codebase, documentation, and design patterns into a navigable knowledge network that 
@@ -115,7 +115,7 @@ const CoreTechnologyOverview: React.FC = () => {
         </div>
 
         {/* The Process - Three Boxes */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 sm:p-12 text-white mb-12">
+        <div className="bg-gradient-to-r from-secondary to-brand-purple-600 rounded-2xl p-8 sm:p-12 text-white mb-12">
           <h2 className="text-3xl font-bold mb-8 text-center">
             From Code to Knowledge to Action
           </h2>
@@ -164,9 +164,9 @@ const CoreTechnologyOverview: React.FC = () => {
           </p>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="border-l-4 border-blue-500 pl-4">
+            <div className="border-l-4 border-secondary pl-4">
               <div className="flex items-center mb-2">
-                <CodeBracketIcon className="h-6 w-6 text-blue-600 mr-2" />
+                <CodeBracketIcon className="h-6 w-6 text-secondary mr-2" />
                 <h3 className="font-semibold text-gray-900">Code Ontology</h3>
               </div>
               <p className="text-sm text-gray-600 mb-3">
@@ -180,9 +180,9 @@ const CoreTechnologyOverview: React.FC = () => {
               </ul>
             </div>
             
-            <div className="border-l-4 border-purple-500 pl-4">
+            <div className="border-l-4 border-brand-purple-500 pl-4">
               <div className="flex items-center mb-2">
-                <BeakerIcon className="h-6 w-6 text-purple-600 mr-2" />
+                <BeakerIcon className="h-6 w-6 text-brand-purple-600 mr-2" />
                 <h3 className="font-semibold text-gray-900">Functional Ontology</h3>
               </div>
               <p className="text-sm text-gray-600 mb-3">
@@ -212,9 +212,9 @@ const CoreTechnologyOverview: React.FC = () => {
               </ul>
             </div>
             
-            <div className="border-l-4 border-green-500 pl-4">
+            <div className="border-l-4 border-success pl-4">
               <div className="flex items-center mb-2">
-                <CubeIcon className="h-6 w-6 text-green-600 mr-2" />
+                <CubeIcon className="h-6 w-6 text-success mr-2" />
                 <h3 className="font-semibold text-gray-900">Architecture Ontology</h3>
               </div>
               <p className="text-sm text-gray-600 mb-3">
@@ -275,9 +275,9 @@ const CoreTechnologyOverview: React.FC = () => {
           <div className="mb-8">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Our Specialized Team</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="border-l-4 border-blue-500 pl-4">
+              <div className="border-l-4 border-secondary pl-4">
                 <div className="flex items-center mb-2">
-                  <CogIcon className="h-6 w-6 text-blue-600 mr-2" />
+                  <CogIcon className="h-6 w-6 text-secondary mr-2" />
                   <h4 className="font-semibold text-gray-900">Breeze Framework</h4>
                 </div>
                 <p className="text-sm text-gray-600">
@@ -286,9 +286,9 @@ const CoreTechnologyOverview: React.FC = () => {
                 </p>
               </div>
               
-              <div className="border-l-4 border-purple-500 pl-4">
+              <div className="border-l-4 border-brand-purple-500 pl-4">
                 <div className="flex items-center mb-2">
-                  <AcademicCapIcon className="h-6 w-6 text-purple-600 mr-2" />
+                  <AcademicCapIcon className="h-6 w-6 text-brand-purple-600 mr-2" />
                   <h4 className="font-semibold text-gray-900">Semantic Engineers</h4>
                 </div>
                 <p className="text-sm text-gray-600">
@@ -297,9 +297,9 @@ const CoreTechnologyOverview: React.FC = () => {
                 </p>
               </div>
               
-              <div className="border-l-4 border-green-500 pl-4">
+              <div className="border-l-4 border-success pl-4">
                 <div className="flex items-center mb-2">
-                  <UserGroupIcon className="h-6 w-6 text-green-600 mr-2" />
+                  <UserGroupIcon className="h-6 w-6 text-success mr-2" />
                   <h4 className="font-semibold text-gray-900">Agent Developers</h4>
                 </div>
                 <p className="text-sm text-gray-600">
@@ -312,8 +312,8 @@ const CoreTechnologyOverview: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <span className="text-2xl font-bold text-blue-600">1</span>
+              <div className="w-16 h-16 bg-brand-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                <span className="text-2xl font-bold text-secondary">1</span>
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">Discovery & Ontology Design</h3>
               <p className="text-sm text-gray-600">
@@ -323,8 +323,8 @@ const CoreTechnologyOverview: React.FC = () => {
             </div>
             
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <span className="text-2xl font-bold text-purple-600">2</span>
+              <div className="w-16 h-16 bg-brand-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                <span className="text-2xl font-bold text-brand-purple-600">2</span>
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">Graph Construction</h3>
               <p className="text-sm text-gray-600">
@@ -334,8 +334,8 @@ const CoreTechnologyOverview: React.FC = () => {
             </div>
             
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <span className="text-2xl font-bold text-green-600">3</span>
+              <div className="w-16 h-16 bg-success/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                <span className="text-2xl font-bold text-success">3</span>
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">Custom Agent Development</h3>
               <p className="text-sm text-gray-600">
@@ -355,15 +355,15 @@ const CoreTechnologyOverview: React.FC = () => {
               <h3 className="text-lg font-semibold text-gray-900 mb-3">Technical Foundation</h3>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li className="flex items-start">
-                  <span className="text-blue-500 mr-2 mt-0.5">•</span>
+                  <span className="text-secondary mr-2 mt-0.5">•</span>
                   <span><strong>Graph Traversal:</strong> LLMs can follow relationships to find exactly what they need</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-blue-500 mr-2 mt-0.5">•</span>
+                  <span className="text-secondary mr-2 mt-0.5">•</span>
                   <span><strong>Semantic Anchoring:</strong> Every piece of information is connected to its context</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-blue-500 mr-2 mt-0.5">•</span>
+                  <span className="text-secondary mr-2 mt-0.5">•</span>
                   <span><strong>Explicit Relationships:</strong> No guessing about how things connect</span>
                 </li>
               </ul>
@@ -373,15 +373,15 @@ const CoreTechnologyOverview: React.FC = () => {
               <h3 className="text-lg font-semibold text-gray-900 mb-3">Practical Benefits</h3>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li className="flex items-start">
-                  <span className="text-green-500 mr-2 mt-0.5">•</span>
+                  <span className="text-success mr-2 mt-0.5">•</span>
                   <span><strong>Consistent Results:</strong> Same context leads to reliable outputs</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-green-500 mr-2 mt-0.5">•</span>
+                  <span className="text-success mr-2 mt-0.5">•</span>
                   <span><strong>Complete Understanding:</strong> No missing connections or context</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-green-500 mr-2 mt-0.5">•</span>
+                  <span className="text-success mr-2 mt-0.5">•</span>
                   <span><strong>Explainable Decisions:</strong> Clear reasoning paths through the graph</span>
                 </li>
               </ul>
@@ -400,28 +400,28 @@ const CoreTechnologyOverview: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <Link
               to="/core-technology/kaps-framework"
-              className="group border rounded-lg p-4 hover:shadow-lg transition-all hover:border-purple-300"
+              className="group border rounded-lg p-4 hover:shadow-lg transition-all hover:border-brand-purple-300"
             >
-              <CircleStackIcon className="h-8 w-8 text-purple-600 mb-2" />
+              <CircleStackIcon className="h-8 w-8 text-brand-purple-600 mb-2" />
               <h3 className="font-semibold text-gray-900 mb-1">KAPS Framework</h3>
               <p className="text-sm text-gray-600">
                 AI adoption framework with four specialized portfolios
               </p>
-              <span className="text-purple-600 text-sm mt-2 inline-flex items-center group-hover:gap-2 transition-all">
+              <span className="text-brand-purple-600 text-sm mt-2 inline-flex items-center group-hover:gap-2 transition-all">
                 Learn more <ArrowRightIcon className="h-4 w-4 ml-1" />
               </span>
             </Link>
 
             <Link
               to="/core-technology/agentic-architecture"
-              className="group border rounded-lg p-4 hover:shadow-lg transition-all hover:border-green-300"
+              className="group border rounded-lg p-4 hover:shadow-lg transition-all hover:border-success"
             >
-              <CubeIcon className="h-8 w-8 text-green-600 mb-2" />
+              <CubeIcon className="h-8 w-8 text-success mb-2" />
               <h3 className="font-semibold text-gray-900 mb-1">Agentic Architecture</h3>
               <p className="text-sm text-gray-600">
                 Multi-agent orchestration architecture
               </p>
-              <span className="text-green-600 text-sm mt-2 inline-flex items-center group-hover:gap-2 transition-all">
+              <span className="text-success text-sm mt-2 inline-flex items-center group-hover:gap-2 transition-all">
                 Learn more <ArrowRightIcon className="h-4 w-4 ml-1" />
               </span>
             </Link>
@@ -457,7 +457,7 @@ const CoreTechnologyOverview: React.FC = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">
+        <div className="bg-gradient-to-r from-secondary to-brand-purple-600 rounded-2xl p-8 text-white text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">
             Ready to See What's Possible?
           </h2>
@@ -468,7 +468,7 @@ const CoreTechnologyOverview: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/technical-debt"
-              className="inline-flex items-center justify-center px-8 py-3 text-lg font-semibold bg-white text-blue-600 rounded-xl hover:bg-gray-100 transition-all"
+              className="inline-flex items-center justify-center px-8 py-3 text-lg font-semibold bg-white text-secondary rounded-xl hover:bg-gray-100 transition-all"
             >
               Technical Debt Deep Dive
               <ArrowRightIcon className="ml-2 h-5 w-5" />

@@ -199,12 +199,12 @@ const DiscoveryAnalysis: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-secondary-light">
       {/* Header */}
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center">
-            <DocumentMagnifyingGlassIcon className="h-8 w-8 text-blue-600 mr-3" />
+            <DocumentMagnifyingGlassIcon className="h-8 w-8 text-secondary mr-3" />
             <div>
               <h1 className="text-2xl font-bold text-gray-900">Discovery & Analysis Engine</h1>
               <p className="text-sm text-gray-600 mt-1">AI-powered deep analysis of legacy systems</p>
@@ -224,7 +224,7 @@ const DiscoveryAnalysis: React.FC = () => {
                 <div key={index} className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center">
-                      <Icon className="h-8 w-8 text-blue-600 mr-3" />
+                      <Icon className="h-8 w-8 text-secondary mr-3" />
                       <h3 className="font-semibold text-gray-900">{agent.name}</h3>
                     </div>
                   </div>
@@ -246,7 +246,7 @@ const DiscoveryAnalysis: React.FC = () => {
                     <div className="grid grid-cols-3 gap-2">
                       {Object.entries(agent.metrics).map(([key, value]) => (
                         <div key={key} className="text-center">
-                          <p className="text-sm font-bold text-blue-600">{value}</p>
+                          <p className="text-sm font-bold text-secondary">{value}</p>
                           <p className="text-xs text-gray-600">{key}</p>
                         </div>
                       ))}
@@ -270,7 +270,7 @@ const DiscoveryAnalysis: React.FC = () => {
                   onClick={() => setActiveTab(key)}
                   className={`px-4 py-2 rounded-md font-medium transition-colors ${
                     activeTab === key
-                      ? 'bg-blue-600 text-white'
+                      ? 'bg-secondary text-white'
                       : 'text-gray-600 hover:text-gray-900'
                   }`}
                 >
@@ -280,7 +280,7 @@ const DiscoveryAnalysis: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-lg p-6">
+          <div className="bg-gradient-to-br from-gray-50 to-secondary-light rounded-lg p-6">
             {analysisOutputs[activeTab as keyof typeof analysisOutputs].sections.map((section, idx) => (
               <div key={idx} className="mb-6 last:mb-0">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">{section.name}</h3>
@@ -295,7 +295,7 @@ const DiscoveryAnalysis: React.FC = () => {
                         </div>
                         <div className="w-full bg-gray-200 rounded-full h-2">
                           <div 
-                            className="bg-blue-600 h-2 rounded-full"
+                            className="bg-secondary h-2 rounded-full"
                             style={{ width: `${item.percentage}%` }}
                           ></div>
                         </div>
@@ -337,7 +337,7 @@ const DiscoveryAnalysis: React.FC = () => {
                         </div>
                         <div className="flex items-center">
                           {item.count && (
-                            <span className="text-sm font-semibold text-blue-600 mr-2">{item.count}</span>
+                            <span className="text-sm font-semibold text-secondary mr-2">{item.count}</span>
                           )}
                           {item.critical !== undefined && item.critical && (
                             <span className="text-xs bg-red-100 text-red-700 px-2 py-1 rounded">Critical</span>
@@ -390,7 +390,7 @@ const DiscoveryAnalysis: React.FC = () => {
                           <>
                             <div className="flex items-center justify-between mb-2">
                               <span className="text-sm font-medium text-gray-700">{item.factor}</span>
-                              <span className="text-sm font-semibold text-blue-600">{item.complexity}%</span>
+                              <span className="text-sm font-semibold text-secondary">{item.complexity}%</span>
                             </div>
                             <div className="w-full bg-gray-200 rounded-full h-2 mb-2">
                               <div 
@@ -422,10 +422,10 @@ const DiscoveryAnalysis: React.FC = () => {
             <div className="relative grid grid-cols-5 gap-4">
               {discoveryProcess.map((step, index) => (
                 <div key={index} className="relative">
-                  <div className="absolute left-1/2 -translate-x-1/2 -top-2 w-4 h-4 bg-blue-600 rounded-full ring-4 ring-white"></div>
+                  <div className="absolute left-1/2 -translate-x-1/2 -top-2 w-4 h-4 bg-secondary rounded-full ring-4 ring-white"></div>
                   <div className="mt-8 bg-gray-50 rounded-lg p-4">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-xs font-semibold text-blue-600">Step {step.step}</span>
+                      <span className="text-xs font-semibold text-secondary">Step {step.step}</span>
                       <ClockIcon className="h-4 w-4 text-gray-400" />
                     </div>
                     <h3 className="font-semibold text-gray-900 text-sm mb-1">{step.name}</h3>

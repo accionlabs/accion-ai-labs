@@ -25,7 +25,7 @@ const integrationPointsConfig: TopicConfig = {
 
           "content": {
             "title": "Integration Points",
-            "titleGradient": "from-cyan-600 to-blue-600",
+            "titleGradient": "from-info to-secondary",
             "description": "How Breeze.AI integrates seamlessly with existing development tools, infrastructure, and organizational processes through well-defined integration patterns and APIs.",
             "alignment": "center",
             "variant": "header"
@@ -77,8 +77,8 @@ const integrationPointsConfig: TopicConfig = {
               {
                 "id": "version-control",
                 "title": "Version Control Systems",
-                "backgroundColor": "bg-green-50",
-                "borderColor": "border-green-200",
+                "backgroundColor": "bg-success-50",
+                "borderColor": "border-success-200",
                 "items": [
                   "🔧 Git: Hooks & actions",
                   "📱 GitHub: Actions & apps",
@@ -89,8 +89,8 @@ const integrationPointsConfig: TopicConfig = {
               {
                 "id": "cicd-pipelines",
                 "title": "CI/CD Pipelines",
-                "backgroundColor": "bg-blue-50",
-                "borderColor": "border-blue-200",
+                "backgroundColor": "bg-brand-blue-50",
+                "borderColor": "border-secondary-200",
                 "items": [
                   "🏗️ Jenkins: Plugin ecosystem",
                   "☁️ Azure DevOps: Extension available",
@@ -118,32 +118,32 @@ const integrationPointsConfig: TopicConfig = {
                 "number": 1,
                 "title": "Developer Action",
                 "description": "Developer commits code, updates requirements, or triggers integration event",
-                "color": "bg-green-500",
-                "backgroundColor": "bg-green-50"
+                "color": "bg-success-500",
+                "backgroundColor": "bg-success-50"
               },
               {
                 "id": "ai-processing",
                 "number": 2,
                 "title": "AI Processing",
                 "description": "Breeze.AI analyzes context, validates semantics, and determines impact",
-                "color": "bg-blue-500",
-                "backgroundColor": "bg-blue-50"
+                "color": "bg-brand-blue-500",
+                "backgroundColor": "bg-brand-blue-50"
               },
               {
                 "id": "tool-integration",
                 "number": 3,
                 "title": "Tool Integration",
                 "description": "Automated API calls and webhook notifications to integrated tools",
-                "color": "bg-purple-500",
-                "backgroundColor": "bg-purple-50"
+                "color": "bg-brand-purple-500",
+                "backgroundColor": "bg-brand-purple-50"
               },
               {
                 "id": "quality-validation",
                 "number": 4,
                 "title": "Quality Validation",
                 "description": "Security scanning, compliance checks, and quality gate validation",
-                "color": "bg-red-500",
-                "backgroundColor": "bg-red-50"
+                "color": "bg-error-500",
+                "backgroundColor": "bg-error-50"
               }
             ],
             "variant": "process-flow",
@@ -171,8 +171,8 @@ const integrationPointsConfig: TopicConfig = {
               {
                 "id": "git-capabilities",
                 "title": "Git Integration Features",
-                "backgroundColor": "bg-green-50",
-                "borderColor": "border-green-200",
+                "backgroundColor": "bg-success-50",
+                "borderColor": "border-success-200",
                 "items": [
                   "Semantic commit validation",
                   "Automatic pull request analysis",
@@ -183,8 +183,8 @@ const integrationPointsConfig: TopicConfig = {
               {
                 "id": "cicd-capabilities",
                 "title": "CI/CD Integration Features",
-                "backgroundColor": "bg-blue-50",
-                "borderColor": "border-blue-200",
+                "backgroundColor": "bg-brand-blue-50",
+                "borderColor": "border-secondary-200",
                 "items": [
                   "Semantic test generation",
                   "Quality gate integration",
@@ -210,8 +210,8 @@ const integrationPointsConfig: TopicConfig = {
               {
                 "id": "supported-frameworks",
                 "title": "Supported Testing Frameworks",
-                "backgroundColor": "bg-orange-50",
-                "borderColor": "border-orange-200",
+                "backgroundColor": "bg-warning-50",
+                "borderColor": "border-warning-200",
                 "items": [
                   "🧪 Jest: Unit & integration tests",
                   "🌲 Cypress: E2E automation",
@@ -222,8 +222,8 @@ const integrationPointsConfig: TopicConfig = {
               {
                 "id": "testing-capabilities",
                 "title": "Testing Enhancement Capabilities",
-                "backgroundColor": "bg-purple-50",
-                "borderColor": "border-purple-200",
+                "backgroundColor": "bg-brand-purple-50",
+                "borderColor": "border-brand-purple-200",
                 "items": [
                   "BDD test case generation from specifications",
                   "Comprehensive coverage analysis and optimization",
@@ -249,8 +249,8 @@ const integrationPointsConfig: TopicConfig = {
               {
                 "id": "issue-tracking",
                 "title": "Issue Tracking",
-                "backgroundColor": "bg-red-50",
-                "borderColor": "border-red-200",
+                "backgroundColor": "bg-error-50",
+                "borderColor": "border-error-200",
                 "items": [
                   "📋 Jira: Native integration with bidirectional sync",
                   "📐 Linear: API-based requirements synchronization",
@@ -260,8 +260,8 @@ const integrationPointsConfig: TopicConfig = {
               {
                 "id": "documentation-platforms",
                 "title": "Documentation Platforms",
-                "backgroundColor": "bg-indigo-50",
-                "borderColor": "border-indigo-200",
+                "backgroundColor": "bg-brand-indigo-50",
+                "borderColor": "border-brand-indigo-200",
                 "items": [
                   "📖 Confluence: Automatic documentation generation",
                   "📝 Notion: Semantic content synchronization",
@@ -271,8 +271,8 @@ const integrationPointsConfig: TopicConfig = {
               {
                 "id": "communication-tools",
                 "title": "Communication Tools",
-                "backgroundColor": "bg-teal-50",
-                "borderColor": "border-teal-200",
+                "backgroundColor": "bg-info-50",
+                "borderColor": "border-info-200",
                 "items": [
                   "💬 Slack: Progress notifications and alerts",
                   "👔 Microsoft Teams: Workflow integration and updates",
@@ -296,8 +296,8 @@ const integrationPointsConfig: TopicConfig = {
               {
                 "id": "issue-tracking-features",
                 "title": "Issue Tracking Features",
-                "backgroundColor": "bg-red-50",
-                "borderColor": "border-red-200",
+                "backgroundColor": "bg-error-50",
+                "borderColor": "border-error-200",
                 "items": [
                   "Automatic story point estimation",
                   "Requirements completeness validation",
@@ -307,8 +307,8 @@ const integrationPointsConfig: TopicConfig = {
               {
                 "id": "documentation-features",
                 "title": "Documentation Features",
-                "backgroundColor": "bg-indigo-50",
-                "borderColor": "border-indigo-200",
+                "backgroundColor": "bg-brand-indigo-50",
+                "borderColor": "border-brand-indigo-200",
                 "items": [
                   "Auto-generated technical specifications",
                   "Requirements traceability matrices",
@@ -318,8 +318,8 @@ const integrationPointsConfig: TopicConfig = {
               {
                 "id": "communication-features",
                 "title": "Communication Features",
-                "backgroundColor": "bg-teal-50",
-                "borderColor": "border-teal-200",
+                "backgroundColor": "bg-info-50",
+                "borderColor": "border-info-200",
                 "items": [
                   "Quality gate notifications",
                   "Approval request routing",
@@ -344,8 +344,8 @@ const integrationPointsConfig: TopicConfig = {
               {
                 "id": "cloud-platforms",
                 "title": "Cloud Platforms",
-                "backgroundColor": "bg-yellow-50",
-                "borderColor": "border-yellow-200",
+                "backgroundColor": "bg-warning-50",
+                "borderColor": "border-warning-200",
                 "items": [
                   "AWS: Full service integration (EC2, Lambda, RDS, S3)",
                   "Azure: Native DevOps integration (App Service, Functions, SQL)",
@@ -355,8 +355,8 @@ const integrationPointsConfig: TopicConfig = {
               {
                 "id": "container-orchestration",
                 "title": "Container Orchestration",
-                "backgroundColor": "bg-purple-50",
-                "borderColor": "border-purple-200",
+                "backgroundColor": "bg-brand-purple-50",
+                "borderColor": "border-brand-purple-200",
                 "items": [
                   "Kubernetes: Manifest generation (Helm charts, operators)",
                   "Docker: Containerization automation (Multi-stage builds)",
@@ -381,8 +381,8 @@ const integrationPointsConfig: TopicConfig = {
               {
                 "id": "monitoring-observability",
                 "title": "Monitoring & Observability",
-                "backgroundColor": "bg-green-50",
-                "borderColor": "border-green-200",
+                "backgroundColor": "bg-success-50",
+                "borderColor": "border-success-200",
                 "items": [
                   "📊 Datadog: APM integration (Metrics, traces, logs)",
                   "🔍 New Relic: Performance monitoring (Real user monitoring)",
@@ -393,8 +393,8 @@ const integrationPointsConfig: TopicConfig = {
               {
                 "id": "database-systems",
                 "title": "Database Systems",
-                "backgroundColor": "bg-blue-50",
-                "borderColor": "border-blue-200",
+                "backgroundColor": "bg-brand-blue-50",
+                "borderColor": "border-secondary-200",
                 "items": [
                   "🐘 PostgreSQL: Schema generation (Migration scripts)",
                   "🍃 MongoDB: Document modeling (Index optimization)",
@@ -420,8 +420,8 @@ const integrationPointsConfig: TopicConfig = {
               {
                 "id": "security-scanning",
                 "title": "Security Scanning",
-                "backgroundColor": "bg-red-50",
-                "borderColor": "border-red-200",
+                "backgroundColor": "bg-error-50",
+                "borderColor": "border-error-200",
                 "items": [
                   "🛡️ Snyk: Vulnerability scanning",
                   "🔍 SonarQube: Code quality & security",
@@ -432,8 +432,8 @@ const integrationPointsConfig: TopicConfig = {
               {
                 "id": "identity-access",
                 "title": "Identity & Access",
-                "backgroundColor": "bg-orange-50",
-                "borderColor": "border-orange-200",
+                "backgroundColor": "bg-warning-50",
+                "borderColor": "border-warning-200",
                 "items": [
                   "🔐 Auth0: Authentication integration",
                   "👤 Okta: SSO & identity management",
@@ -444,8 +444,8 @@ const integrationPointsConfig: TopicConfig = {
               {
                 "id": "compliance-frameworks",
                 "title": "Compliance Frameworks",
-                "backgroundColor": "bg-indigo-50",
-                "borderColor": "border-indigo-200",
+                "backgroundColor": "bg-brand-indigo-50",
+                "borderColor": "border-brand-indigo-200",
                 "items": [
                   "📋 SOC 2: Control implementation",
                   "🔒 GDPR: Privacy by design",
@@ -467,7 +467,7 @@ const integrationPointsConfig: TopicConfig = {
             "title": "Explore Scalability & Performance",
             "description": "These integrations are designed to scale with your organization, supporting enterprise workloads while maintaining performance and reliability.",
             "buttonText": "Explore Scalability & Performance",
-            "backgroundGradient": "from-cyan-600 to-blue-600",
+            "backgroundGradient": "from-info to-secondary",
             "variant": "cta",
             "items": [
               {

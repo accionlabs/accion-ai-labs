@@ -466,20 +466,21 @@ const menuItems: MenuItem[] = [
 
 const MainSidebar: React.FC = () => {
   const location = useLocation();
+  const pathname = location.pathname;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
   // Initialize expanded sections based on current path
   const getInitialExpandedSections = () => {
-    const expanded = new Set<string>(['live-examples']);
+    const expanded = new Set<string>();
     
-    // Auto-expand sections that contain the active path
+    // Auto-expand ONLY the section that contains the active path
     menuItems.forEach(item => {
       if (item.children) {
         const shouldExpand = item.children.some(child => {
-          if (child.path && location.pathname.startsWith(child.path)) return true;
+          if (child.path && pathname.startsWith(child.path)) return true;
           if (child.children) {
             return child.children.some(grandchild => 
-              grandchild.path && location.pathname.startsWith(grandchild.path)
+              grandchild.path && pathname.startsWith(grandchild.path)
             );
           }
           return false;
@@ -490,7 +491,7 @@ const MainSidebar: React.FC = () => {
           item.children.forEach(child => {
             if (child.children) {
               const shouldExpandChild = child.children.some(grandchild =>
-                grandchild.path && location.pathname.startsWith(grandchild.path)
+                grandchild.path && pathname.startsWith(grandchild.path)
               );
               if (shouldExpandChild) {
                 expanded.add(child.id);
@@ -508,16 +509,16 @@ const MainSidebar: React.FC = () => {
 
   // Update expanded sections when location changes
   useEffect(() => {
-    const expanded = new Set<string>(['live-examples']);
+    const expanded = new Set<string>();
     
-    // Auto-expand sections that contain the active path
+    // Auto-expand ONLY the section that contains the active path
     menuItems.forEach(item => {
       if (item.children) {
         const shouldExpand = item.children.some(child => {
-          if (child.path && location.pathname.startsWith(child.path)) return true;
+          if (child.path && pathname.startsWith(child.path)) return true;
           if (child.children) {
             return child.children.some(grandchild => 
-              grandchild.path && location.pathname.startsWith(grandchild.path)
+              grandchild.path && pathname.startsWith(grandchild.path)
             );
           }
           return false;
@@ -528,7 +529,7 @@ const MainSidebar: React.FC = () => {
           item.children.forEach(child => {
             if (child.children) {
               const shouldExpandChild = child.children.some(grandchild =>
-                grandchild.path && location.pathname.startsWith(grandchild.path)
+                grandchild.path && pathname.startsWith(grandchild.path)
               );
               if (shouldExpandChild) {
                 expanded.add(child.id);
@@ -540,27 +541,59 @@ const MainSidebar: React.FC = () => {
     });
     
     setExpandedSections(expanded);
-  }, [location.pathname]);
+  }, [pathname]);
 
   const toggleSection = (sectionId: string) => {
-    const newExpanded = new Set(expandedSections);
-    if (newExpanded.has(sectionId)) {
-      newExpanded.delete(sectionId);
+    const newExpanded = new Set<string>();
+    
+    // Find if this is a top-level section
+    const isTopLevel = menuItems.some(item => item.id === sectionId);
+    
+    if (isTopLevel) {
+      // For top-level sections, collapse all others and toggle this one
+      if (!expandedSections.has(sectionId)) {
+        newExpanded.add(sectionId);
+      }
     } else {
-      newExpanded.add(sectionId);
+      // For nested sections, preserve parent and toggle child
+      // First, keep the parent section expanded
+      menuItems.forEach(item => {
+        if (item.children && item.children.some(child => child.id === sectionId)) {
+          newExpanded.add(item.id);
+        } else if (expandedSections.has(item.id) && !item.children?.some(child => expandedSections.has(child.id))) {
+          // Keep other top-level sections that don't have the toggled child
+          const hasTargetChild = item.children?.some(child => child.id === sectionId);
+          if (!hasTargetChild) {
+            // This is a different parent, close it
+          } else {
+            newExpanded.add(item.id);
+          }
+        }
+      });
+      
+      // Toggle the nested section
+      if (expandedSections.has(sectionId)) {
+        // Closing nested section
+      } else {
+        newExpanded.add(sectionId);
+      }
     }
+    
     setExpandedSections(newExpanded);
   };
 
   const isActive = (path?: string) => {
     if (!path) return false;
-    // Exact match for specific paths
-    return location.pathname === path;
+    // Normalize paths by removing trailing slashes for comparison
+    const normalizedPathname = pathname.replace(/\/$/, '');
+    const normalizedPath = path.replace(/\/$/, '');
+    // Check for exact match
+    return normalizedPathname === normalizedPath;
   };
 
   const isParentActive = (item: MenuItem) => {
     // Check if current path matches the parent path
-    if (item.path && location.pathname.startsWith(item.path)) {
+    if (item.path && pathname.startsWith(item.path)) {
       return true;
     }
     // Check if any child or grandchild is active
@@ -599,7 +632,7 @@ const MainSidebar: React.FC = () => {
             title={undefined}
           >
             <div className="flex items-center">
-              <Icon className={`h-5 w-5 mr-3 ${hasActiveChild ? 'text-blue-600' : 'text-gray-500'}`} />
+              <Icon className={`h-5 w-5 mr-3 ${hasActiveChild ? 'text-secondary' : 'text-gray-500'}`} />
               <span className="text-sm font-medium">{item.label}</span>
             </div>
             {!isMobile && (
@@ -628,12 +661,12 @@ const MainSidebar: React.FC = () => {
           flex items-center px-3 py-2 rounded-lg mb-1 transition-colors relative group
           ${marginClass}
           ${isActive(item.path) 
-            ? 'bg-blue-50 text-blue-600 border-l-4 border-blue-600' 
+            ? 'bg-brand-blue-50 text-secondary border-l-4 border-secondary' 
             : 'text-gray-700 hover:bg-gray-100'
           }
         `}
       >
-        <Icon className={`h-5 w-5 mr-3 ${isActive(item.path) ? 'text-blue-600' : 'text-gray-500'}`} />
+        <Icon className={`h-5 w-5 mr-3 ${isActive(item.path) ? 'text-secondary' : 'text-gray-500'}`} />
         <span className="text-sm font-medium">{item.label}</span>
       </Link>
     );
@@ -670,7 +703,7 @@ const MainSidebar: React.FC = () => {
           {/* Always show full header on mobile */}
           <div className="flex items-center md:hidden">
             <Link to="/" className="flex items-center">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg mr-2 flex items-center justify-center">
+              <div className="w-8 h-8 bg-innovation-gradient rounded-lg mr-2 flex items-center justify-center">
                 <span className="text-white font-bold text-lg">A</span>
               </div>
               <span className="font-bold text-gray-900">Accion AI Labs</span>
@@ -680,7 +713,7 @@ const MainSidebar: React.FC = () => {
           {/* Desktop header */}
           <div className="hidden md:flex md:items-center md:justify-between md:w-full">
             <Link to="/" className="flex items-center">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg mr-2 flex items-center justify-center">
+              <div className="w-8 h-8 bg-innovation-gradient rounded-lg mr-2 flex items-center justify-center">
                 <span className="text-white font-bold text-lg">A</span>
               </div>
               <span className="font-bold text-gray-900">Accion AI Labs</span>

@@ -18,7 +18,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({ title = "Breeze AI - UI Rationali
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <Link to="/" className="flex items-center space-x-3">
-              <div className="h-8 w-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <div className="h-8 w-8 bg-innovation-gradient rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">B</span>
               </div>
               <h1 className="text-xl font-bold text-gray-900">{title}</h1>
@@ -31,7 +31,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({ title = "Breeze AI - UI Rationali
               to="/dashboard" 
               className={`transition-colors text-sm font-medium ${
                 isActive('/dashboard') 
-                  ? 'text-blue-600 border-b-2 border-blue-600 pb-1' 
+                  ? 'text-secondary border-b-2 border-secondary pb-1' 
                   : 'text-gray-600 hover:text-gray-900'
               }`}
             >
@@ -41,7 +41,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({ title = "Breeze AI - UI Rationali
               to="/graph-explorer" 
               className={`transition-colors text-sm font-medium ${
                 isActive('/graph-explorer') 
-                  ? 'text-blue-600 border-b-2 border-blue-600 pb-1' 
+                  ? 'text-secondary border-b-2 border-secondary pb-1' 
                   : 'text-gray-600 hover:text-gray-900'
               }`}
             >
@@ -51,7 +51,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({ title = "Breeze AI - UI Rationali
               to="/component-comparator" 
               className={`transition-colors text-sm font-medium ${
                 isActive('/component-comparator') 
-                  ? 'text-blue-600 border-b-2 border-blue-600 pb-1' 
+                  ? 'text-secondary border-b-2 border-secondary pb-1' 
                   : 'text-gray-600 hover:text-gray-900'
               }`}
             >
@@ -61,7 +61,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({ title = "Breeze AI - UI Rationali
               to="/rationalization-roadmap" 
               className={`transition-colors text-sm font-medium ${
                 isActive('/rationalization-roadmap') 
-                  ? 'text-blue-600 border-b-2 border-blue-600 pb-1' 
+                  ? 'text-secondary border-b-2 border-secondary pb-1' 
                   : 'text-gray-600 hover:text-gray-900'
               }`}
             >

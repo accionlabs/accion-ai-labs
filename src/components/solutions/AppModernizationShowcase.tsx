@@ -173,7 +173,7 @@ const AppModernizationShowcase: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
-              <ArrowPathIcon className="h-8 w-8 text-blue-600 mr-3" />
+              <ArrowPathIcon className="h-8 w-8 text-secondary mr-3" />
               <div>
                 <h1 className="text-2xl font-bold text-gray-900">ASIMOV: AI-Driven Application Modernization</h1>
                 <p className="text-sm text-gray-600 mt-1">Autonomous System for Intelligent Migration and Optimization</p>
@@ -181,7 +181,7 @@ const AppModernizationShowcase: React.FC = () => {
             </div>
             <Link
               to="/solutions/app-modernization"
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center"
+              className="px-4 py-2 bg-secondary text-white rounded-lg hover:bg-brand-blue-700 transition-colors flex items-center"
             >
               View Deep Dive
               <ArrowRightIcon className="h-4 w-4 ml-2" />
@@ -238,7 +238,7 @@ const AppModernizationShowcase: React.FC = () => {
                         <h4 className="font-semibold text-gray-900">{capability.name}</h4>
                         <p className="text-sm text-gray-600 mt-1">{capability.description}</p>
                       </div>
-                      <span className="text-xs font-semibold bg-blue-100 text-blue-700 px-2 py-1 rounded">
+                      <span className="text-xs font-semibold bg-secondary/10 text-secondary px-2 py-1 rounded">
                         {capability.metrics}
                       </span>
                     </div>
@@ -257,13 +257,13 @@ const AppModernizationShowcase: React.FC = () => {
               const Icon = approach.icon;
               return (
                 <div key={index} className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                  <Icon className="h-10 w-10 text-blue-600 mb-4" />
+                  <Icon className="h-10 w-10 text-secondary mb-4" />
                   <h3 className="font-semibold text-gray-900 mb-2">{approach.name}</h3>
                   <p className="text-sm text-gray-600 mb-4">{approach.description}</p>
                   <ul className="space-y-2">
                     {approach.features.map((feature, idx) => (
                       <li key={idx} className="text-xs text-gray-600 flex items-start">
-                        <span className="text-blue-600 mr-2">•</span>
+                        <span className="text-secondary mr-2">•</span>
                         {feature}
                       </li>
                     ))}
@@ -285,7 +285,7 @@ const AppModernizationShowcase: React.FC = () => {
                   onClick={() => setActiveCase(index)}
                   className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                     activeCase === index
-                      ? 'bg-blue-600 text-white'
+                      ? 'bg-secondary text-white'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   }`}
                 >
@@ -295,7 +295,7 @@ const AppModernizationShowcase: React.FC = () => {
             </div>
           </div>
           
-          <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-lg p-6">
+          <div className="bg-gradient-to-br from-gray-50 to-secondary/10 rounded-lg p-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
@@ -317,7 +317,7 @@ const AppModernizationShowcase: React.FC = () => {
                   <h4 className="font-semibold text-gray-900 mb-2">Agents Deployed</h4>
                   <div className="flex flex-wrap gap-2">
                     {caseStudies[activeCase].agents.map((agent, idx) => (
-                      <span key={idx} className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">
+                      <span key={idx} className="text-xs bg-secondary/10 text-secondary px-2 py-1 rounded">
                         {agent}
                       </span>
                     ))}
@@ -348,7 +348,7 @@ const AppModernizationShowcase: React.FC = () => {
             <div className="space-y-8">
               {migrationProcess.map((phase, index) => (
                 <div key={index} className="relative flex items-start">
-                  <div className="absolute left-8 w-4 h-4 bg-blue-600 rounded-full -translate-x-1/2 ring-4 ring-white"></div>
+                  <div className="absolute left-8 w-4 h-4 bg-secondary rounded-full -translate-x-1/2 ring-4 ring-white"></div>
                   <div className="ml-20 flex-1">
                     <div className="bg-gray-50 rounded-lg p-6">
                       <div className="flex items-start justify-between mb-4">
@@ -356,7 +356,7 @@ const AppModernizationShowcase: React.FC = () => {
                           <h3 className="text-lg font-semibold text-gray-900">{phase.phase}</h3>
                           <p className="text-sm text-gray-600">{phase.duration}</p>
                         </div>
-                        <BoltIcon className="h-6 w-6 text-blue-600" />
+                        <BoltIcon className="h-6 w-6 text-secondary" />
                       </div>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
@@ -364,7 +364,7 @@ const AppModernizationShowcase: React.FC = () => {
                           <div className="space-y-1">
                             {phase.agents.map((agent, idx) => (
                               <div key={idx} className="text-xs text-gray-600 flex items-center">
-                                <CpuChipIcon className="h-3 w-3 mr-2 text-blue-500" />
+                                <CpuChipIcon className="h-3 w-3 mr-2 text-secondary" />
                                 {agent}
                               </div>
                             ))}
@@ -395,9 +395,9 @@ const AppModernizationShowcase: React.FC = () => {
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Proven Technology Transformations</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {asimovCapabilities.technologies.map((tech, index) => (
-              <div key={index} className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg p-4 text-center">
+              <div key={index} className="bg-gradient-to-br from-secondary/10 to-brand-purple-100 rounded-lg p-4 text-center">
                 <p className="text-sm font-semibold text-gray-900 mb-2">{tech.name}</p>
-                <p className="text-2xl font-bold text-blue-600">{tech.success}</p>
+                <p className="text-2xl font-bold text-secondary">{tech.success}</p>
                 <p className="text-xs text-gray-600">Success Rate</p>
               </div>
             ))}

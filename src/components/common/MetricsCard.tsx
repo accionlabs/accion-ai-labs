@@ -6,7 +6,7 @@ interface MetricsCardProps {
   description?: string;
   trend?: 'up' | 'down' | 'neutral';
   icon?: React.ReactNode;
-  color?: 'blue' | 'green' | 'red' | 'purple' | 'orange' | 'gray';
+  color?: 'blue' | 'green' | 'red' | 'purple' | 'orange' | 'gray' | 'secondary' | 'success' | 'warning' | 'brand-purple';
   onClick?: () => void;
 }
 
@@ -16,32 +16,36 @@ const MetricsCard: React.FC<MetricsCardProps> = ({
   description,
   trend,
   icon,
-  color = 'blue',
+  color = 'secondary',
   onClick
 }) => {
   const getColorClasses = (color: string) => {
     const colors = {
-      blue: 'text-blue-600 bg-blue-100',
-      green: 'text-green-600 bg-green-100',
-      red: 'text-red-600 bg-red-100',
-      purple: 'text-purple-600 bg-purple-100',
-      orange: 'text-orange-600 bg-orange-100',
+      blue: 'text-brand-blue-600 bg-brand-blue-100',
+      secondary: 'text-secondary bg-secondary/10',
+      green: 'text-success bg-success/10',
+      success: 'text-success bg-success/10',
+      red: 'text-error bg-error/10',
+      purple: 'text-brand-purple-600 bg-brand-purple-100',
+      'brand-purple': 'text-brand-purple-600 bg-brand-purple-100',
+      orange: 'text-warning bg-warning/10',
+      warning: 'text-warning bg-warning/10',
       gray: 'text-gray-600 bg-gray-100'
     };
-    return colors[color as keyof typeof colors] || colors.blue;
+    return colors[color as keyof typeof colors] || colors.secondary;
   };
 
   const getTrendIcon = (trend?: string) => {
     switch (trend) {
       case 'up':
         return (
-          <svg className="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17l9.2-9.2M17 17V7H7" />
           </svg>
         );
       case 'down':
         return (
-          <svg className="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4 text-error" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 7l-9.2 9.2M7 7v10h10" />
           </svg>
         );

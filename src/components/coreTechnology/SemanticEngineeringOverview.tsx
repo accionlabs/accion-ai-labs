@@ -178,7 +178,7 @@ const SemanticEngineeringOverview: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Page Header */}
         <div className="mb-8">
-          <div className="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold mb-4">
+          <div className="inline-block px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs font-semibold mb-4">
             Core Technology
           </div>
           <h1 className="text-4xl font-bold text-gray-900">Semantic Engineering Platform</h1>
@@ -382,46 +382,46 @@ const SemanticEngineeringOverview: React.FC = () => {
           </div>
           
           {/* Our Semantic Engineering Approach */}
-          <div className="mt-6 bg-blue-50 rounded-lg p-6 border border-blue-200">
-            <h3 className="text-lg font-semibold text-blue-900 mb-3">
+          <div className="mt-6 bg-secondary/10 rounded-lg p-6 border border-secondary">
+            <h3 className="text-lg font-semibold text-secondary mb-3">
               Our Semantic Engineering Platform
             </h3>
-            <p className="text-blue-800 mb-4">
+            <p className="text-secondary mb-4">
               At Accion Labs, we don't rely on a single methodology. Our Semantic Engineering platform intelligently 
               combines <strong>all these approaches</strong> based on the specific requirements of each application:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="flex items-start">
-                <span className="text-blue-600 mr-2 mt-1">✓</span>
+                <span className="text-secondary mr-2 mt-1">✓</span>
                 <div>
-                  <strong className="text-blue-900">Prompt Engineering:</strong>
-                  <span className="text-blue-700 text-sm"> For agent interactions and quick queries</span>
+                  <strong className="text-secondary">Prompt Engineering:</strong>
+                  <span className="text-secondary text-sm"> For agent interactions and quick queries</span>
                 </div>
               </div>
               <div className="flex items-start">
-                <span className="text-blue-600 mr-2 mt-1">✓</span>
+                <span className="text-secondary mr-2 mt-1">✓</span>
                 <div>
-                  <strong className="text-blue-900">Fine-tuning:</strong>
-                  <span className="text-blue-700 text-sm"> For domain-specific model optimization</span>
+                  <strong className="text-secondary">Fine-tuning:</strong>
+                  <span className="text-secondary text-sm"> For domain-specific model optimization</span>
                 </div>
               </div>
               <div className="flex items-start">
-                <span className="text-blue-600 mr-2 mt-1">✓</span>
+                <span className="text-secondary mr-2 mt-1">✓</span>
                 <div>
-                  <strong className="text-blue-900">RAG:</strong>
-                  <span className="text-blue-700 text-sm"> For dynamic knowledge retrieval</span>
+                  <strong className="text-secondary">RAG:</strong>
+                  <span className="text-secondary text-sm"> For dynamic knowledge retrieval</span>
                 </div>
               </div>
               <div className="flex items-start">
-                <span className="text-blue-600 mr-2 mt-1">✓</span>
+                <span className="text-secondary mr-2 mt-1">✓</span>
                 <div>
-                  <strong className="text-blue-900">Graph RAG:</strong>
-                  <span className="text-blue-700 text-sm"> For complex relationship understanding</span>
+                  <strong className="text-secondary">Graph RAG:</strong>
+                  <span className="text-secondary text-sm"> For complex relationship understanding</span>
                 </div>
               </div>
             </div>
-            <div className="mt-4 pt-4 border-t border-blue-200">
-              <p className="text-sm text-blue-700 italic">
+            <div className="mt-4 pt-4 border-t border-secondary">
+              <p className="text-sm text-secondary italic">
                 The key is knowing when and how to apply each technique for optimal results.
               </p>
             </div>
@@ -429,7 +429,7 @@ const SemanticEngineeringOverview: React.FC = () => {
         </div>
 
         {/* Our Journey */}
-        <div ref={timelineRef} className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl shadow-sm p-8 mb-8 text-white">
+        <div ref={timelineRef} className="bg-innovation-gradient rounded-xl shadow-sm p-8 mb-8 text-white">
           <h2 className="text-2xl font-semibold mb-6">Our Semantic Engineering Journey</h2>
           
           <div className="relative">
@@ -484,13 +484,13 @@ const SemanticEngineeringOverview: React.FC = () => {
               <Link
                 key={index}
                 to={component.path}
-                className="group bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-lg transition-all hover:border-blue-300"
+                className="group bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-lg transition-all hover:border-secondary"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className={`text-${component.color}-600`}>
                     {component.icon}
                   </div>
-                  <ChevronRightIcon className="h-5 w-5 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all" />
+                  <ChevronRightIcon className="h-5 w-5 text-gray-400 group-hover:text-secondary group-hover:translate-x-1 transition-all" />
                 </div>
                 
                 <h3 className="text-lg font-semibold text-gray-900 mb-1">{component.title}</h3>
@@ -514,7 +514,7 @@ const SemanticEngineeringOverview: React.FC = () => {
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
               to="/core-technology/kaps-framework"
-              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+              className="inline-flex items-center px-6 py-3 bg-secondary text-white rounded-lg font-semibold hover:bg-brand-blue-700 transition-colors"
             >
               Explore KAPS Framework
               <ArrowRightIcon className="ml-2 h-5 w-5" />

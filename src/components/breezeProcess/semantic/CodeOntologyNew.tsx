@@ -9,7 +9,7 @@ const CodeOntologyNew: React.FC<CodeOntologyNewProps> = () => {
   const technologyStacks = [
     {
       category: "Frontend",
-      color: "bg-blue-50 border-blue-200",
+      color: "bg-brand-blue-50 border-secondary",
       stacks: [
         {
           name: "React/TypeScript",
@@ -27,7 +27,7 @@ const CodeOntologyNew: React.FC<CodeOntologyNewProps> = () => {
     },
     {
       category: "Backend",
-      color: "bg-green-50 border-green-200",
+      color: "bg-success-50 border-success",
       stacks: [
         {
           name: "Node.js/Express",
@@ -45,7 +45,7 @@ const CodeOntologyNew: React.FC<CodeOntologyNewProps> = () => {
     },
     {
       category: "Data",
-      color: "bg-purple-50 border-purple-200", 
+      color: "bg-brand-purple-50 border-brand-purple-600", 
       stacks: [
         {
           name: "SQL Database",
@@ -68,7 +68,7 @@ const CodeOntologyNew: React.FC<CodeOntologyNewProps> = () => {
       {/* Header */}
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-gray-800 mb-4">
-          <span className="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-warning to-error bg-clip-text text-transparent">
             Code Ontology
           </span>
         </h1>
@@ -86,12 +86,12 @@ const CodeOntologyNew: React.FC<CodeOntologyNewProps> = () => {
         
         <div className="space-y-6">
           {/* Frontend Code Layers */}
-          <div className="p-6 bg-blue-50 rounded-xl border-2 border-blue-200">
+          <div className="p-6 bg-brand-blue-50 rounded-xl border-2 border-secondary">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
+              <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center">
                 <span className="text-white font-bold">F</span>
               </div>
-              <h4 className="text-xl font-bold text-blue-800">Frontend Code Layers</h4>
+              <h4 className="text-xl font-bold text-secondary">Frontend Code Layers</h4>
             </div>
             <div className="space-y-3">
               {[
@@ -102,12 +102,12 @@ const CodeOntologyNew: React.FC<CodeOntologyNewProps> = () => {
                 { layer: "Properties/State", description: "UI data units", example: "isLoading, userInput, selectedItems[]" },
                 { layer: "Configurations", description: "Frontend settings", example: "webpack.config, environment.json, routing.config" }
               ].map((tier, index) => (
-                <div key={index} className="flex items-center gap-3 p-3 bg-white rounded-lg border border-blue-200">
-                  <div className="w-6 h-6 bg-blue-400 text-white rounded-full flex items-center justify-center text-xs font-bold">
+                <div key={index} className="flex items-center gap-3 p-3 bg-white rounded-lg border border-secondary">
+                  <div className="w-6 h-6 bg-brand-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">
                     {index + 1}
                   </div>
                   <div className="flex-1">
-                    <div className="font-semibold text-blue-800">{tier.layer}</div>
+                    <div className="font-semibold text-secondary">{tier.layer}</div>
                     <div className="text-sm text-gray-600">{tier.description}</div>
                     <div className="text-xs text-gray-500 italic">{tier.example}</div>
                   </div>
@@ -117,12 +117,12 @@ const CodeOntologyNew: React.FC<CodeOntologyNewProps> = () => {
           </div>
 
           {/* Backend Code Layers */}
-          <div className="p-6 bg-green-50 rounded-xl border-2 border-green-200">
+          <div className="p-6 bg-success-50 rounded-xl border-2 border-success">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
+              <div className="w-12 h-12 bg-success rounded-full flex items-center justify-center">
                 <span className="text-white font-bold">B</span>
               </div>
-              <h4 className="text-xl font-bold text-green-800">Backend Code Layers</h4>
+              <h4 className="text-xl font-bold text-success-800">Backend Code Layers</h4>
             </div>
             <div className="space-y-3">
               {[
@@ -133,12 +133,12 @@ const CodeOntologyNew: React.FC<CodeOntologyNewProps> = () => {
                 { layer: "Properties/Fields", description: "Data units", example: "productId, orderTotal, apiEndpoints" },
                 { layer: "Configurations", description: "Backend settings", example: "database.config, service.yaml, security.properties" }
               ].map((tier, index) => (
-                <div key={index} className="flex items-center gap-3 p-3 bg-white rounded-lg border border-green-200">
-                  <div className="w-6 h-6 bg-green-400 text-white rounded-full flex items-center justify-center text-xs font-bold">
+                <div key={index} className="flex items-center gap-3 p-3 bg-white rounded-lg border border-success">
+                  <div className="w-6 h-6 bg-success-600 text-white rounded-full flex items-center justify-center text-xs font-bold">
                     {index + 1}
                   </div>
                   <div className="flex-1">
-                    <div className="font-semibold text-green-800">{tier.layer}</div>
+                    <div className="font-semibold text-success-800">{tier.layer}</div>
                     <div className="text-sm text-gray-600">{tier.description}</div>
                     <div className="text-xs text-gray-500 italic">{tier.example}</div>
                   </div>
@@ -148,12 +148,12 @@ const CodeOntologyNew: React.FC<CodeOntologyNewProps> = () => {
           </div>
 
           {/* Data Code Layers */}
-          <div className="p-6 bg-purple-50 rounded-xl border-2 border-purple-200">
+          <div className="p-6 bg-brand-purple-50 rounded-xl border-2 border-brand-purple-600">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center">
+              <div className="w-12 h-12 bg-brand-purple-600 rounded-full flex items-center justify-center">
                 <span className="text-white font-bold">D</span>
               </div>
-              <h4 className="text-xl font-bold text-purple-800">Data Code Layers</h4>
+              <h4 className="text-xl font-bold text-brand-purple-800">Data Code Layers</h4>
             </div>
             <div className="space-y-3">
               {[
@@ -164,12 +164,12 @@ const CodeOntologyNew: React.FC<CodeOntologyNewProps> = () => {
                 { layer: "Properties/Schemas", description: "Data structure definitions", example: "productSchema, customerFields, analyticsMetrics" },
                 { layer: "Configurations", description: "Data settings", example: "pipeline.yaml, schema.json, database.properties" }
               ].map((tier, index) => (
-                <div key={index} className="flex items-center gap-3 p-3 bg-white rounded-lg border border-purple-200">
-                  <div className="w-6 h-6 bg-purple-400 text-white rounded-full flex items-center justify-center text-xs font-bold">
+                <div key={index} className="flex items-center gap-3 p-3 bg-white rounded-lg border border-brand-purple-600">
+                  <div className="w-6 h-6 bg-brand-purple-600 text-white rounded-full flex items-center justify-center text-xs font-bold">
                     {index + 1}
                   </div>
                   <div className="flex-1">
-                    <div className="font-semibold text-purple-800">{tier.layer}</div>
+                    <div className="font-semibold text-brand-purple-800">{tier.layer}</div>
                     <div className="text-sm text-gray-600">{tier.description}</div>
                     <div className="text-xs text-gray-500 italic">{tier.example}</div>
                   </div>
@@ -195,18 +195,18 @@ const CodeOntologyNew: React.FC<CodeOntologyNewProps> = () => {
                     <h5 className="text-lg font-bold text-gray-800 mb-4">{stack.name}</h5>
                     
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                      <div className="p-3 bg-orange-50 rounded border border-orange-200">
-                        <div className="font-semibold text-orange-800 mb-2">Applications</div>
+                      <div className="p-3 bg-warning-50 rounded border border-warning">
+                        <div className="font-semibold text-warning-800 mb-2">Applications</div>
                         <div className="text-sm text-gray-700">{stack.applications}</div>
                       </div>
                       
-                      <div className="p-3 bg-blue-50 rounded border border-blue-200">
-                        <div className="font-semibold text-blue-800 mb-2">Components/Classes</div>
+                      <div className="p-3 bg-brand-blue-50 rounded border border-secondary">
+                        <div className="font-semibold text-secondary mb-2">Components/Classes</div>
                         <div className="text-sm text-gray-700">{stack.components}</div>
                       </div>
                       
-                      <div className="p-3 bg-green-50 rounded border border-green-200">
-                        <div className="font-semibold text-green-800 mb-2">Functions/Methods</div>
+                      <div className="p-3 bg-success-50 rounded border border-success">
+                        <div className="font-semibold text-success-800 mb-2">Functions/Methods</div>
                         <div className="text-sm text-gray-700">{stack.functions}</div>
                       </div>
                     </div>
@@ -219,22 +219,22 @@ const CodeOntologyNew: React.FC<CodeOntologyNewProps> = () => {
       </div>
 
       {/* Code Ontology Benefits */}
-      <div className="bg-gradient-to-r from-orange-50 to-red-50 rounded-xl p-8 border-l-4 border-orange-500">
+      <div className="bg-gradient-to-r from-warning-50 to-error-50 rounded-xl p-8 border-l-4 border-warning">
         <h3 className="text-2xl font-bold text-gray-800 mb-6">Code Ontology Benefits</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <h4 className="font-bold text-lg text-gray-800 mb-3">Implementation Clarity</h4>
             <div className="space-y-2">
               <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
+                <div className="w-2 h-2 bg-warning rounded-full mt-2"></div>
                 <span className="text-gray-700">Clear technology-specific structures for each concern</span>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
+                <div className="w-2 h-2 bg-error rounded-full mt-2"></div>
                 <span className="text-gray-700">Consistent patterns across different technology stacks</span>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-pink-500 rounded-full mt-2"></div>
+                <div className="w-2 h-2 bg-brand-pink-600 rounded-full mt-2"></div>
                 <span className="text-gray-700">Standardized organization from applications to properties</span>
               </div>
             </div>
@@ -243,15 +243,15 @@ const CodeOntologyNew: React.FC<CodeOntologyNewProps> = () => {
             <h4 className="font-bold text-lg text-gray-800 mb-3">Development Benefits</h4>
             <div className="space-y-2">
               <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-indigo-500 rounded-full mt-2"></div>
+                <div className="w-2 h-2 bg-brand-indigo-600 rounded-full mt-2"></div>
                 <span className="text-gray-700">Faster onboarding with clear code structure</span>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                <div className="w-2 h-2 bg-brand-purple-600 rounded-full mt-2"></div>
                 <span className="text-gray-700">Improved maintainability through consistent patterns</span>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-teal-500 rounded-full mt-2"></div>
+                <div className="w-2 h-2 bg-info rounded-full mt-2"></div>
                 <span className="text-gray-700">Enhanced reusability of components and functions</span>
               </div>
             </div>

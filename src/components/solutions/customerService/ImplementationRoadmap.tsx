@@ -254,7 +254,7 @@ const ImplementationRoadmap: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 py-8">
         {/* Header */}
         <div className="mb-8">
-          <div className="inline-block px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-semibold mb-4">
+          <div className="inline-block px-3 py-1 bg-warning-light text-warning rounded-full text-xs font-semibold mb-4">
             Deployment Strategy
           </div>
           <h1 className="text-3xl font-bold text-gray-900">Implementation Roadmap</h1>
@@ -272,19 +272,19 @@ const ImplementationRoadmap: React.FC = () => {
             {timeline.map((item, index) => (
               <div key={index} className="relative flex items-center mb-6">
                 <div className={`absolute -left-2 w-5 h-5 rounded-full border-2 ${
-                  phases[item.phase].color === 'blue' ? 'bg-blue-500 border-blue-600' :
-                  phases[item.phase].color === 'purple' ? 'bg-purple-500 border-purple-600' :
-                  phases[item.phase].color === 'green' ? 'bg-green-500 border-green-600' :
-                  'bg-orange-500 border-orange-600'
+                  phases[item.phase].color === 'blue' ? 'bg-secondary border-secondary' :
+                  phases[item.phase].color === 'purple' ? 'bg-brand-purple-500 border-brand-purple-600' :
+                  phases[item.phase].color === 'green' ? 'bg-success border-success' :
+                  'bg-warning border-warning'
                 }`}></div>
                 <div className="ml-8">
                   <div className="flex items-center">
                     <span className="text-sm font-semibold text-gray-500 mr-3">Week {item.week}</span>
                     <span className={`px-2 py-1 rounded text-xs font-semibold ${
-                      phases[item.phase].color === 'blue' ? 'bg-blue-100 text-blue-700' :
-                      phases[item.phase].color === 'purple' ? 'bg-purple-100 text-purple-700' :
-                      phases[item.phase].color === 'green' ? 'bg-green-100 text-green-700' :
-                      'bg-orange-100 text-orange-700'
+                      phases[item.phase].color === 'blue' ? 'bg-secondary-light text-secondary' :
+                      phases[item.phase].color === 'purple' ? 'bg-brand-purple-100 text-brand-purple-700' :
+                      phases[item.phase].color === 'green' ? 'bg-success-light text-success' :
+                      'bg-warning-light text-warning'
                     }`}>
                       {phases[item.phase].name.split(':')[0]}
                     </span>
@@ -308,7 +308,10 @@ const ImplementationRoadmap: React.FC = () => {
                 onClick={() => setSelectedPhase(phase.id)}
                 className={`pb-3 px-1 border-b-2 transition-colors flex items-center ${
                   selectedPhase === phase.id 
-                    ? `border-${phase.color}-600 text-${phase.color}-600` 
+                    ? phase.color === 'blue' ? 'border-secondary text-secondary' :
+                      phase.color === 'purple' ? 'border-brand-purple-600 text-brand-purple-600' :
+                      phase.color === 'green' ? 'border-success text-success' :
+                      'border-warning text-warning'
                     : 'border-transparent text-gray-600 hover:text-gray-900'
                 }`}
               >
@@ -349,7 +352,7 @@ const ImplementationRoadmap: React.FC = () => {
                   <ul className="space-y-2">
                     {phases[selectedPhase].deliverables.map((deliverable, index) => (
                       <li key={index} className="flex items-start">
-                        <DocumentTextIcon className="h-4 w-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <DocumentTextIcon className="h-4 w-4 text-secondary mr-2 mt-0.5 flex-shrink-0" />
                         <span className="text-sm text-gray-600">{deliverable}</span>
                       </li>
                     ))}
@@ -448,7 +451,7 @@ const ImplementationRoadmap: React.FC = () => {
           <h2 className="text-2xl font-semibold text-gray-900 mb-6">Technology Stack</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {technologies.map((tech, index) => (
-              <div key={index} className="border-l-4 border-blue-500 pl-4">
+              <div key={index} className="border-l-4 border-secondary pl-4">
                 <h3 className="font-semibold text-gray-900 mb-2">{tech.category}</h3>
                 <ul className="space-y-1">
                   {tech.items.map((item, idx) => (
@@ -461,21 +464,21 @@ const ImplementationRoadmap: React.FC = () => {
         </div>
 
         {/* ROI Projection */}
-        <div className="bg-gradient-to-r from-orange-50 to-red-50 rounded-xl border border-gray-200 p-8">
+        <div className="bg-innovation-gradient rounded-xl border border-gray-200 p-8">
           <h2 className="text-2xl font-semibold text-gray-900 mb-6">ROI Projection</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center">
-              <CalendarIcon className="h-12 w-12 text-orange-600 mx-auto mb-3" />
+              <CalendarIcon className="h-12 w-12 text-warning mx-auto mb-3" />
               <p className="text-sm text-gray-600 mb-1">Break-even Point</p>
               <p className="text-2xl font-bold text-gray-900">Month 6</p>
             </div>
             <div className="text-center">
-              <CurrencyDollarIcon className="h-12 w-12 text-green-600 mx-auto mb-3" />
+              <CurrencyDollarIcon className="h-12 w-12 text-success mx-auto mb-3" />
               <p className="text-sm text-gray-600 mb-1">Annual Savings</p>
               <p className="text-2xl font-bold text-gray-900">$2.5M+</p>
             </div>
             <div className="text-center">
-              <ChartBarIcon className="h-12 w-12 text-blue-600 mx-auto mb-3" />
+              <ChartBarIcon className="h-12 w-12 text-secondary mx-auto mb-3" />
               <p className="text-sm text-gray-600 mb-1">3-Year ROI</p>
               <p className="text-2xl font-bold text-gray-900">340%</p>
             </div>

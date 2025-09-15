@@ -176,7 +176,7 @@ const FlexibleGridSection: React.FC<FlexibleGridSectionProps> = ({
     
     switch (containerStyle) {
       case 'gradient':
-        return `bg-gradient-to-r ${backgroundColor || 'from-gray-50 to-blue-50'} rounded-xl p-8 mb-8 ${borderColor ? `border-l-4 ${borderColor}` : 'border-l-4 border-blue-500'} ${baseClass}`;
+        return `bg-gradient-to-r ${backgroundColor || 'from-gray-50 to-secondary-light'} rounded-xl p-8 mb-8 ${borderColor ? `border-l-4 ${borderColor}` : 'border-l-4 border-secondary'} ${baseClass}`;
       case 'minimal':
         return `mb-12 ${baseClass}`;
       default:
@@ -342,7 +342,7 @@ const FlexibleGridSection: React.FC<FlexibleGridSectionProps> = ({
           <div className="mt-3 space-y-2">
             {item.benefits.map((benefit, idx) => (
               <div key={idx} className="flex items-start gap-3">
-                <div className={`w-2 h-2 ${item.color ? `bg-${item.color}-500` : 'bg-blue-500'} rounded-full mt-2 flex-shrink-0`}></div>
+                <div className={`w-2 h-2 ${item.color ? `bg-${item.color}-500` : 'bg-secondary'} rounded-full mt-2 flex-shrink-0`}></div>
                 <span className="text-gray-700 text-sm">{benefit}</span>
               </div>
             ))}
@@ -401,7 +401,7 @@ const FlexibleGridSection: React.FC<FlexibleGridSectionProps> = ({
               <div className="space-y-2">
                 {category.benefits.map((benefit, benefitIndex) => (
                   <div key={benefitIndex} className="flex items-start gap-3">
-                    <div className={`w-2 h-2 ${category.color ? `bg-${category.color}-500` : 'bg-blue-500'} rounded-full mt-2 flex-shrink-0`}></div>
+                    <div className={`w-2 h-2 ${category.color ? `bg-${category.color}-500` : 'bg-secondary'} rounded-full mt-2 flex-shrink-0`}></div>
                     <span className="text-gray-700">{benefit}</span>
                   </div>
                 ))}

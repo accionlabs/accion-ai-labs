@@ -24,7 +24,7 @@ const componentInteractionsConfig: TopicConfig = {
 
           "content": {
             "title": "Component Interactions",
-            "titleGradient": "from-purple-600 to-pink-600",
+            "titleGradient": "from-brand-purple-600 to-brand-pink-600",
             "description": "How Breeze.AI components communicate and collaborate through event-driven architecture, shared semantic understanding, and intelligent orchestration patterns.",
             "alignment": "center",
             "variant": "header"
@@ -77,8 +77,8 @@ const componentInteractionsConfig: TopicConfig = {
                 "title": "📋 Specification Engine",
                 "subtitle": "Requirements → Semantics",
                 "description": "Converts human requirements into machine-readable semantic form",
-                "backgroundColor": "bg-yellow-50",
-                "borderColor": "border-yellow-300",
+                "backgroundColor": "bg-warning-50",
+                "borderColor": "border-warning-300",
                 "color": "text-yellow-800"
               },
               {
@@ -86,8 +86,8 @@ const componentInteractionsConfig: TopicConfig = {
                 "title": "🤖 Agent Platform",
                 "subtitle": "Task Orchestration",
                 "description": "Coordinates specialized AI agents to execute development tasks",
-                "backgroundColor": "bg-red-50",
-                "borderColor": "border-red-300",
+                "backgroundColor": "bg-error-50",
+                "borderColor": "border-error-300",
                 "color": "text-red-800"
               },
               {
@@ -95,8 +95,8 @@ const componentInteractionsConfig: TopicConfig = {
                 "title": "🔗 Knowledge Graph",
                 "subtitle": "Central Truth Source",
                 "description": "Maintains semantic relationships and serves as the central coordination hub",
-                "backgroundColor": "bg-blue-50",
-                "borderColor": "border-blue-300",
+                "backgroundColor": "bg-brand-blue-50",
+                "borderColor": "border-secondary-300",
                 "color": "text-blue-800"
               },
               {
@@ -104,8 +104,8 @@ const componentInteractionsConfig: TopicConfig = {
                 "title": "⚙️ Generation Engine",
                 "subtitle": "Semantics → Code",
                 "description": "Transforms semantic specifications into executable implementations",
-                "backgroundColor": "bg-green-50",
-                "borderColor": "border-green-300",
+                "backgroundColor": "bg-success-50",
+                "borderColor": "border-success-300",
                 "color": "text-green-800"
               },
               {
@@ -113,8 +113,8 @@ const componentInteractionsConfig: TopicConfig = {
                 "title": "✅ Quality Engine",
                 "subtitle": "Validation & Compliance",
                 "description": "Ensures all outputs meet quality, security, and compliance standards",
-                "backgroundColor": "bg-indigo-50",
-                "borderColor": "border-indigo-300",
+                "backgroundColor": "bg-brand-indigo-50",
+                "borderColor": "border-brand-indigo-300",
                 "color": "text-indigo-800"
               }
             ],
@@ -136,32 +136,32 @@ const componentInteractionsConfig: TopicConfig = {
                 "title": "Requirements Flow",
                 "description": "Specification Engine → Knowledge Graph",
                 "icon": "🟡",
-                "backgroundColor": "bg-yellow-50",
-                "borderColor": "border-yellow-200"
+                "backgroundColor": "bg-warning-50",
+                "borderColor": "border-warning-200"
               },
               {
                 "id": "agent-coordination",
                 "title": "Agent Coordination",
                 "description": "Agent Platform ↔ Knowledge Graph",
                 "icon": "🔴",
-                "backgroundColor": "bg-red-50",
-                "borderColor": "border-red-200"
+                "backgroundColor": "bg-error-50",
+                "borderColor": "border-error-200"
               },
               {
                 "id": "implementation-flow",
                 "title": "Implementation Flow",
                 "description": "Knowledge Graph → Generation Engine",
                 "icon": "🟢",
-                "backgroundColor": "bg-green-50",
-                "borderColor": "border-green-200"
+                "backgroundColor": "bg-success-50",
+                "borderColor": "border-success-200"
               },
               {
                 "id": "quality-feedback",
                 "title": "Quality Feedback",
                 "description": "Quality Engine → Knowledge Graph",
                 "icon": "🟣",
-                "backgroundColor": "bg-indigo-50",
-                "borderColor": "border-indigo-200"
+                "backgroundColor": "bg-brand-indigo-50",
+                "borderColor": "border-brand-indigo-200"
               }
             ],
             "variant": "content"
@@ -181,8 +181,8 @@ const componentInteractionsConfig: TopicConfig = {
               {
                 "id": "semantic-event-structure",
                 "title": "Semantic Event Structure",
-                "backgroundColor": "bg-purple-50",
-                "borderColor": "border-purple-200",
+                "backgroundColor": "bg-brand-purple-50",
+                "borderColor": "border-brand-purple-200",
                 "items": [
                   "event: \"requirement.updated\"",
                   "source: \"specification.engine\"",
@@ -195,8 +195,8 @@ const componentInteractionsConfig: TopicConfig = {
               {
                 "id": "event-categories",
                 "title": "Event Categories",
-                "backgroundColor": "bg-blue-50",
-                "borderColor": "border-blue-200",
+                "backgroundColor": "bg-brand-blue-50",
+                "borderColor": "border-secondary-200",
                 "items": [
                   "Knowledge Events: Ontology updates, validation results",
                   "Process Events: Task completion, workflow state changes",
@@ -223,32 +223,32 @@ const componentInteractionsConfig: TopicConfig = {
                 "number": 1,
                 "title": "Requirement Change",
                 "description": "User updates acceptance criteria in specification engine",
-                "color": "bg-purple-500",
-                "backgroundColor": "bg-purple-50"
+                "color": "bg-brand-purple-500",
+                "backgroundColor": "bg-brand-purple-50"
               },
               {
                 "id": "impact-analysis",
                 "number": 2,
                 "title": "Impact Analysis",
                 "description": "Knowledge graph identifies affected design and code elements",
-                "color": "bg-blue-500",
-                "backgroundColor": "bg-blue-50"
+                "color": "bg-brand-blue-500",
+                "backgroundColor": "bg-brand-blue-50"
               },
               {
                 "id": "agent-orchestration",
                 "number": 3,
                 "title": "Agent Orchestration",
                 "description": "Relevant agents receive update tasks with full context",
-                "color": "bg-green-500",
-                "backgroundColor": "bg-green-50"
+                "color": "bg-success-500",
+                "backgroundColor": "bg-success-50"
               },
               {
                 "id": "synchronized-update",
                 "number": 4,
                 "title": "Synchronized Update",
                 "description": "All affected components update simultaneously",
-                "color": "bg-orange-500",
-                "backgroundColor": "bg-orange-50"
+                "color": "bg-warning-500",
+                "backgroundColor": "bg-warning-50"
               }
             ],
             "variant": "timeline"
@@ -269,8 +269,8 @@ const componentInteractionsConfig: TopicConfig = {
                 "id": "sequential-coordination",
                 "title": "Sequential Coordination",
                 "description": "Agents work in predefined sequences where output from one agent becomes input for the next.",
-                "backgroundColor": "bg-yellow-50",
-                "borderColor": "border-yellow-200",
+                "backgroundColor": "bg-warning-50",
+                "borderColor": "border-warning-200",
                 "items": [
                   "Example: Specification Agent → Design Agent → Implementation Agent → Test Agent",
                   "Benefits: Guaranteed consistency, Clear dependency management, Predictable execution flow"
@@ -280,8 +280,8 @@ const componentInteractionsConfig: TopicConfig = {
                 "id": "parallel-coordination",
                 "title": "Parallel Coordination",
                 "description": "Multiple agents work simultaneously on different aspects of the same semantic specification.",
-                "backgroundColor": "bg-green-50",
-                "borderColor": "border-green-200",
+                "backgroundColor": "bg-success-50",
+                "borderColor": "border-success-200",
                 "items": [
                   "Example: Frontend Agent || Backend Agent || Database Agent || Test Agent",
                   "Benefits: Faster execution time, Resource optimization, Independent validation"
@@ -291,8 +291,8 @@ const componentInteractionsConfig: TopicConfig = {
                 "id": "collaborative-coordination",
                 "title": "Collaborative Coordination",
                 "description": "Agents actively communicate and negotiate to resolve conflicts and optimize outcomes.",
-                "backgroundColor": "bg-blue-50",
-                "borderColor": "border-blue-200",
+                "backgroundColor": "bg-brand-blue-50",
+                "borderColor": "border-secondary-200",
                 "items": [
                   "Example: Performance Agent ↔ Security Agent ↔ Cost Agent",
                   "Benefits: Optimal trade-offs, Conflict resolution, Adaptive behavior"
@@ -316,8 +316,8 @@ const componentInteractionsConfig: TopicConfig = {
                 "id": "centralized-knowledge",
                 "title": "Centralized Knowledge State",
                 "description": "The knowledge graph serves as the single source of truth, with all components maintaining consistent views of the current state.",
-                "backgroundColor": "bg-indigo-50",
-                "borderColor": "border-indigo-200",
+                "backgroundColor": "bg-brand-indigo-50",
+                "borderColor": "border-brand-indigo-200",
                 "items": [
                   "Version Control: All changes tracked with full history",
                   "Consistency Guarantees: ACID properties for critical updates",
@@ -329,8 +329,8 @@ const componentInteractionsConfig: TopicConfig = {
                 "id": "distributed-caching",
                 "title": "Distributed Caching",
                 "description": "Components maintain local caches of relevant knowledge subsets for performance while ensuring consistency.",
-                "backgroundColor": "bg-teal-50",
-                "borderColor": "border-teal-200",
+                "backgroundColor": "bg-info-50",
+                "borderColor": "border-info-200",
                 "items": [
                   "Smart Invalidation: Cache updates based on semantic dependencies",
                   "Prefetching: Anticipate data needs based on workflow patterns",
@@ -356,32 +356,32 @@ const componentInteractionsConfig: TopicConfig = {
                 "number": 1,
                 "title": "State Change Detection",
                 "description": "Knowledge graph detects semantic changes and calculates impact scope",
-                "color": "bg-indigo-500",
-                "backgroundColor": "bg-indigo-50"
+                "color": "bg-brand-indigo-500",
+                "backgroundColor": "bg-brand-indigo-50"
               },
               {
                 "id": "dependency-analysis",
                 "number": 2,
                 "title": "Dependency Analysis",
                 "description": "System identifies all components affected by the change",
-                "color": "bg-blue-500",
-                "backgroundColor": "bg-blue-50"
+                "color": "bg-brand-blue-500",
+                "backgroundColor": "bg-brand-blue-50"
               },
               {
                 "id": "coordinated-update",
                 "number": 3,
                 "title": "Coordinated Update",
                 "description": "All affected components receive updates in dependency order",
-                "color": "bg-green-500",
-                "backgroundColor": "bg-green-50"
+                "color": "bg-success-500",
+                "backgroundColor": "bg-success-50"
               },
               {
                 "id": "validation-confirmation",
                 "number": 4,
                 "title": "Validation & Confirmation",
                 "description": "Components validate changes and confirm successful update",
-                "color": "bg-teal-500",
-                "backgroundColor": "bg-teal-50"
+                "color": "bg-info-500",
+                "backgroundColor": "bg-info-50"
               }
             ],
             "variant": "timeline"
@@ -402,8 +402,8 @@ const componentInteractionsConfig: TopicConfig = {
                 "id": "continuous-validation",
                 "title": "Continuous Validation",
                 "description": "Quality checks occur at every interaction point, not just at final stages.",
-                "backgroundColor": "bg-red-50",
-                "borderColor": "border-red-200",
+                "backgroundColor": "bg-error-50",
+                "borderColor": "border-error-200",
                 "items": [
                   "Pre-flight Checks: Validate inputs before processing",
                   "In-process Monitoring: Real-time quality metrics during execution",
@@ -415,8 +415,8 @@ const componentInteractionsConfig: TopicConfig = {
                 "id": "quality-gates",
                 "title": "Quality Gates",
                 "description": "Mandatory quality checkpoints that must pass before proceeding to next stages.",
-                "backgroundColor": "bg-orange-50",
-                "borderColor": "border-orange-200",
+                "backgroundColor": "bg-warning-50",
+                "borderColor": "border-warning-200",
                 "items": [
                   "Specification Gates: Requirements completeness and consistency",
                   "Design Gates: Architecture compliance and usability standards",
@@ -436,28 +436,28 @@ const componentInteractionsConfig: TopicConfig = {
                     "title": "Component Action",
                     "description": "Agent performs development task",
                     "backgroundColor": "bg-white",
-                    "iconColor": "bg-blue-500"
+                    "iconColor": "bg-brand-blue-500"
                   },
                   {
                     "icon": "✓",
                     "title": "Quality Validation",
                     "description": "Quality engine validates output",
                     "backgroundColor": "bg-white",
-                    "iconColor": "bg-red-500"
+                    "iconColor": "bg-error-500"
                   },
                   {
                     "icon": "✓",
                     "title": "Pass: Continue",
                     "description": "Validation passes, next component proceeds",
                     "backgroundColor": "bg-white",
-                    "iconColor": "bg-green-500"
+                    "iconColor": "bg-success-500"
                   },
                   {
                     "icon": "⚠",
                     "title": "Fail: Remediate",
                     "description": "Validation fails, automatic retry or human intervention",
                     "backgroundColor": "bg-white",
-                    "iconColor": "bg-orange-500"
+                    "iconColor": "bg-warning-500"
                   }
                 ]
               }
@@ -479,8 +479,8 @@ const componentInteractionsConfig: TopicConfig = {
               {
                 "id": "strategic-decisions",
                 "title": "Strategic Decision Points",
-                "backgroundColor": "bg-purple-50",
-                "borderColor": "border-purple-200",
+                "backgroundColor": "bg-brand-purple-50",
+                "borderColor": "border-brand-purple-200",
                 "items": [
                   "Requirement Ambiguity: Clarification requests to stakeholders",
                   "Architecture Trade-offs: Performance vs. cost decisions",
@@ -491,8 +491,8 @@ const componentInteractionsConfig: TopicConfig = {
               {
                 "id": "approval-workflows",
                 "title": "Approval Workflows",
-                "backgroundColor": "bg-pink-50",
-                "borderColor": "border-pink-200",
+                "backgroundColor": "bg-brand-pink-50",
+                "borderColor": "border-brand-pink-200",
                 "items": [
                   "Specification Reviews: Product owner approvals",
                   "Architecture Reviews: Technical architect sign-offs",
@@ -503,8 +503,8 @@ const componentInteractionsConfig: TopicConfig = {
               {
                 "id": "collaborative-refinement",
                 "title": "Collaborative Refinement",
-                "backgroundColor": "bg-cyan-50",
-                "borderColor": "border-cyan-200",
+                "backgroundColor": "bg-info-50",
+                "borderColor": "border-info-200",
                 "items": [
                   "Iterative Improvement: Human feedback incorporation",
                   "Knowledge Enhancement: Domain expert input",
@@ -525,7 +525,7 @@ const componentInteractionsConfig: TopicConfig = {
           "content": {
             "title": "Interaction Benefits",
             "backgroundColor": "from-purple-50 to-pink-50",
-            "borderColor": "border-purple-500",
+            "borderColor": "border-brand-purple-500",
             "categories": [
               {
                 "title": "Technical Benefits",
@@ -562,7 +562,7 @@ const componentInteractionsConfig: TopicConfig = {
             "title": "Understanding Integration Points",
             "description": "These interaction patterns enable Breeze.AI to integrate seamlessly with existing development tools, infrastructure, and organizational processes.",
             "buttonText": "Explore Integration Points",
-            "backgroundGradient": "from-purple-600 to-pink-600",
+            "backgroundGradient": "from-brand-purple-600 to-brand-pink-600",
             "variant": "cta",
             "items": [
               {

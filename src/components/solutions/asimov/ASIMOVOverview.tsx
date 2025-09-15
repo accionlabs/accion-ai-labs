@@ -127,14 +127,14 @@ const ASIMOVOverview: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-brand-blue-50">
       {/* Header */}
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex items-start justify-between">
             <div>
               <div className="flex items-center mb-4">
-                <ArrowPathIcon className="h-10 w-10 text-blue-600 mr-3" />
+                <ArrowPathIcon className="h-10 w-10 text-secondary mr-3" />
                 <h1 className="text-3xl font-bold text-gray-900">ASIMOV Legacy Migration Platform</h1>
               </div>
               <p className="text-lg text-gray-600 max-w-3xl">
@@ -151,7 +151,7 @@ const ASIMOVOverview: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
           {valueProposition.map((item, index) => (
             <div key={index} className="bg-white rounded-lg shadow-sm p-6 text-center">
-              <p className="text-3xl font-bold text-blue-600 mb-2">{item.metric}</p>
+              <p className="text-3xl font-bold text-secondary mb-2">{item.metric}</p>
               <p className="text-sm font-semibold text-gray-900 mb-1">{item.label}</p>
               <p className="text-xs text-gray-600">{item.description}</p>
             </div>
@@ -167,14 +167,14 @@ const ASIMOVOverview: React.FC = () => {
               return (
                 <div key={index} className="border border-gray-200 rounded-lg p-6">
                   <div className="flex items-start mb-4">
-                    <Icon className="h-8 w-8 text-blue-600 mr-3 flex-shrink-0" />
+                    <Icon className="h-8 w-8 text-secondary mr-3 flex-shrink-0" />
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900 mb-2">{capability.title}</h3>
                       <p className="text-sm text-gray-600 mb-4">{capability.description}</p>
                       <ul className="space-y-2">
                         {capability.features.map((feature, idx) => (
                           <li key={idx} className="flex items-start text-sm text-gray-700">
-                            <CheckCircleIcon className="h-4 w-4 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                            <CheckCircleIcon className="h-4 w-4 text-success mr-2 flex-shrink-0 mt-0.5" />
                             {feature}
                           </li>
                         ))}
@@ -194,15 +194,15 @@ const ASIMOVOverview: React.FC = () => {
             <div className="absolute left-8 top-10 bottom-10 w-0.5 bg-gray-300"></div>
             {migrationApproach.phases.map((phase, index) => (
               <div key={index} className="relative flex items-start mb-8 last:mb-0">
-                <div className="absolute left-8 w-4 h-4 bg-blue-600 rounded-full -translate-x-1/2 ring-4 ring-white"></div>
+                <div className="absolute left-8 w-4 h-4 bg-secondary rounded-full -translate-x-1/2 ring-4 ring-white"></div>
                 <div className="ml-16 flex-1">
-                  <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-6">
+                  <div className="bg-gradient-to-r from-brand-blue-50 to-brand-purple-100 rounded-lg p-6">
                     <div className="flex items-start justify-between mb-3">
                       <div>
                         <h3 className="text-lg font-semibold text-gray-900">{phase.phase}</h3>
-                        <p className="text-sm text-blue-600 font-medium">{phase.duration}</p>
+                        <p className="text-sm text-secondary font-medium">{phase.duration}</p>
                       </div>
-                      <BoltIcon className="h-6 w-6 text-blue-600" />
+                      <BoltIcon className="h-6 w-6 text-secondary" />
                     </div>
                     <p className="text-sm text-gray-600 mb-4">{phase.description}</p>
                     <div>
@@ -210,7 +210,7 @@ const ASIMOVOverview: React.FC = () => {
                       <div className="grid grid-cols-2 gap-2">
                         {phase.deliverables.map((deliverable, idx) => (
                           <div key={idx} className="flex items-center text-xs text-gray-600">
-                            <SparklesIcon className="h-3 w-3 text-blue-500 mr-1" />
+                            <SparklesIcon className="h-3 w-3 text-secondary mr-1" />
                             {deliverable}
                           </div>
                         ))}
@@ -226,7 +226,7 @@ const ASIMOVOverview: React.FC = () => {
         {/* Agent Ecosystem */}
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Multi-Agent Migration Ecosystem</h2>
-          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-6">
+          <div className="bg-gradient-to-br from-brand-blue-50 to-brand-purple-100 rounded-lg p-6">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-white rounded-lg p-4">
                 <h4 className="font-semibold text-gray-900 mb-3">Discovery Agents</h4>
@@ -269,9 +269,9 @@ const ASIMOVOverview: React.FC = () => {
                 to={link.path}
                 className="bg-white rounded-lg shadow-sm p-6 hover:shadow-lg transition-shadow border border-gray-200 group"
               >
-                <Icon className="h-8 w-8 text-blue-600 mb-3 group-hover:scale-110 transition-transform" />
+                <Icon className="h-8 w-8 text-secondary mb-3 group-hover:scale-110 transition-transform" />
                 <h3 className="font-semibold text-gray-900 mb-2">{link.label}</h3>
-                <div className="flex items-center text-blue-600 text-sm">
+                <div className="flex items-center text-secondary text-sm">
                   <span>Explore</span>
                   <ArrowRightIcon className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
                 </div>

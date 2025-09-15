@@ -23,6 +23,7 @@ interface SequentialStep {
   color?: string;
   backgroundColor?: string;
   isHighlight?: boolean;
+  textColor?: string;  // Custom text color for the step
   // ProcessFlow-specific
   circleColor?: string;
   details?: string[];
@@ -77,13 +78,27 @@ const SequentialContentSection: React.FC<SequentialContentSectionProps> = ({
     alignment = 'center'
   } = content;
 
+  // Check if background is dark
+  // For process-flow variant, if no backgroundGradient is specified, it uses bg-innovation-gradient (which is dark purple)
+  const effectiveBackground = variant === 'process-flow' && !backgroundGradient ? 'bg-innovation-gradient' : backgroundGradient;
+  const isDarkBackground = effectiveBackground && (
+    effectiveBackground.includes('gray-900') || 
+    effectiveBackground.includes('gray-800') || 
+    effectiveBackground.includes('gray-700') ||
+    effectiveBackground.includes('black') ||
+    effectiveBackground.includes('innovation-gradient') ||
+    effectiveBackground.includes('purple-900') ||
+    effectiveBackground.includes('purple-800') ||
+    effectiveBackground.includes('purple-700')
+  );
+
   // Get container styling
   const getContainerClass = () => {
     const baseClass = className;
     
     switch (containerStyle) {
       case 'gradient':
-        return `bg-gradient-to-r ${backgroundGradient || 'from-gray-50 to-blue-50'} rounded-xl p-8 mb-8 border-l-4 border-blue-500 ${baseClass}`;
+        return `bg-gradient-to-r ${backgroundGradient || 'from-gray-50 to-secondary-light'} rounded-xl p-8 mb-8 border-l-4 border-secondary ${isDarkBackground ? 'text-white' : ''} ${baseClass}`;
       case 'minimal':
         return `mb-8 ${baseClass}`;
       default:
@@ -124,9 +139,12 @@ const SequentialContentSection: React.FC<SequentialContentSectionProps> = ({
   const getNumberClass = (step: SequentialStep, _index: number) => {
     if (numberStyle === 'none') return '';
     
-    const baseColor = variant === 'timeline' 
-      ? (step.color || 'bg-blue-500')
-      : (step.circleColor || 'bg-blue-500');
+    // Use consistent colors for all number circles in process-flow variant
+    const baseColor = variant === 'process-flow' 
+      ? 'bg-secondary'  // Always use secondary color for process-flow
+      : (variant === 'timeline' 
+          ? (step.color || 'bg-secondary')
+          : (step.circleColor || 'bg-secondary'));
     
     const size = variant === 'process-flow' ? 'w-8 h-8 text-sm' : 'w-12 h-12 text-lg';
     
@@ -141,7 +159,26 @@ const SequentialContentSection: React.FC<SequentialContentSectionProps> = ({
 
   // Get title styling based on variant and highlight
   const getTitleClass = (step: SequentialStep) => {
-    const baseColor = step.isHighlight ? 'text-red-800' : 'text-gray-800';
+    // If step has its own textColor, use that
+    if (step.textColor) {
+      const baseSize = variant === 'process-flow' ? 'text-base' : 'text-lg';
+      return `font-semibold ${baseSize} ${step.textColor}`;
+    }
+    
+    // Check if this specific step has a light background
+    const hasLightStepBackground = step.backgroundColor && (
+      step.backgroundColor.includes('-50') || 
+      step.backgroundColor.includes('-100') || 
+      step.backgroundColor.includes('-200') ||
+      step.backgroundColor.includes('white')
+    );
+    
+    // Use dark text for light step backgrounds, otherwise check container background
+    const baseColor = hasLightStepBackground 
+      ? (step.isHighlight ? 'text-red-800' : 'text-gray-800')
+      : isDarkBackground 
+        ? (step.isHighlight ? 'text-red-300' : 'text-white')
+        : (step.isHighlight ? 'text-red-800' : 'text-gray-800');
     const baseSize = variant === 'process-flow' ? 'text-base' : 'text-lg';
     
     return `font-semibold ${baseSize} ${baseColor}`;
@@ -149,7 +186,30 @@ const SequentialContentSection: React.FC<SequentialContentSectionProps> = ({
 
   // Get description styling
   const getDescriptionClass = (step: SequentialStep) => {
-    const baseColor = step.isHighlight ? 'text-red-700' : 'text-gray-600';
+    // If step has its own textColor, use a lighter shade for description
+    if (step.textColor) {
+      const baseSize = variant === 'process-flow' ? 'text-xs mt-1' : 'text-sm';
+      // If textColor is black, use gray-600 for description
+      if (step.textColor === 'text-black') {
+        return `${baseSize} text-gray-600`;
+      }
+      return `${baseSize} ${step.textColor}`;
+    }
+    
+    // Check if this specific step has a light background
+    const hasLightStepBackground = step.backgroundColor && (
+      step.backgroundColor.includes('-50') || 
+      step.backgroundColor.includes('-100') || 
+      step.backgroundColor.includes('-200') ||
+      step.backgroundColor.includes('white')
+    );
+    
+    // Use appropriate text color based on step background
+    const baseColor = hasLightStepBackground
+      ? (step.isHighlight ? 'text-red-700' : 'text-gray-600')
+      : isDarkBackground
+        ? (step.isHighlight ? 'text-red-200' : 'text-gray-200')
+        : (step.isHighlight ? 'text-red-700' : 'text-gray-600');
     const baseSize = variant === 'process-flow' ? 'text-xs mt-1' : 'text-sm';
     
     return `${baseSize} ${baseColor}`;
@@ -192,6 +252,9 @@ const SequentialContentSection: React.FC<SequentialContentSectionProps> = ({
     
     if (isHorizontalProcess) {
       // Process flow horizontal layout
+      // For horizontal process flow inside gradient container, always use light text
+      const useWhiteText = isDarkBackground && variant === 'process-flow';
+      
       return (
         <div key={step.id} className="flex items-center gap-3">
           {numberStyle !== 'none' && (
@@ -200,19 +263,19 @@ const SequentialContentSection: React.FC<SequentialContentSectionProps> = ({
             </div>
           )}
           <div className="flex-1">
-            <h5 className={getTitleClass(step)}>
+            <h5 className={useWhiteText ? 'font-semibold text-base text-white' : getTitleClass(step)}>
               {step.title}
               {step.icon && <span className="ml-2">{step.icon}</span>}
             </h5>
             {step.description && (
-              <p className={getDescriptionClass(step)}>
+              <p className={useWhiteText ? 'text-xs mt-1 text-gray-200' : getDescriptionClass(step)}>
                 {step.description}
               </p>
             )}
             {step.details && (
               <div className="mt-2 space-y-1">
                 {step.details.map((detail, detailIndex) => (
-                  <div key={detailIndex} className="text-xs text-gray-600">
+                  <div key={detailIndex} className={`text-xs ${isDarkBackground ? 'text-gray-200' : 'text-gray-600'}`}>
                     {detail}
                   </div>
                 ))}
@@ -246,7 +309,7 @@ const SequentialContentSection: React.FC<SequentialContentSectionProps> = ({
             {step.details && (
               <div className="mt-2 space-y-1">
                 {step.details.map((detail, detailIndex) => (
-                  <div key={detailIndex} className="text-xs text-gray-600">
+                  <div key={detailIndex} className={`text-xs ${isDarkBackground ? 'text-gray-200' : 'text-gray-600'}`}>
                     {detail}
                   </div>
                 ))}
@@ -289,7 +352,7 @@ const SequentialContentSection: React.FC<SequentialContentSectionProps> = ({
     // Process flow wraps steps in a gradient container
     if (variant === 'process-flow') {
       return (
-        <div className={`p-6 rounded-lg ${backgroundGradient || 'bg-gradient-to-br from-purple-50 to-orange-50'}`}>
+        <div className={`p-6 rounded-lg ${backgroundGradient || 'bg-innovation-gradient'} ${isDarkBackground ? 'text-white' : ''}`}>
           {stepsContent}
         </div>
       );
@@ -303,17 +366,17 @@ const SequentialContentSection: React.FC<SequentialContentSectionProps> = ({
       {/* Header */}
       <div className={getHeaderAlignmentClass()}>
         {title && (
-          <h3 className="text-2xl font-bold text-gray-800 mb-6">
+          <h3 className={`text-2xl font-bold mb-6 ${containerStyle === 'gradient' && isDarkBackground ? 'text-white' : 'text-gray-800'}`}>
             {title}
           </h3>
         )}
         {subtitle && (
-          <p className="text-lg text-gray-600 mb-6">
+          <p className={`text-lg mb-6 ${containerStyle === 'gradient' && isDarkBackground ? 'text-gray-200' : 'text-gray-600'}`}>
             {subtitle}
           </p>
         )}
         {description && (
-          <p className="text-lg text-gray-700 mb-6">
+          <p className={`text-lg mb-6 ${containerStyle === 'gradient' && isDarkBackground ? 'text-gray-100' : 'text-gray-700'}`}>
             {description}
           </p>
         )}

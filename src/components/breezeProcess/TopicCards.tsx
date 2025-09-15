@@ -464,7 +464,7 @@ const TopicCards: React.FC<TopicCardsProps> = ({
               <button
                 onClick={toggleSlideMode}
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                  isSlideMode ? 'bg-blue-600' : 'bg-gray-300'
+                  isSlideMode ? 'bg-secondary' : 'bg-gray-300'
                 }`}
                 title={isSlideMode ? 'Switch to Document Mode' : 'Switch to Slide Mode'}
               >
@@ -484,7 +484,7 @@ const TopicCards: React.FC<TopicCardsProps> = ({
               {isSlideMode ? 'Slide Mode' : 'Document Mode'}
             </span>
             {isSlideMode && getTotalSlides() > 0 && (
-              <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full font-medium">
+              <span className="text-xs bg-brand-blue-100 text-secondary px-2 py-1 rounded-full font-medium">
                 {currentSlideIndex + 1}/{getTotalSlides()}
               </span>
             )}
@@ -549,7 +549,7 @@ const TopicCards: React.FC<TopicCardsProps> = ({
                     onClick={goToPreviousSlide}
                     className={`flex items-center gap-1 px-2 py-1 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium transition-all ${
                       currentSlideIndex === 0 && previousItem
-                        ? 'text-blue-600 bg-blue-50 hover:bg-blue-100 border border-blue-200'
+                        ? 'text-secondary bg-brand-blue-50 hover:bg-brand-blue-100 border border-secondary'
                         : 'text-white bg-gradient-to-r from-gray-600 to-gray-700 hover:shadow-lg border border-gray-600'
                     }`}
                     title={currentSlideIndex === 0 && previousItem ? `Go to previous topic: ${previousItem.title}` : 'Go to previous slide'}
@@ -572,8 +572,8 @@ const TopicCards: React.FC<TopicCardsProps> = ({
                     onClick={goToNextSlide}
                     className={`flex items-center gap-1 px-2 py-1 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium transition-all ${
                       currentSlideIndex === getTotalSlides() - 1 && (nextItem || !nextItem)
-                        ? 'text-blue-600 bg-blue-50 hover:bg-blue-100 border border-blue-200'
-                        : 'text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:shadow-lg'
+                        ? 'text-secondary bg-brand-blue-50 hover:bg-brand-blue-100 border border-secondary'
+                        : 'text-white bg-innovation-gradient hover:shadow-lg'
                     }`}
                     title={
                       currentSlideIndex === getTotalSlides() - 1 && nextItem 
@@ -641,7 +641,7 @@ const TopicCards: React.FC<TopicCardsProps> = ({
 
               <button
                 onClick={goToNext}
-                className="flex items-center gap-1 md:gap-2 px-3 py-2 md:px-6 md:py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover:shadow-lg transition-all text-xs md:text-sm"
+                className="flex items-center gap-1 md:gap-2 px-3 py-2 md:px-6 md:py-3 bg-innovation-gradient text-white rounded-lg font-medium hover:shadow-lg transition-all text-xs md:text-sm"
               >
                 <div className="text-right">
                   {nextItem ? (

@@ -1150,9 +1150,9 @@ const RationalizationRoadmap: React.FC = () => {
             </div>
 
             {/* Strategy 2: Phased Migration */}
-            <div className="border-2 border-blue-200 rounded-lg p-6 bg-blue-50">
+            <div className="border-2 border-secondary rounded-lg p-6 bg-secondary/10">
               <div className="flex items-center justify-between mb-4">
-                <h3 className="text-lg font-semibold text-blue-900">Strategy 2: Phased Migration</h3>
+                <h3 className="text-lg font-semibold text-secondary">Strategy 2: Phased Migration</h3>
                 <div className="flex items-center space-x-3">
                   <span className="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm font-medium">Medium Risk</span>
                   <span className="text-sm text-gray-600">18-24 months</span>
@@ -1189,7 +1189,7 @@ const RationalizationRoadmap: React.FC = () => {
                 </div>
               </div>
               
-              <div className="mt-4 pt-4 border-t border-blue-200 flex items-center justify-between">
+              <div className="mt-4 pt-4 border-t border-secondary flex items-center justify-between">
                 <div className="flex items-center space-x-6 text-sm">
                   <span className="text-gray-600">Cost: <strong className="text-yellow-600">$$$$</strong></span>
                   <span className="text-gray-600">Downtime: <strong className="text-yellow-600">Minimal per phase</strong></span>
@@ -1319,7 +1319,7 @@ const RationalizationRoadmap: React.FC = () => {
                     <div>Consolidates:</div>
                     <div className="flex space-x-2 mt-1">
                       <span className="text-red-600">P: 3 services</span>
-                      <span className="text-blue-600">A: 2 services</span>
+                      <span className="text-secondary">A: 2 services</span>
                       <span className="text-purple-600">V: 2 services</span>
                     </div>
                   </div>
@@ -1343,7 +1343,7 @@ const RationalizationRoadmap: React.FC = () => {
                     <div>Consolidates:</div>
                     <div className="flex space-x-2 mt-1">
                       <span className="text-red-600">P: 12 endpoints</span>
-                      <span className="text-blue-600">A: 8 endpoints</span>
+                      <span className="text-secondary">A: 8 endpoints</span>
                       <span className="text-purple-600">V: 10 endpoints</span>
                     </div>
                   </div>
@@ -1367,7 +1367,7 @@ const RationalizationRoadmap: React.FC = () => {
                     <div>Consolidates:</div>
                     <div className="flex space-x-2 mt-1">
                       <span className="text-red-600">P: MySQL</span>
-                      <span className="text-blue-600">A: MongoDB</span>
+                      <span className="text-secondary">A: MongoDB</span>
                       <span className="text-purple-600">V: ElasticSearch</span>
                     </div>
                   </div>
@@ -1391,7 +1391,7 @@ const RationalizationRoadmap: React.FC = () => {
                     <div>Replaces:</div>
                     <div className="flex space-x-2 mt-1">
                       <span className="text-red-600">P: 4 modules</span>
-                      <span className="text-blue-600">A: 3 modules</span>
+                      <span className="text-secondary">A: 3 modules</span>
                       <span className="text-purple-600">V: 3 modules</span>
                     </div>
                   </div>
@@ -1460,7 +1460,7 @@ const RationalizationRoadmap: React.FC = () => {
               
               <div className="space-y-6">
                 {/* Phase 1 */}
-                <div className="border-l-4 border-blue-500 pl-4">
+                <div className="border-l-4 border-secondary pl-4">
                   <h3 className="font-semibold text-gray-900 mb-2">Phase 1: Service Consolidation</h3>
                   <p className="text-sm text-gray-600 mb-3">Consolidate authentication and user management services</p>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -1570,7 +1570,7 @@ const RationalizationRoadmap: React.FC = () => {
                       <div>Maps from:</div>
                       <div className="flex space-x-2 mt-1">
                         <span className="text-red-600">P: {node.sourceMappings.phoenix.length}</span>
-                        <span className="text-blue-600">A: {node.sourceMappings.apollo.length}</span>
+                        <span className="text-secondary">A: {node.sourceMappings.apollo.length}</span>
                         <span className="text-purple-600">V: {node.sourceMappings.voyager.length}</span>
                       </div>
                     </div>
@@ -1615,7 +1615,7 @@ const RationalizationRoadmap: React.FC = () => {
                             <div>Consolidates:</div>
                             <div className="flex space-x-2 mt-1">
                               <span className="text-red-600">P: {node.sourceMappings.phoenix.length}</span>
-                              <span className="text-blue-600">A: {node.sourceMappings.apollo.length}</span>
+                              <span className="text-secondary">A: {node.sourceMappings.apollo.length}</span>
                               <span className="text-purple-600">V: {node.sourceMappings.voyager.length}</span>
                             </div>
                           </>
@@ -1762,9 +1762,9 @@ const RationalizationRoadmap: React.FC = () => {
             </div>
 
             {/* Phase 4: Migration & Deployment */}
-            <div className="border-l-4 border-blue-500 pl-4">
+            <div className="border-l-4 border-secondary pl-4">
               <div className="flex items-start">
-                <div className="w-10 h-10 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold mr-4">4</div>
+                <div className="w-10 h-10 bg-secondary/100 text-white rounded-full flex items-center justify-center font-bold mr-4">4</div>
                 <div className="flex-1">
                   <h3 className="font-semibold text-gray-900 mb-2">Phase 4: Migration & Deployment</h3>
                   <p className="text-sm text-gray-600 mb-3">Gradual migration following selected rationalization strategy</p>

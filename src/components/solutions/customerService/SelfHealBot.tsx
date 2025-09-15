@@ -149,7 +149,7 @@ const SelfHealBot: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 py-8">
         {/* Header */}
         <div className="mb-8">
-          <div className="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold mb-4">
+          <div className="inline-block px-3 py-1 bg-secondary-light text-secondary rounded-full text-xs font-semibold mb-4">
             Autonomous Resolution Layer
           </div>
           <h1 className="text-3xl font-bold text-gray-900">Self Heal Bot</h1>
@@ -170,21 +170,21 @@ const SelfHealBot: React.FC = () => {
           </div>
           <div className="bg-white rounded-lg p-4 border border-gray-200">
             <div className="flex items-center justify-between">
-              <ClockIcon className="h-8 w-8 text-blue-600" />
+              <ClockIcon className="h-8 w-8 text-secondary" />
               <span className="text-2xl font-bold text-gray-900">&lt;1s</span>
             </div>
             <p className="mt-2 text-sm text-gray-600">Response Time</p>
           </div>
           <div className="bg-white rounded-lg p-4 border border-gray-200">
             <div className="flex items-center justify-between">
-              <GlobeAltIcon className="h-8 w-8 text-purple-600" />
+              <GlobeAltIcon className="h-8 w-8 text-brand-purple-600" />
               <span className="text-2xl font-bold text-gray-900">50+</span>
             </div>
             <p className="mt-2 text-sm text-gray-600">Languages</p>
           </div>
           <div className="bg-white rounded-lg p-4 border border-gray-200">
             <div className="flex items-center justify-between">
-              <ChartBarIcon className="h-8 w-8 text-orange-600" />
+              <ChartBarIcon className="h-8 w-8 text-warning" />
               <span className="text-2xl font-bold text-gray-900">4.7/5</span>
             </div>
             <p className="mt-2 text-sm text-gray-600">User Satisfaction</p>
@@ -203,7 +203,7 @@ const SelfHealBot: React.FC = () => {
                 onClick={() => setSelectedFeature(key)}
                 className={`pb-3 px-1 border-b-2 transition-colors flex items-center ${
                   selectedFeature === key 
-                    ? 'border-blue-600 text-blue-600' 
+                    ? 'border-secondary text-secondary' 
                     : 'border-transparent text-gray-600 hover:text-gray-900'
                 }`}
               >
@@ -279,7 +279,7 @@ const SelfHealBot: React.FC = () => {
               <div key={index} className="border border-gray-200 rounded-lg p-4">
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="font-semibold text-gray-900">{useCase.title}</h3>
-                  <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">
+                  <span className="text-xs bg-secondary-light text-secondary px-2 py-1 rounded">
                     {useCase.channel}
                   </span>
                 </div>
@@ -287,7 +287,7 @@ const SelfHealBot: React.FC = () => {
                 <div className="space-y-2 mb-4">
                   {useCase.steps.map((step, idx) => (
                     <div key={idx} className="flex items-start">
-                      <span className="text-xs text-blue-600 mr-2 mt-0.5">{idx + 1}.</span>
+                      <span className="text-xs text-secondary mr-2 mt-0.5">{idx + 1}.</span>
                       <span className="text-xs text-gray-600">{step}</span>
                     </div>
                   ))}
@@ -314,14 +314,14 @@ const SelfHealBot: React.FC = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {channels.map((channel, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <channel.icon className="h-8 w-8 text-blue-600" />
+                <div className="w-16 h-16 bg-secondary-light rounded-full flex items-center justify-center mx-auto mb-3">
+                  <channel.icon className="h-8 w-8 text-secondary" />
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-1">{channel.name}</h3>
                 <p className="text-xs text-gray-600 mb-2">Status: {channel.status}</p>
                 <div className="bg-gray-100 rounded-full h-2 overflow-hidden">
                   <div 
-                    className="bg-blue-600 h-full"
+                    className="bg-secondary h-full"
                     style={{ width: channel.volume }}
                   />
                 </div>
@@ -332,13 +332,13 @@ const SelfHealBot: React.FC = () => {
         </div>
 
         {/* Architecture Diagram */}
-        <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border border-gray-200 p-8">
+        <div className="bg-innovation-gradient rounded-xl border border-gray-200 p-8">
           <h2 className="text-2xl font-semibold text-gray-900 mb-6">Self Heal Bot Architecture</h2>
           <div className="bg-white rounded-lg p-6">
             <div className="space-y-4">
               {/* Input Layer */}
               <div className="flex items-center justify-center">
-                <div className="bg-blue-100 rounded-lg p-4 w-full max-w-md text-center">
+                <div className="bg-secondary-light rounded-lg p-4 w-full max-w-md text-center">
                   <h3 className="font-semibold text-gray-900 mb-2">Input Layer</h3>
                   <p className="text-xs text-gray-600">Voice, Chat, Email, Mobile App</p>
                 </div>
@@ -350,7 +350,7 @@ const SelfHealBot: React.FC = () => {
               
               {/* Processing Layer */}
               <div className="flex items-center justify-center">
-                <div className="bg-purple-100 rounded-lg p-4 w-full max-w-md text-center">
+                <div className="bg-brand-purple-100 rounded-lg p-4 w-full max-w-md text-center">
                   <h3 className="font-semibold text-gray-900 mb-2">NLP Processing</h3>
                   <p className="text-xs text-gray-600">Intent Recognition, Entity Extraction, Context Management</p>
                 </div>
@@ -362,7 +362,7 @@ const SelfHealBot: React.FC = () => {
               
               {/* Resolution Layer */}
               <div className="flex items-center justify-center">
-                <div className="bg-green-100 rounded-lg p-4 w-full max-w-md text-center">
+                <div className="bg-success-light rounded-lg p-4 w-full max-w-md text-center">
                   <h3 className="font-semibold text-gray-900 mb-2">Automated Resolution</h3>
                   <p className="text-xs text-gray-600">Knowledge Base, API Calls, Workflow Execution</p>
                 </div>
@@ -374,7 +374,7 @@ const SelfHealBot: React.FC = () => {
               
               {/* Output Layer */}
               <div className="flex items-center justify-center">
-                <div className="bg-orange-100 rounded-lg p-4 w-full max-w-md text-center">
+                <div className="bg-warning-light rounded-lg p-4 w-full max-w-md text-center">
                   <h3 className="font-semibold text-gray-900 mb-2">Response Delivery</h3>
                   <p className="text-xs text-gray-600">Personalized Response, Multi-language Support, Follow-up Actions</p>
                 </div>

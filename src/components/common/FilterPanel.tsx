@@ -33,27 +33,27 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
 
   const productOptions: { value: ProductType; label: string; color: string }[] = [
     { value: 'all', label: 'All Products', color: 'gray' },
-    { value: 'phoenix', label: 'Phoenix CRM', color: 'red' },
-    { value: 'apollo', label: 'Apollo Launchpad', color: 'blue' },
-    { value: 'voyager', label: 'Voyager Analytics', color: 'purple' }
+    { value: 'phoenix', label: 'Phoenix CRM', color: 'error' },
+    { value: 'apollo', label: 'Apollo Launchpad', color: 'secondary' },
+    { value: 'voyager', label: 'Voyager Analytics', color: 'brand-purple' }
   ];
 
   const ontologyOptions: { value: OntologyType; label: string; color: string }[] = [
     { value: 'all', label: 'All Ontologies', color: 'gray' },
-    { value: 'functional', label: 'Functional', color: 'blue' },
-    { value: 'design', label: 'Design', color: 'purple' },
-    { value: 'architecture', label: 'Architecture', color: 'green' },
-    { value: 'code', label: 'Code', color: 'orange' }
+    { value: 'functional', label: 'Functional', color: 'secondary' },
+    { value: 'design', label: 'Design', color: 'brand-purple' },
+    { value: 'architecture', label: 'Architecture', color: 'success' },
+    { value: 'code', label: 'Code', color: 'warning' }
   ];
 
   const getColorClasses = (color: string, isSelected: boolean) => {
     const colorMap = {
       gray: isSelected ? 'bg-gray-100 text-gray-800 border-gray-300' : 'bg-white text-gray-600 border-gray-200 hover:bg-gray-50',
-      red: isSelected ? 'bg-red-100 text-red-800 border-red-300' : 'bg-white text-red-600 border-red-200 hover:bg-red-50',
-      blue: isSelected ? 'bg-blue-100 text-blue-800 border-blue-300' : 'bg-white text-blue-600 border-blue-200 hover:bg-blue-50',
-      purple: isSelected ? 'bg-purple-100 text-purple-800 border-purple-300' : 'bg-white text-purple-600 border-purple-200 hover:bg-purple-50',
-      green: isSelected ? 'bg-green-100 text-green-800 border-green-300' : 'bg-white text-green-600 border-green-200 hover:bg-green-50',
-      orange: isSelected ? 'bg-orange-100 text-orange-800 border-orange-300' : 'bg-white text-orange-600 border-orange-200 hover:bg-orange-50'
+      error: isSelected ? 'bg-error/10 text-error border-error/30' : 'bg-white text-error border-error/20 hover:bg-error/5',
+      secondary: isSelected ? 'bg-secondary/10 text-secondary border-secondary/30' : 'bg-white text-secondary border-secondary/20 hover:bg-secondary/5',
+      'brand-purple': isSelected ? 'bg-brand-purple-100 text-brand-purple-800 border-brand-purple-300' : 'bg-white text-brand-purple-600 border-brand-purple-200 hover:bg-brand-purple-50',
+      success: isSelected ? 'bg-success/10 text-success border-success/30' : 'bg-white text-success border-success/20 hover:bg-success/5',
+      warning: isSelected ? 'bg-warning/10 text-warning border-warning/30' : 'bg-white text-warning border-warning/20 hover:bg-warning/5'
     };
     return colorMap[color as keyof typeof colorMap] || colorMap.gray;
   };
@@ -128,7 +128,7 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
               type="checkbox"
               checked={showInconsistencies}
               onChange={onToggleInconsistencies}
-              className="rounded border-gray-300 text-red-600 focus:ring-red-500"
+              className="rounded border-gray-300 text-error focus:ring-error"
             />
             <span className="ml-2 text-sm text-gray-600">
               Highlight Inconsistencies

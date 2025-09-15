@@ -20,7 +20,7 @@ const competitiveAdvantagesConfig: TopicConfig = {
           "type": "prominentDisplay",
           "content": {
             "title": "Competitive Advantages",
-            "titleGradient": "from-green-600 to-blue-600",
+            "titleGradient": "from-success-600 to-secondary-600",
             "description": "Why Breeze.AI surpasses standard AI tools like Copilot and Cursor: semantic understanding, organizational context, and systematic quality assurance.",
             "alignment": "center",
             "variant": "header"
@@ -37,8 +37,8 @@ const competitiveAdvantagesConfig: TopicConfig = {
               {
                 "id": "what-they-cant-do",
                 "title": "⚠️ What Standard Tools Can't Do",
-                "backgroundColor": "bg-red-50",
-                "borderColor": "border-red-200",
+                "backgroundColor": "bg-error-50",
+                "borderColor": "border-error-200",
                 "items": [
                   "Understand specific architectural patterns unique to your organization",
                   "Maintain consistency with your established design systems",
@@ -67,8 +67,8 @@ const competitiveAdvantagesConfig: TopicConfig = {
           "type": "prominentDisplay",
           "content": {
             "title": "Breeze.AI's Semantic Understanding Advantage",
-            "backgroundGradient": "from-green-50 to-blue-50",
-            "borderColor": "border-green-500",
+            "backgroundGradient": "from-fresh-green-50 to-brand-blue-50",
+            "borderColor": "border-fresh-green-500",
             "description": "Breeze.AI enables the creation of custom agents that understand the functional, architectural, and design semantic models represented in your knowledge graphs.",
             "variant": "hero"
           }
@@ -83,8 +83,8 @@ const competitiveAdvantagesConfig: TopicConfig = {
               {
                 "id": "semantic-model-integration",
                 "title": "Semantic Model Integration",
-                "backgroundColor": "bg-green-50",
-                "borderColor": "border-green-200",
+                "backgroundColor": "bg-fresh-green-50",
+                "borderColor": "border-fresh-green-200",
                 "items": [
                   "Architectural Patterns: Agents understand your specific system design principles",
                   "Design Systems: Code generation aligns with your established UI/UX guidelines",
@@ -95,8 +95,8 @@ const competitiveAdvantagesConfig: TopicConfig = {
               {
                 "id": "contextual-code-generation",
                 "title": "Contextual Code Generation",
-                "backgroundColor": "bg-blue-50",
-                "borderColor": "border-blue-200",
+                "backgroundColor": "bg-brand-blue-50",
+                "borderColor": "border-brand-blue-200",
                 "items": [
                   "Code automatically adheres to architectural guidelines",
                   "UI components follow your design system precisely",
@@ -115,15 +115,15 @@ const competitiveAdvantagesConfig: TopicConfig = {
             "title": "Custom Agent Workflows",
             "description": "Enterprise software development requires custom agent workflows that represent typical use cases occurring in long-standing applications—patterns that repeat but cannot be captured as strict business rules.",
             "backgroundColor": "bg-white",
-            "innerBackgroundColor": "bg-purple-50",
-            "borderColor": "border-purple-200",
+            "innerBackgroundColor": "bg-brand-purple-50",
+            "borderColor": "border-brand-purple-200",
             "variant": "detailed-list",
             "items": [
               {
                 "id": "beyond-simple-generation",
                 "title": "Beyond Simple Code Generation",
                 "description": "These patterns often repeat across different parts of an application but require contextual understanding that only custom agents with semantic model awareness can provide.",
-                "bulletColor": "bg-purple-500"
+                "bulletColor": "bg-brand-purple-500"
               }
             ],
             "containerStyle": "gradient"
@@ -141,7 +141,7 @@ const competitiveAdvantagesConfig: TopicConfig = {
                 "id": "business-logic-patterns",
                 "title": "Business Logic Patterns",
                 "backgroundColor": "bg-white",
-                "borderColor": "border-purple-200",
+                "borderColor": "border-brand-purple-200",
                 "titleColor": "text-purple-800",
                 "textColor": "text-purple-600",
                 "items": [
@@ -154,7 +154,7 @@ const competitiveAdvantagesConfig: TopicConfig = {
                 "id": "architectural-implementation",
                 "title": "Architectural Implementation",
                 "backgroundColor": "bg-white",
-                "borderColor": "border-purple-200",
+                "borderColor": "border-brand-purple-200",
                 "titleColor": "text-purple-800",
                 "textColor": "text-purple-600",
                 "items": [
@@ -167,7 +167,7 @@ const competitiveAdvantagesConfig: TopicConfig = {
                 "id": "design-interaction-patterns",
                 "title": "Design Interaction Patterns",
                 "backgroundColor": "bg-white",
-                "borderColor": "border-purple-200",
+                "borderColor": "border-brand-purple-200",
                 "titleColor": "text-purple-800",
                 "textColor": "text-purple-600",
                 "items": [
@@ -184,8 +184,8 @@ const competitiveAdvantagesConfig: TopicConfig = {
           "type": "flexibleGrid",
           "content": {
             "title": "Example: E-commerce Pattern Recognition",
-            "backgroundColor": "bg-orange-50",
-            "borderColor": "border-orange-200",
+            "backgroundColor": "bg-brand-orange-50",
+            "borderColor": "border-brand-orange-200",
             "layout": "grid-2",
             "variant": "content",
             "items": [
@@ -193,7 +193,7 @@ const competitiveAdvantagesConfig: TopicConfig = {
                 "id": "standard-tool-approach",
                 "title": "Standard Tool Approach:",
                 "backgroundColor": "bg-white",
-                "borderColor": "border-orange-200",
+                "borderColor": "border-brand-orange-200",
                 "titleColor": "text-orange-800",
                 "textColor": "text-orange-600",
                 "items": [
@@ -204,7 +204,7 @@ const competitiveAdvantagesConfig: TopicConfig = {
                 "id": "breeze-approach",
                 "title": "Breeze.AI Custom Agent Approach:",
                 "backgroundColor": "bg-white",
-                "borderColor": "border-orange-200",
+                "borderColor": "border-brand-orange-200",
                 "titleColor": "text-orange-800",
                 "textColor": "text-orange-600",
                 "items": [
@@ -224,8 +224,8 @@ const competitiveAdvantagesConfig: TopicConfig = {
               {
                 "id": "standard-tools-quality",
                 "title": "Standard Tools Quality Approach",
-                "backgroundColor": "bg-red-50",
-                "borderColor": "border-red-200",
+                "backgroundColor": "bg-error-50",
+                "borderColor": "border-error-200",
                 "items": [
                   "Manual code review required for quality assurance",
                   "No automatic adherence to organizational standards",
@@ -237,8 +237,8 @@ const competitiveAdvantagesConfig: TopicConfig = {
               {
                 "id": "breeze-integrated-quality",
                 "title": "Breeze.AI Integrated Quality",
-                "backgroundColor": "bg-green-50",
-                "borderColor": "border-green-200",
+                "backgroundColor": "bg-fresh-green-50",
+                "borderColor": "border-fresh-green-200",
                 "items": [
                   "Quality built into the agent behavior by default",
                   "Automatic adherence to all specification layers",
@@ -261,8 +261,8 @@ const competitiveAdvantagesConfig: TopicConfig = {
               {
                 "id": "quality-gap-problem",
                 "title": "The Quality Gap Problem",
-                "backgroundColor": "bg-yellow-50",
-                "borderColor": "border-yellow-200",
+                "backgroundColor": "bg-brand-orange-50",
+                "borderColor": "border-brand-orange-200",
                 "items": [
                   "Standard tools generate functional code but leave quality assurance, compliance verification, and architectural adherence as manual tasks that teams must handle separately."
                 ]
@@ -270,8 +270,8 @@ const competitiveAdvantagesConfig: TopicConfig = {
               {
                 "id": "quality-integration-advantage",
                 "title": "The Quality Integration Advantage",
-                "backgroundColor": "bg-blue-50",
-                "borderColor": "border-blue-200",
+                "backgroundColor": "bg-brand-blue-50",
+                "borderColor": "border-brand-blue-200",
                 "items": [
                   "Quality becomes the path of least resistance rather than additional work. Teams get enterprise-grade quality automatically without manual overhead or process discipline requirements."
                 ]
@@ -291,8 +291,8 @@ const competitiveAdvantagesConfig: TopicConfig = {
               {
                 "id": "standard-tools-static",
                 "title": "Standard Tools: Static Knowledge",
-                "backgroundColor": "bg-red-50",
-                "borderColor": "border-red-200",
+                "backgroundColor": "bg-error-50",
+                "borderColor": "border-error-200",
                 "items": [
                   "Training Data Limitation: Knowledge frozen at training time",
                   "No Organizational Learning: Cannot adapt to your specific patterns",
@@ -302,8 +302,8 @@ const competitiveAdvantagesConfig: TopicConfig = {
               {
                 "id": "breeze-dynamic-evolution",
                 "title": "Breeze.AI: Dynamic Evolution",
-                "backgroundColor": "bg-green-50",
-                "borderColor": "border-green-200",
+                "backgroundColor": "bg-fresh-green-50",
+                "borderColor": "border-fresh-green-200",
                 "items": [
                   "Living Knowledge Graphs: Specifications evolve with best practices",
                   "Organizational Adaptation: Agents learn and improve from your patterns",
@@ -319,8 +319,8 @@ const competitiveAdvantagesConfig: TopicConfig = {
           "type": "prominentDisplay",
           "content": {
             "title": "Measurable ROI Advantage",
-            "backgroundGradient": "from-blue-50 to-purple-50",
-            "borderColor": "border-blue-500",
+            "backgroundGradient": "from-brand-blue-50 to-brand-purple-50",
+            "borderColor": "border-secondary-500",
             "description": "Breeze.AI delivers comprehensive ROI across the entire development lifecycle, not just code generation speed.",
             "variant": "hero"
           }
@@ -335,8 +335,8 @@ const competitiveAdvantagesConfig: TopicConfig = {
               {
                 "id": "standard-tools-roi",
                 "title": "Standard AI Tools ROI",
-                "backgroundColor": "bg-blue-50",
-                "borderColor": "border-blue-200",
+                "backgroundColor": "bg-brand-blue-50",
+                "borderColor": "border-brand-blue-200",
                 "items": [
                   "Faster initial code generation",
                   "Reduced typing and boilerplate creation",
@@ -347,8 +347,8 @@ const competitiveAdvantagesConfig: TopicConfig = {
               {
                 "id": "breeze-comprehensive-roi",
                 "title": "Breeze.AI Comprehensive ROI",
-                "backgroundColor": "bg-purple-50",
-                "borderColor": "border-purple-200",
+                "backgroundColor": "bg-brand-purple-50",
+                "borderColor": "border-brand-purple-200",
                 "items": [
                   "Faster implementation of organizational patterns",
                   "Automatic quality assurance and compliance",
@@ -368,7 +368,7 @@ const competitiveAdvantagesConfig: TopicConfig = {
           "content": {
             "title": "The Strategic Difference",
             "subtitle": "While standard AI tools provide tactical code generation improvements, Breeze.AI delivers strategic transformation of the entire development process.",
-            "backgroundGradient": "bg-gradient-to-r from-green-600 to-blue-600",
+            "backgroundGradient": "bg-gradient-to-r from-success-600 to-secondary-600",
             "textColor": "text-white",
             "columns": 3,
             "items": [

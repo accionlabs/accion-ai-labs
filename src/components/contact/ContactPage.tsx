@@ -15,7 +15,7 @@ const ContactPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 py-4 sm:py-6 lg:py-8">
         {/* Page Header */}
         <div className="mb-8">
-          <div className="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold mb-4">
+          <div className="inline-block px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs font-semibold mb-4">
             Get Started
           </div>
           <h1 className="text-3xl font-bold text-gray-900">Let's Build Your Solution</h1>
@@ -31,7 +31,7 @@ const ContactPage: React.FC = () => {
           <div>
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 sm:p-8 mb-6">
               <div className="flex items-center mb-4">
-                <BuildingOfficeIcon className="h-8 w-8 text-blue-600 mr-3" />
+                <BuildingOfficeIcon className="h-8 w-8 text-secondary mr-3" />
                 <h2 className="text-2xl font-semibold text-gray-900">Accion Labs</h2>
               </div>
               <p className="text-gray-600 mb-6">
@@ -57,7 +57,7 @@ const ContactPage: React.FC = () => {
                   <EnvelopeIcon className="h-5 w-5 text-gray-400 mt-0.5 mr-3 flex-shrink-0" />
                   <div>
                     <p className="font-medium text-gray-900">Email</p>
-                    <a href="mailto:info@accionlabs.com" className="text-sm text-blue-600 hover:text-blue-700">
+                    <a href="mailto:info@accionlabs.com" className="text-sm text-secondary hover:text-brand-blue-700">
                       info@accionlabs.com
                     </a>
                   </div>
@@ -67,7 +67,7 @@ const ContactPage: React.FC = () => {
                   <GlobeAltIcon className="h-5 w-5 text-gray-400 mt-0.5 mr-3 flex-shrink-0" />
                   <div>
                     <p className="font-medium text-gray-900">Website</p>
-                    <a href="https://www.accionlabs.com" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 hover:text-blue-700">
+                    <a href="https://www.accionlabs.com" target="_blank" rel="noopener noreferrer" className="text-sm text-secondary hover:text-brand-blue-700">
                       www.accionlabs.com
                     </a>
                   </div>
@@ -76,32 +76,32 @@ const ContactPage: React.FC = () => {
             </div>
 
             {/* What Happens Next */}
-            <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl border border-blue-200 p-6">
+            <div className="bg-gradient-to-br from-secondary/10 to-brand-purple-50 rounded-xl border border-secondary p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">What Happens Next?</h3>
               <ol className="space-y-3 text-sm">
                 <li className="flex items-start">
-                  <span className="flex-shrink-0 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-semibold mr-3">1</span>
+                  <span className="flex-shrink-0 w-6 h-6 bg-secondary text-white rounded-full flex items-center justify-center text-xs font-semibold mr-3">1</span>
                   <div>
                     <strong className="text-gray-900">Discovery Call</strong>
                     <p className="text-gray-600">We'll schedule a call to understand your challenges and objectives</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <span className="flex-shrink-0 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-semibold mr-3">2</span>
+                  <span className="flex-shrink-0 w-6 h-6 bg-secondary text-white rounded-full flex items-center justify-center text-xs font-semibold mr-3">2</span>
                   <div>
                     <strong className="text-gray-900">Solution Design</strong>
                     <p className="text-gray-600">Our team will design a custom AI agent solution for your needs</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <span className="flex-shrink-0 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-semibold mr-3">3</span>
+                  <span className="flex-shrink-0 w-6 h-6 bg-secondary text-white rounded-full flex items-center justify-center text-xs font-semibold mr-3">3</span>
                   <div>
                     <strong className="text-gray-900">Pilot Program</strong>
                     <p className="text-gray-600">Start with a pilot to demonstrate value and refine the approach</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <span className="flex-shrink-0 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-semibold mr-3">4</span>
+                  <span className="flex-shrink-0 w-6 h-6 bg-secondary text-white rounded-full flex items-center justify-center text-xs font-semibold mr-3">4</span>
                   <div>
                     <strong className="text-gray-900">Full Implementation</strong>
                     <p className="text-gray-600">Scale the solution across your enterprise with our support</p>
@@ -126,7 +126,7 @@ const ContactPage: React.FC = () => {
                       id="firstName"
                       name="firstName"
                       required
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-secondary"
                     />
                   </div>
                   <div>
@@ -138,7 +138,7 @@ const ContactPage: React.FC = () => {
                       id="lastName"
                       name="lastName"
                       required
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-secondary"
                     />
                   </div>
                 </div>
@@ -152,7 +152,7 @@ const ContactPage: React.FC = () => {
                     id="email"
                     name="email"
                     required
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-secondary"
                   />
                 </div>
                 
@@ -165,7 +165,7 @@ const ContactPage: React.FC = () => {
                     id="company"
                     name="company"
                     required
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-secondary"
                   />
                 </div>
                 
@@ -177,7 +177,7 @@ const ContactPage: React.FC = () => {
                     type="tel"
                     id="phone"
                     name="phone"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-secondary"
                   />
                 </div>
                 
@@ -189,7 +189,7 @@ const ContactPage: React.FC = () => {
                     id="interest"
                     name="interest"
                     required
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-secondary"
                   >
                     <option value="">Select an option</option>
                     <option value="technical-debt">Technical Debt Analysis</option>
@@ -210,7 +210,7 @@ const ContactPage: React.FC = () => {
                     id="message"
                     name="message"
                     rows={4}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-secondary"
                     placeholder="Describe your current challenges and what you're hoping to achieve..."
                   />
                 </div>
@@ -231,7 +231,7 @@ const ContactPage: React.FC = () => {
                 
                 <button
                   type="submit"
-                  className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-[1.02]"
+                  className="w-full px-6 py-3 bg-innovation-gradient text-white font-semibold rounded-lg hover:from-brand-blue-700 hover:to-brand-purple-700 transition-all transform hover:scale-[1.02]"
                 >
                   Send Message
                 </button>
@@ -245,7 +245,7 @@ const ContactPage: React.FC = () => {
             {/* Alternative Contact Methods */}
             <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="bg-white rounded-lg border border-gray-200 p-4 hover:shadow-md transition-all">
-                <CalendarIcon className="h-6 w-6 text-blue-600 mb-2" />
+                <CalendarIcon className="h-6 w-6 text-secondary mb-2" />
                 <h4 className="font-semibold text-gray-900 mb-1">Schedule a Demo</h4>
                 <p className="text-sm text-gray-600">
                   Book a personalized demo to see our solutions in action
@@ -253,7 +253,7 @@ const ContactPage: React.FC = () => {
               </div>
               
               <div className="bg-white rounded-lg border border-gray-200 p-4 hover:shadow-md transition-all">
-                <ChatBubbleLeftRightIcon className="h-6 w-6 text-purple-600 mb-2" />
+                <ChatBubbleLeftRightIcon className="h-6 w-6 text-brand-purple-600 mb-2" />
                 <h4 className="font-semibold text-gray-900 mb-1">Technical Discussion</h4>
                 <p className="text-sm text-gray-600">
                   Speak with our architects about your technical requirements
@@ -272,29 +272,29 @@ const ContactPage: React.FC = () => {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3">
-                <MapPinIcon className="h-6 w-6 text-blue-600" />
+              <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <MapPinIcon className="h-6 w-6 text-secondary" />
               </div>
               <h3 className="font-semibold text-gray-900">North America</h3>
               <p className="text-sm text-gray-600">United States</p>
             </div>
             <div className="text-center">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-3">
-                <MapPinIcon className="h-6 w-6 text-purple-600" />
+              <div className="w-12 h-12 bg-brand-purple-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <MapPinIcon className="h-6 w-6 text-brand-purple-600" />
               </div>
               <h3 className="font-semibold text-gray-900">Asia Pacific</h3>
               <p className="text-sm text-gray-600">India, Singapore</p>
             </div>
             <div className="text-center">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-3">
-                <MapPinIcon className="h-6 w-6 text-green-600" />
+              <div className="w-12 h-12 bg-success/10 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <MapPinIcon className="h-6 w-6 text-success" />
               </div>
               <h3 className="font-semibold text-gray-900">Europe</h3>
               <p className="text-sm text-gray-600">United Kingdom</p>
             </div>
             <div className="text-center">
-              <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-3">
-                <MapPinIcon className="h-6 w-6 text-orange-600" />
+              <div className="w-12 h-12 bg-warning/10 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <MapPinIcon className="h-6 w-6 text-warning" />
               </div>
               <h3 className="font-semibold text-gray-900">Middle East</h3>
               <p className="text-sm text-gray-600">UAE</p>

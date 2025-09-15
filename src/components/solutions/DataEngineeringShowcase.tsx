@@ -214,7 +214,7 @@ const DataEngineeringShowcase: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
-              <CircleStackIcon className="h-8 w-8 text-indigo-600 mr-3" />
+              <CircleStackIcon className="h-8 w-8 text-brand-purple-600 mr-3" />
               <div>
                 <h1 className="text-2xl font-bold text-gray-900">Enterprise Data Transformation Platform</h1>
                 <p className="text-sm text-gray-600 mt-1">AI-Powered Data Engineering with Autonomous Agents</p>
@@ -222,7 +222,7 @@ const DataEngineeringShowcase: React.FC = () => {
             </div>
             <Link
               to="/solutions/data-engineering"
-              className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors flex items-center"
+              className="px-4 py-2 bg-brand-purple-600 text-white rounded-lg hover:bg-brand-purple-700 transition-colors flex items-center"
             >
               View Deep Dive
               <ArrowRightIcon className="h-4 w-4 ml-2" />
@@ -247,27 +247,27 @@ const DataEngineeringShowcase: React.FC = () => {
               </p>
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-4">
-                  <p className="text-3xl font-bold text-indigo-600">10TB+</p>
+                  <p className="text-3xl font-bold text-brand-purple-600">10TB+</p>
                   <p className="text-sm text-gray-600">Hourly Processing</p>
                 </div>
                 <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-lg p-4">
-                  <p className="text-3xl font-bold text-green-600">99.99%</p>
+                  <p className="text-3xl font-bold text-success">99.99%</p>
                   <p className="text-sm text-gray-600">Pipeline Uptime</p>
                 </div>
                 <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-4">
-                  <p className="text-3xl font-bold text-purple-600">70%</p>
+                  <p className="text-3xl font-bold text-brand-purple-600">70%</p>
                   <p className="text-sm text-gray-600">Cost Reduction</p>
                 </div>
                 <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-4">
-                  <p className="text-3xl font-bold text-blue-600">&lt;100ms</p>
+                  <p className="text-3xl font-bold text-secondary">&lt;100ms</p>
                   <p className="text-sm text-gray-600">Query Latency</p>
                 </div>
               </div>
               <div className="flex space-x-4">
-                <button className="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
+                <button className="px-6 py-3 bg-brand-purple-600 text-white rounded-lg hover:bg-brand-purple-700 transition-colors">
                   Schedule Demo
                 </button>
-                <button className="px-6 py-3 bg-white text-indigo-600 border border-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors">
+                <button className="px-6 py-3 bg-white text-brand-purple-600 border border-brand-purple-600 rounded-lg hover:bg-brand-purple-50 transition-colors">
                   View Case Studies
                 </button>
               </div>
@@ -312,7 +312,7 @@ const DataEngineeringShowcase: React.FC = () => {
                   onClick={() => setActiveTab(key)}
                   className={`px-4 py-2 rounded-md font-medium transition-colors ${
                     activeTab === key
-                      ? 'bg-indigo-600 text-white'
+                      ? 'bg-brand-purple-600 text-white'
                       : 'text-gray-600 hover:text-gray-900'
                   }`}
                 >
@@ -326,7 +326,7 @@ const DataEngineeringShowcase: React.FC = () => {
             {dataAgents[activeTab as keyof typeof dataAgents].agents.map((agent, index) => (
               <div key={index} className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                 <div className="flex items-start justify-between mb-4">
-                  <CpuChipIcon className="h-8 w-8 text-indigo-600" />
+                  <CpuChipIcon className="h-8 w-8 text-brand-purple-600" />
                   <span className="text-xs font-semibold bg-indigo-100 text-indigo-700 px-2 py-1 rounded">
                     {agent.performance}
                   </span>
@@ -370,7 +370,7 @@ const DataEngineeringShowcase: React.FC = () => {
                     <div className="grid grid-cols-2 gap-2">
                       {Object.entries(useCase.metrics).map(([key, value]) => (
                         <div key={key} className="text-center">
-                          <p className="text-lg font-bold text-indigo-600">{value}</p>
+                          <p className="text-lg font-bold text-brand-purple-600">{value}</p>
                           <p className="text-xs text-gray-600">{key}</p>
                         </div>
                       ))}
@@ -390,14 +390,14 @@ const DataEngineeringShowcase: React.FC = () => {
             <div className="relative grid grid-cols-5 gap-4">
               {implementationPhases.map((phase, index) => (
                 <div key={index} className="relative">
-                  <div className="absolute left-1/2 -translate-x-1/2 -top-2 w-4 h-4 bg-indigo-600 rounded-full ring-4 ring-white"></div>
+                  <div className="absolute left-1/2 -translate-x-1/2 -top-2 w-4 h-4 bg-brand-purple-600 rounded-full ring-4 ring-white"></div>
                   <div className="mt-8 bg-gray-50 rounded-lg p-4">
                     <h3 className="font-semibold text-gray-900 mb-1">{phase.phase}</h3>
-                    <p className="text-xs text-indigo-600 font-semibold mb-3">{phase.weeks}</p>
+                    <p className="text-xs text-brand-purple-600 font-semibold mb-3">{phase.weeks}</p>
                     <ul className="space-y-1">
                       {phase.activities.map((activity, idx) => (
                         <li key={idx} className="text-xs text-gray-600 flex items-start">
-                          <span className="text-indigo-600 mr-1">•</span>
+                          <span className="text-brand-purple-600 mr-1">•</span>
                           {activity}
                         </li>
                       ))}

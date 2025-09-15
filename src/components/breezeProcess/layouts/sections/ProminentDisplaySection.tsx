@@ -81,6 +81,18 @@ const ProminentDisplaySection: React.FC<ProminentDisplaySectionProps> = ({
     containerStyle
   } = content;
 
+  // Check if background is dark
+  const isDarkBackground = backgroundGradient && (
+    backgroundGradient.includes('gray-900') || 
+    backgroundGradient.includes('gray-800') || 
+    backgroundGradient.includes('gray-700') ||
+    backgroundGradient.includes('black') ||
+    backgroundGradient.includes('innovation-gradient') ||
+    backgroundGradient.includes('purple-900') ||
+    backgroundGradient.includes('purple-800') ||
+    backgroundGradient.includes('purple-700')
+  );
+
   // Determine container styling based on variant and containerStyle
   const getContainerClass = () => {
     const baseClassName = className;
@@ -95,7 +107,7 @@ const ProminentDisplaySection: React.FC<ProminentDisplaySectionProps> = ({
       case 'gradient':
         return `bg-gradient-to-r ${backgroundGradient || 'from-blue-50 to-purple-50'} rounded-xl p-8 mb-8 border-l-4 ${borderColor || 'border-blue-500'} ${baseClassName}`;
       case 'cta':
-        return `bg-gradient-to-r ${backgroundGradient || 'from-blue-600 to-purple-600'} text-white rounded-xl p-8 text-center ${baseClassName}`;
+        return `bg-gradient-to-r ${backgroundGradient || 'from-secondary to-brand-purple-600'} text-white rounded-xl p-8 text-center ${baseClassName}`;
       case 'minimal':
         return `mb-12 ${getAlignmentClass()} ${baseClassName}`;
       default:
@@ -120,8 +132,11 @@ const ProminentDisplaySection: React.FC<ProminentDisplaySectionProps> = ({
                     size === 'small' ? 'text-xl' : 
                     'text-2xl';
     
-    const baseColor = variant === 'cta' ? 'text-white' :
-                     titleColor || 'text-gray-800';
+    // Use provided titleColor if available, otherwise determine based on background
+    const baseColor = titleColor ? titleColor :
+                     variant === 'cta' ? 'text-white' :
+                     isDarkBackground ? 'text-white' :
+                     'text-gray-800';
     
     return `${baseSize} font-bold ${baseColor} mb-4`;
   };
@@ -129,8 +144,10 @@ const ProminentDisplaySection: React.FC<ProminentDisplaySectionProps> = ({
   // Get subtitle class
   const getSubtitleClass = () => {
     const baseSize = variant === 'header' ? 'text-xl' : 'text-lg';
-    const baseColor = variant === 'cta' ? 'text-white opacity-90' :
-                     subtitleColor || 'text-gray-700';
+    const baseColor = subtitleColor ? subtitleColor :
+                     variant === 'cta' ? 'text-white opacity-90' :
+                     isDarkBackground ? 'text-gray-200' :
+                     'text-gray-700';
     
     return `${baseSize} font-semibold ${baseColor} mb-4`;
   };
@@ -138,8 +155,10 @@ const ProminentDisplaySection: React.FC<ProminentDisplaySectionProps> = ({
   // Get description class
   const getDescriptionClass = () => {
     const baseSize = variant === 'header' ? 'text-xl' : 'text-lg';
-    const baseColor = variant === 'cta' ? 'text-white opacity-90' :
-                     textColor || 'text-gray-700';
+    const baseColor = textColor ? textColor :
+                     variant === 'cta' ? 'text-white opacity-90' :
+                     isDarkBackground ? 'text-gray-200' :
+                     'text-gray-700';
     const maxWidth = variant === 'header' ? 'max-w-4xl mx-auto' : '';
     
     return `${baseSize} ${baseColor} mb-6 leading-relaxed ${maxWidth}`;
@@ -247,7 +266,7 @@ const ProminentDisplaySection: React.FC<ProminentDisplaySectionProps> = ({
         <div className="mt-8">
           <button
             onClick={handleButtonClick}
-            className="inline-flex items-center gap-3 bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+            className="inline-flex items-center gap-3 bg-white text-secondary px-8 py-4 rounded-full font-bold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
           >
             {buttonText}
             <span className="text-2xl">{buttonIcon}</span>

@@ -275,7 +275,7 @@ const ComponentComparator: React.FC = () => {
   const getProductColor = (product: string) => {
     const colors = {
       phoenix: { bg: 'bg-red-50', border: 'border-red-200', text: 'text-red-800', accent: 'bg-red-500' },
-      apollo: { bg: 'bg-blue-50', border: 'border-blue-200', text: 'text-blue-800', accent: 'bg-blue-500' },
+      apollo: { bg: 'bg-secondary/10', border: 'border-blue-200', text: 'text-secondary', accent: 'bg-secondary/100' },
       voyager: { bg: 'bg-purple-50', border: 'border-purple-200', text: 'text-purple-800', accent: 'bg-purple-500' }
     };
     return colors[product as keyof typeof colors] || colors.phoenix;
@@ -371,17 +371,17 @@ const ComponentComparator: React.FC = () => {
       statusColor = 'bg-red-100 text-red-700';
     } else {
       borderColor = 'border-blue-200';
-      bgColor = 'bg-blue-50';
+      bgColor = 'bg-secondary/10';
       borderBgColor = 'border-blue-200';
       statusText = 'Analysis Level';
-      statusColor = 'bg-blue-100 text-blue-700';
+      statusColor = 'bg-blue-100 text-secondary';
     }
     
     return (
       <div className={`mb-6 border ${borderColor} rounded-lg overflow-hidden`}>
         <div className={`${bgColor} px-4 py-3 border-b ${borderBgColor}`}>
           <div className="flex items-center justify-between">
-            <h4 className="font-semibold text-blue-900 capitalize">
+            <h4 className="font-semibold text-secondary capitalize">
               {group.level.replace('_', ' ')} Level {isOverlap ? '(Following Overlap Path)' : isDivergence ? '(Algorithm Stops Here)' : ''}
             </h4>
             <div className="flex items-center space-x-4">
@@ -389,7 +389,7 @@ const ComponentComparator: React.FC = () => {
                 {statusText}
               </span>
               {(group as any).allNodes && (
-                <span className="text-xs text-blue-600">
+                <span className="text-xs text-secondary">
                   {isOverlap ? 'Overlapping:' : 'Available:'} P:{(group as any).allNodes.phoenix.length} A:{(group as any).allNodes.apollo.length} V:{(group as any).allNodes.voyager.length}
                 </span>
               )}
@@ -427,12 +427,12 @@ const ComponentComparator: React.FC = () => {
                   </div>
                 </div>
                 <div>
-                  <h6 className="text-xs font-medium text-blue-700 mb-2">
+                  <h6 className="text-xs font-medium text-secondary mb-2">
                     Apollo {isOverlap ? 'Overlapping' : 'Nodes'} ({(group as any).allNodes.apollo.length})
                   </h6>
                   <div className="space-y-1">
                     {(group as any).allNodes.apollo.slice(0, 4).map((node: OntologyNode, i: number) => (
-                      <div key={i} className={`text-xs text-gray-600 px-2 py-1 rounded truncate border ${isOverlap ? 'bg-green-50 border-green-200' : isDivergence ? 'bg-red-50 border-red-200' : 'bg-blue-50 border-blue-200'}`}>
+                      <div key={i} className={`text-xs text-gray-600 px-2 py-1 rounded truncate border ${isOverlap ? 'bg-green-50 border-green-200' : isDivergence ? 'bg-red-50 border-red-200' : 'bg-secondary/10 border-blue-200'}`}>
                         <div className="font-medium">{node.name}</div>
                         {isOverlap && <div className="text-xs text-green-600">✓ In overlap path</div>}
                       </div>
@@ -518,11 +518,11 @@ const ComponentComparator: React.FC = () => {
                 </div>
               </div>
               <div>
-                <h6 className="text-xs font-medium text-blue-700 mb-2">Apollo ({(group as any).allNodes.apollo.length} nodes)</h6>
+                <h6 className="text-xs font-medium text-secondary mb-2">Apollo ({(group as any).allNodes.apollo.length} nodes)</h6>
                 <div className="space-y-1 max-h-48 overflow-y-auto">
                   {(group as any).allNodes.apollo.length > 0 ? (
                     (group as any).allNodes.apollo.map((node: OntologyNode, i: number) => (
-                      <div key={i} className="text-xs text-gray-600 bg-blue-50 px-2 py-1 rounded border border-blue-200">
+                      <div key={i} className="text-xs text-gray-600 bg-secondary/10 px-2 py-1 rounded border border-blue-200">
                         <div className="font-medium">{node.name}</div>
                         <div className="text-gray-500 text-xs truncate">{node.description}</div>
                       </div>
@@ -595,11 +595,11 @@ const ComponentComparator: React.FC = () => {
                 </div>
               </div>
               <div>
-                <h6 className="text-xs font-medium text-blue-700 mb-2">Apollo ({(group as any).allNodes.apollo.length} nodes)</h6>
+                <h6 className="text-xs font-medium text-secondary mb-2">Apollo ({(group as any).allNodes.apollo.length} nodes)</h6>
                 <div className="space-y-1 max-h-48 overflow-y-auto">
                   {(group as any).allNodes.apollo.length > 0 ? (
                     (group as any).allNodes.apollo.map((node: OntologyNode, i: number) => (
-                      <div key={i} className="text-xs text-gray-600 bg-blue-50 px-2 py-1 rounded border border-blue-200">
+                      <div key={i} className="text-xs text-gray-600 bg-secondary/10 px-2 py-1 rounded border border-blue-200">
                         <div className="font-medium">{node.name}</div>
                         <div className="text-gray-500 text-xs truncate">{node.description}</div>
                       </div>
@@ -672,11 +672,11 @@ const ComponentComparator: React.FC = () => {
                 </div>
               </div>
               <div>
-                <h6 className="text-xs font-medium text-blue-700 mb-2">Apollo ({(group as any).allNodes.apollo.length} nodes)</h6>
+                <h6 className="text-xs font-medium text-secondary mb-2">Apollo ({(group as any).allNodes.apollo.length} nodes)</h6>
                 <div className="space-y-1 max-h-48 overflow-y-auto">
                   {(group as any).allNodes.apollo.length > 0 ? (
                     (group as any).allNodes.apollo.map((node: OntologyNode, i: number) => (
-                      <div key={i} className="text-xs text-gray-600 bg-blue-50 px-2 py-1 rounded border border-blue-200">
+                      <div key={i} className="text-xs text-gray-600 bg-secondary/10 px-2 py-1 rounded border border-blue-200">
                         <div className="font-medium">{node.name}</div>
                         <div className="text-gray-500 text-xs truncate">{node.description}</div>
                       </div>
@@ -717,7 +717,7 @@ const ComponentComparator: React.FC = () => {
             {overlapAnalysis ? (
               <>
                 Functional → Code → Architecture/Design • 
-                Deepest overlap: <span className="font-medium text-blue-600">{overlapAnalysis.functionalBoundary.deepestOverlapLevel}</span> • 
+                Deepest overlap: <span className="font-medium text-secondary">{overlapAnalysis.functionalBoundary.deepestOverlapLevel}</span> • 
                 {overlapAnalysis.functionalBoundary.divergencePoint && (
                   <> Divergence at: <span className="font-medium text-orange-600">{overlapAnalysis.functionalBoundary.divergencePoint}</span></>
                 )}
@@ -735,8 +735,8 @@ const ComponentComparator: React.FC = () => {
           <h2 className="text-lg font-semibold text-gray-900 mb-4">Analysis Flow Progression</h2>
           <div className="flex items-center justify-center space-x-4">
             <div className="flex items-center">
-              <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">1</div>
-              <span className="ml-2 font-medium text-blue-800">Functional Overlap</span>
+              <div className="w-10 h-10 bg-secondary/100 rounded-full flex items-center justify-center text-white font-bold">1</div>
+              <span className="ml-2 font-medium text-secondary">Functional Overlap</span>
             </div>
             <div className="text-gray-400">→</div>
             <div className="flex items-center">
@@ -763,21 +763,21 @@ const ComponentComparator: React.FC = () => {
               <h2 className="text-lg font-semibold text-gray-900">Algorithm Analysis Results</h2>
               <button
                 onClick={() => setShowAdvancedAnalysis(!showAdvancedAnalysis)}
-                className="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                className="text-secondary hover:text-secondary text-sm font-medium"
               >
                 {showAdvancedAnalysis ? 'Hide Algorithm Details' : 'Show Algorithm Details'}
               </button>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-4">
-              <div className="text-center p-4 bg-blue-50 rounded-lg">
-                <div className="text-2xl font-bold text-blue-600 capitalize">
+              <div className="text-center p-4 bg-secondary/10 rounded-lg">
+                <div className="text-2xl font-bold text-secondary capitalize">
                   Persona
                 </div>
                 <div className="text-sm text-gray-600">Starting Overlap</div>
               </div>
-              <div className="text-center p-4 bg-blue-50 rounded-lg">
-                <div className="text-2xl font-bold text-blue-600 capitalize">
+              <div className="text-center p-4 bg-secondary/10 rounded-lg">
+                <div className="text-2xl font-bold text-secondary capitalize">
                   {overlapAnalysis.functionalBoundary.deepestOverlapLevel || 'None'}
                 </div>
                 <div className="text-sm text-gray-600">Deepest Overlap</div>
@@ -823,7 +823,7 @@ const ComponentComparator: React.FC = () => {
                             </div>
                           </div>
                           <div>
-                            <div className="font-medium text-blue-700">Apollo Approach ({divergence.apolloApproach.length})</div>
+                            <div className="font-medium text-secondary">Apollo Approach ({divergence.apolloApproach.length})</div>
                             <div className="text-gray-600">
                               {divergence.apolloApproach.map(n => n.name).join(', ') || 'No implementation'}
                             </div>
@@ -847,12 +847,12 @@ const ComponentComparator: React.FC = () => {
         {/* Step 1: Functional Overlap Analysis */}
         <div className="space-y-6">
           <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-            <div className="bg-blue-50 px-6 py-4 border-b border-blue-200">
+            <div className="bg-secondary/10 px-6 py-4 border-b border-blue-200">
               <div className="flex items-center">
-                <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold mr-3">1</div>
+                <div className="w-8 h-8 bg-secondary/100 rounded-full flex items-center justify-center text-white font-bold mr-3">1</div>
                 <div>
-                  <h2 className="text-xl font-semibold text-blue-900">Functional Overlap Analysis</h2>
-                  <p className="text-blue-700 text-sm">Starting with functional ontology to identify shared goals</p>
+                  <h2 className="text-xl font-semibold text-secondary">Functional Overlap Analysis</h2>
+                  <p className="text-secondary text-sm">Starting with functional ontology to identify shared goals</p>
                 </div>
               </div>
             </div>

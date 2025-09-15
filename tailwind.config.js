@@ -1,23 +1,17 @@
 /** @type {import('tailwindcss').Config} */
+const accionPreset = require('../local-app-router/accion-tailwind-preset');
+
 module.exports = {
+  presets: [accionPreset],
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     extend: {
-      colors: {
-        primary: {
-          50: '#f0f9ff',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
-        },
-        accent: {
-          500: '#8b5cf6',
-        }
-      },
+      // App-specific overrides while keeping Accion brand colors
       fontFamily: {
-        'sans': ['Inter', 'system-ui', 'sans-serif'],
+        // Keep Inter as the primary font for this app, but include brand font as fallback
+        'sans': ['Inter', 'Segoe UI', 'system-ui', 'sans-serif'],
       }
     },
   },

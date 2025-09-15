@@ -233,7 +233,7 @@ const GenAIInABox: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 py-8">
         {/* Header */}
         <div className="mb-8">
-          <div className="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold mb-4">
+          <div className="inline-block px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs font-semibold mb-4">
             Infrastructure Solution
           </div>
           <h1 className="text-3xl font-bold text-gray-900">Generative AI in a Box</h1>
@@ -257,19 +257,25 @@ const GenAIInABox: React.FC = () => {
                 onClick={() => setSelectedChallenge(key)}
                 className={`p-6 rounded-lg border-2 transition-all text-left ${
                   selectedChallenge === key 
-                    ? `border-${challenge.color}-500 bg-${challenge.color}-50` 
+                    ? (challenge.color === 'purple' ? 'border-brand-purple-500 bg-brand-purple-50' :
+                       challenge.color === 'green' ? 'border-success bg-success/10' :
+                       challenge.color === 'orange' ? 'border-warning bg-warning/10' : 'border-secondary bg-secondary/10')
                     : 'border-gray-200 hover:border-gray-300'
                 }`}
               >
                 <challenge.icon className={`h-12 w-12 ${
-                  selectedChallenge === key ? `text-${challenge.color}-600` : 'text-gray-400'
+                  selectedChallenge === key 
+                    ? (challenge.color === 'purple' ? 'text-brand-purple-600' :
+                       challenge.color === 'green' ? 'text-success' :
+                       challenge.color === 'orange' ? 'text-warning' : 'text-secondary')
+                    : 'text-gray-400'
                 } mb-4`} />
                 <h3 className="font-semibold text-gray-900 mb-2">{challenge.name}</h3>
                 <p className="text-sm text-gray-600 mb-3">{challenge.description}</p>
                 {selectedChallenge === key && (
                   <div className="mt-3 pt-3 border-t border-gray-200">
-                    <p className="text-sm font-semibold text-green-700">Solution:</p>
-                    <p className="text-sm text-green-600">{challenge.solution}</p>
+                    <p className="text-sm font-semibold text-success">Solution:</p>
+                    <p className="text-sm text-success">{challenge.solution}</p>
                   </div>
                 )}
               </button>
@@ -283,12 +289,12 @@ const GenAIInABox: React.FC = () => {
           
           {/* Visual Architecture Stack */}
           <div className="relative">
-            <div className="absolute right-4 top-4 bottom-4 w-32 bg-green-100 rounded-lg flex items-center justify-center">
+            <div className="absolute right-4 top-4 bottom-4 w-32 bg-success/20 rounded-lg flex items-center justify-center">
               <div className="text-center">
-                <ShieldCheckIcon className="h-8 w-8 text-green-600 mx-auto mb-2" />
-                <p className="text-sm font-semibold text-green-700">API &</p>
-                <p className="text-sm font-semibold text-green-700">Security</p>
-                <p className="text-sm font-semibold text-green-700">Layer</p>
+                <ShieldCheckIcon className="h-8 w-8 text-success mx-auto mb-2" />
+                <p className="text-sm font-semibold text-success">API &</p>
+                <p className="text-sm font-semibold text-success">Security</p>
+                <p className="text-sm font-semibold text-success">Layer</p>
               </div>
             </div>
             
@@ -296,25 +302,25 @@ const GenAIInABox: React.FC = () => {
               {/* KAPS Framework Layer */}
               <div 
                 className={`border-2 rounded-lg p-4 cursor-pointer transition-all ${
-                  selectedLayer === 'kaps' ? 'border-purple-500 bg-purple-50' : 'border-gray-200'
+                  selectedLayer === 'kaps' ? 'border-brand-purple-500 bg-brand-purple-50' : 'border-gray-200'
                 }`}
                 onClick={() => setSelectedLayer('kaps')}
               >
                 <h3 className="font-semibold text-gray-900 mb-3">KAPS Framework by Accion Labs</h3>
-                <div className="bg-purple-600 text-white rounded p-2 mb-2 text-center text-sm">
+                <div className="bg-brand-purple-600 text-white rounded p-2 mb-2 text-center text-sm">
                   Business Applications User Interface
                 </div>
                 <div className="grid grid-cols-4 gap-2 mb-2">
-                  <div className="bg-purple-500 text-white rounded p-2 text-center text-xs">
+                  <div className="bg-brand-purple-500 text-white rounded p-2 text-center text-xs">
                     Knowledge Assistant
                   </div>
-                  <div className="bg-purple-500 text-white rounded p-2 text-center text-xs">
+                  <div className="bg-brand-purple-500 text-white rounded p-2 text-center text-xs">
                     Generative BI
                   </div>
-                  <div className="bg-purple-500 text-white rounded p-2 text-center text-xs">
+                  <div className="bg-brand-purple-500 text-white rounded p-2 text-center text-xs">
                     Process Automation
                   </div>
-                  <div className="bg-purple-500 text-white rounded p-2 text-center text-xs">
+                  <div className="bg-brand-purple-500 text-white rounded p-2 text-center text-xs">
                     OnePane API Hub
                   </div>
                 </div>
@@ -326,28 +332,28 @@ const GenAIInABox: React.FC = () => {
               {/* LLM Infrastructure Layer */}
               <div 
                 className={`border-2 rounded-lg p-4 cursor-pointer transition-all ${
-                  selectedLayer === 'llm' ? 'border-orange-500 bg-orange-50' : 'border-gray-200'
+                  selectedLayer === 'llm' ? 'border-warning bg-warning/10' : 'border-gray-200'
                 }`}
                 onClick={() => setSelectedLayer('llm')}
               >
                 <h3 className="font-semibold text-gray-900 mb-3">LLM Infrastructure Layer (ex. NVIDIA Nemo)</h3>
                 <div className="grid grid-cols-6 gap-2">
-                  <div className="bg-orange-400 text-white rounded p-2 text-center text-xs">
+                  <div className="bg-warning text-white rounded p-2 text-center text-xs">
                     Llama
                   </div>
-                  <div className="bg-orange-400 text-white rounded p-2 text-center text-xs">
+                  <div className="bg-warning text-white rounded p-2 text-center text-xs">
                     Mistral
                   </div>
-                  <div className="bg-orange-400 text-white rounded p-2 text-center text-xs">
+                  <div className="bg-warning text-white rounded p-2 text-center text-xs">
                     Mixtral
                   </div>
-                  <div className="bg-orange-300 rounded p-2 text-center text-xs text-white">
+                  <div className="bg-warning/80 rounded p-2 text-center text-xs text-white">
                     DeepSeek
                   </div>
-                  <div className="bg-orange-300 rounded p-2 text-center text-xs text-white">
+                  <div className="bg-warning/80 rounded p-2 text-center text-xs text-white">
                     Qwen
                   </div>
-                  <div className="bg-orange-300 rounded p-2 text-center text-xs text-white">
+                  <div className="bg-warning/80 rounded p-2 text-center text-xs text-white">
                     Custom
                   </div>
                 </div>
@@ -356,17 +362,17 @@ const GenAIInABox: React.FC = () => {
               {/* Design Blueprint */}
               <div 
                 className={`border-2 rounded-lg p-3 cursor-pointer transition-all ${
-                  selectedLayer === 'blueprint' ? 'border-blue-500 bg-blue-50' : 'border-gray-200'
+                  selectedLayer === 'blueprint' ? 'border-secondary bg-secondary/10' : 'border-gray-200'
                 }`}
                 onClick={() => setSelectedLayer('blueprint')}
               >
-                <div className="bg-blue-600 text-white rounded p-2 text-center">
+                <div className="bg-secondary text-white rounded p-2 text-center">
                   Generative AI Design Blueprint
                 </div>
               </div>
 
               {/* Operating System */}
-              <div className="bg-orange-400 text-white rounded p-2 text-center">
+              <div className="bg-warning text-white rounded p-2 text-center">
                 Operating System
               </div>
 
@@ -377,10 +383,10 @@ const GenAIInABox: React.FC = () => {
                 }`}
                 onClick={() => setSelectedLayer('infrastructure')}
               >
-                <div className="bg-blue-600 text-white rounded p-3 text-center">
+                <div className="bg-secondary text-white rounded p-3 text-center">
                   Dell / Lenovo Servers
                 </div>
-                <div className="bg-orange-400 text-white rounded p-3 text-center">
+                <div className="bg-warning text-white rounded p-3 text-center">
                   Nvidia GPUs
                 </div>
               </div>
@@ -396,7 +402,7 @@ const GenAIInABox: React.FC = () => {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
                 {architectureLayers[selectedLayer as keyof typeof architectureLayers].components.map((component, index) => (
                   <div key={index} className="text-sm text-gray-600 flex items-center">
-                    <CheckCircleIcon className="h-4 w-4 text-green-500 mr-1" />
+                    <CheckCircleIcon className="h-4 w-4 text-success mr-1" />
                     {component.name}
                   </div>
                 ))}
@@ -410,9 +416,9 @@ const GenAIInABox: React.FC = () => {
           <h2 className="text-2xl font-semibold text-gray-900 mb-6">Overcoming Adoption Barriers</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {adoptionBarriers.map((barrier, index) => (
-              <div key={index} className="border-l-4 border-blue-500 pl-4">
+              <div key={index} className="border-l-4 border-secondary pl-4">
                 <div className="flex items-center mb-3">
-                  <barrier.icon className="h-6 w-6 text-blue-600 mr-2" />
+                  <barrier.icon className="h-6 w-6 text-secondary mr-2" />
                   <h3 className="font-semibold text-gray-900">{barrier.title}</h3>
                 </div>
                 <ul className="space-y-2">
@@ -428,38 +434,38 @@ const GenAIInABox: React.FC = () => {
         </div>
 
         {/* Cost Comparison */}
-        <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-xl p-8 mb-8">
+        <div className="bg-gradient-to-r from-secondary to-brand-blue-800 text-white rounded-xl p-8 mb-8">
           <h2 className="text-2xl font-semibold mb-6">Cost Efficiency Analysis</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <h3 className="text-lg font-semibold mb-4">Dell On-Premise vs Public Cloud</h3>
               <div className="bg-white/10 rounded-lg p-4">
                 <div className="flex justify-between items-center mb-3">
-                  <span className="text-blue-100">vs Public Cloud IaaS</span>
+                  <span className="text-white/80">vs Public Cloud IaaS</span>
                   <span className="text-2xl font-bold">{costComparison.savings.iaas}</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-blue-100">vs Token-based API</span>
+                  <span className="text-white/80">vs Token-based API</span>
                   <span className="text-2xl font-bold">{costComparison.savings.api}</span>
                 </div>
-                <p className="text-xs text-blue-200 mt-3">More cost-effective over 3 years</p>
+                <p className="text-xs text-white/70 mt-3">More cost-effective over 3 years</p>
               </div>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-4">Expected Cost for 70B Parameter LLM</h3>
               <div className="space-y-2">
                 <div className="flex justify-between items-center">
-                  <span className="text-blue-100">5k users</span>
+                  <span className="text-white/80">5k users</span>
                   <div className="flex items-center">
-                    <span className="text-green-300 mr-2">On-prem</span>
+                    <span className="text-white/90 mr-2">On-prem</span>
                     <span className="text-red-300 line-through mr-2">Cloud</span>
                     <span className="text-yellow-300 font-semibold">38% savings</span>
                   </div>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-blue-100">50k users</span>
+                  <span className="text-white/80">50k users</span>
                   <div className="flex items-center">
-                    <span className="text-green-300 mr-2">On-prem</span>
+                    <span className="text-white/90 mr-2">On-prem</span>
                     <span className="text-red-300 line-through mr-2">Cloud</span>
                     <span className="text-yellow-300 font-semibold">75% savings</span>
                   </div>
@@ -482,28 +488,28 @@ const GenAIInABox: React.FC = () => {
               <h3 className="font-semibold text-gray-900 mb-4">Why Use SLMs?</h3>
               <div className="space-y-3">
                 <div className="flex items-start">
-                  <BoltIcon className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <BoltIcon className="h-5 w-5 text-success mr-2 mt-0.5" />
                   <div>
                     <p className="font-medium text-gray-900">Optimized Performance</p>
                     <p className="text-sm text-gray-600">Works well on-premise or edge devices</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <ShieldCheckIcon className="h-5 w-5 text-blue-500 mr-2 mt-0.5" />
+                  <ShieldCheckIcon className="h-5 w-5 text-secondary mr-2 mt-0.5" />
                   <div>
                     <p className="font-medium text-gray-900">Security & Compliance</p>
                     <p className="text-sm text-gray-600">Can be deployed in controlled environments</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <CogIcon className="h-5 w-5 text-purple-500 mr-2 mt-0.5" />
+                  <CogIcon className="h-5 w-5 text-brand-purple-600 mr-2 mt-0.5" />
                   <div>
                     <p className="font-medium text-gray-900">Customization & Control</p>
                     <p className="text-sm text-gray-600">More adaptable for business-specific tasks</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <ChartBarIcon className="h-5 w-5 text-orange-500 mr-2 mt-0.5" />
+                  <ChartBarIcon className="h-5 w-5 text-warning mr-2 mt-0.5" />
                   <div>
                     <p className="font-medium text-gray-900">Scalability</p>
                     <p className="text-sm text-gray-600">Ideal for enterprises without massive infrastructure</p>
@@ -540,15 +546,15 @@ const GenAIInABox: React.FC = () => {
             />
           </div>
           
-          <div className="mt-6 p-4 bg-blue-50 rounded-lg text-center">
-            <p className="text-sm font-semibold text-blue-900">
+          <div className="mt-6 p-4 bg-secondary/10 rounded-lg text-center">
+            <p className="text-sm font-semibold text-secondary">
               Simplify your AI journey with Accion and Partner Technologies
             </p>
           </div>
         </div>
 
         {/* Business Benefits */}
-        <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-xl border border-gray-200 p-8">
+        <div className="bg-gradient-to-r from-brand-purple-50 to-brand-blue-50 rounded-xl border border-gray-200 p-8">
           <h2 className="text-2xl font-semibold text-gray-900 mb-6">Business Benefits</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {businessBenefits.map((benefit, index) => (
@@ -557,7 +563,7 @@ const GenAIInABox: React.FC = () => {
                 <ul className="space-y-2">
                   {benefit.items.map((item, idx) => (
                     <li key={idx} className="flex items-start">
-                      <CheckCircleIcon className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <CheckCircleIcon className="h-4 w-4 text-success mr-2 mt-0.5 flex-shrink-0" />
                       <span className="text-sm text-gray-600">{item}</span>
                     </li>
                   ))}

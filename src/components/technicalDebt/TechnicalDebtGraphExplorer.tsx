@@ -161,12 +161,12 @@ const TechnicalDebtGraphExplorer: React.FC = () => {
           return '#FFA500';
         }
         switch(d.type) {
-          case 'imports': return '#3B82F6';
-          case 'calls': return '#10B981';
-          case 'accesses': return '#EF4444';
-          case 'uses': return '#8B5CF6';
-          case 'extends': return '#F59E0B';
-          case 'implements': return '#06B6D4';
+          case 'imports': return '#1E40AF'; // secondary color
+          case 'calls': return '#059669'; // success color
+          case 'accesses': return '#DC2626'; // error color
+          case 'uses': return '#7C3AED'; // brand purple
+          case 'extends': return '#D97706'; // warning color
+          case 'implements': return '#0891B2'; // cyan shade
           default: return '#6B7280';
         }
       })
@@ -218,9 +218,9 @@ const TechnicalDebtGraphExplorer: React.FC = () => {
       .attr('fill', (d) => {
         // Ontology nodes have their own colors
         switch(d.type) {
-          case 'functional': return '#DBEAFE';
-          case 'design': return '#EDE9FE';
-          case 'architecture': return '#D1FAE5';
+          case 'functional': return '#DBEAFE'; // keeping light blue
+          case 'design': return '#EDE9FE'; // keeping light purple
+          case 'architecture': return '#D1FAE5'; // keeping light green
           // Code node types
           case 'frontend': return '#FEF3C7';
           case 'backend': return '#FED7AA';
@@ -235,15 +235,15 @@ const TechnicalDebtGraphExplorer: React.FC = () => {
           return '#EF4444';
         }
         switch(d.type) {
-          case 'functional': return '#3B82F6';
-          case 'design': return '#8B5CF6';
-          case 'architecture': return '#10B981';
+          case 'functional': return '#1E40AF'; // secondary
+          case 'design': return '#7C3AED'; // brand purple
+          case 'architecture': return '#059669'; // success
           // Code node types
-          case 'frontend': return '#F59E0B';
-          case 'backend': return '#EA580C';
-          case 'database': return '#EF4444';
-          case 'api': return '#7C3AED';
-          case 'library': return '#0D9488';
+          case 'frontend': return '#D97706'; // warning
+          case 'backend': return '#EA580C'; // keeping orange
+          case 'database': return '#DC2626'; // error
+          case 'api': return '#7C3AED'; // brand purple
+          case 'library': return '#0F766E'; // teal
           default: return '#6B7280';
         }
       })
@@ -402,19 +402,19 @@ const TechnicalDebtGraphExplorer: React.FC = () => {
             <h4 className="font-medium text-gray-900 mb-3">Legend</h4>
             <div className="space-y-2 text-xs">
               <div className="flex items-center">
-                <div className="w-3 h-3 bg-blue-100 border-2 border-blue-500 rounded-full mr-2"></div>
+                <div className="w-3 h-3 bg-secondary-light border-2 border-secondary rounded-full mr-2"></div>
                 <span>Functional</span>
               </div>
               <div className="flex items-center">
-                <div className="w-3 h-3 bg-purple-100 border-2 border-purple-500 rounded-full mr-2"></div>
+                <div className="w-3 h-3 bg-brand-purple-100 border-2 border-brand-purple-500 rounded-full mr-2"></div>
                 <span>Design</span>
               </div>
               <div className="flex items-center">
-                <div className="w-3 h-3 bg-green-100 border-2 border-green-500 rounded-full mr-2"></div>
+                <div className="w-3 h-3 bg-success-light border-2 border-success rounded-full mr-2"></div>
                 <span>Architecture</span>
               </div>
               <div className="flex items-center">
-                <div className="w-3 h-3 bg-orange-100 border-2 border-orange-500 rounded-full mr-2"></div>
+                <div className="w-3 h-3 bg-warning-light border-2 border-warning rounded-full mr-2"></div>
                 <span>Code</span>
               </div>
             </div>
@@ -422,24 +422,24 @@ const TechnicalDebtGraphExplorer: React.FC = () => {
             <div className="mt-4 space-y-2 text-xs">
               <h5 className="font-medium">Edge Types:</h5>
               <div className="flex items-center">
-                <div className="w-8 h-0.5 bg-blue-500 mr-2"></div>
+                <div className="w-8 h-0.5 bg-secondary mr-2"></div>
                 <span>Imports</span>
               </div>
               <div className="flex items-center">
-                <div className="w-8 h-0.5 bg-green-500 mr-2"></div>
+                <div className="w-8 h-0.5 bg-success mr-2"></div>
                 <span>Calls</span>
               </div>
               <div className="flex items-center">
-                <div className="w-8 h-0.5 bg-red-500 mr-2"></div>
+                <div className="w-8 h-0.5 bg-error mr-2"></div>
                 <span>Accesses DB</span>
               </div>
               <div className="flex items-center">
-                <div className="w-8 h-0.5 bg-purple-500 mr-2"></div>
+                <div className="w-8 h-0.5 bg-brand-purple-500 mr-2"></div>
                 <span>Uses</span>
               </div>
               {filters.showDerivedMappings && (
                 <div className="flex items-center">
-                  <div className="w-8 h-0.5 bg-orange-500 mr-2" style={{ borderTop: '2px dashed #F97316' }}></div>
+                  <div className="w-8 h-0.5 bg-warning mr-2" style={{ borderTop: '2px dashed #D97706' }}></div>
                   <span>Derives To</span>
                 </div>
               )}

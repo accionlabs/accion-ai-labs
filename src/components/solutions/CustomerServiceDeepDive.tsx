@@ -213,7 +213,7 @@ const CustomerServiceDeepDive: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 py-8">
         {/* Header */}
         <div className="mb-8">
-          <div className="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold mb-4">
+          <div className="inline-block px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs font-semibold mb-4">
             Solution Deep Dive
           </div>
           <h1 className="text-3xl font-bold text-gray-900">Autonomous Customer Service & Support</h1>
@@ -227,28 +227,28 @@ const CustomerServiceDeepDive: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
           <div className="bg-white rounded-lg p-4 border border-gray-200">
             <div className="flex items-center justify-between">
-              <ClockIcon className="h-8 w-8 text-blue-600" />
+              <ClockIcon className="h-8 w-8 text-secondary" />
               <span className="text-2xl font-bold text-gray-900">24/7</span>
             </div>
             <p className="mt-2 text-sm text-gray-600">Availability</p>
           </div>
           <div className="bg-white rounded-lg p-4 border border-gray-200">
             <div className="flex items-center justify-between">
-              <BoltIcon className="h-8 w-8 text-green-600" />
+              <BoltIcon className="h-8 w-8 text-success" />
               <span className="text-2xl font-bold text-gray-900">78%</span>
             </div>
             <p className="mt-2 text-sm text-gray-600">First Contact Resolution</p>
           </div>
           <div className="bg-white rounded-lg p-4 border border-gray-200">
             <div className="flex items-center justify-between">
-              <ChartBarIcon className="h-8 w-8 text-purple-600" />
+              <ChartBarIcon className="h-8 w-8 text-brand-purple-600" />
               <span className="text-2xl font-bold text-gray-900">65%</span>
             </div>
             <p className="mt-2 text-sm text-gray-600">Cost Reduction</p>
           </div>
           <div className="bg-white rounded-lg p-4 border border-gray-200">
             <div className="flex items-center justify-between">
-              <GlobeAltIcon className="h-8 w-8 text-orange-600" />
+              <GlobeAltIcon className="h-8 w-8 text-warning" />
               <span className="text-2xl font-bold text-gray-900">50+</span>
             </div>
             <p className="mt-2 text-sm text-gray-600">Languages</p>
@@ -260,7 +260,7 @@ const CustomerServiceDeepDive: React.FC = () => {
           <h2 className="text-2xl font-semibold text-gray-900 mb-6">Multi-Agent Team Architecture</h2>
           
           {/* Agent Network Visualization */}
-          <div className="relative h-64 mb-8 bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg p-8">
+          <div className="relative h-64 mb-8 bg-gradient-to-br from-secondary/10 to-brand-purple-50 rounded-lg p-8">
             <div className="absolute inset-0 flex items-center justify-center">
               {/* Central Customer */}
               <div className="absolute bg-white rounded-full p-4 shadow-lg z-10">
@@ -279,7 +279,7 @@ const CustomerServiceDeepDive: React.FC = () => {
                   <button
                     key={key}
                     className={`absolute transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-full p-3 shadow-md hover:shadow-lg transition-all cursor-pointer ${
-                      selectedAgent === key ? 'ring-2 ring-blue-500 scale-110' : ''
+                      selectedAgent === key ? 'ring-2 ring-secondary scale-110' : ''
                     }`}
                     style={{ 
                       left: `calc(50% + ${x}px)`, 
@@ -390,7 +390,7 @@ const CustomerServiceDeepDive: React.FC = () => {
                 onClick={() => setActiveScenario(index)}
                 className={`pb-3 px-1 border-b-2 transition-colors ${
                   activeScenario === index 
-                    ? 'border-blue-600 text-blue-600' 
+                    ? 'border-secondary text-secondary' 
                     : 'border-transparent text-gray-600 hover:text-gray-900'
                 }`}
               >
@@ -406,9 +406,9 @@ const CustomerServiceDeepDive: React.FC = () => {
                 <div className="bg-gray-50 rounded-lg p-3">
                   <p className="text-xs text-gray-500 mb-1">Channel</p>
                   <div className="flex items-center">
-                    {customerScenarios[activeScenario].channel.includes('Chat') && <ChatBubbleBottomCenterTextIcon className="h-5 w-5 text-blue-600 mr-2" />}
-                    {customerScenarios[activeScenario].channel.includes('Phone') && <PhoneIcon className="h-5 w-5 text-green-600 mr-2" />}
-                    {customerScenarios[activeScenario].channel.includes('Email') && <EnvelopeIcon className="h-5 w-5 text-purple-600 mr-2" />}
+                    {customerScenarios[activeScenario].channel.includes('Chat') && <ChatBubbleBottomCenterTextIcon className="h-5 w-5 text-secondary mr-2" />}
+                    {customerScenarios[activeScenario].channel.includes('Phone') && <PhoneIcon className="h-5 w-5 text-success mr-2" />}
+                    {customerScenarios[activeScenario].channel.includes('Email') && <EnvelopeIcon className="h-5 w-5 text-brand-purple-600 mr-2" />}
                     <span className="text-sm font-semibold">{customerScenarios[activeScenario].channel}</span>
                   </div>
                 </div>
@@ -418,7 +418,7 @@ const CustomerServiceDeepDive: React.FC = () => {
                 </div>
                 <div className="bg-gray-50 rounded-lg p-3">
                   <p className="text-xs text-gray-500 mb-1">Outcome</p>
-                  <p className="text-sm font-semibold text-green-600">Success</p>
+                  <p className="text-sm font-semibold text-success">Success</p>
                 </div>
                 <div className="bg-gray-50 rounded-lg p-3">
                   <p className="text-xs text-gray-500 mb-1">Satisfaction</p>
@@ -463,29 +463,29 @@ const CustomerServiceDeepDive: React.FC = () => {
           <h2 className="text-2xl font-semibold text-gray-900 mb-6">Omnichannel Support Capabilities</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <ChatBubbleBottomCenterTextIcon className="h-8 w-8 text-blue-600" />
+              <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <ChatBubbleBottomCenterTextIcon className="h-8 w-8 text-secondary" />
               </div>
               <h3 className="font-semibold text-gray-900 mb-1">Web Chat</h3>
               <p className="text-xs text-gray-600">Real-time chat with context awareness</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <PhoneIcon className="h-8 w-8 text-green-600" />
+              <div className="w-16 h-16 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <PhoneIcon className="h-8 w-8 text-success" />
               </div>
               <h3 className="font-semibold text-gray-900 mb-1">Voice AI</h3>
               <p className="text-xs text-gray-600">Natural conversation with speech recognition</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <EnvelopeIcon className="h-8 w-8 text-purple-600" />
+              <div className="w-16 h-16 bg-brand-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                <EnvelopeIcon className="h-8 w-8 text-brand-purple-600" />
               </div>
               <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
               <p className="text-xs text-gray-600">Automated email processing and response</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <ChatBubbleLeftRightIcon className="h-8 w-8 text-orange-600" />
+              <div className="w-16 h-16 bg-warning/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <ChatBubbleLeftRightIcon className="h-8 w-8 text-warning" />
               </div>
               <h3 className="font-semibold text-gray-900 mb-1">Social Media</h3>
               <p className="text-xs text-gray-600">Twitter, Facebook, Instagram monitoring</p>
@@ -500,7 +500,7 @@ const CustomerServiceDeepDive: React.FC = () => {
             {implementationPhases.map((phase, index) => (
               <div key={index} className="flex">
                 <div className="flex-shrink-0">
-                  <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-semibold">
+                  <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white font-semibold">
                     {index + 1}
                   </div>
                   {index < implementationPhases.length - 1 && (
@@ -525,7 +525,7 @@ const CustomerServiceDeepDive: React.FC = () => {
         </div>
 
         {/* ROI & Benefits */}
-        <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border border-gray-200 p-8">
+        <div className="bg-gradient-to-r from-secondary/10 to-brand-purple-50 rounded-xl border border-gray-200 p-8">
           <h2 className="text-2xl font-semibold text-gray-900 mb-6">Expected ROI & Benefits</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
@@ -594,11 +594,11 @@ const CustomerServiceDeepDive: React.FC = () => {
               </div>
               <div>
                 <p className="text-sm text-gray-600">Annual Savings</p>
-                <p className="text-2xl font-bold text-green-600">$2.5M+</p>
+                <p className="text-2xl font-bold text-success">$2.5M+</p>
               </div>
               <div>
                 <p className="text-sm text-gray-600">CSAT Improvement</p>
-                <p className="text-2xl font-bold text-blue-600">+35%</p>
+                <p className="text-2xl font-bold text-secondary">+35%</p>
               </div>
             </div>
           </div>

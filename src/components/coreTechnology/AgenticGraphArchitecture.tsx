@@ -110,7 +110,7 @@ const AgenticGraphArchitecture: React.FC = () => {
               ].map((area) => (
                 <button
                   key={area.id}
-                  className={`absolute rounded-full bg-transparent hover:bg-blue-500 hover:bg-opacity-10 transition-colors cursor-pointer ${
+                  className={`absolute rounded-full bg-transparent hover:bg-secondary hover:bg-opacity-10 transition-colors cursor-pointer ${
                     selectedStage === area.id ? 'ring-2 ring-blue-500 ring-opacity-50' : ''
                   }`}
                   style={{ 
@@ -253,7 +253,7 @@ const AgenticGraphArchitecture: React.FC = () => {
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Technology Stack</h3>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-gray-50 rounded-lg p-4">
-                  <CircleStackIcon className="h-6 w-6 text-blue-600 mb-2" />
+                  <CircleStackIcon className="h-6 w-6 text-secondary mb-2" />
                   <h4 className="font-semibold text-gray-900 text-sm">Graph Database</h4>
                   <p className="text-xs text-gray-600 mt-1">Neo4j with APOC & GDS</p>
                 </div>
@@ -291,8 +291,8 @@ const AgenticGraphArchitecture: React.FC = () => {
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <span className="text-2xl font-bold text-blue-600">10x</span>
+              <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <span className="text-2xl font-bold text-secondary">10x</span>
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">Context</h3>
               <p className="text-sm text-gray-600">

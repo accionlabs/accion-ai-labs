@@ -174,7 +174,7 @@ const AnimatedSVG: React.FC<AnimatedSVGProps> = ({
               p-2 sm:p-3 rounded-lg transition-colors flex items-center gap-1 sm:gap-2
               ${currentStep === 0 
                 ? 'bg-gray-100 text-gray-400 cursor-not-allowed' 
-                : 'bg-blue-600 hover:bg-blue-700 text-white'
+                : 'bg-secondary hover:bg-brand-blue-700 text-white'
               }
             `}
             title="Previous Step"
@@ -196,7 +196,7 @@ const AnimatedSVG: React.FC<AnimatedSVGProps> = ({
               p-2 sm:p-3 rounded-lg transition-colors flex items-center gap-1 sm:gap-2
               ${currentStep === animationSteps.length - 1 
                 ? 'bg-gray-100 text-gray-400 cursor-not-allowed' 
-                : 'bg-blue-600 hover:bg-blue-700 text-white'
+                : 'bg-secondary hover:bg-brand-blue-700 text-white'
               }
             `}
             title="Next Step"
@@ -218,7 +218,7 @@ const AnimatedSVG: React.FC<AnimatedSVGProps> = ({
         {showProgressBar && (
           <div className="w-full bg-gray-200 rounded-full h-2">
             <div 
-              className="bg-blue-600 h-2 rounded-full transition-all duration-500"
+              className="bg-secondary h-2 rounded-full transition-all duration-500"
               style={{ width: `${((currentStep + 1) / animationSteps.length) * 100}%` }}
             />
           </div>
@@ -226,8 +226,8 @@ const AnimatedSVG: React.FC<AnimatedSVGProps> = ({
 
         {/* Current step description */}
         {showDescription && (
-          <div className="text-center p-3 bg-blue-50 rounded-lg">
-            <p className="text-sm font-medium text-blue-900">
+          <div className="text-center p-3 bg-secondary-light rounded-lg">
+            <p className="text-sm font-medium text-secondary">
               {animationSteps[currentStep].description}
             </p>
           </div>
@@ -244,9 +244,9 @@ const AnimatedSVG: React.FC<AnimatedSVGProps> = ({
                   className={`
                     px-2 py-1.5 sm:p-2 md:p-3 rounded text-xs font-medium transition-all
                     ${index === currentStep 
-                      ? 'bg-blue-600 text-white' 
+                      ? 'bg-secondary text-white' 
                       : index <= currentStep 
-                        ? 'bg-blue-100 text-blue-700 hover:bg-blue-200' 
+                        ? 'bg-secondary-light text-secondary hover:bg-brand-blue-200' 
                         : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
                     }
                   `}
