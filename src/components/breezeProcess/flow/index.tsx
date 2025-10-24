@@ -1,8 +1,8 @@
 import TopicCards from '../TopicCards';
-import OverviewNew from './OverviewNew';
-import Phase1New from './Phase1New';
-import Phase2 from './Phase2New';
-import Phase3 from './Phase3New';
+import Overview from './Overview';
+import Phase1 from './Phase1';
+import Phase2 from './Phase2';
+import Phase3 from './Phase3';
 
 interface ProcessFlowProps {
   initialScreen?: string;
@@ -24,13 +24,13 @@ const ProcessFlow: React.FC<ProcessFlowProps> = ({
       id: 'overview', 
       title: 'Process Overview', 
       description: 'Three-phase methodology introduction',
-      component: OverviewNew 
+      component: Overview 
     },
     { 
       id: 'phase1', 
       title: 'Phase 1: Foundation', 
       description: 'Semantic Engineering Foundation (15% Manual)',
-      component: Phase1New 
+      component: Phase1 
     },
     { 
       id: 'phase2', 

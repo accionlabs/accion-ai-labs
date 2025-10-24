@@ -24,7 +24,6 @@ import AgenticArchitecture from './components/coreTechnology/AgenticArchitecture
 import GenAIInABox from './components/coreTechnology/GenAIInABox';
 import StrategicGuardrails from './components/coreTechnology/StrategicGuardrails';
 import SolutionShowcase from './components/solutions/SolutionShowcase';
-import CustomerServiceDeepDive from './components/solutions/CustomerServiceDeepDive';
 import CustomerServiceOverview from './components/solutions/customerService/CustomerServiceOverview';
 import DataEngineeringShowcase from './components/solutions/DataEngineeringShowcase';
 import TechnicalDebtShowcase from './components/solutions/TechnicalDebtShowcase';
@@ -39,6 +38,12 @@ import AssistedHealBot from './components/solutions/customerService/AssistedHeal
 import BusinessOptimizationHub from './components/solutions/customerService/BusinessOptimizationHub';
 import ImplementationRoadmap from './components/solutions/customerService/ImplementationRoadmap';
 import ContactPage from './components/contact/ContactPage';
+
+// Product Development Deep Dive imports
+import ProductDevelopmentOverview from './components/solutions/productDevelopment/ProductDevelopmentOverview';
+import KnowledgeGraphExtraction from './components/solutions/productDevelopment/KnowledgeGraphExtraction';
+import StakeholderValidation from './components/solutions/productDevelopment/StakeholderValidation';
+import ImplementationPipeline from './components/solutions/productDevelopment/ImplementationPipeline';
 
 // Breeze Process Model imports
 import ManualTranslationTaxPage from './components/breezeProcess/challenge/ManualTranslationTaxPage';
@@ -189,7 +194,29 @@ const App: React.FC = () => {
                   <SuccessStories />
                 </AppLayout>
               } />
-              
+
+              {/* Product Development Deep Dive */}
+              <Route path="/solutions/product-development" element={
+                <AppLayout>
+                  <ProductDevelopmentOverview />
+                </AppLayout>
+              } />
+              <Route path="/solutions/product-development/extraction" element={
+                <AppLayout>
+                  <KnowledgeGraphExtraction />
+                </AppLayout>
+              } />
+              <Route path="/solutions/product-development/validation" element={
+                <AppLayout>
+                  <StakeholderValidation />
+                </AppLayout>
+              } />
+              <Route path="/solutions/product-development/implementation" element={
+                <AppLayout>
+                  <ImplementationPipeline />
+                </AppLayout>
+              } />
+
               {/* Contact Page */}
               <Route path="/contact" element={
                 <AppLayout>

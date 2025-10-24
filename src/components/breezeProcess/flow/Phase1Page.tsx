@@ -1,10 +1,10 @@
 import React from 'react';
-import Phase1New from './Phase1New';
+import Phase1 from './Phase1';
 
 const Phase1Page: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
-      <Phase1New onNavigate={() => {}} />
+      <Phase1 onNavigate={() => {}} />
     </div>
   );
 };

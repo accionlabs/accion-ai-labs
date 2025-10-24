@@ -1,10 +1,10 @@
 import React from 'react';
-import LegacyTransformationNew from './LegacyTransformationNew';
+import LegacyTransformation from './LegacyTransformation';
 
 const LegacyTransformationPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
-      <LegacyTransformationNew />
+      <LegacyTransformation />
     </div>
   );
 };

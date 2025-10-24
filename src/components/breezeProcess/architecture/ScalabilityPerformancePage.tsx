@@ -1,10 +1,10 @@
 import React from 'react';
-import ScalabilityPerformanceNew from './ScalabilityPerformanceNew';
+import ScalabilityPerformance from './ScalabilityPerformance';
 
 const ScalabilityPerformancePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
-      <ScalabilityPerformanceNew />
+      <ScalabilityPerformance />
     </div>
   );
 };

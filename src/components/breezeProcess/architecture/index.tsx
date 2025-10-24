@@ -1,10 +1,10 @@
 import TopicCards from '../TopicCards';
-import Overview from './OverviewNew';
-import CoreComponentsNew from './CoreComponentsNew';
-import ComponentInteractionsNew from './ComponentInteractionsNew';
-import IntegrationPointsNew from './IntegrationPointsNew';
-import ScalabilityPerformanceNew from './ScalabilityPerformanceNew';
-import SecurityComplianceNew from './SecurityComplianceNew';
+import Overview from './Overview';
+import CoreComponents from './CoreComponents';
+import ComponentInteractions from './ComponentInteractions';
+import IntegrationPoints from './IntegrationPoints';
+import ScalabilityPerformance from './ScalabilityPerformance';
+import SecurityCompliance from './SecurityCompliance';
 
 interface ArchitectureProps {
   initialScreen?: string;
@@ -32,31 +32,31 @@ const Architecture: React.FC<ArchitectureProps> = ({
       id: 'core-components', 
       title: 'Core Components Summary', 
       description: 'Essential system components and their responsibilities',
-      component: CoreComponentsNew 
+      component: CoreComponents 
     },
     { 
       id: 'component-interactions', 
       title: 'Component Interactions', 
       description: 'How system components communicate and collaborate',
-      component: ComponentInteractionsNew 
+      component: ComponentInteractions 
     },
     { 
       id: 'integration-points', 
       title: 'Integration Points', 
       description: 'External system interfaces and integration patterns',
-      component: IntegrationPointsNew 
+      component: IntegrationPoints 
     },
     { 
       id: 'scalability-performance', 
       title: 'Scalability & Performance', 
       description: 'System scaling strategies and performance characteristics',
-      component: ScalabilityPerformanceNew 
+      component: ScalabilityPerformance 
     },
     { 
       id: 'security-compliance', 
       title: 'Security & Compliance', 
       description: 'Security framework and compliance capabilities',
-      component: SecurityComplianceNew 
+      component: SecurityCompliance 
     }
   ];
 

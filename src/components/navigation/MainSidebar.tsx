@@ -97,6 +97,12 @@ const menuItems: MenuItem[] = [
         path: '/solutions'
       },
       {
+        id: 'product-development-showcase',
+        label: 'Product Development',
+        icon: RocketLaunchIcon,
+        path: '/solutions/product-development'
+      },
+      {
         id: 'tech-debt-showcase',
         label: 'Technical Debt Management',
         icon: WrenchScrewdriverIcon,
@@ -133,6 +139,37 @@ const menuItems: MenuItem[] = [
     label: 'Solution Deep Dives',
     icon: RectangleStackIcon,
     children: [
+      {
+        id: 'product-development-deep',
+        label: 'Product Development',
+        icon: RocketLaunchIcon,
+        children: [
+          {
+            id: 'pd-overview',
+            label: 'Overview',
+            icon: RocketLaunchIcon,
+            path: '/solutions/product-development'
+          },
+          {
+            id: 'knowledge-graph-extraction',
+            label: 'Knowledge Graph Extraction',
+            icon: SparklesIcon,
+            path: '/solutions/product-development/extraction'
+          },
+          {
+            id: 'stakeholder-validation',
+            label: 'Stakeholder Validation',
+            icon: UserGroupIcon,
+            path: '/solutions/product-development/validation'
+          },
+          {
+            id: 'implementation-pipeline',
+            label: 'Implementation Pipeline',
+            icon: CodeBracketIcon,
+            path: '/solutions/product-development/implementation'
+          }
+        ]
+      },
       {
         id: 'technical-debt',
         label: 'Technical Debt Management',

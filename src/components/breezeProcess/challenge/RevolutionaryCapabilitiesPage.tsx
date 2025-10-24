@@ -1,10 +1,10 @@
 import React from 'react';
-import RevolutionaryCapabilitiesNew from './RevolutionaryCapabilitiesNew';
+import RevolutionaryCapabilities from './RevolutionaryCapabilities';
 
 const RevolutionaryCapabilitiesPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
-      <RevolutionaryCapabilitiesNew />
+      <RevolutionaryCapabilities />
     </div>
   );
 };

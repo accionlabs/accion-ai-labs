@@ -1,10 +1,10 @@
 import React from 'react';
-import CoreComponentsNew from './CoreComponentsNew';
+import CoreComponents from './CoreComponents';
 
 const CoreComponentsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
-      <CoreComponentsNew />
+      <CoreComponents />
     </div>
   );
 };

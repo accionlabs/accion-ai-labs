@@ -1,10 +1,10 @@
 import React from 'react';
-import OverviewNew from './OverviewNew';
+import Overview from './Overview';
 
 const SemanticOverviewPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
-      <OverviewNew onNavigate={() => {}} />
+      <Overview onNavigate={() => {}} />
     </div>
   );
 };

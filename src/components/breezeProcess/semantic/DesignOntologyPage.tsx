@@ -1,10 +1,10 @@
 import React from 'react';
-import DesignOntologyNew from './DesignOntologyNew';
+import DesignOntology from './DesignOntology';
 
 const DesignOntologyPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
-      <DesignOntologyNew onNavigate={() => {}} />
+      <DesignOntology onNavigate={() => {}} />
     </div>
   );
 };

@@ -1,10 +1,10 @@
 import React from 'react';
-import SecurityComplianceNew from './SecurityComplianceNew';
+import SecurityCompliance from './SecurityCompliance';
 
 const SecurityCompliancePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
-      <SecurityComplianceNew />
+      <SecurityCompliance />
     </div>
   );
 };

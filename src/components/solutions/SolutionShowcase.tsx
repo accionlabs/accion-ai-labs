@@ -1,25 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  WrenchScrewdriverIcon, 
-  CpuChipIcon, 
-  DocumentMagnifyingGlassIcon,
+import {
+  WrenchScrewdriverIcon,
+  CpuChipIcon,
   ArrowPathIcon,
-  SparklesIcon,
-  ChartBarIcon,
   PhoneIcon,
-  ClipboardDocumentCheckIcon,
-  ChatBubbleBottomCenterTextIcon,
-  MicrophoneIcon,
-  BeakerIcon,
-  ShieldCheckIcon,
-  DocumentTextIcon,
-  BoltIcon,
   ArrowRightIcon,
   CheckIcon,
   CircleStackIcon,
-  RocketLaunchIcon,
-  CloudArrowUpIcon
+  RocketLaunchIcon
 } from '@heroicons/react/24/outline';
 
 interface Solution {
@@ -38,6 +27,28 @@ interface Solution {
 
 const solutions: Solution[] = [
   // Deep Dive Solutions (Featured)
+  {
+    id: 'product-development',
+    category: 'Featured Deep Dives',
+    title: 'Product Development',
+    description: 'Accelerate new product development using semantic knowledge graphs, multi-stakeholder validation, and intelligent artifact generation.',
+    icon: RocketLaunchIcon,
+    color: 'indigo',
+    capabilities: [
+      'Semantic knowledge extraction from documents',
+      'Multi-stakeholder validation workflows',
+      'Automated artifact generation',
+      'Continuous sprint validation'
+    ],
+    outcomes: [
+      '60% faster time to market',
+      '85% reduction in ambiguity',
+      '40% fewer defects'
+    ],
+    status: 'deep-dive',
+    link: '/solutions/product-development',
+    caseStudy: 'Enterprise SaaS Platform'
+  },
   {
     id: 'tech-debt',
     category: 'Featured Deep Dives',
@@ -126,7 +137,7 @@ const solutions: Solution[] = [
     link: '/solutions/customer-service',
     caseStudy: 'Fortune 500 Telecom'
   },
-  
+
   // Data Engineering - Showcase Only
   {
     id: 'data-engineering',

@@ -1,10 +1,10 @@
 import React from 'react';
-import AgentsLayerDeepDiveNew from './AgentsLayerDeepDiveNew';
+import AgentsLayerDeepDive from './AgentsLayerDeepDive';
 
 const AgentsLayerPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
-      <AgentsLayerDeepDiveNew />
+      <AgentsLayerDeepDive />
     </div>
   );
 };

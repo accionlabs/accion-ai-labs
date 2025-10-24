@@ -1,10 +1,10 @@
 import React from 'react';
-import CompetitiveAdvantagesNew from './CompetitiveAdvantagesNew';
+import CompetitiveAdvantages from './CompetitiveAdvantages';
 
 const CompetitiveAdvantagesPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
-      <CompetitiveAdvantagesNew />
+      <CompetitiveAdvantages />
     </div>
   );
 };
