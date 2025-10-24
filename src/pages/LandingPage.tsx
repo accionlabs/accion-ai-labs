@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRightIcon, 
-  BeakerIcon, 
-  CpuChipIcon, 
-  ChartBarIcon, 
+import {
+  ArrowRightIcon,
+  BeakerIcon,
+  CpuChipIcon,
+  ChartBarIcon,
   UserGroupIcon,
   SparklesIcon,
   CommandLineIcon,
@@ -12,7 +12,8 @@ import {
   CubeTransparentIcon,
   ArrowPathIcon,
   PhoneIcon,
-  ShieldCheckIcon
+  ShieldCheckIcon,
+  RocketLaunchIcon
 } from '@heroicons/react/24/outline';
 import { getPublicAssetUrl } from '../utils/assetHelper';
 
@@ -251,19 +252,40 @@ const LandingPage: React.FC<LandingPageProps> = ({
                 Featured Solutions with Deep Dives
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-                <Link to="/solutions/technical-debt" className="group">
+                <Link to="/solutions/product-development" className="group">
+                  <div className="bg-white rounded-xl shadow-md border border-gray-200 p-6 hover:shadow-xl transition-all hover:border-green-300">
+                    <div className="flex items-center mb-3">
+                      <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg flex items-center justify-center">
+                        <RocketLaunchIcon className="h-6 w-6 text-white" />
+                      </div>
+                      <div className="ml-4">
+                        <h3 className="font-semibold text-gray-900 group-hover:text-green-600">Product Engineering</h3>
+                        <span className="text-xs text-gray-500">Complete Deep Dive Available</span>
+                      </div>
+                    </div>
+                    <p className="text-sm text-gray-600">
+                      Accelerate product engineering with semantic knowledge graphs and multi-stakeholder validation.
+                    </p>
+                    <div className="mt-4 flex items-center text-xs text-gray-500">
+                      <ArrowRightIcon className="h-3 w-3 mr-1" />
+                      View Showcase → Deep Dive
+                    </div>
+                  </div>
+                </Link>
+
+                <Link to="/solutions/application-reengineering" className="group">
                   <div className="bg-white rounded-xl shadow-md border border-gray-200 p-6 hover:shadow-xl transition-all hover:border-warning">
                     <div className="flex items-center mb-3">
                       <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
                         <ExclamationTriangleIcon className="h-6 w-6 text-white" />
                       </div>
                       <div className="ml-4">
-                        <h3 className="font-semibold text-gray-900 group-hover:text-warning">Technical Debt Management</h3>
+                        <h3 className="font-semibold text-gray-900 group-hover:text-warning">Application Re-engineering</h3>
                         <span className="text-xs text-gray-500">Complete Deep Dive Available</span>
                       </div>
                     </div>
                     <p className="text-sm text-gray-600">
-                      AI agents analyze codebases to identify technical debt and provide prioritized remediation.
+                      Systematically modernize legacy applications with AI-powered analysis and continuous validation.
                     </p>
                     <div className="mt-4 flex items-center text-xs text-gray-500">
                       <ArrowRightIcon className="h-3 w-3 mr-1" />
