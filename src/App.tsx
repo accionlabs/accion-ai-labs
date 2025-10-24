@@ -39,7 +39,7 @@ import BusinessOptimizationHub from './components/solutions/customerService/Busi
 import ImplementationRoadmap from './components/solutions/customerService/ImplementationRoadmap';
 import ContactPage from './components/contact/ContactPage';
 
-// Product Development Deep Dive imports
+// Product Engineering Deep Dive imports
 import ProductDevelopmentOverview from './components/solutions/productDevelopment/ProductDevelopmentOverview';
 import KnowledgeGraphExtraction from './components/solutions/productDevelopment/KnowledgeGraphExtraction';
 import StakeholderValidation from './components/solutions/productDevelopment/StakeholderValidation';
@@ -202,7 +202,7 @@ const App: React.FC = () => {
                 </AppLayout>
               } />
 
-              {/* Product Development Deep Dive */}
+              {/* Product Engineering Deep Dive */}
               <Route path="/solutions/product-development" element={
                 <AppLayout>
                   <ProductDevelopmentOverview />

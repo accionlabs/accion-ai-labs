@@ -98,8 +98,8 @@ const menuItems: MenuItem[] = [
         path: '/solutions'
       },
       {
-        id: 'product-development-showcase',
-        label: 'Product Development',
+        id: 'product-engineering-showcase',
+        label: 'Product Engineering',
         icon: RocketLaunchIcon,
         path: '/solutions/product-development'
       },
@@ -141,12 +141,12 @@ const menuItems: MenuItem[] = [
     icon: RectangleStackIcon,
     children: [
       {
-        id: 'product-development-deep',
-        label: 'Product Development',
+        id: 'product-engineering-deep',
+        label: 'Product Engineering',
         icon: RocketLaunchIcon,
         children: [
           {
-            id: 'pd-overview',
+            id: 'pe-overview',
             label: 'Overview',
             icon: RocketLaunchIcon,
             path: '/solutions/product-development'

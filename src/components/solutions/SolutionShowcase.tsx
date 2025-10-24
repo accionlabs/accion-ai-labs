@@ -28,10 +28,10 @@ interface Solution {
 const solutions: Solution[] = [
   // Deep Dive Solutions (Featured)
   {
-    id: 'product-development',
+    id: 'product-engineering',
     category: 'Featured Deep Dives',
-    title: 'Product Development',
-    description: 'Accelerate new product development using semantic knowledge graphs, multi-stakeholder validation, and intelligent artifact generation.',
+    title: 'Product Engineering',
+    description: 'Accelerate product engineering using semantic knowledge graphs, multi-stakeholder validation, and intelligent artifact generation.',
     icon: RocketLaunchIcon,
     color: 'indigo',
     capabilities: [

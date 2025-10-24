@@ -126,10 +126,10 @@ const ProductDevelopmentOverview: React.FC = () => {
             <div>
               <div className="flex items-center mb-4">
                 <RocketLaunchIcon className="h-10 w-10 text-green-600 mr-3" />
-                <h1 className="text-3xl font-bold text-gray-900">AI-Powered Product Development</h1>
+                <h1 className="text-3xl font-bold text-gray-900">AI-Powered Product Engineering</h1>
               </div>
               <p className="text-lg text-gray-600 max-w-3xl">
-                Accelerate new product development from concept to code using semantic knowledge graphs,
+                Accelerate product engineering from concept to code using semantic knowledge graphs,
                 multi-stakeholder validation, and intelligent artifact generation
               </p>
             </div>
@@ -153,7 +153,7 @@ const ProductDevelopmentOverview: React.FC = () => {
         <div className="bg-gradient-to-r from-orange-50 to-red-50 rounded-xl border border-orange-200 p-6 mb-8">
           <h2 className="text-xl font-semibold text-gray-900 mb-4">The Challenge: Manual Translation Tax</h2>
           <p className="text-gray-700 mb-4">
-            Traditional product development suffers from the "manual translation tax" - the costly process of
+            Traditional product engineering suffers from the "manual translation tax" - the costly process of
             manually translating requirements between different stakeholder languages. Business requirements
             become functional specs, which become user stories, which become designs, which finally become code.
             Each translation introduces delays, ambiguity, and potential errors.
