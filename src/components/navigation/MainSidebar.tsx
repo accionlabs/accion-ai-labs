@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  HomeIcon, 
+import {
+  HomeIcon,
   CpuChipIcon,
   LightBulbIcon,
   WrenchScrewdriverIcon,
@@ -24,7 +24,8 @@ import {
   CircleStackIcon,
   RocketLaunchIcon,
   DocumentMagnifyingGlassIcon,
-  CodeBracketIcon
+  CodeBracketIcon,
+  ShieldCheckIcon
 } from '@heroicons/react/24/outline';
 
 interface MenuItem {
@@ -103,10 +104,10 @@ const menuItems: MenuItem[] = [
         path: '/solutions/product-development'
       },
       {
-        id: 'tech-debt-showcase',
-        label: 'Technical Debt Management',
+        id: 'app-reengineering-showcase',
+        label: 'Application Re-engineering',
         icon: WrenchScrewdriverIcon,
-        path: '/solutions/technical-debt'
+        path: '/solutions/application-reengineering'
       },
       {
         id: 'portfolio-showcase',
@@ -171,39 +172,39 @@ const menuItems: MenuItem[] = [
         ]
       },
       {
-        id: 'technical-debt',
-        label: 'Technical Debt Management',
+        id: 'application-reengineering',
+        label: 'Application Re-engineering',
         icon: WrenchScrewdriverIcon,
         children: [
           {
-            id: 'td-overview',
+            id: 'app-reeng-overview',
             label: 'Overview',
-            icon: ChartBarIcon,
-            path: '/technical-debt'
+            icon: WrenchScrewdriverIcon,
+            path: '/solutions/application-reengineering'
           },
           {
-            id: 'agent-analysis',
-            label: 'Agent-Based Extraction',
+            id: 'discovery-assessment',
+            label: 'Discovery & Assessment',
             icon: SparklesIcon,
-            path: '/technical-debt/agent-analysis'
+            path: '/solutions/application-reengineering/discovery'
           },
           {
-            id: 'td-graph',
-            label: 'Graph Explorer',
-            icon: CpuChipIcon,
-            path: '/technical-debt/graph-explorer'
+            id: 'reengineering-strategy',
+            label: 'Re-engineering Strategy',
+            icon: UserGroupIcon,
+            path: '/solutions/application-reengineering/strategy'
           },
           {
-            id: 'debt-assessment',
-            label: 'Debt Assessment',
-            icon: ScaleIcon,
-            path: '/technical-debt/assessment'
+            id: 'implementation-modernization',
+            label: 'Implementation & Modernization',
+            icon: CodeBracketIcon,
+            path: '/solutions/application-reengineering/implementation'
           },
           {
-            id: 'remediation',
-            label: 'Remediation Roadmap',
-            icon: ArrowTrendingUpIcon,
-            path: '/technical-debt/remediation'
+            id: 'continuous-validation',
+            label: 'Continuous Validation',
+            icon: ShieldCheckIcon,
+            path: '/solutions/application-reengineering/validation'
           }
         ]
       },

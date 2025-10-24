@@ -50,26 +50,26 @@ const solutions: Solution[] = [
     caseStudy: 'Enterprise SaaS Platform'
   },
   {
-    id: 'tech-debt',
+    id: 'app-reengineering',
     category: 'Featured Deep Dives',
-    title: 'Technical Debt Management',
-    description: 'AI agents that analyze codebases to identify technical debt, architectural violations, and provide prioritized remediation strategies.',
+    title: 'Application Re-engineering',
+    description: 'Systematically modernize legacy applications using AI-powered analysis, multi-stakeholder validation, and continuous quality monitoring.',
     icon: WrenchScrewdriverIcon,
     color: 'orange',
     capabilities: [
-      'Automated code quality assessment',
-      'Architecture violation detection',
-      'Dependency risk analysis',
-      'Remediation prioritization'
+      'Automated discovery & assessment',
+      'Multi-stakeholder validation',
+      'AI-powered implementation',
+      'Continuous sprint validation'
     ],
     outcomes: [
-      '40% reduction in bug density',
-      '60% faster feature delivery',
-      'Clear remediation roadmap'
+      '70% faster modernization',
+      '60% cost reduction',
+      '40% fewer defects'
     ],
     status: 'deep-dive',
-    link: '/solutions/technical-debt',
-    caseStudy: 'Fortune 500 Financial Services'
+    link: '/solutions/application-reengineering',
+    caseStudy: 'Phoenix CRM Modernization'
   },
   {
     id: 'portfolio-rat',

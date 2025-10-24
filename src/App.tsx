@@ -45,6 +45,13 @@ import KnowledgeGraphExtraction from './components/solutions/productDevelopment/
 import StakeholderValidation from './components/solutions/productDevelopment/StakeholderValidation';
 import ImplementationPipeline from './components/solutions/productDevelopment/ImplementationPipeline';
 
+// Application Re-engineering Deep Dive imports
+import ApplicationReengineeringOverview from './components/solutions/applicationReengineering/ApplicationReengineeringOverview';
+import DiscoveryAssessment from './components/solutions/applicationReengineering/DiscoveryAssessment';
+import ReengineeringStrategy from './components/solutions/applicationReengineering/ReengineeringStrategy';
+import ImplementationModernization from './components/solutions/applicationReengineering/ImplementationModernization';
+import ContinuousValidation from './components/solutions/applicationReengineering/ContinuousValidation';
+
 // Breeze Process Model imports
 import ManualTranslationTaxPage from './components/breezeProcess/challenge/ManualTranslationTaxPage';
 import TraditionalApproachesPage from './components/breezeProcess/challenge/TraditionalApproachesPage';
@@ -214,6 +221,33 @@ const App: React.FC = () => {
               <Route path="/solutions/product-development/implementation" element={
                 <AppLayout>
                   <ImplementationPipeline />
+                </AppLayout>
+              } />
+
+              {/* Application Re-engineering Deep Dive */}
+              <Route path="/solutions/application-reengineering" element={
+                <AppLayout>
+                  <ApplicationReengineeringOverview />
+                </AppLayout>
+              } />
+              <Route path="/solutions/application-reengineering/discovery" element={
+                <AppLayout>
+                  <DiscoveryAssessment />
+                </AppLayout>
+              } />
+              <Route path="/solutions/application-reengineering/strategy" element={
+                <AppLayout>
+                  <ReengineeringStrategy />
+                </AppLayout>
+              } />
+              <Route path="/solutions/application-reengineering/implementation" element={
+                <AppLayout>
+                  <ImplementationModernization />
+                </AppLayout>
+              } />
+              <Route path="/solutions/application-reengineering/validation" element={
+                <AppLayout>
+                  <ContinuousValidation />
                 </AppLayout>
               } />
 
@@ -407,6 +441,14 @@ const App: React.FC = () => {
               <Route path="/graph-explorer" element={<Navigate to="/portfolio/graph-explorer" replace />} />
               <Route path="/component-comparator" element={<Navigate to="/portfolio/component-comparator" replace />} />
               <Route path="/rationalization-roadmap" element={<Navigate to="/portfolio/rationalization-roadmap" replace />} />
+
+              {/* Technical Debt to Application Re-engineering redirects */}
+              <Route path="/solutions/technical-debt" element={<Navigate to="/solutions/application-reengineering" replace />} />
+              <Route path="/technical-debt" element={<Navigate to="/solutions/application-reengineering" replace />} />
+              <Route path="/technical-debt/agent-analysis" element={<Navigate to="/solutions/application-reengineering/discovery" replace />} />
+              <Route path="/technical-debt/graph-explorer" element={<Navigate to="/solutions/application-reengineering/discovery" replace />} />
+              <Route path="/technical-debt/assessment" element={<Navigate to="/solutions/application-reengineering/discovery" replace />} />
+              <Route path="/technical-debt/remediation" element={<Navigate to="/solutions/application-reengineering/strategy" replace />} />
             </Routes>
           </Router>
         </NavigationProvider>
