@@ -254,16 +254,105 @@ const CoreTechnologyOverview: React.FC = () => {
             <div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Pattern Recognition</h3>
               <p className="text-sm text-gray-600">
-                Our agents are trained on thousands of codebases to recognize patterns, 
+                Our agents are trained on thousands of codebases to recognize patterns,
                 architectures, and anti-patterns across all major languages and frameworks.
               </p>
             </div>
             <div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Continuous Learning</h3>
               <p className="text-sm text-gray-600">
-                As your codebase evolves, the knowledge graphs update automatically, 
+                As your codebase evolves, the knowledge graphs update automatically,
                 ensuring AI agents always work with current information.
               </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Agent-Based Artifact Generation */}
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-3 sm:p-6 lg:p-8 mb-8">
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 sm:mb-6">Agent-Based Artifact Generation</h2>
+          <p className="text-gray-600 mb-6">
+            Once knowledge graphs are built, specialized AI agents leverage them to generate validated,
+            consistent artifacts across all stakeholder types — ensuring everyone works from a single source of truth.
+          </p>
+
+          <div className="bg-gradient-to-r from-secondary/10 to-brand-purple-50 rounded-xl p-6 mb-8 border border-secondary/20">
+            <div className="flex items-center mb-4">
+              <SparklesIcon className="h-8 w-8 text-secondary mr-3" />
+              <h3 className="text-lg font-semibold text-gray-900">Bidirectional Intelligence</h3>
+            </div>
+            <p className="text-sm text-gray-700">
+              Our agents work in both directions: extracting knowledge from existing artifacts into graphs,
+              and generating new artifacts from those graphs. This bidirectional capability ensures consistency,
+              traceability, and validation across your entire software lifecycle.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="border border-secondary/20 rounded-lg p-4 bg-gradient-to-br from-blue-50 to-white">
+              <div className="w-10 h-10 bg-secondary/20 rounded-lg flex items-center justify-center mb-3">
+                <BeakerIcon className="h-6 w-6 text-secondary" />
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">Functional Artifacts</h3>
+              <ul className="text-xs text-gray-600 space-y-1">
+                <li>• User stories & epics</li>
+                <li>• Functional specifications</li>
+                <li>• Business requirements docs</li>
+                <li>• Process workflows</li>
+              </ul>
+            </div>
+
+            <div className="border border-pink-200 rounded-lg p-4 bg-gradient-to-br from-pink-50 to-white">
+              <div className="w-10 h-10 bg-pink-100 rounded-lg flex items-center justify-center mb-3">
+                <PaintBrushIcon className="h-6 w-6 text-pink-600" />
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">Design Artifacts</h3>
+              <ul className="text-xs text-gray-600 space-y-1">
+                <li>• UI/UX flow diagrams</li>
+                <li>• Design system components</li>
+                <li>• Interactive prototypes</li>
+                <li>• Style guides</li>
+              </ul>
+            </div>
+
+            <div className="border border-green-200 rounded-lg p-4 bg-gradient-to-br from-green-50 to-white">
+              <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mb-3">
+                <CubeIcon className="h-6 w-6 text-success" />
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">Architecture Artifacts</h3>
+              <ul className="text-xs text-gray-600 space-y-1">
+                <li>• System architecture diagrams</li>
+                <li>• Component interaction maps</li>
+                <li>• Deployment topologies</li>
+                <li>• Technical specifications</li>
+              </ul>
+            </div>
+
+            <div className="border border-purple-200 rounded-lg p-4 bg-gradient-to-br from-purple-50 to-white">
+              <div className="w-10 h-10 bg-brand-purple-100 rounded-lg flex items-center justify-center mb-3">
+                <CodeBracketIcon className="h-6 w-6 text-brand-purple-600" />
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">Implementation Artifacts</h3>
+              <ul className="text-xs text-gray-600 space-y-1">
+                <li>• Test scripts (Gherkin/BDD)</li>
+                <li>• API documentation</li>
+                <li>• Code scaffolding</li>
+                <li>• Integration contracts</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-8 p-4 bg-success/10 rounded-lg border border-success/20">
+            <div className="flex items-start">
+              <SparklesIcon className="h-6 w-6 text-success mr-3 flex-shrink-0 mt-0.5" />
+              <div>
+                <h4 className="font-semibold text-gray-900 mb-2">The Key Advantage</h4>
+                <p className="text-sm text-gray-700">
+                  Because all artifacts are generated from the same knowledge graph, they're automatically consistent
+                  and traceable. Changes in requirements flow through to all stakeholder artifacts, eliminating the
+                  "manual translation tax" and reducing ambiguity by 85%.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -467,17 +556,17 @@ const CoreTechnologyOverview: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/technical-debt"
+              to="/solutions/product-development"
               className="inline-flex items-center justify-center px-8 py-3 text-lg font-semibold bg-white text-secondary rounded-xl hover:bg-gray-100 transition-all"
             >
-              Technical Debt Deep Dive
+              Product Engineering Deep Dive
               <ArrowRightIcon className="ml-2 h-5 w-5" />
             </Link>
             <Link
-              to="/portfolio"
+              to="/solutions/application-reengineering"
               className="inline-flex items-center justify-center px-8 py-3 text-lg font-semibold bg-white/20 text-white border-2 border-white/50 rounded-xl hover:bg-white/30 transition-all"
             >
-              Portfolio Rationalization Example
+              Application Re-engineering Deep Dive
             </Link>
           </div>
         </div>
