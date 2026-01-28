@@ -8,6 +8,10 @@ module.exports = {
       fontFamily: {
         'sans': ['Inter', 'Segoe UI', 'system-ui', 'sans-serif'],
       },
+      backgroundImage: {
+        'innovation-gradient': 'linear-gradient(135deg, #783680, #ee26b9)',
+        'trust-gradient': 'linear-gradient(135deg, #164fc8, #2e9ec7)',
+      },
       colors: {
         // Primary brand colors (Accion)
         'primary': '#EB4B55',
