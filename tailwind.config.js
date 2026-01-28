@@ -15,7 +15,19 @@ module.exports = {
       colors: {
         // Primary brand colors (Accion)
         'primary': '#EB4B55',
-        'secondary': '#164FC8',
+        'secondary': {
+          DEFAULT: '#164FC8',
+          50: '#E6ECFB',
+          100: '#C0CFF5',
+          200: '#99B2EF',
+          300: '#7395E9',
+          400: '#4C78E3',
+          500: '#164FC8',
+          600: '#1346B1',
+          700: '#0F3789',
+          800: '#0B2862',
+          900: '#07193A',
+        },
         'accent': '#EE26B9',
 
         // Accion brand colors
