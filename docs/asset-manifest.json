@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/accion-ai-labs/static/css/main.c4c096d5.css",
-    "main.js": "/accion-ai-labs/static/js/main.d8d1d536.js",
+    "main.css": "/accion-ai-labs/static/css/main.7e0dcb86.css",
+    "main.js": "/accion-ai-labs/static/js/main.401f5720.js",
     "static/js/453.2fb3670a.chunk.js": "/accion-ai-labs/static/js/453.2fb3670a.chunk.js",
     "static/media/crossModalConsistency.svg": "/accion-ai-labs/static/media/crossModalConsistency.5d8d8c8e5911018fb3b3e9b26304479d.svg",
     "static/media/functionalOntologyLayers.svg": "/accion-ai-labs/static/media/functionalOntologyLayers.4a3c2dff5bd78505bf444ef0cc8704d9.svg",
@@ -21,12 +21,12 @@
     "static/media/specificationProcessFlow.svg": "/accion-ai-labs/static/media/specificationProcessFlow.a7cb50f4f7f80f0ec42b8e5090acbbad.svg",
     "static/media/layeredArchitecture.svg": "/accion-ai-labs/static/media/layeredArchitecture.0468b334369ae4ebb24b5ef6e24c24b3.svg",
     "index.html": "/accion-ai-labs/index.html",
-    "main.c4c096d5.css.map": "/accion-ai-labs/static/css/main.c4c096d5.css.map",
-    "main.d8d1d536.js.map": "/accion-ai-labs/static/js/main.d8d1d536.js.map",
+    "main.7e0dcb86.css.map": "/accion-ai-labs/static/css/main.7e0dcb86.css.map",
+    "main.401f5720.js.map": "/accion-ai-labs/static/js/main.401f5720.js.map",
     "453.2fb3670a.chunk.js.map": "/accion-ai-labs/static/js/453.2fb3670a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c4c096d5.css",
-    "static/js/main.d8d1d536.js"
+    "static/css/main.7e0dcb86.css",
+    "static/js/main.401f5720.js"
   ]
 }
