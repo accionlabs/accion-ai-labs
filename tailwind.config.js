@@ -61,6 +61,20 @@ module.exports = {
           800: '#491615',
           900: '#250B0A',
         },
+        // Error (alias for danger, used in some components)
+        'error': {
+          DEFAULT: '#B73734',
+          50: '#FEF2F2',
+          100: '#FDE5E5',
+          200: '#FBCBCB',
+          300: '#F9B1B1',
+          400: '#F79797',
+          500: '#B73734',
+          600: '#922C2A',
+          700: '#6E211F',
+          800: '#491615',
+          900: '#250B0A',
+        },
 
         // Brand purple palette (Accion purple)
         'brand-purple': {
