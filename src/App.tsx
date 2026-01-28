@@ -52,7 +52,7 @@ import ReengineeringStrategy from './components/solutions/applicationReengineeri
 import ImplementationModernization from './components/solutions/applicationReengineering/ImplementationModernization';
 import ContinuousValidation from './components/solutions/applicationReengineering/ContinuousValidation';
 
-// Breeze Process Model imports
+// Breeze.AI Deep Dive imports
 import ManualTranslationTaxPage from './components/breezeProcess/challenge/ManualTranslationTaxPage';
 import TraditionalApproachesPage from './components/breezeProcess/challenge/TraditionalApproachesPage';
 import BreezeBreakthroughPage from './components/breezeProcess/challenge/BreezeBreakthroughPage';
@@ -312,7 +312,7 @@ const App: React.FC = () => {
                 </AppLayout>
               } />
               
-              {/* Breeze Process Model Section */}
+              {/* Breeze.AI Deep Dive Section */}
               {/* Challenge & Solution */}
               <Route path="/breeze-process/challenge/manual-translation-tax" element={
                 <AppLayout>

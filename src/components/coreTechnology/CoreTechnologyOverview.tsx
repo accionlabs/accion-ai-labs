@@ -478,6 +478,125 @@ const CoreTechnologyOverview: React.FC = () => {
           </div>
         </div>
 
+        {/* Deep Dive Section */}
+        <div className="bg-gradient-to-br from-secondary/5 via-brand-purple-50 to-pink-50 rounded-xl border border-secondary/20 p-6 sm:p-8 mb-8">
+          <div className="flex items-center mb-6">
+            <div className="w-12 h-12 bg-secondary/20 rounded-xl flex items-center justify-center mr-4">
+              <CircleStackIcon className="h-7 w-7 text-secondary" />
+            </div>
+            <div>
+              <h2 className="text-2xl font-semibold text-gray-900">Breeze.AI Deep Dive</h2>
+              <p className="text-sm text-gray-600">Explore the complete platform architecture and methodology</p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* The Challenge & Solution */}
+            <Link
+              to="/breeze-process/challenge/manual-translation-tax"
+              className="group bg-white rounded-xl p-5 border border-gray-200 hover:shadow-lg hover:border-secondary/40 transition-all"
+            >
+              <div className="flex items-start mb-3">
+                <div className="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                  <SparklesIcon className="h-5 w-5 text-yellow-600" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 group-hover:text-secondary transition-colors">The Challenge & Solution</h3>
+                  <p className="text-sm text-gray-600 mt-1">
+                    Why traditional software development struggles and how Breeze.AI eliminates the "manual translation tax"
+                  </p>
+                </div>
+              </div>
+              <ul className="text-xs text-gray-500 space-y-1 ml-13 pl-13">
+                <li>• Manual Translation Tax</li>
+                <li>• Why Traditional Approaches Fail</li>
+                <li>• Breeze.AI Breakthrough & Competitive Advantages</li>
+              </ul>
+              <span className="text-secondary text-sm mt-3 inline-flex items-center group-hover:gap-2 transition-all">
+                Explore challenge & solution <ArrowRightIcon className="h-4 w-4 ml-1" />
+              </span>
+            </Link>
+
+            {/* System Architecture */}
+            <Link
+              to="/breeze-process/architecture/overview"
+              className="group bg-white rounded-xl p-5 border border-gray-200 hover:shadow-lg hover:border-secondary/40 transition-all"
+            >
+              <div className="flex items-start mb-3">
+                <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                  <CubeIcon className="h-5 w-5 text-blue-600" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 group-hover:text-secondary transition-colors">System Architecture</h3>
+                  <p className="text-sm text-gray-600 mt-1">
+                    Comprehensive view of Breeze.AI's architecture, components, and integration points
+                  </p>
+                </div>
+              </div>
+              <ul className="text-xs text-gray-500 space-y-1">
+                <li>• Core Components & Interactions</li>
+                <li>• Integration Points & Data Flows</li>
+                <li>• Scalability, Security & Compliance</li>
+              </ul>
+              <span className="text-secondary text-sm mt-3 inline-flex items-center group-hover:gap-2 transition-all">
+                Explore architecture <ArrowRightIcon className="h-4 w-4 ml-1" />
+              </span>
+            </Link>
+
+            {/* Semantic Model */}
+            <Link
+              to="/breeze-process/semantic/overview"
+              className="group bg-white rounded-xl p-5 border border-gray-200 hover:shadow-lg hover:border-secondary/40 transition-all"
+            >
+              <div className="flex items-start mb-3">
+                <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                  <CircleStackIcon className="h-5 w-5 text-brand-purple-600" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 group-hover:text-secondary transition-colors">Semantic Model Structure</h3>
+                  <p className="text-sm text-gray-600 mt-1">
+                    Deep dive into the Four-Ontology Framework and how ontologies interconnect
+                  </p>
+                </div>
+              </div>
+              <ul className="text-xs text-gray-500 space-y-1">
+                <li>• Functional, Design, Architecture & Code Ontologies</li>
+                <li>• Cross-Ontology Relationships</li>
+                <li>• Agents Layer & Knowledge Processing</li>
+              </ul>
+              <span className="text-secondary text-sm mt-3 inline-flex items-center group-hover:gap-2 transition-all">
+                Explore semantic model <ArrowRightIcon className="h-4 w-4 ml-1" />
+              </span>
+            </Link>
+
+            {/* Process Flow */}
+            <Link
+              to="/breeze-process/flow/overview"
+              className="group bg-white rounded-xl p-5 border border-gray-200 hover:shadow-lg hover:border-secondary/40 transition-all"
+            >
+              <div className="flex items-start mb-3">
+                <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                  <CogIcon className="h-5 w-5 text-success" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 group-hover:text-secondary transition-colors">Process Flow</h3>
+                  <p className="text-sm text-gray-600 mt-1">
+                    Three-phase evolution from manual-intensive to semantic-first development
+                  </p>
+                </div>
+              </div>
+              <ul className="text-xs text-gray-500 space-y-1">
+                <li>• Phase 1: Foundation (15% Manual)</li>
+                <li>• Phase 2: Evolution (30% Manual)</li>
+                <li>• Phase 3: Semantic First (5% Manual)</li>
+              </ul>
+              <span className="text-secondary text-sm mt-3 inline-flex items-center group-hover:gap-2 transition-all">
+                Explore process flow <ArrowRightIcon className="h-4 w-4 ml-1" />
+              </span>
+            </Link>
+          </div>
+        </div>
+
         {/* Platform Integration Section */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 sm:p-8 mb-8">
           <h2 className="text-2xl font-semibold text-gray-900 mb-6">Integration with Breeze.AI Platform</h2>

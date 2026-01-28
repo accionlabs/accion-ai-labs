@@ -323,7 +323,7 @@ const menuItems: MenuItem[] = [
   },
   {
     id: 'breeze-process-model',
-    label: 'Breeze Process Model',
+    label: 'Breeze.AI Deep Dive',
     icon: Bars3Icon,
     children: [
       {

@@ -583,12 +583,12 @@ const ImplementationPipeline: React.FC = () => {
           </div>
         </div>
 
-        {/* Reference to Breeze Process */}
+        {/* Reference to Breeze Deep Dive */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-6 text-white">
-          <h2 className="text-xl font-semibold mb-2">Learn More About the Breeze Process</h2>
+          <h2 className="text-xl font-semibold mb-2">Learn More About Breeze.AI</h2>
           <p className="text-sm mb-4 opacity-90">
             For a deeper dive into how manual and semantic development work together, explore our comprehensive
-            Breeze Process Model documentation.
+            Breeze.AI Deep Dive documentation.
           </p>
           <Link
             to="/breeze-process/flow/overview"
