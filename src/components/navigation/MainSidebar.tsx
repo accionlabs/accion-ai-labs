@@ -27,6 +27,7 @@ import {
   CodeBracketIcon,
   ShieldCheckIcon
 } from '@heroicons/react/24/outline';
+import SearchBox from '../search/SearchBox';
 
 interface MenuItem {
   id: string;
@@ -759,8 +760,13 @@ const MainSidebar: React.FC = () => {
           </div>
         </div>
 
+        {/* Search Box */}
+        <div className="px-3 py-2 border-b border-gray-200">
+          <SearchBox onResultClick={() => setIsMobileMenuOpen(false)} />
+        </div>
+
         {/* Navigation */}
-        <nav className="p-3 overflow-y-auto h-[calc(100%-4rem)]">
+        <nav className="p-3 overflow-y-auto h-[calc(100%-7.5rem)]">
           <div className="md:hidden">
             {/* Mobile: Always show all items expanded */}
             {menuItems.map(item => renderMenuItem(item, 0, true))}
