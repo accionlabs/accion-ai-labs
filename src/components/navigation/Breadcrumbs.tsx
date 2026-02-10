@@ -1,78 +1,87 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ChevronRightIcon, HomeIcon } from '@heroicons/react/24/outline';
-
-// Route labels for human-readable breadcrumb names
-const routeLabels: { [key: string]: string } = {
-  // Core Technology
-  'core-technology': 'Core Technology',
-  'kaps-framework': 'KAPS Framework',
-  'agent-architecture': 'Agent Architecture',
-  'breeze-ai': 'Breeze.AI',
-  'gen-ai-box': 'Gen AI in a Box',
-  'guardrails': 'Strategic Guardrails',
-
-  // Solutions
-  'solutions': 'Solutions',
-  'product-engineering': 'Product Engineering',
-  'overview': 'Overview',
-  'requirements': 'Requirements Capture',
-  'design': 'Design Generation',
-  'implementation': 'Implementation',
-  'application-reengineering': 'Application Re-engineering',
-  'discovery': 'Discovery & Assessment',
-  'strategy': 'Strategy',
-  'validation': 'Continuous Validation',
-  'asimov': 'ASIMOV',
-  'transformation': 'Transformation Engine',
-  'patterns': 'Migration Patterns',
-  'success-stories': 'Success Stories',
-  'customer-service': 'Customer Service',
-  'self-heal-bot': 'Self-Heal Bot',
-  'assisted-heal-bot': 'Assisted Heal Bot',
-  'business-optimization': 'Business Optimization',
-  'data-engineering': 'Data Engineering',
-
-  // Portfolio
-  'portfolio': 'Portfolio',
-  'comparator': 'Component Comparator',
-  'graph-explorer': 'Graph Explorer',
-  'roadmap': 'Roadmap',
-
-  // Technical Debt
-  'technical-debt': 'Technical Debt',
-  'assessment': 'Assessment',
-  'agent-analysis': 'Agent Analysis',
-
-  // Breeze Deep Dive
-  'breeze-process': 'Breeze.AI Deep Dive',
-  'challenge': 'Challenge & Solution',
-  'manual-translation-tax': 'Manual Translation Tax',
-  'traditional-approaches': 'Traditional Approaches',
-  'breeze-breakthrough': 'Breeze Breakthrough',
-  'competitive-advantages': 'Competitive Advantages',
-  'architecture': 'Architecture',
-  'components': 'Core Components',
-  'interactions': 'Component Interactions',
-  'integration': 'Integration Points',
-  'scalability': 'Scalability & Performance',
-  'security': 'Security & Compliance',
-  'semantic': 'Semantic Model',
-  'functional': 'Functional Ontology',
-  'code': 'Code Ontology',
-  'relationships': 'Cross-Ontology Relationships',
-  'agents': 'Agents Layer',
-  'flow': 'Process Flow',
-  'phase1': 'Phase 1: Foundation',
-  'phase2': 'Phase 2: Evolution',
-  'phase3': 'Phase 3: Semantic First',
-
-  // Contact
-  'contact': 'Get Started'
-};
+import { useTranslation } from 'react-i18next';
 
 const Breadcrumbs: React.FC = () => {
   const location = useLocation();
+  const { t } = useTranslation('navigation');
+
+  // Route labels for human-readable breadcrumb names
+  const routeLabels: { [key: string]: string } = useMemo(() => ({
+    // Core Technology
+    'core-technology': t('breadcrumbs.coreTechnology'),
+    'kaps-framework': t('breadcrumbs.kapsFramework'),
+    'agent-architecture': t('breadcrumbs.agentArchitecture'),
+    'breeze-ai': t('breadcrumbs.breezeAI'),
+    'gen-ai-box': t('breadcrumbs.genAIBox'),
+    'guardrails': t('breadcrumbs.guardrails'),
+
+    // Solutions
+    'solutions': t('breadcrumbs.solutions'),
+    'product-engineering': t('breadcrumbs.productEngineering'),
+    'product-development': t('breadcrumbs.productDevelopment'),
+    'overview': t('breadcrumbs.overview'),
+    'requirements': t('breadcrumbs.requirements'),
+    'design': t('breadcrumbs.design'),
+    'implementation': t('breadcrumbs.implementation'),
+    'extraction': t('breadcrumbs.extraction'),
+    'validation': t('breadcrumbs.validation'),
+    'application-reengineering': t('breadcrumbs.applicationReengineering'),
+    'discovery': t('breadcrumbs.discovery'),
+    'strategy': t('breadcrumbs.strategy'),
+    'asimov': t('breadcrumbs.asimov'),
+    'transformation': t('breadcrumbs.transformation'),
+    'patterns': t('breadcrumbs.patterns'),
+    'success-stories': t('breadcrumbs.successStories'),
+    'customer-service': t('breadcrumbs.customerService'),
+    'self-heal-bot': t('breadcrumbs.selfHealBot'),
+    'assisted-heal-bot': t('breadcrumbs.assistedHealBot'),
+    'optimization-hub': t('breadcrumbs.optimizationHub'),
+    'business-optimization': t('breadcrumbs.businessOptimization'),
+    'data-engineering': t('breadcrumbs.dataEngineering'),
+
+    // Portfolio
+    'portfolio': t('breadcrumbs.portfolio'),
+    'comparator': t('breadcrumbs.comparator'),
+    'graph-explorer': t('breadcrumbs.graphExplorer'),
+    'roadmap': t('breadcrumbs.roadmap'),
+
+    // Technical Debt
+    'technical-debt': t('breadcrumbs.technicalDebt'),
+    'assessment': t('breadcrumbs.assessment'),
+    'agent-analysis': t('breadcrumbs.agentAnalysis'),
+
+    // Breeze Deep Dive
+    'breeze-process': t('breadcrumbs.breezeProcess'),
+    'challenge': t('breadcrumbs.challenge'),
+    'manual-translation-tax': t('breadcrumbs.manualTranslationTax'),
+    'traditional-approaches': t('breadcrumbs.traditionalApproaches'),
+    'breeze-breakthrough': t('breadcrumbs.breezeBreakthrough'),
+    'breakthrough': t('breadcrumbs.breakthrough'),
+    'competitive-advantages': t('breadcrumbs.competitiveAdvantages'),
+    'capabilities': t('breadcrumbs.capabilities'),
+    'legacy': t('breadcrumbs.legacy'),
+    'advantages': t('breadcrumbs.advantages'),
+    'architecture': t('breadcrumbs.architecture'),
+    'components': t('breadcrumbs.components'),
+    'interactions': t('breadcrumbs.interactions'),
+    'integration': t('breadcrumbs.integration'),
+    'scalability': t('breadcrumbs.scalability'),
+    'security': t('breadcrumbs.security'),
+    'semantic': t('breadcrumbs.semantic'),
+    'functional': t('breadcrumbs.functional'),
+    'code': t('breadcrumbs.code'),
+    'relationships': t('breadcrumbs.relationships'),
+    'agents': t('breadcrumbs.agents'),
+    'flow': t('breadcrumbs.flow'),
+    'phase1': t('breadcrumbs.phase1'),
+    'phase2': t('breadcrumbs.phase2'),
+    'phase3': t('breadcrumbs.phase3'),
+
+    // Contact
+    'contact': t('breadcrumbs.contact')
+  }), [t]);
 
   // Generate breadcrumbs from pathname
   const pathnames = location.pathname.split('/').filter((x) => x);
@@ -83,7 +92,7 @@ const Breadcrumbs: React.FC = () => {
     return null;
   }
 
-  const breadcrumbs = [{ label: 'Home', path: '/' }];
+  const breadcrumbs = [{ label: t('breadcrumbs.home'), path: '/' }];
   let currentPath = '';
 
   pathnames.forEach((segment) => {
@@ -111,7 +120,7 @@ const Breadcrumbs: React.FC = () => {
                     className="text-gray-500 hover:text-secondary transition-colors flex items-center"
                   >
                     <HomeIcon className="w-4 h-4" />
-                    <span className="sr-only">Home</span>
+                    <span className="sr-only">{t('breadcrumbs.home')}</span>
                   </Link>
                 ) : isLast ? (
                   <span className="text-gray-900 font-medium truncate max-w-[200px]">

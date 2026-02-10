@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { useOntology } from '../../contexts/OntologyContext';
 import { ProductType, OntologyType } from '../../types/ontology';
 
@@ -14,6 +15,7 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
   multiOntologyMode = false
 }) => {
   const { state, dispatch } = useOntology();
+  const { t } = useTranslation('common');
 
   const handleProductFilter = (product: ProductType) => {
     dispatch({ type: 'SET_PRODUCT_FILTER', payload: product });
@@ -32,14 +34,14 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
   };
 
   const productOptions: { value: ProductType; label: string; color: string }[] = [
-    { value: 'all', label: 'All Products', color: 'gray' },
+    { value: 'all', label: t('filters.allProducts'), color: 'gray' },
     { value: 'phoenix', label: 'Phoenix CRM', color: 'error' },
     { value: 'apollo', label: 'Apollo Launchpad', color: 'secondary' },
     { value: 'voyager', label: 'Voyager Analytics', color: 'brand-purple' }
   ];
 
   const ontologyOptions: { value: OntologyType; label: string; color: string }[] = [
-    { value: 'all', label: 'All Ontologies', color: 'gray' },
+    { value: 'all', label: t('filters.allOntologies'), color: 'gray' },
     { value: 'functional', label: 'Functional', color: 'secondary' },
     { value: 'design', label: 'Design', color: 'brand-purple' },
     { value: 'architecture', label: 'Architecture', color: 'success' },
@@ -61,18 +63,18 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
   return (
     <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-lg font-semibold text-gray-900">Filters</h3>
+        <h3 className="text-lg font-semibold text-gray-900">{t('filters.title')}</h3>
         <button
           onClick={handleReset}
           className="text-sm text-gray-500 hover:text-gray-700 underline"
         >
-          Reset All
+          {t('filters.resetAll')}
         </button>
       </div>
 
       {/* Product Filter */}
       <div className="mb-6">
-        <h4 className="text-sm font-medium text-gray-700 mb-3">Product</h4>
+        <h4 className="text-sm font-medium text-gray-700 mb-3">{t('filters.product')}</h4>
         <div className="grid grid-cols-2 gap-2">
           {productOptions.map((option) => (
             <button
@@ -91,7 +93,7 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
 
       {/* Ontology Filter */}
       <div className="mb-6">
-        <h4 className="text-sm font-medium text-gray-700 mb-3">Ontology</h4>
+        <h4 className="text-sm font-medium text-gray-700 mb-3">{t('filters.ontology')}</h4>
         <div className="grid grid-cols-2 gap-2">
           {ontologyOptions.map((option) => {
             const isSelected = multiOntologyMode 
@@ -122,7 +124,7 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
       {/* Inconsistencies Toggle */}
       {onToggleInconsistencies && (
         <div className="mb-4">
-          <h4 className="text-sm font-medium text-gray-700 mb-3">Display Options</h4>
+          <h4 className="text-sm font-medium text-gray-700 mb-3">{t('filters.displayOptions')}</h4>
           <label className="flex items-center">
             <input
               type="checkbox"
@@ -131,7 +133,7 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
               className="rounded border-gray-300 text-error focus:ring-error"
             />
             <span className="ml-2 text-sm text-gray-600">
-              Highlight Inconsistencies
+              {t('filters.highlightInconsistencies')}
             </span>
           </label>
         </div>
@@ -139,7 +141,7 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
 
       {/* Filter Summary */}
       <div className="pt-4 border-t border-gray-200">
-        <h4 className="text-sm font-medium text-gray-700 mb-2">Current Filters</h4>
+        <h4 className="text-sm font-medium text-gray-700 mb-2">{t('filters.currentFilters')}</h4>
         <div className="space-y-1">
           <div className="text-xs text-gray-500">
             Product: <span className="font-medium">{productOptions.find(p => p.value === state.selectedProduct)?.label}</span>

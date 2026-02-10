@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" style="max-width: 100%; height: auto;">
+  <defs>
+    <linearGradient id="tableBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dbeafe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dcfce7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <rect width="500" height="300" fill="url(#tableBg)"/>
+
+  <!-- Title -->
+  <text x="250" y="25" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#374151">アクセス制御マトリクス</text>
+
+  <!-- Table Header -->
+  <rect x="50" y="50" width="100" height="40" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="100" y="75" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#374151">ロール</text>
+
+  <rect x="150" y="50" width="100" height="40" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="200" y="75" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#374151">仕様</text>
+
+  <rect x="250" y="50" width="100" height="40" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="300" y="75" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#374151">生成</text>
+
+  <rect x="350" y="50" width="100" height="40" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="400" y="75" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#374151">管理者</text>
+
+  <!-- Developer Row -->
+  <rect x="50" y="90" width="100" height="35" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="100" y="112" text-anchor="middle" font-family="Arial" font-size="11" font-weight="semibold" fill="#374151">開発者</text>
+
+  <rect x="150" y="90" width="100" height="35" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="200" y="112" text-anchor="middle" font-family="Arial" font-size="11" fill="#6b7280">読み取り</text>
+
+  <rect x="250" y="90" width="100" height="35" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="300" y="112" text-anchor="middle" font-family="Arial" font-size="11" fill="#6b7280">実行</text>
+
+  <rect x="350" y="90" width="100" height="35" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="400" y="112" text-anchor="middle" font-family="Arial" font-size="16" fill="#dc2626">❌</text>
+
+  <!-- Architect Row -->
+  <rect x="50" y="125" width="100" height="35" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="100" y="147" text-anchor="middle" font-family="Arial" font-size="11" font-weight="semibold" fill="#374151">アーキテクト</text>
+
+  <rect x="150" y="125" width="100" height="35" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="200" y="147" text-anchor="middle" font-family="Arial" font-size="11" fill="#6b7280">書き込み</text>
+
+  <rect x="250" y="125" width="100" height="35" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="300" y="147" text-anchor="middle" font-family="Arial" font-size="11" fill="#6b7280">実行</text>
+
+  <rect x="350" y="125" width="100" height="35" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="400" y="147" text-anchor="middle" font-family="Arial" font-size="16" fill="#dc2626">❌</text>
+
+  <!-- Product Owner Row -->
+  <rect x="50" y="160" width="100" height="35" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="100" y="177" text-anchor="middle" font-family="Arial" font-size="10" font-weight="semibold" fill="#374151">プロダクト</text>
+  <text x="100" y="187" text-anchor="middle" font-family="Arial" font-size="10" font-weight="semibold" fill="#374151">オーナー</text>
+
+  <rect x="150" y="160" width="100" height="35" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="200" y="182" text-anchor="middle" font-family="Arial" font-size="11" fill="#6b7280">承認</text>
+
+  <rect x="250" y="160" width="100" height="35" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="300" y="182" text-anchor="middle" font-family="Arial" font-size="11" fill="#6b7280">レビュー</text>
+
+  <rect x="350" y="160" width="100" height="35" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="400" y="182" text-anchor="middle" font-family="Arial" font-size="16" fill="#dc2626">❌</text>
+
+  <!-- Admin Row -->
+  <rect x="50" y="195" width="100" height="35" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="100" y="217" text-anchor="middle" font-family="Arial" font-size="11" font-weight="semibold" fill="#374151">管理者</text>
+
+  <rect x="150" y="195" width="100" height="35" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="200" y="217" text-anchor="middle" font-family="Arial" font-size="11" fill="#6b7280">フル</text>
+
+  <rect x="250" y="195" width="100" height="35" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="300" y="217" text-anchor="middle" font-family="Arial" font-size="11" fill="#6b7280">フル</text>
+
+  <rect x="350" y="195" width="100" height="35" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="400" y="217" text-anchor="middle" font-family="Arial" font-size="16" fill="#16a34a">✓</text>
+
+  <!-- Footer Note -->
+  <rect x="50" y="245" width="400" height="40" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1" rx="4"/>
+  <text x="250" y="260" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#374151">動的権限:</text>
+  <text x="250" y="275" text-anchor="middle" font-family="Arial" font-size="9" fill="#6b7280">プロジェクト割り当て、時間制約、承認ワークフローに基づいて</text>
+  <text x="250" y="285" text-anchor="middle" font-family="Arial" font-size="9" fill="#6b7280">権限を動的に付与できます。</text>
+</svg>

@@ -1,6 +1,6 @@
 import React from 'react';
-import { 
-  ArrowPathIcon, 
+import {
+  ArrowPathIcon,
   CpuChipIcon,
   DocumentMagnifyingGlassIcon,
   CloudArrowUpIcon,
@@ -14,116 +14,78 @@ import {
   SparklesIcon
 } from '@heroicons/react/24/outline';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const ASIMOVOverview: React.FC = () => {
+  const { t } = useTranslation('solutions');
   const coreCapabilities = [
     {
       icon: DocumentMagnifyingGlassIcon,
-      title: 'AI-Powered Discovery',
-      description: 'Autonomous agents analyze legacy systems to create comprehensive knowledge graphs',
-      features: [
-        'Deep code analysis with LLM understanding',
-        'Automatic dependency mapping',
-        'Business logic extraction',
-        'Hidden pattern discovery'
-      ]
+      title: t('asimov.overview.capabilities.discovery.title'),
+      description: t('asimov.overview.capabilities.discovery.description'),
+      features: t('asimov.overview.capabilities.discovery.features', { returnObjects: true }) as unknown as string[]
     },
     {
       icon: CpuChipIcon,
-      title: 'Intelligent Transformation',
-      description: 'Multi-agent orchestration for code modernization and optimization',
-      features: [
-        'Automated code refactoring',
-        'Language translation (COBOL to Java)',
-        'Architecture modernization',
-        'Performance optimization'
-      ]
+      title: t('asimov.overview.capabilities.transformation.title'),
+      description: t('asimov.overview.capabilities.transformation.description'),
+      features: t('asimov.overview.capabilities.transformation.features', { returnObjects: true }) as unknown as string[]
     },
     {
       icon: CloudArrowUpIcon,
-      title: 'Cloud-Native Migration',
-      description: 'Agent-driven containerization and cloud deployment strategies',
-      features: [
-        'Microservices extraction',
-        'Container orchestration',
-        'Auto-scaling configuration',
-        'Infrastructure as code'
-      ]
+      title: t('asimov.overview.capabilities.cloudNative.title'),
+      description: t('asimov.overview.capabilities.cloudNative.description'),
+      features: t('asimov.overview.capabilities.cloudNative.features', { returnObjects: true }) as unknown as string[]
     },
     {
       icon: ShieldCheckIcon,
-      title: 'Zero-Risk Execution',
-      description: 'Continuous validation and rollback capabilities ensure safe migration',
-      features: [
-        'Parallel run validation',
-        'Automated testing generation',
-        'Real-time monitoring',
-        'Instant rollback capability'
-      ]
+      title: t('asimov.overview.capabilities.zeroRisk.title'),
+      description: t('asimov.overview.capabilities.zeroRisk.description'),
+      features: t('asimov.overview.capabilities.zeroRisk.features', { returnObjects: true }) as unknown as string[]
     }
   ];
 
   const migrationApproach = {
     phases: [
       {
-        phase: 'Discovery & Assessment',
-        duration: '2-4 weeks',
-        description: 'Comprehensive analysis of legacy landscape',
-        deliverables: [
-          'Complete system inventory',
-          'Dependency mapping',
-          'Risk assessment matrix',
-          'Migration roadmap'
-        ]
+        phase: t('asimov.overview.methodology.phases.discoveryAssessment.phase'),
+        duration: t('asimov.overview.methodology.phases.discoveryAssessment.duration'),
+        description: t('asimov.overview.methodology.phases.discoveryAssessment.description'),
+        deliverables: t('asimov.overview.methodology.phases.discoveryAssessment.deliverables', { returnObjects: true }) as unknown as string[]
       },
       {
-        phase: 'Planning & Design',
-        duration: '3-5 weeks',
-        description: 'Detailed migration strategy and architecture',
-        deliverables: [
-          'Target architecture blueprint',
-          'Migration patterns catalog',
-          'Resource allocation plan',
-          'Success metrics definition'
-        ]
+        phase: t('asimov.overview.methodology.phases.planningDesign.phase'),
+        duration: t('asimov.overview.methodology.phases.planningDesign.duration'),
+        description: t('asimov.overview.methodology.phases.planningDesign.description'),
+        deliverables: t('asimov.overview.methodology.phases.planningDesign.deliverables', { returnObjects: true }) as unknown as string[]
       },
       {
-        phase: 'Iterative Transformation',
-        duration: '3-6 months',
-        description: 'Incremental modernization with continuous validation',
-        deliverables: [
-          'Modernized components',
-          'API interfaces',
-          'Test automation suite',
-          'Performance benchmarks'
-        ]
+        phase: t('asimov.overview.methodology.phases.iterativeTransformation.phase'),
+        duration: t('asimov.overview.methodology.phases.iterativeTransformation.duration'),
+        description: t('asimov.overview.methodology.phases.iterativeTransformation.description'),
+        deliverables: t('asimov.overview.methodology.phases.iterativeTransformation.deliverables', { returnObjects: true }) as unknown as string[]
       },
       {
-        phase: 'Deployment & Optimization',
-        duration: '2-4 weeks',
-        description: 'Production rollout and performance tuning',
-        deliverables: [
-          'Production deployment',
-          'Monitoring dashboards',
-          'Optimization reports',
-          'Knowledge transfer'
-        ]
+        phase: t('asimov.overview.methodology.phases.deploymentOptimization.phase'),
+        duration: t('asimov.overview.methodology.phases.deploymentOptimization.duration'),
+        description: t('asimov.overview.methodology.phases.deploymentOptimization.description'),
+        deliverables: t('asimov.overview.methodology.phases.deploymentOptimization.deliverables', { returnObjects: true }) as unknown as string[]
       }
     ]
   };
 
   const valueProposition = [
-    { metric: '70%', label: 'Reduction in Migration Time', description: 'AI automation accelerates transformation' },
-    { metric: '85%', label: 'Code Coverage', description: 'Automated testing ensures quality' },
-    { metric: '60%', label: 'Cost Savings', description: 'Compared to traditional migration' },
-    { metric: '99.9%', label: 'Uptime During Migration', description: 'Zero-downtime deployment strategy' }
+    { metric: t('asimov.overview.valueProposition.migrationTime.metric'), label: t('asimov.overview.valueProposition.migrationTime.label'), description: t('asimov.overview.valueProposition.migrationTime.description') },
+    { metric: t('asimov.overview.valueProposition.codeCoverage.metric'), label: t('asimov.overview.valueProposition.codeCoverage.label'), description: t('asimov.overview.valueProposition.codeCoverage.description') },
+    { metric: t('asimov.overview.valueProposition.costSavings.metric'), label: t('asimov.overview.valueProposition.costSavings.label'), description: t('asimov.overview.valueProposition.costSavings.description') },
+    { metric: t('asimov.overview.valueProposition.uptime.metric'), label: t('asimov.overview.valueProposition.uptime.label'), description: t('asimov.overview.valueProposition.uptime.description') }
   ];
 
   const navigationLinks = [
-    { path: '/solutions/asimov/discovery', label: 'Discovery & Analysis', icon: DocumentMagnifyingGlassIcon },
-    { path: '/solutions/asimov/transformation', label: 'Transformation Engine', icon: CpuChipIcon },
-    { path: '/solutions/asimov/patterns', label: 'Migration Patterns', icon: CodeBracketIcon },
-    { path: '/solutions/asimov/success-stories', label: 'Success Stories', icon: ChartBarIcon }
+    { path: '/solutions/asimov/discovery', label: t('asimov.overview.nav.discoveryAnalysis'), icon: DocumentMagnifyingGlassIcon },
+    { path: '/solutions/asimov/transformation', label: t('asimov.overview.nav.transformationEngine'), icon: CpuChipIcon },
+    { path: '/solutions/asimov/patterns', label: t('asimov.overview.nav.migrationPatterns'), icon: CodeBracketIcon },
+    { path: '/solutions/asimov/success-stories', label: t('asimov.overview.nav.successStories'), icon: ChartBarIcon }
   ];
 
   return (
@@ -135,11 +97,10 @@ const ASIMOVOverview: React.FC = () => {
             <div>
               <div className="flex items-center mb-4">
                 <ArrowPathIcon className="h-10 w-10 text-secondary mr-3" />
-                <h1 className="text-3xl font-bold text-gray-900">ASIMOV Legacy Migration Platform</h1>
+                <h1 className="text-3xl font-bold text-gray-900">{t('asimov.overview.header.title')}</h1>
               </div>
               <p className="text-lg text-gray-600 max-w-3xl">
-                Autonomous System for Intelligent Migration and Optimization - Transform legacy applications 
-                into modern, cloud-native architectures using AI-powered agents
+                {t('asimov.overview.header.description')}
               </p>
             </div>
           </div>
@@ -160,7 +121,7 @@ const ASIMOVOverview: React.FC = () => {
 
         {/* Core Capabilities */}
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">AI-Powered Migration Capabilities</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('asimov.overview.capabilities.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {coreCapabilities.map((capability, index) => {
               const Icon = capability.icon;
@@ -189,7 +150,7 @@ const ASIMOVOverview: React.FC = () => {
 
         {/* Migration Approach */}
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Proven Migration Methodology</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('asimov.overview.methodology.title')}</h2>
           <div className="relative">
             <div className="absolute left-8 top-10 bottom-10 w-0.5 bg-gray-300"></div>
             {migrationApproach.phases.map((phase, index) => (
@@ -206,7 +167,7 @@ const ASIMOVOverview: React.FC = () => {
                     </div>
                     <p className="text-sm text-gray-600 mb-4">{phase.description}</p>
                     <div>
-                      <p className="text-xs font-semibold text-gray-700 mb-2">Key Deliverables:</p>
+                      <p className="text-xs font-semibold text-gray-700 mb-2">{t('asimov.overview.methodology.keyDeliverables')}</p>
                       <div className="grid grid-cols-2 gap-2">
                         {phase.deliverables.map((deliverable, idx) => (
                           <div key={idx} className="flex items-center text-xs text-gray-600">
@@ -225,34 +186,31 @@ const ASIMOVOverview: React.FC = () => {
 
         {/* Agent Ecosystem */}
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Multi-Agent Migration Ecosystem</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('asimov.overview.agentEcosystem.title')}</h2>
           <div className="bg-gradient-to-br from-brand-blue-50 to-brand-purple-100 rounded-lg p-6">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-white rounded-lg p-4">
-                <h4 className="font-semibold text-gray-900 mb-3">Discovery Agents</h4>
+                <h4 className="font-semibold text-gray-900 mb-3">{t('asimov.overview.agentEcosystem.discovery')}</h4>
                 <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• Code Analysis Agent</li>
-                  <li>• Dependency Mapper</li>
-                  <li>• Business Logic Extractor</li>
-                  <li>• Documentation Generator</li>
+                  {(t('asimov.overview.agentEcosystem.discoveryAgents', { returnObjects: true }) as unknown as string[]).map((agent, idx) => (
+                    <li key={idx}>• {agent}</li>
+                  ))}
                 </ul>
               </div>
               <div className="bg-white rounded-lg p-4">
-                <h4 className="font-semibold text-gray-900 mb-3">Transformation Agents</h4>
+                <h4 className="font-semibold text-gray-900 mb-3">{t('asimov.overview.agentEcosystem.transformation')}</h4>
                 <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• Code Translator</li>
-                  <li>• Refactoring Agent</li>
-                  <li>• API Designer</li>
-                  <li>• Test Generator</li>
+                  {(t('asimov.overview.agentEcosystem.transformationAgents', { returnObjects: true }) as unknown as string[]).map((agent, idx) => (
+                    <li key={idx}>• {agent}</li>
+                  ))}
                 </ul>
               </div>
               <div className="bg-white rounded-lg p-4">
-                <h4 className="font-semibold text-gray-900 mb-3">Validation Agents</h4>
+                <h4 className="font-semibold text-gray-900 mb-3">{t('asimov.overview.agentEcosystem.validation')}</h4>
                 <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• Quality Validator</li>
-                  <li>• Performance Monitor</li>
-                  <li>• Security Scanner</li>
-                  <li>• Compliance Checker</li>
+                  {(t('asimov.overview.agentEcosystem.validationAgents', { returnObjects: true }) as unknown as string[]).map((agent, idx) => (
+                    <li key={idx}>• {agent}</li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -272,7 +230,7 @@ const ASIMOVOverview: React.FC = () => {
                 <Icon className="h-8 w-8 text-secondary mb-3 group-hover:scale-110 transition-transform" />
                 <h3 className="font-semibold text-gray-900 mb-2">{link.label}</h3>
                 <div className="flex items-center text-secondary text-sm">
-                  <span>Explore</span>
+                  <span>{t('asimov.overview.nav.explore')}</span>
                   <ArrowRightIcon className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
                 </div>
               </Link>

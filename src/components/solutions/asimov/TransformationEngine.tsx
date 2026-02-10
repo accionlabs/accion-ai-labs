@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { 
+import {
   CpuChipIcon,
   CodeBracketIcon,
   ArrowPathIcon,
@@ -14,232 +14,125 @@ import {
   ServerIcon,
   ShieldCheckIcon
 } from '@heroicons/react/24/outline';
+import { useTranslation } from 'react-i18next';
 
 const TransformationEngine: React.FC = () => {
+  const { t } = useTranslation('solutions');
   const [selectedTransformation, setSelectedTransformation] = useState('cobol-to-java');
 
   const transformationAgents = [
     {
-      name: 'Code Translator Agent',
+      name: t('asimov.transformation.agents.codeTranslator.name'),
       icon: CodeBracketIcon,
-      description: 'LLM-powered code translation between languages',
-      capabilities: [
-        'COBOL to Java/C#/Python',
-        'Semantic preservation',
-        'Idiomatic code generation',
-        'Performance optimization'
-      ],
+      description: t('asimov.transformation.agents.codeTranslator.description'),
+      capabilities: t('asimov.transformation.agents.codeTranslator.capabilities', { returnObjects: true }) as unknown as string[],
       performance: {
-        'Translation Speed': '50K LOC/day',
-        'Accuracy': '98%',
-        'Manual Review': '<5%'
+        [t('asimov.transformation.agents.codeTranslator.performance.translationSpeed.label')]: t('asimov.transformation.agents.codeTranslator.performance.translationSpeed.value'),
+        [t('asimov.transformation.agents.codeTranslator.performance.accuracy.label')]: t('asimov.transformation.agents.codeTranslator.performance.accuracy.value'),
+        [t('asimov.transformation.agents.codeTranslator.performance.manualReview.label')]: t('asimov.transformation.agents.codeTranslator.performance.manualReview.value')
       }
     },
     {
-      name: 'Refactoring Agent',
+      name: t('asimov.transformation.agents.refactoring.name'),
       icon: ArrowPathIcon,
-      description: 'Intelligent code restructuring and optimization',
-      capabilities: [
-        'Design pattern application',
-        'Code smell elimination',
-        'Performance improvements',
-        'Security enhancements'
-      ],
+      description: t('asimov.transformation.agents.refactoring.description'),
+      capabilities: t('asimov.transformation.agents.refactoring.capabilities', { returnObjects: true }) as unknown as string[],
       performance: {
-        'Patterns Applied': '200+',
-        'Code Quality': '+40%',
-        'Tech Debt': '-60%'
+        [t('asimov.transformation.agents.refactoring.performance.patternsApplied.label')]: t('asimov.transformation.agents.refactoring.performance.patternsApplied.value'),
+        [t('asimov.transformation.agents.refactoring.performance.codeQuality.label')]: t('asimov.transformation.agents.refactoring.performance.codeQuality.value'),
+        [t('asimov.transformation.agents.refactoring.performance.techDebt.label')]: t('asimov.transformation.agents.refactoring.performance.techDebt.value')
       }
     },
     {
-      name: 'API Designer Agent',
+      name: t('asimov.transformation.agents.apiDesigner.name'),
       icon: CubeTransparentIcon,
-      description: 'Automatic API layer generation and optimization',
-      capabilities: [
-        'RESTful API generation',
-        'GraphQL schema creation',
-        'OpenAPI documentation',
-        'Backward compatibility'
-      ],
+      description: t('asimov.transformation.agents.apiDesigner.description'),
+      capabilities: t('asimov.transformation.agents.apiDesigner.capabilities', { returnObjects: true }) as unknown as string[],
       performance: {
-        'APIs Generated': '500+',
-        'Documentation': '100%',
-        'Compliance': 'Full'
+        [t('asimov.transformation.agents.apiDesigner.performance.apisGenerated.label')]: t('asimov.transformation.agents.apiDesigner.performance.apisGenerated.value'),
+        [t('asimov.transformation.agents.apiDesigner.performance.documentation.label')]: t('asimov.transformation.agents.apiDesigner.performance.documentation.value'),
+        [t('asimov.transformation.agents.apiDesigner.performance.compliance.label')]: t('asimov.transformation.agents.apiDesigner.performance.compliance.value')
       }
     },
     {
-      name: 'Test Generator Agent',
+      name: t('asimov.transformation.agents.testGenerator.name'),
       icon: BeakerIcon,
-      description: 'Comprehensive test suite generation',
-      capabilities: [
-        'Unit test creation',
-        'Integration test design',
-        'Performance test scripts',
-        'Test data generation'
-      ],
+      description: t('asimov.transformation.agents.testGenerator.description'),
+      capabilities: t('asimov.transformation.agents.testGenerator.capabilities', { returnObjects: true }) as unknown as string[],
       performance: {
-        'Coverage': '95%',
-        'Test Cases': '10K+',
-        'Execution Time': '-30%'
+        [t('asimov.transformation.agents.testGenerator.performance.coverage.label')]: t('asimov.transformation.agents.testGenerator.performance.coverage.value'),
+        [t('asimov.transformation.agents.testGenerator.performance.testCases.label')]: t('asimov.transformation.agents.testGenerator.performance.testCases.value'),
+        [t('asimov.transformation.agents.testGenerator.performance.executionTime.label')]: t('asimov.transformation.agents.testGenerator.performance.executionTime.value')
       }
     }
   ];
 
-  const transformationPatterns = {
-    'cobol-to-java': {
-      title: 'COBOL to Java Transformation',
-      description: 'Complete migration from mainframe COBOL to modern Java',
-      steps: [
-        {
-          phase: 'Code Analysis',
-          description: 'Parse COBOL programs and extract business logic',
-          agent: 'COBOL Parser Agent',
-          output: 'Abstract Syntax Tree'
-        },
-        {
-          phase: 'Pattern Mapping',
-          description: 'Map COBOL constructs to Java patterns',
-          agent: 'Pattern Recognition Agent',
-          output: 'Transformation Rules'
-        },
-        {
-          phase: 'Code Generation',
-          description: 'Generate equivalent Java code',
-          agent: 'Java Generator Agent',
-          output: 'Java Source Code'
-        },
-        {
-          phase: 'Optimization',
-          description: 'Apply Java best practices and optimizations',
-          agent: 'Optimization Agent',
-          output: 'Optimized Java Code'
-        },
-        {
-          phase: 'Testing',
-          description: 'Generate and execute comprehensive tests',
-          agent: 'Test Generator Agent',
-          output: 'Test Suite & Results'
-        }
-      ],
-      metrics: {
-        'Success Rate': '95%',
-        'Performance Gain': '+200%',
-        'Code Reduction': '40%',
-        'Time Saved': '70%'
-      }
-    },
-    'monolith-to-microservices': {
-      title: 'Monolith to Microservices',
-      description: 'Decompose monolithic applications into microservices',
-      steps: [
-        {
-          phase: 'Domain Analysis',
-          description: 'Identify bounded contexts and service boundaries',
-          agent: 'Domain Analyzer Agent',
-          output: 'Service Map'
-        },
-        {
-          phase: 'Dependency Extraction',
-          description: 'Extract and isolate dependencies',
-          agent: 'Dependency Agent',
-          output: 'Dependency Graph'
-        },
-        {
-          phase: 'Service Generation',
-          description: 'Create individual microservices',
-          agent: 'Service Generator Agent',
-          output: 'Microservices'
-        },
-        {
-          phase: 'API Creation',
-          description: 'Generate inter-service communication APIs',
-          agent: 'API Designer Agent',
-          output: 'API Contracts'
-        },
-        {
-          phase: 'Containerization',
-          description: 'Package services in containers',
-          agent: 'Container Agent',
-          output: 'Docker Images'
-        }
-      ],
-      metrics: {
-        'Services Created': 'Avg 25',
-        'Deployment Speed': '+10x',
-        'Scalability': 'Infinite',
-        'Maintenance': '-50%'
-      }
-    },
-    'database-modernization': {
-      title: 'Database Modernization',
-      description: 'Migrate legacy databases to modern platforms',
-      steps: [
-        {
-          phase: 'Schema Analysis',
-          description: 'Analyze existing database schema',
-          agent: 'Schema Analyzer Agent',
-          output: 'Schema Report'
-        },
-        {
-          phase: 'Data Profiling',
-          description: 'Profile data patterns and quality',
-          agent: 'Data Profiler Agent',
-          output: 'Data Quality Report'
-        },
-        {
-          phase: 'Schema Transformation',
-          description: 'Transform schema for target database',
-          agent: 'Schema Transformer Agent',
-          output: 'New Schema'
-        },
-        {
-          phase: 'Data Migration',
-          description: 'Migrate data with validation',
-          agent: 'Data Migration Agent',
-          output: 'Migrated Data'
-        },
-        {
-          phase: 'Performance Tuning',
-          description: 'Optimize queries and indexes',
-          agent: 'Performance Agent',
-          output: 'Optimized Database'
-        }
-      ],
-      metrics: {
-        'Data Integrity': '100%',
-        'Query Performance': '+300%',
-        'Storage Reduction': '40%',
-        'Downtime': 'Zero'
-      }
-    }
+  const patternStepKeys: Record<string, string[]> = {
+    'cobol-to-java': ['codeAnalysis', 'patternMapping', 'codeGeneration', 'optimization', 'testing'],
+    'monolith-to-microservices': ['domainAnalysis', 'dependencyExtraction', 'serviceGeneration', 'apiCreation', 'containerization'],
+    'database-modernization': ['schemaAnalysis', 'dataProfiling', 'schemaTransformation', 'dataMigration', 'performanceTuning']
+  };
+
+  const patternI18nKeys: Record<string, string> = {
+    'cobol-to-java': 'cobolToJava',
+    'monolith-to-microservices': 'monolithToMicroservices',
+    'database-modernization': 'databaseModernization'
+  };
+
+  const getPatternData = (patternKey: string) => {
+    const i18nKey = patternI18nKeys[patternKey];
+    const stepKeys = patternStepKeys[patternKey];
+    const base = `asimov.transformation.patterns.${i18nKey}`;
+
+    const steps = stepKeys.map(sk => ({
+      phase: t(`${base}.steps.${sk}.phase`),
+      description: t(`${base}.steps.${sk}.description`),
+      agent: t(`${base}.steps.${sk}.agent`),
+      output: t(`${base}.steps.${sk}.output`)
+    }));
+
+    const metricsObj = t(`${base}.metrics`, { returnObjects: true }) as unknown as Record<string, { label: string; value: string }>;
+    const metrics: Record<string, string> = {};
+    Object.values(metricsObj).forEach(m => {
+      metrics[m.label] = m.value;
+    });
+
+    return {
+      title: t(`${base}.title`),
+      description: t(`${base}.description`),
+      steps,
+      metrics
+    };
   };
 
   const transformationTools = [
     {
-      name: 'LLM Code Analyzer',
-      description: 'GPT-4 powered code understanding',
+      name: t('asimov.transformation.tools.llmCodeAnalyzer.name'),
+      description: t('asimov.transformation.tools.llmCodeAnalyzer.description'),
       icon: SparklesIcon,
-      features: ['Semantic analysis', 'Intent extraction', 'Pattern recognition']
+      features: t('asimov.transformation.tools.llmCodeAnalyzer.features', { returnObjects: true }) as unknown as string[]
     },
     {
-      name: 'AST Processor',
-      description: 'Abstract Syntax Tree manipulation',
+      name: t('asimov.transformation.tools.astProcessor.name'),
+      description: t('asimov.transformation.tools.astProcessor.description'),
       icon: CubeTransparentIcon,
-      features: ['Parse trees', 'Code transformation', 'Syntax validation']
+      features: t('asimov.transformation.tools.astProcessor.features', { returnObjects: true }) as unknown as string[]
     },
     {
-      name: 'Semantic Preserver',
-      description: 'Maintains business logic integrity',
+      name: t('asimov.transformation.tools.semanticPreserver.name'),
+      description: t('asimov.transformation.tools.semanticPreserver.description'),
       icon: ShieldCheckIcon,
-      features: ['Logic validation', 'Behavior testing', 'Regression prevention']
+      features: t('asimov.transformation.tools.semanticPreserver.features', { returnObjects: true }) as unknown as string[]
     },
     {
-      name: 'Performance Optimizer',
-      description: 'Automatic performance improvements',
+      name: t('asimov.transformation.tools.performanceOptimizer.name'),
+      description: t('asimov.transformation.tools.performanceOptimizer.description'),
       icon: BoltIcon,
-      features: ['Algorithm optimization', 'Memory management', 'Query tuning']
+      features: t('asimov.transformation.tools.performanceOptimizer.features', { returnObjects: true }) as unknown as string[]
     }
   ];
+
+  const currentPattern = getPatternData(selectedTransformation);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-indigo-50">
@@ -249,8 +142,8 @@ const TransformationEngine: React.FC = () => {
           <div className="flex items-center">
             <CpuChipIcon className="h-8 w-8 text-indigo-600 mr-3" />
             <div>
-              <h1 className="text-2xl font-bold text-gray-900">Transformation Engine</h1>
-              <p className="text-sm text-gray-600 mt-1">AI-powered code transformation and modernization</p>
+              <h1 className="text-2xl font-bold text-gray-900">{t('asimov.transformation.header.title')}</h1>
+              <p className="text-sm text-gray-600 mt-1">{t('asimov.transformation.header.subtitle')}</p>
             </div>
           </div>
         </div>
@@ -259,7 +152,7 @@ const TransformationEngine: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Transformation Agents */}
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Transformation Agents</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('asimov.transformation.agents.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {transformationAgents.map((agent, index) => {
               const Icon = agent.icon;
@@ -270,9 +163,9 @@ const TransformationEngine: React.FC = () => {
                     <div className="flex-1">
                       <h3 className="font-semibold text-gray-900 mb-2">{agent.name}</h3>
                       <p className="text-sm text-gray-600 mb-4">{agent.description}</p>
-                      
+
                       <div className="mb-4">
-                        <p className="text-xs font-semibold text-gray-700 mb-2">Core Capabilities:</p>
+                        <p className="text-xs font-semibold text-gray-700 mb-2">{t('asimov.transformation.agents.coreCapabilities')}</p>
                         <ul className="space-y-1">
                           {agent.capabilities.map((cap, idx) => (
                             <li key={idx} className="text-xs text-gray-600 flex items-start">
@@ -282,7 +175,7 @@ const TransformationEngine: React.FC = () => {
                           ))}
                         </ul>
                       </div>
-                      
+
                       <div className="border-t pt-3">
                         <div className="grid grid-cols-3 gap-2">
                           {Object.entries(agent.performance).map(([key, value]) => (
@@ -303,11 +196,11 @@ const TransformationEngine: React.FC = () => {
 
         {/* Transformation Patterns */}
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Transformation Patterns</h2>
-          
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('asimov.transformation.patterns.title')}</h2>
+
           <div className="mb-6">
             <div className="inline-flex rounded-lg border border-gray-200 p-1">
-              {Object.keys(transformationPatterns).map((key) => (
+              {Object.keys(patternI18nKeys).map((key) => (
                 <button
                   key={key}
                   onClick={() => setSelectedTransformation(key)}
@@ -317,7 +210,7 @@ const TransformationEngine: React.FC = () => {
                       : 'text-gray-600 hover:text-gray-900'
                   }`}
                 >
-                  {transformationPatterns[key as keyof typeof transformationPatterns].title}
+                  {t(`asimov.transformation.patterns.${patternI18nKeys[key]}.title`)}
                 </button>
               ))}
             </div>
@@ -325,17 +218,17 @@ const TransformationEngine: React.FC = () => {
 
           <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-6">
             <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              {transformationPatterns[selectedTransformation as keyof typeof transformationPatterns].title}
+              {currentPattern.title}
             </h3>
             <p className="text-sm text-gray-600 mb-6">
-              {transformationPatterns[selectedTransformation as keyof typeof transformationPatterns].description}
+              {currentPattern.description}
             </p>
 
             {/* Transformation Steps */}
             <div className="mb-6">
-              <h4 className="text-sm font-semibold text-gray-700 mb-4">Transformation Pipeline</h4>
+              <h4 className="text-sm font-semibold text-gray-700 mb-4">{t('asimov.transformation.patterns.pipeline')}</h4>
               <div className="space-y-3">
-                {transformationPatterns[selectedTransformation as keyof typeof transformationPatterns].steps.map((step, idx) => (
+                {currentPattern.steps.map((step, idx) => (
                   <div key={idx} className="bg-white rounded-lg p-4 flex items-start">
                     <div className="bg-indigo-100 rounded-full p-2 mr-4">
                       <span className="text-sm font-bold text-indigo-600">{idx + 1}</span>
@@ -345,9 +238,9 @@ const TransformationEngine: React.FC = () => {
                       <p className="text-sm text-gray-600 mb-2">{step.description}</p>
                       <div className="flex items-center text-xs text-gray-500">
                         <CpuChipIcon className="h-3 w-3 mr-1" />
-                        <span className="mr-3">Agent: {step.agent}</span>
+                        <span className="mr-3">{t('asimov.transformation.patterns.agentLabel')} {step.agent}</span>
                         <DocumentDuplicateIcon className="h-3 w-3 mr-1" />
-                        <span>Output: {step.output}</span>
+                        <span>{t('asimov.transformation.patterns.outputLabel')} {step.output}</span>
                       </div>
                     </div>
                   </div>
@@ -357,7 +250,7 @@ const TransformationEngine: React.FC = () => {
 
             {/* Metrics */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {Object.entries(transformationPatterns[selectedTransformation as keyof typeof transformationPatterns].metrics).map(([key, value]) => (
+              {Object.entries(currentPattern.metrics).map(([key, value]) => (
                 <div key={key} className="bg-white rounded-lg p-3 text-center">
                   <p className="text-lg font-bold text-indigo-600">{value}</p>
                   <p className="text-xs text-gray-600">{key}</p>
@@ -369,7 +262,7 @@ const TransformationEngine: React.FC = () => {
 
         {/* Transformation Tools */}
         <div className="bg-white rounded-xl shadow-lg p-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">AI-Powered Tools</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('asimov.transformation.tools.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {transformationTools.map((tool, index) => {
               const Icon = tool.icon;

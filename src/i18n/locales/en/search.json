@@ -1,0 +1,270 @@
+{
+  "placeholder": "Search...",
+  "noResults": "No results found for \"{{query}}\"",
+  "items": {
+    "home": {
+      "title": "Home",
+      "description": "Accion AI Labs - Semantic Engineering Platform for enterprise software development"
+    },
+    "coreTechnology": {
+      "title": "Core Technology Overview",
+      "description": "Four-ontology framework for semantic software engineering with Breeze.AI"
+    },
+    "kapsFramework": {
+      "title": "KAPS Framework",
+      "description": "Knowledge, Architecture, Process, and Standards framework for semantic engineering"
+    },
+    "agentArchitecture": {
+      "title": "Agent Architecture",
+      "description": "Agentic graph architecture with specialized AI agents for software development"
+    },
+    "breezeAI": {
+      "title": "Breeze.AI",
+      "description": "Core semantic engineering platform for automated software development"
+    },
+    "genAIBox": {
+      "title": "Gen AI in a Box",
+      "description": "Packaged generative AI solutions for enterprise deployment"
+    },
+    "guardrails": {
+      "title": "Strategic Guardrails",
+      "description": "Safety and compliance guardrails for AI-assisted development"
+    },
+    "solutions": {
+      "title": "All Solutions",
+      "description": "Complete portfolio of AI-powered enterprise solutions"
+    },
+    "productEngineering": {
+      "title": "Product Engineering",
+      "description": "AI-accelerated product development and engineering solutions"
+    },
+    "productEngineeringOverview": {
+      "title": "Product Engineering Overview",
+      "description": "Semantic-first approach to product development lifecycle"
+    },
+    "requirementsCapture": {
+      "title": "Requirements Capture",
+      "description": "AI-powered requirements gathering and semantic analysis"
+    },
+    "designGeneration": {
+      "title": "Design Generation",
+      "description": "Automated design artifact generation from semantic specifications"
+    },
+    "implementationPipeline": {
+      "title": "Implementation Pipeline",
+      "description": "Continuous implementation pipeline with semantic validation"
+    },
+    "applicationReengineering": {
+      "title": "Application Re-engineering",
+      "description": "Legacy application modernization and technical debt remediation"
+    },
+    "reengineeringOverview": {
+      "title": "Re-engineering Overview",
+      "description": "Comprehensive approach to application modernization"
+    },
+    "discoveryAssessment": {
+      "title": "Discovery & Assessment",
+      "description": "Automated codebase analysis and technical debt assessment"
+    },
+    "reengineeringStrategy": {
+      "title": "Re-engineering Strategy",
+      "description": "Strategic planning for application modernization"
+    },
+    "implementationModernization": {
+      "title": "Implementation & Modernization",
+      "description": "Executing modernization with semantic preservation"
+    },
+    "continuousValidation": {
+      "title": "Continuous Validation",
+      "description": "Ongoing validation and quality assurance during modernization"
+    },
+    "asimov": {
+      "title": "ASIMOV",
+      "description": "AI-powered legacy system migration and modernization"
+    },
+    "asimovOverview": {
+      "title": "ASIMOV Overview",
+      "description": "Automated system for intelligent migration of vintage systems"
+    },
+    "discoveryAnalysis": {
+      "title": "Discovery & Analysis",
+      "description": "Deep analysis of legacy systems for migration planning"
+    },
+    "transformationEngine": {
+      "title": "Transformation Engine",
+      "description": "Automated code transformation and migration engine"
+    },
+    "migrationPatterns": {
+      "title": "Migration Patterns",
+      "description": "Proven patterns for legacy system migration"
+    },
+    "successStories": {
+      "title": "Success Stories",
+      "description": "Case studies and success stories from ASIMOV migrations"
+    },
+    "customerService": {
+      "title": "Customer Service AI",
+      "description": "AI-powered customer service and support solutions"
+    },
+    "customerServiceOverview": {
+      "title": "Customer Service Overview",
+      "description": "Comprehensive AI solutions for customer support"
+    },
+    "selfHealBot": {
+      "title": "Self-Heal Bot",
+      "description": "Autonomous customer service bot with self-healing capabilities"
+    },
+    "assistedHealBot": {
+      "title": "Assisted Heal Bot",
+      "description": "Human-assisted AI bot for complex customer issues"
+    },
+    "businessOptimization": {
+      "title": "Business Optimization Hub",
+      "description": "AI-driven business process optimization for customer service"
+    },
+    "implementationRoadmap": {
+      "title": "Implementation Roadmap",
+      "description": "Roadmap for deploying customer service AI solutions"
+    },
+    "dataEngineering": {
+      "title": "Data Engineering",
+      "description": "AI-powered data engineering and pipeline automation"
+    },
+    "portfolioOverview": {
+      "title": "Portfolio Overview",
+      "description": "Software portfolio analysis and rationalization dashboard"
+    },
+    "componentComparator": {
+      "title": "Component Comparator",
+      "description": "Compare and analyze software components across products"
+    },
+    "graphExplorer": {
+      "title": "Graph Explorer",
+      "description": "Interactive exploration of semantic knowledge graphs"
+    },
+    "rationalizationRoadmap": {
+      "title": "Rationalization Roadmap",
+      "description": "Strategic roadmap for portfolio rationalization"
+    },
+    "debtAssessment": {
+      "title": "Technical Debt Assessment",
+      "description": "Comprehensive technical debt analysis and scoring"
+    },
+    "agentAnalysis": {
+      "title": "Agent Analysis",
+      "description": "AI agent-based analysis of technical debt patterns"
+    },
+    "debtGraphExplorer": {
+      "title": "Debt Graph Explorer",
+      "description": "Visualize technical debt relationships and dependencies"
+    },
+    "remediationRoadmap": {
+      "title": "Remediation Roadmap",
+      "description": "Prioritized roadmap for technical debt remediation"
+    },
+    "manualTranslationTax": {
+      "title": "Manual Translation Tax",
+      "description": "The crisis of manual translation in software development"
+    },
+    "traditionalApproaches": {
+      "title": "Traditional Approaches",
+      "description": "Why traditional software development approaches fail"
+    },
+    "breezeBreakthrough": {
+      "title": "Breeze Breakthrough",
+      "description": "How Breeze.AI solves the semantic engineering challenge"
+    },
+    "competitiveAdvantages": {
+      "title": "Competitive Advantages",
+      "description": "Key differentiators and competitive advantages of Breeze.AI"
+    },
+    "architectureOverview": {
+      "title": "Architecture Overview",
+      "description": "High-level architecture of the Breeze.AI platform"
+    },
+    "coreComponents": {
+      "title": "Core Components",
+      "description": "Essential components of the Breeze.AI system"
+    },
+    "componentInteractions": {
+      "title": "Component Interactions",
+      "description": "How Breeze.AI components interact and communicate"
+    },
+    "integrationPoints": {
+      "title": "Integration Points",
+      "description": "Integration capabilities and extension points"
+    },
+    "scalabilityPerformance": {
+      "title": "Scalability & Performance",
+      "description": "Scaling strategies and performance optimization"
+    },
+    "securityCompliance": {
+      "title": "Security & Compliance",
+      "description": "Security measures and compliance frameworks"
+    },
+    "semanticOverview": {
+      "title": "Semantic Framework Overview",
+      "description": "Four-ontology semantic model structure"
+    },
+    "functionalOntology": {
+      "title": "Functional Ontology",
+      "description": "Business capabilities and functional requirements modeling"
+    },
+    "designOntology": {
+      "title": "Design Ontology",
+      "description": "User experience and interface design modeling"
+    },
+    "architectureOntology": {
+      "title": "Architecture Ontology",
+      "description": "System architecture and technical design modeling"
+    },
+    "codeOntology": {
+      "title": "Code Ontology",
+      "description": "Source code structure and implementation modeling"
+    },
+    "crossRelationships": {
+      "title": "Cross-Ontology Relationships",
+      "description": "Traceability links between ontology layers"
+    },
+    "agentsLayer": {
+      "title": "Agents Layer",
+      "description": "AI agents that operate on the semantic model"
+    },
+    "processOverview": {
+      "title": "Process Flow Overview",
+      "description": "Three-phase evolution of semantic engineering"
+    },
+    "phase1Foundation": {
+      "title": "Phase 1: Foundation",
+      "description": "Building the semantic foundation with 15% manual effort"
+    },
+    "phase2Evolution": {
+      "title": "Phase 2: Evolution",
+      "description": "Evolving to 30% manual effort with AI assistance"
+    },
+    "phase3SemanticFirst": {
+      "title": "Phase 3: Semantic First",
+      "description": "Achieving semantic-first development with 5% manual effort"
+    },
+    "contact": {
+      "title": "Get Started",
+      "description": "Contact Accion AI Labs to get started with semantic engineering"
+    }
+  },
+  "categories": {
+    "home": "Home",
+    "coreTechnology": "Core Technology",
+    "solutions": "Solutions",
+    "productEngineering": "Product Engineering",
+    "applicationReengineering": "Application Re-engineering",
+    "asimov": "ASIMOV",
+    "customerService": "Customer Service",
+    "portfolio": "Portfolio",
+    "technicalDebt": "Technical Debt",
+    "breezeDeepDive": "Breeze.AI Deep Dive",
+    "systemArchitecture": "System Architecture",
+    "semanticModel": "Semantic Model",
+    "processFlow": "Process Flow",
+    "contact": "Contact"
+  }
+}

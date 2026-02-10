@@ -1,26 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { getPublicAssetUrl } from '../../utils/assetHelper';
+import { useTranslation } from 'react-i18next';
 
 const PortfolioOverview: React.FC = () => {
+  const { t } = useTranslation('portfolio');
 
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 py-4 sm:py-6 lg:py-8">
         {/* Page Header */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900">Portfolio Rationalization</h1>
+          <h1 className="text-3xl font-bold text-gray-900">{t('overview.title')}</h1>
           <p className="mt-2 text-gray-600">
-            Analyze and optimize your product portfolio through systematic UX rationalization
+            {t('overview.subtitle')}
           </p>
         </div>
 
         {/* Demo Scenario */}
         <div id="demo-scenario" className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-2">Demo Scenario: Enterprise Authentication</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-2">{t('overview.demoScenario.title')}</h2>
           <p className="text-gray-600 mb-6">
-            Explore how three different products in an enterprise portfolio handle 
-            user authentication, revealing opportunities for standardization and optimization.
+            {t('overview.demoScenario.description')}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="border border-gray-200 rounded-lg p-4 bg-red-50">
@@ -30,15 +31,15 @@ const PortfolioOverview: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">Phoenix CRM</h3>
-                  <p className="text-xs text-gray-500">Legacy PHP/MySQL System</p>
+                  <p className="text-xs text-gray-500">{t('overview.demoScenario.phoenix.subtitle')}</p>
                 </div>
               </div>
               <ul className="text-xs text-gray-600 space-y-1">
-                <li>• Basic username/password authentication</li>
-                <li>• Server-rendered PHP pages</li>
-                <li>• jQuery-based interactions</li>
-                <li>• MD5 password hashing (insecure)</li>
-                <li>• MySQL database</li>
+                <li>• {t('overview.demoScenario.phoenix.features.auth')}</li>
+                <li>• {t('overview.demoScenario.phoenix.features.rendering')}</li>
+                <li>• {t('overview.demoScenario.phoenix.features.interactions')}</li>
+                <li>• {t('overview.demoScenario.phoenix.features.hashing')}</li>
+                <li>• {t('overview.demoScenario.phoenix.features.database')}</li>
               </ul>
             </div>
 
@@ -49,15 +50,15 @@ const PortfolioOverview: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">Apollo Launchpad</h3>
-                  <p className="text-xs text-gray-500">Modern React SPA</p>
+                  <p className="text-xs text-gray-500">{t('overview.demoScenario.apollo.subtitle')}</p>
                 </div>
               </div>
               <ul className="text-xs text-gray-600 space-y-1">
-                <li>• Email-based authentication with 2FA</li>
-                <li>• React SPA with JWT tokens</li>
-                <li>• Modern component architecture</li>
-                <li>• bcrypt password hashing</li>
-                <li>• MongoDB database</li>
+                <li>• {t('overview.demoScenario.apollo.features.auth')}</li>
+                <li>• {t('overview.demoScenario.apollo.features.spa')}</li>
+                <li>• {t('overview.demoScenario.apollo.features.architecture')}</li>
+                <li>• {t('overview.demoScenario.apollo.features.hashing')}</li>
+                <li>• {t('overview.demoScenario.apollo.features.database')}</li>
               </ul>
             </div>
 
@@ -68,15 +69,15 @@ const PortfolioOverview: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">Voyager Analytics</h3>
-                  <p className="text-xs text-gray-500">Vue.js Dashboard</p>
+                  <p className="text-xs text-gray-500">{t('overview.demoScenario.voyager.subtitle')}</p>
                 </div>
               </div>
               <ul className="text-xs text-gray-600 space-y-1">
-                <li>• SSO integration with SAML</li>
-                <li>• Vue.js micro-frontend architecture</li>
-                <li>• Real-time data processing</li>
-                <li>• Enterprise-grade security</li>
-                <li>• ElasticSearch backend</li>
+                <li>• {t('overview.demoScenario.voyager.features.auth')}</li>
+                <li>• {t('overview.demoScenario.voyager.features.architecture')}</li>
+                <li>• {t('overview.demoScenario.voyager.features.processing')}</li>
+                <li>• {t('overview.demoScenario.voyager.features.security')}</li>
+                <li>• {t('overview.demoScenario.voyager.features.database')}</li>
               </ul>
             </div>
           </div>
@@ -85,17 +86,16 @@ const PortfolioOverview: React.FC = () => {
         {/* Step 1: Agent-Based Extraction Process */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
           <div className="flex items-center mb-2">
-            <span className="bg-blue-100 text-blue-700 font-bold px-3 py-1 rounded-full mr-3">Step 1</span>
-            <h2 className="text-xl font-semibold text-gray-900">Agent-Based Extraction</h2>
+            <span className="bg-blue-100 text-blue-700 font-bold px-3 py-1 rounded-full mr-3">{t('overview.step1.label')}</span>
+            <h2 className="text-xl font-semibold text-gray-900">{t('overview.step1.title')}</h2>
           </div>
           <p className="text-gray-600 mb-6">
-            AI agents automatically extract four ontology graphs (Code, Functional, Design, Architecture) from each product's 
-            codebase and documentation, creating structured knowledge graphs for analysis.
+            {t('overview.step1.description')}
           </p>
           <div className="border border-gray-200 rounded-lg p-4 bg-gray-50">
-            <img 
-              src={getPublicAssetUrl("assets/diagrams/portfolio-extraction-process.svg")} 
-              alt="Portfolio Extraction Process" 
+            <img
+              src={getPublicAssetUrl("assets/diagrams/portfolio-extraction-process.svg")}
+              alt={t('overview.step1.imageAlt')}
               className="w-full h-auto"
               style={{ maxWidth: '100%', height: 'auto' }}
             />
@@ -105,82 +105,77 @@ const PortfolioOverview: React.FC = () => {
         {/* Step 2: Portfolio Rationalization Process */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
           <div className="flex items-center mb-2">
-            <span className="bg-green-100 text-green-700 font-bold px-3 py-1 rounded-full mr-3">Step 2</span>
-            <h2 className="text-xl font-semibold text-gray-900">Rationalization &amp; Strategy Selection</h2>
+            <span className="bg-green-100 text-green-700 font-bold px-3 py-1 rounded-full mr-3">{t('overview.step2.label')}</span>
+            <h2 className="text-xl font-semibold text-gray-900">{t('overview.step2.title')}</h2>
           </div>
           <p className="text-gray-600 mb-6">
-            The extracted graphs are analyzed for overlaps, then split into parallel design and architecture 
-            rationalization tracks. Three implementation strategies are compared showing their respective code impact.
+            {t('overview.step2.description')}
           </p>
           <div className="border border-gray-200 rounded-lg p-4 bg-gray-50 overflow-x-auto">
-            <img 
-              src={getPublicAssetUrl("assets/diagrams/portfolio-rationalization-process.svg")} 
-              alt="Portfolio Rationalization Process" 
+            <img
+              src={getPublicAssetUrl("assets/diagrams/portfolio-rationalization-process.svg")}
+              alt={t('overview.step2.imageAlt')}
               className="w-full h-auto"
               style={{ maxWidth: '100%', height: 'auto' }}
             />
           </div>
           <div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-lg">
             <p className="text-sm text-blue-900">
-              <strong>Note on Product-Specific Ontologies:</strong> While the core rationalization framework focuses on 
-              the four primary ontologies (Code, Functional, Design, Architecture), real-world products often include 
-              additional product-specific ontologies such as user context graphs, master data models, workflows, and 
-              business rules. The rationalization strategy accommodates these product-specific data models by applying 
-              the same systematic analysis and consolidation principles to ensure complete unification without ambiguity.
+              <strong>{t('overview.step2.note.title')}</strong> {t('overview.step2.note.content')}
             </p>
           </div>
         </div>
 
         {/* Interactive Tools */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-6">Interactive Analysis Tools</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-6">{t('overview.tools.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Link 
-              to="/portfolio/graph-explorer" 
+            <Link
+              to="/portfolio/graph-explorer"
               className="block p-6 border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-md transition-all"
             >
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-blue-600 text-xl">🕸️</span>
+                <span className="text-blue-600 text-xl">{'\uD83D\uDD78\uFE0F'}</span>
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">Ontology Graph Explorer</h3>
-              <p className="text-sm text-gray-600">Explore the complete four-ontology graph structure with filtering and drill-down capabilities</p>
-              <span className="inline-block mt-3 text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded">Interactive</span>
+              <h3 className="font-semibold text-gray-900 mb-2">{t('overview.tools.graphExplorer.title')}</h3>
+              <p className="text-sm text-gray-600">{t('overview.tools.graphExplorer.description')}</p>
+              <span className="inline-block mt-3 text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded">{t('overview.tools.graphExplorer.badge')}</span>
             </Link>
 
-            <Link 
-              to="/portfolio/component-comparator" 
+            <Link
+              to="/portfolio/component-comparator"
               className="block p-6 border border-gray-200 rounded-lg hover:border-purple-300 hover:shadow-md transition-all"
             >
               <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-purple-600 text-xl">🔍</span>
+                <span className="text-purple-600 text-xl">{'\uD83D\uDD0D'}</span>
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">Component Comparator</h3>
-              <p className="text-sm text-gray-600">Side-by-side comparison of authentication components across products</p>
-              <span className="inline-block mt-3 text-xs bg-purple-100 text-purple-600 px-2 py-1 rounded">Analysis</span>
+              <h3 className="font-semibold text-gray-900 mb-2">{t('overview.tools.comparator.title')}</h3>
+              <p className="text-sm text-gray-600">{t('overview.tools.comparator.description')}</p>
+              <span className="inline-block mt-3 text-xs bg-purple-100 text-purple-600 px-2 py-1 rounded">{t('overview.tools.comparator.badge')}</span>
             </Link>
 
-            <Link 
-              to="/portfolio/rationalization-roadmap" 
+            <Link
+              to="/portfolio/rationalization-roadmap"
               className="block p-6 border border-gray-200 rounded-lg hover:border-green-300 hover:shadow-md transition-all"
             >
               <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-green-600 text-xl">🎯</span>
+                <span className="text-green-600 text-xl">{'\uD83C\uDFAF'}</span>
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">Rationalization Roadmap</h3>
-              <p className="text-sm text-gray-600">Complete roadmap with strategy comparison, design & architecture tracks</p>
-              <span className="inline-block mt-3 text-xs bg-green-100 text-green-600 px-2 py-1 rounded">Planning</span>
+              <h3 className="font-semibold text-gray-900 mb-2">{t('overview.tools.roadmap.title')}</h3>
+              <p className="text-sm text-gray-600">{t('overview.tools.roadmap.description')}</p>
+              <span className="inline-block mt-3 text-xs bg-green-100 text-green-600 px-2 py-1 rounded">{t('overview.tools.roadmap.badge')}</span>
             </Link>
 
-            <Link 
-              to="/portfolio/unified-product" 
+            <Link
+              to="/portfolio/unified-product"
               className="block p-6 border border-gray-200 rounded-lg hover:border-emerald-300 hover:shadow-md transition-all"
             >
               <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-emerald-600 text-xl">🔬</span>
+                <span className="text-emerald-600 text-xl">{'\uD83D\uDD2C'}</span>
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">Unified Product View</h3>
-              <p className="text-sm text-gray-600">See how rationalization creates a unified product combining all functionality</p>
-              <span className="inline-block mt-3 text-xs bg-emerald-100 text-emerald-600 px-2 py-1 rounded">Outcome</span>
+              <h3 className="font-semibold text-gray-900 mb-2">{t('overview.tools.unifiedProduct.title')}</h3>
+              <p className="text-sm text-gray-600">{t('overview.tools.unifiedProduct.description')}</p>
+              <span className="inline-block mt-3 text-xs bg-emerald-100 text-emerald-600 px-2 py-1 rounded">{t('overview.tools.unifiedProduct.badge')}</span>
             </Link>
           </div>
         </div>

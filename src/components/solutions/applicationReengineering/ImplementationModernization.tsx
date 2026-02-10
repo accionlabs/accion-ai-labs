@@ -13,62 +13,44 @@ import {
   ClockIcon,
   SparklesIcon
 } from '@heroicons/react/24/outline';
+import { useTranslation } from 'react-i18next';
 
 const ImplementationModernization: React.FC = () => {
+  const { t } = useTranslation('solutions');
   const [selectedTrack, setSelectedTrack] = useState<'design' | 'architecture' | 'testing' | 'code'>('design');
 
   const modernizationTracks = {
     design: {
-      title: 'Design System Migration',
+      title: t('appReengineering.implementationModernization.tracks.design.title'),
       icon: PaintBrushIcon,
       color: 'purple',
-      description: 'Modernize UI with new design system and component library',
-      outputs: [
-        'Modern design system (Tailwind CSS)',
-        'Reusable component library',
-        'Responsive, accessible layouts',
-        'Dark mode support'
-      ],
-      approach: 'Incremental UI migration using design system components'
+      description: t('appReengineering.implementationModernization.tracks.design.description'),
+      outputs: t('appReengineering.implementationModernization.tracks.design.outputs', { returnObjects: true }) as unknown as string[],
+      approach: t('appReengineering.implementationModernization.tracks.design.approach')
     },
     architecture: {
-      title: 'Architecture Modernization',
+      title: t('appReengineering.implementationModernization.tracks.architecture.title'),
       icon: CubeIcon,
       color: 'green',
-      description: 'Extract microservices and modernize system architecture',
-      outputs: [
-        'Auth microservice (Node.js/TypeScript)',
-        'GraphQL API gateway',
-        'PostgreSQL migration',
-        'AWS ECS deployment'
-      ],
-      approach: 'Strangler Fig pattern - gradually replace legacy with modern services'
+      description: t('appReengineering.implementationModernization.tracks.architecture.description'),
+      outputs: t('appReengineering.implementationModernization.tracks.architecture.outputs', { returnObjects: true }) as unknown as string[],
+      approach: t('appReengineering.implementationModernization.tracks.architecture.approach')
     },
     testing: {
-      title: 'Test Automation',
+      title: t('appReengineering.implementationModernization.tracks.testing.title'),
       icon: BeakerIcon,
       color: 'blue',
-      description: 'Generate comprehensive test suites for existing functionality',
-      outputs: [
-        'Gherkin/BDD scenarios (existing features)',
-        'Unit tests (80%+ coverage target)',
-        'Integration tests',
-        'E2E regression tests'
-      ],
-      approach: 'AI generates tests from extracted knowledge graphs'
+      description: t('appReengineering.implementationModernization.tracks.testing.description'),
+      outputs: t('appReengineering.implementationModernization.tracks.testing.outputs', { returnObjects: true }) as unknown as string[],
+      approach: t('appReengineering.implementationModernization.tracks.testing.approach')
     },
     code: {
-      title: 'Code Refactoring',
+      title: t('appReengineering.implementationModernization.tracks.code.title'),
       icon: CodeBracketIcon,
       color: 'orange',
-      description: 'Automated refactoring with human validation',
-      outputs: [
-        'Eliminate code duplications',
-        'Improve naming and structure',
-        'Modernize language features',
-        'Remove dead code'
-      ],
-      approach: 'AI refactors repetitive patterns, humans validate complex logic'
+      description: t('appReengineering.implementationModernization.tracks.code.description'),
+      outputs: t('appReengineering.implementationModernization.tracks.code.outputs', { returnObjects: true }) as unknown as string[],
+      approach: t('appReengineering.implementationModernization.tracks.code.approach')
     }
   };
 
@@ -90,11 +72,11 @@ const ImplementationModernization: React.FC = () => {
         {/* Header */}
         <div className="mb-8">
           <Link to="/solutions/application-reengineering" className="text-sm text-orange-600 hover:text-orange-700 mb-2 inline-block">
-            ← Back to Overview
+            &larr; {t('appReengineering.implementationModernization.backToOverview')}
           </Link>
-          <h1 className="text-3xl font-bold text-gray-900">Implementation & Modernization</h1>
+          <h1 className="text-3xl font-bold text-gray-900">{t('appReengineering.implementationModernization.header.title')}</h1>
           <p className="mt-2 text-gray-600">
-            AI-powered refactoring and modernization with parallel manual + automated workflows
+            {t('appReengineering.implementationModernization.header.description')}
           </p>
         </div>
 
@@ -103,26 +85,26 @@ const ImplementationModernization: React.FC = () => {
           <div className="flex items-start">
             <CheckCircleIcon className="h-8 w-8 text-green-600 mr-4 flex-shrink-0 mt-1" />
             <div>
-              <h2 className="text-xl font-semibold text-gray-900 mb-2">All Stakeholders Approved</h2>
+              <h2 className="text-xl font-semibold text-gray-900 mb-2">{t('appReengineering.implementationModernization.gateway.title')}</h2>
               <p className="text-sm text-gray-700 mb-3">
-                Implementation begins with validated target architecture and stakeholder alignment on modernization goals.
+                {t('appReengineering.implementationModernization.gateway.description')}
               </p>
               <div className="flex flex-wrap gap-2">
                 <span className="inline-flex items-center text-xs bg-white rounded px-2 py-1">
                   <CheckCircleIcon className="h-3 w-3 text-green-600 mr-1" />
-                  Business Specs Approved
+                  {t('appReengineering.implementationModernization.gateway.businessApproved')}
                 </span>
                 <span className="inline-flex items-center text-xs bg-white rounded px-2 py-1">
                   <CheckCircleIcon className="h-3 w-3 text-green-600 mr-1" />
-                  Re-engineering Stories Approved
+                  {t('appReengineering.implementationModernization.gateway.storiesApproved')}
                 </span>
                 <span className="inline-flex items-center text-xs bg-white rounded px-2 py-1">
                   <CheckCircleIcon className="h-3 w-3 text-green-600 mr-1" />
-                  UI/UX Flows Approved
+                  {t('appReengineering.implementationModernization.gateway.uxApproved')}
                 </span>
                 <span className="inline-flex items-center text-xs bg-white rounded px-2 py-1">
                   <CheckCircleIcon className="h-3 w-3 text-green-600 mr-1" />
-                  Target Architecture Approved
+                  {t('appReengineering.implementationModernization.gateway.archApproved')}
                 </span>
               </div>
             </div>
@@ -131,7 +113,7 @@ const ImplementationModernization: React.FC = () => {
 
         {/* Four Modernization Tracks */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-6">Four Modernization Tracks</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-6">{t('appReengineering.implementationModernization.tracks.title')}</h2>
 
           {/* Track Selector */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
@@ -172,7 +154,7 @@ const ImplementationModernization: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
               <div className="bg-white rounded-lg p-4">
-                <h4 className="text-sm font-semibold text-gray-900 mb-3">Outputs:</h4>
+                <h4 className="text-sm font-semibold text-gray-900 mb-3">{t('appReengineering.implementationModernization.tracks.outputs')}</h4>
                 <ul className="space-y-2">
                   {currentTrack.outputs.map((output, idx) => (
                     <li key={idx} className="flex items-start text-sm text-gray-700">
@@ -184,7 +166,7 @@ const ImplementationModernization: React.FC = () => {
               </div>
 
               <div className="bg-white rounded-lg p-4">
-                <h4 className="text-sm font-semibold text-gray-900 mb-3">Approach:</h4>
+                <h4 className="text-sm font-semibold text-gray-900 mb-3">{t('appReengineering.implementationModernization.tracks.approach')}</h4>
                 <p className="text-sm text-gray-700">{currentTrack.approach}</p>
               </div>
             </div>
@@ -196,9 +178,9 @@ const ImplementationModernization: React.FC = () => {
           <div className="flex items-start mb-4">
             <BoltIcon className="h-8 w-8 text-orange-600 mr-3 flex-shrink-0" />
             <div>
-              <h2 className="text-xl font-semibold text-gray-900 mb-2">Parallel Re-engineering Workflows</h2>
+              <h2 className="text-xl font-semibold text-gray-900 mb-2">{t('appReengineering.implementationModernization.parallel.title')}</h2>
               <p className="text-sm text-gray-600">
-                Manual expert work and AI-powered automation proceed in parallel, maximizing velocity while maintaining quality.
+                {t('appReengineering.implementationModernization.parallel.description')}
               </p>
             </div>
           </div>
@@ -208,28 +190,18 @@ const ImplementationModernization: React.FC = () => {
             <div className="border-2 border-blue-200 rounded-lg p-5 bg-blue-50">
               <div className="flex items-center mb-4">
                 <UserIcon className="h-6 w-6 text-blue-600 mr-2" />
-                <h3 className="font-semibold text-gray-900">Expert Manual Work</h3>
+                <h3 className="font-semibold text-gray-900">{t('appReengineering.implementationModernization.parallel.manual.title')}</h3>
               </div>
               <p className="text-sm text-gray-600 mb-4">
-                Developers focus on complex business logic, critical refactorings, and architectural decisions.
+                {t('appReengineering.implementationModernization.parallel.manual.description')}
               </p>
               <ul className="space-y-2 text-sm text-gray-700">
-                <li className="flex items-start">
-                  <ArrowRightIcon className="h-4 w-4 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span>Complex business logic migration</span>
-                </li>
-                <li className="flex items-start">
-                  <ArrowRightIcon className="h-4 w-4 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span>Microservice boundary design</span>
-                </li>
-                <li className="flex items-start">
-                  <ArrowRightIcon className="h-4 w-4 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span>Critical path optimization</span>
-                </li>
-                <li className="flex items-start">
-                  <ArrowRightIcon className="h-4 w-4 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span>Security-critical components</span>
-                </li>
+                {(t('appReengineering.implementationModernization.parallel.manual.items', { returnObjects: true }) as unknown as string[]).map((item, idx) => (
+                  <li key={idx} className="flex items-start">
+                    <ArrowRightIcon className="h-4 w-4 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
               </ul>
             </div>
 
@@ -237,38 +209,28 @@ const ImplementationModernization: React.FC = () => {
             <div className="border-2 border-purple-200 rounded-lg p-5 bg-purple-50">
               <div className="flex items-center mb-4">
                 <CpuChipIcon className="h-6 w-6 text-purple-600 mr-2" />
-                <h3 className="font-semibold text-gray-900">AI-Powered Automation</h3>
+                <h3 className="font-semibold text-gray-900">{t('appReengineering.implementationModernization.parallel.ai.title')}</h3>
               </div>
               <p className="text-sm text-gray-600 mb-4">
-                AI agents handle repetitive refactoring, test generation, and code quality improvements.
+                {t('appReengineering.implementationModernization.parallel.ai.description')}
               </p>
               <ul className="space-y-2 text-sm text-gray-700">
-                <li className="flex items-start">
-                  <ArrowRightIcon className="h-4 w-4 text-purple-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span>Eliminate code duplication</span>
-                </li>
-                <li className="flex items-start">
-                  <ArrowRightIcon className="h-4 w-4 text-purple-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span>Generate test coverage</span>
-                </li>
-                <li className="flex items-start">
-                  <ArrowRightIcon className="h-4 w-4 text-purple-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span>Modernize syntax and patterns</span>
-                </li>
-                <li className="flex items-start">
-                  <ArrowRightIcon className="h-4 w-4 text-purple-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span>Update dependencies</span>
-                </li>
+                {(t('appReengineering.implementationModernization.parallel.ai.items', { returnObjects: true }) as unknown as string[]).map((item, idx) => (
+                  <li key={idx} className="flex items-start">
+                    <ArrowRightIcon className="h-4 w-4 text-purple-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
 
           {/* Timeline Comparison */}
           <div className="mt-6 bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg p-5">
-            <h4 className="text-sm font-semibold text-gray-900 mb-4">Timeline Comparison</h4>
+            <h4 className="text-sm font-semibold text-gray-900 mb-4">{t('appReengineering.implementationModernization.parallel.timelineComparison')}</h4>
             <div className="space-y-4">
               <div>
-                <p className="text-xs font-semibold text-gray-700 mb-2">Traditional Re-engineering:</p>
+                <p className="text-xs font-semibold text-gray-700 mb-2">{t('appReengineering.implementationModernization.parallel.traditional')}</p>
                 <div className="flex items-center gap-1">
                   <div className="flex-1 bg-red-300 h-6 rounded flex items-center justify-center text-xs text-white font-medium">
                     Manual assessment
@@ -285,12 +247,12 @@ const ImplementationModernization: React.FC = () => {
                 </div>
                 <p className="text-xs text-gray-600 mt-1 flex items-center">
                   <ClockIcon className="h-3 w-3 mr-1" />
-                  20-24 weeks typical timeline
+                  {t('appReengineering.implementationModernization.parallel.traditionalTimeline')}
                 </p>
               </div>
 
               <div>
-                <p className="text-xs font-semibold text-gray-700 mb-2">Breeze AI Re-engineering:</p>
+                <p className="text-xs font-semibold text-gray-700 mb-2">{t('appReengineering.implementationModernization.parallel.breeze')}</p>
                 <div className="flex items-start gap-1">
                   <div className="flex-1 space-y-1">
                     <div className="bg-blue-500 h-5 rounded flex items-center justify-center text-xs text-white font-medium">AI Discovery</div>
@@ -303,7 +265,7 @@ const ImplementationModernization: React.FC = () => {
                 </div>
                 <p className="text-xs text-green-600 mt-1 flex items-center font-semibold">
                   <ClockIcon className="h-3 w-3 mr-1" />
-                  12-16 weeks typical timeline (40% faster)
+                  {t('appReengineering.implementationModernization.parallel.breezeTimeline')}
                 </p>
               </div>
             </div>
@@ -312,42 +274,38 @@ const ImplementationModernization: React.FC = () => {
 
         {/* Agent Ecosystem */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Re-engineering Agent Ecosystem</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">{t('appReengineering.implementationModernization.agentEcosystem.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-4">
-              <h4 className="font-semibold text-gray-900 mb-3">Design Agents</h4>
+              <h4 className="font-semibold text-gray-900 mb-3">{t('appReengineering.implementationModernization.agentEcosystem.design')}</h4>
               <ul className="space-y-2 text-sm text-gray-700">
-                <li>• Design System Generator</li>
-                <li>• Component Migrator</li>
-                <li>• Accessibility Auditor</li>
-                <li>• Responsive Adapter</li>
+                {(t('appReengineering.implementationModernization.agentEcosystem.designAgents', { returnObjects: true }) as unknown as string[]).map((agent, idx) => (
+                  <li key={idx}>• {agent}</li>
+                ))}
               </ul>
             </div>
             <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-4">
-              <h4 className="font-semibold text-gray-900 mb-3">Architecture Agents</h4>
+              <h4 className="font-semibold text-gray-900 mb-3">{t('appReengineering.implementationModernization.agentEcosystem.architecture')}</h4>
               <ul className="space-y-2 text-sm text-gray-700">
-                <li>• Microservice Extractor</li>
-                <li>• API Modernizer</li>
-                <li>• Database Optimizer</li>
-                <li>• Deployment Planner</li>
+                {(t('appReengineering.implementationModernization.agentEcosystem.architectureAgents', { returnObjects: true }) as unknown as string[]).map((agent, idx) => (
+                  <li key={idx}>• {agent}</li>
+                ))}
               </ul>
             </div>
             <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-4">
-              <h4 className="font-semibold text-gray-900 mb-3">Testing Agents</h4>
+              <h4 className="font-semibold text-gray-900 mb-3">{t('appReengineering.implementationModernization.agentEcosystem.testing')}</h4>
               <ul className="space-y-2 text-sm text-gray-700">
-                <li>• Gherkin Generator</li>
-                <li>• Unit Test Creator</li>
-                <li>• E2E Test Builder</li>
-                <li>• Coverage Analyzer</li>
+                {(t('appReengineering.implementationModernization.agentEcosystem.testingAgents', { returnObjects: true }) as unknown as string[]).map((agent, idx) => (
+                  <li key={idx}>• {agent}</li>
+                ))}
               </ul>
             </div>
             <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-4">
-              <h4 className="font-semibold text-gray-900 mb-3">Refactoring Agents</h4>
+              <h4 className="font-semibold text-gray-900 mb-3">{t('appReengineering.implementationModernization.agentEcosystem.refactoring')}</h4>
               <ul className="space-y-2 text-sm text-gray-700">
-                <li>• Duplication Eliminator</li>
-                <li>• Code Quality Improver</li>
-                <li>• Syntax Modernizer</li>
-                <li>• Dependency Updater</li>
+                {(t('appReengineering.implementationModernization.agentEcosystem.refactoringAgents', { returnObjects: true }) as unknown as string[]).map((agent, idx) => (
+                  <li key={idx}>• {agent}</li>
+                ))}
               </ul>
             </div>
           </div>
@@ -355,33 +313,33 @@ const ImplementationModernization: React.FC = () => {
 
         {/* Key Outcomes */}
         <div className="bg-gradient-to-r from-orange-50 to-red-50 rounded-xl border border-orange-200 p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Implementation Outcomes</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">{t('appReengineering.implementationModernization.outcomes.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center">
               <div className="w-16 h-16 mx-auto bg-orange-100 rounded-full flex items-center justify-center mb-3">
                 <BoltIcon className="h-8 w-8 text-orange-600" />
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">40% Faster</h3>
+              <h3 className="font-semibold text-gray-900 mb-2">{t('appReengineering.implementationModernization.outcomes.faster.title')}</h3>
               <p className="text-sm text-gray-600">
-                Parallel workflows dramatically accelerate re-engineering
+                {t('appReengineering.implementationModernization.outcomes.faster.description')}
               </p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 mx-auto bg-green-100 rounded-full flex items-center justify-center mb-3">
                 <CheckCircleIcon className="h-8 w-8 text-green-600" />
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">0 Downtime</h3>
+              <h3 className="font-semibold text-gray-900 mb-2">{t('appReengineering.implementationModernization.outcomes.downtime.title')}</h3>
               <p className="text-sm text-gray-600">
-                Incremental deployment with automated rollback
+                {t('appReengineering.implementationModernization.outcomes.downtime.description')}
               </p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-3">
                 <SparklesIcon className="h-8 w-8 text-blue-600" />
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">Living Docs</h3>
+              <h3 className="font-semibold text-gray-900 mb-2">{t('appReengineering.implementationModernization.outcomes.livingDocs.title')}</h3>
               <p className="text-sm text-gray-600">
-                Documentation auto-updates as system evolves
+                {t('appReengineering.implementationModernization.outcomes.livingDocs.description')}
               </p>
             </div>
           </div>
@@ -389,16 +347,15 @@ const ImplementationModernization: React.FC = () => {
 
         {/* Next Step */}
         <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-xl p-6 text-white">
-          <h2 className="text-xl font-semibold mb-2">Next: Continuous Validation</h2>
+          <h2 className="text-xl font-semibold mb-2">{t('appReengineering.implementationModernization.nextStep.title')}</h2>
           <p className="text-sm mb-4 opacity-90">
-            During re-engineering, continuous sprint-by-sprint validation ensures we're actually improving
-            quality and not introducing new technical debt.
+            {t('appReengineering.implementationModernization.nextStep.description')}
           </p>
           <Link
             to="/solutions/application-reengineering/validation"
             className="inline-flex items-center px-4 py-2 bg-white text-orange-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
           >
-            View Continuous Validation
+            {t('appReengineering.implementationModernization.nextStep.button')}
             <ArrowRightIcon className="ml-2 h-4 w-4" />
           </Link>
         </div>

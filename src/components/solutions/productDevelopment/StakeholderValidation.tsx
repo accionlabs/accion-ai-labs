@@ -14,155 +14,71 @@ import {
   ChartBarIcon,
   DocumentTextIcon
 } from '@heroicons/react/24/outline';
+import { useTranslation } from 'react-i18next';
 
 const StakeholderValidation: React.FC = () => {
+  const { t } = useTranslation('solutions');
   const [selectedTrack, setSelectedTrack] = useState<'po' | 'ba' | 'ux' | 'architect'>('po');
 
   const validationTracks = {
     po: {
-      title: 'Product Owner Track',
+      title: t('productDevelopment.validation.tracks.po.title'),
       icon: UserCircleIcon,
       color: 'blue',
-      stakeholder: 'Product Owner',
-      artifact: 'Functional Specifications Document',
-      description: 'Comprehensive specifications derived from the Functional Ontology',
-      includes: [
-        'Feature list with detailed descriptions',
-        'Acceptance criteria for each feature',
-        'Business rules and constraints',
-        'Priority and roadmap alignment',
-        'Success metrics and KPIs'
-      ],
-      workflow: [
-        { step: 'Generate', description: 'AI creates spec document from Functional Ontology' },
-        { step: 'Review', description: 'PO reviews for completeness and accuracy' },
-        { step: 'Annotate', description: 'PO adds comments, corrections, and clarifications' },
-        { step: 'Update', description: 'Agent updates ontology based on feedback' },
-        { step: 'Approve', description: 'PO approves final specification' }
-      ],
+      stakeholder: t('productDevelopment.validation.tracks.po.stakeholder'),
+      artifact: t('productDevelopment.validation.tracks.po.artifact'),
+      description: t('productDevelopment.validation.tracks.po.description'),
+      includes: t('productDevelopment.validation.tracks.po.includes', { returnObjects: true }) as unknown as string[],
+      workflow: t('productDevelopment.validation.tracks.po.workflow', { returnObjects: true }) as unknown as { step: string; description: string }[],
       sampleContent: {
-        feature: 'User Authentication',
-        description: 'Users must be able to securely log in using email and password',
-        acceptanceCriteria: [
-          'Users can enter email and password',
-          'System validates credentials against database',
-          'Invalid credentials show appropriate error message',
-          'Successful login redirects to dashboard',
-          'Failed login attempts are rate-limited'
-        ],
-        businessRules: [
-          'Password must be at least 8 characters',
-          'Account locks after 5 failed attempts',
-          'Session expires after 24 hours of inactivity'
-        ]
+        feature: t('productDevelopment.validation.tracks.po.sampleContent.feature'),
+        description: t('productDevelopment.validation.tracks.po.sampleContent.description'),
+        acceptanceCriteria: t('productDevelopment.validation.tracks.po.sampleContent.acceptanceCriteria', { returnObjects: true }) as unknown as string[],
+        businessRules: t('productDevelopment.validation.tracks.po.sampleContent.businessRules', { returnObjects: true }) as unknown as string[]
       }
     },
     ba: {
-      title: 'Business Analyst Track',
+      title: t('productDevelopment.validation.tracks.ba.title'),
       icon: ClipboardDocumentListIcon,
       color: 'purple',
-      stakeholder: 'Business Analyst',
-      artifact: 'Epics & User Stories',
-      description: 'JIRA-ready epics and user stories with story mapping and dependencies',
-      includes: [
-        'Epic breakdown with themes',
-        'User stories with acceptance criteria',
-        'Story points and estimates',
-        'Dependencies and relationships',
-        'Sprint allocation recommendations'
-      ],
-      workflow: [
-        { step: 'Generate', description: 'AI creates epics and stories from ontologies' },
-        { step: 'Review', description: 'BA reviews story structure and completeness' },
-        { step: 'Refine', description: 'BA adjusts scope, splits stories, adds details' },
-        { step: 'Update', description: 'Agent synchronizes changes back to graphs' },
-        { step: 'Approve', description: 'BA approves for sprint planning' }
-      ],
+      stakeholder: t('productDevelopment.validation.tracks.ba.stakeholder'),
+      artifact: t('productDevelopment.validation.tracks.ba.artifact'),
+      description: t('productDevelopment.validation.tracks.ba.description'),
+      includes: t('productDevelopment.validation.tracks.ba.includes', { returnObjects: true }) as unknown as string[],
+      workflow: t('productDevelopment.validation.tracks.ba.workflow', { returnObjects: true }) as unknown as { step: string; description: string }[],
       sampleContent: {
-        epic: 'User Account Management',
-        stories: [
-          {
-            title: 'As a user, I can log in with email/password',
-            points: 5,
-            acceptance: ['Login form validation', 'Error handling', 'Session management']
-          },
-          {
-            title: 'As a user, I can reset my forgotten password',
-            points: 3,
-            acceptance: ['Email verification', 'Token generation', 'Password update']
-          }
-        ]
+        epic: t('productDevelopment.validation.tracks.ba.sampleContent.epic'),
+        stories: t('productDevelopment.validation.tracks.ba.sampleContent.stories', { returnObjects: true }) as unknown as { title: string; points: number; acceptance: string[] }[]
       }
     },
     ux: {
-      title: 'UX Designer Track',
+      title: t('productDevelopment.validation.tracks.ux.title'),
       icon: PaintBrushIcon,
       color: 'green',
-      stakeholder: 'UX Designer',
-      artifact: 'User Flow Diagrams',
-      description: 'Visual journey maps and interaction flows derived from Design Ontology',
-      includes: [
-        'End-to-end user journey maps',
-        'Screen-by-screen flow diagrams',
-        'Interaction patterns and states',
-        'Error and edge case handling',
-        'Wireframe suggestions'
-      ],
-      workflow: [
-        { step: 'Generate', description: 'AI creates flow diagrams from Design Ontology' },
-        { step: 'Review', description: 'Designer validates user experience flow' },
-        { step: 'Refine', description: 'Designer adjusts flows, adds alternative paths' },
-        { step: 'Update', description: 'Agent updates Design Ontology with changes' },
-        { step: 'Approve', description: 'Designer approves for prototyping' }
-      ],
+      stakeholder: t('productDevelopment.validation.tracks.ux.stakeholder'),
+      artifact: t('productDevelopment.validation.tracks.ux.artifact'),
+      description: t('productDevelopment.validation.tracks.ux.description'),
+      includes: t('productDevelopment.validation.tracks.ux.includes', { returnObjects: true }) as unknown as string[],
+      workflow: t('productDevelopment.validation.tracks.ux.workflow', { returnObjects: true }) as unknown as { step: string; description: string }[],
       sampleContent: {
-        flow: 'Login Flow',
-        steps: [
-          'Landing Page → Click "Login"',
-          'Login Screen → Enter credentials',
-          'Validation → Success/Error',
-          'Dashboard (success) or Error Message (failure)'
-        ],
-        alternativePaths: [
-          'Forgot Password flow',
-          'Account locked flow',
-          'First-time user onboarding'
-        ]
+        flow: t('productDevelopment.validation.tracks.ux.sampleContent.flow'),
+        steps: t('productDevelopment.validation.tracks.ux.sampleContent.steps', { returnObjects: true }) as unknown as string[],
+        alternativePaths: t('productDevelopment.validation.tracks.ux.sampleContent.alternativePaths', { returnObjects: true }) as unknown as string[]
       }
     },
     architect: {
-      title: 'Architect Track',
+      title: t('productDevelopment.validation.tracks.architect.title'),
       icon: CubeIcon,
       color: 'orange',
-      stakeholder: 'Architect',
-      artifact: 'Architecture Diagrams',
-      description: 'System architecture and API contracts from Architecture Ontology',
-      includes: [
-        'System component diagrams',
-        'Service interaction flows',
-        'API contract specifications',
-        'Data model schemas',
-        'Infrastructure requirements'
-      ],
-      workflow: [
-        { step: 'Generate', description: 'AI creates architecture diagrams from ontology' },
-        { step: 'Review', description: 'Architect validates system design' },
-        { step: 'Refine', description: 'Architect adjusts patterns, adds constraints' },
-        { step: 'Update', description: 'Agent updates Architecture Ontology' },
-        { step: 'Approve', description: 'Architect approves for implementation' }
-      ],
+      stakeholder: t('productDevelopment.validation.tracks.architect.stakeholder'),
+      artifact: t('productDevelopment.validation.tracks.architect.artifact'),
+      description: t('productDevelopment.validation.tracks.architect.description'),
+      includes: t('productDevelopment.validation.tracks.architect.includes', { returnObjects: true }) as unknown as string[],
+      workflow: t('productDevelopment.validation.tracks.architect.workflow', { returnObjects: true }) as unknown as { step: string; description: string }[],
       sampleContent: {
-        component: 'Authentication Service',
-        apis: [
-          'POST /auth/login → Returns JWT token',
-          'POST /auth/refresh → Refreshes token',
-          'POST /auth/logout → Invalidates session'
-        ],
-        dependencies: [
-          'User Service (user data)',
-          'Redis (session storage)',
-          'Email Service (password reset)'
-        ]
+        component: t('productDevelopment.validation.tracks.architect.sampleContent.component'),
+        apis: t('productDevelopment.validation.tracks.architect.sampleContent.apis', { returnObjects: true }) as unknown as string[],
+        dependencies: t('productDevelopment.validation.tracks.architect.sampleContent.dependencies', { returnObjects: true }) as unknown as string[]
       }
     }
   };
@@ -185,41 +101,39 @@ const StakeholderValidation: React.FC = () => {
         {/* Header */}
         <div className="mb-8">
           <Link to="/solutions/product-development" className="text-sm text-green-600 hover:text-green-700 mb-2 inline-block">
-            ← Back to Overview
+            &larr; {t('productDevelopment.validation.backToOverview')}
           </Link>
-          <h1 className="text-3xl font-bold text-gray-900">Multi-Stakeholder Validation</h1>
+          <h1 className="text-3xl font-bold text-gray-900">{t('productDevelopment.validation.header.title')}</h1>
           <p className="mt-2 text-gray-600">
-            Role-specific artifact generation and validation workflows ensure everyone stays aligned
+            {t('productDevelopment.validation.header.description')}
           </p>
         </div>
 
         {/* Validation Philosophy */}
         <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border border-blue-200 p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-3">Human-in-the-Loop Validation</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-3">{t('productDevelopment.validation.philosophy.title')}</h2>
           <p className="text-sm text-gray-700 mb-4">
-            While AI agents extract and structure knowledge, human expertise is essential for validation.
-            We generate tailored artifacts for each stakeholder role, allowing them to validate the aspects
-            they own while maintaining consistency across all views.
+            {t('productDevelopment.validation.philosophy.description')}
           </p>
           <div className="flex items-center justify-center gap-8 text-sm text-gray-600">
             <div className="flex items-center">
               <CheckCircleIcon className="h-5 w-5 text-green-600 mr-2" />
-              <span>Role-specific views</span>
+              <span>{t('productDevelopment.validation.philosophy.roleViews')}</span>
             </div>
             <div className="flex items-center">
               <CheckCircleIcon className="h-5 w-5 text-green-600 mr-2" />
-              <span>Synchronized feedback</span>
+              <span>{t('productDevelopment.validation.philosophy.syncFeedback')}</span>
             </div>
             <div className="flex items-center">
               <CheckCircleIcon className="h-5 w-5 text-green-600 mr-2" />
-              <span>Single source of truth</span>
+              <span>{t('productDevelopment.validation.philosophy.singleSource')}</span>
             </div>
           </div>
         </div>
 
         {/* Four Validation Tracks */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-6">Four Validation Tracks</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-6">{t('productDevelopment.validation.tracks.title')}</h2>
 
           {/* Track Selector */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
@@ -267,7 +181,7 @@ const StakeholderValidation: React.FC = () => {
 
             {/* What's Included */}
             <div className="bg-white rounded-lg p-4 mb-4">
-              <h4 className="text-sm font-semibold text-gray-900 mb-3">What's Included:</h4>
+              <h4 className="text-sm font-semibold text-gray-900 mb-3">{t('productDevelopment.validation.tracks.whatsIncluded')}</h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 {currentTrack.includes.map((item, idx) => (
                   <div key={idx} className="flex items-start text-sm text-gray-700">
@@ -280,7 +194,7 @@ const StakeholderValidation: React.FC = () => {
 
             {/* Validation Workflow */}
             <div className="bg-white rounded-lg p-4 mb-4">
-              <h4 className="text-sm font-semibold text-gray-900 mb-3">Validation Workflow:</h4>
+              <h4 className="text-sm font-semibold text-gray-900 mb-3">{t('productDevelopment.validation.tracks.validationWorkflow')}</h4>
               <div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-3">
                 {currentTrack.workflow.map((step, idx) => (
                   <React.Fragment key={idx}>
@@ -300,19 +214,19 @@ const StakeholderValidation: React.FC = () => {
 
             {/* Sample Content Preview */}
             <div className="bg-white rounded-lg p-4">
-              <h4 className="text-sm font-semibold text-gray-900 mb-3">Sample Artifact Preview:</h4>
+              <h4 className="text-sm font-semibold text-gray-900 mb-3">{t('productDevelopment.validation.tracks.samplePreview')}</h4>
               <div className="border border-gray-200 rounded p-3 font-mono text-xs bg-gray-50">
                 {selectedTrack === 'po' && 'feature' in validationTracks.po.sampleContent && (
                   <div>
-                    <p className="font-bold text-gray-900 mb-2">Feature: {validationTracks.po.sampleContent.feature}</p>
+                    <p className="font-bold text-gray-900 mb-2">{t('productDevelopment.validation.tracks.labels.feature')} {validationTracks.po.sampleContent.feature}</p>
                     <p className="text-gray-700 mb-2">{validationTracks.po.sampleContent.description}</p>
-                    <p className="font-semibold text-gray-900 mb-1">Acceptance Criteria:</p>
+                    <p className="font-semibold text-gray-900 mb-1">{t('productDevelopment.validation.tracks.labels.acceptanceCriteria')}</p>
                     <ul className="list-disc list-inside space-y-1 mb-2 text-gray-600">
                       {validationTracks.po.sampleContent.acceptanceCriteria.map((criteria: string, idx: number) => (
                         <li key={idx}>{criteria}</li>
                       ))}
                     </ul>
-                    <p className="font-semibold text-gray-900 mb-1">Business Rules:</p>
+                    <p className="font-semibold text-gray-900 mb-1">{t('productDevelopment.validation.tracks.labels.businessRules')}</p>
                     <ul className="list-disc list-inside space-y-1 text-gray-600">
                       {validationTracks.po.sampleContent.businessRules.map((rule: string, idx: number) => (
                         <li key={idx}>{rule}</li>
@@ -322,14 +236,14 @@ const StakeholderValidation: React.FC = () => {
                 )}
                 {selectedTrack === 'ba' && 'epic' in validationTracks.ba.sampleContent && (
                   <div>
-                    <p className="font-bold text-gray-900 mb-2">Epic: {validationTracks.ba.sampleContent.epic}</p>
+                    <p className="font-bold text-gray-900 mb-2">{t('productDevelopment.validation.tracks.labels.epic')} {validationTracks.ba.sampleContent.epic}</p>
                     <div className="space-y-3">
                       {validationTracks.ba.sampleContent.stories.map((story: any, idx: number) => (
                         <div key={idx} className="border-l-2 border-purple-400 pl-3">
                           <p className="font-semibold text-gray-900">{story.title}</p>
-                          <p className="text-gray-600">Story Points: {story.points}</p>
+                          <p className="text-gray-600">{t('productDevelopment.validation.tracks.labels.storyPoints')} {story.points}</p>
                           <p className="text-gray-600 text-xs mt-1">
-                            Acceptance: {story.acceptance.join(', ')}
+                            {t('productDevelopment.validation.tracks.labels.acceptance')} {story.acceptance.join(', ')}
                           </p>
                         </div>
                       ))}
@@ -339,13 +253,13 @@ const StakeholderValidation: React.FC = () => {
                 {selectedTrack === 'ux' && 'flow' in validationTracks.ux.sampleContent && (
                   <div>
                     <p className="font-bold text-gray-900 mb-2">{validationTracks.ux.sampleContent.flow}</p>
-                    <p className="font-semibold text-gray-900 mb-1">Main Flow:</p>
+                    <p className="font-semibold text-gray-900 mb-1">{t('productDevelopment.validation.tracks.labels.mainFlow')}</p>
                     <div className="space-y-1 mb-3 text-gray-600">
                       {validationTracks.ux.sampleContent.steps.map((step: string, idx: number) => (
-                        <p key={idx}>→ {step}</p>
+                        <p key={idx}>&rarr; {step}</p>
                       ))}
                     </div>
-                    <p className="font-semibold text-gray-900 mb-1">Alternative Paths:</p>
+                    <p className="font-semibold text-gray-900 mb-1">{t('productDevelopment.validation.tracks.labels.alternativePaths')}</p>
                     <ul className="list-disc list-inside space-y-1 text-gray-600">
                       {validationTracks.ux.sampleContent.alternativePaths.map((path: string, idx: number) => (
                         <li key={idx}>{path}</li>
@@ -356,13 +270,13 @@ const StakeholderValidation: React.FC = () => {
                 {selectedTrack === 'architect' && 'component' in validationTracks.architect.sampleContent && (
                   <div>
                     <p className="font-bold text-gray-900 mb-2">{validationTracks.architect.sampleContent.component}</p>
-                    <p className="font-semibold text-gray-900 mb-1">API Endpoints:</p>
+                    <p className="font-semibold text-gray-900 mb-1">{t('productDevelopment.validation.tracks.labels.apiEndpoints')}</p>
                     <ul className="list-disc list-inside space-y-1 mb-2 text-gray-600">
                       {validationTracks.architect.sampleContent.apis.map((api: string, idx: number) => (
                         <li key={idx}>{api}</li>
                       ))}
                     </ul>
-                    <p className="font-semibold text-gray-900 mb-1">Dependencies:</p>
+                    <p className="font-semibold text-gray-900 mb-1">{t('productDevelopment.validation.tracks.labels.dependencies')}</p>
                     <ul className="list-disc list-inside space-y-1 text-gray-600">
                       {validationTracks.architect.sampleContent.dependencies.map((dep: string, idx: number) => (
                         <li key={idx}>{dep}</li>
@@ -380,10 +294,9 @@ const StakeholderValidation: React.FC = () => {
           <div className="flex items-start mb-4">
             <BoltIcon className="h-8 w-8 text-orange-600 mr-3 flex-shrink-0" />
             <div>
-              <h2 className="text-xl font-semibold text-gray-900 mb-2">Continuous Sprint Validation</h2>
+              <h2 className="text-xl font-semibold text-gray-900 mb-2">{t('productDevelopment.validation.sprintValidation.title')}</h2>
               <p className="text-sm text-gray-600">
-                Initial validation is just the beginning. Every sprint, AI agents extract updated knowledge graphs
-                from the evolving codebase and compare them with the validated baseline.
+                {t('productDevelopment.validation.sprintValidation.description')}
               </p>
             </div>
           </div>
@@ -394,11 +307,10 @@ const StakeholderValidation: React.FC = () => {
                 <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-2">
                   <span className="text-sm font-bold text-blue-600">1</span>
                 </div>
-                <h3 className="font-semibold text-gray-900">Extract Current State</h3>
+                <h3 className="font-semibold text-gray-900">{t('productDevelopment.validation.sprintValidation.step1.title')}</h3>
               </div>
               <p className="text-sm text-gray-600">
-                At the end of each sprint, agents analyze the updated codebase and extract fresh knowledge graphs
-                reflecting the current implementation.
+                {t('productDevelopment.validation.sprintValidation.step1.description')}
               </p>
             </div>
 
@@ -407,11 +319,10 @@ const StakeholderValidation: React.FC = () => {
                 <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-2">
                   <span className="text-sm font-bold text-purple-600">2</span>
                 </div>
-                <h3 className="font-semibold text-gray-900">Detect Drift & Gaps</h3>
+                <h3 className="font-semibold text-gray-900">{t('productDevelopment.validation.sprintValidation.step2.title')}</h3>
               </div>
               <p className="text-sm text-gray-600">
-                AI compares current graphs with the baseline to identify drift (unintended deviations),
-                gaps (missing implementations), and inconsistencies.
+                {t('productDevelopment.validation.sprintValidation.step2.description')}
               </p>
             </div>
 
@@ -420,11 +331,10 @@ const StakeholderValidation: React.FC = () => {
                 <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-2">
                   <span className="text-sm font-bold text-green-600">3</span>
                 </div>
-                <h3 className="font-semibold text-gray-900">Trigger Re-Validation</h3>
+                <h3 className="font-semibold text-gray-900">{t('productDevelopment.validation.sprintValidation.step3.title')}</h3>
               </div>
               <p className="text-sm text-gray-600">
-                Stakeholders are notified of significant changes and can validate whether drift is intentional
-                or needs correction, preventing technical debt.
+                {t('productDevelopment.validation.sprintValidation.step3.description')}
               </p>
             </div>
           </div>
@@ -433,28 +343,28 @@ const StakeholderValidation: React.FC = () => {
           <div className="bg-gradient-to-r from-orange-50 to-red-50 rounded-lg border border-orange-200 p-5">
             <h3 className="font-semibold text-gray-900 mb-3 flex items-center">
               <ExclamationTriangleIcon className="h-5 w-5 text-orange-600 mr-2" />
-              Example: Drift Detection Alert
+              {t('productDevelopment.validation.sprintValidation.driftExample.title')}
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="bg-white rounded p-3">
-                <p className="text-xs font-semibold text-gray-700 mb-2">Detected Change:</p>
+                <p className="text-xs font-semibold text-gray-700 mb-2">{t('productDevelopment.validation.sprintValidation.driftExample.detectedChange')}</p>
                 <p className="text-sm text-gray-900 mb-2">
-                  <strong>Architecture Ontology:</strong> New "EmailService" dependency added to AuthService
+                  <strong>Architecture Ontology:</strong> {t('productDevelopment.validation.sprintValidation.driftExample.changeDescription')}
                 </p>
                 <p className="text-xs text-gray-600">
-                  This dependency was not in the original validated architecture diagram.
+                  {t('productDevelopment.validation.sprintValidation.driftExample.changeDetail')}
                 </p>
               </div>
               <div className="bg-white rounded p-3">
-                <p className="text-xs font-semibold text-gray-700 mb-2">Recommended Action:</p>
+                <p className="text-xs font-semibold text-gray-700 mb-2">{t('productDevelopment.validation.sprintValidation.driftExample.recommendedAction')}</p>
                 <div className="space-y-2">
                   <div className="flex items-start text-sm">
                     <CheckCircleIcon className="h-4 w-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-900">If intentional: Architect approves and updates baseline</span>
+                    <span className="text-gray-900">{t('productDevelopment.validation.sprintValidation.driftExample.ifIntentional')}</span>
                   </div>
                   <div className="flex items-start text-sm">
                     <XCircleIcon className="h-4 w-4 text-red-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-900">If unintended: Developer removes dependency or seeks approval</span>
+                    <span className="text-gray-900">{t('productDevelopment.validation.sprintValidation.driftExample.ifUnintended')}</span>
                   </div>
                 </div>
               </div>
@@ -464,40 +374,28 @@ const StakeholderValidation: React.FC = () => {
 
         {/* Benefits of Continuous Validation */}
         <div className="bg-gradient-to-r from-green-50 to-teal-50 rounded-xl border border-green-200 p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Why Continuous Validation Matters</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">{t('productDevelopment.validation.benefits.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <h3 className="font-semibold text-gray-900 mb-3">Prevent Technical Debt</h3>
+              <h3 className="font-semibold text-gray-900 mb-3">{t('productDevelopment.validation.benefits.preventDebt.title')}</h3>
               <ul className="space-y-2 text-sm text-gray-700">
-                <li className="flex items-start">
-                  <ArrowPathIcon className="h-4 w-4 text-green-600 mr-2 mt-0.5" />
-                  <span>Catch implementation drift before it becomes debt</span>
-                </li>
-                <li className="flex items-start">
-                  <ArrowPathIcon className="h-4 w-4 text-green-600 mr-2 mt-0.5" />
-                  <span>Ensure design and code stay in sync</span>
-                </li>
-                <li className="flex items-start">
-                  <ArrowPathIcon className="h-4 w-4 text-green-600 mr-2 mt-0.5" />
-                  <span>Document changes as they happen</span>
-                </li>
+                {(t('productDevelopment.validation.benefits.preventDebt.items', { returnObjects: true }) as unknown as string[]).map((item, idx) => (
+                  <li key={idx} className="flex items-start">
+                    <ArrowPathIcon className="h-4 w-4 text-green-600 mr-2 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold text-gray-900 mb-3">Maintain Quality</h3>
+              <h3 className="font-semibold text-gray-900 mb-3">{t('productDevelopment.validation.benefits.maintainQuality.title')}</h3>
               <ul className="space-y-2 text-sm text-gray-700">
-                <li className="flex items-start">
-                  <ChartBarIcon className="h-4 w-4 text-green-600 mr-2 mt-0.5" />
-                  <span>Continuous validation improves code quality</span>
-                </li>
-                <li className="flex items-start">
-                  <ChartBarIcon className="h-4 w-4 text-green-600 mr-2 mt-0.5" />
-                  <span>Test-driven development from validated specs</span>
-                </li>
-                <li className="flex items-start">
-                  <ChartBarIcon className="h-4 w-4 text-green-600 mr-2 mt-0.5" />
-                  <span>Fewer post-launch defects</span>
-                </li>
+                {(t('productDevelopment.validation.benefits.maintainQuality.items', { returnObjects: true }) as unknown as string[]).map((item, idx) => (
+                  <li key={idx} className="flex items-start">
+                    <ChartBarIcon className="h-4 w-4 text-green-600 mr-2 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -505,16 +403,15 @@ const StakeholderValidation: React.FC = () => {
 
         {/* Next Step */}
         <div className="bg-gradient-to-r from-green-600 to-teal-600 rounded-xl p-6 text-white">
-          <h2 className="text-xl font-semibold mb-2">Next: Implementation Pipeline</h2>
+          <h2 className="text-xl font-semibold mb-2">{t('productDevelopment.validation.nextStep.title')}</h2>
           <p className="text-sm mb-4 opacity-90">
-            Once all stakeholders validate their artifacts, we move to implementation - generating design systems,
-            prototypes, test scripts, and production-ready code.
+            {t('productDevelopment.validation.nextStep.description')}
           </p>
           <Link
             to="/solutions/product-development/implementation"
             className="inline-flex items-center px-4 py-2 bg-white text-green-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
           >
-            View Implementation Process
+            {t('productDevelopment.validation.nextStep.button')}
             <ArrowRightIcon className="ml-2 h-4 w-4" />
           </Link>
         </div>

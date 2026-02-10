@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { 
+import {
   CodeBracketIcon,
   BeakerIcon,
   CubeTransparentIcon,
@@ -19,69 +19,36 @@ import {
   CloudIcon,
   CogIcon
 } from '@heroicons/react/24/outline';
+import { useTranslation } from 'react-i18next';
 
 const SemanticEngineeringOverview: React.FC = () => {
+  const { t } = useTranslation('coreTechnology');
   const [visibleMilestones, setVisibleMilestones] = useState(0);
   const [hasStartedAnimation, setHasStartedAnimation] = useState(false);
   const timelineRef = useRef<HTMLDivElement>(null);
 
+  const milestoneKeys = [
+    'q1_2022', 'q4_2022', 'q1_2023', 'q2_2023', 'q3_2023',
+    'q4_2023', 'q1_2024', 'q2_2024', 'q3_2024', 'q1_2025'
+  ];
+
   const journeyMilestones = [
-    {
-      year: "Q1 2022",
-      title: "First GenAI Project",
-      description: "Drug discovery use case for pharma leader using Graph RAG approach"
-    },
-    {
-      year: "Q4 2022",
-      title: "RAG + Graph RAG",
-      description: "Support bot for UN agency"
-    },
-    {
-      year: "Q1 2023",
-      title: "Knowledge Platform",
-      description: "Launched Knowledge assistant platform, Extensive Document processing using GenAI"
-    },
-    {
-      year: "Q2 2023",
-      title: "Generative Analytics",
-      description: "Launched Generative analytics platform, implemented data bot for UN agency"
-    },
-    {
-      year: "Q3 2023",
-      title: "Cognitive Automation & Agentic",
-      description: "Automated longtail debt collection for travel industry, Architected Agentic Graph RAG"
-    },
-    {
-      year: "Q4 2023",
-      title: "KAPS Framework",
-      description: "Launched KAPS – GenAI adoption framework with Graph based context engineering"
-    },
-    {
-      year: "Q1 2024",
-      title: "Multi-modal Support",
-      description: "Support bots with multi-modal capabilities - chat, voice, video"
-    },
-    {
-      year: "Q2 2024",
-      title: "GenAI Data Solutions",
-      description: "GenAI driven Data solutions like MDM, Data migrations etc."
-    },
-    {
-      year: "Q3 2024",
-      title: "E2E Agentic Migration",
-      description: "Cobol to Java – Code migration assistant for Engineering leader"
-    },
-    {
-      year: "Q1 2025",
-      title: "50+ Projects Delivered",
-      description: "50+ GenAI / Agentic AI projects delivered"
-    }
+    { year: "Q1 2022", title: t('semanticEngineering.journey.milestones.q1_2022.title'), description: t('semanticEngineering.journey.milestones.q1_2022.description') },
+    { year: "Q4 2022", title: t('semanticEngineering.journey.milestones.q4_2022.title'), description: t('semanticEngineering.journey.milestones.q4_2022.description') },
+    { year: "Q1 2023", title: t('semanticEngineering.journey.milestones.q1_2023.title'), description: t('semanticEngineering.journey.milestones.q1_2023.description') },
+    { year: "Q2 2023", title: t('semanticEngineering.journey.milestones.q2_2023.title'), description: t('semanticEngineering.journey.milestones.q2_2023.description') },
+    { year: "Q3 2023", title: t('semanticEngineering.journey.milestones.q3_2023.title'), description: t('semanticEngineering.journey.milestones.q3_2023.description') },
+    { year: "Q4 2023", title: t('semanticEngineering.journey.milestones.q4_2023.title'), description: t('semanticEngineering.journey.milestones.q4_2023.description') },
+    { year: "Q1 2024", title: t('semanticEngineering.journey.milestones.q1_2024.title'), description: t('semanticEngineering.journey.milestones.q1_2024.description') },
+    { year: "Q2 2024", title: t('semanticEngineering.journey.milestones.q2_2024.title'), description: t('semanticEngineering.journey.milestones.q2_2024.description') },
+    { year: "Q3 2024", title: t('semanticEngineering.journey.milestones.q3_2024.title'), description: t('semanticEngineering.journey.milestones.q3_2024.description') },
+    { year: "Q1 2025", title: t('semanticEngineering.journey.milestones.q1_2025.title'), description: t('semanticEngineering.journey.milestones.q1_2025.description') }
   ];
 
   // Animation for timeline triggered by scroll visibility
   useEffect(() => {
     const currentRef = timelineRef.current;
-    
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -94,7 +61,7 @@ const SemanticEngineeringOverview: React.FC = () => {
           }
         });
       },
-      { 
+      {
         threshold: 0.1,
         rootMargin: '0px'
       }
@@ -132,43 +99,43 @@ const SemanticEngineeringOverview: React.FC = () => {
 
   const platformComponents = [
     {
-      title: "KAPS Framework",
+      title: t('semanticEngineering.platformComponents.items.kaps.title'),
       path: "/core-technology/kaps-framework",
       icon: <RectangleStackIcon className="h-8 w-8" />,
-      role: "Adoption Framework",
-      description: "AI adoption framework with four specialized portfolios",
+      role: t('semanticEngineering.platformComponents.items.kaps.role'),
+      description: t('semanticEngineering.platformComponents.items.kaps.description'),
       color: "blue"
     },
     {
-      title: "Agent Architecture",
+      title: t('semanticEngineering.platformComponents.items.agentArchitecture.title'),
       path: "/core-technology/agent-architecture",
       icon: <CubeTransparentIcon className="h-8 w-8" />,
-      role: "Solution Architecture",
-      description: "Multi-agent orchestration architecture",
+      role: t('semanticEngineering.platformComponents.items.agentArchitecture.role'),
+      description: t('semanticEngineering.platformComponents.items.agentArchitecture.description'),
       color: "purple"
     },
     {
-      title: "Breeze.AI",
+      title: t('semanticEngineering.platformComponents.items.breezeAI.title'),
       path: "/core-technology/breeze-ai",
       icon: <CpuChipIcon className="h-8 w-8" />,
-      role: "Delivery Framework",
-      description: "End-to-end semantic engineering framework",
+      role: t('semanticEngineering.platformComponents.items.breezeAI.role'),
+      description: t('semanticEngineering.platformComponents.items.breezeAI.description'),
       color: "green"
     },
     {
-      title: "Gen AI in a Box",
+      title: t('semanticEngineering.platformComponents.items.genAIBox.title'),
       path: "/core-technology/gen-ai-box",
       icon: <BeakerIcon className="h-8 w-8" />,
-      role: "Deployment Platform",
-      description: "On-premise installation for secure, local semantic engineering",
+      role: t('semanticEngineering.platformComponents.items.genAIBox.role'),
+      description: t('semanticEngineering.platformComponents.items.genAIBox.description'),
       color: "orange"
     },
     {
-      title: "Strategic Guardrails",
+      title: t('semanticEngineering.platformComponents.items.guardrails.title'),
       path: "/core-technology/guardrails",
       icon: <ScaleIcon className="h-8 w-8" />,
-      role: "Governance Framework",
-      description: "Control structures for safe, compliant AI operations",
+      role: t('semanticEngineering.platformComponents.items.guardrails.role'),
+      description: t('semanticEngineering.platformComponents.items.guardrails.description'),
       color: "red"
     }
   ];
@@ -179,52 +146,44 @@ const SemanticEngineeringOverview: React.FC = () => {
         {/* Page Header */}
         <div className="mb-8">
           <div className="inline-block px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs font-semibold mb-4">
-            Core Technology
+            {t('semanticEngineering.header.badge')}
           </div>
-          <h1 className="text-4xl font-bold text-gray-900">Semantic Engineering Platform</h1>
+          <h1 className="text-4xl font-bold text-gray-900">{t('semanticEngineering.header.title')}</h1>
           <p className="mt-3 text-xl text-gray-600 max-w-4xl">
-            Accion Labs' comprehensive approach to building reliable, context-aware AI solutions through 
-            structured knowledge representation and multi-agent orchestration.
+            {t('semanticEngineering.header.description')}
           </p>
         </div>
 
         {/* LLM Application Methodologies */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 mb-8">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-2">Evolution of LLM Application Methodologies</h2>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-2">{t('semanticEngineering.evolution.title')}</h2>
           <p className="text-gray-600 mb-6">
-            Each methodology builds upon the previous, adding new capabilities while retaining the strengths 
-            of earlier approaches.
+            {t('semanticEngineering.evolution.description')}
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {/* LLM Integration/Prompt Engineering */}
               <div className="bg-white p-6 rounded-lg border-2 border-gray-200 hover:shadow-lg transition-shadow flex flex-col">
                 <div className="text-red-500 mb-3">
                   <CommandLineIcon className="h-6 w-6" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">LLM Integration</h3>
-                <p className="text-xs text-gray-500 mb-2">Prompt Engineering</p>
-                <p className="text-sm text-gray-600 mb-3">Trained on External Data</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('semanticEngineering.evolution.llmIntegration.title')}</h3>
+                <p className="text-xs text-gray-500 mb-2">{t('semanticEngineering.evolution.llmIntegration.subtitle')}</p>
+                <p className="text-sm text-gray-600 mb-3">{t('semanticEngineering.evolution.llmIntegration.description')}</p>
                 <div className="flex-1 mb-3">
-                  <p className="text-xs font-semibold text-gray-500 mb-1">Characteristics:</p>
+                  <p className="text-xs font-semibold text-gray-500 mb-1">{t('semanticEngineering.evolution.llmIntegration.characteristics')}</p>
                   <ul className="text-xs text-gray-600 space-y-1">
-                    <li className="flex items-start">
-                      <span className="text-red-400 mr-1">•</span>
-                      Very slow and expensive
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-red-400 mr-1">•</span>
-                      Suffers from hallucinations
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-red-400 mr-1">•</span>
-                      Limited business use
-                    </li>
+                    {(t('semanticEngineering.evolution.llmIntegration.items', { returnObjects: true }) as unknown as string[]).map((item, idx) => (
+                      <li key={idx} className="flex items-start">
+                        <span className="text-red-400 mr-1">•</span>
+                        {item}
+                      </li>
+                    ))}
                   </ul>
                 </div>
                 <div className="pt-3 border-t border-gray-200 mt-auto">
                   <p className="text-xs text-gray-500">
-                    <strong>Closed Book Approach</strong>
+                    <strong>{t('semanticEngineering.evolution.llmIntegration.approach')}</strong>
                   </p>
                 </div>
               </div>
@@ -234,29 +193,23 @@ const SemanticEngineeringOverview: React.FC = () => {
                 <div className="text-orange-500 mb-3">
                   <CogIcon className="h-6 w-6" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Fine Tuned Models</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('semanticEngineering.evolution.fineTuned.title')}</h3>
                 <p className="text-xs text-gray-500 mb-2">&nbsp;</p>
-                <p className="text-sm text-gray-600 mb-3">Trained with domain or specific use case</p>
+                <p className="text-sm text-gray-600 mb-3">{t('semanticEngineering.evolution.fineTuned.description')}</p>
                 <div className="flex-1 mb-3">
-                  <p className="text-xs font-semibold text-gray-500 mb-1">Characteristics:</p>
+                  <p className="text-xs font-semibold text-gray-500 mb-1">{t('semanticEngineering.evolution.fineTuned.characteristics')}</p>
                   <ul className="text-xs text-gray-600 space-y-1">
-                    <li className="flex items-start">
-                      <span className="text-orange-400 mr-1">•</span>
-                      Expensive & slow
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-orange-400 mr-1">•</span>
-                      Suffers from hallucinations
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-500 mr-1">+</span>
-                      Domain-specific knowledge
-                    </li>
+                    {(t('semanticEngineering.evolution.fineTuned.items', { returnObjects: true }) as unknown as string[]).map((item, idx) => (
+                      <li key={idx} className="flex items-start">
+                        <span className={idx < 2 ? "text-orange-400 mr-1" : "text-green-500 mr-1"}>{idx < 2 ? '•' : '+'}</span>
+                        {item}
+                      </li>
+                    ))}
                   </ul>
                 </div>
                 <div className="pt-3 border-t border-gray-200 mt-auto">
                   <p className="text-xs text-gray-500">
-                    <strong>Closed Book Approach</strong>
+                    <strong>{t('semanticEngineering.evolution.fineTuned.approach')}</strong>
                   </p>
                 </div>
               </div>
@@ -266,29 +219,23 @@ const SemanticEngineeringOverview: React.FC = () => {
                 <div className="text-green-600 mb-3">
                   <DocumentTextIcon className="h-6 w-6" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">RAG</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('semanticEngineering.evolution.rag.title')}</h3>
                 <p className="text-xs text-gray-500 mb-2">&nbsp;</p>
-                <p className="text-sm text-gray-600 mb-3">Retrieval Augmented Generation</p>
+                <p className="text-sm text-gray-600 mb-3">{t('semanticEngineering.evolution.rag.description')}</p>
                 <div className="flex-1 mb-3">
-                  <p className="text-xs font-semibold text-gray-500 mb-1">Characteristics:</p>
+                  <p className="text-xs font-semibold text-gray-500 mb-1">{t('semanticEngineering.evolution.rag.characteristics')}</p>
                   <ul className="text-xs text-gray-600 space-y-1">
-                    <li className="flex items-start">
-                      <span className="text-green-500 mr-1">✓</span>
-                      Real time and cost effective
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-500 mr-1">✓</span>
-                      Does not hallucinate/Grounded
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-yellow-500 mr-1">!</span>
-                      Limited for textual content
-                    </li>
+                    {(t('semanticEngineering.evolution.rag.items', { returnObjects: true }) as unknown as string[]).map((item, idx) => (
+                      <li key={idx} className="flex items-start">
+                        <span className={idx < 2 ? "text-green-500 mr-1" : "text-yellow-500 mr-1"}>{idx < 2 ? '✓' : '!'}</span>
+                        {item}
+                      </li>
+                    ))}
                   </ul>
                 </div>
                 <div className="pt-3 border-t border-gray-200 mt-auto">
                   <p className="text-xs text-gray-500">
-                    <strong>Open Book Approach</strong>
+                    <strong>{t('semanticEngineering.evolution.rag.approach')}</strong>
                   </p>
                 </div>
               </div>
@@ -298,131 +245,122 @@ const SemanticEngineeringOverview: React.FC = () => {
                 <div className="text-purple-600 mb-3">
                   <CircleStackIcon className="h-6 w-6" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">AG-RAG</h3>
-                <p className="text-xs text-gray-500 mb-2">Context Engineering</p>
-                <p className="text-sm text-gray-600 mb-3">Agentic Graph RAG</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('semanticEngineering.evolution.agRag.title')}</h3>
+                <p className="text-xs text-gray-500 mb-2">{t('semanticEngineering.evolution.agRag.subtitle')}</p>
+                <p className="text-sm text-gray-600 mb-3">{t('semanticEngineering.evolution.agRag.description')}</p>
                 <div className="flex-1 mb-3">
-                  <p className="text-xs font-semibold text-gray-500 mb-1">Characteristics:</p>
+                  <p className="text-xs font-semibold text-gray-500 mb-1">{t('semanticEngineering.evolution.agRag.characteristics')}</p>
                   <ul className="text-xs text-gray-600 space-y-1">
-                    <li className="flex items-start">
-                      <span className="text-purple-500 mr-1">★</span>
-                      Production level accuracy
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-purple-500 mr-1">★</span>
-                      All forms of business info accessible
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-purple-500 mr-1">★</span>
-                      Grounded and cost effective
-                    </li>
+                    {(t('semanticEngineering.evolution.agRag.items', { returnObjects: true }) as unknown as string[]).map((item, idx) => (
+                      <li key={idx} className="flex items-start">
+                        <span className="text-purple-500 mr-1">★</span>
+                        {item}
+                      </li>
+                    ))}
                   </ul>
                 </div>
                 <div className="pt-3 border-t border-gray-200 mt-auto">
                   <p className="text-xs text-gray-500">
-                    <strong>Open Book Approach</strong>
+                    <strong>{t('semanticEngineering.evolution.agRag.approach')}</strong>
                   </p>
                 </div>
               </div>
             </div>
-          
+
           {/* Why Knowledge Graphs Section - Moved inside Evolution */}
           <div className="mt-8 pt-8 border-t border-gray-200">
-            <h3 className="text-xl font-semibold text-gray-900 mb-6">Why Knowledge Graphs Matter</h3>
-            
+            <h3 className="text-xl font-semibold text-gray-900 mb-6">{t('semanticEngineering.whyKnowledgeGraphs.title')}</h3>
+
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-4">The Challenge with Traditional AI</h4>
+                <h4 className="text-lg font-semibold text-gray-900 mb-4">{t('semanticEngineering.whyKnowledgeGraphs.challenge.title')}</h4>
                 <div className="space-y-3">
                   <div className="flex items-start">
                     <span className="text-red-500 mr-3 mt-1">✗</span>
                     <div>
-                      <p className="text-gray-700"><strong>Loss of Context:</strong> Traditional approaches lose critical relationships between components</p>
+                      <p className="text-gray-700"><strong>{t('semanticEngineering.whyKnowledgeGraphs.challenge.lossOfContextLabel')}:</strong> {t('semanticEngineering.whyKnowledgeGraphs.challenge.lossOfContext')}</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <span className="text-red-500 mr-3 mt-1">✗</span>
                     <div>
-                      <p className="text-gray-700"><strong>Inconsistent Results:</strong> Same queries produce different outputs without structured knowledge</p>
+                      <p className="text-gray-700"><strong>{t('semanticEngineering.whyKnowledgeGraphs.challenge.inconsistentResultsLabel')}:</strong> {t('semanticEngineering.whyKnowledgeGraphs.challenge.inconsistentResults')}</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <span className="text-red-500 mr-3 mt-1">✗</span>
                     <div>
-                      <p className="text-gray-700"><strong>Limited Understanding:</strong> Unable to reason about complex interdependencies</p>
+                      <p className="text-gray-700"><strong>{t('semanticEngineering.whyKnowledgeGraphs.challenge.limitedUnderstandingLabel')}:</strong> {t('semanticEngineering.whyKnowledgeGraphs.challenge.limitedUnderstanding')}</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-4">The Knowledge Graph Advantage</h4>
+                <h4 className="text-lg font-semibold text-gray-900 mb-4">{t('semanticEngineering.whyKnowledgeGraphs.advantage.title')}</h4>
                 <div className="space-y-3">
                   <div className="flex items-start">
                     <span className="text-green-500 mr-3 mt-1">✓</span>
                     <div>
-                      <p className="text-gray-700"><strong>Preserved Relationships:</strong> Maintains all connections and dependencies</p>
+                      <p className="text-gray-700"><strong>{t('semanticEngineering.whyKnowledgeGraphs.advantage.preservedRelationshipsLabel')}:</strong> {t('semanticEngineering.whyKnowledgeGraphs.advantage.preservedRelationships')}</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <span className="text-green-500 mr-3 mt-1">✓</span>
                     <div>
-                      <p className="text-gray-700"><strong>Consistent Reasoning:</strong> Structured data enables reliable, repeatable analysis</p>
+                      <p className="text-gray-700"><strong>{t('semanticEngineering.whyKnowledgeGraphs.advantage.consistentReasoningLabel')}:</strong> {t('semanticEngineering.whyKnowledgeGraphs.advantage.consistentReasoning')}</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <span className="text-green-500 mr-3 mt-1">✓</span>
                     <div>
-                      <p className="text-gray-700"><strong>Deep Understanding:</strong> Captures multi-layered context for accurate insights</p>
+                      <p className="text-gray-700"><strong>{t('semanticEngineering.whyKnowledgeGraphs.advantage.deepUnderstandingLabel')}:</strong> {t('semanticEngineering.whyKnowledgeGraphs.advantage.deepUnderstanding')}</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          
+
           {/* Our Semantic Engineering Approach */}
           <div className="mt-6 bg-secondary/10 rounded-lg p-6 border border-secondary">
             <h3 className="text-lg font-semibold text-secondary mb-3">
-              Our Semantic Engineering Platform
+              {t('semanticEngineering.platform.title')}
             </h3>
-            <p className="text-secondary mb-4">
-              At Accion Labs, we don't rely on a single methodology. Our Semantic Engineering platform intelligently 
-              combines <strong>all these approaches</strong> based on the specific requirements of each application:
-            </p>
+            <p className="text-secondary mb-4" dangerouslySetInnerHTML={{ __html: t('semanticEngineering.platform.description') }} />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="flex items-start">
                 <span className="text-secondary mr-2 mt-1">✓</span>
                 <div>
-                  <strong className="text-secondary">Prompt Engineering:</strong>
-                  <span className="text-secondary text-sm"> For agent interactions and quick queries</span>
+                  <strong className="text-secondary">{t('semanticEngineering.platform.promptEngineeringLabel')}</strong>
+                  <span className="text-secondary text-sm"> {t('semanticEngineering.platform.promptEngineering')}</span>
                 </div>
               </div>
               <div className="flex items-start">
                 <span className="text-secondary mr-2 mt-1">✓</span>
                 <div>
-                  <strong className="text-secondary">Fine-tuning:</strong>
-                  <span className="text-secondary text-sm"> For domain-specific model optimization</span>
+                  <strong className="text-secondary">{t('semanticEngineering.platform.fineTuningLabel')}</strong>
+                  <span className="text-secondary text-sm"> {t('semanticEngineering.platform.fineTuning')}</span>
                 </div>
               </div>
               <div className="flex items-start">
                 <span className="text-secondary mr-2 mt-1">✓</span>
                 <div>
-                  <strong className="text-secondary">RAG:</strong>
-                  <span className="text-secondary text-sm"> For dynamic knowledge retrieval</span>
+                  <strong className="text-secondary">{t('semanticEngineering.platform.ragLabel')}</strong>
+                  <span className="text-secondary text-sm"> {t('semanticEngineering.platform.ragApproach')}</span>
                 </div>
               </div>
               <div className="flex items-start">
                 <span className="text-secondary mr-2 mt-1">✓</span>
                 <div>
-                  <strong className="text-secondary">Graph RAG:</strong>
-                  <span className="text-secondary text-sm"> For complex relationship understanding</span>
+                  <strong className="text-secondary">{t('semanticEngineering.platform.graphRagLabel')}</strong>
+                  <span className="text-secondary text-sm"> {t('semanticEngineering.platform.graphRag')}</span>
                 </div>
               </div>
             </div>
             <div className="mt-4 pt-4 border-t border-secondary">
               <p className="text-sm text-secondary italic">
-                The key is knowing when and how to apply each technique for optimal results.
+                {t('semanticEngineering.platform.keyPoint')}
               </p>
             </div>
           </div>
@@ -430,21 +368,21 @@ const SemanticEngineeringOverview: React.FC = () => {
 
         {/* Our Journey */}
         <div ref={timelineRef} className="bg-innovation-gradient rounded-xl shadow-sm p-8 mb-8 text-white">
-          <h2 className="text-2xl font-semibold mb-6">Our Semantic Engineering Journey</h2>
-          
+          <h2 className="text-2xl font-semibold mb-6">{t('semanticEngineering.journey.title')}</h2>
+
           <div className="relative">
             {/* Timeline line */}
             <div className="absolute left-24 top-0 bottom-0 w-0.5 bg-white/30"></div>
-            
+
             <div className="space-y-6">
               {journeyMilestones.map((milestone, index) => {
                 const [quarter, year] = milestone.year.split(' ');
                 return (
-                  <div 
-                    key={index} 
+                  <div
+                    key={index}
                     className={`relative flex items-start transition-all duration-1000 ${
-                      index < visibleMilestones 
-                        ? 'opacity-100 translate-x-0' 
+                      index < visibleMilestones
+                        ? 'opacity-100 translate-x-0'
                         : 'opacity-0 -translate-x-10'
                     }`}
                   >
@@ -474,11 +412,11 @@ const SemanticEngineeringOverview: React.FC = () => {
 
         {/* Platform Components */}
         <div className="mb-8">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6">Our Semantic Engineering Platform</h2>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-6">{t('semanticEngineering.platformComponents.title')}</h2>
           <p className="text-gray-600 mb-8">
-            Each component plays a critical role in our comprehensive approach to semantic engineering:
+            {t('semanticEngineering.platformComponents.description')}
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {platformComponents.map((component, index) => (
               <Link
@@ -492,7 +430,7 @@ const SemanticEngineeringOverview: React.FC = () => {
                   </div>
                   <ChevronRightIcon className="h-5 w-5 text-gray-400 group-hover:text-secondary group-hover:translate-x-1 transition-all" />
                 </div>
-                
+
                 <h3 className="text-lg font-semibold text-gray-900 mb-1">{component.title}</h3>
                 <div className={`inline-block px-2 py-1 bg-${component.color}-100 text-${component.color}-700 rounded text-xs font-semibold mb-3`}>
                   {component.role}
@@ -506,24 +444,24 @@ const SemanticEngineeringOverview: React.FC = () => {
         {/* Call to Action */}
         <div className="bg-gradient-to-r from-gray-900 to-gray-700 rounded-xl shadow-lg p-8 text-center">
           <h2 className="text-2xl font-semibold text-white mb-4">
-            Ready to Transform Your Enterprise with Semantic Engineering?
+            {t('semanticEngineering.cta.title')}
           </h2>
           <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-            Explore how our platform components work together to deliver accurate, reliable, and scalable AI solutions.
+            {t('semanticEngineering.cta.description')}
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
               to="/core-technology/kaps-framework"
               className="inline-flex items-center px-6 py-3 bg-secondary text-white rounded-lg font-semibold hover:bg-brand-blue-700 transition-colors"
             >
-              Explore KAPS Framework
+              {t('semanticEngineering.cta.exploreKaps')}
               <ArrowRightIcon className="ml-2 h-5 w-5" />
             </Link>
             <Link
               to="/contact"
               className="inline-flex items-center px-6 py-3 bg-white text-gray-900 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
-              Get Started
+              {t('semanticEngineering.cta.getStarted')}
               <ArrowRightIcon className="ml-2 h-5 w-5" />
             </Link>
           </div>

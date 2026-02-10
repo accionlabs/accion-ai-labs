@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface AgentsLayerDeepDiveNewProps {
   onNavigate?: (screenId: string) => void;
@@ -6,36 +7,45 @@ interface AgentsLayerDeepDiveNewProps {
 }
 
 const AgentsLayerDeepDiveNew: React.FC<AgentsLayerDeepDiveNewProps> = () => {
-  const agentTypes = [
+  const { t } = useTranslation('breezeProcess');
+
+  const agentTypes = React.useMemo(() => [
     {
-      type: "Business Process Agents",
-      purpose: "Orchestrate complete end-to-end business workflows",
-      capabilities: "Multi-step coordination, decision making, exception handling",
-      examples: ["Purchase Completion Agent", "Customer Onboarding Agent", "Incident Response Agent"],
+      type: t('semantic.agents.agentTypes.businessProcess.type'),
+      purpose: t('semantic.agents.agentTypes.businessProcess.purpose'),
+      capabilities: t('semantic.agents.agentTypes.businessProcess.capabilities'),
+      examples: [t('semantic.agents.agentTypes.businessProcess.examples.0'), t('semantic.agents.agentTypes.businessProcess.examples.1'), t('semantic.agents.agentTypes.businessProcess.examples.2')],
       color: "bg-brand-blue-50 border-secondary text-secondary"
     },
     {
-      type: "Domain Agents", 
-      purpose: "Provide specialized intelligence within specific domains",
-      capabilities: "Domain expertise, optimization, pattern recognition",
-      examples: ["Product Discovery Agent", "System Optimization Agent", "Risk Assessment Agent"],
+      type: t('semantic.agents.agentTypes.domain.type'),
+      purpose: t('semantic.agents.agentTypes.domain.purpose'),
+      capabilities: t('semantic.agents.agentTypes.domain.capabilities'),
+      examples: [t('semantic.agents.agentTypes.domain.examples.0'), t('semantic.agents.agentTypes.domain.examples.1'), t('semantic.agents.agentTypes.domain.examples.2')],
       color: "bg-brand-purple-50 border-brand-purple-600 text-brand-purple-800"
     },
     {
-      type: "Integration Agents",
-      purpose: "Coordinate interactions with external systems", 
-      capabilities: "Protocol translation, error recovery, data transformation",
-      examples: ["External System Integration Agent", "Partner API Agent", "Legacy System Bridge Agent"],
+      type: t('semantic.agents.agentTypes.integration.type'),
+      purpose: t('semantic.agents.agentTypes.integration.purpose'),
+      capabilities: t('semantic.agents.agentTypes.integration.capabilities'),
+      examples: [t('semantic.agents.agentTypes.integration.examples.0'), t('semantic.agents.agentTypes.integration.examples.1'), t('semantic.agents.agentTypes.integration.examples.2')],
       color: "bg-success-50 border-success text-success-800"
     },
     {
-      type: "Assistant Agents",
-      purpose: "Support user interactions and queries",
-      capabilities: "Natural language processing, context understanding, task guidance", 
-      examples: ["Customer Support Agent", "Operations Assistant Agent", "Developer Helper Agent"],
+      type: t('semantic.agents.agentTypes.assistant.type'),
+      purpose: t('semantic.agents.agentTypes.assistant.purpose'),
+      capabilities: t('semantic.agents.agentTypes.assistant.capabilities'),
+      examples: [t('semantic.agents.agentTypes.assistant.examples.0'), t('semantic.agents.agentTypes.assistant.examples.1'), t('semantic.agents.agentTypes.assistant.examples.2')],
       color: "bg-warning-50 border-warning text-warning-800"
     }
-  ];
+  ], [t]);
+
+  const services = React.useMemo(() => [
+    t('semantic.agents.orchestration.coordination.services.0'),
+    t('semantic.agents.orchestration.coordination.services.1'),
+    t('semantic.agents.orchestration.coordination.services.2'),
+    t('semantic.agents.orchestration.coordination.services.3')
+  ], [t]);
 
   return (
     <div className="max-w-6xl mx-auto">
@@ -43,54 +53,51 @@ const AgentsLayerDeepDiveNew: React.FC<AgentsLayerDeepDiveNewProps> = () => {
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-gray-800 mb-4">
           <span className="bg-innovation-gradient bg-clip-text text-transparent">
-            Agents Layer Deep Dive
+            {t('semantic.agents.header.title')}
           </span>
         </h1>
-        
+
         <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-          The intelligence layer that provides autonomous coordination between user experience and services. 
-          This layer enables complex workflow orchestration, intelligent decision-making, and seamless 
-          multi-service coordination through specialized AI agents.
+          {t('semantic.agents.header.description')}
         </p>
       </div>
 
       {/* Agent Layer Position */}
       <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-        <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">Agents Layer in Architecture</h3>
-        
+        <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">{t('semantic.agents.layerPosition.title')}</h3>
+
         <div className="flex flex-col items-center space-y-4">
           <div className="p-4 bg-brand-purple-100 rounded-lg border-2 border-brand-purple-600 w-full max-w-md text-center">
-            <div className="font-bold text-brand-purple-800">User Experience Layer</div>
-            <div className="text-sm text-brand-purple-600">Frontend applications and user interfaces</div>
+            <div className="font-bold text-brand-purple-800">{t('semantic.agents.layerPosition.uxLayer.title')}</div>
+            <div className="text-sm text-brand-purple-600">{t('semantic.agents.layerPosition.uxLayer.description')}</div>
           </div>
-          
+
           <div className="text-gray-400 text-2xl">↓</div>
-          
+
           <div className="p-4 bg-success-100 rounded-lg border-2 border-success w-full max-w-md text-center ring-4 ring-success-200">
-            <div className="font-bold text-success-800 text-lg">🤖 AGENTS LAYER</div>
-            <div className="text-sm text-success-700 font-semibold">Intelligent orchestration and autonomous decision-making</div>
+            <div className="font-bold text-success-800 text-lg">{t('semantic.agents.layerPosition.agentsLayer.title')}</div>
+            <div className="text-sm text-success-700 font-semibold">{t('semantic.agents.layerPosition.agentsLayer.description')}</div>
           </div>
-          
+
           <div className="text-gray-400 text-2xl">↓</div>
-          
+
           <div className="p-4 bg-warning-100 rounded-lg border-2 border-warning w-full max-w-md text-center">
-            <div className="font-bold text-warning-800">Services Layer</div>
-            <div className="text-sm text-warning-600">Business logic and platform capabilities</div>
+            <div className="font-bold text-warning-800">{t('semantic.agents.layerPosition.servicesLayer.title')}</div>
+            <div className="text-sm text-warning-600">{t('semantic.agents.layerPosition.servicesLayer.description')}</div>
           </div>
         </div>
-        
+
         <div className="mt-6 p-4 bg-success-50 rounded-lg border border-success">
           <p className="text-success-800 text-center">
-            <strong>Key Innovation:</strong> The Agents layer provides intelligent coordination between the User Experience layer and Services layer, 
-            enabling autonomous task completion and complex workflow orchestration.
+            <strong>{t('semantic.agents.layerPosition.keyInnovationLabel')}</strong> {t('semantic.agents.layerPosition.keyInnovationText')}
           </p>
         </div>
       </div>
 
       {/* Agent Types Deep Dive */}
       <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-        <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">Four Types of Intelligent Agents</h3>
-        
+        <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">{t('semantic.agents.agentTypesSection.title')}</h3>
+
         <div className="space-y-6">
           {agentTypes.map((agent, index) => (
             <div key={index} className={`p-6 rounded-lg border-2 ${agent.color}`}>
@@ -98,13 +105,13 @@ const AgentsLayerDeepDiveNew: React.FC<AgentsLayerDeepDiveNewProps> = () => {
                 <h4 className="text-xl font-bold mb-2">{agent.type}</h4>
                 <p className="text-sm mb-3">{agent.purpose}</p>
                 <div className="mb-3">
-                  <span className="text-xs font-semibold uppercase tracking-wide">Capabilities:</span>
+                  <span className="text-xs font-semibold uppercase tracking-wide">{t('semantic.agents.agentTypesSection.capabilitiesLabel')}</span>
                   <p className="text-sm">{agent.capabilities}</p>
                 </div>
               </div>
-              
+
               <div>
-                <span className="text-xs font-semibold uppercase tracking-wide mb-2 block">Examples:</span>
+                <span className="text-xs font-semibold uppercase tracking-wide mb-2 block">{t('semantic.agents.agentTypesSection.examplesLabel')}</span>
                 <div className="flex flex-wrap gap-2">
                   {agent.examples.map((example, exampleIndex) => (
                     <span key={exampleIndex} className="px-3 py-1 bg-white rounded-full text-xs font-medium border">
@@ -120,67 +127,67 @@ const AgentsLayerDeepDiveNew: React.FC<AgentsLayerDeepDiveNewProps> = () => {
 
       {/* Agent Orchestration Examples */}
       <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-        <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">Agent Orchestration in Action</h3>
-        
+        <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">{t('semantic.agents.orchestration.title')}</h3>
+
         <div className="space-y-8">
           {/* Service Coordination Flow */}
           <div className="p-6 bg-brand-blue-50 rounded-lg border border-secondary">
-            <h4 className="text-lg font-bold text-secondary mb-4">Service Coordination Flow</h4>
+            <h4 className="text-lg font-bold text-secondary mb-4">{t('semantic.agents.orchestration.coordination.title')}</h4>
             <div className="space-y-4">
               <div className="text-center p-4 bg-white rounded-lg border">
-                <div className="text-lg font-semibold text-gray-800 mb-2">"Complete my order for the red shoes"</div>
-                <div className="text-sm text-gray-600">User Request</div>
+                <div className="text-lg font-semibold text-gray-800 mb-2">{t('semantic.agents.orchestration.coordination.userRequest')}</div>
+                <div className="text-sm text-gray-600">{t('semantic.agents.orchestration.coordination.userRequestLabel')}</div>
               </div>
-              
+
               <div className="text-center text-2xl text-gray-400">↓</div>
-              
+
               <div className="p-4 bg-success-100 rounded-lg border border-success">
-                <div className="font-semibold text-success-800 mb-2">Purchase Completion Agent</div>
-                <div className="text-sm text-success-700">Receives request and orchestrates multiple services</div>
+                <div className="font-semibold text-success-800 mb-2">{t('semantic.agents.orchestration.coordination.agentName')}</div>
+                <div className="text-sm text-success-700">{t('semantic.agents.orchestration.coordination.agentDescription')}</div>
               </div>
-              
+
               <div className="text-center text-2xl text-gray-400">↓</div>
-              
+
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {["Product Service", "Inventory Service", "Payment Service", "Shipping Service"].map((service, index) => (
+                {services.map((service, index) => (
                   <div key={index} className="p-3 bg-warning-100 rounded-lg border border-warning text-center">
                     <div className="font-semibold text-warning-800 text-sm">{service}</div>
                   </div>
                 ))}
               </div>
-              
+
               <div className="text-center text-2xl text-gray-400">↓</div>
-              
+
               <div className="text-center p-4 bg-white rounded-lg border">
-                <div className="font-semibold text-gray-800 mb-2">Complete Order Confirmation</div>
-                <div className="text-sm text-gray-600">with tracking info and delivery details</div>
+                <div className="font-semibold text-gray-800 mb-2">{t('semantic.agents.orchestration.coordination.result')}</div>
+                <div className="text-sm text-gray-600">{t('semantic.agents.orchestration.coordination.resultDescription')}</div>
               </div>
             </div>
           </div>
 
           {/* Agent Collaboration */}
           <div className="p-6 bg-brand-purple-50 rounded-lg border border-brand-purple-600">
-            <h4 className="text-lg font-bold text-brand-purple-800 mb-4">Multi-Agent Collaboration</h4>
+            <h4 className="text-lg font-bold text-brand-purple-800 mb-4">{t('semantic.agents.orchestration.collaboration.title')}</h4>
             <div className="space-y-4">
               <div className="text-center p-4 bg-white rounded-lg border">
-                <div className="text-lg font-semibold text-gray-800 mb-2">"Find and order the best running shoes for my marathon training"</div>
-                <div className="text-sm text-gray-600">Complex User Request</div>
+                <div className="text-lg font-semibold text-gray-800 mb-2">{t('semantic.agents.orchestration.collaboration.userRequest')}</div>
+                <div className="text-sm text-gray-600">{t('semantic.agents.orchestration.collaboration.userRequestLabel')}</div>
               </div>
-              
+
               <div className="text-center text-2xl text-gray-400">↓</div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="p-4 bg-brand-purple-100 rounded-lg border border-brand-purple-600">
-                  <div className="font-semibold text-brand-purple-800 mb-2">Product Discovery Agent</div>
-                  <div className="text-sm text-brand-purple-700">Analyzes preferences, finds recommendations</div>
+                  <div className="font-semibold text-brand-purple-800 mb-2">{t('semantic.agents.orchestration.collaboration.agents.discovery.name')}</div>
+                  <div className="text-sm text-brand-purple-700">{t('semantic.agents.orchestration.collaboration.agents.discovery.description')}</div>
                 </div>
                 <div className="p-4 bg-brand-blue-100 rounded-lg border border-secondary">
-                  <div className="font-semibold text-secondary mb-2">Purchase Completion Agent</div>
-                  <div className="text-sm text-brand-blue-700">Handles order processing</div>
+                  <div className="font-semibold text-secondary mb-2">{t('semantic.agents.orchestration.collaboration.agents.purchase.name')}</div>
+                  <div className="text-sm text-brand-blue-700">{t('semantic.agents.orchestration.collaboration.agents.purchase.description')}</div>
                 </div>
                 <div className="p-4 bg-warning-100 rounded-lg border border-warning">
-                  <div className="font-semibold text-warning-800 mb-2">Customer Support Agent</div>
-                  <div className="text-sm text-warning-700">Provides training advice and support</div>
+                  <div className="font-semibold text-warning-800 mb-2">{t('semantic.agents.orchestration.collaboration.agents.support.name')}</div>
+                  <div className="text-sm text-warning-700">{t('semantic.agents.orchestration.collaboration.agents.support.description')}</div>
                 </div>
               </div>
             </div>
@@ -188,34 +195,34 @@ const AgentsLayerDeepDiveNew: React.FC<AgentsLayerDeepDiveNewProps> = () => {
 
           {/* Agent Decision Making */}
           <div className="p-6 bg-success-50 rounded-lg border border-success">
-            <h4 className="text-lg font-bold text-success-800 mb-4">Autonomous Decision Making</h4>
+            <h4 className="text-lg font-bold text-success-800 mb-4">{t('semantic.agents.orchestration.decisionMaking.title')}</h4>
             <div className="space-y-4">
               <div className="text-center p-4 bg-white rounded-lg border">
-                <div className="text-lg font-semibold text-gray-800 mb-2">Order Processing Complication</div>
-                <div className="text-sm text-gray-600">Item out of stock, payment requires verification</div>
+                <div className="text-lg font-semibold text-gray-800 mb-2">{t('semantic.agents.orchestration.decisionMaking.complication')}</div>
+                <div className="text-sm text-gray-600">{t('semantic.agents.orchestration.decisionMaking.complicationDescription')}</div>
               </div>
-              
+
               <div className="text-center text-2xl text-gray-400">↓</div>
-              
+
               <div className="p-4 bg-success-100 rounded-lg border border-success">
-                <div className="font-semibold text-success-800 mb-2">Purchase Completion Agent Decisions</div>
+                <div className="font-semibold text-success-800 mb-2">{t('semantic.agents.orchestration.decisionMaking.agentDecisions')}</div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                   <div className="p-3 bg-white rounded border">
-                    <div className="font-semibold text-sm text-gray-800">Stock Issue</div>
-                    <div className="text-xs text-gray-600">Find similar item, notify user, hold payment</div>
+                    <div className="font-semibold text-sm text-gray-800">{t('semantic.agents.orchestration.decisionMaking.stockIssue.title')}</div>
+                    <div className="text-xs text-gray-600">{t('semantic.agents.orchestration.decisionMaking.stockIssue.description')}</div>
                   </div>
                   <div className="p-3 bg-white rounded border">
-                    <div className="font-semibold text-sm text-gray-800">Payment Issue</div>
-                    <div className="text-xs text-gray-600">Initiate verification, send secure link, track progress</div>
+                    <div className="font-semibold text-sm text-gray-800">{t('semantic.agents.orchestration.decisionMaking.paymentIssue.title')}</div>
+                    <div className="text-xs text-gray-600">{t('semantic.agents.orchestration.decisionMaking.paymentIssue.description')}</div>
                   </div>
                 </div>
               </div>
-              
+
               <div className="text-center text-2xl text-gray-400">↓</div>
-              
+
               <div className="text-center p-4 bg-white rounded-lg border">
-                <div className="font-semibold text-gray-800 mb-2">Seamless User Experience</div>
-                <div className="text-sm text-gray-600">User sees alternative options and simple verification steps</div>
+                <div className="font-semibold text-gray-800 mb-2">{t('semantic.agents.orchestration.decisionMaking.seamlessUx')}</div>
+                <div className="text-sm text-gray-600">{t('semantic.agents.orchestration.decisionMaking.seamlessUxDescription')}</div>
               </div>
             </div>
           </div>
@@ -224,56 +231,56 @@ const AgentsLayerDeepDiveNew: React.FC<AgentsLayerDeepDiveNewProps> = () => {
 
       {/* Agent Capabilities & Benefits */}
       <div className="bg-gradient-to-r from-success-50 to-brand-blue-50 rounded-xl p-8 border-l-4 border-success mb-8">
-        <h3 className="text-2xl font-bold text-gray-800 mb-6">Agents Layer Benefits</h3>
+        <h3 className="text-2xl font-bold text-gray-800 mb-6">{t('semantic.agents.benefits.title')}</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <h4 className="font-bold text-lg text-gray-800 mb-3">Intelligence & Autonomy</h4>
+            <h4 className="font-bold text-lg text-gray-800 mb-3">{t('semantic.agents.benefits.intelligence.title')}</h4>
             <div className="space-y-2">
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-success rounded-full mt-2"></div>
                 <div>
-                  <span className="font-semibold text-gray-800">Intelligent Orchestration:</span>
-                  <span className="text-gray-700"> Agents decide which services to call and in what order</span>
+                  <span className="font-semibold text-gray-800">{t('semantic.agents.benefits.intelligence.orchestration.label')}</span>
+                  <span className="text-gray-700"> {t('semantic.agents.benefits.intelligence.orchestration.text')}</span>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-secondary rounded-full mt-2"></div>
                 <div>
-                  <span className="font-semibold text-gray-800">Autonomous Problem Solving:</span>
-                  <span className="text-gray-700"> Handle exceptions and edge cases without user intervention</span>
+                  <span className="font-semibold text-gray-800">{t('semantic.agents.benefits.intelligence.problemSolving.label')}</span>
+                  <span className="text-gray-700"> {t('semantic.agents.benefits.intelligence.problemSolving.text')}</span>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-brand-purple-600 rounded-full mt-2"></div>
                 <div>
-                  <span className="font-semibold text-gray-800">Adaptive Behavior:</span>
-                  <span className="text-gray-700"> Learn and optimize orchestration patterns over time</span>
+                  <span className="font-semibold text-gray-800">{t('semantic.agents.benefits.intelligence.adaptive.label')}</span>
+                  <span className="text-gray-700"> {t('semantic.agents.benefits.intelligence.adaptive.text')}</span>
                 </div>
               </div>
             </div>
           </div>
           <div>
-            <h4 className="font-bold text-lg text-gray-800 mb-3">User Experience & Architecture</h4>
+            <h4 className="font-bold text-lg text-gray-800 mb-3">{t('semantic.agents.benefits.uxArchitecture.title')}</h4>
             <div className="space-y-2">
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-warning rounded-full mt-2"></div>
                 <div>
-                  <span className="font-semibold text-gray-800">Enhanced UX:</span>
-                  <span className="text-gray-700"> Complex processes appear as simple single interactions</span>
+                  <span className="font-semibold text-gray-800">{t('semantic.agents.benefits.uxArchitecture.enhancedUx.label')}</span>
+                  <span className="text-gray-700"> {t('semantic.agents.benefits.uxArchitecture.enhancedUx.text')}</span>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-error rounded-full mt-2"></div>
                 <div>
-                  <span className="font-semibold text-gray-800">Context Preservation:</span>
-                  <span className="text-gray-700"> Maintain conversation and task context across service calls</span>
+                  <span className="font-semibold text-gray-800">{t('semantic.agents.benefits.uxArchitecture.contextPreservation.label')}</span>
+                  <span className="text-gray-700"> {t('semantic.agents.benefits.uxArchitecture.contextPreservation.text')}</span>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-info rounded-full mt-2"></div>
                 <div>
-                  <span className="font-semibold text-gray-800">Business Logic Abstraction:</span>
-                  <span className="text-gray-700"> Complex rules encapsulated in agents, not scattered across services</span>
+                  <span className="font-semibold text-gray-800">{t('semantic.agents.benefits.uxArchitecture.businessLogic.label')}</span>
+                  <span className="text-gray-700"> {t('semantic.agents.benefits.uxArchitecture.businessLogic.text')}</span>
                 </div>
               </div>
             </div>
@@ -283,49 +290,49 @@ const AgentsLayerDeepDiveNew: React.FC<AgentsLayerDeepDiveNewProps> = () => {
 
       {/* Implementation Considerations */}
       <div className="bg-white rounded-xl shadow-lg p-8">
-        <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">Implementation Considerations</h3>
-        
+        <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">{t('semantic.agents.implementation.title')}</h3>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <h4 className="font-bold text-lg text-gray-800 mb-4">Technical Requirements</h4>
+            <h4 className="font-bold text-lg text-gray-800 mb-4">{t('semantic.agents.implementation.technical.title')}</h4>
             <div className="space-y-3">
               <div className="p-3 bg-gray-50 rounded border">
-                <div className="font-semibold text-sm text-gray-800">Agent Runtime Environment</div>
-                <div className="text-xs text-gray-600">Scalable execution environment for agent processes</div>
+                <div className="font-semibold text-sm text-gray-800">{t('semantic.agents.implementation.technical.runtime.title')}</div>
+                <div className="text-xs text-gray-600">{t('semantic.agents.implementation.technical.runtime.description')}</div>
               </div>
               <div className="p-3 bg-gray-50 rounded border">
-                <div className="font-semibold text-sm text-gray-800">Service Discovery & Communication</div>
-                <div className="text-xs text-gray-600">Dynamic service registration and secure inter-service communication</div>
+                <div className="font-semibold text-sm text-gray-800">{t('semantic.agents.implementation.technical.serviceDiscovery.title')}</div>
+                <div className="text-xs text-gray-600">{t('semantic.agents.implementation.technical.serviceDiscovery.description')}</div>
               </div>
               <div className="p-3 bg-gray-50 rounded border">
-                <div className="font-semibold text-sm text-gray-800">State Management</div>
-                <div className="text-xs text-gray-600">Persistent context and conversation state across agent interactions</div>
+                <div className="font-semibold text-sm text-gray-800">{t('semantic.agents.implementation.technical.stateManagement.title')}</div>
+                <div className="text-xs text-gray-600">{t('semantic.agents.implementation.technical.stateManagement.description')}</div>
               </div>
               <div className="p-3 bg-gray-50 rounded border">
-                <div className="font-semibold text-sm text-gray-800">Monitoring & Observability</div>
-                <div className="text-xs text-gray-600">Agent behavior tracking, performance metrics, and decision auditing</div>
+                <div className="font-semibold text-sm text-gray-800">{t('semantic.agents.implementation.technical.monitoring.title')}</div>
+                <div className="text-xs text-gray-600">{t('semantic.agents.implementation.technical.monitoring.description')}</div>
               </div>
             </div>
           </div>
-          
+
           <div>
-            <h4 className="font-bold text-lg text-gray-800 mb-4">Governance & Safety</h4>
+            <h4 className="font-bold text-lg text-gray-800 mb-4">{t('semantic.agents.implementation.governance.title')}</h4>
             <div className="space-y-3">
               <div className="p-3 bg-gray-50 rounded border">
-                <div className="font-semibold text-sm text-gray-800">Decision Boundaries</div>
-                <div className="text-xs text-gray-600">Clear limits on agent autonomy and escalation triggers</div>
+                <div className="font-semibold text-sm text-gray-800">{t('semantic.agents.implementation.governance.boundaries.title')}</div>
+                <div className="text-xs text-gray-600">{t('semantic.agents.implementation.governance.boundaries.description')}</div>
               </div>
               <div className="p-3 bg-gray-50 rounded border">
-                <div className="font-semibold text-sm text-gray-800">Audit & Compliance</div>
-                <div className="text-xs text-gray-600">Full traceability of agent decisions and actions</div>
+                <div className="font-semibold text-sm text-gray-800">{t('semantic.agents.implementation.governance.audit.title')}</div>
+                <div className="text-xs text-gray-600">{t('semantic.agents.implementation.governance.audit.description')}</div>
               </div>
               <div className="p-3 bg-gray-50 rounded border">
-                <div className="font-semibold text-sm text-gray-800">Human Oversight</div>
-                <div className="text-xs text-gray-600">Mechanisms for human intervention and override capabilities</div>
+                <div className="font-semibold text-sm text-gray-800">{t('semantic.agents.implementation.governance.humanOversight.title')}</div>
+                <div className="text-xs text-gray-600">{t('semantic.agents.implementation.governance.humanOversight.description')}</div>
               </div>
               <div className="p-3 bg-gray-50 rounded border">
-                <div className="font-semibold text-sm text-gray-800">Ethical Guidelines</div>
-                <div className="text-xs text-gray-600">Built-in ethical constraints and bias prevention measures</div>
+                <div className="font-semibold text-sm text-gray-800">{t('semantic.agents.implementation.governance.ethical.title')}</div>
+                <div className="text-xs text-gray-600">{t('semantic.agents.implementation.governance.ethical.description')}</div>
               </div>
             </div>
           </div>

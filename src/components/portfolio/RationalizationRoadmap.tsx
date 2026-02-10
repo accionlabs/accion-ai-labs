@@ -8,11 +8,13 @@ import {
   unifiedCodeNodesConfig,
   UnifiedNodeConfig 
 } from '../../config/rationalizationConfig';
+import { useTranslation } from 'react-i18next';
 
 // Use the UnifiedNodeConfig from the config file
 type UnifiedNode = UnifiedNodeConfig;
 
 const RationalizationRoadmap: React.FC = () => {
+  const { t } = useTranslation('portfolio');
   const { state } = useOntology();
   const [sourceDesignNodes, setSourceDesignNodes] = useState<{
     phoenix: OntologyNode[];

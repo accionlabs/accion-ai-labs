@@ -1,0 +1,382 @@
+{
+  "overview": {
+    "title": "技術的負債アセスメント",
+    "subtitle": "AIを活用した分析と改善計画",
+    "header": {
+      "title": "技術的負債分析の詳細",
+      "description": "セマンティックオントロジー分析を使用して技術的負債を特定、定量化、改善する方法"
+    },
+    "hiddenCost": {
+      "title": "技術的負債の隠れたコスト",
+      "description": "技術的負債はすべてのコードベースで静かに蓄積され、開発速度の低下、バグの増加、システムの保守困難化という複合的な影響を生み出します。調査によると、組織は",
+      "budgetHighlight": " IT予算の40%",
+      "descriptionEnd": " を技術的負債の管理だけに費やしています。",
+      "stats": {
+        "slower": "23%低速化",
+        "slowerLabel": "機能リリース",
+        "moreBugs": "4倍のバグ",
+        "moreBugsLabel": "負債の多いモジュール",
+        "annualCost": "年間$85B",
+        "annualCostLabel": "米国企業のみ",
+        "timeSpent": "60%の時間",
+        "timeSpentLabel": "品質の低いコードへの対応"
+      }
+    },
+    "caseStudy": {
+      "title": "ケーススタディ：Phoenix CRMアプリケーション",
+      "description": "技術的負債分析のアプローチを実証するために、8年にわたって進化してきた実際のエンタープライズCRMシステム<strong>Phoenix CRM</strong>を検証します：",
+      "legacyArchitecture": "レガシーアーキテクチャ：",
+      "legacyArchitectureDesc": "PHPモノリスとして開始し、部分的にマイクロサービスへ移行",
+      "mixedTechnology": "混合テクノロジー：",
+      "mixedTechnologyDesc": "PHP、Node.js、PythonサービスとMySQL、MongoDB",
+      "teamChallenges": "チームの課題：",
+      "teamChallengesDesc": "3つの異なるチーム、一貫性のないプラクティス、知識のサイロ化",
+      "documentationGap": "ドキュメントのギャップ：",
+      "documentationGapDesc": "古くなったドキュメント、未文書化の機能、失われた要件",
+      "byTheNumbers": "Phoenixの数値データ",
+      "linesOfCode": "コード行数：",
+      "components": "コンポーネント数：",
+      "dependencies": "依存関係：",
+      "databaseTables": "データベーステーブル：",
+      "apiEndpoints": "APIエンドポイント：",
+      "activeUsers": "アクティブユーザー："
+    },
+    "solution": {
+      "title": "当社のソリューション：セマンティックオントロジー分析",
+      "description": "従来の静的解析ツールは表面的な問題しか捉えられません。当社のアプローチは、AIエージェントを使用して4つの重要な次元にわたるシステムの包括的な理解を構築します：",
+      "whatWeAnalyze": "分析対象",
+      "codeStructure": "<strong>コード構造：</strong> コンポーネント、依存関係、品質メトリクス",
+      "businessLogic": "<strong>ビジネスロジック：</strong> 機能と実装の整合性",
+      "architecture": "<strong>アーキテクチャ：</strong> レイヤー違反、アンチパターン、結合度",
+      "designPatterns": "<strong>デザインパターン：</strong> UIの一貫性、コンポーネントの重複",
+      "whatWeDeliver": "提供内容",
+      "debtQuantification": "<strong>負債の定量化：</strong> 正確なメトリクスと影響分析",
+      "rootCauses": "<strong>根本原因：</strong> 負債が蓄積された理由と場所",
+      "riskAssessment": "<strong>リスク評価：</strong> ビジネスへの影響と緊急度スコアリング",
+      "actionPlan": "<strong>アクションプラン：</strong> 優先度付き改善ロードマップ"
+    },
+    "findings": {
+      "title": "Phoenix CRMでの発見事項",
+      "criticalIssues": "重大な問題",
+      "criticalIssuesDesc": "即座に対応が必要なアーキテクチャ違反",
+      "codeSmells": "コードスメル",
+      "codeSmellsDesc": "重複コード、複雑なメソッド、不適切な命名",
+      "missingFeatures": "未実装の機能",
+      "missingFeaturesDesc": "文書化されているが実装されていない要件",
+      "estimatedImpact": "<strong>推定される影響：</strong> これらの問題に対処することで、保守コストを35%削減し、機能リリースを6ヶ月以内に50%加速できます。"
+    },
+    "explore": {
+      "title": "Phoenix分析の探索",
+      "agentExtraction": "1. エージェント抽出",
+      "agentExtractionDesc": "AIエージェントがPhoenixのコードベースをどのように分析したかをご覧ください",
+      "viewProcess": "プロセスを表示 →",
+      "knowledgeGraphs": "2. Knowledge Graph",
+      "knowledgeGraphsDesc": "抽出した4つのオントロジーグラフを探索します",
+      "viewGraphs": "グラフを表示 →",
+      "debtAssessment": "3. 負債アセスメント",
+      "debtAssessmentDesc": "特定された問題の詳細な内訳",
+      "viewFindings": "発見事項を表示 →",
+      "actionPlan": "4. アクションプラン",
+      "actionPlanDesc": "負債削減のための優先度付きロードマップ",
+      "viewRoadmap": "ロードマップを表示 →"
+    }
+  },
+  "assessment": {
+    "title": "技術的負債アセスメント",
+    "subtitle": "コード品質の問題とアーキテクチャ違反の包括的な分析",
+    "metrics": {
+      "overallScore": "総合スコア",
+      "severitySuffix": "/10 重大度",
+      "architecture": "アーキテクチャ",
+      "design": "デザイン",
+      "functional": "機能",
+      "codeQuality": "コード品質"
+    },
+    "ontologyResults": {
+      "title": "オントロジー抽出結果",
+      "codeGraph": "コードグラフ",
+      "nodes": "ノード",
+      "edges": "エッジ",
+      "gapsFound": "5件のギャップを検出",
+      "inconsistencies": "3件の不整合",
+      "violations": "3件の違反",
+      "mappings": "マッピング",
+      "total": "合計",
+      "crossOntology": "クロスオントロジー"
+    },
+    "codeAnalysis": {
+      "title": "コード分析の詳細",
+      "codeComponents": "コードコンポーネント",
+      "groundTruthNodes": "グラウンドトゥルースノード",
+      "linesOfCode": "コード行数",
+      "acrossAllFiles": "全ファイル合計",
+      "codeEdges": "コードエッジ",
+      "dependenciesLabel": "依存関係",
+      "avgComplexity": "平均複雑度"
+    },
+    "issues": {
+      "title": "技術的負債の問題一覧",
+      "filters": {
+        "allCategories": "すべてのカテゴリー",
+        "architecture": "アーキテクチャ",
+        "design": "デザイン",
+        "functional": "機能",
+        "codeQuality": "コード品質",
+        "allSeverities": "すべての重大度",
+        "critical": "重大",
+        "high": "高",
+        "medium": "中",
+        "low": "低"
+      },
+      "summary": {
+        "totalIssues": "問題の総数",
+        "totalEffort": "総工数",
+        "avgImpact": "平均影響度",
+        "criticalIssues": "重大な問題"
+      },
+      "table": {
+        "issue": "問題",
+        "severity": "重大度",
+        "impact": "影響度",
+        "effort": "工数",
+        "risk": "リスク"
+      }
+    },
+    "issueDetail": {
+      "description": "説明",
+      "recommendation": "推奨事項",
+      "impactScore": "影響スコア",
+      "effortEstimate": "工数見積",
+      "riskLevel": "リスクレベル",
+      "affectedCodeNodes": "影響を受けるコードノード"
+    }
+  },
+  "agentAnalysis": {
+    "title": "エージェント分析",
+    "subtitle": "AIエージェントベースの負債分析",
+    "header": {
+      "title": "エージェントベースのオントロジー抽出",
+      "description": "AIエージェントがコードとドキュメントを処理してオントロジーを抽出する方法のデモンストレーション"
+    },
+    "codeAssets": {
+      "title": "コードアセット",
+      "phpFiles": "PHPファイル",
+      "jsFiles": "JavaScriptファイル",
+      "totalLinesOfCode": "総コード行数",
+      "componentsIdentified": "特定されたコンポーネント",
+      "source": "ソース："
+    },
+    "documentAssets": {
+      "title": "ドキュメントアセット",
+      "requirementsDocs": "要件ドキュメント",
+      "designDocs": "設計ドキュメント",
+      "architectureDocs": "アーキテクチャドキュメント",
+      "totalDocuments": "ドキュメント総数",
+      "source": "ソース："
+    },
+    "extractionProcess": {
+      "title": "抽出プロセスフロー",
+      "keySteps": "主要なプロセスステップ",
+      "step1": "1. すべてのコードとドキュメントのアーティファクトを収集",
+      "step2": "2. 4つの専門エージェントが並列で処理",
+      "step3": "3. 各エージェントがそのオントロジーグラフを生成",
+      "step4": "4. クロスオントロジーマッピングを確立",
+      "step5": "5. 統合Knowledge Graphを作成",
+      "benefits": "メリット",
+      "benefit1": "システムの包括的な理解",
+      "benefit2": "自動化されたギャップの特定",
+      "benefit3": "違反の検出",
+      "benefit4": "影響分析機能",
+      "benefit5": "リファクタリングガイダンス"
+    },
+    "agentCapabilities": {
+      "title": "エージェントの機能",
+      "agents": {
+        "code": {
+          "title": "コードエージェント",
+          "description": "ソースコードを分析してグラウンドトゥルースのコードグラフを構築します",
+          "input1": "ソースコードファイル",
+          "input2": "依存関係",
+          "input3": "設定ファイル",
+          "output1": "コードグラフ",
+          "output2": "依存関係マップ",
+          "output3": "複雑度メトリクス"
+        },
+        "functional": {
+          "title": "機能エージェント",
+          "description": "ドキュメントからビジネス要件と機能的な振る舞いを抽出します",
+          "input1": "要件ドキュメント",
+          "input2": "ユーザーストーリー",
+          "input3": "ユーザーマニュアル",
+          "output1": "機能階層",
+          "output2": "ユースケース",
+          "output3": "機能ギャップ"
+        },
+        "design": {
+          "title": "デザインエージェント",
+          "description": "UI/UXパターンとデザインコンポーネントを特定します",
+          "input1": "デザインモックアップ",
+          "input2": "スタイルガイド",
+          "input3": "UIコード",
+          "output1": "デザインシステム",
+          "output2": "コンポーネントライブラリ",
+          "output3": "ユーザージャーニー"
+        },
+        "architecture": {
+          "title": "アーキテクチャエージェント",
+          "description": "システムアーキテクチャをマッピングし、パターンと違反を特定します",
+          "input1": "アーキテクチャドキュメント",
+          "input2": "API仕様",
+          "input3": "システムコード",
+          "output1": "アーキテクチャレイヤー",
+          "output2": "サービスマップ",
+          "output3": "違反"
+        }
+      },
+      "agentSuffix": "エージェント",
+      "processes": "処理内容：",
+      "produces": "生成物：",
+      "sampleProcessing": "サンプル処理",
+      "extractsRequirements": "抽出対象：要件、ユーザーストーリー、受入基準",
+      "analyzesDependencies": "分析対象：依存関係、複雑度、パターン",
+      "mapsComponents": "マッピング対象：コンポーネント、レイアウト、インタラクション",
+      "identifiesLayers": "特定対象：レイヤー、サービス、パターン"
+    },
+    "analysisExamples": {
+      "functionalGapTitle": "例：機能ギャップの検出",
+      "architectureViolationTitle": "例：アーキテクチャ違反の検出",
+      "designInconsistencyTitle": "例：デザイン不整合の検出",
+      "codeQualityTitle": "例：コード品質分析",
+      "functionalGapDesc": "機能エージェントがドキュメントとコードを比較してギャップを特定する方法",
+      "architectureViolationDesc": "アーキテクチャエージェントがアーキテクチャ原則の違反を特定する方法",
+      "designInconsistencyDesc": "デザインエージェントがUI/UXの不整合と重複を特定する方法",
+      "codeQualityDesc": "コードエージェントがソースコードの品質問題を分析する方法",
+      "implementedRequirements": "実装済みの要件",
+      "functionalGaps": "機能ギャップ",
+      "sourceLabel": "ソース：",
+      "foundInCode": "コードで検出：",
+      "noImplementation": "コード内に実装が見つかりません",
+      "locationLabel": "場所：",
+      "fixLabel": "修正：",
+      "detectionMethodArchitecture": "<strong>検出方法：</strong> アーキテクチャエージェントは、コード構造、依存関係、アーキテクチャドキュメントを分析し、関心の分離、サービス境界、レイヤードアーキテクチャなどの設計原則の違反を特定します。",
+      "examplesFound": "検出された例：",
+      "impactLabel": "影響：",
+      "recommendationLabel": "推奨事項：",
+      "detectionMethodDesign": "<strong>検出方法：</strong> デザインエージェントは、UIコード、スタイルシート、デザインドキュメントを分析し、重複コンポーネント、一貫性のないパターン、デザインシステムガイドラインからの逸脱を特定します。",
+      "codeComplexity": "コードの複雑度",
+      "cyclomaticComplexity": "循環的複雑度",
+      "maxNestingDepth": "最大ネスト深度",
+      "longMethods": "長いメソッド",
+      "codeDuplication": "コードの重複",
+      "duplicateBlocks": "重複ブロック",
+      "linesDuplicated": "重複行数",
+      "duplicationPercent": "重複率",
+      "codeSmellsTitle": "コードスメル",
+      "godClasses": "Godクラス",
+      "deadCode": "デッドコード",
+      "magicNumbers": "マジックナンバー",
+      "topIssuesByFile": "ファイル別の主要な問題",
+      "detectionMethodCode": "<strong>検出方法：</strong> コードエージェントは、ソースコードに対して静的解析を実行し、複雑度の問題、重複、コードスメル、コーディング標準の違反を特定します。これがすべての他のオントロジーマッピングのグラウンドトゥルースを形成します。",
+      "functionalNote": "<strong>注記：</strong> 機能ギャップは、要件がドキュメントに存在するがコードに対応する実装がない場合にのみ特定できます。これは、コードとドキュメントの両方のアーティファクトを処理することの価値を示しています。"
+    }
+  },
+  "graphExplorer": {
+    "title": "負債グラフエクスプローラー",
+    "subtitle": "負債の関係を可視化",
+    "header": {
+      "title": "Phoenix CRMグラフエクスプローラー",
+      "description": "完全な4オントロジー構造とコードの関係を可視化"
+    },
+    "filters": {
+      "title": "オントロジーフィルター",
+      "codeGraph": "コードグラフ",
+      "functional": "機能",
+      "design": "デザイン",
+      "architecture": "アーキテクチャ"
+    },
+    "displayOptions": {
+      "title": "表示オプション",
+      "showOntologyMappings": "オントロジーマッピングを表示",
+      "highlightHighComplexity": "高複雑度をハイライト"
+    },
+    "legend": {
+      "title": "凡例",
+      "functional": "機能",
+      "design": "デザイン",
+      "architecture": "アーキテクチャ",
+      "code": "コード",
+      "edgeTypes": "エッジタイプ：",
+      "imports": "インポート",
+      "calls": "呼び出し",
+      "accessesDb": "DB参照",
+      "uses": "使用",
+      "derivesTo": "派生先"
+    },
+    "nodeDetails": {
+      "title": "ノード詳細",
+      "type": "タイプ：",
+      "subtype": "サブタイプ：",
+      "file": "ファイル：",
+      "language": "言語：",
+      "framework": "フレームワーク：",
+      "linesOfCode": "コード行数：",
+      "complexity": "複雑度：",
+      "dependencies": "依存関係：",
+      "derivedMappings": "派生マッピング：",
+      "close": "閉じる"
+    }
+  },
+  "remediation": {
+    "title": "改善ロードマップ",
+    "subtitle": "優先度付き負債削減",
+    "header": {
+      "title": "改善ロードマップ",
+      "description": "体系的な負債削減のための優先度付きアクションプラン"
+    },
+    "summary": {
+      "totalIssues": "問題の総数",
+      "totalEffort": "総工数",
+      "expectedImpact": "期待される効果",
+      "timeline": "タイムライン"
+    },
+    "phases": {
+      "title": "改善フェーズ",
+      "viewTimeline": "タイムラインビュー",
+      "viewImpact": "影響度マトリクス",
+      "viewEffort": "工数分析",
+      "phase1Name": "フェーズ1：重大な修正",
+      "phase1Desc": "セキュリティ脆弱性とアーキテクチャ違反への対応",
+      "phase2Name": "フェーズ2：デザインと機能",
+      "phase2Desc": "UIの一貫性を改善し機能ギャップを解消",
+      "phase3Name": "フェーズ3：コード品質",
+      "phase3Desc": "コードベースのリファクタリングと最適化",
+      "effortLabel": "工数",
+      "impactLabel": "影響度",
+      "risk": "リスク",
+      "issues": "件",
+      "pts": "ポイント"
+    },
+    "impactMatrix": {
+      "title": "影響度と工数のマトリクス",
+      "highImpactLowEffort": "高影響 / 低工数",
+      "highImpactHighEffort": "高影響 / 高工数",
+      "lowImpactLowEffort": "低影響 / 低工数",
+      "lowImpactHighEffort": "低影響 / 高工数",
+      "critical": "重大",
+      "high": "高",
+      "medium": "中",
+      "low": "低"
+    },
+    "effortAnalysis": {
+      "title": "工数配分分析",
+      "sprints": "スプリント：",
+      "issues": "問題数：",
+      "avgPerSprint": "スプリントあたりの平均：",
+      "resourceTitle": "リソースに関する推奨事項",
+      "teamSize": "推定チーム規模：3〜4名の開発者",
+      "sprintDuration": "スプリント期間：2週間",
+      "totalTimeline": "総タイムライン：{{weeks}}週間（{{months}}ヶ月）",
+      "recommendedApproach": "推奨アプローチ：フェーズ1の重大な修正を並行トラックで開始"
+    }
+  }
+}

@@ -1,3 +1,5 @@
+import i18n from '../i18n/i18n';
+
 // Search index for site-wide search using Fuse.js
 export interface SearchItem {
   id: string;
@@ -7,454 +9,106 @@ export interface SearchItem {
   category: string;
 }
 
-export const searchIndex: SearchItem[] = [
+// Search index entry definitions with translation keys
+interface SearchEntryDef {
+  id: string;
+  titleKey: string;
+  descriptionKey: string;
+  path: string;
+  categoryKey: string;
+}
+
+const searchEntries: SearchEntryDef[] = [
   // Home
-  {
-    id: 'home',
-    title: 'Home',
-    description: 'Accion AI Labs - Semantic Engineering Platform for enterprise software development',
-    path: '/',
-    category: 'Home'
-  },
+  { id: 'home', titleKey: 'items.home.title', descriptionKey: 'items.home.description', path: '/', categoryKey: 'categories.home' },
 
   // Core Technology
-  {
-    id: 'core-technology',
-    title: 'Core Technology Overview',
-    description: 'Four-ontology framework for semantic software engineering with Breeze.AI',
-    path: '/core-technology',
-    category: 'Core Technology'
-  },
-  {
-    id: 'kaps-framework',
-    title: 'KAPS Framework',
-    description: 'Knowledge, Architecture, Process, and Standards framework for semantic engineering',
-    path: '/core-technology/kaps-framework',
-    category: 'Core Technology'
-  },
-  {
-    id: 'agent-architecture',
-    title: 'Agent Architecture',
-    description: 'Agentic graph architecture with specialized AI agents for software development',
-    path: '/core-technology/agent-architecture',
-    category: 'Core Technology'
-  },
-  {
-    id: 'breeze-ai',
-    title: 'Breeze.AI',
-    description: 'Core semantic engineering platform for automated software development',
-    path: '/core-technology/breeze-ai',
-    category: 'Core Technology'
-  },
-  {
-    id: 'gen-ai-box',
-    title: 'Gen AI in a Box',
-    description: 'Packaged generative AI solutions for enterprise deployment',
-    path: '/core-technology/gen-ai-box',
-    category: 'Core Technology'
-  },
-  {
-    id: 'guardrails',
-    title: 'Strategic Guardrails',
-    description: 'Safety and compliance guardrails for AI-assisted development',
-    path: '/core-technology/guardrails',
-    category: 'Core Technology'
-  },
+  { id: 'core-technology', titleKey: 'items.coreTechnology.title', descriptionKey: 'items.coreTechnology.description', path: '/core-technology', categoryKey: 'categories.coreTechnology' },
+  { id: 'kaps-framework', titleKey: 'items.kapsFramework.title', descriptionKey: 'items.kapsFramework.description', path: '/core-technology/kaps-framework', categoryKey: 'categories.coreTechnology' },
+  { id: 'agent-architecture', titleKey: 'items.agentArchitecture.title', descriptionKey: 'items.agentArchitecture.description', path: '/core-technology/agent-architecture', categoryKey: 'categories.coreTechnology' },
+  { id: 'breeze-ai', titleKey: 'items.breezeAI.title', descriptionKey: 'items.breezeAI.description', path: '/core-technology/breeze-ai', categoryKey: 'categories.coreTechnology' },
+  { id: 'gen-ai-box', titleKey: 'items.genAIBox.title', descriptionKey: 'items.genAIBox.description', path: '/core-technology/gen-ai-box', categoryKey: 'categories.coreTechnology' },
+  { id: 'guardrails', titleKey: 'items.guardrails.title', descriptionKey: 'items.guardrails.description', path: '/core-technology/guardrails', categoryKey: 'categories.coreTechnology' },
 
   // Solutions
-  {
-    id: 'solutions',
-    title: 'All Solutions',
-    description: 'Complete portfolio of AI-powered enterprise solutions',
-    path: '/solutions',
-    category: 'Solutions'
-  },
-  {
-    id: 'product-engineering',
-    title: 'Product Engineering',
-    description: 'AI-accelerated product development and engineering solutions',
-    path: '/solutions/product-engineering',
-    category: 'Solutions'
-  },
-  {
-    id: 'product-engineering-overview',
-    title: 'Product Engineering Overview',
-    description: 'Semantic-first approach to product development lifecycle',
-    path: '/solutions/product-engineering/overview',
-    category: 'Product Engineering'
-  },
-  {
-    id: 'requirements-capture',
-    title: 'Requirements Capture',
-    description: 'AI-powered requirements gathering and semantic analysis',
-    path: '/solutions/product-engineering/requirements',
-    category: 'Product Engineering'
-  },
-  {
-    id: 'design-generation',
-    title: 'Design Generation',
-    description: 'Automated design artifact generation from semantic specifications',
-    path: '/solutions/product-engineering/design',
-    category: 'Product Engineering'
-  },
-  {
-    id: 'implementation-pipeline',
-    title: 'Implementation Pipeline',
-    description: 'Continuous implementation pipeline with semantic validation',
-    path: '/solutions/product-engineering/implementation',
-    category: 'Product Engineering'
-  },
-  {
-    id: 'application-reengineering',
-    title: 'Application Re-engineering',
-    description: 'Legacy application modernization and technical debt remediation',
-    path: '/solutions/application-reengineering',
-    category: 'Solutions'
-  },
-  {
-    id: 'reengineering-overview',
-    title: 'Re-engineering Overview',
-    description: 'Comprehensive approach to application modernization',
-    path: '/solutions/application-reengineering/overview',
-    category: 'Application Re-engineering'
-  },
-  {
-    id: 'discovery-assessment',
-    title: 'Discovery & Assessment',
-    description: 'Automated codebase analysis and technical debt assessment',
-    path: '/solutions/application-reengineering/discovery',
-    category: 'Application Re-engineering'
-  },
-  {
-    id: 'reengineering-strategy',
-    title: 'Re-engineering Strategy',
-    description: 'Strategic planning for application modernization',
-    path: '/solutions/application-reengineering/strategy',
-    category: 'Application Re-engineering'
-  },
-  {
-    id: 'implementation-modernization',
-    title: 'Implementation & Modernization',
-    description: 'Executing modernization with semantic preservation',
-    path: '/solutions/application-reengineering/implementation',
-    category: 'Application Re-engineering'
-  },
-  {
-    id: 'continuous-validation',
-    title: 'Continuous Validation',
-    description: 'Ongoing validation and quality assurance during modernization',
-    path: '/solutions/application-reengineering/validation',
-    category: 'Application Re-engineering'
-  },
-  {
-    id: 'asimov',
-    title: 'ASIMOV',
-    description: 'AI-powered legacy system migration and modernization',
-    path: '/solutions/asimov',
-    category: 'Solutions'
-  },
-  {
-    id: 'asimov-overview',
-    title: 'ASIMOV Overview',
-    description: 'Automated system for intelligent migration of vintage systems',
-    path: '/solutions/asimov/overview',
-    category: 'ASIMOV'
-  },
-  {
-    id: 'discovery-analysis',
-    title: 'Discovery & Analysis',
-    description: 'Deep analysis of legacy systems for migration planning',
-    path: '/solutions/asimov/discovery',
-    category: 'ASIMOV'
-  },
-  {
-    id: 'transformation-engine',
-    title: 'Transformation Engine',
-    description: 'Automated code transformation and migration engine',
-    path: '/solutions/asimov/transformation',
-    category: 'ASIMOV'
-  },
-  {
-    id: 'migration-patterns',
-    title: 'Migration Patterns',
-    description: 'Proven patterns for legacy system migration',
-    path: '/solutions/asimov/patterns',
-    category: 'ASIMOV'
-  },
-  {
-    id: 'success-stories',
-    title: 'Success Stories',
-    description: 'Case studies and success stories from ASIMOV migrations',
-    path: '/solutions/asimov/success-stories',
-    category: 'ASIMOV'
-  },
-  {
-    id: 'customer-service',
-    title: 'Customer Service AI',
-    description: 'AI-powered customer service and support solutions',
-    path: '/solutions/customer-service',
-    category: 'Solutions'
-  },
-  {
-    id: 'customer-service-overview',
-    title: 'Customer Service Overview',
-    description: 'Comprehensive AI solutions for customer support',
-    path: '/solutions/customer-service/overview',
-    category: 'Customer Service'
-  },
-  {
-    id: 'self-heal-bot',
-    title: 'Self-Heal Bot',
-    description: 'Autonomous customer service bot with self-healing capabilities',
-    path: '/solutions/customer-service/self-heal-bot',
-    category: 'Customer Service'
-  },
-  {
-    id: 'assisted-heal-bot',
-    title: 'Assisted Heal Bot',
-    description: 'Human-assisted AI bot for complex customer issues',
-    path: '/solutions/customer-service/assisted-heal-bot',
-    category: 'Customer Service'
-  },
-  {
-    id: 'business-optimization',
-    title: 'Business Optimization Hub',
-    description: 'AI-driven business process optimization for customer service',
-    path: '/solutions/customer-service/business-optimization',
-    category: 'Customer Service'
-  },
-  {
-    id: 'implementation-roadmap',
-    title: 'Implementation Roadmap',
-    description: 'Roadmap for deploying customer service AI solutions',
-    path: '/solutions/customer-service/implementation',
-    category: 'Customer Service'
-  },
-  {
-    id: 'data-engineering',
-    title: 'Data Engineering',
-    description: 'AI-powered data engineering and pipeline automation',
-    path: '/solutions/data-engineering',
-    category: 'Solutions'
-  },
+  { id: 'solutions', titleKey: 'items.solutions.title', descriptionKey: 'items.solutions.description', path: '/solutions', categoryKey: 'categories.solutions' },
+  { id: 'product-engineering', titleKey: 'items.productEngineering.title', descriptionKey: 'items.productEngineering.description', path: '/solutions/product-engineering', categoryKey: 'categories.solutions' },
+  { id: 'product-engineering-overview', titleKey: 'items.productEngineeringOverview.title', descriptionKey: 'items.productEngineeringOverview.description', path: '/solutions/product-engineering/overview', categoryKey: 'categories.productEngineering' },
+  { id: 'requirements-capture', titleKey: 'items.requirementsCapture.title', descriptionKey: 'items.requirementsCapture.description', path: '/solutions/product-engineering/requirements', categoryKey: 'categories.productEngineering' },
+  { id: 'design-generation', titleKey: 'items.designGeneration.title', descriptionKey: 'items.designGeneration.description', path: '/solutions/product-engineering/design', categoryKey: 'categories.productEngineering' },
+  { id: 'implementation-pipeline', titleKey: 'items.implementationPipeline.title', descriptionKey: 'items.implementationPipeline.description', path: '/solutions/product-engineering/implementation', categoryKey: 'categories.productEngineering' },
+  { id: 'application-reengineering', titleKey: 'items.applicationReengineering.title', descriptionKey: 'items.applicationReengineering.description', path: '/solutions/application-reengineering', categoryKey: 'categories.solutions' },
+  { id: 'reengineering-overview', titleKey: 'items.reengineeringOverview.title', descriptionKey: 'items.reengineeringOverview.description', path: '/solutions/application-reengineering/overview', categoryKey: 'categories.applicationReengineering' },
+  { id: 'discovery-assessment', titleKey: 'items.discoveryAssessment.title', descriptionKey: 'items.discoveryAssessment.description', path: '/solutions/application-reengineering/discovery', categoryKey: 'categories.applicationReengineering' },
+  { id: 'reengineering-strategy', titleKey: 'items.reengineeringStrategy.title', descriptionKey: 'items.reengineeringStrategy.description', path: '/solutions/application-reengineering/strategy', categoryKey: 'categories.applicationReengineering' },
+  { id: 'implementation-modernization', titleKey: 'items.implementationModernization.title', descriptionKey: 'items.implementationModernization.description', path: '/solutions/application-reengineering/implementation', categoryKey: 'categories.applicationReengineering' },
+  { id: 'continuous-validation', titleKey: 'items.continuousValidation.title', descriptionKey: 'items.continuousValidation.description', path: '/solutions/application-reengineering/validation', categoryKey: 'categories.applicationReengineering' },
+  { id: 'asimov', titleKey: 'items.asimov.title', descriptionKey: 'items.asimov.description', path: '/solutions/asimov', categoryKey: 'categories.solutions' },
+  { id: 'asimov-overview', titleKey: 'items.asimovOverview.title', descriptionKey: 'items.asimovOverview.description', path: '/solutions/asimov/overview', categoryKey: 'categories.asimov' },
+  { id: 'discovery-analysis', titleKey: 'items.discoveryAnalysis.title', descriptionKey: 'items.discoveryAnalysis.description', path: '/solutions/asimov/discovery', categoryKey: 'categories.asimov' },
+  { id: 'transformation-engine', titleKey: 'items.transformationEngine.title', descriptionKey: 'items.transformationEngine.description', path: '/solutions/asimov/transformation', categoryKey: 'categories.asimov' },
+  { id: 'migration-patterns', titleKey: 'items.migrationPatterns.title', descriptionKey: 'items.migrationPatterns.description', path: '/solutions/asimov/patterns', categoryKey: 'categories.asimov' },
+  { id: 'success-stories', titleKey: 'items.successStories.title', descriptionKey: 'items.successStories.description', path: '/solutions/asimov/success-stories', categoryKey: 'categories.asimov' },
+  { id: 'customer-service', titleKey: 'items.customerService.title', descriptionKey: 'items.customerService.description', path: '/solutions/customer-service', categoryKey: 'categories.solutions' },
+  { id: 'customer-service-overview', titleKey: 'items.customerServiceOverview.title', descriptionKey: 'items.customerServiceOverview.description', path: '/solutions/customer-service/overview', categoryKey: 'categories.customerService' },
+  { id: 'self-heal-bot', titleKey: 'items.selfHealBot.title', descriptionKey: 'items.selfHealBot.description', path: '/solutions/customer-service/self-heal-bot', categoryKey: 'categories.customerService' },
+  { id: 'assisted-heal-bot', titleKey: 'items.assistedHealBot.title', descriptionKey: 'items.assistedHealBot.description', path: '/solutions/customer-service/assisted-heal-bot', categoryKey: 'categories.customerService' },
+  { id: 'business-optimization', titleKey: 'items.businessOptimization.title', descriptionKey: 'items.businessOptimization.description', path: '/solutions/customer-service/business-optimization', categoryKey: 'categories.customerService' },
+  { id: 'implementation-roadmap', titleKey: 'items.implementationRoadmap.title', descriptionKey: 'items.implementationRoadmap.description', path: '/solutions/customer-service/implementation', categoryKey: 'categories.customerService' },
+  { id: 'data-engineering', titleKey: 'items.dataEngineering.title', descriptionKey: 'items.dataEngineering.description', path: '/solutions/data-engineering', categoryKey: 'categories.solutions' },
 
   // Portfolio Rationalization
-  {
-    id: 'portfolio-overview',
-    title: 'Portfolio Overview',
-    description: 'Software portfolio analysis and rationalization dashboard',
-    path: '/portfolio/overview',
-    category: 'Portfolio'
-  },
-  {
-    id: 'component-comparator',
-    title: 'Component Comparator',
-    description: 'Compare and analyze software components across products',
-    path: '/portfolio/comparator',
-    category: 'Portfolio'
-  },
-  {
-    id: 'graph-explorer',
-    title: 'Graph Explorer',
-    description: 'Interactive exploration of semantic knowledge graphs',
-    path: '/portfolio/graph-explorer',
-    category: 'Portfolio'
-  },
-  {
-    id: 'rationalization-roadmap',
-    title: 'Rationalization Roadmap',
-    description: 'Strategic roadmap for portfolio rationalization',
-    path: '/portfolio/roadmap',
-    category: 'Portfolio'
-  },
+  { id: 'portfolio-overview', titleKey: 'items.portfolioOverview.title', descriptionKey: 'items.portfolioOverview.description', path: '/portfolio/overview', categoryKey: 'categories.portfolio' },
+  { id: 'component-comparator', titleKey: 'items.componentComparator.title', descriptionKey: 'items.componentComparator.description', path: '/portfolio/comparator', categoryKey: 'categories.portfolio' },
+  { id: 'graph-explorer', titleKey: 'items.graphExplorer.title', descriptionKey: 'items.graphExplorer.description', path: '/portfolio/graph-explorer', categoryKey: 'categories.portfolio' },
+  { id: 'rationalization-roadmap', titleKey: 'items.rationalizationRoadmap.title', descriptionKey: 'items.rationalizationRoadmap.description', path: '/portfolio/roadmap', categoryKey: 'categories.portfolio' },
 
   // Technical Debt
-  {
-    id: 'debt-assessment',
-    title: 'Technical Debt Assessment',
-    description: 'Comprehensive technical debt analysis and scoring',
-    path: '/technical-debt/assessment',
-    category: 'Technical Debt'
-  },
-  {
-    id: 'agent-analysis',
-    title: 'Agent Analysis',
-    description: 'AI agent-based analysis of technical debt patterns',
-    path: '/technical-debt/agent-analysis',
-    category: 'Technical Debt'
-  },
-  {
-    id: 'debt-graph-explorer',
-    title: 'Debt Graph Explorer',
-    description: 'Visualize technical debt relationships and dependencies',
-    path: '/technical-debt/graph-explorer',
-    category: 'Technical Debt'
-  },
-  {
-    id: 'remediation-roadmap',
-    title: 'Remediation Roadmap',
-    description: 'Prioritized roadmap for technical debt remediation',
-    path: '/technical-debt/roadmap',
-    category: 'Technical Debt'
-  },
+  { id: 'debt-assessment', titleKey: 'items.debtAssessment.title', descriptionKey: 'items.debtAssessment.description', path: '/technical-debt/assessment', categoryKey: 'categories.technicalDebt' },
+  { id: 'agent-analysis', titleKey: 'items.agentAnalysis.title', descriptionKey: 'items.agentAnalysis.description', path: '/technical-debt/agent-analysis', categoryKey: 'categories.technicalDebt' },
+  { id: 'debt-graph-explorer', titleKey: 'items.debtGraphExplorer.title', descriptionKey: 'items.debtGraphExplorer.description', path: '/technical-debt/graph-explorer', categoryKey: 'categories.technicalDebt' },
+  { id: 'remediation-roadmap', titleKey: 'items.remediationRoadmap.title', descriptionKey: 'items.remediationRoadmap.description', path: '/technical-debt/roadmap', categoryKey: 'categories.technicalDebt' },
 
   // Breeze.AI Deep Dive
-  {
-    id: 'manual-translation-tax',
-    title: 'Manual Translation Tax',
-    description: 'The crisis of manual translation in software development',
-    path: '/breeze-process/challenge/manual-translation-tax',
-    category: 'Breeze.AI Deep Dive'
-  },
-  {
-    id: 'traditional-approaches',
-    title: 'Traditional Approaches',
-    description: 'Why traditional software development approaches fail',
-    path: '/breeze-process/challenge/traditional-approaches',
-    category: 'Breeze.AI Deep Dive'
-  },
-  {
-    id: 'breeze-breakthrough',
-    title: 'Breeze Breakthrough',
-    description: 'How Breeze.AI solves the semantic engineering challenge',
-    path: '/breeze-process/challenge/breeze-breakthrough',
-    category: 'Breeze.AI Deep Dive'
-  },
-  {
-    id: 'competitive-advantages',
-    title: 'Competitive Advantages',
-    description: 'Key differentiators and competitive advantages of Breeze.AI',
-    path: '/breeze-process/challenge/competitive-advantages',
-    category: 'Breeze.AI Deep Dive'
-  },
-  {
-    id: 'architecture-overview',
-    title: 'Architecture Overview',
-    description: 'High-level architecture of the Breeze.AI platform',
-    path: '/breeze-process/architecture/overview',
-    category: 'System Architecture'
-  },
-  {
-    id: 'core-components',
-    title: 'Core Components',
-    description: 'Essential components of the Breeze.AI system',
-    path: '/breeze-process/architecture/components',
-    category: 'System Architecture'
-  },
-  {
-    id: 'component-interactions',
-    title: 'Component Interactions',
-    description: 'How Breeze.AI components interact and communicate',
-    path: '/breeze-process/architecture/interactions',
-    category: 'System Architecture'
-  },
-  {
-    id: 'integration-points',
-    title: 'Integration Points',
-    description: 'Integration capabilities and extension points',
-    path: '/breeze-process/architecture/integration',
-    category: 'System Architecture'
-  },
-  {
-    id: 'scalability-performance',
-    title: 'Scalability & Performance',
-    description: 'Scaling strategies and performance optimization',
-    path: '/breeze-process/architecture/scalability',
-    category: 'System Architecture'
-  },
-  {
-    id: 'security-compliance',
-    title: 'Security & Compliance',
-    description: 'Security measures and compliance frameworks',
-    path: '/breeze-process/architecture/security',
-    category: 'System Architecture'
-  },
-  {
-    id: 'semantic-overview',
-    title: 'Semantic Framework Overview',
-    description: 'Four-ontology semantic model structure',
-    path: '/breeze-process/semantic/overview',
-    category: 'Semantic Model'
-  },
-  {
-    id: 'functional-ontology',
-    title: 'Functional Ontology',
-    description: 'Business capabilities and functional requirements modeling',
-    path: '/breeze-process/semantic/functional',
-    category: 'Semantic Model'
-  },
-  {
-    id: 'design-ontology',
-    title: 'Design Ontology',
-    description: 'User experience and interface design modeling',
-    path: '/breeze-process/semantic/design',
-    category: 'Semantic Model'
-  },
-  {
-    id: 'architecture-ontology',
-    title: 'Architecture Ontology',
-    description: 'System architecture and technical design modeling',
-    path: '/breeze-process/semantic/architecture',
-    category: 'Semantic Model'
-  },
-  {
-    id: 'code-ontology',
-    title: 'Code Ontology',
-    description: 'Source code structure and implementation modeling',
-    path: '/breeze-process/semantic/code',
-    category: 'Semantic Model'
-  },
-  {
-    id: 'cross-relationships',
-    title: 'Cross-Ontology Relationships',
-    description: 'Traceability links between ontology layers',
-    path: '/breeze-process/semantic/relationships',
-    category: 'Semantic Model'
-  },
-  {
-    id: 'agents-layer',
-    title: 'Agents Layer',
-    description: 'AI agents that operate on the semantic model',
-    path: '/breeze-process/semantic/agents',
-    category: 'Semantic Model'
-  },
-  {
-    id: 'process-overview',
-    title: 'Process Flow Overview',
-    description: 'Three-phase evolution of semantic engineering',
-    path: '/breeze-process/flow/overview',
-    category: 'Process Flow'
-  },
-  {
-    id: 'phase1-foundation',
-    title: 'Phase 1: Foundation',
-    description: 'Building the semantic foundation with 15% manual effort',
-    path: '/breeze-process/flow/phase1',
-    category: 'Process Flow'
-  },
-  {
-    id: 'phase2-evolution',
-    title: 'Phase 2: Evolution',
-    description: 'Evolving to 30% manual effort with AI assistance',
-    path: '/breeze-process/flow/phase2',
-    category: 'Process Flow'
-  },
-  {
-    id: 'phase3-semantic-first',
-    title: 'Phase 3: Semantic First',
-    description: 'Achieving semantic-first development with 5% manual effort',
-    path: '/breeze-process/flow/phase3',
-    category: 'Process Flow'
-  },
+  { id: 'manual-translation-tax', titleKey: 'items.manualTranslationTax.title', descriptionKey: 'items.manualTranslationTax.description', path: '/breeze-process/challenge/manual-translation-tax', categoryKey: 'categories.breezeDeepDive' },
+  { id: 'traditional-approaches', titleKey: 'items.traditionalApproaches.title', descriptionKey: 'items.traditionalApproaches.description', path: '/breeze-process/challenge/traditional-approaches', categoryKey: 'categories.breezeDeepDive' },
+  { id: 'breeze-breakthrough', titleKey: 'items.breezeBreakthrough.title', descriptionKey: 'items.breezeBreakthrough.description', path: '/breeze-process/challenge/breeze-breakthrough', categoryKey: 'categories.breezeDeepDive' },
+  { id: 'competitive-advantages', titleKey: 'items.competitiveAdvantages.title', descriptionKey: 'items.competitiveAdvantages.description', path: '/breeze-process/challenge/competitive-advantages', categoryKey: 'categories.breezeDeepDive' },
+  { id: 'architecture-overview', titleKey: 'items.architectureOverview.title', descriptionKey: 'items.architectureOverview.description', path: '/breeze-process/architecture/overview', categoryKey: 'categories.systemArchitecture' },
+  { id: 'core-components', titleKey: 'items.coreComponents.title', descriptionKey: 'items.coreComponents.description', path: '/breeze-process/architecture/components', categoryKey: 'categories.systemArchitecture' },
+  { id: 'component-interactions', titleKey: 'items.componentInteractions.title', descriptionKey: 'items.componentInteractions.description', path: '/breeze-process/architecture/interactions', categoryKey: 'categories.systemArchitecture' },
+  { id: 'integration-points', titleKey: 'items.integrationPoints.title', descriptionKey: 'items.integrationPoints.description', path: '/breeze-process/architecture/integration', categoryKey: 'categories.systemArchitecture' },
+  { id: 'scalability-performance', titleKey: 'items.scalabilityPerformance.title', descriptionKey: 'items.scalabilityPerformance.description', path: '/breeze-process/architecture/scalability', categoryKey: 'categories.systemArchitecture' },
+  { id: 'security-compliance', titleKey: 'items.securityCompliance.title', descriptionKey: 'items.securityCompliance.description', path: '/breeze-process/architecture/security', categoryKey: 'categories.systemArchitecture' },
+  { id: 'semantic-overview', titleKey: 'items.semanticOverview.title', descriptionKey: 'items.semanticOverview.description', path: '/breeze-process/semantic/overview', categoryKey: 'categories.semanticModel' },
+  { id: 'functional-ontology', titleKey: 'items.functionalOntology.title', descriptionKey: 'items.functionalOntology.description', path: '/breeze-process/semantic/functional', categoryKey: 'categories.semanticModel' },
+  { id: 'design-ontology', titleKey: 'items.designOntology.title', descriptionKey: 'items.designOntology.description', path: '/breeze-process/semantic/design', categoryKey: 'categories.semanticModel' },
+  { id: 'architecture-ontology', titleKey: 'items.architectureOntology.title', descriptionKey: 'items.architectureOntology.description', path: '/breeze-process/semantic/architecture', categoryKey: 'categories.semanticModel' },
+  { id: 'code-ontology', titleKey: 'items.codeOntology.title', descriptionKey: 'items.codeOntology.description', path: '/breeze-process/semantic/code', categoryKey: 'categories.semanticModel' },
+  { id: 'cross-relationships', titleKey: 'items.crossRelationships.title', descriptionKey: 'items.crossRelationships.description', path: '/breeze-process/semantic/relationships', categoryKey: 'categories.semanticModel' },
+  { id: 'agents-layer', titleKey: 'items.agentsLayer.title', descriptionKey: 'items.agentsLayer.description', path: '/breeze-process/semantic/agents', categoryKey: 'categories.semanticModel' },
+  { id: 'process-overview', titleKey: 'items.processOverview.title', descriptionKey: 'items.processOverview.description', path: '/breeze-process/flow/overview', categoryKey: 'categories.processFlow' },
+  { id: 'phase1-foundation', titleKey: 'items.phase1Foundation.title', descriptionKey: 'items.phase1Foundation.description', path: '/breeze-process/flow/phase1', categoryKey: 'categories.processFlow' },
+  { id: 'phase2-evolution', titleKey: 'items.phase2Evolution.title', descriptionKey: 'items.phase2Evolution.description', path: '/breeze-process/flow/phase2', categoryKey: 'categories.processFlow' },
+  { id: 'phase3-semantic-first', titleKey: 'items.phase3SemanticFirst.title', descriptionKey: 'items.phase3SemanticFirst.description', path: '/breeze-process/flow/phase3', categoryKey: 'categories.processFlow' },
 
   // Contact
-  {
-    id: 'contact',
-    title: 'Get Started',
-    description: 'Contact Accion AI Labs to get started with semantic engineering',
-    path: '/contact',
-    category: 'Contact'
-  }
+  { id: 'contact', titleKey: 'items.contact.title', descriptionKey: 'items.contact.description', path: '/contact', categoryKey: 'categories.contact' }
 ];
+
+// Build a localized search index using current i18n language
+export function getLocalizedSearchIndex(): SearchItem[] {
+  const t = i18n.getFixedT(i18n.language, 'search') as (key: string) => string;
+  return searchEntries.map(entry => ({
+    id: entry.id,
+    title: t(entry.titleKey),
+    description: t(entry.descriptionKey),
+    path: entry.path,
+    category: t(entry.categoryKey)
+  }));
+}
+
+// Default export for backward compatibility (English)
+export const searchIndex = getLocalizedSearchIndex();
 
 export default searchIndex;

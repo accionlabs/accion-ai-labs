@@ -3,503 +3,474 @@ import TopicLayout from '../layouts/TopicLayout';
 import { TopicConfig } from '../layouts/types';
 import integrationArchitecture from '../assets/integrationArchitecture.svg';
 import integrationFlow from '../assets/integrationFlow.svg';
+import integrationArchitectureJa from '../assets/ja/integrationArchitecture.svg';
+import integrationFlowJa from '../assets/ja/integrationFlow.svg';
+import { useTranslation } from 'react-i18next';
+import { useLocalizedSvg } from '../assets/useLocalizedSvg';
 
 interface IntegrationPointsNewProps {
   onNavigate?: (screenId: string) => void;
   onNext?: () => void;
 }
 
-// Configuration for Integration Points topic - kept within the component
-const integrationPointsConfig: TopicConfig = {
-  "id": "integration-points",
-  "title": "Integration Points",
-  "slides": [
-    {
-      "id": "integration-points-main",
-      "sections": [
-        {
+const IntegrationPointsNew: React.FC<IntegrationPointsNewProps> = ({ onNavigate, onNext }) => {
+  const { t } = useTranslation('breezeProcess');
+  const l = useLocalizedSvg();
 
-          "id": "prominentDisplay-section-1",
-
-          "type": "prominentDisplay",
-
-          "content": {
-            "title": "Integration Points",
-            "titleGradient": "from-info to-secondary",
-            "description": "How Breeze.AI integrates seamlessly with existing development tools, infrastructure, and organizational processes through well-defined integration patterns and APIs.",
-            "alignment": "center",
-            "variant": "header"
-          }
-        },
-        {
-
-          "id": "flexibleGrid-section-2",
-
-          "type": "flexibleGrid",
-
-          "content": {
-            "title": "Integration Architecture Overview",
-            "description": "Breeze.AI provides a comprehensive integration platform that connects seamlessly with your existing development ecosystem through multiple integration layers.",
-            "layout": "single",
-            "items": [
-              {
-                "id": "integration-architecture",
-                "title": "Integration Architecture Diagram",
-                "description": "Complete overview of how Breeze.AI integrates with development tools, project management, cloud infrastructure, and security systems.",
-                "backgroundColor": "bg-gradient-to-br from-cyan-50 to-blue-50",
-                "gridSpan": "full-row",
-                "svgDiagram": {
-                  "src": integrationArchitecture,
-                  "alt": "Integration Architecture Diagram",
-                  "width": "100%",
-                  "height": "auto",
-                  "viewBox": "0 0 800 600",
-                  "preserveAspectRatio": "xMidYMid meet",
-                  "className": "border border-gray-200 rounded-lg bg-white p-6 max-w-full h-auto"
+  const config: TopicConfig = React.useMemo(() => ({
+    "id": "integration-points",
+    "title": t('architecture.integrationPoints.configTitle'),
+    "slides": [
+      {
+        "id": "integration-points-main",
+        "sections": [
+          {
+            "id": "prominentDisplay-section-1",
+            "type": "prominentDisplay",
+            "content": {
+              "title": t('architecture.integrationPoints.header.title'),
+              "titleGradient": "from-info to-secondary",
+              "description": t('architecture.integrationPoints.header.description'),
+              "alignment": "center",
+              "variant": "header"
+            }
+          },
+          {
+            "id": "flexibleGrid-section-2",
+            "type": "flexibleGrid",
+            "content": {
+              "title": t('architecture.integrationPoints.architectureOverview.title'),
+              "description": t('architecture.integrationPoints.architectureOverview.description'),
+              "layout": "single",
+              "items": [
+                {
+                  "id": "integration-architecture",
+                  "title": t('architecture.integrationPoints.architectureOverview.diagram.title'),
+                  "description": t('architecture.integrationPoints.architectureOverview.diagram.description'),
+                  "backgroundColor": "bg-gradient-to-br from-cyan-50 to-blue-50",
+                  "gridSpan": "full-row",
+                  "svgDiagram": {
+                    "src": l(integrationArchitecture, integrationArchitectureJa),
+                    "alt": t('architecture.integrationPoints.architectureOverview.diagram.alt'),
+                    "width": "100%",
+                    "height": "auto",
+                    "viewBox": "0 0 800 600",
+                    "preserveAspectRatio": "xMidYMid meet",
+                    "className": "border border-gray-200 rounded-lg bg-white p-6 max-w-full h-auto"
+                  }
                 }
+              ],
+              "variant": "content",
+              "containerStyle": "gradient"
+            }
+          },
+          {
+            "id": "flexibleGrid-section-3",
+            "type": "flexibleGrid",
+            "content": {
+              "title": t('architecture.integrationPoints.versionControlCiCd.title'),
+              "description": t('architecture.integrationPoints.versionControlCiCd.description'),
+              "layout": "grid-2",
+              "items": [
+                {
+                  "id": "version-control",
+                  "title": t('architecture.integrationPoints.versionControlCiCd.versionControl.title'),
+                  "backgroundColor": "bg-success-50",
+                  "borderColor": "border-success-200",
+                  "items": [
+                    t('architecture.integrationPoints.versionControlCiCd.versionControl.items.0'),
+                    t('architecture.integrationPoints.versionControlCiCd.versionControl.items.1'),
+                    t('architecture.integrationPoints.versionControlCiCd.versionControl.items.2'),
+                    t('architecture.integrationPoints.versionControlCiCd.versionControl.items.3')
+                  ]
+                },
+                {
+                  "id": "cicd-pipelines",
+                  "title": t('architecture.integrationPoints.versionControlCiCd.cicdPipelines.title'),
+                  "backgroundColor": "bg-brand-blue-50",
+                  "borderColor": "border-secondary-200",
+                  "items": [
+                    t('architecture.integrationPoints.versionControlCiCd.cicdPipelines.items.0'),
+                    t('architecture.integrationPoints.versionControlCiCd.cicdPipelines.items.1'),
+                    t('architecture.integrationPoints.versionControlCiCd.cicdPipelines.items.2'),
+                    t('architecture.integrationPoints.versionControlCiCd.cicdPipelines.items.3')
+                  ]
+                }
+              ],
+              "variant": "content"
+            }
+          },
+          {
+            "id": "sequentialContent-section-3",
+            "type": "sequentialContent",
+            "content": {
+              "title": t('architecture.integrationPoints.integrationProcessFlow.title'),
+              "description": t('architecture.integrationPoints.integrationProcessFlow.description'),
+              "layout": "horizontal",
+              "steps": [
+                {
+                  "id": "developer-action",
+                  "number": 1,
+                  "title": t('architecture.integrationPoints.integrationProcessFlow.steps.developerAction.title'),
+                  "description": t('architecture.integrationPoints.integrationProcessFlow.steps.developerAction.description'),
+                  "color": "bg-success-500",
+                  "backgroundColor": "bg-success-50"
+                },
+                {
+                  "id": "ai-processing",
+                  "number": 2,
+                  "title": t('architecture.integrationPoints.integrationProcessFlow.steps.aiProcessing.title'),
+                  "description": t('architecture.integrationPoints.integrationProcessFlow.steps.aiProcessing.description'),
+                  "color": "bg-brand-blue-500",
+                  "backgroundColor": "bg-brand-blue-50"
+                },
+                {
+                  "id": "tool-integration",
+                  "number": 3,
+                  "title": t('architecture.integrationPoints.integrationProcessFlow.steps.toolIntegration.title'),
+                  "description": t('architecture.integrationPoints.integrationProcessFlow.steps.toolIntegration.description'),
+                  "color": "bg-brand-purple-500",
+                  "backgroundColor": "bg-brand-purple-50"
+                },
+                {
+                  "id": "quality-validation",
+                  "number": 4,
+                  "title": t('architecture.integrationPoints.integrationProcessFlow.steps.qualityValidation.title'),
+                  "description": t('architecture.integrationPoints.integrationProcessFlow.steps.qualityValidation.description'),
+                  "color": "bg-error-500",
+                  "backgroundColor": "bg-error-50"
+                }
+              ],
+              "variant": "process-flow",
+              "svgDiagram": {
+                "src": l(integrationFlow, integrationFlowJa),
+                "alt": t('architecture.integrationPoints.integrationProcessFlow.diagram.alt'),
+                "width": "100%",
+                "height": "auto",
+                "viewBox": "0 0 900 400",
+                "preserveAspectRatio": "xMidYMid meet",
+                "className": "border border-gray-200 rounded-lg bg-white p-4 max-w-full h-auto mb-6"
               }
-            ],
-            "variant": "content",
-            "containerStyle": "gradient"
-          }
-        },
-        {
-
-          "id": "flexibleGrid-section-3",
-
-          "type": "flexibleGrid",
-
-          "content": {
-            "title": "Version Control & CI/CD Integration",
-            "description": "Breeze.AI integrates seamlessly with version control systems and CI/CD pipelines to enhance existing development workflows without disruption.",
-            "layout": "grid-2",
-            "items": [
-              {
-                "id": "version-control",
-                "title": "Version Control Systems",
-                "backgroundColor": "bg-success-50",
-                "borderColor": "border-success-200",
-                "items": [
-                  "🔧 Git: Hooks & actions",
-                  "📱 GitHub: Actions & apps",
-                  "🦊 GitLab: CI/CD integration",
-                  "🪣 Bitbucket: Pipeline integration"
-                ]
-              },
-              {
-                "id": "cicd-pipelines",
-                "title": "CI/CD Pipelines",
-                "backgroundColor": "bg-brand-blue-50",
-                "borderColor": "border-secondary-200",
-                "items": [
-                  "🏗️ Jenkins: Plugin ecosystem",
-                  "☁️ Azure DevOps: Extension available",
-                  "⭕ CircleCI: Orb integration",
-                  "🏢 TeamCity: Plugin support"
-                ]
-              }
-            ],
-            "variant": "content"
-          }
-        },
-        {
-
-          "id": "sequentialContent-section-3",
-
-          "type": "sequentialContent",
-
-          "content": {
-            "title": "Integration Process Flow",
-            "description": "How Breeze.AI seamlessly integrates with your existing tools through a four-step automated process.",
-            "layout": "horizontal",
-            "steps": [
-              {
-                "id": "developer-action",
-                "number": 1,
-                "title": "Developer Action",
-                "description": "Developer commits code, updates requirements, or triggers integration event",
-                "color": "bg-success-500",
-                "backgroundColor": "bg-success-50"
-              },
-              {
-                "id": "ai-processing",
-                "number": 2,
-                "title": "AI Processing",
-                "description": "Breeze.AI analyzes context, validates semantics, and determines impact",
-                "color": "bg-brand-blue-500",
-                "backgroundColor": "bg-brand-blue-50"
-              },
-              {
-                "id": "tool-integration",
-                "number": 3,
-                "title": "Tool Integration",
-                "description": "Automated API calls and webhook notifications to integrated tools",
-                "color": "bg-brand-purple-500",
-                "backgroundColor": "bg-brand-purple-50"
-              },
-              {
-                "id": "quality-validation",
-                "number": 4,
-                "title": "Quality Validation",
-                "description": "Security scanning, compliance checks, and quality gate validation",
-                "color": "bg-error-500",
-                "backgroundColor": "bg-error-50"
-              }
-            ],
-            "variant": "process-flow",
-            "svgDiagram": {
-              "src": integrationFlow,
-              "alt": "Integration Process Flow Diagram",
-              "width": "100%",
-              "height": "auto",
-              "viewBox": "0 0 900 400",
-              "preserveAspectRatio": "xMidYMid meet",
-              "className": "border border-gray-200 rounded-lg bg-white p-4 max-w-full h-auto mb-6"
+            }
+          },
+          {
+            "id": "flexibleGrid-section-4",
+            "type": "flexibleGrid",
+            "content": {
+              "title": t('architecture.integrationPoints.versionControlCapabilities.title'),
+              "layout": "grid-2",
+              "items": [
+                {
+                  "id": "git-capabilities",
+                  "title": t('architecture.integrationPoints.versionControlCapabilities.gitFeatures.title'),
+                  "backgroundColor": "bg-success-50",
+                  "borderColor": "border-success-200",
+                  "items": [
+                    t('architecture.integrationPoints.versionControlCapabilities.gitFeatures.items.0'),
+                    t('architecture.integrationPoints.versionControlCapabilities.gitFeatures.items.1'),
+                    t('architecture.integrationPoints.versionControlCapabilities.gitFeatures.items.2'),
+                    t('architecture.integrationPoints.versionControlCapabilities.gitFeatures.items.3')
+                  ]
+                },
+                {
+                  "id": "cicd-capabilities",
+                  "title": t('architecture.integrationPoints.versionControlCapabilities.cicdFeatures.title'),
+                  "backgroundColor": "bg-brand-blue-50",
+                  "borderColor": "border-secondary-200",
+                  "items": [
+                    t('architecture.integrationPoints.versionControlCapabilities.cicdFeatures.items.0'),
+                    t('architecture.integrationPoints.versionControlCapabilities.cicdFeatures.items.1'),
+                    t('architecture.integrationPoints.versionControlCapabilities.cicdFeatures.items.2'),
+                    t('architecture.integrationPoints.versionControlCapabilities.cicdFeatures.items.3')
+                  ]
+                }
+              ],
+              "variant": "content"
+            }
+          },
+          {
+            "id": "flexibleGrid-section-4",
+            "type": "flexibleGrid",
+            "content": {
+              "title": t('architecture.integrationPoints.testingFramework.title'),
+              "description": t('architecture.integrationPoints.testingFramework.description'),
+              "layout": "grid-2",
+              "items": [
+                {
+                  "id": "supported-frameworks",
+                  "title": t('architecture.integrationPoints.testingFramework.supportedFrameworks.title'),
+                  "backgroundColor": "bg-warning-50",
+                  "borderColor": "border-warning-200",
+                  "items": [
+                    t('architecture.integrationPoints.testingFramework.supportedFrameworks.items.0'),
+                    t('architecture.integrationPoints.testingFramework.supportedFrameworks.items.1'),
+                    t('architecture.integrationPoints.testingFramework.supportedFrameworks.items.2'),
+                    t('architecture.integrationPoints.testingFramework.supportedFrameworks.items.3')
+                  ]
+                },
+                {
+                  "id": "testing-capabilities",
+                  "title": t('architecture.integrationPoints.testingFramework.testingCapabilities.title'),
+                  "backgroundColor": "bg-brand-purple-50",
+                  "borderColor": "border-brand-purple-200",
+                  "items": [
+                    t('architecture.integrationPoints.testingFramework.testingCapabilities.items.0'),
+                    t('architecture.integrationPoints.testingFramework.testingCapabilities.items.1'),
+                    t('architecture.integrationPoints.testingFramework.testingCapabilities.items.2'),
+                    t('architecture.integrationPoints.testingFramework.testingCapabilities.items.3')
+                  ]
+                }
+              ],
+              "variant": "content"
+            }
+          },
+          {
+            "id": "flexibleGrid-section-5",
+            "type": "flexibleGrid",
+            "content": {
+              "title": t('architecture.integrationPoints.projectManagement.title'),
+              "description": t('architecture.integrationPoints.projectManagement.description'),
+              "layout": "grid-3",
+              "items": [
+                {
+                  "id": "issue-tracking",
+                  "title": t('architecture.integrationPoints.projectManagement.issueTracking.title'),
+                  "backgroundColor": "bg-error-50",
+                  "borderColor": "border-error-200",
+                  "items": [
+                    t('architecture.integrationPoints.projectManagement.issueTracking.items.0'),
+                    t('architecture.integrationPoints.projectManagement.issueTracking.items.1'),
+                    t('architecture.integrationPoints.projectManagement.issueTracking.items.2')
+                  ]
+                },
+                {
+                  "id": "documentation-platforms",
+                  "title": t('architecture.integrationPoints.projectManagement.documentationPlatforms.title'),
+                  "backgroundColor": "bg-brand-indigo-50",
+                  "borderColor": "border-brand-indigo-200",
+                  "items": [
+                    t('architecture.integrationPoints.projectManagement.documentationPlatforms.items.0'),
+                    t('architecture.integrationPoints.projectManagement.documentationPlatforms.items.1'),
+                    t('architecture.integrationPoints.projectManagement.documentationPlatforms.items.2')
+                  ]
+                },
+                {
+                  "id": "communication-tools",
+                  "title": t('architecture.integrationPoints.projectManagement.communicationTools.title'),
+                  "backgroundColor": "bg-info-50",
+                  "borderColor": "border-info-200",
+                  "items": [
+                    t('architecture.integrationPoints.projectManagement.communicationTools.items.0'),
+                    t('architecture.integrationPoints.projectManagement.communicationTools.items.1'),
+                    t('architecture.integrationPoints.projectManagement.communicationTools.items.2')
+                  ]
+                }
+              ],
+              "variant": "content"
+            }
+          },
+          {
+            "id": "flexibleGrid-section-6",
+            "type": "flexibleGrid",
+            "content": {
+              "title": t('architecture.integrationPoints.projectManagementFeatures.title'),
+              "layout": "grid-3",
+              "items": [
+                {
+                  "id": "issue-tracking-features",
+                  "title": t('architecture.integrationPoints.projectManagementFeatures.issueTracking.title'),
+                  "backgroundColor": "bg-error-50",
+                  "borderColor": "border-error-200",
+                  "items": [
+                    t('architecture.integrationPoints.projectManagementFeatures.issueTracking.items.0'),
+                    t('architecture.integrationPoints.projectManagementFeatures.issueTracking.items.1'),
+                    t('architecture.integrationPoints.projectManagementFeatures.issueTracking.items.2')
+                  ]
+                },
+                {
+                  "id": "documentation-features",
+                  "title": t('architecture.integrationPoints.projectManagementFeatures.documentation.title'),
+                  "backgroundColor": "bg-brand-indigo-50",
+                  "borderColor": "border-brand-indigo-200",
+                  "items": [
+                    t('architecture.integrationPoints.projectManagementFeatures.documentation.items.0'),
+                    t('architecture.integrationPoints.projectManagementFeatures.documentation.items.1'),
+                    t('architecture.integrationPoints.projectManagementFeatures.documentation.items.2')
+                  ]
+                },
+                {
+                  "id": "communication-features",
+                  "title": t('architecture.integrationPoints.projectManagementFeatures.communication.title'),
+                  "backgroundColor": "bg-info-50",
+                  "borderColor": "border-info-200",
+                  "items": [
+                    t('architecture.integrationPoints.projectManagementFeatures.communication.items.0'),
+                    t('architecture.integrationPoints.projectManagementFeatures.communication.items.1'),
+                    t('architecture.integrationPoints.projectManagementFeatures.communication.items.2')
+                  ]
+                }
+              ],
+              "variant": "content"
+            }
+          },
+          {
+            "id": "flexibleGrid-section-7",
+            "type": "flexibleGrid",
+            "content": {
+              "title": t('architecture.integrationPoints.cloudInfrastructure.title'),
+              "description": t('architecture.integrationPoints.cloudInfrastructure.description'),
+              "layout": "grid-2",
+              "items": [
+                {
+                  "id": "cloud-platforms",
+                  "title": t('architecture.integrationPoints.cloudInfrastructure.cloudPlatforms.title'),
+                  "backgroundColor": "bg-warning-50",
+                  "borderColor": "border-warning-200",
+                  "items": [
+                    t('architecture.integrationPoints.cloudInfrastructure.cloudPlatforms.items.0'),
+                    t('architecture.integrationPoints.cloudInfrastructure.cloudPlatforms.items.1'),
+                    t('architecture.integrationPoints.cloudInfrastructure.cloudPlatforms.items.2')
+                  ]
+                },
+                {
+                  "id": "container-orchestration",
+                  "title": t('architecture.integrationPoints.cloudInfrastructure.containerOrchestration.title'),
+                  "backgroundColor": "bg-brand-purple-50",
+                  "borderColor": "border-brand-purple-200",
+                  "items": [
+                    t('architecture.integrationPoints.cloudInfrastructure.containerOrchestration.items.0'),
+                    t('architecture.integrationPoints.cloudInfrastructure.containerOrchestration.items.1'),
+                    t('architecture.integrationPoints.cloudInfrastructure.containerOrchestration.items.2'),
+                    t('architecture.integrationPoints.cloudInfrastructure.containerOrchestration.items.3')
+                  ]
+                }
+              ],
+              "variant": "content"
+            }
+          },
+          {
+            "id": "flexibleGrid-section-8",
+            "type": "flexibleGrid",
+            "content": {
+              "title": t('architecture.integrationPoints.monitoringDatabase.title'),
+              "layout": "grid-2",
+              "items": [
+                {
+                  "id": "monitoring-observability",
+                  "title": t('architecture.integrationPoints.monitoringDatabase.monitoring.title'),
+                  "backgroundColor": "bg-success-50",
+                  "borderColor": "border-success-200",
+                  "items": [
+                    t('architecture.integrationPoints.monitoringDatabase.monitoring.items.0'),
+                    t('architecture.integrationPoints.monitoringDatabase.monitoring.items.1'),
+                    t('architecture.integrationPoints.monitoringDatabase.monitoring.items.2'),
+                    t('architecture.integrationPoints.monitoringDatabase.monitoring.items.3')
+                  ]
+                },
+                {
+                  "id": "database-systems",
+                  "title": t('architecture.integrationPoints.monitoringDatabase.database.title'),
+                  "backgroundColor": "bg-brand-blue-50",
+                  "borderColor": "border-secondary-200",
+                  "items": [
+                    t('architecture.integrationPoints.monitoringDatabase.database.items.0'),
+                    t('architecture.integrationPoints.monitoringDatabase.database.items.1'),
+                    t('architecture.integrationPoints.monitoringDatabase.database.items.2'),
+                    t('architecture.integrationPoints.monitoringDatabase.database.items.3')
+                  ]
+                }
+              ],
+              "variant": "content"
+            }
+          },
+          {
+            "id": "flexibleGrid-section-9",
+            "type": "flexibleGrid",
+            "content": {
+              "title": t('architecture.integrationPoints.securityCompliance.title'),
+              "description": t('architecture.integrationPoints.securityCompliance.description'),
+              "layout": "grid-3",
+              "items": [
+                {
+                  "id": "security-scanning",
+                  "title": t('architecture.integrationPoints.securityCompliance.securityScanning.title'),
+                  "backgroundColor": "bg-error-50",
+                  "borderColor": "border-error-200",
+                  "items": [
+                    t('architecture.integrationPoints.securityCompliance.securityScanning.items.0'),
+                    t('architecture.integrationPoints.securityCompliance.securityScanning.items.1'),
+                    t('architecture.integrationPoints.securityCompliance.securityScanning.items.2'),
+                    t('architecture.integrationPoints.securityCompliance.securityScanning.items.3')
+                  ]
+                },
+                {
+                  "id": "identity-access",
+                  "title": t('architecture.integrationPoints.securityCompliance.identityAccess.title'),
+                  "backgroundColor": "bg-warning-50",
+                  "borderColor": "border-warning-200",
+                  "items": [
+                    t('architecture.integrationPoints.securityCompliance.identityAccess.items.0'),
+                    t('architecture.integrationPoints.securityCompliance.identityAccess.items.1'),
+                    t('architecture.integrationPoints.securityCompliance.identityAccess.items.2'),
+                    t('architecture.integrationPoints.securityCompliance.identityAccess.items.3')
+                  ]
+                },
+                {
+                  "id": "compliance-frameworks",
+                  "title": t('architecture.integrationPoints.securityCompliance.complianceFrameworks.title'),
+                  "backgroundColor": "bg-brand-indigo-50",
+                  "borderColor": "border-brand-indigo-200",
+                  "items": [
+                    t('architecture.integrationPoints.securityCompliance.complianceFrameworks.items.0'),
+                    t('architecture.integrationPoints.securityCompliance.complianceFrameworks.items.1'),
+                    t('architecture.integrationPoints.securityCompliance.complianceFrameworks.items.2'),
+                    t('architecture.integrationPoints.securityCompliance.complianceFrameworks.items.3')
+                  ]
+                }
+              ],
+              "variant": "content"
+            }
+          },
+          {
+            "id": "prominentDisplay-section-10",
+            "type": "prominentDisplay",
+            "content": {
+              "title": t('architecture.integrationPoints.cta.title'),
+              "description": t('architecture.integrationPoints.cta.description'),
+              "buttonText": t('architecture.integrationPoints.cta.buttonText'),
+              "backgroundGradient": "from-info to-secondary",
+              "variant": "cta",
+              "items": [
+                {
+                  "id": "developer-experience",
+                  "title": t('architecture.integrationPoints.cta.developerExperience.title'),
+                  "description": t('architecture.integrationPoints.cta.developerExperience.description'),
+                  "backgroundColor": "bg-white/20"
+                },
+                {
+                  "id": "organizational-benefits",
+                  "title": t('architecture.integrationPoints.cta.organizationalBenefits.title'),
+                  "description": t('architecture.integrationPoints.cta.organizationalBenefits.description'),
+                  "backgroundColor": "bg-white/20"
+                },
+                {
+                  "id": "integration-principles",
+                  "title": t('architecture.integrationPoints.cta.integrationPrinciples.title'),
+                  "description": t('architecture.integrationPoints.cta.integrationPrinciples.description'),
+                  "backgroundColor": "bg-white/20"
+                }
+              ]
             }
           }
-        },
-        {
+        ]
+      }
+    ]
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }), [t, l]);
 
-          "id": "flexibleGrid-section-4",
-
-          "type": "flexibleGrid",
-
-          "content": {
-            "title": "Version Control Capabilities",
-            "layout": "grid-2",
-            "items": [
-              {
-                "id": "git-capabilities",
-                "title": "Git Integration Features",
-                "backgroundColor": "bg-success-50",
-                "borderColor": "border-success-200",
-                "items": [
-                  "Semantic commit validation",
-                  "Automatic pull request analysis",
-                  "Impact assessment for changes",
-                  "Compliance checking on commits"
-                ]
-              },
-              {
-                "id": "cicd-capabilities",
-                "title": "CI/CD Integration Features",
-                "backgroundColor": "bg-brand-blue-50",
-                "borderColor": "border-secondary-200",
-                "items": [
-                  "Semantic test generation",
-                  "Quality gate integration",
-                  "Deployment validation",
-                  "Performance monitoring"
-                ]
-              }
-            ],
-            "variant": "content"
-          }
-        },
-        {
-
-          "id": "flexibleGrid-section-4",
-
-          "type": "flexibleGrid",
-
-          "content": {
-            "title": "Testing Framework Integration",
-            "description": "Automated test generation and enhancement capabilities integrate with popular testing frameworks to improve coverage and quality assurance processes.",
-            "layout": "grid-2",
-            "items": [
-              {
-                "id": "supported-frameworks",
-                "title": "Supported Testing Frameworks",
-                "backgroundColor": "bg-warning-50",
-                "borderColor": "border-warning-200",
-                "items": [
-                  "🧪 Jest: Unit & integration tests",
-                  "🌲 Cypress: E2E automation",
-                  "🔍 Selenium: Cross-browser testing",
-                  "📮 Postman: API testing"
-                ]
-              },
-              {
-                "id": "testing-capabilities",
-                "title": "Testing Enhancement Capabilities",
-                "backgroundColor": "bg-brand-purple-50",
-                "borderColor": "border-brand-purple-200",
-                "items": [
-                  "BDD test case generation from specifications",
-                  "Comprehensive coverage analysis and optimization",
-                  "Test scenario optimization and deduplication",
-                  "Intelligent regression test selection"
-                ]
-              }
-            ],
-            "variant": "content"
-          }
-        },
-        {
-
-          "id": "flexibleGrid-section-5",
-
-          "type": "flexibleGrid",
-
-          "content": {
-            "title": "Project Management & Collaboration",
-            "description": "Integration with project management and collaboration tools ensures requirements traceability and stakeholder communication throughout the development process.",
-            "layout": "grid-3",
-            "items": [
-              {
-                "id": "issue-tracking",
-                "title": "Issue Tracking",
-                "backgroundColor": "bg-error-50",
-                "borderColor": "border-error-200",
-                "items": [
-                  "📋 Jira: Native integration with bidirectional sync",
-                  "📐 Linear: API-based requirements synchronization",
-                  "🐙 GitHub Issues: Seamless integration with repositories"
-                ]
-              },
-              {
-                "id": "documentation-platforms",
-                "title": "Documentation Platforms",
-                "backgroundColor": "bg-brand-indigo-50",
-                "borderColor": "border-brand-indigo-200",
-                "items": [
-                  "📖 Confluence: Automatic documentation generation",
-                  "📝 Notion: Semantic content synchronization",
-                  "📚 GitBook: Technical documentation automation"
-                ]
-              },
-              {
-                "id": "communication-tools",
-                "title": "Communication Tools",
-                "backgroundColor": "bg-info-50",
-                "borderColor": "border-info-200",
-                "items": [
-                  "💬 Slack: Progress notifications and alerts",
-                  "👔 Microsoft Teams: Workflow integration and updates",
-                  "🗣️ Discord: Developer community integration"
-                ]
-              }
-            ],
-            "variant": "content"
-          }
-        },
-        {
-
-          "id": "flexibleGrid-section-6",
-
-          "type": "flexibleGrid",
-
-          "content": {
-            "title": "Project Management Features",
-            "layout": "grid-3",
-            "items": [
-              {
-                "id": "issue-tracking-features",
-                "title": "Issue Tracking Features",
-                "backgroundColor": "bg-error-50",
-                "borderColor": "border-error-200",
-                "items": [
-                  "Automatic story point estimation",
-                  "Requirements completeness validation",
-                  "Progress tracking with semantic metrics"
-                ]
-              },
-              {
-                "id": "documentation-features",
-                "title": "Documentation Features",
-                "backgroundColor": "bg-brand-indigo-50",
-                "borderColor": "border-brand-indigo-200",
-                "items": [
-                  "Auto-generated technical specifications",
-                  "Requirements traceability matrices",
-                  "API documentation synchronization"
-                ]
-              },
-              {
-                "id": "communication-features",
-                "title": "Communication Features",
-                "backgroundColor": "bg-info-50",
-                "borderColor": "border-info-200",
-                "items": [
-                  "Quality gate notifications",
-                  "Approval request routing",
-                  "Deployment status updates"
-                ]
-              }
-            ],
-            "variant": "content"
-          }
-        },
-        {
-
-          "id": "flexibleGrid-section-7",
-
-          "type": "flexibleGrid",
-
-          "content": {
-            "title": "Cloud & Infrastructure Integration",
-            "description": "Deep integration with cloud platforms and infrastructure services enables automatic deployment, monitoring, and scaling capabilities.",
-            "layout": "grid-2",
-            "items": [
-              {
-                "id": "cloud-platforms",
-                "title": "Cloud Platforms",
-                "backgroundColor": "bg-warning-50",
-                "borderColor": "border-warning-200",
-                "items": [
-                  "AWS: Full service integration (EC2, Lambda, RDS, S3)",
-                  "Azure: Native DevOps integration (App Service, Functions, SQL)",
-                  "Google Cloud: AI/ML service integration (GKE, Cloud Run, BigQuery)"
-                ]
-              },
-              {
-                "id": "container-orchestration",
-                "title": "Container Orchestration",
-                "backgroundColor": "bg-brand-purple-50",
-                "borderColor": "border-brand-purple-200",
-                "items": [
-                  "Kubernetes: Manifest generation (Helm charts, operators)",
-                  "Docker: Containerization automation (Multi-stage builds)",
-                  "Infrastructure as Code generation",
-                  "Auto-scaling configuration"
-                ]
-              }
-            ],
-            "variant": "content"
-          }
-        },
-        {
-
-          "id": "flexibleGrid-section-8",
-
-          "type": "flexibleGrid",
-
-          "content": {
-            "title": "Monitoring & Database Integration",
-            "layout": "grid-2",
-            "items": [
-              {
-                "id": "monitoring-observability",
-                "title": "Monitoring & Observability",
-                "backgroundColor": "bg-success-50",
-                "borderColor": "border-success-200",
-                "items": [
-                  "📊 Datadog: APM integration (Metrics, traces, logs)",
-                  "🔍 New Relic: Performance monitoring (Real user monitoring)",
-                  "📈 Grafana: Dashboard automation (Prometheus integration)",
-                  "SLA-based alerting rules and incident response automation"
-                ]
-              },
-              {
-                "id": "database-systems",
-                "title": "Database Systems",
-                "backgroundColor": "bg-brand-blue-50",
-                "borderColor": "border-secondary-200",
-                "items": [
-                  "🐘 PostgreSQL: Schema generation (Migration scripts)",
-                  "🍃 MongoDB: Document modeling (Index optimization)",
-                  "📊 Redis: Caching strategies (Session management)",
-                  "Data model optimization and performance tuning automation"
-                ]
-              }
-            ],
-            "variant": "content"
-          }
-        },
-        {
-
-          "id": "flexibleGrid-section-9",
-
-          "type": "flexibleGrid",
-
-          "content": {
-            "title": "Security & Compliance Integration",
-            "description": "Integration with security and compliance tools ensures that all generated code and infrastructure meets organizational and regulatory requirements.",
-            "layout": "grid-3",
-            "items": [
-              {
-                "id": "security-scanning",
-                "title": "Security Scanning",
-                "backgroundColor": "bg-error-50",
-                "borderColor": "border-error-200",
-                "items": [
-                  "🛡️ Snyk: Vulnerability scanning",
-                  "🔍 SonarQube: Code quality & security",
-                  "🔒 Checkmarx: Static analysis",
-                  "Automatic security rule application"
-                ]
-              },
-              {
-                "id": "identity-access",
-                "title": "Identity & Access",
-                "backgroundColor": "bg-warning-50",
-                "borderColor": "border-warning-200",
-                "items": [
-                  "🔐 Auth0: Authentication integration",
-                  "👤 Okta: SSO & identity management",
-                  "☁️ AWS IAM: Role-based access control",
-                  "Principle of least privilege enforcement"
-                ]
-              },
-              {
-                "id": "compliance-frameworks",
-                "title": "Compliance Frameworks",
-                "backgroundColor": "bg-brand-indigo-50",
-                "borderColor": "border-brand-indigo-200",
-                "items": [
-                  "📋 SOC 2: Control implementation",
-                  "🔒 GDPR: Privacy by design",
-                  "🏥 HIPAA: Healthcare compliance",
-                  "Automatic compliance validation"
-                ]
-              }
-            ],
-            "variant": "content"
-          }
-        },
-        {
-
-          "id": "prominentDisplay-section-10",
-
-          "type": "prominentDisplay",
-
-          "content": {
-            "title": "Explore Scalability & Performance",
-            "description": "These integrations are designed to scale with your organization, supporting enterprise workloads while maintaining performance and reliability.",
-            "buttonText": "Explore Scalability & Performance",
-            "backgroundGradient": "from-info to-secondary",
-            "variant": "cta",
-            "items": [
-              {
-                "id": "developer-experience",
-                "title": "Developer Experience",
-                "description": "Familiar workflows, minimal context switching, gradual adoption, enhanced productivity",
-                "backgroundColor": "bg-white/20"
-              },
-              {
-                "id": "organizational-benefits",
-                "title": "Organizational Benefits", 
-                "description": "Reduced tool sprawl, investment protection, compliance continuity, skills transfer",
-                "backgroundColor": "bg-white/20"
-              },
-              {
-                "id": "integration-principles",
-                "title": "Integration Principles",
-                "description": "Non-intrusive design, extensible architecture, enterprise-grade security, scalable performance",
-                "backgroundColor": "bg-white/20"
-              }
-            ]
-          }
-        }
-      ]
-    }
-  ]
-};
-
-const IntegrationPointsNew: React.FC<IntegrationPointsNewProps> = ({ onNavigate, onNext }) => {
   return (
-    <TopicLayout 
-      config={integrationPointsConfig}
+    <TopicLayout
+      config={config}
       onNavigate={onNavigate}
       onNext={onNext}
     />

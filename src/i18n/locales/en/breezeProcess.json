@@ -1,0 +1,1355 @@
+{
+  "challenge": {
+    "title": "The Challenge & Solution",
+    "manualTranslationTax": {
+      "title": "Manual Translation Tax"
+    },
+    "traditionalApproaches": {
+      "title": "Why Traditional Approaches Fail"
+    },
+    "breakthrough": {
+      "title": "Breeze.AI Breakthrough"
+    },
+    "capabilities": {
+      "title": "Revolutionary Capabilities"
+    },
+    "legacyTransformation": {
+      "title": "Legacy Transformation"
+    },
+    "competitiveAdvantages": {
+      "title": "Competitive Advantages"
+    }
+  },
+  "architecture": {
+    "title": "System Architecture",
+    "overview": {
+      "title": "Architecture Overview"
+    },
+    "coreComponents": {
+      "title": "Core Components"
+    },
+    "interactions": {
+      "title": "Component Interactions"
+    },
+    "integration": {
+      "title": "Integration Points"
+    },
+    "scalability": {
+      "title": "Scalability & Performance"
+    },
+    "security": {
+      "title": "Security & Compliance"
+    }
+  },
+  "semantic": {
+    "title": "Semantic Model",
+    "overview": {
+      "title": "Framework Overview",
+      "header": {
+        "title": "Semantic Model Structure",
+        "prominentTitle": "Semantic Model",
+        "prominentSubtitle": "Structure",
+        "description": "Four distinct but interconnected ontologies that provide comprehensive software engineering governance across application portfolios, enabling strategic initiatives like modernization, rationalization, and greenfield development."
+      },
+      "corePrinciples": {
+        "title": "Core Principles",
+        "foundation": {
+          "title": "Foundation Principles",
+          "benefits": [
+            "Modality-Agnostic Foundation: Functional ontology represents user needs independently of implementation",
+            "Physical Implementation Layers: Design, Architecture, and Code ontologies handle concrete implementations"
+          ]
+        },
+        "operational": {
+          "title": "Operational Principles",
+          "benefits": [
+            "Formal Relationships: Cross-ontology mappings enable traceability and governance analytics",
+            "Independent Operation: Each ontology operates independently while maintaining structured relationships"
+          ]
+        }
+      },
+      "fourOntologies": {
+        "title": "Four Ontologies Architecture",
+        "description": "Visual representation of the four interconnected ontologies that form the foundation of our semantic model.",
+        "diagramTitle": "Ontology Structure & Relationships",
+        "diagramDescription": "Interactive diagram showing how the four ontologies connect and relate to each other",
+        "diagramAlt": "Four Ontologies Architecture Diagram"
+      },
+      "ontologyDetails": {
+        "title": "Ontology Details",
+        "description": "Detailed breakdown of each ontology's structure, purpose, and examples.",
+        "functional": {
+          "title": "Functional Ontology",
+          "subtitle": "Modality-Agnostic User Needs",
+          "description": "Structure: Persona → Outcomes → Scenarios → Steps → Actions. Purpose: Represents what users want to achieve, independent of how it's implemented",
+          "example": "\"E-commerce Shopper\" → \"Complete Purchase\" → \"Buy Gift\" → \"Search Products\" → \"Enter Search Term\""
+        },
+        "design": {
+          "title": "Design Ontology",
+          "subtitle": "Physical UX Implementation",
+          "description": "Structure: User Journeys → Flows → Pages → Templates → Organisms → Molecules → Atoms. Purpose: Defines how user experiences are physically implemented for specific modalities",
+          "example": "\"Shopping Experience\" → \"Product Discovery Flow\" → \"Search Results Page\" → \"Product Card\" → \"Add to Cart Button\""
+        },
+        "architecture": {
+          "title": "Architecture Ontology",
+          "subtitle": "Logical Technical Design",
+          "description": "Structure: Layers → Service Types → Services → Entities/Components. Purpose: Logical technical design including services, layers, and system organization patterns",
+          "example": "\"Services Layer\" → \"Custom Services\" → \"Product Catalog Service\" → \"Product Entity\""
+        },
+        "code": {
+          "title": "Code Ontology",
+          "subtitle": "Physical Implementation Units",
+          "description": "Structure: Applications → Modules → Classes/Components → Functions/Methods → Properties/Fields. Purpose: Actual executable code that realizes architecture and functionality",
+          "example": "\"E-commerce Web App\" → \"ProductModule\" → \"ProductCard\" → \"renderProductCard()\" → \"product.name\""
+        }
+      },
+      "ontologyConnection": {
+        "title": "How the Ontologies Connect",
+        "description": "Visual representation of the relationship flow showing how abstract functional requirements get implemented through concrete design and architectural decisions.",
+        "diagramTitle": "Ontology Connection Flow",
+        "diagramDescription": "Step-by-step flow showing how user intent drives design, which defines technical architecture, which guides implementation",
+        "diagramAlt": "Ontology Connection Flow Diagram"
+      },
+      "implementationHierarchy": {
+        "title": "Implementation Hierarchy",
+        "description": "Visual representation of how abstract user intentions flow down through increasingly concrete implementation layers.",
+        "diagramTitle": "From Abstract to Concrete",
+        "diagramDescription": "Hierarchical view showing the progression from user needs to executable code",
+        "diagramAlt": "Implementation Hierarchy Diagram"
+      },
+      "hierarchySummary": {
+        "title": "Hierarchy Summary",
+        "description": "Three key abstraction levels that enable comprehensive software governance.",
+        "whatUsersWant": {
+          "title": "What Users Want",
+          "description": "Functional ontology captures user intentions and goals independent of implementation"
+        },
+        "howItWorks": {
+          "title": "How It Looks & Works",
+          "description": "Design and Architecture define the user experience and technical structure"
+        },
+        "whatRuns": {
+          "title": "What Actually Runs",
+          "description": "Code ontology represents the executable implementation that users interact with"
+        }
+      },
+      "governanceBenefits": {
+        "title": "Governance Benefits",
+        "description": "The semantic model structure enables powerful governance capabilities across the entire software development lifecycle.",
+        "strategic": {
+          "title": "Strategic Initiatives",
+          "benefits": [
+            "Application modernization with functional preservation",
+            "Portfolio rationalization through redundancy analysis",
+            "Cross-modal consistency validation",
+            "Legacy system transformation with semantic continuity"
+          ]
+        },
+        "analytics": {
+          "title": "Governance Analytics",
+          "benefits": [
+            "Architecture adherence tracking",
+            "Design system compliance monitoring",
+            "Implementation consistency analysis",
+            "Impact analysis for change management"
+          ]
+        },
+        "quality": {
+          "title": "Quality Assurance",
+          "benefits": [
+            "Cross-ontology validation and consistency checking",
+            "Automated compliance verification across all layers",
+            "Traceability from user needs to implementation",
+            "Continuous governance through semantic relationships"
+          ]
+        }
+      },
+      "cta": {
+        "title": "Comprehensive Software Governance",
+        "description": "The four-ontology semantic model provides the foundation for end-to-end software engineering governance, enabling strategic portfolio management, quality assurance, and continuous compliance validation across all development activities.",
+        "buttonText": "Explore Functional Ontology Details"
+      }
+    },
+    "functional": {
+      "title": "Functional Ontology",
+      "header": {
+        "title": "Functional Ontology",
+        "prominentTitle": "Functional Ontology",
+        "description": "Modality-agnostic representation of user needs and behaviors. This ontology captures what users want to achieve, independent of how those goals are implemented across different interfaces and technologies."
+      },
+      "layerStructure": {
+        "title": "Functional Ontology Layer Structure",
+        "description": "Visual representation of the five hierarchical layers that structure functional requirements from abstract personas to concrete atomic actions.",
+        "diagramTitle": "Five-Layer Hierarchy",
+        "diagramDescription": "Each layer builds upon the previous while maintaining modality independence and clear separation of concerns",
+        "diagramAlt": "Functional Ontology Layer Structure Diagram"
+      },
+      "layerDefinitions": {
+        "title": "Layer Definitions",
+        "persona": {
+          "title": "👤 Persona",
+          "description": "User archetypes with specific needs, goals, and contexts",
+          "example": "Example: E-commerce Shopper, System Administrator"
+        },
+        "outcomes": {
+          "title": "🎯 Outcomes",
+          "description": "High-level goals the persona wants to achieve",
+          "example": "Example: Complete Purchase, Monitor System Health"
+        },
+        "scenarios": {
+          "title": "📋 Scenarios",
+          "description": "Specific use cases within an outcome",
+          "example": "Example: Buy Gift for Friend, Investigate Performance Alert"
+        },
+        "steps": {
+          "title": "👣 Steps",
+          "description": "Logical progression of activities in a scenario",
+          "example": "Example: Search Products, Review Options, Make Decision"
+        },
+        "actions": {
+          "title": "⚡ Actions",
+          "description": "Atomic user intentions that drive interactions",
+          "example": "Example: Enter Search Term, Filter Results, Compare Items"
+        }
+      },
+      "ecommerceJourney": {
+        "title": "Complete E-commerce Journey Example",
+        "description": "Visual representation of how a complete user journey maps through all five layers of the functional ontology with concrete examples.",
+        "diagramTitle": "Complete Journey Mapping",
+        "diagramDescription": "From persona characteristics through atomic actions, showing the hierarchical decomposition of user needs",
+        "diagramAlt": "E-commerce Journey Functional Ontology Mapping"
+      },
+      "actionDetail": {
+        "title": "Action-Level Detail",
+        "description": "Each step contains multiple atomic actions that represent the smallest meaningful user intentions.",
+        "search": {
+          "title": "Search Products Actions",
+          "items": [
+            "⚡ Enter Search Term",
+            "⚡ Apply Category Filter"
+          ]
+        },
+        "review": {
+          "title": "Review Options Actions",
+          "items": [
+            "⚡ View Product Details",
+            "⚡ Compare Products",
+            "⚡ Read Reviews"
+          ]
+        },
+        "decision": {
+          "title": "Make Decision Actions",
+          "items": [
+            "⚡ Add to Cart",
+            "⚡ Proceed to Checkout"
+          ]
+        },
+        "transaction": {
+          "title": "Complete Transaction Actions",
+          "items": [
+            "⚡ Enter Shipping Info",
+            "⚡ Enter Payment Info",
+            "⚡ Confirm Purchase"
+          ]
+        }
+      },
+      "modalityIndependence": {
+        "title": "Modality Independence: The Key Insight",
+        "description": "The functional ontology deliberately avoids any reference to specific implementation technologies. \"Enter Search Term\" is the same user intention whether executed through a web form, mobile app, voice interface, or future AR system."
+      },
+      "modalityVisualization": {
+        "title": "Modality Independence Visualization",
+        "description": "Visual demonstration of how a single functional action maintains the same semantic meaning across multiple interface modalities.",
+        "diagramTitle": "Same Function, Different Implementations",
+        "diagramDescription": "One user intention expressed through multiple interface technologies while preserving semantic consistency",
+        "diagramAlt": "Modality Independence Across Interface Types"
+      },
+      "implementationExamples": {
+        "title": "Implementation Examples by Modality",
+        "description": "Detailed breakdown showing how functional actions translate to specific interface implementations.",
+        "searchTerm": {
+          "title": "⚡ Action: \"Enter Search Term\"",
+          "items": [
+            "💻 Web: Text input field with placeholder",
+            "📱 Mobile: Touch keyboard with search suggestions",
+            "🎤 Voice: Speech recognition with confirmation",
+            "👓 AR: Gesture-based text input or voice command"
+          ]
+        },
+        "filter": {
+          "title": "⚡ Action: \"Apply Category Filter\"",
+          "items": [
+            "💻 Web: Dropdown menu or checkbox list",
+            "📱 Mobile: Swipeable filter cards",
+            "🎤 Voice: Spoken category selection",
+            "👓 AR: Spatial gesture-based selection"
+          ]
+        }
+      },
+      "semanticRichness": {
+        "title": "Semantic Richness and Context",
+        "description": "Each functional element carries rich semantic metadata that enables intelligent automation and validation.",
+        "personaContext": {
+          "title": "Persona Context",
+          "items": [
+            "Demographics and psychographics",
+            "Technical proficiency levels",
+            "Domain knowledge assumptions",
+            "Accessibility requirements",
+            "Cultural and linguistic context"
+          ]
+        },
+        "outcomeValidation": {
+          "title": "Outcome Validation",
+          "items": [
+            "Success criteria definitions",
+            "Business value metrics",
+            "User satisfaction indicators",
+            "Performance benchmarks",
+            "Risk and compliance requirements"
+          ]
+        },
+        "actionSemantics": {
+          "title": "Action Semantics",
+          "items": [
+            "Pre-conditions and post-conditions",
+            "Data input and output requirements",
+            "Error handling scenarios",
+            "Undo and recovery capabilities",
+            "Security and privacy implications"
+          ]
+        }
+      },
+      "crossOntologyMapping": {
+        "title": "Cross-Ontology Mapping",
+        "description": "Functional elements establish formal relationships with Design, Architecture, and Code ontologies, enabling perfect traceability.",
+        "traceability": {
+          "title": "Traceability Relationships",
+          "items": [
+            "Functional Actions → Design Components",
+            "Scenarios → User Experience Flows",
+            "Outcomes → Architecture Services",
+            "Personas → System Access Patterns"
+          ]
+        },
+        "validation": {
+          "title": "Validation Benefits",
+          "items": [
+            "Automatic consistency checking across ontologies",
+            "Impact analysis for requirement changes",
+            "Coverage validation for implementation",
+            "Quality assurance through semantic verification"
+          ]
+        }
+      },
+      "aiAgent": {
+        "title": "AI Agent Utilization",
+        "description": "The semantic richness of the functional ontology enables AI agents to understand and act upon user intentions with human-level comprehension.",
+        "capabilities": {
+          "title": "Agent Capabilities",
+          "items": [
+            "Intent Recognition: Understand user goals from partial descriptions",
+            "Context Inference: Fill in missing information based on persona patterns",
+            "Validation: Verify completeness and consistency of functional specifications",
+            "Generation: Create comprehensive user stories from high-level outcomes"
+          ]
+        },
+        "automation": {
+          "title": "Automation Benefits",
+          "items": [
+            "Requirement Elaboration: Expand high-level needs into detailed scenarios",
+            "Edge Case Discovery: Identify missing scenarios and error conditions",
+            "Cross-Platform Consistency: Ensure uniform behavior across modalities",
+            "User Experience Optimization: Suggest improvements based on persona patterns"
+          ]
+        }
+      },
+      "benefits": {
+        "title": "Functional Ontology Benefits",
+        "strategic": {
+          "title": "Strategic Benefits",
+          "items": [
+            "Future-Proof Design: Requirements independent of current technology",
+            "Cross-Platform Consistency: Same user intentions across all interfaces",
+            "Stakeholder Alignment: Clear, unambiguous requirement definitions",
+            "Market Adaptability: Easy extension to new platforms and technologies"
+          ]
+        },
+        "operational": {
+          "title": "Operational Benefits",
+          "items": [
+            "Automated Analysis: AI agents can process and validate requirements",
+            "Perfect Traceability: Every implementation traces to user intentions",
+            "Change Impact Assessment: Understand consequences of requirement modifications",
+            "Quality Assurance: Systematic verification of requirement coverage"
+          ]
+        }
+      },
+      "cta": {
+        "title": "From Function to Form",
+        "description": "See how functional requirements get translated into concrete user experience implementations through the Design Ontology.",
+        "buttonText": "Explore Design Ontology"
+      }
+    },
+    "design": {
+      "title": "Design Ontology",
+      "header": {
+        "title": "Design Ontology",
+        "prominentTitle": "Design Ontology",
+        "description": "Physical implementation of user experience for specific modalities. This ontology defines how functional requirements are translated into concrete user interfaces and interaction patterns across web, mobile, API, and other modalities."
+      },
+      "atomicHierarchy": {
+        "title": "Atomic Design Hierarchy",
+        "description": "Visual representation of the seven-layer design hierarchy from strategic user journeys down to atomic interface elements.",
+        "diagramTitle": "Seven-Layer Design Structure",
+        "diagramDescription": "From strategic multi-session journeys to atomic interface elements, maintaining clear separation of concerns at each level",
+        "diagramAlt": "Atomic Design Hierarchy Diagram"
+      },
+      "layerDefinitions": {
+        "title": "Design Layer Definitions",
+        "description": "Detailed breakdown of each design layer with clear definitions and practical examples.",
+        "userJourneys": {
+          "title": "🎯 User Journeys",
+          "description": "Multi-session experiences spanning multiple applications or extended time periods",
+          "items": [
+            "Strategic Level: Complete customer lifecycle interactions",
+            "Examples: Customer Lifecycle Journey, Employee Onboarding Journey",
+            "Spans: Multiple sessions, applications, and touchpoints",
+            "Focus: Long-term user relationship and value delivery"
+          ]
+        },
+        "flows": {
+          "title": "🔄 Flows",
+          "description": "Single-session sequences connecting multiple pages or interfaces",
+          "items": [
+            "Tactical Level: Connected sequences within single sessions",
+            "Examples: Registration Flow, Checkout Flow, Data Import Flow",
+            "Spans: Multiple pages or screens within one session",
+            "Focus: Goal completion and user task success"
+          ]
+        },
+        "pages": {
+          "title": "📄 Pages/Screens",
+          "description": "Complete screen or interface units representing discrete interaction contexts",
+          "items": [
+            "Structural Level: Complete interface contexts",
+            "Examples: Product Listing Page, User Profile Page, API Response Schema",
+            "Spans: Single complete interface or data structure",
+            "Focus: Complete user context and information architecture"
+          ]
+        },
+        "templates": {
+          "title": "📐 Templates",
+          "description": "Reusable page-level layout patterns and structures",
+          "items": [
+            "Pattern Level: Reusable structural layouts",
+            "Examples: List Template, Detail Template, Dashboard Template",
+            "Spans: Layout structure and information hierarchy",
+            "Focus: Consistency and reuse across similar contexts"
+          ]
+        },
+        "organisms": {
+          "title": "🧬 Organisms",
+          "description": "Complex component groups with specific functionality",
+          "items": [
+            "Component Level: Complex functional groupings",
+            "Examples: Navigation Header, Product Grid, Data Table",
+            "Spans: Multiple related molecules working together",
+            "Focus: Specific functionality and user tasks"
+          ]
+        },
+        "molecules": {
+          "title": "🧪 Molecules",
+          "description": "Simple combinations of atoms with single purpose",
+          "items": [
+            "Combination Level: Purpose-built atom groups",
+            "Examples: Search Box, Product Card, Form Field Group",
+            "Spans: Small groups of atoms with unified purpose",
+            "Focus: Single clear function or display purpose"
+          ]
+        },
+        "atoms": {
+          "title": "⚛️ Atoms",
+          "description": "Individual interface elements that cannot be broken down further",
+          "items": [
+            "Element Level: Indivisible interface components",
+            "Examples: Button, Input Field, Label, JSON Field",
+            "Spans: Single HTML element or basic UI component",
+            "Focus: Basic interaction and display primitives"
+          ]
+        }
+      },
+      "breakdownExample": {
+        "title": "Design Breakdown Example",
+        "description": "Detailed visualization of how a complete web page breaks down through the design hierarchy using a real e-commerce example.",
+        "diagramTitle": "E-commerce Search Results Breakdown",
+        "diagramDescription": "Complete decomposition from flow level down to atomic elements, showing practical implementation of design hierarchy",
+        "diagramAlt": "Design Breakdown Example Diagram"
+      },
+      "crossModal": {
+        "title": "Cross-Modal Design Consistency",
+        "description": "Comprehensive visualization demonstrating how the same functional requirements translate to different design implementations across various modalities.",
+        "diagramTitle": "Same Function, Different Forms",
+        "diagramDescription": "How 'Complete Product Purchase' maintains consistency while adapting to Web, Mobile, Voice, and API modalities",
+        "diagramAlt": "Cross-Modal Design Consistency Diagram"
+      },
+      "modalityAdaptations": {
+        "title": "Modality-Specific Adaptations",
+        "description": "How design layers adapt to different platform constraints while maintaining functional consistency.",
+        "web": {
+          "title": "💻 Web Modality",
+          "items": [
+            "Visual Hierarchy: Rich layouts with complex navigation patterns",
+            "Information Density: Detailed information display with multiple data points",
+            "Interaction Patterns: Mouse and keyboard optimized interactions",
+            "Screen Real Estate: Large displays allow for comprehensive interfaces",
+            "Navigation: Complex menu structures and breadcrumb trails"
+          ]
+        },
+        "mobile": {
+          "title": "📱 Mobile Modality",
+          "items": [
+            "Touch Interaction: Touch-optimized controls and gesture support",
+            "Progressive Disclosure: Information revealed progressively to reduce cognitive load",
+            "Simplified Navigation: Tab bars and simplified menu structures",
+            "Screen Constraints: Compact layouts optimized for small screens",
+            "Context Awareness: Location and device sensor integration"
+          ]
+        },
+        "voice": {
+          "title": "🎤 Voice Modality",
+          "items": [
+            "Conversational Flow: Natural language dialog patterns",
+            "Context Retention: Memory of conversation state and user preferences",
+            "Error Recovery: Graceful handling of misunderstood commands",
+            "Confirmation Patterns: Verbal confirmation of important actions",
+            "Audio Feedback: Sound design and speech synthesis optimization"
+          ]
+        },
+        "api": {
+          "title": "🔌 API Modality",
+          "items": [
+            "Data Structures: JSON/XML schemas and response patterns",
+            "Error Handling: Structured error responses with meaningful codes",
+            "Versioning: Backward compatibility and evolution strategies",
+            "Documentation: Comprehensive API documentation and examples",
+            "Rate Limiting: Usage quotas and throttling mechanisms"
+          ]
+        }
+      },
+      "designFunctionMapping": {
+        "title": "Design-Function Mapping: The Critical Connection",
+        "description": "The Design Ontology creates precise mappings between functional requirements and their modality-specific implementations. Each design element traces directly back to a functional action, ensuring consistency and enabling automated validation."
+      },
+      "traceability": {
+        "title": "Traceability and Validation",
+        "description": "How design elements maintain perfect traceability to functional requirements and enable automated consistency checking.",
+        "functionalMapping": {
+          "title": "Functional Mapping",
+          "items": [
+            "Direct Traceability: Every design element maps to functional actions",
+            "Consistency Validation: Automated checking across modalities",
+            "Gap Analysis: Identification of unmapped functional requirements",
+            "Impact Assessment: Change propagation analysis"
+          ]
+        },
+        "crossOntologyLinks": {
+          "title": "Cross-Ontology Links",
+          "items": [
+            "Architecture Integration: Design components link to system services",
+            "Code Generation: Design specs drive implementation generation",
+            "Test Coverage: Design elements enable automated test creation",
+            "Documentation: Design patterns inform user documentation"
+          ]
+        },
+        "qualityAssurance": {
+          "title": "Quality Assurance",
+          "items": [
+            "Accessibility Compliance: WCAG and inclusive design validation",
+            "Brand Consistency: Style guide and design system enforcement",
+            "Performance Optimization: Loading and interaction performance metrics",
+            "User Experience Validation: Usability and satisfaction metrics"
+          ]
+        }
+      },
+      "aiAgent": {
+        "title": "AI Agent Utilization for Design",
+        "description": "How AI agents leverage the semantic richness of design ontology to automate design tasks and maintain consistency.",
+        "generation": {
+          "title": "Design Generation Capabilities",
+          "items": [
+            "Component Library Creation: Automated generation of design system components",
+            "Layout Optimization: AI-driven layout suggestions based on content and user patterns",
+            "Responsive Design: Automatic adaptation across device sizes and orientations",
+            "Accessibility Enhancement: Automated accessibility improvements and validation"
+          ]
+        },
+        "consistency": {
+          "title": "Consistency Maintenance",
+          "items": [
+            "Cross-Modal Validation: Ensuring functional consistency across all modalities",
+            "Brand Compliance: Automated checking against design system guidelines",
+            "Pattern Recognition: Identification of design patterns and anti-patterns",
+            "Evolution Management: Tracking and validating design system changes"
+          ]
+        }
+      },
+      "benefits": {
+        "title": "Design Ontology Benefits",
+        "strategic": {
+          "title": "Strategic Benefits",
+          "items": [
+            "Platform Agnostic Design: Design patterns that adapt to any modality",
+            "Future-Proof Implementation: Design systems that evolve with technology",
+            "Brand Consistency: Unified experience across all touchpoints",
+            "User Experience Excellence: Scientifically validated design decisions"
+          ]
+        },
+        "operational": {
+          "title": "Operational Benefits",
+          "items": [
+            "Automated Design Generation: AI-driven component and layout creation",
+            "Perfect Traceability: Every design element traces to business requirements",
+            "Quality Assurance: Systematic validation of design consistency and accessibility",
+            "Rapid Iteration: Fast prototyping and design system evolution"
+          ]
+        }
+      },
+      "cta": {
+        "title": "From Design to Implementation",
+        "description": "See how design specifications get translated into concrete system architectures and technical implementations through the Architecture Ontology.",
+        "buttonText": "Explore Architecture Ontology"
+      }
+    },
+    "architectureOntology": {
+      "title": "Architecture Ontology",
+      "header": {
+        "title": "Architecture Ontology",
+        "description": "Logical technical design defining services, layers, and system organization patterns. This ontology structures the technical architecture including the intelligent agents layer that orchestrates services and provides autonomous capabilities."
+      },
+      "tierStructure": {
+        "title": "8-Tier Architecture Structure",
+        "intelligenceLayer": "Intelligence Layer"
+      },
+      "tiers": [
+        { "layer": "User Experience", "description": "Frontend applications and user interfaces" },
+        { "layer": "API Gateway", "description": "Request routing, authentication, and API management" },
+        { "layer": "Observability & Monitoring", "description": "System health, metrics, and performance tracking" },
+        { "layer": "Agents", "description": "Intelligent orchestration and autonomous decision-making" },
+        { "layer": "Services", "description": "Business logic and platform capabilities" },
+        { "layer": "Event Queue", "description": "Asynchronous messaging and event processing" },
+        { "layer": "Data Lake, Analytics, AI/ML", "description": "Data processing, analytics, and machine learning" },
+        { "layer": "Infrastructure", "description": "Computing resources, storage, and networking" }
+      ],
+      "agentsOverview": {
+        "title": "Agents Layer: The Intelligence Engine",
+        "keyInnovationLabel": "Key Innovation:",
+        "keyInnovationText": "The Agents layer provides intelligent coordination between the User Experience layer and Services layer, enabling autonomous task completion and complex workflow orchestration.",
+        "agentTypes": {
+          "title": "Four Agent Types",
+          "items": [
+            "Business Process Agents",
+            "Domain Agents",
+            "Integration Agents",
+            "Assistant Agents"
+          ]
+        },
+        "keyCapabilities": {
+          "title": "Key Capabilities",
+          "items": [
+            "Intelligent Orchestration",
+            "Autonomous Problem Solving",
+            "Context Preservation",
+            "Adaptive Behavior"
+          ]
+        },
+        "exploreButton": "Explore Agents Layer in Detail",
+        "exploreDescription": "Deep dive into agent types, orchestration patterns, and implementation considerations"
+      },
+      "benefits": {
+        "title": "Architecture Ontology Benefits",
+        "intelligence": {
+          "title": "Intelligence & Autonomy",
+          "orchestration": {
+            "label": "Intelligent Orchestration:",
+            "text": "Agents decide which services to call and in what order"
+          },
+          "problemSolving": {
+            "label": "Autonomous Problem Solving:",
+            "text": "Handle exceptions and edge cases without user intervention"
+          },
+          "adaptive": {
+            "label": "Adaptive Behavior:",
+            "text": "Learn and optimize orchestration patterns over time"
+          }
+        },
+        "uxArchitecture": {
+          "title": "User Experience & Architecture",
+          "enhancedUx": {
+            "label": "Enhanced UX:",
+            "text": "Complex processes appear as simple single interactions"
+          },
+          "contextPreservation": {
+            "label": "Context Preservation:",
+            "text": "Maintain conversation and task context across service calls"
+          },
+          "businessLogic": {
+            "label": "Business Logic Abstraction:",
+            "text": "Complex rules encapsulated in agents, not scattered across services"
+          }
+        }
+      }
+    },
+    "code": {
+      "title": "Code Ontology",
+      "header": {
+        "title": "Code Ontology",
+        "description": "Physical implementation units - the actual executable code that realizes architecture and functionality. This ontology represents the concrete code structures organized by frontend, backend, and data concerns, with technology-specific implementations."
+      },
+      "structure": {
+        "title": "Code Ontology Structure"
+      },
+      "frontendLayers": {
+        "title": "Frontend Code Layers",
+        "items": [
+          { "layer": "Applications", "description": "Deployable frontend units", "example": "React App, Vue SPA, Mobile App" },
+          { "layer": "Modules", "description": "Logical feature groupings", "example": "ProductModule, UserModule, CartModule" },
+          { "layer": "Components", "description": "UI implementation units", "example": "ProductCard, LoginForm, NavigationHeader" },
+          { "layer": "Functions/Hooks", "description": "Executable UI logic", "example": "useProductData(), handleSubmit(), validateForm()" },
+          { "layer": "Properties/State", "description": "UI data units", "example": "isLoading, userInput, selectedItems[]" },
+          { "layer": "Configurations", "description": "Frontend settings", "example": "webpack.config, environment.json, routing.config" }
+        ]
+      },
+      "backendLayers": {
+        "title": "Backend Code Layers",
+        "items": [
+          { "layer": "Applications", "description": "Deployable backend units", "example": "API Service, Microservice, Serverless Function" },
+          { "layer": "Modules", "description": "Business domain groupings", "example": "ProductModule, OrderModule, PaymentModule" },
+          { "layer": "Classes/Services", "description": "Business logic units", "example": "ProductService, OrderController, PaymentProcessor" },
+          { "layer": "Functions/Methods", "description": "Executable operations", "example": "createProduct(), processPayment(), GET /api/orders" },
+          { "layer": "Properties/Fields", "description": "Data units", "example": "productId, orderTotal, apiEndpoints" },
+          { "layer": "Configurations", "description": "Backend settings", "example": "database.config, service.yaml, security.properties" }
+        ]
+      },
+      "dataLayers": {
+        "title": "Data Code Layers",
+        "items": [
+          { "layer": "Applications", "description": "Data processing units", "example": "ETL Pipeline, Analytics Engine, Data Sync Service" },
+          { "layer": "Modules", "description": "Data domain groupings", "example": "CustomerDataModule, ProductDataModule, AnalyticsModule" },
+          { "layer": "Classes/Processors", "description": "Data transformation units", "example": "DataValidator, SchemaMapper, AnalyticsProcessor" },
+          { "layer": "Functions/Queries", "description": "Data operations", "example": "transformProduct(), validateSchema(), SELECT * FROM products" },
+          { "layer": "Properties/Schemas", "description": "Data structure definitions", "example": "productSchema, customerFields, analyticsMetrics" },
+          { "layer": "Configurations", "description": "Data settings", "example": "pipeline.yaml, schema.json, database.properties" }
+        ]
+      },
+      "technologyStacks": {
+        "title": "Technology-Specific Sub-Ontologies",
+        "stacksSuffix": "Technology Stacks",
+        "applicationsLabel": "Applications",
+        "componentsLabel": "Components/Classes",
+        "functionsLabel": "Functions/Methods",
+        "frontend": {
+          "category": "Frontend",
+          "stacks": [
+            {
+              "name": "React/TypeScript",
+              "applications": "Create React App, Next.js App, Micro-frontend",
+              "components": "React Components, Custom Hooks, Context Providers",
+              "functions": "Event handlers, useEffect, useState, Custom hooks"
+            },
+            {
+              "name": "Vue.js",
+              "applications": "Vue CLI App, Nuxt.js App, Vue Micro-frontend",
+              "components": "Vue Components, Composables, Directives",
+              "functions": "Methods, Computed properties, Watchers"
+            }
+          ]
+        },
+        "backend": {
+          "category": "Backend",
+          "stacks": [
+            {
+              "name": "Node.js/Express",
+              "applications": "Express Server, Serverless Functions, Microservices",
+              "components": "Controllers, Services, Repositories, Middleware",
+              "functions": "Route handlers, Business logic methods, Database operations"
+            },
+            {
+              "name": "Java/Spring",
+              "applications": "Spring Boot Apps, Microservices, WAR deployments",
+              "components": "Controllers, Services, Repositories, Configurations",
+              "functions": "REST endpoints, Service methods, Repository operations"
+            }
+          ]
+        },
+        "data": {
+          "category": "Data",
+          "stacks": [
+            {
+              "name": "SQL Database",
+              "applications": "Database instances, Data warehouses, OLAP systems",
+              "components": "Tables, Views, Stored procedures, Functions",
+              "functions": "SQL queries, Stored procedures, Triggers"
+            },
+            {
+              "name": "Data Pipeline",
+              "applications": "Apache Airflow, Apache Kafka, ETL platforms",
+              "components": "DAGs, Operators, Processors, Transformers",
+              "functions": "Task functions, Stream processors, Data transformations"
+            }
+          ]
+        }
+      },
+      "benefits": {
+        "title": "Code Ontology Benefits",
+        "clarity": {
+          "title": "Implementation Clarity",
+          "items": [
+            "Clear technology-specific structures for each concern",
+            "Consistent patterns across different technology stacks",
+            "Standardized organization from applications to properties"
+          ]
+        },
+        "development": {
+          "title": "Development Benefits",
+          "items": [
+            "Faster onboarding with clear code structure",
+            "Improved maintainability through consistent patterns",
+            "Enhanced reusability of components and functions"
+          ]
+        }
+      }
+    },
+    "relationships": {
+      "title": "Cross-Ontology Relationships",
+      "header": {
+        "title": "Cross-Ontology Relationships",
+        "description": "Formal mappings that enable traceability and governance across the four ontologies. These relationships provide the foundation for comprehensive software engineering analytics, consistency validation, and portfolio governance."
+      },
+      "categories": {
+        "title": "Relationship Categories",
+        "examplesLabel": "Examples:"
+      },
+      "relationshipTypes": {
+        "implements": {
+          "type": "Implements",
+          "description": "Design or Code node realizes Functional node",
+          "examples": [
+            "\"Add to Cart Button\" implements \"Add to Cart Action\"",
+            "\"addToCart()\" implements \"Add to Cart Action\""
+          ]
+        },
+        "supports": {
+          "type": "Supports",
+          "description": "Architecture node enables Design, Code, or Functional capability",
+          "examples": [
+            "\"Product Entity Service\" supports \"Product Display\"",
+            "\"ProductRepository\" supports \"Product Storage\""
+          ]
+        },
+        "requires": {
+          "type": "Requires",
+          "description": "Functional node needs specific Design, Architecture, or Code implementation",
+          "examples": [
+            "\"Compare Products Action\" requires \"Product Comparison Template\"",
+            "requires \"compareProducts()\""
+          ]
+        },
+        "triggers": {
+          "type": "Triggers",
+          "description": "Functional action initiates Architecture process or Code execution",
+          "examples": [
+            "\"Confirm Purchase Action\" triggers \"Order Workflow Service\"",
+            "triggers \"processPayment()\""
+          ]
+        },
+        "validates": {
+          "type": "Validates",
+          "description": "Architecture service or Code unit ensures Functional requirement",
+          "examples": [
+            "\"Authentication Service\" validates \"User Login Action\"",
+            "\"validateCredentials()\" validates \"User Login Action\""
+          ]
+        },
+        "realizes": {
+          "type": "Realizes",
+          "description": "Code unit implements Architecture concept",
+          "examples": [
+            "\"ProductService.java\" realizes \"Product Entity Service\"",
+            "\"authMiddleware.ts\" realizes \"Authentication Service\""
+          ]
+        },
+        "renders": {
+          "type": "Renders",
+          "description": "Code unit implements Design concept",
+          "examples": [
+            "\"ProductCard.tsx\" renders \"Product Card Component\"",
+            "\"login.vue\" renders \"Login Form Template\""
+          ]
+        }
+      },
+      "connectivity": {
+        "title": "Multi-Dimensional Connectivity Model",
+        "diagram": {
+          "functional": {
+            "label": "Functional",
+            "sublabel": "User Actions & Intent"
+          },
+          "arrows": {
+            "implements": "implements",
+            "supports": "supports",
+            "triggers": "triggers",
+            "realizes": "realizes"
+          },
+          "design": {
+            "label": "Design",
+            "sublabel": "UX/UI"
+          },
+          "architecture": {
+            "label": "Architecture",
+            "sublabel": "Services"
+          },
+          "code": {
+            "label": "Code",
+            "sublabel": "Implementation Units"
+          }
+        },
+        "connectionPatterns": {
+          "title": "Connection Patterns"
+        },
+        "patterns": [
+          {
+            "path": "Direct Functional-Code",
+            "description": "Immediate traceability for analysis",
+            "example": "User Action → Code Function"
+          },
+          {
+            "path": "Functional-Design-Code",
+            "description": "UI governance path",
+            "example": "User Action → UI Component → React Component"
+          },
+          {
+            "path": "Functional-Architecture-Code",
+            "description": "Service governance path",
+            "example": "User Action → Service → API Implementation"
+          },
+          {
+            "path": "Cross-validation",
+            "description": "Compare all paths for consistency",
+            "example": "Validate multiple implementation paths"
+          }
+        ],
+        "cardinality": {
+          "title": "Cardinality Patterns",
+          "oneToOne": {
+            "title": "One-to-One",
+            "description": "Single Action maps to single Component or Code unit"
+          },
+          "oneToMany": {
+            "title": "One-to-Many",
+            "description": "Single Action implemented by multiple Components or Code units"
+          },
+          "manyToOne": {
+            "title": "Many-to-One",
+            "description": "Multiple Actions share same Component or Code unit"
+          },
+          "manyToMany": {
+            "title": "Many-to-Many",
+            "description": "Complex interactions across multiple dimensions"
+          }
+        }
+      },
+      "governance": {
+        "title": "Governance Analytics & Consistency Metrics",
+        "architectureConsistency": {
+          "title": "Architecture Consistency Metrics",
+          "adherence": {
+            "title": "Architecture Adherence",
+            "description": "% of Code units that properly realize Architecture services",
+            "formula": "(Code units with Architecture mapping / Total Code units) × 100"
+          },
+          "serviceGap": {
+            "title": "Service Implementation Gap",
+            "description": "Architecture services without Code implementations",
+            "formula": "Count of unmapped Architecture services"
+          },
+          "bypass": {
+            "title": "Direct Implementation Bypass",
+            "description": "Code units implementing Functional actions without Architecture services",
+            "formula": "Count of Functional→Code without Architecture path"
+          },
+          "fragmentation": {
+            "title": "Service Fragmentation",
+            "description": "Multiple Code implementations per Architecture service",
+            "formula": "Average Code units per Architecture service"
+          }
+        },
+        "designConsistency": {
+          "title": "Design Consistency Metrics",
+          "compliance": {
+            "title": "Design System Compliance",
+            "description": "% of Code units that render approved Design components",
+            "formula": "(Code units with Design mapping / UI Code units) × 100"
+          },
+          "patternFragmentation": {
+            "title": "Pattern Fragmentation",
+            "description": "Different Design implementations per Functional action",
+            "formula": "Count of Design patterns per Functional action"
+          },
+          "rogue": {
+            "title": "Rogue Implementations",
+            "description": "Code units bypassing Design system",
+            "formula": "Count of UI Code without Design mapping"
+          },
+          "utilization": {
+            "title": "Component Utilization",
+            "description": "% of Design components actually implemented",
+            "formula": "(Implemented Design components / Total Design components) × 100"
+          }
+        },
+        "crossOntology": {
+          "title": "Cross-Ontology Consistency Analysis",
+          "headers": {
+            "analysisType": "Analysis Type",
+            "description": "Description",
+            "detection": "Detection Method",
+            "action": "Action Required"
+          },
+          "rows": {
+            "complete": {
+              "type": "Complete Pathway",
+              "description": "Functional→Design→Code and Functional→Architecture→Code both exist",
+              "detection": "Cross-reference all mappings",
+              "action": "✅ Best practice"
+            },
+            "designBypass": {
+              "type": "Design Bypass",
+              "description": "Functional→Architecture→Code exists but no Design mapping",
+              "detection": "Missing Design relationships",
+              "action": "Create Design patterns"
+            },
+            "architectureBypass": {
+              "type": "Architecture Bypass",
+              "description": "Functional→Design→Code exists but no Architecture mapping",
+              "detection": "Missing Architecture relationships",
+              "action": "Define service layer"
+            },
+            "orphaned": {
+              "type": "Orphaned Code",
+              "description": "Code exists without any Functional mapping",
+              "detection": "Unmapped Code units",
+              "action": "Remove or map to function"
+            },
+            "conflicting": {
+              "type": "Conflicting Paths",
+              "description": "Different Code units for same Functional action via different paths",
+              "detection": "Multiple implementation paths",
+              "action": "Consolidate implementations"
+            }
+          }
+        }
+      },
+      "applications": {
+        "title": "Governance Applications",
+        "strategic": {
+          "title": "Strategic Initiatives",
+          "modernization": {
+            "label": "Application Modernization:",
+            "text": "Maintain Functional mappings while updating Design/Architecture/Code"
+          },
+          "rationalization": {
+            "label": "Portfolio Rationalization:",
+            "text": "Identify duplicate implementations and consolidation opportunities"
+          },
+          "crossModal": {
+            "label": "Cross-Modal Consistency:",
+            "text": "Ensure equivalent experiences across web, mobile, and API interfaces"
+          }
+        },
+        "quality": {
+          "title": "Quality Governance",
+          "standards": {
+            "label": "Implementation Standards:",
+            "text": "Ensure Code units follow established patterns for similar Functional Actions"
+          },
+          "complexity": {
+            "label": "Complexity Management:",
+            "text": "Monitor Code complexity relative to Functional scope"
+          },
+          "monitoring": {
+            "label": "Consistency Monitoring:",
+            "text": "Automated alerts for governance violations and architectural drift"
+          }
+        }
+      }
+    },
+    "agents": {
+      "title": "Agents Layer",
+      "header": {
+        "title": "Agents Layer Deep Dive",
+        "description": "The intelligence layer that provides autonomous coordination between user experience and services. This layer enables complex workflow orchestration, intelligent decision-making, and seamless multi-service coordination through specialized AI agents."
+      },
+      "layerPosition": {
+        "title": "Agents Layer in Architecture",
+        "uxLayer": {
+          "title": "User Experience Layer",
+          "description": "Frontend applications and user interfaces"
+        },
+        "agentsLayer": {
+          "title": "🤖 AGENTS LAYER",
+          "description": "Intelligent orchestration and autonomous decision-making"
+        },
+        "servicesLayer": {
+          "title": "Services Layer",
+          "description": "Business logic and platform capabilities"
+        },
+        "keyInnovationLabel": "Key Innovation:",
+        "keyInnovationText": "The Agents layer provides intelligent coordination between the User Experience layer and Services layer, enabling autonomous task completion and complex workflow orchestration."
+      },
+      "agentTypesSection": {
+        "title": "Four Types of Intelligent Agents",
+        "capabilitiesLabel": "Capabilities:",
+        "examplesLabel": "Examples:"
+      },
+      "agentTypes": {
+        "businessProcess": {
+          "type": "Business Process Agents",
+          "purpose": "Orchestrate complete end-to-end business workflows",
+          "capabilities": "Multi-step coordination, decision making, exception handling",
+          "examples": [
+            "Purchase Completion Agent",
+            "Customer Onboarding Agent",
+            "Incident Response Agent"
+          ]
+        },
+        "domain": {
+          "type": "Domain Agents",
+          "purpose": "Provide specialized intelligence within specific domains",
+          "capabilities": "Domain expertise, optimization, pattern recognition",
+          "examples": [
+            "Product Discovery Agent",
+            "System Optimization Agent",
+            "Risk Assessment Agent"
+          ]
+        },
+        "integration": {
+          "type": "Integration Agents",
+          "purpose": "Coordinate interactions with external systems",
+          "capabilities": "Protocol translation, error recovery, data transformation",
+          "examples": [
+            "External System Integration Agent",
+            "Partner API Agent",
+            "Legacy System Bridge Agent"
+          ]
+        },
+        "assistant": {
+          "type": "Assistant Agents",
+          "purpose": "Support user interactions and queries",
+          "capabilities": "Natural language processing, context understanding, task guidance",
+          "examples": [
+            "Customer Support Agent",
+            "Operations Assistant Agent",
+            "Developer Helper Agent"
+          ]
+        }
+      },
+      "orchestration": {
+        "title": "Agent Orchestration in Action",
+        "coordination": {
+          "title": "Service Coordination Flow",
+          "userRequest": "\"Complete my order for the red shoes\"",
+          "userRequestLabel": "User Request",
+          "agentName": "Purchase Completion Agent",
+          "agentDescription": "Receives request and orchestrates multiple services",
+          "services": [
+            "Product Service",
+            "Inventory Service",
+            "Payment Service",
+            "Shipping Service"
+          ],
+          "result": "Complete Order Confirmation",
+          "resultDescription": "with tracking info and delivery details"
+        },
+        "collaboration": {
+          "title": "Multi-Agent Collaboration",
+          "userRequest": "\"Find and order the best running shoes for my marathon training\"",
+          "userRequestLabel": "Complex User Request",
+          "agents": {
+            "discovery": {
+              "name": "Product Discovery Agent",
+              "description": "Analyzes preferences, finds recommendations"
+            },
+            "purchase": {
+              "name": "Purchase Completion Agent",
+              "description": "Handles order processing"
+            },
+            "support": {
+              "name": "Customer Support Agent",
+              "description": "Provides training advice and support"
+            }
+          }
+        },
+        "decisionMaking": {
+          "title": "Autonomous Decision Making",
+          "complication": "Order Processing Complication",
+          "complicationDescription": "Item out of stock, payment requires verification",
+          "agentDecisions": "Purchase Completion Agent Decisions",
+          "stockIssue": {
+            "title": "Stock Issue",
+            "description": "Find similar item, notify user, hold payment"
+          },
+          "paymentIssue": {
+            "title": "Payment Issue",
+            "description": "Initiate verification, send secure link, track progress"
+          },
+          "seamlessUx": "Seamless User Experience",
+          "seamlessUxDescription": "User sees alternative options and simple verification steps"
+        }
+      },
+      "benefits": {
+        "title": "Agents Layer Benefits",
+        "intelligence": {
+          "title": "Intelligence & Autonomy",
+          "orchestration": {
+            "label": "Intelligent Orchestration:",
+            "text": "Agents decide which services to call and in what order"
+          },
+          "problemSolving": {
+            "label": "Autonomous Problem Solving:",
+            "text": "Handle exceptions and edge cases without user intervention"
+          },
+          "adaptive": {
+            "label": "Adaptive Behavior:",
+            "text": "Learn and optimize orchestration patterns over time"
+          }
+        },
+        "uxArchitecture": {
+          "title": "User Experience & Architecture",
+          "enhancedUx": {
+            "label": "Enhanced UX:",
+            "text": "Complex processes appear as simple single interactions"
+          },
+          "contextPreservation": {
+            "label": "Context Preservation:",
+            "text": "Maintain conversation and task context across service calls"
+          },
+          "businessLogic": {
+            "label": "Business Logic Abstraction:",
+            "text": "Complex rules encapsulated in agents, not scattered across services"
+          }
+        }
+      },
+      "implementation": {
+        "title": "Implementation Considerations",
+        "technical": {
+          "title": "Technical Requirements",
+          "runtime": {
+            "title": "Agent Runtime Environment",
+            "description": "Scalable execution environment for agent processes"
+          },
+          "serviceDiscovery": {
+            "title": "Service Discovery & Communication",
+            "description": "Dynamic service registration and secure inter-service communication"
+          },
+          "stateManagement": {
+            "title": "State Management",
+            "description": "Persistent context and conversation state across agent interactions"
+          },
+          "monitoring": {
+            "title": "Monitoring & Observability",
+            "description": "Agent behavior tracking, performance metrics, and decision auditing"
+          }
+        },
+        "governance": {
+          "title": "Governance & Safety",
+          "boundaries": {
+            "title": "Decision Boundaries",
+            "description": "Clear limits on agent autonomy and escalation triggers"
+          },
+          "audit": {
+            "title": "Audit & Compliance",
+            "description": "Full traceability of agent decisions and actions"
+          },
+          "humanOversight": {
+            "title": "Human Oversight",
+            "description": "Mechanisms for human intervention and override capabilities"
+          },
+          "ethical": {
+            "title": "Ethical Guidelines",
+            "description": "Built-in ethical constraints and bias prevention measures"
+          }
+        }
+      }
+    }
+  },
+  "flow": {
+    "title": "Process Flow",
+    "overview": {
+      "title": "Process Overview",
+      "header": {
+        "title": "Breeze.AI Process Framework",
+        "prominentTitle": "Breeze.AI",
+        "subtitle": "Process Framework",
+        "description": "Our three-phase methodology transforms manual development into semantic engineering, implementing the theoretical concepts you've learned into practical development workflows."
+      },
+      "theoryToPractice": {
+        "title": "From Theory to Practice",
+        "semanticPrinciples": {
+          "title": "Semantic Engineer Principles",
+          "benefits": [
+            "Orchestrate autonomous agents",
+            "Design dynamic experiences",
+            "Create ethical frameworks",
+            "Govern agent ecosystems"
+          ]
+        },
+        "breezeImplementation": {
+          "title": "Breeze.AI Implementation",
+          "benefits": [
+            "Phase-based transformation methodology",
+            "Human-AI collaboration workflows",
+            "Continuous validation and oversight",
+            "Gradual automation with quality gates"
+          ]
+        }
+      },
+      "threePhase": {
+        "title": "Three-Phase Transformation",
+        "phase1": {
+          "title": "Phase 1",
+          "subtitle": "Manual-Heavy Validation",
+          "description": "15% Manual, 85% Automated - High human oversight with AI assistance for code generation and testing.",
+          "example": "Focus: Establishing trust and validation patterns while maintaining quality"
+        },
+        "phase2": {
+          "title": "Phase 2",
+          "subtitle": "Balanced Collaboration",
+          "description": "30% Manual, 70% Automated - Humans focus on design and orchestration while AI handles implementation.",
+          "example": "Focus: Semantic engineering practices with AI-human collaboration"
+        },
+        "phase3": {
+          "title": "Phase 3",
+          "subtitle": "AI-Led Implementation",
+          "description": "5% Manual, 95% Automated - Full semantic engineering with autonomous agents and human governance.",
+          "example": "Focus: Agent orchestration, ethical frameworks, and ecosystem governance"
+        }
+      }
+    },
+    "phase1": {
+      "title": "Phase 1: Foundation",
+      "configTitle": "Phase 1: Semantic Engineering Foundation"
+    },
+    "phase2": {
+      "title": "Phase 2: Evolution",
+      "configTitle": "Phase 2: Semantic Engineering Evolution"
+    },
+    "phase3": {
+      "title": "Phase 3: Semantic First",
+      "configTitle": "Phase 3: Semantic Engineering Mastery",
+      "completion": {
+        "title": "Process Complete!",
+        "description": "You've now seen the complete three-phase transformation from manual development to semantic engineering. The journey shows how software engineers can evolve into semantic engineers who orchestrate AI agents while maintaining quality and governance. Ready to start your transformation journey? Use the navigation above to explore how the Semantic Engineer principles connect with this practical framework."
+      }
+    }
+  }
+}

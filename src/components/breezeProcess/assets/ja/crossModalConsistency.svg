@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg viewBox="0 0 950 580" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" style="max-width: 100%; height: auto;">
+  <defs>
+    <linearGradient id="modalBg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f0f9ff;stop-opacity:1" />
+      <stop offset="33%" style="stop-color:#f3e8ff;stop-opacity:1" />
+      <stop offset="66%" style="stop-color:#dcfce7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fef3c7;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Arrow marker -->
+    <marker id="modalArrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,8 L8,4 z" fill="#6366f1"/>
+    </marker>
+  </defs>
+
+  <rect width="950" height="580" fill="url(#modalBg)"/>
+
+  <!-- Title -->
+  <text x="475" y="25" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#374151">クロスモーダルDesign一貫性: 同じ機能、異なる形態</text>
+
+  <!-- Central Functional Action -->
+  <rect x="375" y="60" width="200" height="60" rx="12" fill="#f3e8ff" stroke="#7c3aed" stroke-width="3"/>
+  <text x="475" y="85" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#7c3aed">🎯 Functionalアクション</text>
+  <text x="475" y="105" text-anchor="middle" font-family="Arial" font-size="14" fill="#6d28d9">&quot;商品購入の完了&quot;</text>
+
+  <!-- Web Implementation -->
+  <rect x="50" y="160" width="200" height="320" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="150" y="185" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#2563eb">💻 Webインターフェース</text>
+
+  <!-- Web Journey -->
+  <rect x="70" y="200" width="160" height="30" rx="4" fill="#ffffff" stroke="#2563eb" stroke-width="1"/>
+  <text x="150" y="220" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#1e40af">ジャーニー: ショッピング体験</text>
+
+  <!-- Web Flows -->
+  <rect x="70" y="240" width="160" height="50" rx="4" fill="#f8fafc" stroke="#2563eb" stroke-width="1"/>
+  <text x="150" y="255" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#1e40af">フロー:</text>
+  <text x="150" y="270" text-anchor="middle" font-family="Arial" font-size="9" fill="#1d4ed8">• 商品検索フロー</text>
+  <text x="150" y="282" text-anchor="middle" font-family="Arial" font-size="9" fill="#1d4ed8">• 購入フロー</text>
+
+  <!-- Web Pages -->
+  <rect x="70" y="300" width="160" height="60" rx="4" fill="#f1f5f9" stroke="#2563eb" stroke-width="1"/>
+  <text x="150" y="315" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#1e40af">ページ:</text>
+  <text x="150" y="328" text-anchor="middle" font-family="Arial" font-size="9" fill="#1d4ed8">• 検索結果ページ</text>
+  <text x="150" y="340" text-anchor="middle" font-family="Arial" font-size="9" fill="#1d4ed8">• 商品詳細ページ</text>
+  <text x="150" y="352" text-anchor="middle" font-family="Arial" font-size="9" fill="#1d4ed8">• チェックアウトページ</text>
+
+  <!-- Web Organisms -->
+  <rect x="70" y="370" width="160" height="50" rx="4" fill="#e2e8f0" stroke="#2563eb" stroke-width="1"/>
+  <text x="150" y="385" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#1e40af">オーガニズム:</text>
+  <text x="150" y="398" text-anchor="middle" font-family="Arial" font-size="9" fill="#1d4ed8">商品グリッド、ナビゲーションヘッダー</text>
+  <text x="150" y="410" text-anchor="middle" font-family="Arial" font-size="9" fill="#1d4ed8">決済フォーム、ショッピングカート</text>
+
+  <!-- Web Molecules & Atoms -->
+  <rect x="70" y="430" width="160" height="40" rx="4" fill="#cbd5e1" stroke="#2563eb" stroke-width="1"/>
+  <text x="150" y="445" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#1e40af">モレキュール＆アトム:</text>
+  <text x="150" y="458" text-anchor="middle" font-family="Arial" font-size="9" fill="#1d4ed8">商品カード、検索ボックス、ボタン</text>
+
+  <!-- Mobile Implementation -->
+  <rect x="270" y="160" width="200" height="320" rx="10" fill="#f3e8ff" stroke="#a855f7" stroke-width="2"/>
+  <text x="370" y="185" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#a855f7">📱 モバイルアプリ</text>
+
+  <!-- Mobile Journey -->
+  <rect x="290" y="200" width="160" height="30" rx="4" fill="#ffffff" stroke="#a855f7" stroke-width="1"/>
+  <text x="370" y="220" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#7c3aed">ジャーニー: ショッピング体験</text>
+
+  <!-- Mobile Flows -->
+  <rect x="290" y="240" width="160" height="50" rx="4" fill="#faf5ff" stroke="#a855f7" stroke-width="1"/>
+  <text x="370" y="255" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#7c3aed">フロー:</text>
+  <text x="370" y="270" text-anchor="middle" font-family="Arial" font-size="9" fill="#6d28d9">• タッチ最適化検索</text>
+  <text x="370" y="282" text-anchor="middle" font-family="Arial" font-size="9" fill="#6d28d9">• 簡易購入フロー</text>
+
+  <!-- Mobile Pages -->
+  <rect x="290" y="300" width="160" height="60" rx="4" fill="#f5f3ff" stroke="#a855f7" stroke-width="1"/>
+  <text x="370" y="315" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#7c3aed">画面:</text>
+  <text x="370" y="328" text-anchor="middle" font-family="Arial" font-size="9" fill="#6d28d9">• 検索画面</text>
+  <text x="370" y="340" text-anchor="middle" font-family="Arial" font-size="9" fill="#6d28d9">• 商品詳細画面</text>
+  <text x="370" y="352" text-anchor="middle" font-family="Arial" font-size="9" fill="#6d28d9">• チェックアウト画面</text>
+
+  <!-- Mobile Organisms -->
+  <rect x="290" y="370" width="160" height="50" rx="4" fill="#e9d5ff" stroke="#a855f7" stroke-width="1"/>
+  <text x="370" y="385" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#7c3aed">コンポーネント:</text>
+  <text x="370" y="398" text-anchor="middle" font-family="Arial" font-size="9" fill="#6d28d9">スワイプカード、タブナビゲーション</text>
+  <text x="370" y="410" text-anchor="middle" font-family="Arial" font-size="9" fill="#6d28d9">タッチフォーム、モバイルカート</text>
+
+  <!-- Mobile Molecules & Atoms -->
+  <rect x="290" y="430" width="160" height="40" rx="4" fill="#c4b5fd" stroke="#a855f7" stroke-width="1"/>
+  <text x="370" y="445" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#7c3aed">タッチ要素:</text>
+  <text x="370" y="458" text-anchor="middle" font-family="Arial" font-size="9" fill="#6d28d9">タッチボタン、ジェスチャーコントロール</text>
+
+  <!-- Voice Implementation -->
+  <rect x="490" y="160" width="200" height="320" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="590" y="185" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#16a34a">🎤 音声インターフェース</text>
+
+  <!-- Voice Journey -->
+  <rect x="510" y="200" width="160" height="30" rx="4" fill="#ffffff" stroke="#16a34a" stroke-width="1"/>
+  <text x="590" y="220" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#15803d">ジャーニー: 音声ショッピング</text>
+
+  <!-- Voice Flows -->
+  <rect x="510" y="240" width="160" height="50" rx="4" fill="#f0fdf4" stroke="#16a34a" stroke-width="1"/>
+  <text x="590" y="255" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#15803d">会話:</text>
+  <text x="590" y="270" text-anchor="middle" font-family="Arial" font-size="9" fill="#166534">• 商品検索ダイアログ</text>
+  <text x="590" y="282" text-anchor="middle" font-family="Arial" font-size="9" fill="#166534">• 購入確認</text>
+
+  <!-- Voice Pages -->
+  <rect x="510" y="300" width="160" height="60" rx="4" fill="#ecfdf5" stroke="#16a34a" stroke-width="1"/>
+  <text x="590" y="315" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#15803d">ダイアログ:</text>
+  <text x="590" y="328" text-anchor="middle" font-family="Arial" font-size="9" fill="#166534">• &quot;商品を検索して&quot;</text>
+  <text x="590" y="340" text-anchor="middle" font-family="Arial" font-size="9" fill="#166534">• &quot;この商品について教えて&quot;</text>
+  <text x="590" y="352" text-anchor="middle" font-family="Arial" font-size="9" fill="#166534">• &quot;購入を完了して&quot;</text>
+
+  <!-- Voice Organisms -->
+  <rect x="510" y="370" width="160" height="50" rx="4" fill="#d1fae5" stroke="#16a34a" stroke-width="1"/>
+  <text x="590" y="385" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#15803d">パターン:</text>
+  <text x="590" y="398" text-anchor="middle" font-family="Arial" font-size="9" fill="#166534">意図認識、確認</text>
+  <text x="590" y="410" text-anchor="middle" font-family="Arial" font-size="9" fill="#166534">エラー処理、コンテキスト</text>
+
+  <!-- Voice Molecules & Atoms -->
+  <rect x="510" y="430" width="160" height="40" rx="4" fill="#a7f3d0" stroke="#16a34a" stroke-width="1"/>
+  <text x="590" y="445" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#15803d">音声要素:</text>
+  <text x="590" y="458" text-anchor="middle" font-family="Arial" font-size="9" fill="#166534">プロンプト、レスポンス、コマンド</text>
+
+  <!-- API Implementation -->
+  <rect x="710" y="160" width="200" height="320" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="810" y="185" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#f59e0b">🔌 APIインターフェース</text>
+
+  <!-- API Journey -->
+  <rect x="730" y="200" width="160" height="30" rx="4" fill="#ffffff" stroke="#f59e0b" stroke-width="1"/>
+  <text x="810" y="220" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#d97706">ジャーニー: 統合フロー</text>
+
+  <!-- API Flows -->
+  <rect x="730" y="240" width="160" height="50" rx="4" fill="#fffbeb" stroke="#f59e0b" stroke-width="1"/>
+  <text x="810" y="255" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#d97706">ワークフロー:</text>
+  <text x="810" y="270" text-anchor="middle" font-family="Arial" font-size="9" fill="#b45309">• 商品検索API</text>
+  <text x="810" y="282" text-anchor="middle" font-family="Arial" font-size="9" fill="#b45309">• 注文処理API</text>
+
+  <!-- API Pages -->
+  <rect x="730" y="300" width="160" height="60" rx="4" fill="#fef7cd" stroke="#f59e0b" stroke-width="1"/>
+  <text x="810" y="315" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#d97706">エンドポイント:</text>
+  <text x="810" y="328" text-anchor="middle" font-family="Arial" font-size="9" fill="#b45309">GET /products/search</text>
+  <text x="810" y="340" text-anchor="middle" font-family="Arial" font-size="9" fill="#b45309">GET /products/{id}</text>
+  <text x="810" y="352" text-anchor="middle" font-family="Arial" font-size="9" fill="#b45309">POST /orders</text>
+
+  <!-- API Organisms -->
+  <rect x="730" y="370" width="160" height="50" rx="4" fill="#fed7aa" stroke="#f59e0b" stroke-width="1"/>
+  <text x="810" y="385" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#d97706">リソース:</text>
+  <text x="810" y="398" text-anchor="middle" font-family="Arial" font-size="9" fill="#b45309">商品リソース、注文リソース</text>
+  <text x="810" y="410" text-anchor="middle" font-family="Arial" font-size="9" fill="#b45309">ユーザーリソース、カートリソース</text>
+
+  <!-- API Molecules & Atoms -->
+  <rect x="730" y="430" width="160" height="40" rx="4" fill="#fdba74" stroke="#f59e0b" stroke-width="1"/>
+  <text x="810" y="445" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#d97706">データ要素:</text>
+  <text x="810" y="458" text-anchor="middle" font-family="Arial" font-size="9" fill="#b45309">JSONフィールド、スキーマタイプ</text>
+
+  <!-- Arrows from central function to implementations -->
+  <path d="M 375 90 L 250 180" stroke="#6366f1" stroke-width="2" fill="none" marker-end="url(#modalArrow)"/>
+  <path d="M 425 120 L 370 160" stroke="#6366f1" stroke-width="2" fill="none" marker-end="url(#modalArrow)"/>
+  <path d="M 525 120 L 590 160" stroke="#6366f1" stroke-width="2" fill="none" marker-end="url(#modalArrow)"/>
+  <path d="M 575 90 L 710 180" stroke="#6366f1" stroke-width="2" fill="none" marker-end="url(#modalArrow)"/>
+
+  <!-- Key insight -->
+  <rect x="200" y="510" width="550" height="50" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="475" y="530" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#7c3aed">重要な原則:</text>
+  <text x="475" y="548" text-anchor="middle" font-family="Arial" font-size="12" fill="#6b7280">同じ機能要件が各モダリティに最適化されたDesign実装にマッピングされます</text>
+  <text x="475" y="562" text-anchor="middle" font-family="Arial" font-size="11" fill="#9ca3af">プラットフォームの制約に適応しながら一貫した体験原則を維持</text>
+</svg>

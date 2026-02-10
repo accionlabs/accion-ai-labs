@@ -1,0 +1,2441 @@
+{
+  "showcase": {
+    "header": {
+      "title": "Solution Showcase",
+      "description": "Explore how our AI agents solve real enterprise challenges. Each solution represents actual implementations or proven capabilities ready for deployment."
+    },
+    "categories": {
+      "featuredDeepDives": "Featured Deep Dives",
+      "dataAnalytics": "Data & Analytics"
+    },
+    "labels": {
+      "keyCapabilities": "Key Capabilities",
+      "businessOutcomes": "Business Outcomes",
+      "caseStudy": "Case Study:",
+      "deepDive": "Deep Dive",
+      "exploreDeepDive": "Explore Deep Dive",
+      "learnMore": "Learn More"
+    },
+    "solutions": {
+      "productEngineering": {
+        "title": "Product Engineering",
+        "description": "Accelerate product engineering using semantic knowledge graphs, multi-stakeholder validation, and intelligent artifact generation.",
+        "capabilities": {
+          "semanticExtraction": "Semantic knowledge extraction from documents",
+          "multiStakeholder": "Multi-stakeholder validation workflows",
+          "automatedArtifact": "Automated artifact generation",
+          "continuousSprint": "Continuous sprint validation"
+        },
+        "outcomes": {
+          "fasterTime": "60% faster time to market",
+          "reducedAmbiguity": "85% reduction in ambiguity",
+          "fewerDefects": "40% fewer defects"
+        },
+        "caseStudy": "Enterprise SaaS Platform"
+      },
+      "appReengineering": {
+        "title": "Application Re-engineering",
+        "description": "Systematically modernize legacy applications using AI-powered analysis, multi-stakeholder validation, and continuous quality monitoring.",
+        "capabilities": {
+          "automatedDiscovery": "Automated discovery & assessment",
+          "multiStakeholder": "Multi-stakeholder validation",
+          "aiImplementation": "AI-powered implementation",
+          "continuousSprint": "Continuous sprint validation"
+        },
+        "outcomes": {
+          "fasterModernization": "70% faster modernization",
+          "costReduction": "60% cost reduction",
+          "fewerDefects": "40% fewer defects"
+        },
+        "caseStudy": "Phoenix CRM Modernization"
+      },
+      "portfolioRat": {
+        "title": "Portfolio Rationalization",
+        "description": "Intelligent agents that analyze multiple applications to identify overlaps, redundancies, and consolidation opportunities.",
+        "capabilities": {
+          "crossApp": "Cross-application analysis",
+          "overlapDetection": "Functional overlap detection",
+          "similarityScoring": "Component similarity scoring",
+          "migrationStrategy": "Migration strategy planning"
+        },
+        "outcomes": {
+          "maintenanceCost": "30% reduction in maintenance costs",
+          "eliminatedDuplicate": "Eliminated duplicate functionality",
+          "unifiedStack": "Unified technology stack"
+        },
+        "caseStudy": "Global E-commerce Platform"
+      },
+      "asimovMigration": {
+        "title": "ASIMOV Legacy Migration",
+        "description": "AI-powered application modernization platform using autonomous agents for code analysis, transformation, and cloud migration.",
+        "capabilities": {
+          "codeTranslation": "Automated code translation (COBOL to Java)",
+          "dependencyMapping": "Dependency mapping and analysis",
+          "incrementalMigration": "Incremental migration patterns",
+          "zeroDowntime": "Zero-downtime deployment"
+        },
+        "outcomes": {
+          "migrationTime": "70% reduction in migration time",
+          "costSavings": "60% cost savings",
+          "uptime": "99.9% uptime during migration"
+        },
+        "caseStudy": "Global Financial Institution"
+      },
+      "customerServiceAi": {
+        "title": "Customer Service AI",
+        "description": "Comprehensive autonomous support system with self-healing bots, agent augmentation, and business optimization.",
+        "capabilities": {
+          "selfHealBot": "Self Heal Bot for L0 automation",
+          "assistedHealBot": "Assisted Heal Bot for L1 agents",
+          "optimizationHub": "Business Optimization Hub",
+          "multiChannel": "Multi-channel support"
+        },
+        "outcomes": {
+          "autoResolution": "60% auto-resolution rate",
+          "agentProductivity": "150% agent productivity",
+          "costReduction": "40% cost reduction"
+        },
+        "caseStudy": "Fortune 500 Telecom"
+      },
+      "dataEngineering": {
+        "title": "Data Engineering",
+        "description": "AI-powered data pipeline optimization, quality management, and automated ETL processes.",
+        "capabilities": {
+          "qualityChecks": "Automated data quality checks",
+          "pipelineDesign": "Intelligent ETL pipeline design",
+          "anomalyDetection": "Real-time anomaly detection",
+          "lineageTracking": "Data lineage tracking"
+        },
+        "outcomes": {
+          "errorReduction": "80% reduction in data errors",
+          "fasterPipeline": "50% faster pipeline development",
+          "realTimeInsights": "Real-time data insights"
+        },
+        "caseStudy": "Enterprise Retail"
+      }
+    },
+    "cta": {
+      "title": "Ready to Transform Your Enterprise?",
+      "description": "These solutions represent just a fraction of what's possible. Let's discuss how AI agents can solve your specific challenges.",
+      "button": "Schedule a Consultation"
+    }
+  },
+  "dataEngineering": {
+    "header": {
+      "title": "Enterprise Data Transformation Platform",
+      "subtitle": "AI-Powered Data Engineering with Autonomous Agents",
+      "viewDeepDive": "View Deep Dive"
+    },
+    "hero": {
+      "title": "Autonomous Data Engineering at Scale",
+      "description": "Our AI-powered data platform employs specialized agents that autonomously manage the entire data lifecycle. From intelligent ingestion and real-time processing to automated governance and optimization, our agents ensure your data infrastructure runs at peak efficiency 24/7.",
+      "metrics": {
+        "processing": { "value": "10TB+", "label": "Hourly Processing" },
+        "uptime": { "value": "99.99%", "label": "Pipeline Uptime" },
+        "costReduction": { "value": "70%", "label": "Cost Reduction" },
+        "latency": { "value": "<100ms", "label": "Query Latency" }
+      },
+      "scheduleDemo": "Schedule Demo",
+      "viewCaseStudies": "View Case Studies",
+      "architectureTitle": "Agent-Driven Architecture"
+    },
+    "architecture": {
+      "layers": {
+        "dataSources": {
+          "name": "Data Sources",
+          "components": ["Databases", "APIs", "IoT Devices", "Files", "Streams"],
+          "color": "from-green-400 to-green-600"
+        },
+        "ingestionLayer": {
+          "name": "Ingestion Layer",
+          "components": ["Agent Collectors", "Schema Validators", "Format Converters"],
+          "color": "from-blue-400 to-blue-600"
+        },
+        "processingEngine": {
+          "name": "Processing Engine",
+          "components": ["Spark Agents", "Flink Processors", "Kafka Streams"],
+          "color": "from-purple-400 to-purple-600"
+        },
+        "storageLake": {
+          "name": "Storage & Lake",
+          "components": ["Delta Lake", "Iceberg Tables", "Vector Stores"],
+          "color": "from-indigo-400 to-indigo-600"
+        },
+        "analyticsAi": {
+          "name": "Analytics & AI",
+          "components": ["ML Pipelines", "BI Dashboards", "RAG Systems"],
+          "color": "from-pink-400 to-pink-600"
+        }
+      }
+    },
+    "agents": {
+      "title": "Specialized Data Agents",
+      "tabs": {
+        "ingestion": "Intelligent Data Ingestion",
+        "processing": "Autonomous Processing",
+        "governance": "Data Governance & Security"
+      },
+      "ingestion": {
+        "schemaDiscovery": {
+          "name": "Schema Discovery Agent",
+          "role": "Automatically detects and adapts to changing data schemas",
+          "capabilities": ["Dynamic schema inference", "Anomaly detection", "Format optimization"],
+          "performance": "10TB/hour processing"
+        },
+        "pipelineOrchestrator": {
+          "name": "Pipeline Orchestrator",
+          "role": "Manages complex ETL/ELT workflows autonomously",
+          "capabilities": ["Dependency resolution", "Failure recovery", "Load balancing"],
+          "performance": "99.99% uptime"
+        },
+        "qualityGuardian": {
+          "name": "Quality Guardian",
+          "role": "Ensures data quality through continuous validation",
+          "capabilities": ["Real-time validation", "Drift detection", "Auto-correction"],
+          "performance": "<0.01% error rate"
+        }
+      },
+      "processing": {
+        "transformation": {
+          "name": "Transformation Agent",
+          "role": "Applies complex business rules and transformations",
+          "capabilities": ["ML-based transformation", "Pattern recognition", "Optimization"],
+          "performance": "5x faster than traditional"
+        },
+        "aggregationOptimizer": {
+          "name": "Aggregation Optimizer",
+          "role": "Intelligently optimizes data aggregations and summaries",
+          "capabilities": ["Query optimization", "Caching strategies", "Parallel processing"],
+          "performance": "80% cost reduction"
+        },
+        "streamProcessor": {
+          "name": "Stream Processor",
+          "role": "Handles real-time data streams with low latency",
+          "capabilities": ["Event processing", "Window operations", "State management"],
+          "performance": "<100ms latency"
+        }
+      },
+      "governance": {
+        "complianceMonitor": {
+          "name": "Compliance Monitor",
+          "role": "Ensures regulatory compliance across all data operations",
+          "capabilities": ["GDPR/CCPA compliance", "Audit logging", "Policy enforcement"],
+          "performance": "100% compliance rate"
+        },
+        "lineageTracker": {
+          "name": "Lineage Tracker",
+          "role": "Maintains complete data lineage and impact analysis",
+          "capabilities": ["End-to-end tracking", "Impact prediction", "Version control"],
+          "performance": "Full transparency"
+        },
+        "securitySentinel": {
+          "name": "Security Sentinel",
+          "role": "Protects sensitive data through intelligent masking",
+          "capabilities": ["PII detection", "Dynamic masking", "Access control"],
+          "performance": "Zero breaches"
+        }
+      }
+    },
+    "successStories": {
+      "title": "Success Stories",
+      "labels": {
+        "challenge": "Challenge",
+        "solution": "Solution",
+        "keyMetrics": "Key Metrics"
+      },
+      "realTimeAnalytics": {
+        "title": "Real-Time Analytics Platform",
+        "industry": "E-Commerce",
+        "challenge": "Process 100M+ events daily with sub-second analytics",
+        "solution": "Multi-agent streaming architecture with intelligent caching",
+        "metricKeys": ["eventProcessing", "queryLatency", "costSavings", "dataAccuracy"],
+        "metrics": {
+          "eventProcessing": { "value": "150M/day", "label": "Event Processing" },
+          "queryLatency": { "value": "<50ms", "label": "Query Latency" },
+          "costSavings": { "value": "65%", "label": "Cost Savings" },
+          "dataAccuracy": { "value": "99.99%", "label": "Data Accuracy" }
+        }
+      },
+      "unifiedLakehouse": {
+        "title": "Unified Data Lakehouse",
+        "industry": "Financial Services",
+        "challenge": "Consolidate 50+ data sources into unified platform",
+        "solution": "Agent-orchestrated lakehouse with automated governance",
+        "metricKeys": ["sourcesIntegrated", "processingTime", "storageOptimization", "complianceScore"],
+        "metrics": {
+          "sourcesIntegrated": { "value": "73", "label": "Sources Integrated" },
+          "processingTime": { "value": "-85%", "label": "Processing Time" },
+          "storageOptimization": { "value": "70%", "label": "Storage Optimization" },
+          "complianceScore": { "value": "100%", "label": "Compliance Score" }
+        }
+      },
+      "iotPipeline": {
+        "title": "IoT Data Pipeline",
+        "industry": "Manufacturing",
+        "challenge": "Process sensor data from 10,000+ devices in real-time",
+        "solution": "Edge-to-cloud agent pipeline with predictive maintenance",
+        "metricKeys": ["devicesConnected", "anomalyDetection", "downtimeReduction", "roi"],
+        "metrics": {
+          "devicesConnected": { "value": "15,000", "label": "Devices Connected" },
+          "anomalyDetection": { "value": "<1s", "label": "Anomaly Detection" },
+          "downtimeReduction": { "value": "90%", "label": "Downtime Reduction" },
+          "roi": { "value": "450%", "label": "ROI" }
+        }
+      }
+    },
+    "implementation": {
+      "title": "Implementation Journey",
+      "phases": {
+        "assessment": {
+          "phase": "Assessment",
+          "weeks": "2-3",
+          "activities": ["Data landscape analysis", "Architecture review", "Requirements gathering"]
+        },
+        "design": {
+          "phase": "Design",
+          "weeks": "3-4",
+          "activities": ["Agent architecture design", "Pipeline blueprinting", "Security planning"]
+        },
+        "build": {
+          "phase": "Build",
+          "weeks": "8-12",
+          "activities": ["Agent development", "Pipeline construction", "Testing & validation"]
+        },
+        "deploy": {
+          "phase": "Deploy",
+          "weeks": "2-3",
+          "activities": ["Production rollout", "Monitoring setup", "Performance tuning"]
+        },
+        "optimize": {
+          "phase": "Optimize",
+          "weeks": "Ongoing",
+          "activities": ["Agent learning", "Cost optimization", "Scale management"]
+        }
+      }
+    }
+  },
+  "portfolioRationalization": {
+    "header": {
+      "title": "Portfolio Rationalization",
+      "viewDeepDive": "View Deep Dive",
+      "description": "AI-driven application portfolio analysis that identifies redundancies, overlaps, and consolidation opportunities across your entire software estate using our four-ontology semantic framework."
+    },
+    "hero": {
+      "title": "Optimize Your Application Portfolio",
+      "subtitle": "Semantic analysis reveals hidden redundancies and consolidation opportunities"
+    },
+    "metrics": {
+      "applications": { "value": "500+", "label": "Applications", "subtext": "Analyzed" },
+      "costReduction": { "value": "35%", "label": "Cost Reduction", "subtext": "Average savings" },
+      "redundancy": { "value": "42%", "label": "Redundancy", "subtext": "Identified overlaps" },
+      "timeToValue": { "value": "8 weeks", "label": "Time to Value", "subtext": "Full assessment" }
+    },
+    "framework": {
+      "title": "Four-Ontology Semantic Framework",
+      "layerLabel": "Layer",
+      "layers": {
+        "functional": {
+          "name": "Functional",
+          "description": "Business capabilities and user journeys",
+          "examples": ["Customer onboarding", "Order processing", "Payment handling"]
+        },
+        "design": {
+          "name": "Design",
+          "description": "System patterns and architectural decisions",
+          "examples": ["Microservices", "Event-driven", "API gateway"]
+        },
+        "architecture": {
+          "name": "Architecture",
+          "description": "Technology stack and infrastructure",
+          "examples": ["Cloud platforms", "Databases", "Message queues"]
+        },
+        "code": {
+          "name": "Code",
+          "description": "Implementation details and libraries",
+          "examples": ["Frameworks", "Dependencies", "Code patterns"]
+        }
+      }
+    },
+    "capabilities": {
+      "title": "Core Capabilities",
+      "semanticAnalysis": { "title": "Semantic Analysis", "description": "Deep understanding of application functionality across different technology stacks" },
+      "overlapDetection": { "title": "Overlap Detection", "description": "AI-powered identification of functional redundancies and duplications" },
+      "integrationMapping": { "title": "Integration Mapping", "description": "Comprehensive analysis of system dependencies and data flows" },
+      "consolidationPlanning": { "title": "Consolidation Planning", "description": "Strategic recommendations for application merger and retirement" }
+    },
+    "process": {
+      "title": "Rationalization Process",
+      "steps": {
+        "discovery": {
+          "title": "Discovery & Ingestion",
+          "description": "Automated discovery and semantic analysis of all applications in your portfolio",
+          "duration": "Duration: 1-2 weeks",
+          "metric": "500+ apps analyzed"
+        },
+        "overlap": {
+          "title": "Overlap Analysis",
+          "description": "AI-powered detection of functional redundancies across all four ontology layers",
+          "duration": "Duration: 2-3 weeks",
+          "metric": "42% average overlap found"
+        },
+        "consolidation": {
+          "title": "Consolidation Planning",
+          "description": "Strategic recommendations for application merger, modernization, or retirement",
+          "duration": "Duration: 1-2 weeks",
+          "metric": "Detailed roadmap provided"
+        },
+        "implementation": {
+          "title": "Implementation Support",
+          "description": "Ongoing guidance and automation support for portfolio optimization",
+          "duration": "Duration: Ongoing",
+          "metric": "35% cost reduction achieved"
+        }
+      }
+    },
+    "visualAnalysis": {
+      "title": "Visual Portfolio Analysis",
+      "coverageAnalysis": { "title": "Coverage Analysis", "analyzed": "Analyzed" },
+      "redundancyDetection": { "title": "Redundancy Detection", "overlaps": "Overlaps" },
+      "costSavings": { "title": "Cost Savings", "reduction": "Reduction" }
+    },
+    "agentTeams": {
+      "title": "Intelligent Agent Teams",
+      "discovery": {
+        "title": "Discovery Agents",
+        "description": "Crawl codebases and documentation to build semantic models",
+        "items": ["Code parsers", "API analyzers", "Doc extractors"]
+      },
+      "analysis": {
+        "title": "Analysis Agents",
+        "description": "Identify patterns, overlaps, and optimization opportunities",
+        "items": ["Pattern matchers", "Overlap detectors", "Cost analyzers"]
+      },
+      "planning": {
+        "title": "Planning Agents",
+        "description": "Generate consolidation strategies and migration paths",
+        "items": ["Strategy builders", "Risk assessors", "Roadmap generators"]
+      }
+    },
+    "successStory": {
+      "title": "Success Story",
+      "client": "Global E-commerce Platform",
+      "description": "Analyzed 500+ applications across multiple business units to identify consolidation opportunities",
+      "appsRetired": { "value": "127", "label": "Apps retired" },
+      "costReduction": { "value": "35%", "label": "Cost reduction" },
+      "fasterDelivery": { "value": "60%", "label": "Faster delivery" },
+      "timeToInsights": { "value": "8 weeks", "label": "To insights" }
+    }
+  },
+  "technicalDebt": {
+    "header": {
+      "title": "Technical Debt Management",
+      "viewDeepDive": "View Deep Dive",
+      "description": "AI-powered technical debt assessment and remediation platform that helps enterprises identify, quantify, and systematically eliminate technical debt while maintaining business continuity."
+    },
+    "hero": {
+      "title": "Transform Technical Debt into Strategic Advantage",
+      "subtitle": "Automated analysis, prioritization, and remediation at enterprise scale"
+    },
+    "metrics": {
+      "codeCoverage": { "value": "2M+ LOC", "label": "Code Coverage", "subtext": "Analyzed per day" },
+      "debtReduction": { "value": "47%", "label": "Debt Reduction", "subtext": "Average improvement" },
+      "timeSaved": { "value": "60%", "label": "Time Saved", "subtext": "In assessment phase" },
+      "roi": { "value": "3.2x", "label": "ROI", "subtext": "Within first year" }
+    },
+    "capabilities": {
+      "title": "Core Capabilities",
+      "codeAnalysis": { "title": "Autonomous Code Analysis", "description": "Multi-agent system analyzes millions of lines of code to identify debt patterns" },
+      "riskQuantification": { "title": "Risk Quantification", "description": "AI-powered risk scoring and business impact assessment" },
+      "predictiveAnalytics": { "title": "Predictive Analytics", "description": "Forecast technical debt accumulation and maintenance costs" },
+      "securityDetection": { "title": "Security Vulnerability Detection", "description": "Identify security risks and compliance violations in legacy code" }
+    },
+    "process": {
+      "title": "Implementation Process",
+      "phases": {
+        "discovery": {
+          "phase": "Discovery",
+          "duration": "1 week",
+          "activities": {
+            "codebaseScanning": "Codebase scanning",
+            "dependencyMapping": "Dependency mapping",
+            "architectureAnalysis": "Architecture analysis"
+          }
+        },
+        "assessment": {
+          "phase": "Assessment",
+          "duration": "2 weeks",
+          "activities": {
+            "debtQuantification": "Debt quantification",
+            "riskScoring": "Risk scoring",
+            "impactAnalysis": "Impact analysis"
+          }
+        },
+        "planning": {
+          "phase": "Planning",
+          "duration": "1 week",
+          "activities": {
+            "remediationRoadmap": "Remediation roadmap",
+            "priorityMatrix": "Priority matrix",
+            "resourcePlanning": "Resource planning"
+          }
+        },
+        "execution": {
+          "phase": "Execution",
+          "duration": "Ongoing",
+          "activities": {
+            "automatedRefactoring": "Automated refactoring",
+            "codeModernization": "Code modernization",
+            "continuousMonitoring": "Continuous monitoring"
+          }
+        }
+      }
+    },
+    "architecture": {
+      "title": "Multi-Agent Architecture",
+      "analysis": {
+        "title": "Analysis Agents",
+        "description": "Specialized agents for code parsing, pattern detection, and dependency analysis",
+        "agents": {
+          "codeParser": "Code Parser",
+          "patternDetector": "Pattern Detector",
+          "dependencyMapper": "Dependency Mapper"
+        }
+      },
+      "assessment": {
+        "title": "Assessment Agents",
+        "description": "Risk scoring, impact analysis, and prioritization algorithms",
+        "agents": {
+          "riskScorer": "Risk Scorer",
+          "impactAnalyzer": "Impact Analyzer",
+          "priorityEngine": "Priority Engine"
+        }
+      },
+      "remediation": {
+        "title": "Remediation Agents",
+        "description": "Automated refactoring, code generation, and migration planning",
+        "agents": {
+          "refactorBot": "Refactor Bot",
+          "codeGenerator": "Code Generator",
+          "migrationPlanner": "Migration Planner"
+        }
+      }
+    },
+    "successStories": {
+      "title": "Success Stories",
+      "financial": {
+        "title": "Fortune 500 Financial Services",
+        "description": "Reduced technical debt by 47% across 5M+ LOC legacy banking systems",
+        "faster": "60% faster",
+        "saved": "$2.3M saved"
+      },
+      "ecommerce": {
+        "title": "Global E-commerce Platform",
+        "description": "Modernized microservices architecture while maintaining 99.99% uptime",
+        "performance": "3x performance",
+        "downtime": "Zero downtime"
+      }
+    }
+  },
+  "productDevelopment": {
+    "title": "Product Development",
+    "subtitle": "Semantic-first product engineering",
+    "overview": {
+      "header": {
+        "title": "AI-Powered Product Engineering",
+        "description": "Accelerate product engineering from concept to code using semantic knowledge graphs, multi-stakeholder validation, and intelligent artifact generation"
+      },
+      "metrics": {
+        "fasterTime": { "metric": "60%", "label": "Faster Time to Market", "description": "Accelerated product launch cycles" },
+        "reducedAmbiguity": { "metric": "85%", "label": "Reduced Ambiguity", "description": "Clear, validated requirements" },
+        "fewerDefects": { "metric": "40%", "label": "Fewer Defects", "description": "TDD and continuous validation" },
+        "higherVelocity": { "metric": "70%", "label": "Higher Velocity", "description": "Parallel development workflows" }
+      },
+      "challenge": {
+        "title": "The Challenge: Manual Translation Tax",
+        "description": "Traditional product engineering suffers from the \"manual translation tax\" - the costly process of manually translating requirements between different stakeholder languages. Business requirements become functional specs, which become user stories, which become designs, which finally become code. Each translation introduces delays, ambiguity, and potential errors.",
+        "delays": { "title": "Weeks of Delays", "description": "Handoffs between teams slow everything down" },
+        "lostInTranslation": { "title": "Lost in Translation", "description": "Requirements drift as they move between roles" },
+        "technicalDebt": { "title": "Technical Debt", "description": "Implementation diverges from original intent" }
+      },
+      "capabilities": {
+        "title": "AI-Powered Development Capabilities",
+        "semanticExtraction": {
+          "title": "Semantic Knowledge Extraction",
+          "description": "AI agents analyze requirements, conversations, and diagrams to build comprehensive knowledge graphs",
+          "features": ["Multi-source document analysis", "Conversation transcript mining", "Diagram interpretation", "Four-ontology graph generation"]
+        },
+        "stakeholderValidation": {
+          "title": "Multi-Stakeholder Validation",
+          "description": "Generate role-specific artifacts for Product Owners, BAs, UX Designers, and Architects",
+          "features": ["Functional specifications for POs", "Epics & user stories for BAs", "User flow diagrams for UX", "Architecture diagrams for Architects"]
+        },
+        "artifactGeneration": {
+          "title": "Intelligent Artifact Generation",
+          "description": "Automated creation of design systems, prototypes, and test scripts from validated knowledge graphs",
+          "features": ["Design system & component libraries", "Interactive prototypes", "Gherkin/BDD test scripts", "Code generation for repetitive patterns"]
+        },
+        "sprintValidation": {
+          "title": "Continuous Sprint Validation",
+          "description": "Every sprint, agents compare updated graphs with baseline to catch drift and prevent technical debt",
+          "features": ["Automated graph extraction per sprint", "Drift detection and gap analysis", "Stakeholder re-validation triggers", "Technical debt prevention"]
+        }
+      },
+      "workflow": {
+        "title": "How It Works: End-to-End Workflow",
+        "step1": { "title": "Extract Knowledge Graphs", "description": "AI agents analyze requirements documents, conversation transcripts, diagrams, and other artifacts to automatically build four comprehensive ontology graphs: Functional, Design, Architecture, and Code." },
+        "step2": { "title": "Multi-Stakeholder Validation", "description": "Generate role-specific artifacts from the knowledge graphs. Product Owners validate functional specs, Business Analysts review epics/stories, UX Designers check user flows, and Architects approve system designs." },
+        "step3": { "title": "Generate Implementation Artifacts", "description": "Once validated, automatically generate design systems, interactive prototypes, Gherkin test scripts, and working code for repetitive patterns. Developers validate and extend the generated code." },
+        "step4": { "title": "Continuous Sprint Validation", "description": "Every sprint, agents extract updated knowledge graphs and compare them with the baseline. Any drift, gaps, or inconsistencies trigger stakeholder re-validation, preventing technical debt accumulation." }
+      },
+      "agentEcosystem": {
+        "title": "Multi-Agent Development Ecosystem",
+        "extraction": "Extraction Agents",
+        "validation": "Validation Agents",
+        "implementation": "Implementation Agents",
+        "continuous": "Continuous Validation",
+        "extractionAgents": {
+          "agent1": "Document Analyzer",
+          "agent2": "Conversation Mining Agent",
+          "agent3": "Diagram Interpreter",
+          "agent4": "Cross-Reference Validator"
+        },
+        "validationAgents": {
+          "agent1": "Functional Spec Generator",
+          "agent2": "User Story Writer",
+          "agent3": "UX Flow Mapper",
+          "agent4": "Architecture Validator"
+        },
+        "implementationAgents": {
+          "agent1": "Design System Generator",
+          "agent2": "Prototype Builder",
+          "agent3": "Test Script Writer",
+          "agent4": "Code Generator"
+        },
+        "continuousAgents": {
+          "agent1": "Graph Extraction Agent",
+          "agent2": "Drift Detection Agent",
+          "agent3": "Gap Analysis Agent",
+          "agent4": "Re-validation Trigger"
+        }
+      },
+      "benefits": {
+        "title": "Why This Matters",
+        "speedQuality": {
+          "title": "Speed & Quality",
+          "tdd": "Test-Driven Development:",
+          "tddDesc": "Gherkin scripts from day one ensure quality",
+          "parallel": "Parallel Workflows:",
+          "parallelDesc": "Design, architecture, and code progress simultaneously",
+          "faster": "Faster Iterations:",
+          "fasterDesc": "Changes propagate across all artifacts automatically"
+        },
+        "preventDebt": {
+          "title": "Prevent Technical Debt",
+          "continuous": "Continuous Validation:",
+          "continuousDesc": "Catch drift before it becomes debt",
+          "singleSource": "Single Source of Truth:",
+          "singleSourceDesc": "Knowledge graphs keep everyone aligned",
+          "automated": "Automated Drift Detection:",
+          "automatedDesc": "AI monitors implementation vs. design"
+        }
+      },
+      "nav": {
+        "explore": "Explore",
+        "extraction": { "label": "Knowledge Graph Extraction", "description": "See how we derive graphs from requirements" },
+        "validation": { "label": "Stakeholder Validation", "description": "Four validation tracks for different roles" },
+        "implementation": { "label": "Implementation Pipeline", "description": "Artifacts, prototypes, and code generation" }
+      }
+    },
+    "extraction": {
+      "title": "Knowledge Graph Extraction",
+      "subtitle": "Extract domain knowledge into graphs",
+      "backToOverview": "Back to Overview",
+      "header": { "title": "Knowledge Graph Extraction", "description": "How AI agents transform requirements, conversations, and diagrams into comprehensive knowledge graphs" },
+      "inputSources": {
+        "title": "Step 1: Multiple Input Sources",
+        "description": "Our AI agents can process diverse artifacts from your product development process:",
+        "examples": "Examples:",
+        "sources": {
+          "requirements": {
+            "title": "Requirements Documents",
+            "description": "PRDs, BRDs, functional specifications, and feature requests",
+            "examples": ["Product Requirements Documents (PRDs)", "Business Requirements Documents (BRDs)", "Feature request tickets", "Regulatory compliance documents"]
+          },
+          "conversations": {
+            "title": "Conversation Transcripts",
+            "description": "Meeting notes, stakeholder interviews, and brainstorming sessions",
+            "examples": ["Stakeholder interview transcripts", "Sprint planning recordings", "Design review discussions", "Customer feedback sessions"]
+          },
+          "visual": {
+            "title": "Visual Artifacts",
+            "description": "Wireframes, mockups, architecture diagrams, and flowcharts",
+            "examples": ["Figma/Sketch wireframes", "Architecture diagrams", "Process flowcharts", "Whiteboard photos"]
+          },
+          "existing": {
+            "title": "Existing Systems",
+            "description": "Current codebase, APIs, database schemas, and documentation",
+            "examples": ["Source code repositories", "API documentation", "Database schemas", "Legacy system documentation"]
+          }
+        }
+      },
+      "extraction": {
+        "title": "Step 2: AI-Powered Extraction",
+        "description": "Specialized agents work together to extract and structure knowledge:",
+        "agents": {
+          "documentAnalyzer": {
+            "name": "Document Analyzer",
+            "description": "Parses requirements documents to extract features, rules, and constraints",
+            "capabilities": ["Natural language understanding", "Entity extraction", "Requirement classification", "Dependency identification"]
+          },
+          "conversationMining": {
+            "name": "Conversation Mining Agent",
+            "description": "Analyzes meeting transcripts to capture decisions and action items",
+            "capabilities": ["Speaker identification", "Decision extraction", "Action item tracking", "Sentiment analysis"]
+          },
+          "diagramInterpreter": {
+            "name": "Diagram Interpreter",
+            "description": "Processes visual artifacts to extract structural and flow information",
+            "capabilities": ["Shape recognition", "Flow analysis", "Component identification", "Relationship mapping"]
+          },
+          "crossReferenceValidator": {
+            "name": "Cross-Reference Validator",
+            "description": "Ensures consistency across all extracted knowledge",
+            "capabilities": ["Contradiction detection", "Gap analysis", "Completeness checking", "Cross-source validation"]
+          }
+        }
+      },
+      "ontologies": {
+        "title": "Step 3: Four Comprehensive Ontologies",
+        "description": "The extraction process produces four interconnected knowledge graphs that capture different aspects of your product:",
+        "functional": {
+          "title": "Functional Ontology",
+          "description": "Captures business capabilities, features, user journeys, and business rules",
+          "extractedFrom": ["Requirements documents", "Stakeholder interviews", "Feature requests"]
+        },
+        "design": {
+          "title": "Design Ontology",
+          "description": "Maps screens, components, interactions, and user experience flows",
+          "extractedFrom": ["Wireframes and mockups", "UX research", "Design specifications"]
+        },
+        "architecture": {
+          "title": "Architecture Ontology",
+          "description": "Defines services, APIs, data models, and system dependencies",
+          "extractedFrom": ["Architecture diagrams", "API documentation", "System specifications"]
+        },
+        "code": {
+          "title": "Code Ontology",
+          "description": "Documents classes, methods, dependencies, and implementation patterns",
+          "extractedFrom": ["Source code analysis", "Code documentation", "Test specifications"]
+        }
+      },
+      "sampleGraph": "Sample Knowledge Graph:",
+      "relationships": "Relationships:",
+      "extractedFrom": "Extracted from:",
+      "crossOntology": {
+        "title": "Cross-Ontology Relationships",
+        "description": "The power of semantic engineering comes from connections between ontologies:",
+        "functionalDesign": { "title": "Functional → Design", "description": "Each functional requirement maps to specific UI screens and interactions", "example": "Example: \"User Authentication\" feature → Login Screen + Password Reset Flow" },
+        "designArchitecture": { "title": "Design → Architecture", "description": "UI components drive backend service and API requirements", "example": "Example: Login Screen → Auth Service + User API endpoints" },
+        "architectureCode": { "title": "Architecture → Code", "description": "System architecture defines implementation structure", "example": "Example: Auth Service → AuthController class + methods" },
+        "codeFunctional": { "title": "Code → Functional", "description": "Implementation validates that all features are covered", "example": "Example: AuthController → validates \"User Authentication\" is implemented" }
+      },
+      "benefits": {
+        "title": "Why Knowledge Graphs Matter",
+        "singleSource": { "title": "Single Source of Truth", "description": "All stakeholders work from the same validated knowledge graphs, eliminating miscommunication" },
+        "consistency": { "title": "Automatic Consistency", "description": "Changes to one ontology automatically suggest updates to related graphs" },
+        "traceability": { "title": "Traceability", "description": "Track every requirement from concept through design, architecture, to code" }
+      },
+      "nextStep": {
+        "title": "Next: Stakeholder Validation",
+        "description": "Once knowledge graphs are extracted, we generate role-specific artifacts for validation by Product Owners, Business Analysts, UX Designers, and Architects.",
+        "button": "View Validation Process"
+      }
+    },
+    "validation": {
+      "title": "Stakeholder Validation",
+      "subtitle": "Multi-stakeholder alignment",
+      "backToOverview": "Back to Overview",
+      "header": { "title": "Multi-Stakeholder Validation", "description": "Role-specific artifact generation and validation workflows ensure everyone stays aligned" },
+      "philosophy": {
+        "title": "Human-in-the-Loop Validation",
+        "description": "While AI agents extract and structure knowledge, human expertise is essential for validation. We generate tailored artifacts for each stakeholder role, allowing them to validate the aspects they own while maintaining consistency across all views.",
+        "roleViews": "Role-specific views",
+        "syncFeedback": "Synchronized feedback",
+        "singleSource": "Single source of truth"
+      },
+      "tracks": {
+        "title": "Four Validation Tracks",
+        "whatsIncluded": "What's Included:",
+        "validationWorkflow": "Validation Workflow:",
+        "samplePreview": "Sample Artifact Preview:",
+        "labels": { "feature": "Feature:", "acceptanceCriteria": "Acceptance Criteria:", "businessRules": "Business Rules:", "epic": "Epic:", "storyPoints": "Story Points:", "acceptance": "Acceptance:", "mainFlow": "Main Flow:", "alternativePaths": "Alternative Paths:", "apiEndpoints": "API Endpoints:", "dependencies": "Dependencies:" },
+        "po": {
+          "title": "Functional Specification",
+          "stakeholder": "Product Owner",
+          "artifact": "Functional Specification Document",
+          "description": "AI generates comprehensive functional specs from the knowledge graphs, organized around features and business rules that the Product Owner can validate.",
+          "includes": ["Feature descriptions with acceptance criteria", "Business rules and constraints", "User journey mappings", "Priority and dependency matrix", "Success metrics per feature"],
+          "workflow": [
+            { "step": "Generate", "description": "AI creates spec from knowledge graph" },
+            { "step": "Review", "description": "PO reviews features and rules" },
+            { "step": "Feedback", "description": "PO marks approvals and changes" },
+            { "step": "Update", "description": "Graph updates propagate to all views" }
+          ],
+          "sampleContent": {
+            "feature": "User Authentication",
+            "description": "Users can authenticate using email/password or OAuth providers (Google, GitHub). Session management with JWT tokens.",
+            "acceptanceCriteria": ["Users can register with email and password", "Users can login with valid credentials", "Users can authenticate via Google OAuth", "Invalid credentials show appropriate error messages"],
+            "businessRules": ["Passwords must be at least 8 characters with mixed case", "Account locks after 5 failed attempts for 30 minutes", "JWT tokens expire after 24 hours"]
+          }
+        },
+        "ba": {
+          "title": "Epics & User Stories",
+          "stakeholder": "Business Analyst",
+          "artifact": "Epic and User Story Collection",
+          "description": "AI decomposes the functional spec into properly structured epics and user stories with story points and acceptance criteria.",
+          "includes": ["Epics mapped to features", "User stories with story points", "Acceptance criteria per story", "Dependencies between stories", "Sprint planning suggestions"],
+          "workflow": [
+            { "step": "Decompose", "description": "AI creates epics and stories from spec" },
+            { "step": "Estimate", "description": "AI suggests story points" },
+            { "step": "Review", "description": "BA validates scope and estimates" },
+            { "step": "Refine", "description": "BA adjusts and approves" }
+          ],
+          "sampleContent": {
+            "epic": "User Authentication Epic",
+            "stories": [
+              { "title": "As a user, I can register with email and password", "points": 5, "acceptance": ["Registration form validates inputs", "Confirmation email is sent", "User is redirected to login"] },
+              { "title": "As a user, I can login with valid credentials", "points": 3, "acceptance": ["Login form accepts email/password", "JWT token is generated", "User is redirected to dashboard"] },
+              { "title": "As a user, I can reset my forgotten password", "points": 5, "acceptance": ["Reset link is sent via email", "New password meets requirements", "Old sessions are invalidated"] }
+            ]
+          }
+        },
+        "ux": {
+          "title": "User Flow Diagrams",
+          "stakeholder": "UX Designer",
+          "artifact": "User Flow and Interaction Map",
+          "description": "AI generates user flow diagrams from the design ontology, showing screen-by-screen navigation, interactions, and alternative paths.",
+          "includes": ["Screen-by-screen navigation flows", "Interaction specifications", "Error state handling", "Alternative and edge-case paths", "Accessibility considerations"],
+          "workflow": [
+            { "step": "Map Flows", "description": "AI generates flows from design ontology" },
+            { "step": "Visualize", "description": "Flows rendered as interactive diagrams" },
+            { "step": "Review", "description": "UX validates usability and completeness" },
+            { "step": "Iterate", "description": "UX refines flows and interactions" }
+          ],
+          "sampleContent": {
+            "flow": "User Flow: Login Authentication",
+            "steps": ["User navigates to login page", "User enters email and password", "System validates credentials", "On success: redirect to dashboard", "On failure: show error, allow retry"],
+            "alternativePaths": ["Forgot password flow", "OAuth provider selection", "Account lockout after failed attempts"]
+          }
+        },
+        "architect": {
+          "title": "Architecture Diagram",
+          "stakeholder": "Architect",
+          "artifact": "System Architecture Document",
+          "description": "AI generates architecture diagrams from the architecture ontology, showing services, APIs, data flows, and deployment topology.",
+          "includes": ["Service architecture diagrams", "API endpoint specifications", "Data model relationships", "Infrastructure requirements", "Security architecture"],
+          "workflow": [
+            { "step": "Design", "description": "AI generates architecture from ontology" },
+            { "step": "Analyze", "description": "Architect reviews service boundaries" },
+            { "step": "Validate", "description": "Architect checks scalability and security" },
+            { "step": "Approve", "description": "Architecture baseline is set" }
+          ],
+          "sampleContent": {
+            "component": "Component: Authentication Service",
+            "apis": ["POST /api/auth/register", "POST /api/auth/login", "POST /api/auth/refresh", "DELETE /api/auth/logout"],
+            "dependencies": ["User Database (PostgreSQL)", "Redis (Session Cache)", "Email Service (SendGrid)", "OAuth Providers (Google, GitHub)"]
+          }
+        }
+      },
+      "sprintValidation": {
+        "title": "Continuous Sprint Validation",
+        "description": "Initial validation is just the beginning. Every sprint, AI agents extract updated knowledge graphs from the evolving codebase and compare them with the validated baseline.",
+        "step1": { "title": "Extract Current State", "description": "At the end of each sprint, agents analyze the updated codebase and extract fresh knowledge graphs reflecting the current implementation." },
+        "step2": { "title": "Detect Drift & Gaps", "description": "AI compares current graphs with the baseline to identify drift (unintended deviations), gaps (missing implementations), and inconsistencies." },
+        "step3": { "title": "Trigger Re-Validation", "description": "Stakeholders are notified of significant changes and can validate whether drift is intentional or needs correction, preventing technical debt." },
+        "driftExample": {
+          "title": "Example: Drift Detection Alert",
+          "detectedChange": "Detected Change:",
+          "changeDescription": "New \"EmailService\" dependency added to AuthService",
+          "changeDetail": "This dependency was not in the original validated architecture diagram.",
+          "recommendedAction": "Recommended Action:",
+          "ifIntentional": "If intentional: Architect approves and updates baseline",
+          "ifUnintended": "If unintended: Developer removes dependency or seeks approval"
+        }
+      },
+      "benefits": {
+        "title": "Why Continuous Validation Matters",
+        "preventDebt": {
+          "title": "Prevent Technical Debt",
+          "items": ["Catch implementation drift before it becomes debt", "Ensure design and code stay in sync", "Document changes as they happen"]
+        },
+        "maintainQuality": {
+          "title": "Maintain Quality",
+          "items": ["Continuous validation improves code quality", "Test-driven development from validated specs", "Fewer post-launch defects"]
+        }
+      },
+      "nextStep": {
+        "title": "Next: Implementation Pipeline",
+        "description": "Once all stakeholders validate their artifacts, we move to implementation - generating design systems, prototypes, test scripts, and production-ready code.",
+        "button": "View Implementation Process"
+      }
+    },
+    "implementation": {
+      "title": "Implementation Pipeline",
+      "subtitle": "Continuous semantic delivery",
+      "backToOverview": "Back to Overview",
+      "header": { "title": "Implementation Pipeline", "description": "From validated knowledge graphs to production-ready artifacts and code" },
+      "gateway": {
+        "title": "Validation Gateway",
+        "description": "Implementation begins only after all four stakeholders (Product Owner, Business Analyst, UX Designer, Architect) have validated their respective artifacts. This ensures a solid, approved foundation before code generation.",
+        "functionalApproved": "Functional Specs Approved",
+        "storiesApproved": "User Stories Approved",
+        "flowsApproved": "User Flows Approved",
+        "architectureApproved": "Architecture Approved"
+      },
+      "artifacts": {
+        "title": "Automated Artifact Generation",
+        "generatedOutputs": "Generated Outputs:",
+        "keyBenefits": "Key Benefits:",
+        "sampleOutput": "Sample Output:",
+        "forLabel": "For:",
+        "design": {
+          "title": "Design Systems & Component Libraries",
+          "description": "AI generates comprehensive design systems from the validated design ontology, including component libraries, design tokens, and style guides.",
+          "stakeholder": "UX Designer / Frontend Developer",
+          "outputs": ["Component library with variants", "Design tokens (colors, spacing, typography)", "Responsive layout specifications", "Accessibility guidelines"],
+          "benefits": ["Consistent UI across the application", "Faster frontend development", "Design-code alignment", "Automated style documentation"],
+          "sample": {
+            "component": "Component: Button",
+            "variants": ["Primary", "Secondary", "Outline", "Ghost"],
+            "tokens": ["--color-primary: #10B981", "--font-size-sm: 0.875rem", "--spacing-md: 1rem", "--border-radius: 0.5rem"]
+          }
+        },
+        "prototype": {
+          "title": "Interactive Prototypes",
+          "description": "AI creates clickable prototypes from the user flow diagrams, enabling rapid user testing before development begins.",
+          "stakeholder": "UX Designer / Product Owner",
+          "outputs": ["Clickable screen prototypes", "Navigation flow simulation", "Interaction state previews", "User testing scripts"],
+          "benefits": ["Early user feedback", "Reduced development rework", "Stakeholder alignment", "Usability validation"],
+          "sample": {
+            "prototype": "Prototype: Login Flow",
+            "features": ["Interactive form fields with validation", "Error state demonstrations", "OAuth provider selection", "Success redirect animation"]
+          }
+        },
+        "tests": {
+          "title": "Gherkin / BDD Test Scripts",
+          "description": "AI generates comprehensive test scripts from the functional specifications, ensuring test-driven development from day one.",
+          "stakeholder": "QA Engineer / Business Analyst",
+          "outputs": ["Gherkin feature files", "Step definition templates", "Test data generators", "Coverage mapping to requirements"],
+          "benefits": ["Test-driven development from day one", "Requirements traceability", "Automated regression testing", "Living documentation"],
+          "sample": {
+            "feature": "User Authentication",
+            "scenarios": [
+              { "name": "Successful login", "steps": ["Given the user is on the login page", "When they enter valid email and password", "Then they are redirected to the dashboard", "And a JWT token is stored in cookies"] },
+              { "name": "Failed login with invalid password", "steps": ["Given the user is on the login page", "When they enter valid email but wrong password", "Then an error message is displayed", "And the failed attempt counter increments"] }
+            ]
+          }
+        },
+        "code": {
+          "title": "Generated Code & Scaffolding",
+          "description": "AI generates production-ready code for repetitive patterns following the validated architecture, allowing developers to focus on complex logic.",
+          "stakeholder": "Developer",
+          "outputs": ["API endpoint scaffolding", "Data model implementations", "CRUD operation templates", "Integration boilerplate"],
+          "benefits": ["Faster development startup", "Consistent code patterns", "Architecture compliance", "Reduced boilerplate work"],
+          "sample": {
+            "generated": "Generated: AuthController (from Architecture Ontology)"
+          }
+        }
+      },
+      "parallel": {
+        "title": "Parallel Development Workflows",
+        "description": "Manual and semantic (AI-assisted) development proceed in parallel, maximizing velocity while maintaining quality.",
+        "manual": {
+          "title": "Manual Development Track",
+          "description": "Developers work on complex, creative, and business-critical features that require human judgment.",
+          "items": ["Novel algorithms and business logic", "Complex integrations and workflows", "Performance optimization", "Security-critical components"]
+        },
+        "semantic": {
+          "title": "Semantic Development Track",
+          "description": "AI agents generate code for repetitive patterns following architecture and design guidelines.",
+          "items": ["CRUD operations and data access layers", "API endpoints and controllers", "Form validation and data models", "Boilerplate and scaffolding code"]
+        },
+        "timelineComparison": "Parallel Timeline Comparison",
+        "traditional": "Traditional Sequential Approach:",
+        "traditionalTimeline": "16-20 weeks typical timeline",
+        "breeze": "Breeze Parallel Approach:",
+        "breezeTimeline": "6-8 weeks typical timeline (60% faster)"
+      },
+      "agentEcosystem": {
+        "title": "Implementation Agent Ecosystem",
+        "design": "Design Agents",
+        "prototype": "Prototype Agents",
+        "test": "Test Agents",
+        "code": "Code Agents",
+        "designAgents": ["Style Guide Generator", "Component Library Builder", "Token System Creator", "Accessibility Checker"],
+        "prototypeAgents": ["Screen Generator", "Interaction Simulator", "Navigation Flow Builder", "User Test Script Writer"],
+        "testAgents": ["Gherkin Writer", "Step Definition Generator", "Test Data Builder", "Coverage Analyzer"],
+        "codeAgents": ["API Scaffolder", "Model Generator", "CRUD Template Builder", "Integration Code Writer"]
+      },
+      "outcomes": {
+        "title": "Key Outcomes",
+        "velocity": { "title": "70% Higher Velocity", "description": "Parallel workflows and code generation dramatically accelerate development" },
+        "defects": { "title": "40% Fewer Defects", "description": "TDD from day one and continuous validation ensure quality" },
+        "livingDocs": { "title": "Living Documentation", "description": "Knowledge graphs and artifacts stay synchronized with code" }
+      },
+      "cta": {
+        "title": "Learn More About Breeze.AI",
+        "description": "For a deeper dive into how manual and semantic development work together, explore our comprehensive Breeze.AI Deep Dive documentation.",
+        "button": "View Breeze Process Flow"
+      }
+    }
+  },
+  "appReengineering": {
+    "title": "Application Re-engineering",
+    "subtitle": "Legacy application modernization",
+    "overview": {
+      "header": {
+        "title": "Application Re-engineering",
+        "description": "Systematically modernize legacy applications using AI-powered analysis, multi-stakeholder validation, and continuous quality monitoring"
+      },
+      "challenge": {
+        "title": "The Re-engineering Challenge",
+        "description": "Legacy applications hold businesses back, but traditional re-engineering is risky, expensive, and often fails. Organizations face a difficult choice: live with mounting technical debt or risk a costly modernization that might break critical functionality.",
+        "annualSpend": { "title": "$85B Annually", "description": "US enterprises spend on technical debt" },
+        "slower": { "title": "23% Slower", "description": "Feature delivery in debt-heavy systems" },
+        "timeSpent": { "title": "60% of Time", "description": "Developers spend dealing with bad code" }
+      },
+      "metrics": {
+        "fasterModernization": { "metric": "70%", "label": "Faster Modernization", "description": "AI-powered assessment and automation" },
+        "costReduction": { "metric": "60%", "label": "Cost Reduction", "description": "Compared to traditional re-engineering" },
+        "fewerDefects": { "metric": "40%", "label": "Fewer Defects", "description": "Continuous validation prevents regressions" },
+        "zeroDowntime": { "metric": "0", "label": "Zero Downtime", "description": "Incremental deployment strategy" }
+      },
+      "capabilities": {
+        "title": "Complete Re-engineering Solution",
+        "discovery": {
+          "title": "Discovery & Assessment",
+          "description": "AI agents analyze your legacy codebase to build comprehensive knowledge graphs and identify technical debt",
+          "features": ["Automated codebase analysis", "Four-ontology knowledge extraction", "Technical debt categorization", "Impact and ROI assessment"]
+        },
+        "strategy": {
+          "title": "Re-engineering Strategy",
+          "description": "Multi-stakeholder validation ensures alignment on modernization goals and target architecture",
+          "features": ["Current vs. target architecture", "Multi-stakeholder validation tracks", "Phased re-engineering roadmap", "Risk mitigation planning"]
+        },
+        "implementation": {
+          "title": "Implementation & Modernization",
+          "description": "Parallel manual and AI-powered workflows accelerate modernization while maintaining quality",
+          "features": ["AI-powered refactoring", "Automated test generation", "Design system modernization", "Incremental deployment"]
+        },
+        "validation": {
+          "title": "Continuous Validation",
+          "description": "Sprint-by-sprint quality tracking ensures re-engineering improves quality without introducing new debt",
+          "features": ["Automated drift detection", "Quality score tracking", "Sprint-by-sprint comparison", "Stakeholder re-validation triggers"]
+        }
+      },
+      "journey": {
+        "title": "Systematic Re-engineering Journey",
+        "phases": {
+          "discovery": {
+            "phase": "Discovery & Assessment",
+            "duration": "2-3 weeks",
+            "description": "Comprehensive analysis of the legacy application using AI-powered knowledge extraction",
+            "activities": ["Codebase analysis", "Knowledge graph extraction", "Technical debt assessment", "Impact analysis"]
+          },
+          "strategy": {
+            "phase": "Re-engineering Strategy",
+            "duration": "2-3 weeks",
+            "description": "Multi-stakeholder planning to define target architecture and modernization roadmap",
+            "activities": ["Target architecture design", "Stakeholder validation", "Phased roadmap creation", "Risk assessment"]
+          },
+          "implementation": {
+            "phase": "Implementation & Modernization",
+            "duration": "8-16 weeks",
+            "description": "Parallel manual and AI-powered workflows execute the modernization plan",
+            "activities": ["AI-powered refactoring", "Manual expert work", "Test generation", "Incremental deployment"]
+          },
+          "continuous": {
+            "phase": "Continuous Validation",
+            "duration": "Ongoing per sprint",
+            "description": "Every sprint, validate that quality improves and architecture stays on target",
+            "activities": ["Drift detection", "Quality scoring", "Stakeholder reports", "Technical debt tracking"]
+          }
+        }
+      },
+      "caseStudy": {
+        "title": "Case Study: Phoenix CRM Modernization",
+        "description": "Phoenix CRM, an 8-year-old enterprise application with 500K lines of code, suffered from accumulated technical debt, mixed technology stacks, and inconsistent practices. We systematically re-engineered the application while maintaining 100% uptime and preserving all business functionality.",
+        "criticalIssues": { "value": "147", "label": "Critical Issues Fixed", "description": "Architecture violations resolved" },
+        "maintenanceCost": { "value": "35%", "label": "Maintenance Cost Reduction", "description": "After 6 months of re-engineering" },
+        "fasterDelivery": { "value": "50%", "label": "Faster Feature Delivery", "description": "Post-modernization velocity" }
+      },
+      "differentiators": {
+        "title": "Why Our Approach Works",
+        "riskMitigation": {
+          "title": "Risk Mitigation",
+          "incremental": "Incremental approach:",
+          "incrementalDesc": "Small, validated changes reduce risk",
+          "automated": "Automated testing:",
+          "automatedDesc": "Comprehensive test suite catches regressions",
+          "continuous": "Continuous validation:",
+          "continuousDesc": "Every sprint verifies quality improvements"
+        },
+        "acceleratedDelivery": {
+          "title": "Accelerated Delivery",
+          "ai": "AI automation:",
+          "aiDesc": "Automated refactoring for repetitive patterns",
+          "parallel": "Parallel workflows:",
+          "parallelDesc": "Manual + AI work happening simultaneously",
+          "living": "Living documentation:",
+          "livingDesc": "Automatically updated as code evolves"
+        }
+      },
+      "nav": {
+        "explore": "Explore",
+        "discovery": { "label": "Discovery & Assessment", "description": "Extract knowledge graphs and assess technical debt" },
+        "strategy": { "label": "Re-engineering Strategy", "description": "Multi-stakeholder planning and target architecture" },
+        "implementation": { "label": "Implementation & Modernization", "description": "AI-powered refactoring and artifact generation" },
+        "validation": { "label": "Continuous Validation", "description": "Sprint-by-sprint quality tracking and drift detection" }
+      }
+    },
+    "discovery": {
+      "backToOverview": "Back to Overview",
+      "header": { "title": "Discovery & Assessment", "description": "Comprehensive analysis of Phoenix CRM to understand current state and identify technical debt" },
+      "caseStudy": {
+        "title": "Case Study: Phoenix CRM",
+        "systemOverview": "System Overview",
+        "technicalStack": "Technical Stack",
+        "challenges": "Challenges",
+        "systemOverviewItems": ["8-year-old enterprise CRM application", "500,000+ lines of code", "150+ database tables", "45 third-party integrations"],
+        "technicalStackItems": ["Java 8 (outdated), Spring 3.x", "Mixed jQuery and React frontends", "Monolithic architecture", "Oracle Database + Redis cache"],
+        "challengesItems": ["Increasing maintenance costs", "Slow feature delivery (6+ weeks)", "Frequent production incidents", "Developer onboarding takes 3+ months"]
+      },
+      "ontologies": {
+        "functional": {
+          "title": "Functional Ontology",
+          "description": "Maps all business capabilities, user workflows, and business rules in Phoenix CRM",
+          "insights": ["47 distinct business capabilities identified", "23 user workflow paths mapped", "156 business rules documented", "12 redundant feature implementations found"]
+        },
+        "design": {
+          "title": "Design Ontology",
+          "description": "Captures all UI screens, components, interactions, and user experience patterns",
+          "insights": ["89 unique screens identified", "Mixed jQuery/React component patterns", "Inconsistent design language across modules", "15 duplicate UI components found"]
+        },
+        "architecture": {
+          "title": "Architecture Ontology",
+          "description": "Documents services, APIs, data models, and system dependencies in the monolith",
+          "insights": ["Monolithic architecture with tight coupling", "147 API endpoints, 34 undocumented", "Complex database with circular dependencies", "Missing service boundaries"]
+        },
+        "code": {
+          "title": "Code Ontology",
+          "description": "Analyzes classes, methods, dependencies, and implementation patterns at the code level",
+          "insights": ["500K+ lines of code analyzed", "Code duplication rate: 23%", "Test coverage: only 18%", "89 classes exceeding complexity thresholds"]
+        }
+      },
+      "debtCategories": {
+        "critical": {
+          "category": "Architecture Violations",
+          "description": "Structural issues that impact scalability and maintainability",
+          "examples": ["Circular dependencies between modules", "God classes exceeding 2000 lines", "Direct database access from UI layer", "Hardcoded configuration values"]
+        },
+        "codeQuality": {
+          "category": "Code Quality Issues",
+          "description": "Code patterns that reduce readability and increase bug risk",
+          "examples": ["Duplicated code blocks (23% duplication)", "Methods exceeding cyclomatic complexity of 20", "Inconsistent naming conventions", "Missing error handling in 45 methods"]
+        },
+        "missingTests": {
+          "category": "Missing Test Coverage",
+          "description": "Gaps in testing that increase regression risk",
+          "examples": ["Only 18% unit test coverage", "No integration tests for 60% of APIs", "Missing end-to-end test scenarios", "No performance test baselines"]
+        },
+        "performance": {
+          "category": "Performance & Scalability",
+          "description": "Issues impacting application performance and ability to scale",
+          "examples": ["N+1 query patterns in 34 endpoints", "Unoptimized database queries (12 over 5 seconds)", "Missing caching for frequently accessed data", "Synchronous processing for batch operations"]
+        }
+      },
+      "step1": {
+        "title": "Step 1: AI-Powered Knowledge Extraction",
+        "description": "Our AI agents analyzed Phoenix CRM's codebase to build comprehensive knowledge graphs across four dimensions. This process is fully automated and typically takes 2-4 hours for a 500K LOC application.",
+        "whatWeAnalyze": "What We Analyze",
+        "whatWeDiscover": "What We Discover",
+        "analyzeItems": ["Source code across all modules", "Database schemas and relationships", "API endpoints and contracts", "Configuration files and dependencies", "Test suites and coverage"],
+        "discoverItems": ["Business capabilities and rules", "Architecture patterns and violations", "Technical debt categories", "Security vulnerabilities", "Performance bottlenecks"]
+      },
+      "step2": {
+        "title": "Step 2: Explore Knowledge Graphs",
+        "description": "The extraction process produces four interconnected knowledge graphs that capture different aspects of Phoenix CRM:",
+        "keyInsights": "Key Insights from Phoenix CRM:",
+        "interactiveExplorer": "Interactive Explorer:",
+        "interactiveExplorerDesc": "Explore the full knowledge graph interactively in our Technical Debt Graph Explorer.",
+        "tryInteractive": "Try Interactive Explorer"
+      },
+      "step3": {
+        "title": "Step 3: Technical Debt Assessment",
+        "description": "By analyzing the knowledge graphs and comparing them against best practices, we identified and categorized technical debt across Phoenix CRM:",
+        "examples": "Examples:",
+        "impactAnalysis": {
+          "title": "Impact Analysis",
+          "description": "Our AI agents quantified the business impact of addressing this technical debt:",
+          "items": ["Projected 35% reduction in maintenance costs", "Estimated 50% improvement in feature delivery speed", "Expected 60% reduction in production incidents", "ROI breakeven in 6 months"]
+        }
+      },
+      "summary": {
+        "title": "Discovery Complete: What We Learned",
+        "comprehensive": { "title": "Comprehensive Understanding", "description": "Four complete ontology graphs documenting all aspects of the system" },
+        "issues": { "title": "782 Issues Identified", "description": "Categorized, prioritized, and quantified for impact" },
+        "roi": { "title": "Clear ROI Path", "description": "Projected 35% cost savings and 50% velocity improvement" },
+        "conclusion": "With a complete understanding of Phoenix CRM's current state and technical debt, we can now create a strategic re-engineering plan with validated stakeholder input."
+      },
+      "nextStep": {
+        "title": "Next: Re-engineering Strategy",
+        "description": "With comprehensive discovery complete, we'll create a strategic modernization plan with validation from all key stakeholders.",
+        "button": "View Re-engineering Strategy"
+      }
+    },
+    "strategy": {
+      "backToOverview": "Back to Overview",
+      "header": { "title": "Re-engineering Strategy", "description": "Strategic modernization plan with multi-stakeholder validation for Phoenix CRM" },
+      "philosophy": {
+        "title": "Validated Modernization Strategy",
+        "description": "Re-engineering succeeds when all stakeholders align on the target state. We generate role-specific artifacts from the discovered knowledge graphs, allowing each stakeholder to validate the aspects they own before implementation begins.",
+        "preserveValue": "Preserve business value",
+        "improveUx": "Improve user experience",
+        "modernizeArch": "Modernize architecture",
+        "eliminateDebt": "Eliminate technical debt"
+      },
+      "tracks": {
+        "title": "Four Validation Tracks",
+        "whatsIncluded": "What's Included:",
+        "phoenixExample": "Phoenix CRM Example:",
+        "business": {
+          "title": "Business Specification",
+          "stakeholder": "Business Owner",
+          "artifact": "Business Re-engineering Specification",
+          "description": "AI generates business specifications that preserve existing functionality while identifying modernization opportunities for the business owner to validate.",
+          "includes": ["Feature preservation checklist", "Business rule migration plan", "User impact assessment", "Modernization opportunities", "Risk mitigation for each change"],
+          "sample": "Phoenix CRM: All 47 business capabilities mapped with preservation status. 3 capabilities identified for enhancement during re-engineering."
+        },
+        "ba": {
+          "title": "Re-engineering Stories",
+          "stakeholder": "Business Analyst",
+          "artifact": "Re-engineering Epic & Story Collection",
+          "description": "AI decomposes the re-engineering plan into structured epics and stories, ensuring traceability from current state to target state.",
+          "includes": ["Re-engineering epics per module", "Migration stories with acceptance criteria", "Dependencies and sequencing", "Effort estimates per story", "Rollback criteria"],
+          "sample": "Phoenix CRM: 23 re-engineering epics created, decomposed into 156 stories. Average 5 story points per story."
+        },
+        "ux": {
+          "title": "UI/UX Modernization Plan",
+          "stakeholder": "UX Designer",
+          "artifact": "UI/UX Modernization Specification",
+          "description": "AI generates a UI/UX modernization plan that addresses design inconsistencies while preserving familiar workflows.",
+          "includes": ["Current UI pattern inventory", "Target design system specification", "Screen-by-screen migration plan", "Interaction improvements", "Accessibility compliance checklist"],
+          "sample": "Phoenix CRM: Unified design system replacing 3 inconsistent UI frameworks. 89 screens mapped to new component library."
+        },
+        "architect": {
+          "title": "Target Architecture",
+          "stakeholder": "Architect",
+          "artifact": "Target Architecture Document",
+          "description": "AI generates the target architecture based on discovered knowledge graphs, resolving identified architectural violations and technical debt.",
+          "includes": ["Service boundary definitions", "API modernization plan", "Data model migration strategy", "Infrastructure requirements", "Security architecture updates"],
+          "sample": "Phoenix CRM: Modular monolith with 8 bounded contexts, replacing tightly coupled monolith. 147 architecture violations resolved."
+        }
+      },
+      "architecture": {
+        "title": "Current vs. Target Architecture",
+        "current": "Current Architecture",
+        "target": "Target Architecture",
+        "migrationStrategy": "Migration Strategy:",
+        "currentItems": ["Monolithic Java application", "Tightly coupled modules", "Single Oracle database", "jQuery + mixed React frontend", "Manual deployment process"],
+        "targetItems": ["Modular monolith with clear boundaries", "Loosely coupled bounded contexts", "Database per context strategy", "Unified React frontend", "CI/CD pipeline with automated testing"],
+        "migrationStrategyDesc": "Strangler Fig pattern - incrementally replace modules while maintaining 100% uptime. Each module is migrated, validated, and deployed independently."
+      },
+      "roadmap": {
+        "title": "Phased Re-engineering Roadmap",
+        "description": "Incremental approach balances risk, value delivery, and business continuity:",
+        "risk": "Risk",
+        "phases": [
+          { "phase": "Foundation & Quick Wins", "duration": "Weeks 1-4", "focus": "Set up CI/CD, add test coverage, fix critical architecture violations", "deliverables": ["CI/CD pipeline", "Test harness", "Critical fixes", "Monitoring setup"], "risk": "Low" },
+          { "phase": "Module Extraction", "duration": "Weeks 5-12", "focus": "Extract first bounded context, establish service boundaries", "deliverables": ["First module extracted", "API contracts defined", "Database separated", "Integration tests"], "risk": "Medium" },
+          { "phase": "Frontend Modernization", "duration": "Weeks 9-16", "focus": "Unify frontend framework, implement design system", "deliverables": ["Unified React frontend", "Design system", "Component library", "UX improvements"], "risk": "Medium" },
+          { "phase": "Full Modernization", "duration": "Weeks 13-24", "focus": "Complete remaining module extractions, optimize performance", "deliverables": ["All modules extracted", "Performance optimized", "Full test coverage", "Documentation complete"], "risk": "Low" }
+        ]
+      },
+      "validationGateway": {
+        "title": "Validation Gateway",
+        "description": "Implementation begins only after all four stakeholders approve their respective artifacts. This ensures alignment on modernization goals, reduces rework, and mitigates risk.",
+        "approvals": ["Business Specs Approved", "Re-engineering Stories Approved", "UI/UX Plan Approved", "Target Architecture Approved"]
+      },
+      "nextStep": {
+        "title": "Next: Implementation & Modernization",
+        "description": "With a validated strategy in place, we'll execute the re-engineering using AI-powered automation and human expertise working in parallel.",
+        "button": "View Implementation Process"
+      }
+    },
+    "implementationModernization": {
+      "backToOverview": "Back to Overview",
+      "header": { "title": "Implementation & Modernization", "description": "AI-powered refactoring and modernization with parallel manual + automated workflows" },
+      "gateway": {
+        "title": "All Stakeholders Approved",
+        "description": "Implementation begins with validated target architecture and stakeholder alignment on modernization goals.",
+        "businessApproved": "Business Specs Approved",
+        "storiesApproved": "Re-engineering Stories Approved",
+        "uxApproved": "UI/UX Flows Approved",
+        "archApproved": "Target Architecture Approved"
+      },
+      "tracks": {
+        "title": "Four Modernization Tracks",
+        "outputs": "Outputs:",
+        "approach": "Approach:",
+        "design": {
+          "title": "UI/UX Modernization",
+          "description": "Replace inconsistent UI frameworks with a unified design system and modernized user experience",
+          "outputs": ["Unified React component library", "Design token system", "Modernized screen layouts", "Accessibility improvements"],
+          "approach": "Incremental screen-by-screen migration from jQuery/mixed frameworks to unified React components, using the validated design system as the source of truth."
+        },
+        "architecture": {
+          "title": "Architecture Modernization",
+          "description": "Transform the monolithic architecture into a modular monolith with clear service boundaries",
+          "outputs": ["Bounded context implementations", "API gateway configuration", "Database migration scripts", "Service communication patterns"],
+          "approach": "Strangler Fig pattern with module-by-module extraction. Each bounded context is extracted, tested, and deployed independently while maintaining backward compatibility."
+        },
+        "testing": {
+          "title": "Test Suite Generation",
+          "description": "Build comprehensive test coverage to ensure safe refactoring and prevent regressions",
+          "outputs": ["Unit test suites per module", "Integration test framework", "End-to-end test scenarios", "Performance test baselines"],
+          "approach": "AI generates tests from the functional and architecture ontologies, ensuring every business capability and API endpoint has coverage before refactoring begins."
+        },
+        "code": {
+          "title": "Code Refactoring",
+          "description": "Systematically refactor code to eliminate technical debt while preserving business logic",
+          "outputs": ["Refactored module code", "Updated dependency graph", "Code quality reports", "Migration documentation"],
+          "approach": "AI handles repetitive refactoring patterns (naming, structure, patterns) while developers focus on complex business logic changes and architectural decisions."
+        }
+      },
+      "parallel": {
+        "title": "Parallel Re-engineering Workflows",
+        "description": "Manual expert work and AI-powered automation proceed in parallel, maximizing velocity while maintaining quality.",
+        "manual": {
+          "title": "Expert Manual Work",
+          "description": "Developers focus on complex business logic, critical refactorings, and architectural decisions.",
+          "items": ["Complex business logic migration", "Architectural decisions and trade-offs", "Security-critical refactoring", "Third-party integration updates"]
+        },
+        "ai": {
+          "title": "AI-Powered Automation",
+          "description": "AI agents handle repetitive refactoring, test generation, and code quality improvements.",
+          "items": ["Automated test generation", "Code style and pattern refactoring", "API scaffolding and migration", "Documentation generation"]
+        },
+        "timelineComparison": "Timeline Comparison",
+        "traditional": "Traditional Re-engineering:",
+        "traditionalTimeline": "20-24 weeks typical timeline",
+        "breeze": "Breeze AI Re-engineering:",
+        "breezeTimeline": "12-16 weeks typical timeline (40% faster)"
+      },
+      "agentEcosystem": {
+        "title": "Re-engineering Agent Ecosystem",
+        "design": "Design Agents",
+        "architecture": "Architecture Agents",
+        "testing": "Testing Agents",
+        "refactoring": "Refactoring Agents",
+        "designAgents": ["Component Migrator", "Design Token Generator", "Layout Modernizer", "Accessibility Auditor"],
+        "architectureAgents": ["Module Extractor", "API Gateway Builder", "Database Migrator", "Dependency Resolver"],
+        "testingAgents": ["Unit Test Generator", "Integration Test Builder", "E2E Scenario Writer", "Performance Baseline Creator"],
+        "refactoringAgents": ["Code Pattern Updater", "Naming Convention Enforcer", "Dead Code Eliminator", "Dependency Updater"]
+      },
+      "outcomes": {
+        "title": "Implementation Outcomes",
+        "faster": { "title": "40% Faster", "description": "Parallel workflows dramatically accelerate re-engineering" },
+        "downtime": { "title": "0 Downtime", "description": "Incremental deployment with automated rollback" },
+        "livingDocs": { "title": "Living Docs", "description": "Documentation auto-updates as system evolves" }
+      },
+      "nextStep": {
+        "title": "Next: Continuous Validation",
+        "description": "During re-engineering, continuous sprint-by-sprint validation ensures we're actually improving quality and not introducing new technical debt.",
+        "button": "View Continuous Validation"
+      }
+    },
+    "continuousValidation": {
+      "backToOverview": "Back to Application Re-engineering",
+      "header": { "title": "Continuous Validation", "description": "Every sprint, validate that re-engineering improves quality without breaking functionality or drifting from target architecture" },
+      "challenge": {
+        "title": "Re-engineering Risk Without Validation",
+        "description": "Traditional re-engineering projects often fail because teams don't realize they're drifting from target architecture until it's too late. Without continuous validation, new technical debt accumulates during modernization, defeating the purpose of re-engineering.",
+        "silentDrift": { "title": "Silent Drift", "description": "Architecture violations undetected until code review" },
+        "newDebt": { "title": "New Debt Created", "description": "Re-engineering introduces different technical debt" },
+        "qualityUncertainty": { "title": "Quality Uncertainty", "description": "No objective measure if quality is actually improving" }
+      },
+      "process": {
+        "title": "Automated Sprint Validation Process",
+        "description": "At the end of each sprint, AI agents automatically extract the current state of your application and compare it with the target architecture and previous baseline to detect any drift.",
+        "automated": "Automated",
+        "totalTime": "Total Time: 65 minutes per sprint",
+        "totalTimeDetail": "Only 30 minutes of human time required. Automated analysis provides objective drift detection that would take hours of manual code review.",
+        "steps": [
+          { "step": "Extract Current Knowledge Graphs", "description": "AI agents analyze the updated codebase and extract fresh knowledge graphs reflecting the current implementation state.", "duration": "15 minutes", "automated": true },
+          { "step": "Compare with Baseline", "description": "Compare current graphs with the validated baseline to identify drift, gaps, and inconsistencies.", "duration": "10 minutes", "automated": true },
+          { "step": "Generate Drift Report", "description": "Produce a detailed report of all detected changes, categorized by severity and impact.", "duration": "5 minutes", "automated": true },
+          { "step": "Stakeholder Review", "description": "Relevant stakeholders review flagged changes and mark them as intentional or requiring correction.", "duration": "30 minutes", "automated": false },
+          { "step": "Update Baseline", "description": "Approved changes are incorporated into the baseline for the next sprint comparison.", "duration": "5 minutes", "automated": true }
+        ]
+      },
+      "dashboard": {
+        "title": "Sprint Progress Dashboard",
+        "sprintLabel": "Sprint",
+        "qualityScore": "Quality Score",
+        "driftIssues": "Drift Issues",
+        "issuesBySeverity": "Issues by Severity",
+        "critical": "Critical:",
+        "moderate": "Moderate:",
+        "low": "Low:",
+        "improvements": "Improvements",
+        "sprintData": [
+          { "sprint": 1, "quality": 42, "drift": 12, "issues": { "critical": 5, "moderate": 4, "low": 3 }, "improvements": ["CI/CD pipeline established", "Test harness deployed", "12 critical architecture violations fixed", "Monitoring and alerting configured"] },
+          { "sprint": 2, "quality": 58, "drift": 8, "issues": { "critical": 2, "moderate": 3, "low": 3 }, "improvements": ["First bounded context extracted (User Management)", "Unit test coverage increased to 35%", "Database migration for User module completed", "API documentation generated"] },
+          { "sprint": 3, "quality": 71, "drift": 5, "issues": { "critical": 1, "moderate": 2, "low": 2 }, "improvements": ["Second bounded context extracted (Order Management)", "Frontend migration started (React unified)", "Integration test suite expanded", "Performance baselines established"] },
+          { "sprint": 4, "quality": 82, "drift": 3, "issues": { "critical": 0, "moderate": 1, "low": 2 }, "improvements": ["Third bounded context extracted (Reporting)", "Design system fully implemented", "Test coverage reached 65%", "Zero critical architecture violations remaining"] },
+          { "sprint": 5, "quality": 91, "drift": 2, "issues": { "critical": 0, "moderate": 0, "low": 2 }, "improvements": ["All modules extracted and deployed", "Frontend fully migrated to React", "Test coverage at 82%", "Performance improved 40% across all endpoints"] }
+        ]
+      },
+      "driftDetection": {
+        "title": "Real Drift Detection Examples",
+        "description": "See how continuous validation caught issues during Phoenix CRM re-engineering that would have created significant technical debt if undetected.",
+        "whatDetected": "What Was Detected",
+        "impact": "Impact",
+        "actionTaken": "Action Taken",
+        "whatPrevented": "What We Prevented",
+        "examples": [
+          { "type": "Architecture Boundary Violation", "severity": "critical", "detected": "Sprint 2 - Automated detection", "description": "New direct database call from Order module bypassing the User Service API boundary", "impact": "Would have re-introduced tight coupling between modules that was being eliminated", "action": "Developer updated code to use the User Service API endpoint instead of direct DB access", "prevented": "Re-introduction of monolithic coupling pattern that was the primary cause of maintenance issues" },
+          { "type": "Missing Test Coverage", "severity": "moderate", "detected": "Sprint 3 - Automated detection", "description": "New payment processing endpoint added without corresponding integration tests", "impact": "Critical business flow would have no regression protection during future changes", "action": "AI agent generated integration tests from the functional ontology, developer reviewed and approved", "prevented": "Potential payment processing bugs in future sprints that could impact revenue" },
+          { "type": "Design System Deviation", "severity": "low", "detected": "Sprint 3 - Automated detection", "description": "Custom button component created instead of using the design system Button component", "impact": "UI inconsistency and increased maintenance burden from duplicate components", "action": "Developer replaced custom component with design system Button variant", "prevented": "Gradual accumulation of custom components that would undermine the unified design system" }
+        ]
+      },
+      "qualityTrends": {
+        "title": "Quality Improvement Trends",
+        "description": "Track objective quality metrics throughout the re-engineering process to ensure continuous improvement.",
+        "toTarget": "to target",
+        "baseline": "Baseline:",
+        "current": "Current:",
+        "target": "Target:",
+        "metrics": [
+          { "metric": "Test Coverage", "baseline": 18, "current": 72, "target": 85, "unit": "%" },
+          { "metric": "Code Duplication", "baseline": 23, "current": 8, "target": 5, "unit": "%" },
+          { "metric": "Architecture Compliance", "baseline": 34, "current": 89, "target": 95, "unit": "%" },
+          { "metric": "Performance Score", "baseline": 45, "current": 78, "target": 90, "unit": "/100" }
+        ]
+      },
+      "benefits": {
+        "title": "Why Continuous Validation Matters",
+        "immediateFeedback": {
+          "title": "Immediate Feedback",
+          "catchDrift": "Catch drift early:",
+          "catchDriftDesc": "Detect issues within days, not months",
+          "lowerCost": "Lower fix cost:",
+          "lowerCostDesc": "Issues are 10x cheaper to fix in same sprint",
+          "teamLearning": "Team learning:",
+          "teamLearningDesc": "Fast feedback improves future development"
+        },
+        "objectiveProof": {
+          "title": "Objective Quality Proof",
+          "measurable": "Measurable progress:",
+          "measurableDesc": "Track quality improvements sprint by sprint",
+          "stakeholder": "Stakeholder confidence:",
+          "stakeholderDesc": "Data-driven proof of modernization value",
+          "prevent": "Prevent backsliding:",
+          "preventDesc": "Ensure quality keeps improving, never degrades"
+        }
+      }
+    }
+  },
+  "asimov": {
+    "title": "ASIMOV Legacy Migration",
+    "subtitle": "AI-powered application modernization",
+    "overview": {
+      "header": {
+        "title": "ASIMOV Legacy Migration Platform",
+        "description": "Autonomous System for Intelligent Migration and Optimization - Transform legacy applications into modern, cloud-native architectures using AI-powered agents"
+      },
+      "capabilities": {
+        "title": "AI-Powered Migration Capabilities",
+        "discovery": {
+          "title": "AI-Powered Discovery",
+          "description": "Autonomous agents analyze legacy systems to create comprehensive knowledge graphs",
+          "features": ["Deep code analysis with LLM understanding", "Automatic dependency mapping", "Business logic extraction", "Hidden pattern discovery"]
+        },
+        "transformation": {
+          "title": "Intelligent Transformation",
+          "description": "Multi-agent orchestration for code modernization and optimization",
+          "features": ["Automated code refactoring", "Language translation (COBOL to Java)", "Architecture modernization", "Performance optimization"]
+        },
+        "cloudNative": {
+          "title": "Cloud-Native Migration",
+          "description": "Agent-driven containerization and cloud deployment strategies",
+          "features": ["Microservices extraction", "Container orchestration", "Auto-scaling configuration", "Infrastructure as code"]
+        },
+        "zeroRisk": {
+          "title": "Zero-Risk Execution",
+          "description": "Continuous validation and rollback capabilities ensure safe migration",
+          "features": ["Parallel run validation", "Automated testing generation", "Real-time monitoring", "Instant rollback capability"]
+        }
+      },
+      "methodology": {
+        "title": "Proven Migration Methodology",
+        "keyDeliverables": "Key Deliverables:",
+        "phases": {
+          "discoveryAssessment": { "phase": "Discovery & Assessment", "duration": "2-4 weeks", "description": "Comprehensive analysis of legacy landscape", "deliverables": ["Complete system inventory", "Dependency mapping", "Risk assessment matrix", "Migration roadmap"] },
+          "planningDesign": { "phase": "Planning & Design", "duration": "3-5 weeks", "description": "Detailed migration strategy and architecture", "deliverables": ["Target architecture blueprint", "Migration patterns catalog", "Resource allocation plan", "Success metrics definition"] },
+          "iterativeTransformation": { "phase": "Iterative Transformation", "duration": "3-6 months", "description": "Incremental modernization with continuous validation", "deliverables": ["Modernized components", "API interfaces", "Test automation suite", "Performance benchmarks"] },
+          "deploymentOptimization": { "phase": "Deployment & Optimization", "duration": "2-4 weeks", "description": "Production rollout and performance tuning", "deliverables": ["Production deployment", "Monitoring dashboards", "Optimization reports", "Knowledge transfer"] }
+        }
+      },
+      "valueProposition": {
+        "migrationTime": { "metric": "70%", "label": "Reduction in Migration Time", "description": "AI automation accelerates transformation" },
+        "codeCoverage": { "metric": "85%", "label": "Code Coverage", "description": "Automated testing ensures quality" },
+        "costSavings": { "metric": "60%", "label": "Cost Savings", "description": "Compared to traditional migration" },
+        "uptime": { "metric": "99.9%", "label": "Uptime During Migration", "description": "Zero-downtime deployment strategy" }
+      },
+      "agentEcosystem": {
+        "title": "Multi-Agent Migration Ecosystem",
+        "discovery": "Discovery Agents",
+        "transformation": "Transformation Agents",
+        "validation": "Validation Agents",
+        "discoveryAgents": ["Code Analysis Agent", "Dependency Mapper", "Business Logic Extractor", "Documentation Generator"],
+        "transformationAgents": ["Code Translator", "Refactoring Agent", "API Designer", "Test Generator"],
+        "validationAgents": ["Quality Validator", "Performance Monitor", "Security Scanner", "Compliance Checker"]
+      },
+      "nav": {
+        "explore": "Explore",
+        "discoveryAnalysis": "Discovery & Analysis",
+        "transformationEngine": "Transformation Engine",
+        "migrationPatterns": "Migration Patterns",
+        "successStories": "Success Stories"
+      }
+    },
+    "discovery": {
+      "title": "Discovery & Analysis",
+      "subtitle": "Deep legacy system analysis",
+      "header": { "title": "Discovery & Analysis Engine", "subtitle": "AI-powered deep analysis of legacy systems" },
+      "agents": {
+        "title": "Specialized Discovery Agents",
+        "capabilities": "Capabilities:",
+        "codeAnalysis": {
+          "name": "Code Analysis Agent", "description": "Deep semantic analysis of legacy code using LLMs",
+          "capabilities": ["Syntax parsing across 30+ languages", "Business logic extraction", "Code quality assessment", "Technical debt quantification"],
+          "metrics": { "linesAnalyzed": { "label": "Lines Analyzed", "value": "10M+" }, "accuracy": { "label": "Accuracy", "value": "95%" }, "speed": { "label": "Speed", "value": "100K LOC/hour" } }
+        },
+        "dependencyMapper": {
+          "name": "Dependency Mapper", "description": "Automatic discovery of system dependencies and integrations",
+          "capabilities": ["Database relationship mapping", "API dependency tracking", "Library version analysis", "External system identification"],
+          "metrics": { "dependenciesFound": { "label": "Dependencies Found", "value": "5000+" }, "depth": { "label": "Depth", "value": "10 levels" }, "coverage": { "label": "Coverage", "value": "99%" } }
+        },
+        "documentationGenerator": {
+          "name": "Documentation Generator", "description": "AI-powered documentation creation from code analysis",
+          "capabilities": ["Automatic API documentation", "Business process extraction", "Data flow diagrams", "System architecture docs"],
+          "metrics": { "pagesGenerated": { "label": "Pages Generated", "value": "1000+" }, "completeness": { "label": "Completeness", "value": "90%" }, "timeSaved": { "label": "Time Saved", "value": "80%" } }
+        },
+        "riskAssessment": {
+          "name": "Risk Assessment Bot", "description": "Identifies migration risks and complexity factors",
+          "capabilities": ["Security vulnerability detection", "Performance bottleneck analysis", "Compliance gap identification", "Migration complexity scoring"],
+          "metrics": { "risksIdentified": { "label": "Risks Identified", "value": "Avg 150" }, "falsePositives": { "label": "False Positives", "value": "<5%" }, "priorityAccuracy": { "label": "Priority Accuracy", "value": "92%" } }
+        }
+      },
+      "results": {
+        "title": "Analysis Results Dashboard",
+        "tabs": { "codebase": "Codebase Analysis", "dependencies": "Dependency Map", "risks": "Risk Assessment" },
+        "codebase": { "languageDistribution": "Language Distribution", "codeQualityMetrics": "Code Quality Metrics", "lines": "lines" },
+        "dependencies": { "systemDependencies": "System Dependencies", "libraryAnalysis": "Library Analysis", "critical": "Critical" },
+        "risks": { "criticalRisks": "Critical Risks", "complexityFactors": "Complexity Factors", "impactLabel": "Impact:", "probabilityLabel": "Probability:", "mitigationLabel": "Mitigation:" }
+      },
+      "process": {
+        "title": "Automated Discovery Process",
+        "activeAgents": "Active Agents:",
+        "stepLabel": "Step",
+        "steps": {
+          "initialScan": { "name": "Initial Scan", "duration": "2-3 days", "description": "Automated scanning of entire codebase and infrastructure", "agents": ["Code Scanner", "Infrastructure Mapper"] },
+          "deepAnalysis": { "name": "Deep Analysis", "duration": "1 week", "description": "LLM-powered analysis of business logic and patterns", "agents": ["Code Analysis Agent", "Pattern Recognition Bot"] },
+          "dependencyMapping": { "name": "Dependency Mapping", "duration": "3-4 days", "description": "Complete mapping of all system dependencies", "agents": ["Dependency Mapper", "Integration Analyzer"] },
+          "riskAssessment": { "name": "Risk Assessment", "duration": "2-3 days", "description": "Comprehensive risk analysis and mitigation planning", "agents": ["Risk Assessment Bot", "Compliance Checker"] },
+          "reportGeneration": { "name": "Report Generation", "duration": "1-2 days", "description": "Automated generation of analysis reports and recommendations", "agents": ["Documentation Generator", "Report Builder"] }
+        }
+      }
+    },
+    "transformation": {
+      "title": "Transformation Engine",
+      "subtitle": "Automated code transformation",
+      "header": { "title": "Transformation Engine", "subtitle": "AI-powered code transformation and modernization" },
+      "agents": {
+        "title": "Transformation Agents",
+        "coreCapabilities": "Core Capabilities:",
+        "codeTranslator": { "name": "Code Translator Agent", "description": "LLM-powered code translation between languages", "capabilities": ["COBOL to Java/C#/Python", "Semantic preservation", "Idiomatic code generation", "Performance optimization"], "performance": { "translationSpeed": { "label": "Translation Speed", "value": "50K LOC/day" }, "accuracy": { "label": "Accuracy", "value": "98%" }, "manualReview": { "label": "Manual Review", "value": "<5%" } } },
+        "refactoring": { "name": "Refactoring Agent", "description": "Intelligent code restructuring and optimization", "capabilities": ["Design pattern application", "Code smell elimination", "Performance improvements", "Security enhancements"], "performance": { "patternsApplied": { "label": "Patterns Applied", "value": "200+" }, "codeQuality": { "label": "Code Quality", "value": "+40%" }, "techDebt": { "label": "Tech Debt", "value": "-60%" } } },
+        "apiDesigner": { "name": "API Designer Agent", "description": "Automatic API layer generation and optimization", "capabilities": ["RESTful API generation", "GraphQL schema creation", "OpenAPI documentation", "Backward compatibility"], "performance": { "apisGenerated": { "label": "APIs Generated", "value": "500+" }, "documentation": { "label": "Documentation", "value": "100%" }, "compliance": { "label": "Compliance", "value": "Full" } } },
+        "testGenerator": { "name": "Test Generator Agent", "description": "Comprehensive test suite generation", "capabilities": ["Unit test creation", "Integration test design", "Performance test scripts", "Test data generation"], "performance": { "coverage": { "label": "Coverage", "value": "95%" }, "testCases": { "label": "Test Cases", "value": "10K+" }, "executionTime": { "label": "Execution Time", "value": "-30%" } } }
+      },
+      "patterns": {
+        "title": "Transformation Patterns",
+        "pipeline": "Transformation Pipeline",
+        "agentLabel": "Agent:",
+        "outputLabel": "Output:",
+        "cobolToJava": { "title": "COBOL to Java Transformation", "description": "Complete migration from mainframe COBOL to modern Java", "steps": { "codeAnalysis": { "phase": "Code Analysis", "description": "Parse COBOL programs and extract business logic", "agent": "COBOL Parser Agent", "output": "Abstract Syntax Tree" }, "patternMapping": { "phase": "Pattern Mapping", "description": "Map COBOL constructs to Java patterns", "agent": "Pattern Recognition Agent", "output": "Transformation Rules" }, "codeGeneration": { "phase": "Code Generation", "description": "Generate equivalent Java code", "agent": "Java Generator Agent", "output": "Java Source Code" }, "optimization": { "phase": "Optimization", "description": "Apply Java best practices and optimizations", "agent": "Optimization Agent", "output": "Optimized Java Code" }, "testing": { "phase": "Testing", "description": "Generate and execute comprehensive tests", "agent": "Test Generator Agent", "output": "Test Suite & Results" } }, "metrics": { "successRate": { "label": "Success Rate", "value": "95%" }, "performanceGain": { "label": "Performance Gain", "value": "+200%" }, "codeReduction": { "label": "Code Reduction", "value": "40%" }, "timeSaved": { "label": "Time Saved", "value": "70%" } } },
+        "monolithToMicroservices": { "title": "Monolith to Microservices", "description": "Decompose monolithic applications into microservices", "steps": { "domainAnalysis": { "phase": "Domain Analysis", "description": "Identify bounded contexts and service boundaries", "agent": "Domain Analyzer Agent", "output": "Service Map" }, "dependencyExtraction": { "phase": "Dependency Extraction", "description": "Extract and isolate dependencies", "agent": "Dependency Agent", "output": "Dependency Graph" }, "serviceGeneration": { "phase": "Service Generation", "description": "Create individual microservices", "agent": "Service Generator Agent", "output": "Microservices" }, "apiCreation": { "phase": "API Creation", "description": "Generate inter-service communication APIs", "agent": "API Designer Agent", "output": "API Contracts" }, "containerization": { "phase": "Containerization", "description": "Package services in containers", "agent": "Container Agent", "output": "Docker Images" } }, "metrics": { "servicesCreated": { "label": "Services Created", "value": "Avg 25" }, "deploymentSpeed": { "label": "Deployment Speed", "value": "+10x" }, "scalability": { "label": "Scalability", "value": "Infinite" }, "maintenance": { "label": "Maintenance", "value": "-50%" } } },
+        "databaseModernization": { "title": "Database Modernization", "description": "Migrate legacy databases to modern platforms", "steps": { "schemaAnalysis": { "phase": "Schema Analysis", "description": "Analyze existing database schema", "agent": "Schema Analyzer Agent", "output": "Schema Report" }, "dataProfiling": { "phase": "Data Profiling", "description": "Profile data patterns and quality", "agent": "Data Profiler Agent", "output": "Data Quality Report" }, "schemaTransformation": { "phase": "Schema Transformation", "description": "Transform schema for target database", "agent": "Schema Transformer Agent", "output": "New Schema" }, "dataMigration": { "phase": "Data Migration", "description": "Migrate data with validation", "agent": "Data Migration Agent", "output": "Migrated Data" }, "performanceTuning": { "phase": "Performance Tuning", "description": "Optimize queries and indexes", "agent": "Performance Agent", "output": "Optimized Database" } }, "metrics": { "dataIntegrity": { "label": "Data Integrity", "value": "100%" }, "queryPerformance": { "label": "Query Performance", "value": "+300%" }, "storageReduction": { "label": "Storage Reduction", "value": "40%" }, "downtime": { "label": "Downtime", "value": "Zero" } } }
+      },
+      "tools": {
+        "title": "AI-Powered Tools",
+        "llmCodeAnalyzer": { "name": "LLM Code Analyzer", "description": "GPT-4 powered code understanding", "features": ["Semantic analysis", "Intent extraction", "Pattern recognition"] },
+        "astProcessor": { "name": "AST Processor", "description": "Abstract Syntax Tree manipulation", "features": ["Parse trees", "Code transformation", "Syntax validation"] },
+        "semanticPreserver": { "name": "Semantic Preserver", "description": "Maintains business logic integrity", "features": ["Logic validation", "Behavior testing", "Regression prevention"] },
+        "performanceOptimizer": { "name": "Performance Optimizer", "description": "Automatic performance improvements", "features": ["Algorithm optimization", "Memory management", "Query tuning"] }
+      }
+    },
+    "patterns": {
+      "title": "Migration Patterns",
+      "subtitle": "Proven migration strategies",
+      "header": { "title": "Migration Patterns", "subtitle": "Proven patterns for successful legacy modernization" },
+      "select": "Select Migration Pattern",
+      "bestFor": "Best For:",
+      "approach": "Migration Approach:",
+      "benefits": "Key Benefits:",
+      "agents": "Specialized Agents:",
+      "timeline": "Timeline",
+      "riskLevel": "Risk Level",
+      "complexity": "Complexity",
+      "riskLevels": { "low": "Low", "medium": "Medium", "high": "High", "veryLow": "Very Low" },
+      "complexityLevels": { "low": "Low", "medium": "Medium", "high": "High" },
+      "migrationPatterns": {
+        "stranglerFig": { "name": "Strangler Fig Pattern", "description": "Gradually replace legacy system components with modern services", "bestFor": "Large monolithic applications with complex business logic", "approach": ["Identify module boundaries in legacy system", "Create new service alongside legacy", "Route traffic to new service incrementally", "Decommission legacy component when ready"], "benefits": ["Zero downtime migration", "Incremental risk management", "Rollback capability at each step", "Continuous value delivery"], "agents": { "boundaryIdentifier": { "name": "Boundary Identifier Agent", "role": "Discovers natural service boundaries" }, "trafficRouter": { "name": "Traffic Router Agent", "role": "Manages gradual traffic migration" }, "validation": { "name": "Validation Agent", "role": "Ensures functional parity" }, "decommission": { "name": "Decommission Agent", "role": "Safely removes legacy components" } }, "timeline": "6-18 months", "riskLevel": "Low", "complexity": "Medium" },
+        "bigBang": { "name": "Big Bang Migration", "description": "Complete system replacement in a single coordinated effort", "bestFor": "Small to medium systems with well-defined boundaries", "approach": ["Complete analysis and planning phase", "Build entire new system in parallel", "Comprehensive testing and validation", "Single cutover to new system"], "benefits": ["Faster overall migration", "Clean architecture from start", "No hybrid state management", "Lower long-term complexity"], "agents": { "fullSystemAnalyzer": { "name": "Full System Analyzer", "role": "Complete system understanding" }, "parallelBuilder": { "name": "Parallel Builder Agent", "role": "Constructs new system" }, "cutoverOrchestrator": { "name": "Cutover Orchestrator", "role": "Manages transition" }, "rollbackManager": { "name": "Rollback Manager", "role": "Handles failure scenarios" } }, "timeline": "3-6 months", "riskLevel": "High", "complexity": "Low" },
+        "parallelRun": { "name": "Parallel Run Pattern", "description": "Run old and new systems simultaneously for validation", "bestFor": "Mission-critical systems requiring zero data loss", "approach": ["Deploy new system alongside legacy", "Duplicate all transactions to both systems", "Compare outputs for validation", "Switch primary system after confidence"], "benefits": ["100% validation before switch", "No data loss risk", "Performance comparison", "Gradual team training"], "agents": { "transactionDuplicator": { "name": "Transaction Duplicator", "role": "Copies all operations" }, "outputComparator": { "name": "Output Comparator", "role": "Validates results match" }, "discrepancyResolver": { "name": "Discrepancy Resolver", "role": "Handles mismatches" }, "switchoverAgent": { "name": "Switchover Agent", "role": "Manages final transition" } }, "timeline": "4-8 months", "riskLevel": "Very Low", "complexity": "High" },
+        "databaseFirst": { "name": "Database-First Migration", "description": "Modernize data layer before application transformation", "bestFor": "Data-centric applications with complex schemas", "approach": ["Migrate to modern database platform", "Implement data abstraction layer", "Gradually modernize application logic", "Optimize for new database capabilities"], "benefits": ["Immediate performance gains", "Simplified application migration", "Better data governance", "Cloud-ready data platform"], "agents": { "schemaMigration": { "name": "Schema Migration Agent", "role": "Transforms database schema" }, "dataSync": { "name": "Data Sync Agent", "role": "Maintains data consistency" }, "queryOptimizer": { "name": "Query Optimizer", "role": "Rewrites and optimizes queries" }, "performanceMonitor": { "name": "Performance Monitor", "role": "Tracks migration impact" } }, "timeline": "3-9 months", "riskLevel": "Medium", "complexity": "Medium" },
+        "hybridBridge": { "name": "Hybrid Bridge Pattern", "description": "Create integration layer between old and new systems", "bestFor": "Systems with extensive third-party integrations", "approach": ["Build API bridge layer", "Migrate components behind bridge", "Maintain backward compatibility", "Gradually deprecate legacy APIs"], "benefits": ["No integration disruption", "Flexible migration schedule", "API modernization", "Partner system compatibility"], "agents": { "apiBridgeBuilder": { "name": "API Bridge Builder", "role": "Creates compatibility layer" }, "protocolTranslator": { "name": "Protocol Translator", "role": "Handles format conversions" }, "integrationMonitor": { "name": "Integration Monitor", "role": "Tracks API usage" }, "deprecationManager": { "name": "Deprecation Manager", "role": "Manages API lifecycle" } }, "timeline": "6-12 months", "riskLevel": "Low", "complexity": "High" }
+      },
+      "comparison": { "title": "Pattern Comparison Matrix", "factor": "Factor", "factors": { "migrationSpeed": "Migration Speed", "riskLevel": "Risk Level", "costEfficiency": "Cost Efficiency", "complexity": "Complexity" } },
+      "implementationProcess": { "title": "Pattern Implementation Process", "stepLabel": "Step", "steps": { "patternSelection": { "title": "Pattern Selection", "description": "AI agents analyze system and recommend optimal pattern", "duration": "1 week" }, "architectureDesign": { "title": "Architecture Design", "description": "Design target architecture based on selected pattern", "duration": "2-3 weeks" }, "agentConfiguration": { "title": "Agent Configuration", "description": "Configure and train specialized migration agents", "duration": "1-2 weeks" }, "pilotMigration": { "title": "Pilot Migration", "description": "Execute pattern on pilot component for validation", "duration": "2-4 weeks" }, "fullExecution": { "title": "Full Execution", "description": "Roll out pattern across entire system", "duration": "3-12 months" } } }
+    },
+    "successStories": {
+      "title": "Success Stories",
+      "subtitle": "Case studies and results",
+      "header": { "title": "Success Stories", "subtitle": "Real-world transformations powered by ASIMOV" },
+      "platformMetrics": "Platform Impact Metrics",
+      "featured": "Featured Success Stories",
+      "challenge": "Challenge",
+      "solution": "Solution",
+      "results": "Results",
+      "timeToMarket": "Time to Market",
+      "costSavings": "Cost Savings",
+      "performance": "Performance",
+      "availability": "Availability",
+      "additionalBenefits": "Additional Benefits:",
+      "industryDistribution": "Industry Distribution",
+      "projectsByIndustry": "Projects by Industry",
+      "whySucceeds": "Why ASIMOV Succeeds",
+      "projects": "projects",
+      "aggregateMetrics": {
+        "totalProjects": { "value": "500+", "label": "Total Projects" },
+        "averageTimeSaved": { "value": "70%", "label": "Average Time Saved" },
+        "totalCostSavings": { "value": "$2B+", "label": "Total Cost Savings" },
+        "successRate": { "value": "98%", "label": "Success Rate" },
+        "linesOfCodeMigrated": { "value": "500M+", "label": "Lines Of Code Migrated" },
+        "averageROI": { "value": "450%", "label": "Average ROI" }
+      },
+      "stories": {
+        "financial": { "client": "Global Financial Institution", "industry": "Banking & Finance", "project": "Core Banking System Modernization", "challengeDescription": "40-year-old mainframe system with 15M lines of COBOL code", "challengeDetails": ["3000+ batch jobs running daily", "Integration with 200+ downstream systems", "24/7 availability requirement", "$5B daily transaction volume"], "solutionApproach": "Strangler Fig Pattern with AI-driven transformation", "solutionAgents": ["COBOL Analysis Agent - Parsed 15M lines of code", "Dependency Mapper - Identified 5000+ dependencies", "Java Generator - Created modern microservices", "Test Automation Agent - Generated 50K test cases"], "resultsTimeToMarket": "18 months (vs 5 years traditional)", "resultsCostSavings": "$12M (60% reduction)", "resultsPerformance": "10x improvement in transaction speed", "resultsAvailability": "99.99% uptime maintained", "resultsBenefits": ["Cloud-native architecture achieved", "DevOps practices implemented", "API-first approach enabled new channels", "Technical debt reduced by 80%"], "testimonialQuote": "ASIMOV's AI agents transformed our legacy systems faster than we thought possible. The automated code translation and testing saved us years of manual effort.", "testimonialAuthor": "CTO, Global Financial Institution" },
+        "healthcare": { "client": "National Healthcare Provider", "industry": "Healthcare", "project": "Patient Management System Migration", "challengeDescription": "Legacy VB6 and PowerBuilder applications with complex integrations", "challengeDetails": ["500+ forms and screens", "HIPAA compliance requirements", "Real-time integration with 50+ systems", "10TB of patient data"], "solutionApproach": "Parallel Run Pattern for zero-risk migration", "solutionAgents": ["VB6 Parser Agent - Analyzed legacy codebase", "Compliance Checker - Ensured HIPAA compliance", "React Generator - Created modern UI", "Data Migration Agent - Safely transferred patient data"], "resultsTimeToMarket": "12 months", "resultsCostSavings": "$8M (55% reduction)", "resultsPerformance": "5x faster patient data retrieval", "resultsAvailability": "Zero downtime during migration", "resultsBenefits": ["Mobile-first responsive design", "Real-time analytics dashboard", "Automated compliance reporting", "Enhanced security features"], "testimonialQuote": "The parallel run approach gave us complete confidence. We validated every transaction before switching, ensuring patient care was never impacted.", "testimonialAuthor": "VP of Technology, Healthcare Provider" },
+        "retail": { "client": "Fortune 500 Retailer", "industry": "Retail & E-commerce", "project": "E-commerce Platform Modernization", "challengeDescription": "Monolithic Java application unable to handle peak loads", "challengeDetails": ["2M lines of Java code", "Black Friday crashes costing $10M+", "Unable to scale horizontally", "6-month release cycles"], "solutionApproach": "Microservices extraction with intelligent decomposition", "solutionAgents": ["Domain Analyzer - Identified service boundaries", "API Designer - Created service contracts", "Container Agent - Automated containerization", "Performance Optimizer - Tuned for scale"], "resultsTimeToMarket": "9 months", "resultsCostSavings": "$6M in infrastructure costs", "resultsPerformance": "200% scalability improvement", "resultsAvailability": "Handled 5x Black Friday traffic", "resultsBenefits": ["Daily deployments enabled", "Auto-scaling during peak times", "A/B testing capabilities", "40% reduction in AWS costs"], "testimonialQuote": "ASIMOV agents decomposed our monolith perfectly. We went from monthly releases to daily deployments, and finally conquered Black Friday.", "testimonialAuthor": "Chief Architect, Fortune 500 Retailer" },
+        "government": { "client": "Government Agency", "industry": "Public Sector", "project": "Legacy System Cloud Migration", "challengeDescription": "Critical citizen services running on outdated infrastructure", "challengeDetails": ["Multiple programming languages (COBOL, C, Perl)", "Strict security and compliance requirements", "Limited documentation available", "50M citizen records"], "solutionApproach": "Database-first migration with gradual modernization", "solutionAgents": ["Multi-language Parser - Analyzed diverse codebase", "Security Scanner - Identified vulnerabilities", "Cloud Architect Agent - Designed AWS architecture", "Documentation Generator - Created missing docs"], "resultsTimeToMarket": "15 months", "resultsCostSavings": "$15M over 5 years", "resultsPerformance": "8x improvement in response time", "resultsAvailability": "99.95% uptime achieved", "resultsBenefits": ["FedRAMP compliance achieved", "Disaster recovery implemented", "Self-service portal launched", "70% reduction in citizen complaints"], "testimonialQuote": "The AI agents understood our complex legacy systems better than our own team. Documentation generation alone saved us months of work.", "testimonialAuthor": "Director of IT, Government Agency" }
+      },
+      "industryBreakdown": {
+        "financialServices": { "industry": "Financial Services", "projects": 145 },
+        "healthcare": { "industry": "Healthcare", "projects": 95 },
+        "retail": { "industry": "Retail", "projects": 80 },
+        "government": { "industry": "Government", "projects": 70 },
+        "manufacturing": { "industry": "Manufacturing", "projects": 60 },
+        "others": { "industry": "Others", "projects": 50 }
+      },
+      "whySucceedsReasons": {
+        "aiPowered": { "title": "AI-Powered Understanding", "description": "LLMs comprehend legacy code semantics" },
+        "incremental": { "title": "Incremental Approach", "description": "Risk-managed phased migrations" },
+        "automation": { "title": "Automation at Scale", "description": "70% reduction in manual effort" },
+        "provenPatterns": { "title": "Proven Patterns", "description": "Battle-tested migration strategies" }
+      }
+    }
+  },
+  "customerService": {
+    "title": "Customer Service AI",
+    "subtitle": "Autonomous support with self-healing bots",
+    "overview": {
+      "badge": "Autonomous Support Solution",
+      "header": { "title": "Customer Service & Support", "description": "GenAI engine powered by autonomous agents as the core of an automated IT support system, delivering intelligent, scalable, and cost-effective customer service." },
+      "benefits": {
+        "title": "Gen AI in Managed Services Benefits",
+        "improvement": "improvement",
+        "reducedTickets": {
+          "title": "Reduced Support Tickets",
+          "description": "Significant reduction in number of support tickets flowing to human agents",
+          "metric": "60-80%"
+        },
+        "improvedProductivity": {
+          "title": "Improved Agent Productivity",
+          "description": "Reduced average handling time through AI augmentation",
+          "metric": "250%"
+        },
+        "processOptimization": {
+          "title": "Business Process Optimization",
+          "description": "Data-driven insights for continuous improvement",
+          "metric": "Real-time"
+        },
+        "enhancedUx": {
+          "title": "Enhanced User Experience",
+          "description": "Self-service capabilities with instant resolution",
+          "metric": "24/7"
+        }
+      },
+      "pillars": {
+        "title": "Solution Architecture",
+        "aiServiceDesk": {
+          "title": "AI-Powered Service Desk",
+          "description": "Automate resolutions, empower self-service, and deliver instant support through conversational AI and intelligent virtual assistants.",
+          "capabilities": {
+            "nlu": "Natural language understanding",
+            "multiChannel": "Multi-channel support",
+            "ticketResolution": "Automated ticket resolution",
+            "contextAware": "Context-aware responses"
+          }
+        },
+        "proactiveProblem": {
+          "title": "Proactive Problem Management",
+          "description": "Predict and prevent incidents, optimize capacity, and ensure service availability through predictive analytics and AI-driven insights.",
+          "capabilities": {
+            "prediction": "Incident prediction",
+            "pattern": "Pattern recognition",
+            "capacity": "Capacity optimization",
+            "monitoring": "Service availability monitoring"
+          }
+        },
+        "knowledgeMgmt": {
+          "title": "Intelligent Knowledge Management",
+          "description": "Create dynamic knowledge bases, deliver contextual information, and empower both users and IT staff with readily accessible expertise.",
+          "capabilities": {
+            "dynamicKb": "Dynamic knowledge base",
+            "contextual": "Contextual information delivery",
+            "selfLearning": "Self-learning system",
+            "expertCapture": "Expert knowledge capture"
+          }
+        },
+        "itOps": {
+          "title": "Optimized IT Operations",
+          "description": "Streamline workflows, automate code remediation, and enhance change management through AI-powered automation and insights.",
+          "capabilities": {
+            "workflow": "Workflow automation",
+            "codeRemediation": "Code remediation",
+            "changeMgmt": "Change management",
+            "processOpt": "Process optimization"
+          }
+        },
+        "visibility": {
+          "title": "Enhanced Visibility & Control",
+          "description": "Gain real-time insights into IT performance, predict SLAs, and optimize resource allocation through AI-driven analytics and reporting.",
+          "capabilities": {
+            "dashboards": "Real-time dashboards",
+            "slaPrediction": "SLA prediction",
+            "resourceOpt": "Resource optimization",
+            "analytics": "Performance analytics"
+          }
+        }
+      },
+      "keyMetrics": {
+        "availability": { "label": "Availability", "value": "24/7" },
+        "languages": { "label": "Languages", "value": "50+" },
+        "costReduction": { "label": "Cost Reduction", "value": "65%" },
+        "fcr": { "label": "First Contact Resolution", "value": "78%" }
+      },
+      "nav": {
+        "title": "Explore Solution Components",
+        "selfHealBot": { "title": "Self Heal Bot", "description": "Autonomous resolution with self-service capabilities" },
+        "assistedHealBot": { "title": "Assisted Heal Bot", "description": "AI-augmented support for L1 teams" },
+        "optimizationHub": { "title": "Business Optimization Hub", "description": "Analytics and insights for continuous improvement" },
+        "implementationPlan": { "title": "Implementation Plan", "description": "Phased approach for deployment" },
+        "learnMore": "Learn more"
+      },
+      "roi": {
+        "title": "Expected Business Impact",
+        "selfHealValue": "40% → 60%",
+        "selfHeal": "Self-heal resolution rate by Q4",
+        "traditionalValue": "80% → 20%",
+        "traditional": "Traditional support reduction",
+        "selfFundingValue": "Self-Funding",
+        "selfFunding": "Cost savings fund AI expansion"
+      }
+    },
+    "selfHealBot": {
+      "title": "Self Heal Bot",
+      "subtitle": "Autonomous issue resolution",
+      "badge": "Autonomous Resolution Layer",
+      "header": { "title": "Self Heal Bot", "description": "First line of defense providing instant, autonomous resolution for common issues through intelligent self-service capabilities and natural language understanding." },
+      "metrics": {
+        "autoResolution": "Auto-Resolution Rate",
+        "responseTime": "Response Time",
+        "languages": "Languages",
+        "satisfaction": "User Satisfaction"
+      },
+      "capabilities": {
+        "title": "Core Capabilities",
+        "capabilitiesLabel": "Capabilities",
+        "technologies": "Technologies",
+        "performance": "Performance",
+        "chatbot": {
+          "name": "Self-Service Chatbot",
+          "description": "Intelligent conversational interface for autonomous issue resolution",
+          "capabilities": {
+            "nlu": "Natural language understanding with 95% accuracy",
+            "context": "Context-aware conversation management",
+            "multiTurn": "Multi-turn dialogue support",
+            "intent": "Intent classification and entity extraction",
+            "dynamic": "Dynamic response generation"
+          },
+          "metrics": {
+            "responseTime": "Response Time",
+            "responseTimeValue": "<1 second",
+            "resolutionRate": "Resolution Rate",
+            "resolutionRateValue": "60%",
+            "userSatisfaction": "User Satisfaction",
+            "userSatisfactionValue": "4.7/5"
+          }
+        },
+        "personalization": {
+          "name": "Personalized Experience",
+          "description": "Tailored interactions based on user history and preferences",
+          "capabilities": {
+            "profileTracking": "User profile and history tracking",
+            "preferenceLearning": "Preference learning and adaptation",
+            "roleBasedCustomization": "Role-based response customization",
+            "contextRetention": "Previous interaction context retention",
+            "personalizedRecs": "Personalized solution recommendations"
+          },
+          "metrics": {
+            "personalizationAccuracy": "Personalization Accuracy",
+            "personalizationAccuracyValue": "92%",
+            "contextRetention": "Context Retention",
+            "contextRetentionValue": "100%",
+            "userEngagement": "User Engagement",
+            "userEngagementValue": "+45%"
+          }
+        },
+        "automation": {
+          "name": "Automated Communication",
+          "description": "Proactive and automated customer engagement",
+          "capabilities": {
+            "ticketCreation": "Automated ticket creation and routing",
+            "proactiveNotification": "Proactive issue notification",
+            "followUp": "Follow-up communication scheduling",
+            "statusUpdate": "Status update automation",
+            "resolution": "Resolution confirmation workflows"
+          },
+          "metrics": {
+            "automationRate": "Automation Rate",
+            "automationRateValue": "85%",
+            "timeSaved": "Time Saved",
+            "timeSavedValue": "70%",
+            "errorReduction": "Error Reduction",
+            "errorReductionValue": "95%"
+          }
+        },
+        "multilingual": {
+          "name": "Multilingual Support",
+          "description": "Global support in 50+ languages with real-time translation",
+          "capabilities": {
+            "langDetection": "Real-time language detection",
+            "neuralTranslation": "Neural machine translation",
+            "culturalContext": "Cultural context adaptation",
+            "multilingualKb": "Multilingual knowledge base",
+            "crossLangEntity": "Cross-language entity recognition"
+          },
+          "metrics": {
+            "languagesSupported": "Languages Supported",
+            "languagesSupportedValue": "50+",
+            "translationAccuracy": "Translation Accuracy",
+            "translationAccuracyValue": "98%",
+            "globalCoverage": "Global Coverage",
+            "globalCoverageValue": "195 countries"
+          }
+        }
+      },
+      "useCases": {
+        "title": "Common Use Cases",
+        "resolution": "Resolution:",
+        "satisfaction": "Satisfaction:",
+        "passwordReset": {
+          "title": "Password Reset",
+          "channel": "Web Chat",
+          "steps": {
+            "step1": "User initiates chat requesting password reset",
+            "step2": "Bot verifies identity through security questions",
+            "step3": "Automated password reset link generation",
+            "step4": "Confirmation and follow-up instructions"
+          },
+          "resolution": "Fully automated - 45 seconds",
+          "satisfaction": "5/5"
+        },
+        "accountUpdate": {
+          "title": "Account Information Update",
+          "channel": "Mobile App",
+          "steps": {
+            "step1": "User requests account detail change",
+            "step2": "Bot validates request and permissions",
+            "step3": "Guides through update process",
+            "step4": "Confirms changes and sends notification"
+          },
+          "resolution": "Fully automated - 2 minutes",
+          "satisfaction": "4.8/5"
+        },
+        "serviceStatus": {
+          "title": "Service Status Inquiry",
+          "channel": "Voice Assistant",
+          "steps": {
+            "step1": "Voice-to-text conversion of inquiry",
+            "step2": "Real-time service status check",
+            "step3": "Natural language response generation",
+            "step4": "Option for detailed report via email"
+          },
+          "resolution": "Fully automated - 30 seconds",
+          "satisfaction": "4.9/5"
+        }
+      },
+      "channels": {
+        "title": "Omnichannel Support",
+        "status": "Status:",
+        "ofVolume": "of volume",
+        "webChat": { "name": "Web Chat", "status": "Active", "volume": "45%" },
+        "mobileApp": { "name": "Mobile App", "status": "Active", "volume": "30%" },
+        "email": { "name": "Email", "status": "Active", "volume": "15%" },
+        "voice": { "name": "Voice", "status": "Active", "volume": "10%" }
+      },
+      "architecture": {
+        "title": "Self Heal Bot Architecture",
+        "inputLayer": { "title": "Input Layer", "description": "Voice, Chat, Email, Mobile App" },
+        "nlpProcessing": { "title": "NLP Processing", "description": "Intent Recognition, Entity Extraction, Context Management" },
+        "automatedResolution": { "title": "Automated Resolution", "description": "Knowledge Base, API Calls, Workflow Execution" },
+        "responseDelivery": { "title": "Response Delivery", "description": "Personalized Response, Multi-language Support, Follow-up Actions" }
+      }
+    },
+    "assistedHealBot": {
+      "title": "Assisted Heal Bot",
+      "subtitle": "Human-AI collaborative support",
+      "badge": "Agent Augmentation Layer",
+      "header": { "title": "Assisted Heal Bot", "description": "AI-powered augmentation for L1 support agents, providing real-time assistance, automated documentation, and intelligent routing to dramatically improve productivity and quality." },
+      "metrics": {
+        "productivity": "Agent Productivity",
+        "handleTime": "Handle Time",
+        "fcr": "FCR Rate",
+        "csat": "CSAT Score"
+      },
+      "agents": {
+        "title": "AI Agent Components",
+        "coreCapabilities": "Core Capabilities",
+        "techStack": "Technology Stack",
+        "impactMetrics": "Impact Metrics",
+        "conversational": {
+          "name": "Conversational Assistant",
+          "role": "L1 Agent Augmentation",
+          "capabilities": {
+            "responseSuggestions": "Real-time response suggestions",
+            "conversationGuidance": "Context-aware conversation guidance",
+            "sentimentAlerts": "Sentiment analysis and escalation alerts",
+            "kbIntegration": "Knowledge base integration",
+            "multiChannel": "Multi-channel conversation management"
+          },
+          "metrics": {
+            "responseQuality": "Response Quality",
+            "responseQualityValue": "+85%",
+            "agentEfficiency": "Agent Efficiency",
+            "agentEfficiencyValue": "+150%",
+            "escalationReduction": "Escalation Reduction",
+            "escalationReductionValue": "40%"
+          }
+        },
+        "summarizer": {
+          "name": "Call Summarizer",
+          "role": "Interaction Documentation",
+          "capabilities": {
+            "transcription": "Automatic call transcription",
+            "keyPoints": "Key points extraction",
+            "actionItems": "Action items identification",
+            "sentimentTracking": "Sentiment tracking",
+            "followUpRecs": "Follow-up recommendations"
+          },
+          "metrics": {
+            "summaryAccuracy": "Summary Accuracy",
+            "summaryAccuracyValue": "95%",
+            "timeSaved": "Time Saved",
+            "timeSavedValue": "10 min/call",
+            "documentationQuality": "Documentation Quality",
+            "documentationQualityValue": "+90%"
+          }
+        },
+        "creator": {
+          "name": "Ticket Creator",
+          "role": "Automated Ticket Management",
+          "capabilities": {
+            "autoGeneration": "Automatic ticket generation",
+            "priorityClassification": "Priority classification",
+            "categoryAssignment": "Category assignment",
+            "slaCalculation": "SLA calculation",
+            "routingOptimization": "Routing optimization"
+          },
+          "metrics": {
+            "creationSpeed": "Creation Speed",
+            "creationSpeedValue": "5 seconds",
+            "accuracy": "Accuracy",
+            "accuracyValue": "98%",
+            "manualWorkReduction": "Manual Work Reduction",
+            "manualWorkReductionValue": "75%"
+          }
+        },
+        "triaging": {
+          "name": "Ticket Triaging",
+          "role": "Intelligent Routing & Prioritization",
+          "capabilities": {
+            "skillBasedRouting": "Skill-based routing",
+            "urgencyDetection": "Urgency detection",
+            "workloadBalancing": "Workload balancing",
+            "expertiseMatching": "Expertise matching",
+            "queueOptimization": "Queue optimization"
+          },
+          "metrics": {
+            "routingAccuracy": "Routing Accuracy",
+            "routingAccuracyValue": "94%",
+            "resolutionTime": "Resolution Time",
+            "resolutionTimeValue": "-35%",
+            "fcr": "First Contact Resolution",
+            "fcrValue": "+22%"
+          }
+        },
+        "diagnostics": {
+          "name": "Ticket Diagnostics",
+          "role": "Root Cause Analysis",
+          "capabilities": {
+            "automatedTroubleshooting": "Automated troubleshooting",
+            "logAnalysis": "Log analysis",
+            "patternRecognition": "Pattern recognition",
+            "similarIssue": "Similar issue detection",
+            "resolutionPrediction": "Resolution prediction"
+          },
+          "metrics": {
+            "diagnosticAccuracy": "Diagnostic Accuracy",
+            "diagnosticAccuracyValue": "89%",
+            "timeToDiagnosis": "Time to Diagnosis",
+            "timeToDiagnosisValue": "-60%",
+            "resolutionRate": "Resolution Rate",
+            "resolutionRateValue": "+45%"
+          }
+        },
+        "recommender": {
+          "name": "Resolution Recommender",
+          "role": "Solution Guidance",
+          "capabilities": {
+            "solutionRanking": "Solution recommendation ranking",
+            "stepByStep": "Step-by-step guidance",
+            "alternativeSolutions": "Alternative solutions",
+            "successScoring": "Success probability scoring",
+            "historicalAnalysis": "Historical resolution analysis"
+          },
+          "metrics": {
+            "recommendationAccuracy": "Recommendation Accuracy",
+            "recommendationAccuracyValue": "91%",
+            "resolutionSuccess": "Resolution Success",
+            "resolutionSuccessValue": "+55%",
+            "agentConfidence": "Agent Confidence",
+            "agentConfidenceValue": "+70%"
+          }
+        }
+      },
+      "workflows": {
+        "title": "Intelligent Workflow Orchestration",
+        "priority": "Priority",
+        "outcome": "Outcome",
+        "timeSaved": "Time Saved",
+        "complexTechnical": {
+          "title": "Complex Technical Issue",
+          "severity": "High",
+          "steps": {
+            "step1": "Assists L1 agent with initial troubleshooting",
+            "step2": "Performs automated root cause analysis",
+            "step3": "Suggests top 3 resolution strategies",
+            "step4": "Creates detailed ticket with findings",
+            "step5": "Documents interaction and resolution steps"
+          },
+          "outcome": "Issue resolved without L2 escalation",
+          "timeReduction": "45%"
+        },
+        "highVolume": {
+          "title": "High Volume Period",
+          "severity": "Medium",
+          "steps": {
+            "step1": "Intelligently routes incoming requests",
+            "step2": "Provides real-time agent assistance",
+            "step3": "Auto-generates tickets for tracking",
+            "step4": "Creates batch summaries for review"
+          },
+          "outcome": "Handled 3x normal volume without delays",
+          "timeReduction": "60%"
+        }
+      },
+      "performance": {
+        "title": "Performance Impact Analysis",
+        "metric": "Metric",
+        "beforeAI": "Before AI",
+        "withBot": "With Assisted Bot",
+        "improvement": "Improvement",
+        "data": {
+          "agentProductivity": { "label": "Agent Productivity", "before": "20 tickets/day", "after": "50 tickets/day", "improvement": "+150%" },
+          "averageHandleTime": { "label": "Average Handle Time", "before": "15 minutes", "after": "6 minutes", "improvement": "-60%" },
+          "fcr": { "label": "First Contact Resolution", "before": "45%", "after": "67%", "improvement": "+49%" },
+          "csat": { "label": "Customer Satisfaction", "before": "3.8/5", "after": "4.6/5", "improvement": "+21%" }
+        }
+      },
+      "integration": {
+        "title": "Seamless Integration",
+        "itsm": "ITSM Platforms",
+        "communication": "Communication Channels",
+        "knowledge": "Knowledge Systems",
+        "itsmItems": ["ServiceNow", "Jira Service Management", "Zendesk", "Freshservice"],
+        "communicationItems": ["Microsoft Teams", "Slack", "Email Systems", "Voice/VoIP"],
+        "knowledgeItems": ["Confluence", "SharePoint", "Custom Knowledge Bases", "Documentation Repos"]
+      }
+    },
+    "optimizationHub": {
+      "title": "Business Optimization Hub",
+      "subtitle": "AI-driven process optimization",
+      "badge": "Intelligence & Optimization Layer",
+      "header": { "title": "Business Optimization Hub", "description": "AI-driven analytics engine that transforms support data into actionable business insights, enabling continuous optimization and proactive service improvements." },
+      "metrics": {
+        "weeklyInsights": "Weekly Insights",
+        "processAutomation": "Process Automation",
+        "efficiencyGain": "Efficiency Gain",
+        "predictionAccuracy": "Prediction Accuracy"
+      },
+      "analytics": {
+        "title": "Analytics & Intelligence Components",
+        "capabilities": "Capabilities",
+        "currentInsights": "Current Insights",
+        "trend": {
+          "name": "Trend Analysis",
+          "description": "Identify patterns and trends in support tickets and customer interactions",
+          "capabilities": {
+            "volumeForecasting": "Ticket volume forecasting",
+            "seasonalPattern": "Seasonal pattern detection",
+            "categoryTrending": "Issue category trending",
+            "peakTime": "Peak time identification",
+            "resolutionPatterns": "Resolution time patterns"
+          },
+          "insights": {
+            "weeklyPattern": { "metric": "Weekly Pattern", "value": "Monday peaks at 35% volume" },
+            "topIssue": { "metric": "Top Issue Trend", "value": "Password resets up 25%" },
+            "seasonalSpike": { "metric": "Seasonal Spike", "value": "Q4 shows 40% increase" }
+          }
+        },
+        "sentiment": {
+          "name": "Sentiment Analysis",
+          "description": "Monitor and analyze customer emotions and satisfaction trends",
+          "capabilities": {
+            "realTimeTracking": "Real-time sentiment tracking",
+            "emotionDetection": "Emotion detection in conversations",
+            "satisfactionTrend": "Satisfaction trend analysis",
+            "frustrationPoints": "Frustration point identification",
+            "agentCorrelation": "Agent performance correlation"
+          },
+          "insights": {
+            "overallSentiment": { "metric": "Overall Sentiment", "value": "72% Positive" },
+            "frustrationPoints": { "metric": "Frustration Points", "value": "3 key areas identified" },
+            "csatCorrelation": { "metric": "CSAT Correlation", "value": "0.85 with resolution time" }
+          }
+        },
+        "process": {
+          "name": "Process Analyzer",
+          "description": "Optimize workflows and identify bottlenecks in support processes",
+          "capabilities": {
+            "bottleneck": "Workflow bottleneck detection",
+            "processMining": "Process mining and optimization",
+            "automationOpportunity": "Automation opportunity identification",
+            "slaCompliance": "SLA compliance tracking",
+            "resourceUtilization": "Resource utilization analysis"
+          },
+          "insights": {
+            "mainBottleneck": { "metric": "Main Bottleneck", "value": "L2 escalation queue" },
+            "automationPotential": { "metric": "Automation Potential", "value": "45% of tickets" },
+            "slaCompliance": { "metric": "SLA Compliance", "value": "94% on-time" }
+          }
+        },
+        "proactive": {
+          "name": "Proactive Communication",
+          "description": "Predict issues and communicate proactively with customers",
+          "capabilities": {
+            "issuePrediction": "Issue prediction modeling",
+            "alertGeneration": "Proactive alert generation",
+            "impactAssessment": "Customer impact assessment",
+            "timingOptimization": "Communication timing optimization",
+            "preventiveAction": "Preventive action recommendations"
+          },
+          "insights": {
+            "issuesPrevented": { "metric": "Issues Prevented", "value": "2,400/month" },
+            "customerReach": { "metric": "Customer Reach", "value": "85% before impact" },
+            "ticketReduction": { "metric": "Ticket Reduction", "value": "32% for alerted issues" }
+          }
+        },
+        "training": {
+          "name": "Training & Knowledge Curator",
+          "description": "Identify knowledge gaps and create targeted training programs",
+          "capabilities": {
+            "gapAnalysis": "Knowledge gap analysis",
+            "trainingNeed": "Training need identification",
+            "contentRec": "Content recommendation",
+            "skillAssessment": "Agent skill assessment",
+            "learningPath": "Learning path optimization"
+          },
+          "insights": {
+            "knowledgeGaps": { "metric": "Knowledge Gaps", "value": "12 areas identified" },
+            "trainingImpact": { "metric": "Training Impact", "value": "+28% resolution rate" },
+            "contentCreated": { "metric": "Content Created", "value": "45 new articles/month" }
+          }
+        },
+        "advancedAnalytics": {
+          "name": "Advanced Analytics",
+          "description": "Deep dive analytics with predictive modeling and AI insights",
+          "capabilities": {
+            "predictiveModeling": "Predictive modeling",
+            "rootCause": "Root cause analysis",
+            "journeyMapping": "Customer journey mapping",
+            "agentPerformance": "Agent performance analytics",
+            "costBenefit": "Cost-benefit analysis"
+          },
+          "insights": {
+            "costSavings": { "metric": "Cost Savings", "value": "$2.5M annually" },
+            "predictionAccuracy": { "metric": "Prediction Accuracy", "value": "89% for volume" },
+            "roi": { "metric": "ROI", "value": "340% in 6 months" }
+          }
+        }
+      },
+      "dashboard": {
+        "title": "Real-Time Optimization Dashboard",
+        "target": "Target:",
+        "categories": {
+          "operationalEfficiency": {
+            "title": "Operational Efficiency",
+            "ticketVolume": "Ticket Volume Reduction",
+            "aht": "Average Handle Time",
+            "fcr": "First Contact Resolution",
+            "automationRate": "Automation Rate"
+          },
+          "customerExperience": {
+            "title": "Customer Experience",
+            "csat": "Customer Satisfaction",
+            "nps": "Net Promoter Score",
+            "ces": "Customer Effort Score",
+            "resolutionQuality": "Resolution Quality"
+          },
+          "businessImpact": {
+            "title": "Business Impact",
+            "costPerContact": "Cost per Contact",
+            "agentProductivity": "Agent Productivity",
+            "revenueProtection": "Revenue Protection",
+            "churnPrevention": "Churn Prevention"
+          }
+        }
+      },
+      "feedbackLoop": {
+        "title": "Continuous Improvement Feedback Loop",
+        "stages": {
+          "dataCollection": { "stage": "Data Collection", "description": "Continuous gathering of interaction data across all channels", "volume": "100K+ interactions/day" },
+          "analysisInsights": { "stage": "Analysis & Insights", "description": "AI-powered analysis to identify patterns and opportunities", "volume": "500+ insights/week" },
+          "recommendations": { "stage": "Recommendation Generation", "description": "Actionable recommendations for process improvement", "volume": "50+ recommendations/week" },
+          "implementation": { "stage": "Implementation", "description": "Automated and manual implementation of improvements", "volume": "20+ improvements/week" },
+          "impactMeasurement": { "stage": "Impact Measurement", "description": "Track and measure the impact of implemented changes", "volume": "Real-time monitoring" }
+        }
+      },
+      "impact": {
+        "title": "Projected Business Impact",
+        "efficiencyTimeline": "Efficiency Gains Timeline",
+        "costModel": "Cost Optimization Model",
+        "currentCost": "Current Cost",
+        "projectedSavings": "Projected Savings",
+        "futureCost": "Future Cost",
+        "selfFunding": "Self-funding model: Savings reinvested in AI expansion",
+        "q1": { "label": "Q1: Self-heal adoption", "value": "20% efficiency" },
+        "q2": { "label": "Q2: Process optimization", "value": "35% efficiency" },
+        "q3": { "label": "Q3: Full automation", "value": "50% efficiency" },
+        "q4": { "label": "Q4: AI optimization", "value": "65% efficiency" },
+        "currentCostValue": "$5.2M/year",
+        "projectedSavingsValue": "-$2.5M/year",
+        "futureCostValue": "$2.7M/year"
+      }
+    },
+    "implementationRoadmap": {
+      "title": "Implementation Roadmap",
+      "subtitle": "Deployment planning and execution",
+      "badge": "Deployment Strategy",
+      "header": { "title": "Implementation Roadmap", "description": "Structured 16-week implementation plan for deploying autonomous customer service solution with phased approach ensuring minimal disruption and maximum adoption." },
+      "timeline": {
+        "title": "Project Timeline",
+        "week": "Week",
+        "milestones": {
+          "projectKickoff": "Project Kickoff",
+          "requirementsComplete": "Requirements Complete",
+          "integrationStart": "Integration Start",
+          "coreSystemsConnected": "Core Systems Connected",
+          "pilotLaunch": "Pilot Launch",
+          "pilotValidation": "Pilot Validation",
+          "productionReady": "Production Ready",
+          "fullDeployment": "Full Deployment"
+        }
+      },
+      "phases": {
+        "title": "Implementation Phases",
+        "duration": "Duration:",
+        "objectives": "Key Objectives",
+        "deliverables": "Deliverables",
+        "activities": "Key Activities",
+        "phase1": {
+          "name": "Phase 1: Requirements & Planning",
+          "duration": "2-3 weeks",
+          "objectives": {
+            "obj1": "Understand customer needs and pain points",
+            "obj2": "Identify integration requirements",
+            "obj3": "Define customization scope",
+            "obj4": "Assess security & compliance needs",
+            "obj5": "Finalize deployment strategy"
+          },
+          "deliverables": {
+            "del1": "Requirements document",
+            "del2": "Integration architecture",
+            "del3": "Security assessment",
+            "del4": "Project timeline",
+            "del5": "Success metrics definition"
+          },
+          "activities": {
+            "act1": { "task": "Stakeholder interviews", "owner": "Project Manager", "duration": "3 days" },
+            "act2": { "task": "System assessment", "owner": "Technical Architect", "duration": "5 days" },
+            "act3": { "task": "Process mapping", "owner": "Business Analyst", "duration": "4 days" },
+            "act4": { "task": "Compliance review", "owner": "Security Team", "duration": "2 days" }
+          }
+        },
+        "phase2": {
+          "name": "Phase 2: Configuration & Integration",
+          "duration": "3-4 weeks",
+          "objectives": {
+            "obj1": "Deploy AI virtual assistants",
+            "obj2": "Integrate with ITSM platforms",
+            "obj3": "Customize knowledge base",
+            "obj4": "Set up automation rules",
+            "obj5": "Configure multi-channel support"
+          },
+          "deliverables": {
+            "del1": "Configured AI agents",
+            "del2": "System integrations",
+            "del3": "Knowledge base import",
+            "del4": "Automation workflows",
+            "del5": "Channel configurations"
+          },
+          "activities": {
+            "act1": { "task": "AI agent deployment", "owner": "AI Engineers", "duration": "5 days" },
+            "act2": { "task": "ITSM integration", "owner": "Integration Team", "duration": "7 days" },
+            "act3": { "task": "Knowledge base setup", "owner": "Content Team", "duration": "5 days" },
+            "act4": { "task": "Workflow automation", "owner": "Process Engineers", "duration": "4 days" }
+          }
+        },
+        "phase3": {
+          "name": "Phase 3: Pilot Development",
+          "duration": "4-6 weeks",
+          "objectives": {
+            "obj1": "Limited rollout to pilot users",
+            "obj2": "User training and adoption",
+            "obj3": "Performance monitoring",
+            "obj4": "Feedback collection",
+            "obj5": "Iterative improvements"
+          },
+          "deliverables": {
+            "del1": "Pilot deployment",
+            "del2": "Training materials",
+            "del3": "Performance reports",
+            "del4": "Feedback analysis",
+            "del5": "Optimization recommendations"
+          },
+          "activities": {
+            "act1": { "task": "Pilot user selection", "owner": "Project Manager", "duration": "2 days" },
+            "act2": { "task": "Training delivery", "owner": "Training Team", "duration": "5 days" },
+            "act3": { "task": "Performance monitoring", "owner": "Operations Team", "duration": "Ongoing" },
+            "act4": { "task": "Feedback analysis", "owner": "Business Analyst", "duration": "Weekly" }
+          }
+        },
+        "phase4": {
+          "name": "Phase 4: Scale & Production",
+          "duration": "Ongoing",
+          "objectives": {
+            "obj1": "Enterprise-wide rollout",
+            "obj2": "Live performance monitoring",
+            "obj3": "Continuous learning implementation",
+            "obj4": "Ongoing support & enhancements",
+            "obj5": "ROI tracking and optimization"
+          },
+          "deliverables": {
+            "del1": "Production deployment",
+            "del2": "Performance dashboards",
+            "del3": "Optimization reports",
+            "del4": "ROI analysis",
+            "del5": "Enhancement roadmap"
+          },
+          "activities": {
+            "act1": { "task": "Production rollout", "owner": "Operations Team", "duration": "10 days" },
+            "act2": { "task": "Performance monitoring", "owner": "Operations Team", "duration": "Continuous" },
+            "act3": { "task": "Model optimization", "owner": "AI Engineers", "duration": "Monthly" },
+            "act4": { "task": "Enhancement delivery", "owner": "Development Team", "duration": "Quarterly" }
+          }
+        }
+      },
+      "risks": {
+        "title": "Risk Management",
+        "risk": "Risk",
+        "impact": "Impact",
+        "probability": "Probability",
+        "mitigation": "Mitigation Strategy",
+        "data": {
+          "integrationComplexity": { "risk": "Integration Complexity", "impact": "High", "probability": "Medium", "mitigation": "Thorough system assessment and phased integration approach" },
+          "userAdoption": { "risk": "User Adoption", "impact": "High", "probability": "Low", "mitigation": "Comprehensive training program and change management" },
+          "dataQuality": { "risk": "Data Quality", "impact": "Medium", "probability": "Medium", "mitigation": "Data cleansing and validation before migration" },
+          "performanceIssues": { "risk": "Performance Issues", "impact": "Medium", "probability": "Low", "mitigation": "Load testing and performance optimization during pilot" }
+        }
+      },
+      "successMetrics": {
+        "title": "Success Metrics & KPIs",
+        "baseline": "Baseline",
+        "target": "Target",
+        "timeline": "Timeline:",
+        "data": {
+          "ticketResolution": { "metric": "Ticket Resolution Rate", "baseline": "45%", "target": "78%", "timeline": "Month 3" },
+          "aht": { "metric": "Average Handle Time", "baseline": "15 min", "target": "6 min", "timeline": "Month 2" },
+          "csat": { "metric": "Customer Satisfaction", "baseline": "3.8/5", "target": "4.6/5", "timeline": "Month 4" },
+          "costPerContact": { "metric": "Cost per Contact", "baseline": "$15", "target": "$5.25", "timeline": "Month 6" },
+          "agentProductivity": { "metric": "Agent Productivity", "baseline": "100%", "target": "250%", "timeline": "Month 4" },
+          "fcr": { "metric": "First Contact Resolution", "baseline": "40%", "target": "67%", "timeline": "Month 3" }
+        }
+      },
+      "techStack": {
+        "title": "Technology Stack",
+        "categories": {
+          "genAiTools": { "category": "GenAI Tools", "items": ["OpenAI GPT-4", "Claude", "Custom NLP Pipelines", "Fine-tuned Models"] },
+          "itsmPlatforms": { "category": "ITSM Platforms", "items": ["ServiceNow", "Jira Service Management", "Zendesk", "Freshservice"] },
+          "integrationTools": { "category": "Integration Tools", "items": ["UiPath RPA", "Automation Anywhere", "API Gateway", "Webhook Services"] },
+          "cloudInfra": { "category": "Cloud Infrastructure", "items": ["AWS", "Azure", "Google Cloud", "Kubernetes"] },
+          "securityFramework": { "category": "Security Framework", "items": ["End-to-end Encryption", "RBAC", "OAuth 2.0", "Audit Logging"] }
+        }
+      },
+      "roi": {
+        "title": "ROI Projection",
+        "breakeven": "Break-even Point",
+        "breakevenValue": "Month 6",
+        "annualSavings": "Annual Savings",
+        "annualSavingsValue": "$2.5M+",
+        "threeYearRoi": "3-Year ROI",
+        "threeYearRoiValue": "340%"
+      }
+    }
+  }
+}

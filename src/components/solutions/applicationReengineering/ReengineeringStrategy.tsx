@@ -11,109 +11,58 @@ import {
   MapIcon,
   ShieldCheckIcon
 } from '@heroicons/react/24/outline';
+import { useTranslation } from 'react-i18next';
 
 const ReengineeringStrategy: React.FC = () => {
+  const { t } = useTranslation('solutions');
   const [selectedTrack, setSelectedTrack] = useState<'business' | 'ba' | 'ux' | 'architect'>('business');
 
   const validationTracks = {
     business: {
-      title: 'Business Owner Track',
+      title: t('appReengineering.strategy.tracks.business.title'),
       icon: UserCircleIcon,
       color: 'blue',
-      stakeholder: 'Business Owner',
-      artifact: 'Updated Functional Specifications',
-      description: 'Modernized feature set with new capabilities and retired functionality',
-      includes: [
-        'Features to preserve as-is',
-        'Features to modernize/improve',
-        'Deprecated features to retire',
-        'New capabilities to add',
-        'Updated business rules'
-      ],
-      sample: 'Update: User Authentication → Add SSO, 2FA; Retire: Legacy password reset flow'
+      stakeholder: t('appReengineering.strategy.tracks.business.stakeholder'),
+      artifact: t('appReengineering.strategy.tracks.business.artifact'),
+      description: t('appReengineering.strategy.tracks.business.description'),
+      includes: t('appReengineering.strategy.tracks.business.includes', { returnObjects: true }) as unknown as string[],
+      sample: t('appReengineering.strategy.tracks.business.sample')
     },
     ba: {
-      title: 'Business Analyst Track',
+      title: t('appReengineering.strategy.tracks.ba.title'),
       icon: ClipboardDocumentListIcon,
       color: 'purple',
-      stakeholder: 'Business Analyst',
-      artifact: 'Re-engineering Epics & Stories',
-      description: 'Sprint-by-sprint modernization plan with incremental delivery',
-      includes: [
-        'Phase-based epic breakdown',
-        'Incremental migration stories',
-        'Risk mitigation strategies',
-        'Validation checkpoints',
-        'Rollback procedures'
-      ],
-      sample: 'Epic: Modernize Auth → Story 1: Add SSO (3pts), Story 2: Implement 2FA (5pts), Story 3: Migrate users (8pts)'
+      stakeholder: t('appReengineering.strategy.tracks.ba.stakeholder'),
+      artifact: t('appReengineering.strategy.tracks.ba.artifact'),
+      description: t('appReengineering.strategy.tracks.ba.description'),
+      includes: t('appReengineering.strategy.tracks.ba.includes', { returnObjects: true }) as unknown as string[],
+      sample: t('appReengineering.strategy.tracks.ba.sample')
     },
     ux: {
-      title: 'UX Designer Track',
+      title: t('appReengineering.strategy.tracks.ux.title'),
       icon: PaintBrushIcon,
       color: 'green',
-      stakeholder: 'UX Designer',
-      artifact: 'Modernized UI/UX Flows',
-      description: 'Updated design system and improved user journeys',
-      includes: [
-        'Modern design system',
-        'Responsive layouts',
-        'Improved user flows',
-        'Accessibility compliance',
-        'Design component library'
-      ],
-      sample: 'New: Modern card-based layout, Improved: Mobile-responsive navigation, Add: Dark mode support'
+      stakeholder: t('appReengineering.strategy.tracks.ux.stakeholder'),
+      artifact: t('appReengineering.strategy.tracks.ux.artifact'),
+      description: t('appReengineering.strategy.tracks.ux.description'),
+      includes: t('appReengineering.strategy.tracks.ux.includes', { returnObjects: true }) as unknown as string[],
+      sample: t('appReengineering.strategy.tracks.ux.sample')
     },
     architect: {
-      title: 'Architect Track',
+      title: t('appReengineering.strategy.tracks.architect.title'),
       icon: CubeIcon,
       color: 'orange',
-      stakeholder: 'Architect',
-      artifact: 'Target Architecture',
-      description: 'Modernized system architecture with migration patterns',
-      includes: [
-        'Microservices extraction plan',
-        'API modernization strategy',
-        'Database optimization',
-        'Cloud migration roadmap',
-        'Technology stack updates'
-      ],
-      sample: 'Target: Extract Auth microservice, Modernize REST → GraphQL, Migrate MySQL → PostgreSQL, Deploy on AWS ECS'
+      stakeholder: t('appReengineering.strategy.tracks.architect.stakeholder'),
+      artifact: t('appReengineering.strategy.tracks.architect.artifact'),
+      description: t('appReengineering.strategy.tracks.architect.description'),
+      includes: t('appReengineering.strategy.tracks.architect.includes', { returnObjects: true }) as unknown as string[],
+      sample: t('appReengineering.strategy.tracks.architect.sample')
     }
   };
 
   const currentTrack = validationTracks[selectedTrack];
 
-  const reengineeringPhases = [
-    {
-      phase: 'Phase 1: Quick Wins',
-      duration: '2-3 weeks',
-      focus: 'Low-risk, high-impact improvements',
-      deliverables: ['Code quality improvements', 'Documentation updates', 'Simple refactorings', 'Test coverage'],
-      risk: 'Low'
-    },
-    {
-      phase: 'Phase 2: Foundation',
-      duration: '4-6 weeks',
-      focus: 'Core architecture improvements',
-      deliverables: ['API modernization', 'Database optimization', 'Authentication upgrade', 'Design system'],
-      risk: 'Medium'
-    },
-    {
-      phase: 'Phase 3: Transformation',
-      duration: '8-10 weeks',
-      focus: 'Major architectural changes',
-      deliverables: ['Microservices extraction', 'UI framework migration', 'Cloud deployment', 'Performance optimization'],
-      risk: 'High'
-    },
-    {
-      phase: 'Phase 4: Optimization',
-      duration: '2-4 weeks',
-      focus: 'Polish and performance tuning',
-      deliverables: ['Performance benchmarking', 'Security hardening', 'Monitoring setup', 'Documentation finalization'],
-      risk: 'Low'
-    }
-  ];
+  const reengineeringPhases = t('appReengineering.strategy.roadmap.phases', { returnObjects: true }) as unknown as { phase: string; duration: string; focus: string; deliverables: string[]; risk: string }[];
 
   const getColorClasses = (color: string) => {
     const colorMap: Record<string, { bg: string; text: string; border: string; gradient: string }> = {
@@ -131,45 +80,43 @@ const ReengineeringStrategy: React.FC = () => {
         {/* Header */}
         <div className="mb-8">
           <Link to="/solutions/application-reengineering" className="text-sm text-orange-600 hover:text-orange-700 mb-2 inline-block">
-            ← Back to Overview
+            &larr; {t('appReengineering.strategy.backToOverview')}
           </Link>
-          <h1 className="text-3xl font-bold text-gray-900">Re-engineering Strategy</h1>
+          <h1 className="text-3xl font-bold text-gray-900">{t('appReengineering.strategy.header.title')}</h1>
           <p className="mt-2 text-gray-600">
-            Strategic modernization plan with multi-stakeholder validation for Phoenix CRM
+            {t('appReengineering.strategy.header.description')}
           </p>
         </div>
 
         {/* Strategy Philosophy */}
         <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border border-blue-200 p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-3">Validated Modernization Strategy</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-3">{t('appReengineering.strategy.philosophy.title')}</h2>
           <p className="text-sm text-gray-700 mb-4">
-            Re-engineering succeeds when all stakeholders align on the target state. We generate role-specific
-            artifacts from the discovered knowledge graphs, allowing each stakeholder to validate the aspects
-            they own before implementation begins.
+            {t('appReengineering.strategy.philosophy.description')}
           </p>
           <div className="flex flex-wrap gap-4 text-sm text-gray-600">
             <div className="flex items-center">
               <CheckCircleIcon className="h-5 w-5 text-green-600 mr-2" />
-              <span>Preserve business value</span>
+              <span>{t('appReengineering.strategy.philosophy.preserveValue')}</span>
             </div>
             <div className="flex items-center">
               <CheckCircleIcon className="h-5 w-5 text-green-600 mr-2" />
-              <span>Improve user experience</span>
+              <span>{t('appReengineering.strategy.philosophy.improveUx')}</span>
             </div>
             <div className="flex items-center">
               <CheckCircleIcon className="h-5 w-5 text-green-600 mr-2" />
-              <span>Modernize architecture</span>
+              <span>{t('appReengineering.strategy.philosophy.modernizeArch')}</span>
             </div>
             <div className="flex items-center">
               <CheckCircleIcon className="h-5 w-5 text-green-600 mr-2" />
-              <span>Eliminate technical debt</span>
+              <span>{t('appReengineering.strategy.philosophy.eliminateDebt')}</span>
             </div>
           </div>
         </div>
 
         {/* Four Validation Tracks */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-6">Four Validation Tracks</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-6">{t('appReengineering.strategy.tracks.title')}</h2>
 
           {/* Track Selector */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
@@ -215,7 +162,7 @@ const ReengineeringStrategy: React.FC = () => {
             </div>
 
             <div className="bg-white rounded-lg p-4 mb-4">
-              <h4 className="text-sm font-semibold text-gray-900 mb-3">What's Included:</h4>
+              <h4 className="text-sm font-semibold text-gray-900 mb-3">{t('appReengineering.strategy.tracks.whatsIncluded')}</h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 {currentTrack.includes.map((item, idx) => (
                   <div key={idx} className="flex items-start text-sm text-gray-700">
@@ -227,7 +174,7 @@ const ReengineeringStrategy: React.FC = () => {
             </div>
 
             <div className="bg-white rounded-lg p-4">
-              <h4 className="text-sm font-semibold text-gray-900 mb-2">Phoenix CRM Example:</h4>
+              <h4 className="text-sm font-semibold text-gray-900 mb-2">{t('appReengineering.strategy.tracks.phoenixExample')}</h4>
               <p className="text-sm text-gray-700 font-mono">{currentTrack.sample}</p>
             </div>
           </div>
@@ -235,22 +182,18 @@ const ReengineeringStrategy: React.FC = () => {
 
         {/* Current vs Target Architecture */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-6">Current vs. Target Architecture</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-6">{t('appReengineering.strategy.architecture.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Current */}
             <div className="border-2 border-red-200 rounded-lg p-5 bg-red-50">
               <h3 className="font-semibold text-gray-900 mb-4 flex items-center">
                 <span className="w-3 h-3 bg-red-600 rounded-full mr-2"></span>
-                Current Architecture
+                {t('appReengineering.strategy.architecture.current')}
               </h3>
               <ul className="space-y-2 text-sm text-gray-700">
-                <li>• PHP monolith (legacy codebase)</li>
-                <li>• Tightly coupled modules</li>
-                <li>• Mixed tech stack (PHP/Node/Python)</li>
-                <li>• MySQL + MongoDB (unoptimized)</li>
-                <li>• Manual deployment process</li>
-                <li>• Limited test coverage</li>
-                <li>• Inconsistent API patterns</li>
+                {(t('appReengineering.strategy.architecture.currentItems', { returnObjects: true }) as unknown as string[]).map((item, idx) => (
+                  <li key={idx}>• {item}</li>
+                ))}
               </ul>
             </div>
 
@@ -258,33 +201,28 @@ const ReengineeringStrategy: React.FC = () => {
             <div className="border-2 border-green-200 rounded-lg p-5 bg-green-50">
               <h3 className="font-semibold text-gray-900 mb-4 flex items-center">
                 <span className="w-3 h-3 bg-green-600 rounded-full mr-2"></span>
-                Target Architecture
+                {t('appReengineering.strategy.architecture.target')}
               </h3>
               <ul className="space-y-2 text-sm text-gray-700">
-                <li>• Microservices architecture</li>
-                <li>• Domain-driven design</li>
-                <li>• Node.js/TypeScript (standardized)</li>
-                <li>• PostgreSQL (optimized schema)</li>
-                <li>• CI/CD with automated testing</li>
-                <li>• 80%+ test coverage</li>
-                <li>• GraphQL API layer</li>
+                {(t('appReengineering.strategy.architecture.targetItems', { returnObjects: true }) as unknown as string[]).map((item, idx) => (
+                  <li key={idx}>• {item}</li>
+                ))}
               </ul>
             </div>
           </div>
 
           <div className="mt-4 bg-blue-50 border border-blue-200 rounded-lg p-4">
             <p className="text-sm text-blue-800">
-              <strong>Migration Strategy:</strong> Incremental extraction using the Strangler Fig pattern.
-              New features built in target architecture while legacy is gradually decomposed.
+              <strong>{t('appReengineering.strategy.architecture.migrationStrategy')}</strong> {t('appReengineering.strategy.architecture.migrationStrategyDesc')}
             </p>
           </div>
         </div>
 
         {/* Re-engineering Roadmap */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-6">Phased Re-engineering Roadmap</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-6">{t('appReengineering.strategy.roadmap.title')}</h2>
           <p className="text-sm text-gray-600 mb-6">
-            Incremental approach balances risk, value delivery, and business continuity:
+            {t('appReengineering.strategy.roadmap.description')}
           </p>
 
           <div className="space-y-4">
@@ -308,7 +246,7 @@ const ReengineeringStrategy: React.FC = () => {
                     phase.risk === 'Medium' ? 'bg-yellow-100 text-yellow-700' :
                     'bg-red-100 text-red-700'
                   }`}>
-                    {phase.risk} Risk
+                    {phase.risk} {t('appReengineering.strategy.roadmap.risk')}
                   </span>
                 </div>
                 <div className="ml-11 grid grid-cols-2 md:grid-cols-4 gap-2">
@@ -329,28 +267,17 @@ const ReengineeringStrategy: React.FC = () => {
           <div className="flex items-start">
             <ShieldCheckIcon className="h-8 w-8 text-green-600 mr-4 flex-shrink-0 mt-1" />
             <div>
-              <h2 className="text-xl font-semibold text-gray-900 mb-2">Validation Gateway</h2>
+              <h2 className="text-xl font-semibold text-gray-900 mb-2">{t('appReengineering.strategy.validationGateway.title')}</h2>
               <p className="text-sm text-gray-700 mb-4">
-                Implementation begins only after all four stakeholders approve their respective artifacts.
-                This ensures alignment on modernization goals, reduces rework, and mitigates risk.
+                {t('appReengineering.strategy.validationGateway.description')}
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-                <div className="flex items-center text-sm bg-white rounded px-2 py-1">
-                  <CheckCircleIcon className="h-4 w-4 text-green-600 mr-1" />
-                  <span>Business ✓</span>
-                </div>
-                <div className="flex items-center text-sm bg-white rounded px-2 py-1">
-                  <CheckCircleIcon className="h-4 w-4 text-green-600 mr-1" />
-                  <span>BA ✓</span>
-                </div>
-                <div className="flex items-center text-sm bg-white rounded px-2 py-1">
-                  <CheckCircleIcon className="h-4 w-4 text-green-600 mr-1" />
-                  <span>UX ✓</span>
-                </div>
-                <div className="flex items-center text-sm bg-white rounded px-2 py-1">
-                  <CheckCircleIcon className="h-4 w-4 text-green-600 mr-1" />
-                  <span>Architect ✓</span>
-                </div>
+                {(t('appReengineering.strategy.validationGateway.approvals', { returnObjects: true }) as unknown as string[]).map((approval, idx) => (
+                  <div key={idx} className="flex items-center text-sm bg-white rounded px-2 py-1">
+                    <CheckCircleIcon className="h-4 w-4 text-green-600 mr-1" />
+                    <span>{approval}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -358,16 +285,15 @@ const ReengineeringStrategy: React.FC = () => {
 
         {/* Next Step */}
         <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-xl p-6 text-white">
-          <h2 className="text-xl font-semibold mb-2">Next: Implementation & Modernization</h2>
+          <h2 className="text-xl font-semibold mb-2">{t('appReengineering.strategy.nextStep.title')}</h2>
           <p className="text-sm mb-4 opacity-90">
-            With a validated strategy in place, we'll execute the re-engineering using AI-powered automation
-            and human expertise working in parallel.
+            {t('appReengineering.strategy.nextStep.description')}
           </p>
           <Link
             to="/solutions/application-reengineering/implementation"
             className="inline-flex items-center px-4 py-2 bg-white text-orange-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
           >
-            View Implementation Process
+            {t('appReengineering.strategy.nextStep.button')}
             <ArrowRightIcon className="ml-2 h-4 w-4" />
           </Link>
         </div>

@@ -1,0 +1,74 @@
+{
+  "buttons": {
+    "getStarted": "Get Started",
+    "learnMore": "Learn More",
+    "viewDetails": "View Details",
+    "viewShowcase": "View Showcase",
+    "viewDeepDive": "View Deep Dive",
+    "exploreMore": "Explore More",
+    "close": "Close",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "back": "Back",
+    "next": "Next",
+    "startConversation": "Start a Conversation →",
+    "scheduleWorkshop": "Schedule Discovery Workshop"
+  },
+  "labels": {
+    "overview": "Overview",
+    "details": "Details",
+    "category": "Category",
+    "status": "Status",
+    "type": "Type",
+    "name": "Name",
+    "description": "Description",
+    "score": "Score",
+    "impact": "Impact",
+    "priority": "Priority",
+    "source": "Source",
+    "target": "Target",
+    "weight": "Weight",
+    "count": "Count",
+    "total": "Total",
+    "average": "Average",
+    "high": "High",
+    "medium": "Medium",
+    "low": "Low",
+    "critical": "Critical",
+    "completeDeepDiveAvailable": "Complete Deep Dive Available"
+  },
+  "status": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "noData": "No data available",
+    "noResults": "No results found"
+  },
+  "navigation": {
+    "home": "Home",
+    "backToHome": "Back to Home"
+  },
+  "filters": {
+    "title": "Filters",
+    "resetAll": "Reset All",
+    "product": "Product",
+    "ontology": "Ontology",
+    "displayOptions": "Display Options",
+    "highlightInconsistencies": "Highlight Inconsistencies",
+    "currentFilters": "Current Filters",
+    "allProducts": "All Products",
+    "allOntologies": "All Ontologies"
+  },
+  "nodeDetails": {
+    "title": "Node Details",
+    "basicInformation": "Basic Information",
+    "id": "ID:",
+    "level": "Level:",
+    "product": "Product:",
+    "properties": "Properties",
+    "inconsistencies": "Inconsistencies",
+    "connectedNodes": "Connected Nodes ({{count}})",
+    "moreConnections": "... and {{count}} more connections",
+    "yes": "Yes",
+    "no": "No"
+  }
+}

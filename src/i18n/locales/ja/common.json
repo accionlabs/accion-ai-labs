@@ -1,0 +1,74 @@
+{
+  "buttons": {
+    "getStarted": "始めましょう",
+    "learnMore": "詳しく見る",
+    "viewDetails": "詳細を見る",
+    "viewShowcase": "ショーケースを見る",
+    "viewDeepDive": "詳細解説を見る",
+    "exploreMore": "さらに探索する",
+    "close": "閉じる",
+    "cancel": "キャンセル",
+    "submit": "送信",
+    "back": "戻る",
+    "next": "次へ",
+    "startConversation": "お問い合わせはこちら →",
+    "scheduleWorkshop": "ディスカバリーワークショップを予約"
+  },
+  "labels": {
+    "overview": "概要",
+    "details": "詳細",
+    "category": "カテゴリ",
+    "status": "ステータス",
+    "type": "タイプ",
+    "name": "名前",
+    "description": "説明",
+    "score": "スコア",
+    "impact": "影響度",
+    "priority": "優先度",
+    "source": "ソース",
+    "target": "ターゲット",
+    "weight": "重み",
+    "count": "件数",
+    "total": "合計",
+    "average": "平均",
+    "high": "高",
+    "medium": "中",
+    "low": "低",
+    "critical": "重大",
+    "completeDeepDiveAvailable": "完全な詳細解説をご覧いただけます"
+  },
+  "status": {
+    "loading": "読み込み中...",
+    "error": "エラーが発生しました",
+    "noData": "データがありません",
+    "noResults": "結果が見つかりませんでした"
+  },
+  "navigation": {
+    "home": "ホーム",
+    "backToHome": "ホームに戻る"
+  },
+  "filters": {
+    "title": "フィルター",
+    "resetAll": "すべてリセット",
+    "product": "プロダクト",
+    "ontology": "オントロジー",
+    "displayOptions": "表示オプション",
+    "highlightInconsistencies": "不整合をハイライト",
+    "currentFilters": "現在のフィルター",
+    "allProducts": "すべてのプロダクト",
+    "allOntologies": "すべてのオントロジー"
+  },
+  "nodeDetails": {
+    "title": "ノード詳細",
+    "basicInformation": "基本情報",
+    "id": "ID：",
+    "level": "レベル：",
+    "product": "プロダクト：",
+    "properties": "プロパティ",
+    "inconsistencies": "不整合",
+    "connectedNodes": "接続ノード ({{count}})",
+    "moreConnections": "... 他 {{count}} 件の接続",
+    "yes": "はい",
+    "no": "いいえ"
+  }
+}

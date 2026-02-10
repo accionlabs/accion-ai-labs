@@ -1,0 +1,1355 @@
+{
+  "challenge": {
+    "title": "課題とソリューション",
+    "manualTranslationTax": {
+      "title": "手動変換の負荷"
+    },
+    "traditionalApproaches": {
+      "title": "従来のアプローチが失敗する理由"
+    },
+    "breakthrough": {
+      "title": "Breeze.AI のブレークスルー"
+    },
+    "capabilities": {
+      "title": "革新的な機能"
+    },
+    "legacyTransformation": {
+      "title": "レガシーシステムの変革"
+    },
+    "competitiveAdvantages": {
+      "title": "競争優位性"
+    }
+  },
+  "architecture": {
+    "title": "システムアーキテクチャ",
+    "overview": {
+      "title": "アーキテクチャ概要"
+    },
+    "coreComponents": {
+      "title": "コアコンポーネント"
+    },
+    "interactions": {
+      "title": "コンポーネント間の相互作用"
+    },
+    "integration": {
+      "title": "統合ポイント"
+    },
+    "scalability": {
+      "title": "スケーラビリティとパフォーマンス"
+    },
+    "security": {
+      "title": "セキュリティとコンプライアンス"
+    }
+  },
+  "semantic": {
+    "title": "セマンティックモデル",
+    "overview": {
+      "title": "フレームワーク概要",
+      "header": {
+        "title": "セマンティックモデル構造",
+        "prominentTitle": "セマンティックモデル",
+        "prominentSubtitle": "構造",
+        "description": "アプリケーションポートフォリオ全体にわたる包括的なソフトウェアエンジニアリングガバナンスを提供する、4つの独立しつつも相互接続されたOntologyです。モダナイゼーション、ラショナリゼーション、グリーンフィールド開発などの戦略的イニシアチブを実現します。"
+      },
+      "corePrinciples": {
+        "title": "基本原則",
+        "foundation": {
+          "title": "基盤原則",
+          "benefits": [
+            "モダリティ非依存の基盤：Functional Ontologyはユーザーニーズを実装に依存せず表現します",
+            "物理的実装レイヤー：Design Ontology、Architecture Ontology、Code Ontologyが具体的な実装を担います"
+          ]
+        },
+        "operational": {
+          "title": "運用原則",
+          "benefits": [
+            "形式的な関係性：Ontology間のマッピングにより、トレーサビリティとガバナンス分析が可能になります",
+            "独立した運用：各Ontologyは構造化された関係性を維持しながら独立して運用されます"
+          ]
+        }
+      },
+      "fourOntologies": {
+        "title": "4つのOntologyアーキテクチャ",
+        "description": "セマンティックモデルの基盤を形成する4つの相互接続されたOntologyの視覚的表現です。",
+        "diagramTitle": "Ontologyの構造と関係性",
+        "diagramDescription": "4つのOntologyがどのように接続し、相互に関連しているかを示すインタラクティブ図",
+        "diagramAlt": "4つのOntologyアーキテクチャ図"
+      },
+      "ontologyDetails": {
+        "title": "Ontologyの詳細",
+        "description": "各Ontologyの構造、目的、および具体例の詳細な解説です。",
+        "functional": {
+          "title": "Functional Ontology",
+          "subtitle": "モダリティ非依存のユーザーニーズ",
+          "description": "構造：ペルソナ → アウトカム → シナリオ → ステップ → アクション。目的：実装方法に依存せず、ユーザーが達成したいことを表現します",
+          "example": "「ECサイト購入者」→「購入完了」→「ギフト購入」→「商品検索」→「検索語句入力」"
+        },
+        "design": {
+          "title": "Design Ontology",
+          "subtitle": "物理的なUX実装",
+          "description": "構造：ユーザージャーニー → フロー → ページ → テンプレート → オーガニズム → モレキュール → アトム。目的：特定のモダリティに対してユーザー体験がどのように物理的に実装されるかを定義します",
+          "example": "「ショッピング体験」→「商品探索フロー」→「検索結果ページ」→「商品カード」→「カートに追加ボタン」"
+        },
+        "architecture": {
+          "title": "Architecture Ontology",
+          "subtitle": "論理的な技術設計",
+          "description": "構造：レイヤー → サービスタイプ → サービス → エンティティ/コンポーネント。目的：サービス、レイヤー、システム構成パターンを含む論理的な技術設計です",
+          "example": "「サービスレイヤー」→「カスタムサービス」→「商品カタログサービス」→「商品エンティティ」"
+        },
+        "code": {
+          "title": "Code Ontology",
+          "subtitle": "物理的な実装単位",
+          "description": "構造：アプリケーション → モジュール → クラス/コンポーネント → 関数/メソッド → プロパティ/フィールド。目的：アーキテクチャと機能を実現する実際の実行可能コードです",
+          "example": "「ECサイトWebアプリ」→「ProductModule」→「ProductCard」→「renderProductCard()」→「product.name」"
+        }
+      },
+      "ontologyConnection": {
+        "title": "Ontologyの接続方法",
+        "description": "抽象的な機能要件が、具体的なデザインおよびアーキテクチャの意思決定を通じてどのように実装されるかを示す関係性フローの視覚的表現です。",
+        "diagramTitle": "Ontology接続フロー",
+        "diagramDescription": "ユーザーの意図がデザインを駆動し、デザインが技術アーキテクチャを定義し、アーキテクチャが実装を導く段階的なフロー",
+        "diagramAlt": "Ontology接続フロー図"
+      },
+      "implementationHierarchy": {
+        "title": "実装階層",
+        "description": "抽象的なユーザーの意図が、段階的により具体的な実装レイヤーへと落とし込まれる視覚的表現です。",
+        "diagramTitle": "抽象から具体へ",
+        "diagramDescription": "ユーザーニーズから実行可能なコードへの進行を示す階層ビュー",
+        "diagramAlt": "実装階層図"
+      },
+      "hierarchySummary": {
+        "title": "階層サマリー",
+        "description": "包括的なソフトウェアガバナンスを実現する3つの主要な抽象化レベルです。",
+        "whatUsersWant": {
+          "title": "ユーザーが求めるもの",
+          "description": "Functional Ontologyは、実装に依存せずユーザーの意図と目標を捕捉します"
+        },
+        "howItWorks": {
+          "title": "外観と動作",
+          "description": "Design OntologyとArchitecture Ontologyがユーザー体験と技術構造を定義します"
+        },
+        "whatRuns": {
+          "title": "実際に実行されるもの",
+          "description": "Code Ontologyは、ユーザーが操作する実行可能な実装を表現します"
+        }
+      },
+      "governanceBenefits": {
+        "title": "ガバナンスの利点",
+        "description": "セマンティックモデル構造により、ソフトウェア開発ライフサイクル全体にわたる強力なガバナンス機能が実現されます。",
+        "strategic": {
+          "title": "戦略的イニシアチブ",
+          "benefits": [
+            "機能保持を伴うアプリケーションモダナイゼーション",
+            "冗長性分析によるポートフォリオラショナリゼーション",
+            "クロスモーダル整合性の検証",
+            "セマンティック継続性を伴うレガシーシステム変革"
+          ]
+        },
+        "analytics": {
+          "title": "ガバナンスアナリティクス",
+          "benefits": [
+            "アーキテクチャ準拠の追跡",
+            "デザインシステムコンプライアンスの監視",
+            "実装整合性の分析",
+            "変更管理のための影響分析"
+          ]
+        },
+        "quality": {
+          "title": "品質保証",
+          "benefits": [
+            "Ontology間の検証と整合性チェック",
+            "全レイヤーにわたる自動コンプライアンス検証",
+            "ユーザーニーズから実装までのトレーサビリティ",
+            "セマンティック関係を通じた継続的ガバナンス"
+          ]
+        }
+      },
+      "cta": {
+        "title": "包括的なソフトウェアガバナンス",
+        "description": "4つのOntologyセマンティックモデルは、エンドツーエンドのソフトウェアエンジニアリングガバナンスの基盤を提供し、すべての開発活動にわたる戦略的ポートフォリオ管理、品質保証、継続的コンプライアンス検証を実現します。",
+        "buttonText": "Functional Ontologyの詳細を見る"
+      }
+    },
+    "functional": {
+      "title": "Functional Ontology",
+      "header": {
+        "title": "Functional Ontology",
+        "prominentTitle": "Functional Ontology",
+        "description": "ユーザーニーズと行動のモダリティ非依存表現です。このOntologyは、さまざまなインターフェースや技術にわたる実装方法に依存せず、ユーザーが達成したいことを捕捉します。"
+      },
+      "layerStructure": {
+        "title": "Functional Ontologyのレイヤー構造",
+        "description": "抽象的なペルソナから具体的なアトミックアクションまで、機能要件を構造化する5つの階層レイヤーの視覚的表現です。",
+        "diagramTitle": "5層階層構造",
+        "diagramDescription": "各レイヤーは前のレイヤーの上に構築され、モダリティの独立性と関心の明確な分離を維持します",
+        "diagramAlt": "Functional Ontologyレイヤー構造図"
+      },
+      "layerDefinitions": {
+        "title": "レイヤーの定義",
+        "persona": {
+          "title": "👤 ペルソナ",
+          "description": "特定のニーズ、目標、コンテキストを持つユーザーアーキタイプ",
+          "example": "例：ECサイト購入者、システム管理者"
+        },
+        "outcomes": {
+          "title": "🎯 アウトカム",
+          "description": "ペルソナが達成したい上位目標",
+          "example": "例：購入完了、システム健全性の監視"
+        },
+        "scenarios": {
+          "title": "📋 シナリオ",
+          "description": "アウトカム内の具体的なユースケース",
+          "example": "例：友人へのギフト購入、パフォーマンスアラートの調査"
+        },
+        "steps": {
+          "title": "👣 ステップ",
+          "description": "シナリオ内のアクティビティの論理的な進行",
+          "example": "例：商品検索、選択肢の確認、意思決定"
+        },
+        "actions": {
+          "title": "⚡ アクション",
+          "description": "インタラクションを駆動するアトミックなユーザー意図",
+          "example": "例：検索語句入力、結果のフィルタリング、商品の比較"
+        }
+      },
+      "ecommerceJourney": {
+        "title": "EC サイトのジャーニー完全例",
+        "description": "完全なユーザージャーニーがFunctional Ontologyの5つのレイヤーすべてに具体例とともにどのようにマッピングされるかの視覚的表現です。",
+        "diagramTitle": "完全なジャーニーマッピング",
+        "diagramDescription": "ペルソナの特性からアトミックアクションまで、ユーザーニーズの階層的な分解を示します",
+        "diagramAlt": "ECサイトジャーニー Functional Ontologyマッピング"
+      },
+      "actionDetail": {
+        "title": "アクションレベルの詳細",
+        "description": "各ステップには、最も小さな意味のあるユーザー意図を表す複数のアトミックアクションが含まれます。",
+        "search": {
+          "title": "商品検索アクション",
+          "items": [
+            "⚡ 検索語句入力",
+            "⚡ カテゴリフィルタの適用"
+          ]
+        },
+        "review": {
+          "title": "選択肢確認アクション",
+          "items": [
+            "⚡ 商品詳細の表示",
+            "⚡ 商品の比較",
+            "⚡ レビューの閲覧"
+          ]
+        },
+        "decision": {
+          "title": "意思決定アクション",
+          "items": [
+            "⚡ カートに追加",
+            "⚡ 購入手続きへ進む"
+          ]
+        },
+        "transaction": {
+          "title": "取引完了アクション",
+          "items": [
+            "⚡ 配送先情報の入力",
+            "⚡ 支払い情報の入力",
+            "⚡ 購入の確定"
+          ]
+        }
+      },
+      "modalityIndependence": {
+        "title": "モダリティ独立性：重要な知見",
+        "description": "Functional Ontologyは、特定の実装技術への参照を意図的に避けています。「検索語句入力」は、Webフォーム、モバイルアプリ、音声インターフェース、将来のARシステムのいずれで実行されても、同じユーザー意図です。"
+      },
+      "modalityVisualization": {
+        "title": "モダリティ独立性の可視化",
+        "description": "単一の機能アクションが、複数のインターフェースモダリティにわたって同じセマンティックな意味を維持する視覚的なデモンストレーションです。",
+        "diagramTitle": "同一機能、異なる実装",
+        "diagramDescription": "セマンティックの一貫性を保ちながら、複数のインターフェース技術を通じて表現される1つのユーザー意図",
+        "diagramAlt": "インターフェースタイプ間のモダリティ独立性"
+      },
+      "implementationExamples": {
+        "title": "モダリティ別の実装例",
+        "description": "機能アクションが特定のインターフェース実装にどのように変換されるかの詳細な解説です。",
+        "searchTerm": {
+          "title": "⚡ アクション：「検索語句入力」",
+          "items": [
+            "💻 Web：プレースホルダー付きテキスト入力フィールド",
+            "📱 モバイル：検索候補付きタッチキーボード",
+            "🎤 音声：確認機能付き音声認識",
+            "👓 AR：ジェスチャーベースのテキスト入力または音声コマンド"
+          ]
+        },
+        "filter": {
+          "title": "⚡ アクション：「カテゴリフィルタの適用」",
+          "items": [
+            "💻 Web：ドロップダウンメニューまたはチェックボックスリスト",
+            "📱 モバイル：スワイプ可能なフィルタカード",
+            "🎤 音声：音声によるカテゴリ選択",
+            "👓 AR：空間ジェスチャーベースの選択"
+          ]
+        }
+      },
+      "semanticRichness": {
+        "title": "セマンティックの豊富さとコンテキスト",
+        "description": "各機能要素は、インテリジェントな自動化と検証を可能にする豊富なセマンティックメタデータを持ちます。",
+        "personaContext": {
+          "title": "ペルソナコンテキスト",
+          "items": [
+            "デモグラフィクスとサイコグラフィクス",
+            "技術習熟度レベル",
+            "ドメイン知識の前提",
+            "アクセシビリティ要件",
+            "文化的・言語的コンテキスト"
+          ]
+        },
+        "outcomeValidation": {
+          "title": "アウトカム検証",
+          "items": [
+            "成功基準の定義",
+            "ビジネス価値指標",
+            "ユーザー満足度指標",
+            "パフォーマンスベンチマーク",
+            "リスクとコンプライアンス要件"
+          ]
+        },
+        "actionSemantics": {
+          "title": "アクションセマンティクス",
+          "items": [
+            "前提条件と事後条件",
+            "データ入出力要件",
+            "エラー処理シナリオ",
+            "元に戻す・復旧機能",
+            "セキュリティとプライバシーへの影響"
+          ]
+        }
+      },
+      "crossOntologyMapping": {
+        "title": "Ontology間マッピング",
+        "description": "機能要素は、Design Ontology、Architecture Ontology、Code Ontologyとの形式的な関係を確立し、完全なトレーサビリティを実現します。",
+        "traceability": {
+          "title": "トレーサビリティの関係性",
+          "items": [
+            "機能アクション → デザインコンポーネント",
+            "シナリオ → ユーザー体験フロー",
+            "アウトカム → アーキテクチャサービス",
+            "ペルソナ → システムアクセスパターン"
+          ]
+        },
+        "validation": {
+          "title": "検証の利点",
+          "items": [
+            "Ontology間の自動整合性チェック",
+            "要件変更に対する影響分析",
+            "実装のカバレッジ検証",
+            "セマンティック検証による品質保証"
+          ]
+        }
+      },
+      "aiAgent": {
+        "title": "AIエージェントの活用",
+        "description": "Functional Ontologyのセマンティックの豊富さにより、AIエージェントは人間レベルの理解力でユーザーの意図を理解し、行動することができます。",
+        "capabilities": {
+          "title": "エージェントの能力",
+          "items": [
+            "意図認識：部分的な記述からユーザーの目標を理解します",
+            "コンテキスト推論：ペルソナパターンに基づいて不足情報を補完します",
+            "検証：機能仕様の完全性と整合性を検証します",
+            "生成：上位アウトカムから包括的なユーザーストーリーを生成します"
+          ]
+        },
+        "automation": {
+          "title": "自動化の利点",
+          "items": [
+            "要件の詳細化：上位ニーズを詳細なシナリオに展開します",
+            "エッジケースの発見：不足しているシナリオやエラー条件を特定します",
+            "クロスプラットフォーム整合性：モダリティ間の統一された動作を保証します",
+            "ユーザー体験の最適化：ペルソナパターンに基づいて改善を提案します"
+          ]
+        }
+      },
+      "benefits": {
+        "title": "Functional Ontologyの利点",
+        "strategic": {
+          "title": "戦略的な利点",
+          "items": [
+            "将来性のある設計：現在の技術に依存しない要件定義",
+            "クロスプラットフォーム整合性：すべてのインターフェースで同一のユーザー意図",
+            "ステークホルダーの共通認識：明確で曖昧さのない要件定義",
+            "市場適応性：新しいプラットフォームや技術への容易な拡張"
+          ]
+        },
+        "operational": {
+          "title": "運用上の利点",
+          "items": [
+            "自動分析：AIエージェントによる要件の処理と検証",
+            "完全なトレーサビリティ：すべての実装がユーザー意図に紐づきます",
+            "変更影響評価：要件変更の影響を把握します",
+            "品質保証：要件カバレッジの体系的な検証"
+          ]
+        }
+      },
+      "cta": {
+        "title": "機能からフォームへ",
+        "description": "Design Ontologyを通じて、機能要件がどのように具体的なユーザー体験の実装に変換されるかをご覧ください。",
+        "buttonText": "Design Ontologyを見る"
+      }
+    },
+    "design": {
+      "title": "Design Ontology",
+      "header": {
+        "title": "Design Ontology",
+        "prominentTitle": "Design Ontology",
+        "description": "特定のモダリティに対するユーザー体験の物理的実装です。このOntologyは、機能要件がWeb、モバイル、API、その他のモダリティにわたって具体的なユーザーインターフェースとインタラクションパターンにどのように変換されるかを定義します。"
+      },
+      "atomicHierarchy": {
+        "title": "アトミックデザイン階層",
+        "description": "戦略的なユーザージャーニーからアトミックなインターフェース要素まで、7層のデザイン階層の視覚的表現です。",
+        "diagramTitle": "7層デザイン構造",
+        "diagramDescription": "戦略的なマルチセッションジャーニーからアトミックなインターフェース要素まで、各レベルで関心の明確な分離を維持します",
+        "diagramAlt": "アトミックデザイン階層図"
+      },
+      "layerDefinitions": {
+        "title": "デザインレイヤーの定義",
+        "description": "各デザインレイヤーの明確な定義と実践的な例を含む詳細な解説です。",
+        "userJourneys": {
+          "title": "🎯 ユーザージャーニー",
+          "description": "複数のアプリケーションや長期間にわたるマルチセッション体験",
+          "items": [
+            "戦略レベル：完全な顧客ライフサイクルインタラクション",
+            "例：カスタマーライフサイクルジャーニー、従業員オンボーディングジャーニー",
+            "範囲：複数のセッション、アプリケーション、タッチポイント",
+            "重点：長期的なユーザー関係と価値提供"
+          ]
+        },
+        "flows": {
+          "title": "🔄 フロー",
+          "description": "複数のページやインターフェースを接続するシングルセッションのシーケンス",
+          "items": [
+            "戦術レベル：単一セッション内の接続されたシーケンス",
+            "例：登録フロー、購入手続きフロー、データインポートフロー",
+            "範囲：1つのセッション内の複数のページまたは画面",
+            "重点：目標達成とユーザータスクの成功"
+          ]
+        },
+        "pages": {
+          "title": "📄 ページ/画面",
+          "description": "個別のインタラクションコンテキストを表す完全な画面またはインターフェース単位",
+          "items": [
+            "構造レベル：完全なインターフェースコンテキスト",
+            "例：商品一覧ページ、ユーザープロフィールページ、APIレスポンススキーマ",
+            "範囲：単一の完全なインターフェースまたはデータ構造",
+            "重点：完全なユーザーコンテキストと情報アーキテクチャ"
+          ]
+        },
+        "templates": {
+          "title": "📐 テンプレート",
+          "description": "再利用可能なページレベルのレイアウトパターンと構造",
+          "items": [
+            "パターンレベル：再利用可能な構造レイアウト",
+            "例：リストテンプレート、詳細テンプレート、ダッシュボードテンプレート",
+            "範囲：レイアウト構造と情報階層",
+            "重点：類似コンテキスト間の一貫性と再利用"
+          ]
+        },
+        "organisms": {
+          "title": "🧬 オーガニズム",
+          "description": "特定の機能を持つ複合コンポーネントグループ",
+          "items": [
+            "コンポーネントレベル：複合的な機能グループ",
+            "例：ナビゲーションヘッダー、商品グリッド、データテーブル",
+            "範囲：連携する複数のモレキュール",
+            "重点：特定の機能とユーザータスク"
+          ]
+        },
+        "molecules": {
+          "title": "🧪 モレキュール",
+          "description": "単一の目的を持つアトムの単純な組み合わせ",
+          "items": [
+            "組み合わせレベル：目的に応じたアトムグループ",
+            "例：検索ボックス、商品カード、フォームフィールドグループ",
+            "範囲：統一された目的を持つ少数のアトムグループ",
+            "重点：単一の明確な機能または表示目的"
+          ]
+        },
+        "atoms": {
+          "title": "⚛️ アトム",
+          "description": "これ以上分解できない個別のインターフェース要素",
+          "items": [
+            "要素レベル：分割不可能なインターフェースコンポーネント",
+            "例：ボタン、入力フィールド、ラベル、JSONフィールド",
+            "範囲：単一のHTML要素または基本UIコンポーネント",
+            "重点：基本的なインタラクションと表示プリミティブ"
+          ]
+        }
+      },
+      "breakdownExample": {
+        "title": "デザイン分解の例",
+        "description": "実際のECサイトの例を用いて、完全なWebページがデザイン階層を通じてどのように分解されるかの詳細な可視化です。",
+        "diagramTitle": "ECサイト検索結果の分解",
+        "diagramDescription": "フローレベルからアトミック要素まで、デザイン階層の実践的な実装を示す完全な分解",
+        "diagramAlt": "デザイン分解例の図"
+      },
+      "crossModal": {
+        "title": "クロスモーダルデザインの一貫性",
+        "description": "同じ機能要件が、さまざまなモダリティにわたって異なるデザイン実装にどのように変換されるかを示す包括的な可視化です。",
+        "diagramTitle": "同一機能、異なるフォーム",
+        "diagramDescription": "「商品購入の完了」がWeb、モバイル、音声、APIの各モダリティに適応しながら一貫性を維持する方法",
+        "diagramAlt": "クロスモーダルデザイン一貫性図"
+      },
+      "modalityAdaptations": {
+        "title": "モダリティ別の適応",
+        "description": "機能的な一貫性を維持しながら、デザインレイヤーが異なるプラットフォーム制約にどのように適応するかの解説です。",
+        "web": {
+          "title": "💻 Webモダリティ",
+          "items": [
+            "視覚的階層：複雑なナビゲーションパターンを備えたリッチなレイアウト",
+            "情報密度：複数のデータポイントを持つ詳細な情報表示",
+            "インタラクションパターン：マウスとキーボードに最適化されたインタラクション",
+            "画面スペース：包括的なインターフェースが可能な大画面",
+            "ナビゲーション：複雑なメニュー構造とパンくずリスト"
+          ]
+        },
+        "mobile": {
+          "title": "📱 モバイルモダリティ",
+          "items": [
+            "タッチインタラクション：タッチに最適化されたコントロールとジェスチャーサポート",
+            "段階的開示：認知負荷を軽減するために情報を段階的に表示",
+            "簡素化されたナビゲーション：タブバーと簡素化されたメニュー構造",
+            "画面制約：小画面向けに最適化されたコンパクトなレイアウト",
+            "コンテキスト認識：位置情報とデバイスセンサーの統合"
+          ]
+        },
+        "voice": {
+          "title": "🎤 音声モダリティ",
+          "items": [
+            "対話フロー：自然言語の対話パターン",
+            "コンテキスト保持：会話状態とユーザー設定の記憶",
+            "エラー回復：誤認識されたコマンドの適切な処理",
+            "確認パターン：重要なアクションの音声確認",
+            "音声フィードバック：サウンドデザインと音声合成の最適化"
+          ]
+        },
+        "api": {
+          "title": "🔌 APIモダリティ",
+          "items": [
+            "データ構造：JSON/XMLスキーマとレスポンスパターン",
+            "エラー処理：意味のあるコードを持つ構造化されたエラーレスポンス",
+            "バージョニング：後方互換性と進化戦略",
+            "ドキュメント：包括的なAPIドキュメントと例",
+            "レート制限：使用量のクォータとスロットリングメカニズム"
+          ]
+        }
+      },
+      "designFunctionMapping": {
+        "title": "デザインと機能のマッピング：重要な接続",
+        "description": "Design Ontologyは、機能要件とモダリティ固有の実装間の正確なマッピングを作成します。各デザイン要素は機能アクションに直接紐づき、一貫性を確保し自動検証を可能にします。"
+      },
+      "traceability": {
+        "title": "トレーサビリティと検証",
+        "description": "デザイン要素が機能要件への完全なトレーサビリティを維持し、自動整合性チェックを可能にする方法の解説です。",
+        "functionalMapping": {
+          "title": "機能マッピング",
+          "items": [
+            "直接トレーサビリティ：すべてのデザイン要素が機能アクションにマッピングされます",
+            "整合性検証：モダリティ間の自動チェック",
+            "ギャップ分析：マッピングされていない機能要件の特定",
+            "影響評価：変更伝播の分析"
+          ]
+        },
+        "crossOntologyLinks": {
+          "title": "Ontology間リンク",
+          "items": [
+            "アーキテクチャ統合：デザインコンポーネントがシステムサービスにリンクされます",
+            "コード生成：デザイン仕様が実装の生成を駆動します",
+            "テストカバレッジ：デザイン要素が自動テスト作成を可能にします",
+            "ドキュメント：デザインパターンがユーザードキュメントに反映されます"
+          ]
+        },
+        "qualityAssurance": {
+          "title": "品質保証",
+          "items": [
+            "アクセシビリティコンプライアンス：WCAGとインクルーシブデザインの検証",
+            "ブランド一貫性：スタイルガイドとデザインシステムの準拠",
+            "パフォーマンス最適化：読み込みとインタラクションのパフォーマンス指標",
+            "ユーザー体験の検証：ユーザビリティと満足度の指標"
+          ]
+        }
+      },
+      "aiAgent": {
+        "title": "デザインにおけるAIエージェントの活用",
+        "description": "AIエージェントがDesign Ontologyのセマンティックの豊富さを活用して、デザインタスクを自動化し一貫性を維持する方法です。",
+        "generation": {
+          "title": "デザイン生成機能",
+          "items": [
+            "コンポーネントライブラリの作成：デザインシステムコンポーネントの自動生成",
+            "レイアウト最適化：コンテンツとユーザーパターンに基づくAI駆動のレイアウト提案",
+            "レスポンシブデザイン：デバイスサイズと向きへの自動適応",
+            "アクセシビリティ向上：アクセシビリティの改善と検証の自動化"
+          ]
+        },
+        "consistency": {
+          "title": "一貫性の維持",
+          "items": [
+            "クロスモーダル検証：すべてのモダリティにわたる機能的一貫性の確保",
+            "ブランドコンプライアンス：デザインシステムガイドラインに対する自動チェック",
+            "パターン認識：デザインパターンとアンチパターンの特定",
+            "進化管理：デザインシステムの変更の追跡と検証"
+          ]
+        }
+      },
+      "benefits": {
+        "title": "Design Ontologyの利点",
+        "strategic": {
+          "title": "戦略的な利点",
+          "items": [
+            "プラットフォーム非依存のデザイン：あらゆるモダリティに適応するデザインパターン",
+            "将来性のある実装：技術と共に進化するデザインシステム",
+            "ブランド一貫性：すべてのタッチポイントにわたる統一された体験",
+            "優れたユーザー体験：科学的に検証されたデザイン意思決定"
+          ]
+        },
+        "operational": {
+          "title": "運用上の利点",
+          "items": [
+            "自動デザイン生成：AI駆動のコンポーネントとレイアウト作成",
+            "完全なトレーサビリティ：すべてのデザイン要素がビジネス要件に紐づきます",
+            "品質保証：デザインの一貫性とアクセシビリティの体系的な検証",
+            "迅速なイテレーション：高速なプロトタイピングとデザインシステムの進化"
+          ]
+        }
+      },
+      "cta": {
+        "title": "デザインから実装へ",
+        "description": "Architecture Ontologyを通じて、デザイン仕様がどのように具体的なシステムアーキテクチャと技術実装に変換されるかをご覧ください。",
+        "buttonText": "Architecture Ontologyを見る"
+      }
+    },
+    "architectureOntology": {
+      "title": "Architecture Ontology",
+      "header": {
+        "title": "Architecture Ontology",
+        "description": "サービス、レイヤー、システム構成パターンを定義する論理的な技術設計です。このOntologyは、サービスのオーケストレーションと自律的な機能を提供するインテリジェントエージェントレイヤーを含む技術アーキテクチャを構造化します。"
+      },
+      "tierStructure": {
+        "title": "8層アーキテクチャ構造",
+        "intelligenceLayer": "インテリジェンスレイヤー"
+      },
+      "tiers": [
+        { "layer": "ユーザーエクスペリエンス", "description": "フロントエンドアプリケーションとユーザーインターフェース" },
+        { "layer": "APIゲートウェイ", "description": "リクエストルーティング、認証、API管理" },
+        { "layer": "オブザーバビリティと監視", "description": "システム健全性、メトリクス、パフォーマンス追跡" },
+        { "layer": "エージェント", "description": "インテリジェントなオーケストレーションと自律的な意思決定" },
+        { "layer": "サービス", "description": "ビジネスロジックとプラットフォーム機能" },
+        { "layer": "イベントキュー", "description": "非同期メッセージングとイベント処理" },
+        { "layer": "データレイク・アナリティクス・AI/ML", "description": "データ処理、アナリティクス、機械学習" },
+        { "layer": "インフラストラクチャ", "description": "コンピューティングリソース、ストレージ、ネットワーキング" }
+      ],
+      "agentsOverview": {
+        "title": "エージェントレイヤー：インテリジェンスエンジン",
+        "keyInnovationLabel": "主要なイノベーション：",
+        "keyInnovationText": "エージェントレイヤーは、ユーザーエクスペリエンスレイヤーとサービスレイヤー間のインテリジェントな連携を提供し、自律的なタスク完了と複雑なワークフローオーケストレーションを実現します。",
+        "agentTypes": {
+          "title": "4種類のエージェント",
+          "items": [
+            "ビジネスプロセスエージェント",
+            "ドメインエージェント",
+            "インテグレーションエージェント",
+            "アシスタントエージェント"
+          ]
+        },
+        "keyCapabilities": {
+          "title": "主要な機能",
+          "items": [
+            "インテリジェントオーケストレーション",
+            "自律的な問題解決",
+            "コンテキストの保持",
+            "適応的な動作"
+          ]
+        },
+        "exploreButton": "エージェントレイヤーの詳細を見る",
+        "exploreDescription": "エージェントタイプ、オーケストレーションパターン、実装上の考慮事項の詳細"
+      },
+      "benefits": {
+        "title": "Architecture Ontologyの利点",
+        "intelligence": {
+          "title": "インテリジェンスと自律性",
+          "orchestration": {
+            "label": "インテリジェントオーケストレーション：",
+            "text": "エージェントがどのサービスをどの順序で呼び出すかを判断します"
+          },
+          "problemSolving": {
+            "label": "自律的な問題解決：",
+            "text": "ユーザーの介入なしに例外やエッジケースを処理します"
+          },
+          "adaptive": {
+            "label": "適応的な動作：",
+            "text": "オーケストレーションパターンを時間とともに学習し最適化します"
+          }
+        },
+        "uxArchitecture": {
+          "title": "ユーザー体験とアーキテクチャ",
+          "enhancedUx": {
+            "label": "強化されたUX：",
+            "text": "複雑なプロセスがシンプルな単一インタラクションとして表示されます"
+          },
+          "contextPreservation": {
+            "label": "コンテキストの保持：",
+            "text": "サービスコール間で会話とタスクのコンテキストを維持します"
+          },
+          "businessLogic": {
+            "label": "ビジネスロジックの抽象化：",
+            "text": "複雑なルールがサービス全体に分散せず、エージェントにカプセル化されます"
+          }
+        }
+      }
+    },
+    "code": {
+      "title": "Code Ontology",
+      "header": {
+        "title": "Code Ontology",
+        "description": "物理的な実装単位 - アーキテクチャと機能を実現する実際の実行可能コードです。このOntologyは、フロントエンド、バックエンド、データの関心事ごとに構成された具体的なコード構造を、技術固有の実装とともに表現します。"
+      },
+      "structure": {
+        "title": "Code Ontologyの構造"
+      },
+      "frontendLayers": {
+        "title": "フロントエンドコードレイヤー",
+        "items": [
+          { "layer": "アプリケーション", "description": "デプロイ可能なフロントエンド単位", "example": "React App、Vue SPA、モバイルアプリ" },
+          { "layer": "モジュール", "description": "論理的な機能グループ", "example": "ProductModule、UserModule、CartModule" },
+          { "layer": "コンポーネント", "description": "UI実装単位", "example": "ProductCard、LoginForm、NavigationHeader" },
+          { "layer": "関数/Hooks", "description": "実行可能なUIロジック", "example": "useProductData()、handleSubmit()、validateForm()" },
+          { "layer": "プロパティ/ステート", "description": "UIデータ単位", "example": "isLoading、userInput、selectedItems[]" },
+          { "layer": "設定", "description": "フロントエンド設定", "example": "webpack.config、environment.json、routing.config" }
+        ]
+      },
+      "backendLayers": {
+        "title": "バックエンドコードレイヤー",
+        "items": [
+          { "layer": "アプリケーション", "description": "デプロイ可能なバックエンド単位", "example": "APIサービス、マイクロサービス、サーバーレス関数" },
+          { "layer": "モジュール", "description": "ビジネスドメインのグループ", "example": "ProductModule、OrderModule、PaymentModule" },
+          { "layer": "クラス/サービス", "description": "ビジネスロジック単位", "example": "ProductService、OrderController、PaymentProcessor" },
+          { "layer": "関数/メソッド", "description": "実行可能な操作", "example": "createProduct()、processPayment()、GET /api/orders" },
+          { "layer": "プロパティ/フィールド", "description": "データ単位", "example": "productId、orderTotal、apiEndpoints" },
+          { "layer": "設定", "description": "バックエンド設定", "example": "database.config、service.yaml、security.properties" }
+        ]
+      },
+      "dataLayers": {
+        "title": "データコードレイヤー",
+        "items": [
+          { "layer": "アプリケーション", "description": "データ処理単位", "example": "ETLパイプライン、アナリティクスエンジン、データ同期サービス" },
+          { "layer": "モジュール", "description": "データドメインのグループ", "example": "CustomerDataModule、ProductDataModule、AnalyticsModule" },
+          { "layer": "クラス/プロセッサ", "description": "データ変換単位", "example": "DataValidator、SchemaMapper、AnalyticsProcessor" },
+          { "layer": "関数/クエリ", "description": "データ操作", "example": "transformProduct()、validateSchema()、SELECT * FROM products" },
+          { "layer": "プロパティ/スキーマ", "description": "データ構造定義", "example": "productSchema、customerFields、analyticsMetrics" },
+          { "layer": "設定", "description": "データ設定", "example": "pipeline.yaml、schema.json、database.properties" }
+        ]
+      },
+      "technologyStacks": {
+        "title": "技術固有のサブOntology",
+        "stacksSuffix": "テクノロジースタック",
+        "applicationsLabel": "アプリケーション",
+        "componentsLabel": "コンポーネント/クラス",
+        "functionsLabel": "関数/メソッド",
+        "frontend": {
+          "category": "フロントエンド",
+          "stacks": [
+            {
+              "name": "React/TypeScript",
+              "applications": "Create React App、Next.jsアプリ、マイクロフロントエンド",
+              "components": "Reactコンポーネント、カスタムHooks、Context Providers",
+              "functions": "イベントハンドラ、useEffect、useState、カスタムHooks"
+            },
+            {
+              "name": "Vue.js",
+              "applications": "Vue CLIアプリ、Nuxt.jsアプリ、Vueマイクロフロントエンド",
+              "components": "Vueコンポーネント、Composables、ディレクティブ",
+              "functions": "メソッド、算出プロパティ、ウォッチャー"
+            }
+          ]
+        },
+        "backend": {
+          "category": "バックエンド",
+          "stacks": [
+            {
+              "name": "Node.js/Express",
+              "applications": "Expressサーバー、サーバーレス関数、マイクロサービス",
+              "components": "コントローラ、サービス、リポジトリ、ミドルウェア",
+              "functions": "ルートハンドラ、ビジネスロジックメソッド、データベース操作"
+            },
+            {
+              "name": "Java/Spring",
+              "applications": "Spring Bootアプリ、マイクロサービス、WARデプロイメント",
+              "components": "コントローラ、サービス、リポジトリ、設定",
+              "functions": "RESTエンドポイント、サービスメソッド、リポジトリ操作"
+            }
+          ]
+        },
+        "data": {
+          "category": "データ",
+          "stacks": [
+            {
+              "name": "SQLデータベース",
+              "applications": "データベースインスタンス、データウェアハウス、OLAPシステム",
+              "components": "テーブル、ビュー、ストアドプロシージャ、関数",
+              "functions": "SQLクエリ、ストアドプロシージャ、トリガー"
+            },
+            {
+              "name": "データパイプライン",
+              "applications": "Apache Airflow、Apache Kafka、ETLプラットフォーム",
+              "components": "DAG、オペレータ、プロセッサ、トランスフォーマ",
+              "functions": "タスク関数、ストリームプロセッサ、データ変換"
+            }
+          ]
+        }
+      },
+      "benefits": {
+        "title": "Code Ontologyの利点",
+        "clarity": {
+          "title": "実装の明確性",
+          "items": [
+            "各関心事に対する明確な技術固有の構造",
+            "異なるテクノロジースタック間の一貫したパターン",
+            "アプリケーションからプロパティまでの標準化された構成"
+          ]
+        },
+        "development": {
+          "title": "開発上の利点",
+          "items": [
+            "明確なコード構造による迅速なオンボーディング",
+            "一貫したパターンによる保守性の向上",
+            "コンポーネントと関数の再利用性の強化"
+          ]
+        }
+      }
+    },
+    "relationships": {
+      "title": "Ontology間の関係性",
+      "header": {
+        "title": "Ontology間の関係性",
+        "description": "4つのOntology間のトレーサビリティとガバナンスを実現する形式的なマッピングです。これらの関係性は、包括的なソフトウェアエンジニアリング分析、整合性検証、ポートフォリオガバナンスの基盤を提供します。"
+      },
+      "categories": {
+        "title": "関係性のカテゴリ",
+        "examplesLabel": "例："
+      },
+      "relationshipTypes": {
+        "implements": {
+          "type": "実装する (Implements)",
+          "description": "DesignまたはCodeノードがFunctionalノードを実現します",
+          "examples": [
+            "「カートに追加ボタン」が「カートに追加アクション」を実装します",
+            "「addToCart()」が「カートに追加アクション」を実装します"
+          ]
+        },
+        "supports": {
+          "type": "サポートする (Supports)",
+          "description": "ArchitectureノードがDesign、Code、またはFunctionalの機能を実現します",
+          "examples": [
+            "「商品エンティティサービス」が「商品表示」をサポートします",
+            "「ProductRepository」が「商品ストレージ」をサポートします"
+          ]
+        },
+        "requires": {
+          "type": "必要とする (Requires)",
+          "description": "Functionalノードが特定のDesign、Architecture、またはCode実装を必要とします",
+          "examples": [
+            "「商品比較アクション」が「商品比較テンプレート」を必要とします",
+            "「compareProducts()」を必要とします"
+          ]
+        },
+        "triggers": {
+          "type": "トリガーする (Triggers)",
+          "description": "FunctionalアクションがArchitectureプロセスまたはCode実行を開始します",
+          "examples": [
+            "「購入確定アクション」が「注文ワークフローサービス」をトリガーします",
+            "「processPayment()」をトリガーします"
+          ]
+        },
+        "validates": {
+          "type": "検証する (Validates)",
+          "description": "ArchitectureサービスまたはCode単位がFunctional要件を保証します",
+          "examples": [
+            "「認証サービス」が「ユーザーログインアクション」を検証します",
+            "「validateCredentials()」が「ユーザーログインアクション」を検証します"
+          ]
+        },
+        "realizes": {
+          "type": "実現する (Realizes)",
+          "description": "Code単位がArchitectureコンセプトを実装します",
+          "examples": [
+            "「ProductService.java」が「商品エンティティサービス」を実現します",
+            "「authMiddleware.ts」が「認証サービス」を実現します"
+          ]
+        },
+        "renders": {
+          "type": "レンダリングする (Renders)",
+          "description": "Code単位がDesignコンセプトを実装します",
+          "examples": [
+            "「ProductCard.tsx」が「商品カードコンポーネント」をレンダリングします",
+            "「login.vue」が「ログインフォームテンプレート」をレンダリングします"
+          ]
+        }
+      },
+      "connectivity": {
+        "title": "多次元接続モデル",
+        "diagram": {
+          "functional": {
+            "label": "Functional",
+            "sublabel": "ユーザーアクションと意図"
+          },
+          "arrows": {
+            "implements": "実装する",
+            "supports": "サポートする",
+            "triggers": "トリガーする",
+            "realizes": "実現する"
+          },
+          "design": {
+            "label": "Design",
+            "sublabel": "UX/UI"
+          },
+          "architecture": {
+            "label": "Architecture",
+            "sublabel": "サービス"
+          },
+          "code": {
+            "label": "Code",
+            "sublabel": "実装単位"
+          }
+        },
+        "connectionPatterns": {
+          "title": "接続パターン"
+        },
+        "patterns": [
+          {
+            "path": "Functional-Code直接接続",
+            "description": "分析のための即時トレーサビリティ",
+            "example": "ユーザーアクション → コード関数"
+          },
+          {
+            "path": "Functional-Design-Code",
+            "description": "UIガバナンスパス",
+            "example": "ユーザーアクション → UIコンポーネント → Reactコンポーネント"
+          },
+          {
+            "path": "Functional-Architecture-Code",
+            "description": "サービスガバナンスパス",
+            "example": "ユーザーアクション → サービス → API実装"
+          },
+          {
+            "path": "クロスバリデーション",
+            "description": "すべてのパスの整合性を比較",
+            "example": "複数の実装パスの検証"
+          }
+        ],
+        "cardinality": {
+          "title": "カーディナリティパターン",
+          "oneToOne": {
+            "title": "1対1",
+            "description": "単一のアクションが単一のコンポーネントまたはCode単位にマッピングされます"
+          },
+          "oneToMany": {
+            "title": "1対多",
+            "description": "単一のアクションが複数のコンポーネントまたはCode単位で実装されます"
+          },
+          "manyToOne": {
+            "title": "多対1",
+            "description": "複数のアクションが同じコンポーネントまたはCode単位を共有します"
+          },
+          "manyToMany": {
+            "title": "多対多",
+            "description": "複数の次元にわたる複雑なインタラクション"
+          }
+        }
+      },
+      "governance": {
+        "title": "ガバナンスアナリティクスと整合性メトリクス",
+        "architectureConsistency": {
+          "title": "アーキテクチャ整合性メトリクス",
+          "adherence": {
+            "title": "アーキテクチャ準拠",
+            "description": "Architectureサービスを適切に実現しているCode単位の割合",
+            "formula": "(Architectureマッピングを持つCode単位 / 全Code単位) × 100"
+          },
+          "serviceGap": {
+            "title": "サービス実装ギャップ",
+            "description": "Code実装を持たないArchitectureサービス",
+            "formula": "マッピングされていないArchitectureサービスの数"
+          },
+          "bypass": {
+            "title": "直接実装バイパス",
+            "description": "Architectureサービスを経由せずFunctionalアクションを実装しているCode単位",
+            "formula": "Architectureパスを持たないFunctional→Codeの数"
+          },
+          "fragmentation": {
+            "title": "サービスの断片化",
+            "description": "Architectureサービスあたりの複数のCode実装",
+            "formula": "Architectureサービスあたりの平均Code単位数"
+          }
+        },
+        "designConsistency": {
+          "title": "デザイン整合性メトリクス",
+          "compliance": {
+            "title": "デザインシステムコンプライアンス",
+            "description": "承認されたDesignコンポーネントをレンダリングしているCode単位の割合",
+            "formula": "(Designマッピングを持つCode単位 / UI Code単位) × 100"
+          },
+          "patternFragmentation": {
+            "title": "パターンの断片化",
+            "description": "Functionalアクションあたりの異なるDesign実装",
+            "formula": "Functionalアクションあたりのデザインパターン数"
+          },
+          "rogue": {
+            "title": "不正な実装",
+            "description": "デザインシステムをバイパスしているCode単位",
+            "formula": "Designマッピングを持たないUI Codeの数"
+          },
+          "utilization": {
+            "title": "コンポーネント利用率",
+            "description": "実際に実装されているDesignコンポーネントの割合",
+            "formula": "(実装されたDesignコンポーネント / 全Designコンポーネント) × 100"
+          }
+        },
+        "crossOntology": {
+          "title": "Ontology間整合性分析",
+          "headers": {
+            "analysisType": "分析タイプ",
+            "description": "説明",
+            "detection": "検出方法",
+            "action": "必要なアクション"
+          },
+          "rows": {
+            "complete": {
+              "type": "完全なパスウェイ",
+              "description": "Functional→Design→CodeおよびFunctional→Architecture→Codeの両方が存在します",
+              "detection": "すべてのマッピングのクロスリファレンス",
+              "action": "✅ ベストプラクティス"
+            },
+            "designBypass": {
+              "type": "Designバイパス",
+              "description": "Functional→Architecture→Codeは存在するがDesignマッピングがありません",
+              "detection": "Design関係性の欠如",
+              "action": "デザインパターンの作成"
+            },
+            "architectureBypass": {
+              "type": "Architectureバイパス",
+              "description": "Functional→Design→Codeは存在するがArchitectureマッピングがありません",
+              "detection": "Architecture関係性の欠如",
+              "action": "サービスレイヤーの定義"
+            },
+            "orphaned": {
+              "type": "孤立したCode",
+              "description": "Functionalマッピングのないコードが存在します",
+              "detection": "マッピングされていないCode単位",
+              "action": "削除または機能へのマッピング"
+            },
+            "conflicting": {
+              "type": "競合するパス",
+              "description": "同じFunctionalアクションに対して異なるパス経由で異なるCode単位が存在します",
+              "detection": "複数の実装パス",
+              "action": "実装の統合"
+            }
+          }
+        }
+      },
+      "applications": {
+        "title": "ガバナンスの適用",
+        "strategic": {
+          "title": "戦略的イニシアチブ",
+          "modernization": {
+            "label": "アプリケーションモダナイゼーション：",
+            "text": "Design/Architecture/Codeを更新しながらFunctionalマッピングを維持します"
+          },
+          "rationalization": {
+            "label": "ポートフォリオラショナリゼーション：",
+            "text": "重複した実装と統合の機会を特定します"
+          },
+          "crossModal": {
+            "label": "クロスモーダル整合性：",
+            "text": "Web、モバイル、APIインターフェース間の同等の体験を確保します"
+          }
+        },
+        "quality": {
+          "title": "品質ガバナンス",
+          "standards": {
+            "label": "実装標準：",
+            "text": "Code単位が類似のFunctionalアクションに対する確立されたパターンに従うことを保証します"
+          },
+          "complexity": {
+            "label": "複雑性管理：",
+            "text": "Functionalスコープに対するCodeの複雑性を監視します"
+          },
+          "monitoring": {
+            "label": "整合性監視：",
+            "text": "ガバナンス違反とアーキテクチャドリフトの自動アラート"
+          }
+        }
+      }
+    },
+    "agents": {
+      "title": "エージェントレイヤー",
+      "header": {
+        "title": "エージェントレイヤーの詳細",
+        "description": "ユーザーエクスペリエンスとサービス間の自律的な連携を提供するインテリジェンスレイヤーです。このレイヤーは、専門化されたAIエージェントを通じて、複雑なワークフローオーケストレーション、インテリジェントな意思決定、シームレスなマルチサービス連携を実現します。"
+      },
+      "layerPosition": {
+        "title": "アーキテクチャにおけるエージェントレイヤー",
+        "uxLayer": {
+          "title": "ユーザーエクスペリエンスレイヤー",
+          "description": "フロントエンドアプリケーションとユーザーインターフェース"
+        },
+        "agentsLayer": {
+          "title": "🤖 エージェントレイヤー",
+          "description": "インテリジェントなオーケストレーションと自律的な意思決定"
+        },
+        "servicesLayer": {
+          "title": "サービスレイヤー",
+          "description": "ビジネスロジックとプラットフォーム機能"
+        },
+        "keyInnovationLabel": "主要なイノベーション：",
+        "keyInnovationText": "エージェントレイヤーは、ユーザーエクスペリエンスレイヤーとサービスレイヤー間のインテリジェントな連携を提供し、自律的なタスク完了と複雑なワークフローオーケストレーションを実現します。"
+      },
+      "agentTypesSection": {
+        "title": "4種類のインテリジェントエージェント",
+        "capabilitiesLabel": "機能：",
+        "examplesLabel": "例："
+      },
+      "agentTypes": {
+        "businessProcess": {
+          "type": "ビジネスプロセスエージェント",
+          "purpose": "エンドツーエンドのビジネスワークフロー全体をオーケストレーションします",
+          "capabilities": "マルチステップ連携、意思決定、例外処理",
+          "examples": [
+            "購入完了エージェント",
+            "顧客オンボーディングエージェント",
+            "インシデント対応エージェント"
+          ]
+        },
+        "domain": {
+          "type": "ドメインエージェント",
+          "purpose": "特定のドメイン内で専門的なインテリジェンスを提供します",
+          "capabilities": "ドメイン専門知識、最適化、パターン認識",
+          "examples": [
+            "商品探索エージェント",
+            "システム最適化エージェント",
+            "リスク評価エージェント"
+          ]
+        },
+        "integration": {
+          "type": "インテグレーションエージェント",
+          "purpose": "外部システムとのインタラクションを連携します",
+          "capabilities": "プロトコル変換、エラー復旧、データ変換",
+          "examples": [
+            "外部システム統合エージェント",
+            "パートナーAPIエージェント",
+            "レガシーシステムブリッジエージェント"
+          ]
+        },
+        "assistant": {
+          "type": "アシスタントエージェント",
+          "purpose": "ユーザーのインタラクションとクエリをサポートします",
+          "capabilities": "自然言語処理、コンテキスト理解、タスクガイダンス",
+          "examples": [
+            "カスタマーサポートエージェント",
+            "運用アシスタントエージェント",
+            "開発者ヘルパーエージェント"
+          ]
+        }
+      },
+      "orchestration": {
+        "title": "エージェントオーケストレーションの実例",
+        "coordination": {
+          "title": "サービス連携フロー",
+          "userRequest": "「赤い靴の注文を完了してください」",
+          "userRequestLabel": "ユーザーリクエスト",
+          "agentName": "購入完了エージェント",
+          "agentDescription": "リクエストを受信し、複数のサービスをオーケストレーションします",
+          "services": [
+            "商品サービス",
+            "在庫サービス",
+            "決済サービス",
+            "配送サービス"
+          ],
+          "result": "完全な注文確認",
+          "resultDescription": "追跡情報と配送詳細付き"
+        },
+        "collaboration": {
+          "title": "マルチエージェント連携",
+          "userRequest": "「マラソントレーニングに最適なランニングシューズを見つけて注文してください」",
+          "userRequestLabel": "複雑なユーザーリクエスト",
+          "agents": {
+            "discovery": {
+              "name": "商品探索エージェント",
+              "description": "好みを分析し、おすすめを提示します"
+            },
+            "purchase": {
+              "name": "購入完了エージェント",
+              "description": "注文処理を行います"
+            },
+            "support": {
+              "name": "カスタマーサポートエージェント",
+              "description": "トレーニングに関するアドバイスとサポートを提供します"
+            }
+          }
+        },
+        "decisionMaking": {
+          "title": "自律的な意思決定",
+          "complication": "注文処理の問題",
+          "complicationDescription": "商品が在庫切れ、支払いに確認が必要",
+          "agentDecisions": "購入完了エージェントの判断",
+          "stockIssue": {
+            "title": "在庫問題",
+            "description": "類似商品の検索、ユーザーへの通知、支払いの保留"
+          },
+          "paymentIssue": {
+            "title": "決済問題",
+            "description": "認証の開始、セキュアリンクの送信、進捗の追跡"
+          },
+          "seamlessUx": "シームレスなユーザー体験",
+          "seamlessUxDescription": "ユーザーには代替オプションとシンプルな認証手順が表示されます"
+        }
+      },
+      "benefits": {
+        "title": "エージェントレイヤーの利点",
+        "intelligence": {
+          "title": "インテリジェンスと自律性",
+          "orchestration": {
+            "label": "インテリジェントオーケストレーション：",
+            "text": "エージェントがどのサービスをどの順序で呼び出すかを判断します"
+          },
+          "problemSolving": {
+            "label": "自律的な問題解決：",
+            "text": "ユーザーの介入なしに例外やエッジケースを処理します"
+          },
+          "adaptive": {
+            "label": "適応的な動作：",
+            "text": "オーケストレーションパターンを時間とともに学習し最適化します"
+          }
+        },
+        "uxArchitecture": {
+          "title": "ユーザー体験とアーキテクチャ",
+          "enhancedUx": {
+            "label": "強化されたUX：",
+            "text": "複雑なプロセスがシンプルな単一インタラクションとして表示されます"
+          },
+          "contextPreservation": {
+            "label": "コンテキストの保持：",
+            "text": "サービスコール間で会話とタスクのコンテキストを維持します"
+          },
+          "businessLogic": {
+            "label": "ビジネスロジックの抽象化：",
+            "text": "複雑なルールがサービス全体に分散せず、エージェントにカプセル化されます"
+          }
+        }
+      },
+      "implementation": {
+        "title": "実装上の考慮事項",
+        "technical": {
+          "title": "技術要件",
+          "runtime": {
+            "title": "エージェントランタイム環境",
+            "description": "エージェントプロセスのためのスケーラブルな実行環境"
+          },
+          "serviceDiscovery": {
+            "title": "サービスディスカバリと通信",
+            "description": "動的なサービス登録とセキュアなサービス間通信"
+          },
+          "stateManagement": {
+            "title": "ステート管理",
+            "description": "エージェントインタラクション間の永続的なコンテキストと会話状態"
+          },
+          "monitoring": {
+            "title": "監視とオブザーバビリティ",
+            "description": "エージェントの動作追跡、パフォーマンスメトリクス、意思決定の監査"
+          }
+        },
+        "governance": {
+          "title": "ガバナンスと安全性",
+          "boundaries": {
+            "title": "意思決定の境界",
+            "description": "エージェントの自律性の明確な制限とエスカレーションのトリガー"
+          },
+          "audit": {
+            "title": "監査とコンプライアンス",
+            "description": "エージェントの意思決定とアクションの完全なトレーサビリティ"
+          },
+          "humanOversight": {
+            "title": "人間による監視",
+            "description": "人間の介入とオーバーライド機能のメカニズム"
+          },
+          "ethical": {
+            "title": "倫理的ガイドライン",
+            "description": "組み込みの倫理的制約とバイアス防止策"
+          }
+        }
+      }
+    }
+  },
+  "flow": {
+    "title": "プロセスフロー",
+    "overview": {
+      "title": "プロセス概要",
+      "header": {
+        "title": "Breeze.AI プロセスフレームワーク",
+        "prominentTitle": "Breeze.AI",
+        "subtitle": "プロセスフレームワーク",
+        "description": "3つのフェーズから成る方法論により、手動開発をセマンティックエンジニアリングに変革し、学んだ理論的概念を実践的な開発ワークフローに実装します。"
+      },
+      "theoryToPractice": {
+        "title": "理論から実践へ",
+        "semanticPrinciples": {
+          "title": "セマンティックエンジニアの原則",
+          "benefits": [
+            "自律型エージェントのオーケストレーション",
+            "動的な体験の設計",
+            "倫理的フレームワークの構築",
+            "エージェントエコシステムのガバナンス"
+          ]
+        },
+        "breezeImplementation": {
+          "title": "Breeze.AI の実装",
+          "benefits": [
+            "フェーズベースの変革方法論",
+            "人間とAIの協働ワークフロー",
+            "継続的な検証と監視",
+            "品質ゲートを伴う段階的な自動化"
+          ]
+        }
+      },
+      "threePhase": {
+        "title": "3フェーズ変革",
+        "phase1": {
+          "title": "フェーズ1",
+          "subtitle": "手動重視の検証",
+          "description": "手動15%、自動85% - コード生成とテストにおいてAIの支援を受けながら、人間による高い監視を維持します。",
+          "example": "重点：品質を維持しながら信頼性と検証パターンを確立"
+        },
+        "phase2": {
+          "title": "フェーズ2",
+          "subtitle": "バランスの取れた協働",
+          "description": "手動30%、自動70% - 人間が設計とオーケストレーションに集中し、AIが実装を担当します。",
+          "example": "重点：AIと人間の協働によるセマンティックエンジニアリングの実践"
+        },
+        "phase3": {
+          "title": "フェーズ3",
+          "subtitle": "AI主導の実装",
+          "description": "手動5%、自動95% - 自律型エージェントと人間のガバナンスによる完全なセマンティックエンジニアリング。",
+          "example": "重点：エージェントオーケストレーション、倫理的フレームワーク、エコシステムガバナンス"
+        }
+      }
+    },
+    "phase1": {
+      "title": "フェーズ1：基盤構築",
+      "configTitle": "フェーズ1：セマンティックエンジニアリングの基盤"
+    },
+    "phase2": {
+      "title": "フェーズ2：進化",
+      "configTitle": "フェーズ2：セマンティックエンジニアリングの進化"
+    },
+    "phase3": {
+      "title": "フェーズ3：セマンティックファースト",
+      "configTitle": "フェーズ3：セマンティックエンジニアリングの習熟",
+      "completion": {
+        "title": "プロセス完了！",
+        "description": "手動開発からセマンティックエンジニアリングへの完全な3フェーズ変革をご覧いただきました。このジャーニーは、ソフトウェアエンジニアが品質とガバナンスを維持しながらAIエージェントをオーケストレーションするセマンティックエンジニアへと進化する方法を示しています。変革の旅を始める準備はできましたか？上部のナビゲーションを使用して、セマンティックエンジニアの原則がこの実践的フレームワークとどのように結びつくかをご覧ください。"
+      }
+    }
+  }
+}

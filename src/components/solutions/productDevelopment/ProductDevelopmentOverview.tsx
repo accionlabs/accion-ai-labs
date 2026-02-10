@@ -13,107 +13,89 @@ import {
   ClockIcon,
   BeakerIcon
 } from '@heroicons/react/24/outline';
+import { useTranslation } from 'react-i18next';
 
 const ProductDevelopmentOverview: React.FC = () => {
+  const { t } = useTranslation('solutions');
   const valueMetrics = [
-    { metric: '60%', label: 'Faster Time to Market', description: 'Accelerated product launch cycles' },
-    { metric: '85%', label: 'Reduced Ambiguity', description: 'Clear, validated requirements' },
-    { metric: '40%', label: 'Fewer Defects', description: 'TDD and continuous validation' },
-    { metric: '70%', label: 'Higher Velocity', description: 'Parallel development workflows' }
+    { metric: t('productDevelopment.overview.metrics.fasterTime.metric'), label: t('productDevelopment.overview.metrics.fasterTime.label'), description: t('productDevelopment.overview.metrics.fasterTime.description') },
+    { metric: t('productDevelopment.overview.metrics.reducedAmbiguity.metric'), label: t('productDevelopment.overview.metrics.reducedAmbiguity.label'), description: t('productDevelopment.overview.metrics.reducedAmbiguity.description') },
+    { metric: t('productDevelopment.overview.metrics.fewerDefects.metric'), label: t('productDevelopment.overview.metrics.fewerDefects.label'), description: t('productDevelopment.overview.metrics.fewerDefects.description') },
+    { metric: t('productDevelopment.overview.metrics.higherVelocity.metric'), label: t('productDevelopment.overview.metrics.higherVelocity.label'), description: t('productDevelopment.overview.metrics.higherVelocity.description') }
   ];
 
   const coreCapabilities = [
     {
       icon: DocumentTextIcon,
-      title: 'Semantic Knowledge Extraction',
-      description: 'AI agents analyze requirements, conversations, and diagrams to build comprehensive knowledge graphs',
-      features: [
-        'Multi-source document analysis',
-        'Conversation transcript mining',
-        'Diagram interpretation',
-        'Four-ontology graph generation'
-      ]
+      title: t('productDevelopment.overview.capabilities.semanticExtraction.title'),
+      description: t('productDevelopment.overview.capabilities.semanticExtraction.description'),
+      features: t('productDevelopment.overview.capabilities.semanticExtraction.features', { returnObjects: true }) as unknown as string[]
     },
     {
       icon: UserGroupIcon,
-      title: 'Multi-Stakeholder Validation',
-      description: 'Generate role-specific artifacts for Product Owners, BAs, UX Designers, and Architects',
-      features: [
-        'Functional specifications for POs',
-        'Epics & user stories for BAs',
-        'User flow diagrams for UX',
-        'Architecture diagrams for Architects'
-      ]
+      title: t('productDevelopment.overview.capabilities.stakeholderValidation.title'),
+      description: t('productDevelopment.overview.capabilities.stakeholderValidation.description'),
+      features: t('productDevelopment.overview.capabilities.stakeholderValidation.features', { returnObjects: true }) as unknown as string[]
     },
     {
       icon: CodeBracketIcon,
-      title: 'Intelligent Artifact Generation',
-      description: 'Automated creation of design systems, prototypes, and test scripts from validated knowledge graphs',
-      features: [
-        'Design system & component libraries',
-        'Interactive prototypes',
-        'Gherkin/BDD test scripts',
-        'Code generation for repetitive patterns'
-      ]
+      title: t('productDevelopment.overview.capabilities.artifactGeneration.title'),
+      description: t('productDevelopment.overview.capabilities.artifactGeneration.description'),
+      features: t('productDevelopment.overview.capabilities.artifactGeneration.features', { returnObjects: true }) as unknown as string[]
     },
     {
       icon: BoltIcon,
-      title: 'Continuous Sprint Validation',
-      description: 'Every sprint, agents compare updated graphs with baseline to catch drift and prevent technical debt',
-      features: [
-        'Automated graph extraction per sprint',
-        'Drift detection and gap analysis',
-        'Stakeholder re-validation triggers',
-        'Technical debt prevention'
-      ]
+      title: t('productDevelopment.overview.capabilities.sprintValidation.title'),
+      description: t('productDevelopment.overview.capabilities.sprintValidation.description'),
+      features: t('productDevelopment.overview.capabilities.sprintValidation.features', { returnObjects: true }) as unknown as string[]
     }
   ];
 
   const agentEcosystem = {
     extraction: [
-      'Document Analyzer Agent',
-      'Conversation Mining Agent',
-      'Diagram Interpreter Agent',
-      'Cross-Reference Validator'
+      t('productDevelopment.overview.agentEcosystem.extractionAgents.agent1'),
+      t('productDevelopment.overview.agentEcosystem.extractionAgents.agent2'),
+      t('productDevelopment.overview.agentEcosystem.extractionAgents.agent3'),
+      t('productDevelopment.overview.agentEcosystem.extractionAgents.agent4')
     ],
     validation: [
-      'Functional Spec Generator',
-      'User Story Generator',
-      'Flow Diagram Generator',
-      'Architecture Diagram Generator'
+      t('productDevelopment.overview.agentEcosystem.validationAgents.agent1'),
+      t('productDevelopment.overview.agentEcosystem.validationAgents.agent2'),
+      t('productDevelopment.overview.agentEcosystem.validationAgents.agent3'),
+      t('productDevelopment.overview.agentEcosystem.validationAgents.agent4')
     ],
     implementation: [
-      'Design System Generator',
-      'Prototype Builder Agent',
-      'Test Script Generator',
-      'Code Generation Agent'
+      t('productDevelopment.overview.agentEcosystem.implementationAgents.agent1'),
+      t('productDevelopment.overview.agentEcosystem.implementationAgents.agent2'),
+      t('productDevelopment.overview.agentEcosystem.implementationAgents.agent3'),
+      t('productDevelopment.overview.agentEcosystem.implementationAgents.agent4')
     ],
     continuous: [
-      'Graph Extraction Agent',
-      'Drift Detection Agent',
-      'Gap Analysis Agent',
-      'Technical Debt Monitor'
+      t('productDevelopment.overview.agentEcosystem.continuousAgents.agent1'),
+      t('productDevelopment.overview.agentEcosystem.continuousAgents.agent2'),
+      t('productDevelopment.overview.agentEcosystem.continuousAgents.agent3'),
+      t('productDevelopment.overview.agentEcosystem.continuousAgents.agent4')
     ]
   };
 
   const navigationLinks = [
     {
       path: '/solutions/product-development/extraction',
-      label: 'Knowledge Graph Extraction',
+      label: t('productDevelopment.overview.nav.extraction.label'),
       icon: SparklesIcon,
-      description: 'See how we derive graphs from requirements'
+      description: t('productDevelopment.overview.nav.extraction.description')
     },
     {
       path: '/solutions/product-development/validation',
-      label: 'Stakeholder Validation',
+      label: t('productDevelopment.overview.nav.validation.label'),
       icon: UserGroupIcon,
-      description: 'Four validation tracks for different roles'
+      description: t('productDevelopment.overview.nav.validation.description')
     },
     {
       path: '/solutions/product-development/implementation',
-      label: 'Implementation Pipeline',
+      label: t('productDevelopment.overview.nav.implementation.label'),
       icon: CodeBracketIcon,
-      description: 'Artifacts, prototypes, and code generation'
+      description: t('productDevelopment.overview.nav.implementation.description')
     }
   ];
 
@@ -126,11 +108,10 @@ const ProductDevelopmentOverview: React.FC = () => {
             <div>
               <div className="flex items-center mb-4">
                 <RocketLaunchIcon className="h-10 w-10 text-green-600 mr-3" />
-                <h1 className="text-3xl font-bold text-gray-900">AI-Powered Product Engineering</h1>
+                <h1 className="text-3xl font-bold text-gray-900">{t('productDevelopment.overview.header.title')}</h1>
               </div>
               <p className="text-lg text-gray-600 max-w-3xl">
-                Accelerate product engineering from concept to code using semantic knowledge graphs,
-                multi-stakeholder validation, and intelligent artifact generation
+                {t('productDevelopment.overview.header.description')}
               </p>
             </div>
           </div>
@@ -151,35 +132,32 @@ const ProductDevelopmentOverview: React.FC = () => {
 
         {/* The Problem */}
         <div className="bg-gradient-to-r from-orange-50 to-red-50 rounded-xl border border-orange-200 p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">The Challenge: Manual Translation Tax</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">{t('productDevelopment.overview.challenge.title')}</h2>
           <p className="text-gray-700 mb-4">
-            Traditional product engineering suffers from the "manual translation tax" - the costly process of
-            manually translating requirements between different stakeholder languages. Business requirements
-            become functional specs, which become user stories, which become designs, which finally become code.
-            Each translation introduces delays, ambiguity, and potential errors.
+            {t('productDevelopment.overview.challenge.description')}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="bg-white rounded-lg p-4 border border-orange-100">
               <ClockIcon className="h-6 w-6 text-orange-600 mb-2" />
-              <p className="text-sm font-semibold text-gray-900">Weeks of Delays</p>
-              <p className="text-xs text-gray-600">Handoffs between teams slow everything down</p>
+              <p className="text-sm font-semibold text-gray-900">{t('productDevelopment.overview.challenge.delays.title')}</p>
+              <p className="text-xs text-gray-600">{t('productDevelopment.overview.challenge.delays.description')}</p>
             </div>
             <div className="bg-white rounded-lg p-4 border border-orange-100">
               <ShieldCheckIcon className="h-6 w-6 text-red-600 mb-2" />
-              <p className="text-sm font-semibold text-gray-900">Lost in Translation</p>
-              <p className="text-xs text-gray-600">Requirements drift as they move between roles</p>
+              <p className="text-sm font-semibold text-gray-900">{t('productDevelopment.overview.challenge.lostInTranslation.title')}</p>
+              <p className="text-xs text-gray-600">{t('productDevelopment.overview.challenge.lostInTranslation.description')}</p>
             </div>
             <div className="bg-white rounded-lg p-4 border border-orange-100">
               <BeakerIcon className="h-6 w-6 text-purple-600 mb-2" />
-              <p className="text-sm font-semibold text-gray-900">Technical Debt</p>
-              <p className="text-xs text-gray-600">Implementation diverges from original intent</p>
+              <p className="text-sm font-semibold text-gray-900">{t('productDevelopment.overview.challenge.technicalDebt.title')}</p>
+              <p className="text-xs text-gray-600">{t('productDevelopment.overview.challenge.technicalDebt.description')}</p>
             </div>
           </div>
         </div>
 
         {/* Core Capabilities */}
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">AI-Powered Development Capabilities</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('productDevelopment.overview.capabilities.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {coreCapabilities.map((capability, index) => {
               const Icon = capability.icon;
@@ -208,7 +186,7 @@ const ProductDevelopmentOverview: React.FC = () => {
 
         {/* How It Works */}
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">How It Works: End-to-End Workflow</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('productDevelopment.overview.workflow.title')}</h2>
           <div className="space-y-6">
             {/* Phase 1 */}
             <div className="flex items-start">
@@ -216,10 +194,9 @@ const ProductDevelopmentOverview: React.FC = () => {
                 <span className="text-lg font-bold text-blue-600">1</span>
               </div>
               <div className="flex-1">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Extract Knowledge Graphs</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('productDevelopment.overview.workflow.step1.title')}</h3>
                 <p className="text-sm text-gray-600 mb-2">
-                  AI agents analyze requirements documents, conversation transcripts, diagrams, and other artifacts
-                  to automatically build four comprehensive ontology graphs: Functional, Design, Architecture, and Code.
+                  {t('productDevelopment.overview.workflow.step1.description')}
                 </p>
               </div>
             </div>
@@ -230,10 +207,9 @@ const ProductDevelopmentOverview: React.FC = () => {
                 <span className="text-lg font-bold text-purple-600">2</span>
               </div>
               <div className="flex-1">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Multi-Stakeholder Validation</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('productDevelopment.overview.workflow.step2.title')}</h3>
                 <p className="text-sm text-gray-600 mb-2">
-                  Generate role-specific artifacts from the knowledge graphs. Product Owners validate functional specs,
-                  Business Analysts review epics/stories, UX Designers check user flows, and Architects approve system designs.
+                  {t('productDevelopment.overview.workflow.step2.description')}
                 </p>
               </div>
             </div>
@@ -244,10 +220,9 @@ const ProductDevelopmentOverview: React.FC = () => {
                 <span className="text-lg font-bold text-green-600">3</span>
               </div>
               <div className="flex-1">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Generate Implementation Artifacts</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('productDevelopment.overview.workflow.step3.title')}</h3>
                 <p className="text-sm text-gray-600 mb-2">
-                  Once validated, automatically generate design systems, interactive prototypes, Gherkin test scripts,
-                  and working code for repetitive patterns. Developers validate and extend the generated code.
+                  {t('productDevelopment.overview.workflow.step3.description')}
                 </p>
               </div>
             </div>
@@ -258,10 +233,9 @@ const ProductDevelopmentOverview: React.FC = () => {
                 <span className="text-lg font-bold text-orange-600">4</span>
               </div>
               <div className="flex-1">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Continuous Sprint Validation</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('productDevelopment.overview.workflow.step4.title')}</h3>
                 <p className="text-sm text-gray-600 mb-2">
-                  Every sprint, agents extract updated knowledge graphs and compare them with the baseline. Any drift,
-                  gaps, or inconsistencies trigger stakeholder re-validation, preventing technical debt accumulation.
+                  {t('productDevelopment.overview.workflow.step4.description')}
                 </p>
               </div>
             </div>
@@ -270,10 +244,10 @@ const ProductDevelopmentOverview: React.FC = () => {
 
         {/* Agent Ecosystem */}
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Multi-Agent Development Ecosystem</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('productDevelopment.overview.agentEcosystem.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-4">
-              <h4 className="font-semibold text-gray-900 mb-3">Extraction Agents</h4>
+              <h4 className="font-semibold text-gray-900 mb-3">{t('productDevelopment.overview.agentEcosystem.extraction')}</h4>
               <ul className="space-y-2 text-sm text-gray-700">
                 {agentEcosystem.extraction.map((agent, idx) => (
                   <li key={idx}>• {agent}</li>
@@ -281,7 +255,7 @@ const ProductDevelopmentOverview: React.FC = () => {
               </ul>
             </div>
             <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-4">
-              <h4 className="font-semibold text-gray-900 mb-3">Validation Agents</h4>
+              <h4 className="font-semibold text-gray-900 mb-3">{t('productDevelopment.overview.agentEcosystem.validation')}</h4>
               <ul className="space-y-2 text-sm text-gray-700">
                 {agentEcosystem.validation.map((agent, idx) => (
                   <li key={idx}>• {agent}</li>
@@ -289,7 +263,7 @@ const ProductDevelopmentOverview: React.FC = () => {
               </ul>
             </div>
             <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-4">
-              <h4 className="font-semibold text-gray-900 mb-3">Implementation Agents</h4>
+              <h4 className="font-semibold text-gray-900 mb-3">{t('productDevelopment.overview.agentEcosystem.implementation')}</h4>
               <ul className="space-y-2 text-sm text-gray-700">
                 {agentEcosystem.implementation.map((agent, idx) => (
                   <li key={idx}>• {agent}</li>
@@ -297,7 +271,7 @@ const ProductDevelopmentOverview: React.FC = () => {
               </ul>
             </div>
             <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-4">
-              <h4 className="font-semibold text-gray-900 mb-3">Continuous Validation</h4>
+              <h4 className="font-semibold text-gray-900 mb-3">{t('productDevelopment.overview.agentEcosystem.continuous')}</h4>
               <ul className="space-y-2 text-sm text-gray-700">
                 {agentEcosystem.continuous.map((agent, idx) => (
                   <li key={idx}>• {agent}</li>
@@ -309,39 +283,39 @@ const ProductDevelopmentOverview: React.FC = () => {
 
         {/* Key Benefits */}
         <div className="bg-gradient-to-r from-green-50 to-teal-50 rounded-xl border border-green-200 p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Why This Matters</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">{t('productDevelopment.overview.benefits.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Speed & Quality</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">{t('productDevelopment.overview.benefits.speedQuality.title')}</h3>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li className="flex items-start">
                   <CheckCircleIcon className="h-4 w-4 text-green-600 mr-2 mt-0.5" />
-                  <span><strong>Test-Driven Development:</strong> Gherkin scripts from day one ensure quality</span>
+                  <span><strong>{t('productDevelopment.overview.benefits.speedQuality.tdd')}</strong> {t('productDevelopment.overview.benefits.speedQuality.tddDesc')}</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircleIcon className="h-4 w-4 text-green-600 mr-2 mt-0.5" />
-                  <span><strong>Parallel Workflows:</strong> Design, architecture, and code progress simultaneously</span>
+                  <span><strong>{t('productDevelopment.overview.benefits.speedQuality.parallel')}</strong> {t('productDevelopment.overview.benefits.speedQuality.parallelDesc')}</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircleIcon className="h-4 w-4 text-green-600 mr-2 mt-0.5" />
-                  <span><strong>Faster Iterations:</strong> Changes propagate across all artifacts automatically</span>
+                  <span><strong>{t('productDevelopment.overview.benefits.speedQuality.faster')}</strong> {t('productDevelopment.overview.benefits.speedQuality.fasterDesc')}</span>
                 </li>
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Prevent Technical Debt</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">{t('productDevelopment.overview.benefits.preventDebt.title')}</h3>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li className="flex items-start">
                   <CheckCircleIcon className="h-4 w-4 text-green-600 mr-2 mt-0.5" />
-                  <span><strong>Continuous Validation:</strong> Catch drift before it becomes debt</span>
+                  <span><strong>{t('productDevelopment.overview.benefits.preventDebt.continuous')}</strong> {t('productDevelopment.overview.benefits.preventDebt.continuousDesc')}</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircleIcon className="h-4 w-4 text-green-600 mr-2 mt-0.5" />
-                  <span><strong>Single Source of Truth:</strong> Knowledge graphs keep everyone aligned</span>
+                  <span><strong>{t('productDevelopment.overview.benefits.preventDebt.singleSource')}</strong> {t('productDevelopment.overview.benefits.preventDebt.singleSourceDesc')}</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircleIcon className="h-4 w-4 text-green-600 mr-2 mt-0.5" />
-                  <span><strong>Automated Drift Detection:</strong> AI monitors implementation vs. design</span>
+                  <span><strong>{t('productDevelopment.overview.benefits.preventDebt.automated')}</strong> {t('productDevelopment.overview.benefits.preventDebt.automatedDesc')}</span>
                 </li>
               </ul>
             </div>
@@ -362,7 +336,7 @@ const ProductDevelopmentOverview: React.FC = () => {
                 <h3 className="font-semibold text-gray-900 mb-2">{link.label}</h3>
                 <p className="text-sm text-gray-600 mb-3">{link.description}</p>
                 <div className="flex items-center text-green-600 text-sm">
-                  <span>Explore</span>
+                  <span>{t('productDevelopment.overview.nav.explore')}</span>
                   <ArrowRightIcon className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
                 </div>
               </Link>

@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { OntologyProvider } from './contexts/OntologyContext';
 import { DemoProvider } from './contexts/DemoContext';
 import { NavigationProvider } from './contexts/NavigationContext';
@@ -81,6 +82,12 @@ import Phase2Page from './components/breezeProcess/flow/Phase2Page';
 import Phase3Page from './components/breezeProcess/flow/Phase3Page';
 
 const App: React.FC = () => {
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    document.documentElement.lang = i18n.language;
+  }, [i18n.language]);
+
   return (
     <OntologyProvider>
       <DemoProvider>

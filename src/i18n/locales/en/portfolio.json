@@ -1,0 +1,740 @@
+{
+  "overview": {
+    "title": "Portfolio Rationalization",
+    "subtitle": "Analyze and optimize your product portfolio through systematic UX rationalization",
+    "demoScenario": {
+      "title": "Demo Scenario: Enterprise Authentication",
+      "description": "Explore how three different products in an enterprise portfolio handle user authentication, revealing opportunities for standardization and optimization.",
+      "phoenix": {
+        "subtitle": "Legacy PHP/MySQL System",
+        "features": {
+          "auth": "Basic username/password authentication",
+          "rendering": "Server-rendered PHP pages",
+          "interactions": "jQuery-based interactions",
+          "hashing": "MD5 password hashing (insecure)",
+          "database": "MySQL database"
+        }
+      },
+      "apollo": {
+        "subtitle": "Modern React SPA",
+        "features": {
+          "auth": "Email-based authentication with 2FA",
+          "spa": "React SPA with JWT tokens",
+          "architecture": "Modern component architecture",
+          "hashing": "bcrypt password hashing",
+          "database": "MongoDB database"
+        }
+      },
+      "voyager": {
+        "subtitle": "Vue.js Dashboard",
+        "features": {
+          "auth": "SSO integration with SAML",
+          "architecture": "Vue.js micro-frontend architecture",
+          "processing": "Real-time data processing",
+          "security": "Enterprise-grade security",
+          "database": "ElasticSearch backend"
+        }
+      }
+    },
+    "step1": {
+      "label": "Step 1",
+      "title": "Agent-Based Extraction",
+      "description": "AI agents automatically extract four ontology graphs (Code, Functional, Design, Architecture) from each product's codebase and documentation, creating structured knowledge graphs for analysis.",
+      "imageAlt": "Portfolio Extraction Process"
+    },
+    "step2": {
+      "label": "Step 2",
+      "title": "Rationalization & Strategy Selection",
+      "description": "The extracted graphs are analyzed for overlaps, then split into parallel design and architecture rationalization tracks. Three implementation strategies are compared showing their respective code impact.",
+      "imageAlt": "Portfolio Rationalization Process",
+      "note": {
+        "title": "Note on Product-Specific Ontologies:",
+        "content": "While the core rationalization framework focuses on the four primary ontologies (Code, Functional, Design, Architecture), real-world products often include additional product-specific ontologies such as user context graphs, master data models, workflows, and business rules. The rationalization strategy accommodates these product-specific data models by applying the same systematic analysis and consolidation principles to ensure complete unification without ambiguity."
+      }
+    },
+    "tools": {
+      "title": "Interactive Analysis Tools",
+      "graphExplorer": {
+        "title": "Ontology Graph Explorer",
+        "description": "Explore the complete four-ontology graph structure with filtering and drill-down capabilities",
+        "badge": "Interactive"
+      },
+      "comparator": {
+        "title": "Component Comparator",
+        "description": "Side-by-side comparison of authentication components across products",
+        "badge": "Analysis"
+      },
+      "roadmap": {
+        "title": "Rationalization Roadmap",
+        "description": "Complete roadmap with strategy comparison, design & architecture tracks",
+        "badge": "Planning"
+      },
+      "unifiedProduct": {
+        "title": "Unified Product View",
+        "description": "See how rationalization creates a unified product combining all functionality",
+        "badge": "Outcome"
+      }
+    }
+  },
+  "comparator": {
+    "title": "Graph Overlap Comparator",
+    "subtitle": "Algorithmic progression from functional overlap through code to architectural impact",
+    "subtitleWithAnalysis": {
+      "prefix": "Functional → Code → Architecture/Design",
+      "deepestOverlap": "Deepest overlap:",
+      "divergenceAt": "Divergence at:"
+    },
+    "analysisFlow": {
+      "title": "Analysis Flow Progression",
+      "step1": "Functional Overlap",
+      "step2": "Code Impact",
+      "step3": "Architecture Impact",
+      "step4": "Design Impact"
+    },
+    "algorithmResults": {
+      "title": "Algorithm Analysis Results",
+      "hideDetails": "Hide Algorithm Details",
+      "showDetails": "Show Algorithm Details",
+      "startingOverlap": "Starting Overlap",
+      "deepestOverlap": "Deepest Overlap",
+      "divergencePoint": "Divergence Point",
+      "codeLevels": "Code Levels",
+      "archDesignImpact": "Arch/Design Impact",
+      "none": "None"
+    },
+    "divergenceAnalysis": {
+      "title": "Implementation Divergence Analysis",
+      "levelDivergence": "Level Divergence",
+      "phoenixApproach": "Phoenix Approach",
+      "apolloApproach": "Apollo Approach",
+      "voyagerApproach": "Voyager Approach",
+      "noImplementation": "No implementation"
+    },
+    "functionalOverlap": {
+      "title": "Functional Overlap Analysis",
+      "subtitle": "Starting with functional ontology to identify shared goals"
+    },
+    "codeImpact": {
+      "title": "Code Impact Analysis",
+      "subtitle": "Connected code nodes from overlapping functional areas"
+    },
+    "architectureImpact": {
+      "title": "Architecture Impact Analysis",
+      "subtitle": "Reverse traversal from code to architectural components",
+      "empty": "No architecture components connected to overlapping code"
+    },
+    "designImpact": {
+      "title": "Design Impact Analysis",
+      "subtitle": "Reverse traversal from code to design components",
+      "empty": "No design components connected to overlapping code"
+    },
+    "emptyState": {
+      "title": "Analysis Loading...",
+      "description": "Performing comprehensive overlap analysis across all four ontologies."
+    },
+    "componentCard": {
+      "noImplementation": "No {{product}} implementation",
+      "properties": "Properties:",
+      "moreProperties": "... and {{count}} more properties",
+      "issuesFound": "Issues Found"
+    },
+    "functionalLevel": {
+      "followingOverlapPath": "(Following Overlap Path)",
+      "algorithmStopsHere": "(Algorithm Stops Here)",
+      "overlappingNodes": "Overlapping Nodes",
+      "divergencePoint": "Divergence Point",
+      "analysisLevel": "Analysis Level",
+      "overlapping": "Overlapping:",
+      "available": "Available:",
+      "overlappingNodesTitle": "Overlapping Nodes (Used by Algorithm)",
+      "divergentNodesTitle": "Divergent Nodes (Why Algorithm Stopped)",
+      "nodesAtLevel": "Nodes at This Level",
+      "inOverlapPath": "In overlap path",
+      "andMore": "...and {{count}} more",
+      "divergenceAnalysis": "Divergence Analysis:"
+    },
+    "codeLevel": {
+      "levelCode": "Level Code",
+      "total": "Total:",
+      "nodes": "nodes",
+      "allImpactedCode": "All Impacted Code Nodes at",
+      "level": "Level",
+      "noCodeNodes": "No code nodes at this level"
+    },
+    "architectureLevel": {
+      "architecture": "Architecture",
+      "total": "Total:",
+      "nodes": "nodes",
+      "allImpactedArch": "All Impacted Architecture Nodes at",
+      "level": "Level",
+      "noArchNodes": "No architecture nodes at this level"
+    },
+    "designLevel": {
+      "design": "Design",
+      "total": "Total:",
+      "nodes": "nodes",
+      "allImpactedDesign": "All Impacted Design Nodes at",
+      "level": "Level",
+      "noDesignNodes": "No design nodes at this level"
+    },
+    "formatBoolean": {
+      "yes": "Yes",
+      "no": "No"
+    }
+  },
+  "graphExplorer": {
+    "title": "Graph Explorer",
+    "subtitle": "Interactive visualization of {{nodeCount}} nodes and {{edgeCount}} relationships",
+    "noNodesMatch": "No nodes match the current filters",
+    "displayOptions": {
+      "title": "Display Options",
+      "showTypeLabels": "Show Type Labels"
+    },
+    "legend": {
+      "title": "Legend",
+      "ontologyTypes": "Ontology Types",
+      "productBorders": "Product Borders",
+      "relationshipTypes": "Relationship Types",
+      "inconsistencies": "Inconsistencies",
+      "nodeIssues": "Node Issues",
+      "edgeIssues": "Edge Issues"
+    },
+    "loading": "Loading graph...",
+    "controls": {
+      "title": "Graph Controls",
+      "drag": "Drag nodes to reposition",
+      "scroll": "Scroll to zoom",
+      "click": "Click node for details",
+      "hover": "Hover to highlight connections",
+      "selectOntologies": "Select multiple ontologies",
+      "toggleLabels": "Toggle type/level labels"
+    },
+    "nodeDetails": "Node Details"
+  },
+  "roadmap": {
+    "title": "Rationalization Roadmap",
+    "subtitle": "Strategy comparison, design & architecture rationalization tracks for unified portfolio",
+    "strategyComparison": {
+      "title": "Rationalization Strategy Comparison",
+      "description": "Three implementation strategies with different risk profiles, timelines, and code impact."
+    },
+    "strategy1": {
+      "title": "Strategy 1: Big Bang Replacement",
+      "risk": "High Risk",
+      "timeline": "12-18 months",
+      "approach": {
+        "title": "Approach",
+        "description": "Replace all three products with unified solution at once"
+      },
+      "codeChanges": {
+        "title": "Code Changes",
+        "description": "~80% codebase replacement - 58 components affected"
+      },
+      "designImpact": {
+        "title": "Design Impact",
+        "items": {
+          "overhaul": "Complete UI overhaul",
+          "library": "New component library",
+          "training": "Extensive training needed"
+        }
+      },
+      "architectureImpact": {
+        "title": "Architecture Impact",
+        "items": {
+          "migration": "Full system migration",
+          "dataMigration": "Complete data migration",
+          "rewrites": "Service rewrites"
+        }
+      },
+      "cost": "Cost:",
+      "costValue": "$$$$$",
+      "downtime": "Downtime:",
+      "downtimeValue": "Significant"
+    },
+    "strategy2": {
+      "title": "Strategy 2: Phased Migration",
+      "risk": "Medium Risk",
+      "timeline": "18-24 months",
+      "approach": {
+        "title": "Approach",
+        "description": "Migrate products one by one, starting with Phoenix (most legacy)"
+      },
+      "codeChanges": {
+        "title": "Code Changes",
+        "description": "~30% per phase - 17-20 components per product"
+      },
+      "designImpact": {
+        "title": "Design Impact",
+        "items": {
+          "updates": "Gradual UI updates",
+          "adoption": "Progressive component adoption",
+          "training": "Phased training"
+        }
+      },
+      "architectureImpact": {
+        "title": "Architecture Impact",
+        "items": {
+          "migration": "Service-by-service migration",
+          "versioning": "API versioning required",
+          "integration": "Temporary integration layers"
+        }
+      },
+      "cost": "Cost:",
+      "costValue": "$$$$",
+      "downtime": "Downtime:",
+      "downtimeValue": "Minimal per phase"
+    },
+    "strategy3": {
+      "title": "Strategy 3: Strangler Fig Pattern",
+      "recommended": "RECOMMENDED",
+      "risk": "Low Risk",
+      "timeline": "24-30 months",
+      "approach": {
+        "title": "Approach",
+        "description": "Build unified components alongside existing, gradually replace"
+      },
+      "codeChanges": {
+        "title": "Code Changes",
+        "description": "~10-15% increments - 5-8 components at a time"
+      },
+      "designImpact": {
+        "title": "Design Impact",
+        "items": {
+          "adoption": "Incremental design system adoption",
+          "testing": "A/B testing possible",
+          "feedback": "Continuous user feedback"
+        }
+      },
+      "architectureImpact": {
+        "title": "Architecture Impact",
+        "items": {
+          "facade": "Facade pattern implementation",
+          "consolidation": "Gradual backend consolidation",
+          "deployment": "Zero downtime deployment"
+        }
+      },
+      "cost": "Cost:",
+      "costValue": "$$$",
+      "downtime": "Downtime:",
+      "downtimeValue": "None",
+      "bestBalance": "Best balance of risk, cost, and business continuity"
+    },
+    "viewSelector": {
+      "architecture": "Architecture Rationalization",
+      "design": "Design Rationalization",
+      "code": "Code Rationalization"
+    },
+    "architectureView": {
+      "unifiedComponents": {
+        "title": "Unified Architecture Components",
+        "description": "Consolidated architecture patterns derived from overlapping functionality analysis"
+      },
+      "authService": {
+        "title": "Authentication Service",
+        "layer": "Services",
+        "description": "Unified auth service handling all authentication flows",
+        "features": {
+          "oauth": "OAuth 2.0 / SAML support",
+          "jwt": "JWT token management",
+          "session": "Session handling"
+        },
+        "consolidates": "Consolidates:",
+        "phoenix": "P: 3 services",
+        "apollo": "A: 2 services",
+        "voyager": "V: 2 services"
+      },
+      "apiGateway": {
+        "title": "API Gateway",
+        "layer": "Layers",
+        "description": "Unified API gateway with consistent endpoints",
+        "features": {
+          "rest": "RESTful API design",
+          "graphql": "GraphQL support",
+          "rateLimit": "Rate limiting"
+        },
+        "consolidates": "Consolidates:",
+        "phoenix": "P: 12 endpoints",
+        "apollo": "A: 8 endpoints",
+        "voyager": "V: 10 endpoints"
+      },
+      "dataLayer": {
+        "title": "Data Access Layer",
+        "layer": "Layers",
+        "description": "Unified data access patterns and repositories",
+        "features": {
+          "repository": "Repository pattern",
+          "orm": "ORM abstraction",
+          "caching": "Caching strategy"
+        },
+        "consolidates": "Consolidates:",
+        "phoenix": "P: MySQL",
+        "apollo": "A: MongoDB",
+        "voyager": "V: ElasticSearch"
+      },
+      "userModule": {
+        "title": "User Management Module",
+        "layer": "Modules",
+        "description": "Consolidated user management functionality",
+        "features": {
+          "profile": "Profile management",
+          "rbac": "Role-based access",
+          "permissions": "Permissions system"
+        },
+        "replaces": "Replaces:",
+        "phoenix": "P: 4 modules",
+        "apollo": "A: 3 modules",
+        "voyager": "V: 3 modules"
+      },
+      "securityLayer": {
+        "title": "Security Layer",
+        "layer": "Layers",
+        "description": "Unified security patterns and policies",
+        "features": {
+          "encryption": "Encryption standards",
+          "headers": "Security headers",
+          "audit": "Audit logging"
+        },
+        "improves": "Improves:",
+        "improvement": "Consistent security across all products"
+      },
+      "infrastructure": {
+        "title": "Infrastructure Root",
+        "layer": "Root",
+        "description": "Unified deployment and infrastructure",
+        "features": {
+          "containers": "Container orchestration",
+          "cicd": "CI/CD pipelines",
+          "monitoring": "Monitoring setup"
+        },
+        "benefits": "Benefits:",
+        "benefit": "Single deployment strategy"
+      },
+      "mappingVisualization": {
+        "title": "Architecture Mapping Visualization",
+        "description": "Mapping from existing architecture components to unified architecture patterns"
+      },
+      "migrationStrategy": {
+        "title": "Architecture Migration Strategy",
+        "phase1": {
+          "title": "Phase 1: Service Consolidation",
+          "description": "Consolidate authentication and user management services",
+          "phoenix": {
+            "title": "Phoenix",
+            "items": {
+              "extract": "Extract auth logic",
+              "facade": "Create service facade"
+            }
+          },
+          "apollo": {
+            "title": "Apollo",
+            "items": {
+              "jwt": "Adapt JWT handling",
+              "token": "Unify token format"
+            }
+          },
+          "voyager": {
+            "title": "Voyager",
+            "items": {
+              "saml": "Integrate SAML",
+              "sso": "Standardize SSO"
+            }
+          }
+        },
+        "phase2": {
+          "title": "Phase 2: API Unification",
+          "description": "Create unified API gateway with versioned endpoints",
+          "apiDesign": {
+            "title": "API Design",
+            "items": {
+              "rest": "RESTful standards",
+              "openapi": "OpenAPI spec"
+            }
+          },
+          "gatewaySetup": {
+            "title": "Gateway Setup",
+            "items": {
+              "routes": "Route configuration",
+              "loadBalancing": "Load balancing"
+            }
+          },
+          "migration": {
+            "title": "Migration",
+            "items": {
+              "cutover": "Gradual cutover",
+              "compat": "Backward compat"
+            }
+          }
+        },
+        "phase3": {
+          "title": "Phase 3: Data Layer Integration",
+          "description": "Implement unified data access patterns",
+          "dataAbstraction": {
+            "title": "Data Abstraction",
+            "items": {
+              "repository": "Repository pattern",
+              "queryBuilders": "Query builders"
+            }
+          },
+          "migrationStrategy": {
+            "title": "Migration Strategy",
+            "items": {
+              "schema": "Schema mapping",
+              "sync": "Data sync tools"
+            }
+          },
+          "performance": {
+            "title": "Performance",
+            "items": {
+              "caching": "Caching layers",
+              "queryOpt": "Query optimization"
+            }
+          }
+        }
+      }
+    },
+    "designView": {
+      "unifiedComponents": {
+        "title": "Unified Design System Components"
+      },
+      "mapsFrom": "Maps from:",
+      "mappingVisualization": {
+        "title": "Design Mapping Visualization"
+      }
+    },
+    "codeView": {
+      "unifiedCode": {
+        "title": "Unified Code Implementation"
+      },
+      "consolidates": "Consolidates:",
+      "noMappings": "No direct code mappings found",
+      "mappingVisualization": {
+        "title": "Code Mapping Visualization",
+        "description": "Code mappings are derived from design connections: Existing Code → Existing Design → Unified Design → Unified Code"
+      }
+    },
+    "implementationRoadmap": {
+      "title": "Unified Implementation Roadmap",
+      "description": "Comprehensive roadmap integrating architecture, design, and code rationalization tracks",
+      "phase1": {
+        "title": "Phase 1: Architecture Foundation",
+        "description": "Establish unified architecture patterns and service boundaries",
+        "servicesLayer": {
+          "title": "Services Layer",
+          "items": {
+            "consolidateAuth": "Consolidate auth services",
+            "unifyApi": "Unify API gateways",
+            "standardizeData": "Standardize data access"
+          }
+        },
+        "infrastructure": {
+          "title": "Infrastructure",
+          "items": {
+            "containers": "Container orchestration",
+            "cicd": "CI/CD pipelines",
+            "monitoring": "Monitoring setup"
+          }
+        },
+        "securityLayer": {
+          "title": "Security Layer",
+          "items": {
+            "authPatterns": "Unified auth patterns",
+            "tokenMgmt": "Token management",
+            "policies": "Security policies"
+          }
+        }
+      },
+      "phase2": {
+        "title": "Phase 2: Unified Design System",
+        "description": "Create atomic design components consolidating UI patterns",
+        "componentLibrary": {
+          "title": "Component Library",
+          "items": {
+            "atomsMolecules": "Atoms & molecules",
+            "organismsTemplates": "Organisms & templates",
+            "tokens": "Design tokens"
+          }
+        },
+        "styleGuide": {
+          "title": "Style Guide",
+          "items": {
+            "color": "Color systems",
+            "typography": "Typography scales",
+            "spacing": "Spacing rules"
+          }
+        },
+        "documentation": {
+          "title": "Documentation",
+          "items": {
+            "componentDocs": "Component docs",
+            "guidelines": "Usage guidelines",
+            "bestPractices": "Best practices"
+          }
+        }
+      },
+      "phase3": {
+        "title": "Phase 3: Code Consolidation",
+        "description": "Implement unified components and services across products",
+        "frontendCode": {
+          "title": "Frontend Code",
+          "items": {
+            "react": "React components",
+            "state": "State management",
+            "api": "API integration"
+          }
+        },
+        "backendServices": {
+          "title": "Backend Services",
+          "items": {
+            "modules": "Service modules",
+            "logic": "Business logic",
+            "dataModels": "Data models"
+          }
+        },
+        "sharedLibraries": {
+          "title": "Shared Libraries",
+          "items": {
+            "utils": "Utility functions",
+            "hooks": "Common hooks",
+            "validation": "Validation logic"
+          }
+        }
+      },
+      "phase4": {
+        "title": "Phase 4: Migration & Deployment",
+        "description": "Gradual migration following selected rationalization strategy",
+        "stranglerFig": {
+          "title": "Strangler Fig Pattern",
+          "items": {
+            "incremental": "Incremental replacement",
+            "featureFlags": "Feature flags",
+            "abTesting": "A/B testing"
+          }
+        },
+        "qa": {
+          "title": "Quality Assurance",
+          "items": {
+            "regression": "Regression testing",
+            "perfMonitoring": "Performance monitoring",
+            "userAcceptance": "User acceptance"
+          }
+        },
+        "deprecation": {
+          "title": "Deprecation",
+          "items": {
+            "legacyRemoval": "Legacy code removal",
+            "dbCleanup": "Database cleanup",
+            "docsUpdate": "Documentation update"
+          }
+        }
+      }
+    },
+    "svgLabels": {
+      "phoenixDesign": "Phoenix Design",
+      "apolloDesign": "Apollo Design",
+      "voyagerDesign": "Voyager Design",
+      "unifiedDesignSystem": "Unified Design System",
+      "phoenixCode": "Phoenix Code",
+      "apolloCode": "Apollo Code",
+      "voyagerCode": "Voyager Code",
+      "unifiedCodeImplementation": "Unified Code Implementation",
+      "phoenixArchitecture": "Phoenix Architecture",
+      "apolloArchitecture": "Apollo Architecture",
+      "voyagerArchitecture": "Voyager Architecture",
+      "unifiedArchitecture": "Unified Architecture"
+    }
+  },
+  "unifiedProduct": {
+    "title": "Unified Product Creation",
+    "subtitle": "Discover how the rationalization process creates a unified product that combines all functionality without the ambiguity of overlapping functional graphs",
+    "breadcrumb": {
+      "portfolio": "Portfolio Rationalization",
+      "current": "Unified Product View"
+    },
+    "process": {
+      "title": "Rationalization Process",
+      "steps": {
+        "identify": {
+          "title": "Identify Overlapping Functionality",
+          "description": "Analyze functional graphs to identify common authentication patterns across products"
+        },
+        "extract": {
+          "title": "Extract Core Capabilities",
+          "description": "Extract essential authentication capabilities from each product's implementation"
+        },
+        "eliminate": {
+          "title": "Eliminate Redundancy",
+          "description": "Remove duplicate implementations and consolidate similar functionalities"
+        },
+        "create": {
+          "title": "Create Unified Architecture",
+          "description": "Design a unified authentication platform that encompasses all required outcomes"
+        }
+      }
+    },
+    "visualization": {
+      "title": "Unification Visualization",
+      "steps": {
+        "sourceProducts": "Three separate products with overlapping authentication functionality",
+        "productFeatures": "Each product has its own authentication implementation and features",
+        "overlapAnalysis": "Identify common patterns and duplicate functionality across products",
+        "consolidation": "Consolidate all features into a unified platform",
+        "unifiedProduct": "Create unified authentication platform container",
+        "completeUnion": "All features from all products preserved in unified platform"
+      },
+      "stepLabels": {
+        "sourceProducts": "Source Products",
+        "featureAnalysis": "Feature Analysis",
+        "overlapAnalysis": "Overlap Analysis",
+        "consolidation": "Consolidation",
+        "unifiedPlatform": "Unified Platform",
+        "completeUnion": "Complete Union"
+      }
+    },
+    "benefits": {
+      "title": "Benefits of the Unified Product",
+      "noAmbiguity": {
+        "title": "No Functional Ambiguity",
+        "description": "The unified product eliminates overlapping functional graphs, providing clear, unambiguous authentication paths for all use cases."
+      },
+      "completeCoverage": {
+        "title": "Complete Feature Coverage",
+        "description": "All outcomes from Phoenix, Apollo, and Voyager are preserved and enhanced in the unified platform, ensuring no functionality is lost."
+      },
+      "optimizedArch": {
+        "title": "Optimized Architecture",
+        "description": "The rationalized product uses best practices from all three products, resulting in a more maintainable and scalable solution."
+      }
+    },
+    "featureMapping": {
+      "title": "Feature Mapping",
+      "description": "See how features from individual products map to the unified platform:",
+      "sourceProducts": "Source Products",
+      "unifiedPlatform": "Unified Platform"
+    },
+    "implementationRoadmap": {
+      "title": "Implementation Roadmap",
+      "phase1": {
+        "title": "Phase 1: Analysis",
+        "description": "Complete functional overlap analysis across all three products"
+      },
+      "phase2": {
+        "title": "Phase 2: Design",
+        "description": "Create unified authentication architecture and API specifications"
+      },
+      "phase3": {
+        "title": "Phase 3: Migration",
+        "description": "Gradual migration of existing products to unified platform"
+      },
+      "phase4": {
+        "title": "Phase 4: Optimization",
+        "description": "Performance tuning and feature enhancement based on usage patterns"
+      }
+    },
+    "cta": {
+      "title": "Ready to Explore the Unified Product?",
+      "description": "Dive deeper into the rationalization process and see how the unified architecture eliminates redundancy while preserving all essential functionality.",
+      "viewRoadmap": "View Rationalization Roadmap",
+      "exploreGraphs": "Explore Ontology Graphs"
+    }
+  }
+}

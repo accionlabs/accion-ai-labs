@@ -1,0 +1,270 @@
+{
+  "placeholder": "検索...",
+  "noResults": "「{{query}}」に一致する結果が見つかりません",
+  "items": {
+    "home": {
+      "title": "ホーム",
+      "description": "Accion AI Labs - エンタープライズソフトウェア開発のためのセマンティックエンジニアリングプラットフォーム"
+    },
+    "coreTechnology": {
+      "title": "コアテクノロジー概要",
+      "description": "Breeze.AIによるセマンティックソフトウェアエンジニアリングのための4オントロジーフレームワーク"
+    },
+    "kapsFramework": {
+      "title": "KAPSフレームワーク",
+      "description": "セマンティックエンジニアリングのためのKnowledge、Architecture、Process、Standardsフレームワーク"
+    },
+    "agentArchitecture": {
+      "title": "エージェントアーキテクチャ",
+      "description": "ソフトウェア開発向け特化型AIエージェントによるエージェンティックグラフアーキテクチャ"
+    },
+    "breezeAI": {
+      "title": "Breeze.AI",
+      "description": "自動化されたソフトウェア開発のためのコアセマンティックエンジニアリングプラットフォーム"
+    },
+    "genAIBox": {
+      "title": "Gen AI in a Box",
+      "description": "エンタープライズ向けパッケージ型生成AIソリューション"
+    },
+    "guardrails": {
+      "title": "戦略的ガードレール",
+      "description": "AI支援開発のための安全性とコンプライアンスのガードレール"
+    },
+    "solutions": {
+      "title": "全ソリューション",
+      "description": "AI搭載エンタープライズソリューションの完全なポートフォリオ"
+    },
+    "productEngineering": {
+      "title": "プロダクトエンジニアリング",
+      "description": "AI加速による製品開発およびエンジニアリングソリューション"
+    },
+    "productEngineeringOverview": {
+      "title": "プロダクトエンジニアリング概要",
+      "description": "製品開発ライフサイクルへのセマンティックファーストアプローチ"
+    },
+    "requirementsCapture": {
+      "title": "要件定義",
+      "description": "AI搭載の要件収集とセマンティック分析"
+    },
+    "designGeneration": {
+      "title": "デザイン生成",
+      "description": "セマンティック仕様からの自動デザインアーティファクト生成"
+    },
+    "implementationPipeline": {
+      "title": "実装パイプライン",
+      "description": "セマンティックバリデーション付き継続的実装パイプライン"
+    },
+    "applicationReengineering": {
+      "title": "アプリケーションリエンジニアリング",
+      "description": "レガシーアプリケーションのモダナイゼーションと技術的負債の改善"
+    },
+    "reengineeringOverview": {
+      "title": "リエンジニアリング概要",
+      "description": "アプリケーションモダナイゼーションへの包括的なアプローチ"
+    },
+    "discoveryAssessment": {
+      "title": "ディスカバリーとアセスメント",
+      "description": "自動化されたコードベース分析と技術的負債アセスメント"
+    },
+    "reengineeringStrategy": {
+      "title": "リエンジニアリング戦略",
+      "description": "アプリケーションモダナイゼーションの戦略的計画"
+    },
+    "implementationModernization": {
+      "title": "実装とモダナイゼーション",
+      "description": "セマンティック保全によるモダナイゼーションの実行"
+    },
+    "continuousValidation": {
+      "title": "継続的バリデーション",
+      "description": "モダナイゼーション中の継続的な検証と品質保証"
+    },
+    "asimov": {
+      "title": "ASIMOV",
+      "description": "AI搭載レガシーシステムの移行とモダナイゼーション"
+    },
+    "asimovOverview": {
+      "title": "ASIMOV概要",
+      "description": "レガシーシステムのインテリジェントな移行のための自動化システム"
+    },
+    "discoveryAnalysis": {
+      "title": "ディスカバリーと分析",
+      "description": "移行計画のためのレガシーシステムの詳細分析"
+    },
+    "transformationEngine": {
+      "title": "変換エンジン",
+      "description": "自動化されたコード変換と移行エンジン"
+    },
+    "migrationPatterns": {
+      "title": "移行パターン",
+      "description": "レガシーシステム移行の実証済みパターン"
+    },
+    "successStories": {
+      "title": "成功事例",
+      "description": "ASIMOV移行のケーススタディと成功事例"
+    },
+    "customerService": {
+      "title": "カスタマーサービスAI",
+      "description": "AI搭載のカスタマーサービスおよびサポートソリューション"
+    },
+    "customerServiceOverview": {
+      "title": "カスタマーサービス概要",
+      "description": "カスタマーサポートのための包括的なAIソリューション"
+    },
+    "selfHealBot": {
+      "title": "Self-Heal Bot",
+      "description": "自己修復機能を備えた自律型カスタマーサービスボット"
+    },
+    "assistedHealBot": {
+      "title": "Assisted Heal Bot",
+      "description": "複雑な顧客の問題に対応するヒューマンアシスト型AIボット"
+    },
+    "businessOptimization": {
+      "title": "ビジネス最適化ハブ",
+      "description": "カスタマーサービスのためのAI駆動ビジネスプロセス最適化"
+    },
+    "implementationRoadmap": {
+      "title": "実装ロードマップ",
+      "description": "カスタマーサービスAIソリューション展開のロードマップ"
+    },
+    "dataEngineering": {
+      "title": "データエンジニアリング",
+      "description": "AI搭載のデータエンジニアリングとパイプライン自動化"
+    },
+    "portfolioOverview": {
+      "title": "ポートフォリオ概要",
+      "description": "ソフトウェアポートフォリオの分析と合理化ダッシュボード"
+    },
+    "componentComparator": {
+      "title": "コンポーネントコンパレーター",
+      "description": "製品間のソフトウェアコンポーネントの比較と分析"
+    },
+    "graphExplorer": {
+      "title": "グラフエクスプローラー",
+      "description": "セマンティックKnowledge Graphのインタラクティブな探索"
+    },
+    "rationalizationRoadmap": {
+      "title": "合理化ロードマップ",
+      "description": "ポートフォリオ合理化のための戦略的ロードマップ"
+    },
+    "debtAssessment": {
+      "title": "技術的負債アセスメント",
+      "description": "包括的な技術的負債の分析とスコアリング"
+    },
+    "agentAnalysis": {
+      "title": "エージェント分析",
+      "description": "技術的負債パターンのAIエージェントベース分析"
+    },
+    "debtGraphExplorer": {
+      "title": "負債グラフエクスプローラー",
+      "description": "技術的負債の関係と依存関係の可視化"
+    },
+    "remediationRoadmap": {
+      "title": "改善ロードマップ",
+      "description": "技術的負債改善のための優先度付きロードマップ"
+    },
+    "manualTranslationTax": {
+      "title": "手動変換の負担",
+      "description": "ソフトウェア開発における手動変換の危機"
+    },
+    "traditionalApproaches": {
+      "title": "従来のアプローチ",
+      "description": "従来のソフトウェア開発アプローチが失敗する理由"
+    },
+    "breezeBreakthrough": {
+      "title": "Breezeの革新",
+      "description": "Breeze.AIがセマンティックエンジニアリングの課題をどのように解決するか"
+    },
+    "competitiveAdvantages": {
+      "title": "競争上の優位性",
+      "description": "Breeze.AIの主要な差別化要因と競争上の優位性"
+    },
+    "architectureOverview": {
+      "title": "アーキテクチャ概要",
+      "description": "Breeze.AIプラットフォームのハイレベルアーキテクチャ"
+    },
+    "coreComponents": {
+      "title": "コアコンポーネント",
+      "description": "Breeze.AIシステムの必須コンポーネント"
+    },
+    "componentInteractions": {
+      "title": "コンポーネント間の連携",
+      "description": "Breeze.AIコンポーネントの相互作用と通信の仕組み"
+    },
+    "integrationPoints": {
+      "title": "インテグレーションポイント",
+      "description": "統合機能と拡張ポイント"
+    },
+    "scalabilityPerformance": {
+      "title": "スケーラビリティとパフォーマンス",
+      "description": "スケーリング戦略とパフォーマンス最適化"
+    },
+    "securityCompliance": {
+      "title": "セキュリティとコンプライアンス",
+      "description": "セキュリティ対策とコンプライアンスフレームワーク"
+    },
+    "semanticOverview": {
+      "title": "セマンティックフレームワーク概要",
+      "description": "4オントロジーセマンティックモデルの構造"
+    },
+    "functionalOntology": {
+      "title": "機能オントロジー",
+      "description": "ビジネスケイパビリティと機能要件のモデリング"
+    },
+    "designOntology": {
+      "title": "デザインオントロジー",
+      "description": "ユーザーエクスペリエンスとインターフェースデザインのモデリング"
+    },
+    "architectureOntology": {
+      "title": "アーキテクチャオントロジー",
+      "description": "システムアーキテクチャと技術設計のモデリング"
+    },
+    "codeOntology": {
+      "title": "コードオントロジー",
+      "description": "ソースコード構造と実装のモデリング"
+    },
+    "crossRelationships": {
+      "title": "クロスオントロジーリレーションシップ",
+      "description": "オントロジーレイヤー間のトレーサビリティリンク"
+    },
+    "agentsLayer": {
+      "title": "エージェントレイヤー",
+      "description": "セマンティックモデル上で動作するAIエージェント"
+    },
+    "processOverview": {
+      "title": "プロセスフロー概要",
+      "description": "セマンティックエンジニアリングの3フェーズ進化"
+    },
+    "phase1Foundation": {
+      "title": "フェーズ1：基盤構築",
+      "description": "15%の手動作業でセマンティック基盤を構築"
+    },
+    "phase2Evolution": {
+      "title": "フェーズ2：発展",
+      "description": "AI支援により30%の手動作業に進化"
+    },
+    "phase3SemanticFirst": {
+      "title": "フェーズ3：セマンティックファースト",
+      "description": "5%の手動作業でセマンティックファースト開発を実現"
+    },
+    "contact": {
+      "title": "はじめましょう",
+      "description": "セマンティックエンジニアリングを始めるにはAccion AI Labsにお問い合わせください"
+    }
+  },
+  "categories": {
+    "home": "ホーム",
+    "coreTechnology": "コアテクノロジー",
+    "solutions": "ソリューション",
+    "productEngineering": "プロダクトエンジニアリング",
+    "applicationReengineering": "アプリケーションリエンジニアリング",
+    "asimov": "ASIMOV",
+    "customerService": "カスタマーサービス",
+    "portfolio": "ポートフォリオ",
+    "technicalDebt": "技術的負債",
+    "breezeDeepDive": "Breeze.AI詳細解説",
+    "systemArchitecture": "システムアーキテクチャ",
+    "semanticModel": "セマンティックモデル",
+    "processFlow": "プロセスフロー",
+    "contact": "お問い合わせ"
+  }
+}

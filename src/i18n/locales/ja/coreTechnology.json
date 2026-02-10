@@ -1,0 +1,1499 @@
+{
+  "overview": {
+    "title": "セマンティックエンジニアリング概要",
+    "subtitle": "ソフトウェアの包括的理解を実現する4つのオントロジーフレームワーク",
+    "header": {
+      "badge": "プラットフォーム",
+      "title": "Breeze.AI プラットフォーム",
+      "description": "エンタープライズソフトウェア向けの信頼性の高いAIエージェントを構築するには、深いコンテキストが必要です。Breeze.AIは、LLMが複雑な問題を正確に解決するために必要な深い理解を提供する、グラフベースの方法論を備えた包括的なプラットフォームです。"
+    },
+    "whyGraphs": {
+      "title": "なぜKnowledge Graphなのか？",
+      "limitations": {
+        "title": "現在のアプローチの限界",
+        "promptEngineering": {
+          "label": "Prompt Engineering：",
+          "description": "コンテキストウィンドウの制限、構造的関係の喪失、一貫性のない結果"
+        },
+        "vectorEmbeddings": {
+          "label": "ベクトル埋め込み：",
+          "description": "複雑な関係の把握が不得意、階層構造なし、類似性≠関連性"
+        },
+        "rag": {
+          "label": "RAG (Retrieval Augmented Generation)：",
+          "description": "チャンクサイズによる制限が依然として存在、文書間の関係を見逃す"
+        }
+      },
+      "graphAdvantage": {
+        "title": "グラフの優位性",
+        "completeContext": {
+          "label": "完全なコンテキスト：",
+          "description": "すべての関係が保持され、システム全体の理解が可能"
+        },
+        "semanticRelationships": {
+          "label": "セマンティック関係：",
+          "description": "「何が繋がっているか」だけでなく「どのように、なぜ繋がっているか」を表現"
+        },
+        "traversableStructure": {
+          "label": "探索可能な構造：",
+          "description": "LLMがあらゆる地点から関連するコンテキストを探索可能"
+        }
+      },
+      "keyInsight": {
+        "label": "重要な洞察：",
+        "description": "LLMは、構造化された相互接続された知識にアクセスできる場合に最高のパフォーマンスを発揮します。当社のセマンティックグラフは、コードベース、ドキュメント、設計パターンをAIエージェントが確実に探索し推論できるナビゲーション可能な知識ネットワークに変換することで、この構造を提供します。"
+      }
+    },
+    "process": {
+      "title": "コードから知識、そしてアクションへ",
+      "existingInfo": {
+        "title": "既存情報",
+        "description": "ソースコード、ドキュメント、要件定義、設計仕様、アーキテクチャドキュメント"
+      },
+      "semanticKnowledgeGraph": {
+        "title": "セマンティックKnowledge Graph",
+        "description": "システムの完全なセマンティクスを捕捉する4つの相互接続されたオントロジー"
+      },
+      "customAgents": {
+        "title": "カスタムAIエージェント",
+        "description": "お客様固有のシステムを理解し、それに基づいて行動する専用エージェント"
+      },
+      "bottomText": "従来のソフトウェアエンジニアリングのベストプラクティスと設計フレームワークを、これらのKnowledge Graphの作成を推進するオントロジーに変換します。"
+    },
+    "ontologyFramework": {
+      "title": "4つのオントロジーフレームワーク",
+      "description": "数十年にわたるソフトウェアエンジニアリングのベストプラクティスを、4つの補完的なオントロジーに体系化しました。それぞれがシステムの異なる側面を捕捉し、組み合わせることでAIエージェントの信頼性と効果を高める完全なコンテキストを提供します。",
+      "code": {
+        "title": "コードオントロジー",
+        "subtitle": "グラウンドトゥルース",
+        "description": "コードベースに実際に存在する実装そのもの。",
+        "items": [
+          "コンポーネントと依存関係",
+          "関数とメソッド",
+          "データ構造",
+          "APIコントラクト"
+        ]
+      },
+      "functional": {
+        "title": "機能オントロジー",
+        "description": "実装にマッピングされたビジネスロジックと要件。",
+        "items": [
+          "ユーザーストーリーと機能",
+          "ビジネスルール",
+          "プロセスワークフロー",
+          "統合ポイント"
+        ]
+      },
+      "design": {
+        "title": "デザインオントロジー",
+        "description": "UI/UXパターンとデザインシステム要素。",
+        "items": [
+          "UIコンポーネント",
+          "デザインパターン",
+          "ユーザーフロー",
+          "スタイルガイドライン"
+        ]
+      },
+      "architecture": {
+        "title": "アーキテクチャオントロジー",
+        "description": "システム構造とアーキテクチャパターン。",
+        "items": [
+          "システムレイヤー",
+          "サービストポロジー",
+          "データフロー",
+          "セキュリティ境界"
+        ]
+      },
+      "crossOntology": {
+        "label": "オントロジー横断インテリジェンス：",
+        "description": "真の力は、これらのオントロジーが相互接続された時に発揮されます。単一のユーザー機能を、機能要件、UIコンポーネント、コード実装、アーキテクチャレイヤーを通じて追跡できるため、AIエージェントは影響範囲、依存関係、制約を完全に理解できます。"
+      }
+    },
+    "knowledgeExtraction": {
+      "title": "エージェントベースの知識抽出",
+      "description": "専門化されたAIエージェントが並列で動作し、お客様のアーティファクトからドメイン固有の知識を抽出し、システムの完全なセマンティクスを捕捉する相互接続されたグラフを作成します。",
+      "patternRecognition": {
+        "title": "パターン認識",
+        "description": "当社のエージェントは、数千のコードベースで訓練されており、すべての主要な言語とフレームワークにわたるパターン、アーキテクチャ、アンチパターンを認識します。"
+      },
+      "continuousLearning": {
+        "title": "継続的学習",
+        "description": "コードベースが進化するにつれ、Knowledge Graphは自動的に更新され、AIエージェントが常に最新の情報で動作することを保証します。"
+      }
+    },
+    "artifactGeneration": {
+      "title": "エージェントベースのアーティファクト生成",
+      "description": "Knowledge Graphが構築されると、専門化されたAIエージェントがそれを活用して、すべてのステークホルダータイプにわたる検証済みの一貫性のあるアーティファクトを生成し、全員が単一の信頼できる情報源に基づいて作業できるようにします。",
+      "bidirectional": {
+        "title": "双方向インテリジェンス",
+        "description": "当社のエージェントは双方向に機能します：既存のアーティファクトからグラフに知識を抽出し、そのグラフから新しいアーティファクトを生成します。この双方向機能により、ソフトウェアライフサイクル全体にわたる一貫性、追跡可能性、検証が確保されます。"
+      },
+      "functional": {
+        "title": "機能アーティファクト",
+        "items": [
+          "ユーザーストーリーとエピック",
+          "機能仕様書",
+          "ビジネス要件ドキュメント",
+          "プロセスワークフロー"
+        ]
+      },
+      "design": {
+        "title": "デザインアーティファクト",
+        "items": [
+          "UI/UXフロー図",
+          "デザインシステムコンポーネント",
+          "インタラクティブプロトタイプ",
+          "スタイルガイド"
+        ]
+      },
+      "architecture": {
+        "title": "アーキテクチャアーティファクト",
+        "items": [
+          "システムアーキテクチャ図",
+          "コンポーネント相互作用マップ",
+          "デプロイメントトポロジー",
+          "技術仕様書"
+        ]
+      },
+      "implementation": {
+        "title": "実装アーティファクト",
+        "items": [
+          "テストスクリプト（Gherkin/BDD）",
+          "APIドキュメント",
+          "コードスキャフォールディング",
+          "統合コントラクト"
+        ]
+      },
+      "keyAdvantage": {
+        "title": "主要な優位性",
+        "description": "すべてのアーティファクトは同一のKnowledge Graphから生成されるため、自動的に一貫性と追跡可能性が確保されます。要件の変更はすべてのステークホルダーアーティファクトに反映され、「手動翻訳コスト」を排除し、曖昧さを85%削減します。"
+      }
+    },
+    "customSolutions": {
+      "title": "カスタムソリューションの提供方法",
+      "team": {
+        "title": "専門チーム",
+        "breezeFramework": {
+          "title": "Breezeフレームワーク",
+          "description": "LLM消費に最適化されたセマンティックKnowledge Graphの作成と管理のための独自フレームワーク。"
+        },
+        "semanticEngineers": {
+          "title": "セマンティックエンジニア",
+          "description": "オントロジーの作成と、エージェントを使用したお客様のシステムの包括的なKnowledge Graph構築に精通した専門家。"
+        },
+        "agentDevelopers": {
+          "title": "エージェント開発者",
+          "description": "Knowledge Graphを活用して正確な結果を提供する、お客様固有のソリューション領域向けのカスタムAIエージェントを開発するエンジニア。"
+        }
+      },
+      "steps": {
+        "step1": {
+          "title": "発見とオントロジー設計",
+          "description": "お客様のコードベースと要件を分析し、固有のドメイン知識を捕捉するカスタムオントロジーを設計します。"
+        },
+        "step2": {
+          "title": "グラフ構築",
+          "description": "セマンティックエンジニアが抽出エージェントを展開し、お客様のアーティファクトから包括的なKnowledge Graphを構築します。"
+        },
+        "step3": {
+          "title": "カスタムエージェント開発",
+          "description": "エージェント開発者が、お客様のKnowledge Graphを活用して特定の課題を解決する専用AIエージェントを作成します。"
+        }
+      }
+    },
+    "whyWorks": {
+      "title": "このアプローチが有効な理由",
+      "technicalFoundation": {
+        "title": "技術的基盤",
+        "graphTraversal": "LLMは関係を辿って必要な情報を正確に見つけることができます",
+        "semanticAnchoring": "すべての情報がそのコンテキストに結び付けられています",
+        "explicitRelationships": "物事がどのように繋がっているかについて推測の必要がありません"
+      },
+      "practicalBenefits": {
+        "title": "実用的なメリット",
+        "consistentResults": "同じコンテキストが信頼性の高い出力をもたらします",
+        "completeUnderstanding": "接続やコンテキストの欠落がありません",
+        "explainableDecisions": "グラフを通じた明確な推論パスを提供します"
+      }
+    },
+    "deepDive": {
+      "title": "Breeze.AI 詳細解説",
+      "subtitle": "プラットフォームアーキテクチャと方法論の全体像をご覧ください",
+      "challenge": {
+        "title": "課題とソリューション",
+        "description": "従来のソフトウェア開発が抱える課題と、Breeze.AIが「手動翻訳コスト」をどのように排除するか",
+        "items": [
+          "手動翻訳コスト",
+          "従来のアプローチが失敗する理由",
+          "Breeze.AIのブレークスルーと競争優位性"
+        ],
+        "link": "課題とソリューションを探索"
+      },
+      "architecture": {
+        "title": "システムアーキテクチャ",
+        "description": "Breeze.AIのアーキテクチャ、コンポーネント、統合ポイントの包括的なビュー",
+        "items": [
+          "コアコンポーネントとインタラクション",
+          "統合ポイントとデータフロー",
+          "スケーラビリティ、セキュリティ、コンプライアンス"
+        ],
+        "link": "アーキテクチャを探索"
+      },
+      "semantic": {
+        "title": "セマンティックモデル構造",
+        "description": "4つのオントロジーフレームワークとオントロジー間の相互接続に関する詳細解説",
+        "items": [
+          "機能、デザイン、アーキテクチャ、コードオントロジー",
+          "オントロジー横断の関係性",
+          "エージェントレイヤーと知識処理"
+        ],
+        "link": "セマンティックモデルを探索"
+      },
+      "processFlow": {
+        "title": "プロセスフロー",
+        "description": "手動集約型からセマンティックファーストの開発への3フェーズの進化",
+        "items": [
+          "フェーズ1：基盤構築（手動15%）",
+          "フェーズ2：進化（手動30%）",
+          "フェーズ3：セマンティックファースト（手動5%）"
+        ],
+        "link": "プロセスフローを探索"
+      }
+    },
+    "platformIntegration": {
+      "title": "Breeze.AI プラットフォームとの統合",
+      "description": "当社のコアテクノロジーコンポーネントが連携して、プロダクション品質のAIソリューションを提供します。各コンポーネントを探索して、エンタープライズグレードのデプロイメントをどのように実現するかをご理解ください。",
+      "kapsFramework": {
+        "title": "KAPS フレームワーク",
+        "description": "4つの専門ポートフォリオを持つAI導入フレームワーク"
+      },
+      "agenticArchitecture": {
+        "title": "Agentic Architecture",
+        "description": "マルチエージェントオーケストレーションアーキテクチャ"
+      },
+      "genAIBox": {
+        "title": "Gen AI in a Box",
+        "description": "安全なローカルセマンティックエンジニアリングのためのオンプレミスインストール"
+      },
+      "strategicGuardrails": {
+        "title": "Strategic Guardrails",
+        "description": "安全でコンプライアンスに準拠したAI運用のための制御構造"
+      },
+      "learnMore": "詳細を見る"
+    },
+    "cta": {
+      "title": "何が可能かをご覧になりませんか？",
+      "description": "セマンティックグラフアプローチが複雑なエンタープライズ課題をどのように解決したか、実際の事例をご覧ください。",
+      "productEngineering": "プロダクトエンジニアリング詳細解説",
+      "applicationReengineering": "アプリケーションリエンジニアリング詳細解説"
+    }
+  },
+  "kaps": {
+    "title": "KAPS フレームワーク",
+    "subtitle": "Knowledge、Architecture、Process、Standards",
+    "header": {
+      "badge": "AI Agenticフレームワーク",
+      "title": "自律型AIエージェントのためのKAPS フレームワーク",
+      "description": "4つの戦略的ポートフォリオにわたって自律型AIエージェントを展開するための包括的なフレームワークです。従来のソフトウェアソリューションではなく、推論、学習、自律的な行動を行うインテリジェントな自己指向型エージェントにより、エンタープライズ運用を変革します。"
+    },
+    "frameworkOverview": {
+      "title": "Agentic AI アーキテクチャ概要",
+      "principles": {
+        "autonomousOperation": {
+          "title": "自律運用",
+          "description": "エージェントは独立して動作し、人間の継続的な監視なしに意思決定と行動を行います。"
+        },
+        "continuousLearning": {
+          "title": "継続的学習",
+          "description": "エージェントはインタラクション、フィードバック、結果から学習し、パフォーマンスを継続的に向上させます。"
+        },
+        "multiAgentCollaboration": {
+          "title": "マルチエージェント協調",
+          "description": "エージェントはチームとして機能し、タスクの調整、知識の共有、複雑なワークフローの連携を行います。"
+        },
+        "goalOrientedBehavior": {
+          "title": "目標指向型動作",
+          "description": "エージェントは目標を自律的に追求し、ステップを計画し、目標達成のために戦略を適応させます。"
+        }
+      }
+    },
+    "agentCapabilities": {
+      "title": "これらのソリューションがAgenticである理由",
+      "proactiveAction": {
+        "title": "プロアクティブアクション",
+        "description": "エージェントはコマンドを待つのではなく、機会を特定し自律的に行動します。"
+      },
+      "reasoningPlanning": {
+        "title": "推論と計画",
+        "description": "Chain-of-thoughtなどの手法を用いて、エージェントは問題を推論し、解決策を計画します。"
+      },
+      "toolUsage": {
+        "title": "ツール活用",
+        "description": "エージェントは目標達成のために、ツール、API、他のエージェントを自律的に選択し活用します。"
+      }
+    },
+    "portfolios": {
+      "agentPortfolio": "エージェントポートフォリオ",
+      "timeToDeploy": "デプロイまでの期間",
+      "complexity": "複雑性",
+      "aiMaturity": "AI成熟度",
+      "agentValueProposition": "エージェントの価値提案",
+      "agenticUseCases": "Agenticユースケース",
+      "agentCapabilities": "エージェント機能：",
+      "agentImplementations": "エージェント実装：",
+      "agentTechnologies": "エージェント技術：",
+      "agentInfrastructure": "エージェントインフラストラクチャ",
+      "agentSuccessMetrics": "エージェント成功指標",
+      "knowledge": {
+        "name": "Knowledgeポートフォリオ",
+        "tagline": "自律型ナレッジエージェント",
+        "description": "非構造化データから推論能力を備え、コンテンツを自律的に処理、理解、生成するインテリジェントエージェントを展開します",
+        "businessValue": "継続的に学習し改善する自己組織化ナレッジエージェント",
+        "impact": "複雑なナレッジタスクを人間の介入なしに処理する自律エージェント",
+        "useCases": {
+          "documentProcessing": {
+            "title": "ドキュメント処理エージェントネットワーク",
+            "description": "専門エージェントが連携して文書から情報を抽出、検証、強化するマルチエージェントシステム",
+            "benefits": ["自律的な文書理解", "自己修正型の精度", "フィードバックからの学習"],
+            "examples": ["契約分析エージェント", "コンプライアンスレビューエージェント", "請求書処理スウォーム", "法務リサーチアシスタント"],
+            "technologies": ["LangChain Agents", "AutoGPT", "Semantic Memory Systems", "RAG Pipelines"]
+          },
+          "conversationalAI": {
+            "title": "会話型AIエージェントエコシステム",
+            "description": "メモリ、コンテキスト、目標追求行動を備えた複雑なマルチターン会話を処理するオーケストレーションされたエージェントチーム",
+            "benefits": ["目標指向型対話", "マルチエージェントハンドオフ", "セッション間の永続メモリ"],
+            "examples": ["カスタマーサクセスエージェントチーム", "テクニカルサポートボットネットワーク", "セールスエージェントオーケストレーション", "HRアシスタントコレクティブ"],
+            "technologies": ["Agent Orchestration Frameworks", "Memory Networks", "Tool-Using Agents", "Chain-of-Thought Reasoning"]
+          },
+          "contentGeneration": {
+            "title": "コンテンツ生成エージェントファクトリー",
+            "description": "最小限の人間の監視で、コンテンツを計画、作成、レビュー、最適化する自律エージェント",
+            "benefits": ["自己改善型コンテンツ品質", "マルチエージェントレビュープロセス", "適応型スタイル学習"],
+            "examples": ["マーケティングキャンペーンエージェント", "テクニカルライティングアシスタント", "クリエイティブブリーフジェネレーター", "ソーシャルメディアエージェントネットワーク"],
+            "technologies": ["CrewAI", "Agent Feedback Loops", "Fine-tuned LLM Agents", "Prompt Chaining Systems"]
+          },
+          "knowledgeMining": {
+            "title": "ナレッジマイニングエージェントスウォーム",
+            "description": "複数のソースから知識を自律的に発見、接続、統合する分散エージェント",
+            "benefits": ["自律的なKnowledge Graph構築", "分野横断的な統合", "プロアクティブなインサイト生成"],
+            "examples": ["リサーチ発見エージェント", "競合インテリジェンスネットワーク", "特許分析スウォーム", "市場調査コレクティブ"],
+            "technologies": ["Graph Neural Networks", "Agent-based Web Crawling", "Embedding-based Agents", "Knowledge Graph Agents"]
+          }
+        },
+        "architectureComponents": [
+          "エージェントオーケストレーションプラットフォーム",
+          "共有メモリ＆コンテキストストア",
+          "エージェント用ツールレジストリ",
+          "エージェント通信プロトコル",
+          "フィードバック＆学習ループシステム"
+        ],
+        "successMetrics": [
+          "エージェント自律レベル",
+          "介入なしのタスク完了率",
+          "エージェント学習速度",
+          "マルチエージェント協調効率"
+        ]
+      },
+      "analytics": {
+        "name": "Analyticsポートフォリオ",
+        "tagline": "インテリジェント分析エージェント",
+        "description": "構造化データからプロアクティブにインサイトを発見し、結果を予測し、アクションを推奨する自律型アナリストエージェントを展開します",
+        "businessValue": "ニーズを先取りしインサイトに基づいて行動する自己指向型分析エージェント",
+        "impact": "人間が問い合わせる前に機会を特定するプロアクティブなインテリジェンスエージェント",
+        "useCases": {
+          "predictiveAnalytics": {
+            "title": "予測分析エージェントチーム",
+            "description": "継続的な学習により、予測モデルを自律的に構築、検証、デプロイする協調エージェント",
+            "benefits": ["自己最適化モデル", "自律的な特徴量エンジニアリング", "プロアクティブな異常検知"],
+            "examples": ["需要予測エージェント", "リスク評価ネットワーク", "解約予測スウォーム", "収益最適化エージェント"],
+            "technologies": ["AutoML Agents", "Model Selection Agents", "Feature Engineering Bots", "Ensemble Agent Networks"]
+          },
+          "anomalyDetection": {
+            "title": "異常検知エージェントネットワーク",
+            "description": "データストリームを継続的に監視し、正常パターンを学習し、異常への対応を連携する分散エージェント",
+            "benefits": ["適応的な閾値学習", "連携したインシデント対応", "根本原因分析の自動化"],
+            "examples": ["不正検知スウォーム", "セキュリティ脅威ハンター", "品質管理エージェント", "システムヘルスモニター"],
+            "technologies": ["Streaming Agent Architectures", "Unsupervised Learning Agents", "Alert Correlation Agents", "Response Automation Bots"]
+          },
+          "customerIntelligence": {
+            "title": "顧客インテリジェンスエージェントコレクティブ",
+            "description": "リアルタイムの顧客プロファイルを構築し、行動を予測し、パーソナライズされた体験をオーケストレーションするマルチエージェントシステム",
+            "benefits": ["リアルタイムプロファイル更新", "予測型ジャーニーマッピング", "自律的なパーソナライゼーション"],
+            "examples": ["Customer 360エージェント", "行動予測ネットワーク", "レコメンデーションエージェントスウォーム", "エンゲージメント最適化ボット"],
+            "technologies": ["Graph-based Agent Systems", "Reinforcement Learning Agents", "Multi-Armed Bandit Agents", "Collaborative Filtering Agents"]
+          },
+          "businessIntelligence": {
+            "title": "ビジネスインテリジェンスエージェントアシスタント",
+            "description": "ビジネス上の質問を解釈し、データを探索し、説明付きでインサイトを生成する自律エージェント",
+            "benefits": ["自然言語からインサイトへ", "仮説検証エージェント", "自動化されたインサイトナラティブ"],
+            "examples": ["エグゼクティブ分析エージェント", "KPIモニタリングスウォーム", "インサイト発見ネットワーク", "レポート生成コレクティブ"],
+            "technologies": ["SQL-generating Agents", "Visualization Agents", "Statistical Analysis Bots", "Narrative Generation Agents"]
+          }
+        },
+        "architectureComponents": [
+          "アナリティクスエージェントハブ",
+          "モデルレジストリ＆バージョニング",
+          "エージェント用フィーチャーストア",
+          "ストリーム処理エージェントレイヤー",
+          "インサイトアクションパイプライン"
+        ],
+        "successMetrics": [
+          "プロアクティブなインサイト生成率",
+          "エージェントが発見した機会数",
+          "予測精度の改善",
+          "インサイトまでの時間短縮"
+        ]
+      },
+      "process": {
+        "name": "Processポートフォリオ",
+        "tagline": "自律型プロセスエージェント",
+        "description": "意思決定能力を備え、ビジネスプロセスを自律的に実行、最適化、進化させるコグニティブエージェントを展開します",
+        "businessValue": "ワークフローを継続的に適応し改善する自己管理型プロセスエージェント",
+        "impact": "専門家のように思考、判断、行動するインテリジェントオートメーション",
+        "useCases": {
+          "processAutomation": {
+            "title": "インテリジェントプロセスオートメーションスウォーム",
+            "description": "専門エージェントが異なるプロセスステップを処理し、ハンドオフを調整し、フローを最適化するマルチエージェントシステム",
+            "benefits": ["自己オーケストレーションワークフロー", "動的プロセス最適化", "例外処理エージェント"],
+            "examples": ["保険金請求処理ネットワーク", "ローン組成スウォーム", "サプライチェーンエージェント", "注文履行コレクティブ"],
+            "technologies": ["Process Mining Agents", "Decision Agents", "Workflow Orchestration Bots", "RPA + AI Agent Integration"]
+          },
+          "cognitiveDecision": {
+            "title": "コグニティブ意思決定エージェントネットワーク",
+            "description": "コンテキストを分析し、選択肢を比較検討し、説明可能な推論で複雑な意思決定を行う専門エージェント",
+            "benefits": ["自律的な意思決定", "多基準最適化", "説明可能なエージェント推論"],
+            "examples": ["与信承認エージェント", "治療推奨システム", "投資アドバイザリーネットワーク", "リソース配分スウォーム"],
+            "technologies": ["Expert System Agents", "Reasoning Engines", "Multi-Agent Negotiation", "Explainable AI Agents"]
+          },
+          "workflowOptimization": {
+            "title": "動的ワークフロー最適化エージェント",
+            "description": "プロセスを継続的に監視、学習し、最適なパフォーマンスのために再構築するエージェント",
+            "benefits": ["自己修復プロセス", "ボトルネック予測", "自律的なルート変更"],
+            "examples": ["製造フロー最適化エージェント", "コールセンタールーティングエージェント", "ロジスティクス計画スウォーム", "サービススケジューリングネットワーク"],
+            "technologies": ["Reinforcement Learning Agents", "Digital Twin Agents", "Simulation-based Agents", "Optimization Algorithm Bots"]
+          },
+          "complianceGovernance": {
+            "title": "コンプライアンス＆ガバナンスエージェントフォース",
+            "description": "すべてのプロセスにわたる規制要件を監視、施行、適応する警戒エージェント",
+            "benefits": ["継続的なコンプライアンス監視", "規制変更への適応", "自動化された監査証跡"],
+            "examples": ["GDPRコンプライアンスエージェント", "AMLモニタリングネットワーク", "品質保証スウォーム", "リスク管理コレクティブ"],
+            "technologies": ["Policy Engine Agents", "Regulation Parsing Bots", "Audit Trail Agents", "Compliance Reasoning Systems"]
+          }
+        },
+        "architectureComponents": [
+          "プロセスエージェントオーケストレーター",
+          "意思決定エンジンフレームワーク",
+          "エージェントタスクキューシステム",
+          "プロセスメモリ＆学習ストア",
+          "エージェント間通信バス"
+        ],
+        "successMetrics": [
+          "プロセス自律化率",
+          "エージェント意思決定精度",
+          "自己最適化率",
+          "人間介入の削減"
+        ]
+      },
+      "systems": {
+        "name": "Systemsポートフォリオ",
+        "tagline": "AI開発＆インフラストラクチャエージェント",
+        "description": "コードの自律的な開発、インフラストラクチャの管理、テクノロジーエコシステム全体の最適化を行う高度なエージェントを展開します",
+        "businessValue": "システムを構築、テスト、保守する自己進化型テクノロジーエージェント",
+        "impact": "仮想エンジニアリングチームとして機能する自律型ITエージェント",
+        "useCases": {
+          "codeGeneration": {
+            "title": "コード生成エージェントコレクティブ",
+            "description": "コードの設計、実装、レビュー、リファクタリングを自律的に協調して行う専門エージェントチーム",
+            "benefits": ["自律的な機能開発", "マルチエージェントコードレビュー", "自己文書化システム"],
+            "examples": ["フルスタック開発エージェント", "レガシー移行スウォーム", "APIビルダーネットワーク", "コードモダナイゼーションコレクティブ"],
+            "technologies": ["GitHub Copilot Agents", "Code Generation LLMs", "AST Manipulation Agents", "Devin-style Agents"]
+          },
+          "testing": {
+            "title": "インテリジェントテストエージェント部隊",
+            "description": "テストの生成、バグの発見、協調テスト戦略による品質確保を行う自律エージェント",
+            "benefits": ["自己生成テストスイート", "自律的なバグハンティング", "自己修復テストメンテナンス"],
+            "examples": ["テスト生成スウォーム", "セキュリティテストエージェント", "パフォーマンステストネットワーク", "カオスエンジニアリングボット"],
+            "technologies": ["Test Generation Agents", "Fuzzing Bots", "Property-based Testing Agents", "Test Optimization Networks"]
+          },
+          "aiops": {
+            "title": "AIOpsエージェントエコシステム",
+            "description": "問題を予測し、リソースを最適化し、システムの健全性を自律的に維持するインフラストラクチャエージェント",
+            "benefits": ["予知保全", "自己修復インフラストラクチャ", "自律的なスケーリング判断"],
+            "examples": ["インシデント対応チーム", "キャパシティプランニングエージェント", "コスト最適化スウォーム", "セキュリティオペレーションセンター"],
+            "technologies": ["Monitoring Agents", "Root Cause Analysis Bots", "Remediation Agents", "Infrastructure-as-Code Agents"]
+          },
+          "devops": {
+            "title": "DevOpsオートメーションエージェントパイプライン",
+            "description": "人間の介入なしにCI/CD、デプロイメント、リリース戦略を管理するエンドツーエンドの自律エージェント",
+            "benefits": ["自律的なデプロイメント判断", "自己最適化パイプライン", "インテリジェントロールバックエージェント"],
+            "examples": ["リリース管理エージェント", "パイプライン最適化ネットワーク", "デプロイメント戦略スウォーム", "GitOpsエージェントコレクティブ"],
+            "technologies": ["Pipeline Automation Agents", "Deployment Decision Bots", "Canary Analysis Agents", "Configuration Management Agents"]
+          }
+        },
+        "architectureComponents": [
+          "開発エージェントプラットフォーム",
+          "コードインテリジェンスエンジン",
+          "テストエージェントフレームワーク",
+          "インフラストラクチャエージェントハブ",
+          "DevSecOpsエージェントパイプライン"
+        ],
+        "successMetrics": [
+          "自律的な開発速度",
+          "エージェント生成コードの品質",
+          "自己修復成功率",
+          "インフラストラクチャ最適化スコア"
+        ]
+      }
+    },
+    "deploymentRoadmap": {
+      "title": "エージェントデプロイメントロードマップ",
+      "phase1": {
+        "title": "フェーズ1：Knowledgeエージェント（第1〜4週）",
+        "description": "即座の自律的なナレッジ処理のために、会話型およびドキュメント処理エージェントを展開します。"
+      },
+      "phase2": {
+        "title": "フェーズ2：Analyticsエージェント（第5〜12週）",
+        "description": "インサイトと機会をプロアクティブに発見する予測・分析エージェントを立ち上げます。"
+      },
+      "phase3": {
+        "title": "フェーズ3：Processエージェント（第13〜24週）",
+        "description": "意思決定能力を備えた複雑なワークフローを実行する自律プロセスエージェントを展開します。"
+      },
+      "phase4": {
+        "title": "フェーズ4：Systemエージェント（第25週以降）",
+        "description": "システムを自律的に構築・保守する開発およびインフラストラクチャエージェントを実装します。"
+      }
+    },
+    "differentiators": {
+      "cognitiveAutonomy": {
+        "title": "コグニティブ自律性",
+        "description": "従来のオートメーションとは異なり、当社のエージェントは独立して思考、推論、意思決定を行い、再プログラミングなしに新しい状況に適応します。"
+      },
+      "agentCollaboration": {
+        "title": "エージェント協調",
+        "description": "エージェントはチームとして機能し、タスクの委任、インサイトの共有、エンタープライズ全体にわたる複雑なマルチステッププロセスの連携を行います。"
+      },
+      "selfImprovement": {
+        "title": "自己改善",
+        "description": "エージェントはすべてのインタラクションから学習し、パフォーマンスを継続的に向上させ、目標達成の新しい方法を発見します。"
+      }
+    }
+  },
+  "semanticEngineering": {
+    "header": {
+      "badge": "コアテクノロジー",
+      "title": "セマンティックエンジニアリングプラットフォーム",
+      "description": "構造化された知識表現とマルチエージェントオーケストレーションを通じて、信頼性の高いコンテキスト対応AIソリューションを構築するためのAccion Labsの包括的アプローチ。"
+    },
+    "evolution": {
+      "title": "LLMアプリケーション方法論の進化",
+      "description": "各方法論は前の方法論を基盤とし、以前のアプローチの強みを保持しながら新しい能力を追加しています。",
+      "llmIntegration": {
+        "title": "LLM統合",
+        "subtitle": "Prompt Engineering",
+        "description": "外部データで学習",
+        "characteristics": "特徴：",
+        "items": [
+          "非常に遅く高コスト",
+          "ハルシネーションが発生",
+          "限定的なビジネス活用"
+        ],
+        "approach": "クローズドブックアプローチ"
+      },
+      "fineTuned": {
+        "title": "ファインチューニングモデル",
+        "description": "ドメインまたは特定のユースケースで学習",
+        "characteristics": "特徴：",
+        "items": [
+          "高コストかつ低速",
+          "ハルシネーションが発生",
+          "ドメイン固有の知識"
+        ],
+        "approach": "クローズドブックアプローチ"
+      },
+      "rag": {
+        "title": "RAG",
+        "description": "Retrieval Augmented Generation",
+        "characteristics": "特徴：",
+        "items": [
+          "リアルタイムでコスト効率が高い",
+          "ハルシネーションなし/グラウンデッド",
+          "テキストコンテンツに限定"
+        ],
+        "approach": "オープンブックアプローチ"
+      },
+      "agRag": {
+        "title": "AG-RAG",
+        "subtitle": "Context Engineering",
+        "description": "Agentic Graph RAG",
+        "characteristics": "特徴：",
+        "items": [
+          "プロダクションレベルの精度",
+          "あらゆる形式のビジネス情報にアクセス可能",
+          "グラウンデッドでコスト効率が高い"
+        ],
+        "approach": "オープンブックアプローチ"
+      }
+    },
+    "whyKnowledgeGraphs": {
+      "title": "なぜKnowledge Graphが重要なのか",
+      "challenge": {
+        "title": "従来のAIの課題",
+        "lossOfContext": "従来のアプローチではコンポーネント間の重要な関係が失われます",
+        "lossOfContextLabel": "コンテキストの喪失",
+        "inconsistentResults": "構造化された知識がなければ、同じクエリが異なる出力を生成します",
+        "inconsistentResultsLabel": "一貫性のない結果",
+        "limitedUnderstanding": "複雑な相互依存関係について推論できません",
+        "limitedUnderstandingLabel": "限定的な理解"
+      },
+      "advantage": {
+        "title": "Knowledge Graphの優位性",
+        "preservedRelationships": "すべての接続と依存関係を維持します",
+        "preservedRelationshipsLabel": "関係の保持",
+        "consistentReasoning": "構造化データにより信頼性の高い反復可能な分析が可能になります",
+        "consistentReasoningLabel": "一貫した推論",
+        "deepUnderstanding": "正確なインサイトのための多層コンテキストを捕捉します",
+        "deepUnderstandingLabel": "深い理解"
+      }
+    },
+    "platform": {
+      "title": "セマンティックエンジニアリングプラットフォーム",
+      "description": "Accion Labsでは、単一の方法論に依存しません。当社のセマンティックエンジニアリングプラットフォームは、各アプリケーションの具体的な要件に基づいて、<strong>これらすべてのアプローチ</strong>をインテリジェントに組み合わせます：",
+      "promptEngineering": "エージェントのインタラクションとクイッククエリ向け",
+      "fineTuning": "ドメイン固有のモデル最適化向け",
+      "ragApproach": "動的な知識検索向け",
+      "graphRag": "複雑な関係理解向け",
+      "keyPoint": "重要なのは、最適な結果を得るために、各技術をいつ、どのように適用するかを見極めることです。",
+      "promptEngineeringLabel": "Prompt Engineering：",
+      "fineTuningLabel": "ファインチューニング：",
+      "ragLabel": "RAG：",
+      "graphRagLabel": "Graph RAG："
+    },
+    "journey": {
+      "title": "セマンティックエンジニアリングの歩み",
+      "milestones": {
+        "q1_2022": {
+          "title": "初のGenAIプロジェクト",
+          "description": "Graph RAGアプローチを用いた製薬リーダー向け創薬ユースケース"
+        },
+        "q4_2022": {
+          "title": "RAG + Graph RAG",
+          "description": "国連機関向けサポートボット"
+        },
+        "q1_2023": {
+          "title": "Knowledgeプラットフォーム",
+          "description": "ナレッジアシスタントプラットフォームの立ち上げ、GenAIを活用した大規模ドキュメント処理"
+        },
+        "q2_2023": {
+          "title": "ジェネレーティブアナリティクス",
+          "description": "ジェネレーティブアナリティクスプラットフォームの立ち上げ、国連機関向けデータボットの実装"
+        },
+        "q3_2023": {
+          "title": "コグニティブオートメーション＆Agentic",
+          "description": "旅行業界向けロングテール債権回収の自動化、Agentic Graph RAGの設計"
+        },
+        "q4_2023": {
+          "title": "KAPS フレームワーク",
+          "description": "KAPS - グラフベースのコンテキストエンジニアリングを備えたGenAI導入フレームワークの立ち上げ"
+        },
+        "q1_2024": {
+          "title": "マルチモーダルサポート",
+          "description": "チャット、音声、ビデオのマルチモーダル機能を備えたサポートボット"
+        },
+        "q2_2024": {
+          "title": "GenAIデータソリューション",
+          "description": "MDM、データ移行等のGenAI駆動データソリューション"
+        },
+        "q3_2024": {
+          "title": "E2E Agentic移行",
+          "description": "エンジニアリングリーダー向けCobolからJavaへのコード移行アシスタント"
+        },
+        "q1_2025": {
+          "title": "50件以上のプロジェクトを納品",
+          "description": "50件以上のGenAI / Agentic AIプロジェクトを納品"
+        }
+      }
+    },
+    "platformComponents": {
+      "title": "セマンティックエンジニアリングプラットフォーム",
+      "description": "各コンポーネントは、セマンティックエンジニアリングへの包括的アプローチにおいて重要な役割を果たしています：",
+      "items": {
+        "kaps": {
+          "title": "KAPS フレームワーク",
+          "role": "導入フレームワーク",
+          "description": "4つの専門ポートフォリオを持つAI導入フレームワーク"
+        },
+        "agentArchitecture": {
+          "title": "Agent Architecture",
+          "role": "ソリューションアーキテクチャ",
+          "description": "マルチエージェントオーケストレーションアーキテクチャ"
+        },
+        "breezeAI": {
+          "title": "Breeze.AI",
+          "role": "デリバリーフレームワーク",
+          "description": "エンドツーエンドのセマンティックエンジニアリングフレームワーク"
+        },
+        "genAIBox": {
+          "title": "Gen AI in a Box",
+          "role": "デプロイメントプラットフォーム",
+          "description": "安全なローカルセマンティックエンジニアリングのためのオンプレミスインストール"
+        },
+        "guardrails": {
+          "title": "Strategic Guardrails",
+          "role": "ガバナンスフレームワーク",
+          "description": "安全でコンプライアンスに準拠したAI運用のための制御構造"
+        }
+      }
+    },
+    "cta": {
+      "title": "セマンティックエンジニアリングでエンタープライズを変革しませんか？",
+      "description": "当社のプラットフォームコンポーネントがどのように連携して、正確で信頼性の高いスケーラブルなAIソリューションを提供するかをご覧ください。",
+      "exploreKaps": "KAPS フレームワークを探索",
+      "getStarted": "始めましょう"
+    }
+  },
+  "breezeAI": {
+    "title": "Breeze.AI",
+    "subtitle": "コアセマンティックエンジニアリングプラットフォーム"
+  },
+  "agentArchitecture": {
+    "title": "Agent Architecture",
+    "subtitle": "マルチエージェントオーケストレーションシステム",
+    "header": {
+      "badge": "エンタープライズエージェントアーキテクチャ",
+      "title": "Agentic AI アーキテクチャブループリント",
+      "description": "エンタープライズ規模で自律型AIエージェントを構築、デプロイ、管理するための包括的なアーキテクチャフレームワークです。各レイヤーは、ガバナンスと信頼性を維持しながら、エージェントが独立して思考、行動、学習するための重要な機能を提供します。"
+    },
+    "layeredArchitecture": {
+      "title": "レイヤードエージェントアーキテクチャ",
+      "agentOrchestration": "エージェントオーケストレーションレイヤー",
+      "agentOrchestrationSub": "マルチエージェント連携＆ガバナンス",
+      "cognitiveProcessing": "コグニティブ処理レイヤー",
+      "cognitiveProcessingSub": "インテリジェンス、推論＆学習",
+      "executionIntegration": "実行＆統合レイヤー",
+      "executionIntegrationSub": "ツール、アクション＆システム統合",
+      "infrastructurePlatform": "インフラストラクチャ＆プラットフォームレイヤー",
+      "infrastructurePlatformSub": "スケーラブルな基盤＆DevOps",
+      "principles": {
+        "looselyCoupled": {
+          "title": "疎結合",
+          "description": "エージェントは明確に定義されたインターフェースで独立して動作します"
+        },
+        "horizontallyScalable": {
+          "title": "水平スケーラブル",
+          "description": "アーキテクチャの変更なしに必要に応じてエージェントを追加できます"
+        },
+        "secureByDesign": {
+          "title": "セキュアバイデザイン",
+          "description": "エージェント認証＆認可を備えたゼロトラスト原則"
+        },
+        "eventDriven": {
+          "title": "イベント駆動",
+          "description": "非同期通信によりリアルタイムの応答性を実現します"
+        }
+      }
+    },
+    "autonomyBanner": {
+      "title": "このアーキテクチャが真のエージェント自律性を実現する理由",
+      "agentFirstDesign": {
+        "title": "エージェントファースト設計",
+        "description": "従来のアーキテクチャから後付けされたものではなく、自律エージェントのために特別に構築されています。"
+      },
+      "cognitiveCapabilities": {
+        "title": "コグニティブ機能",
+        "description": "アーキテクチャレベルでの推論、計画、学習、メモリのネイティブサポート。"
+      },
+      "enterpriseReady": {
+        "title": "エンタープライズ対応",
+        "description": "セキュリティ、ガバナンス、コンプライアンスがすべてのレイヤーに組み込まれたプロダクショングレード。"
+      }
+    },
+    "layers": {
+      "layer": "レイヤー",
+      "whyCritical": "重要な理由：",
+      "coreComponents": "コアコンポーネント",
+      "keyFeatures": "主要機能：",
+      "technologies": "技術：",
+      "implementationExamples": "実装例：",
+      "layerSuccessMetrics": "レイヤー成功指標",
+      "agentOrchestration": {
+        "name": "エージェントオーケストレーションレイヤー",
+        "tagline": "マルチエージェント連携＆ガバナンス",
+        "description": "Agenticシステムの頭脳 - エンタープライズ全体で自律エージェントをオーケストレーション、連携、ガバナンスします",
+        "importance": "エージェントのライフサイクル管理、衝突防止、目標の整合性確保に不可欠",
+        "components": {
+          "registry": {
+            "title": "エージェントレジストリ＆ディスカバリ",
+            "description": "すべてのエージェント、その機能、API、現在のステータスの中央カタログ",
+            "features": ["エージェント機能のインデックス化", "動的エージェントディスカバリ", "バージョン管理", "エージェントヘルスモニタリング"],
+            "technologies": ["Service Mesh", "Agent Protocol Standards", "GraphQL Federation", "mDNS Discovery"],
+            "examples": ["エージェントイエローページ", "機能マッチングエンジン", "エージェントDNSサービス", "スキルマーケットプレイス"]
+          },
+          "orchestrator": {
+            "title": "マルチエージェントオーケストレーター",
+            "description": "タスク分解を伴う複数の専門エージェント間の複雑なワークフローを連携します",
+            "features": ["タスク計画＆分解", "エージェント割り当て最適化", "ワークフローコレオグラフィ", "デッドロック防止"],
+            "technologies": ["LangGraph", "AutoGen", "CrewAI", "Temporal Workflows"],
+            "examples": ["ミッションコントロールセンター", "エージェントコンダクター", "タスク配分エンジン", "ワークフローマネージャー"]
+          },
+          "communicationBus": {
+            "title": "エージェント通信バス",
+            "description": "エージェント間通信と協調のための高性能メッセージングインフラストラクチャ",
+            "features": ["非同期メッセージパッシング", "イベントストリーミング", "プロトコル変換", "メッセージ優先度付け"],
+            "technologies": ["Apache Kafka", "NATS", "RabbitMQ", "gRPC"],
+            "examples": ["エージェントメッセージブローカー", "イベントハブ", "通信ゲートウェイ", "プロトコルブリッジ"]
+          },
+          "policyEngine": {
+            "title": "目標＆ポリシーエンジン",
+            "description": "エージェントが境界内で運用され、組織の目標と整合することを保証します",
+            "features": ["目標の分解", "ポリシーの施行", "制約充足", "コンプライアンス検証"],
+            "technologies": ["Policy as Code", "OPA (Open Policy Agent)", "Constraint Solvers", "Rule Engines"],
+            "examples": ["目標整合システム", "ポリシーガバナー", "制約マネージャー", "コンプライアンスエンフォーサー"]
+          }
+        },
+        "metrics": [
+          "エージェント連携効率",
+          "タスク完了率",
+          "エージェント間通信レイテンシ",
+          "ポリシーコンプライアンススコア"
+        ]
+      },
+      "cognitiveProcessing": {
+        "name": "コグニティブ処理レイヤー",
+        "tagline": "インテリジェンス、推論＆学習コア",
+        "description": "エージェントのインテリジェンスを駆動するコグニティブエンジン - 推論、学習、意思決定を処理します",
+        "importance": "エージェントが自律的に思考、推論、学習し、インテリジェントな意思決定を行うことを可能にします",
+        "components": {
+          "llmGateway": {
+            "title": "LLMゲートウェイ＆ルーター",
+            "description": "フォールバックとロードバランシングを備えた、適切な言語モデルへのリクエストのインテリジェントルーティング",
+            "features": ["モデル選択ロジック", "ロードバランシング", "フォールバック戦略", "コスト最適化"],
+            "technologies": ["LiteLLM", "LangChain", "OpenRouter", "Model Gateway APIs"],
+            "examples": ["LLMトラフィックマネージャー", "モデルルーター", "インテリジェンスゲートウェイ", "AIリクエストブローカー"]
+          },
+          "reasoningEngine": {
+            "title": "推論＆計画エンジン",
+            "description": "Chain-of-thought、Tree-of-thought、計画アルゴリズムを含む高度な推論機能",
+            "features": ["Chain-of-thought推論", "マルチステップ計画", "仮説生成", "因果推論"],
+            "technologies": ["ReAct Framework", "Tree of Thoughts", "MCTS Planning", "Causal AI"],
+            "examples": ["推論エンジン", "計画システム", "思考プロセッサー", "戦略ジェネレーター"]
+          },
+          "memoryContext": {
+            "title": "メモリ＆コンテキスト管理",
+            "description": "コンテキストの維持、経験からの学習、知識の蓄積のための永続メモリシステム",
+            "features": ["長期メモリ", "ワーキングメモリ", "エピソード記憶", "コンテキスト切り替え"],
+            "technologies": ["Vector Databases", "Graph Databases", "Redis", "Memory Networks"],
+            "examples": ["エージェントメモリバンク", "コンテキストストア", "経験データベース", "ナレッジリポジトリ"]
+          },
+          "learningAdaptation": {
+            "title": "学習＆適応システム",
+            "description": "フィードバックと経験からエージェントが改善できるようにする継続的学習メカニズム",
+            "features": ["強化学習", "Few-shot学習", "転移学習", "オンライン学習"],
+            "technologies": ["RLHF", "Fine-tuning Pipelines", "Active Learning", "Meta-Learning"],
+            "examples": ["学習エンジン", "適応システム", "フィードバックプロセッサー", "改善モジュール"]
+          }
+        },
+        "metrics": [
+          "推論精度",
+          "計画成功率",
+          "メモリ検索精度",
+          "学習曲線の改善"
+        ]
+      },
+      "executionIntegration": {
+        "name": "実行＆統合レイヤー",
+        "tagline": "ツール、アクション＆システム統合",
+        "description": "Agenticシステムの手 - アクションを実行し、ツールと統合し、外部システムとインタラクションします",
+        "importance": "エージェントのインテリジェンスとエンタープライズシステム全体での実世界のアクションとの間のギャップを橋渡しします",
+        "components": {
+          "toolRegistry": {
+            "title": "ツールレジストリ＆実行",
+            "description": "エージェントが使用できるツール、API、関数のカタログと実行フレームワーク",
+            "features": ["ツールディスカバリ", "動的ツールローディング", "安全な実行サンドボックス", "ツールチェーニング"],
+            "technologies": ["Function Calling", "Tool Protocols", "API Gateways", "Sandbox Environments"],
+            "examples": ["ツールライブラリ", "アクションエグゼキューター", "ファンクションレジストリ", "APIカタログ"]
+          },
+          "integrationHub": {
+            "title": "エンタープライズ統合ハブ",
+            "description": "エンタープライズシステムおよびデータベースとのシームレスな統合のためのコネクターとアダプター",
+            "features": ["システムコネクター", "データアダプター", "プロトコル変換", "トランザクション管理"],
+            "technologies": ["Apache Camel", "MuleSoft", "Zapier APIs", "Enterprise Service Bus"],
+            "examples": ["統合ゲートウェイ", "システムブリッジ", "エンタープライズコネクター", "データアクセスレイヤー"]
+          },
+          "workflowEngine": {
+            "title": "ワークフロー実行エンジン",
+            "description": "エラーハンドリング、リトライ、状態管理を備えた複雑なマルチステップワークフローを実行します",
+            "features": ["ステートマシン", "Sagaパターン", "補償ロジック", "並列実行"],
+            "technologies": ["Temporal", "Apache Airflow", "Step Functions", "Camunda"],
+            "examples": ["ワークフローランナー", "プロセスエンジン", "タスクエグゼキューター", "ステートマネージャー"]
+          },
+          "monitoring": {
+            "title": "モニタリング＆オブザーバビリティ",
+            "description": "エージェントのアクション、パフォーマンスメトリクス、システムヘルスのリアルタイム監視",
+            "features": ["アクションロギング", "パフォーマンストラッキング", "異常検知", "監査証跡"],
+            "technologies": ["OpenTelemetry", "Prometheus", "Grafana", "ELK Stack"],
+            "examples": ["エージェントモニター", "オブザーバビリティプラットフォーム", "パフォーマンストラッカー", "監査システム"]
+          }
+        },
+        "metrics": [
+          "ツール実行成功率",
+          "統合信頼性",
+          "ワークフロー完了時間",
+          "システム可用性"
+        ]
+      },
+      "infrastructurePlatform": {
+        "name": "インフラストラクチャ＆プラットフォームレイヤー",
+        "tagline": "スケーラブルな基盤＆DevOps",
+        "description": "エージェントが信頼性高く動作し、効率的にスケールし、シームレスにデプロイされることを保証する基盤",
+        "importance": "エンタープライズグレードのエージェントデプロイメントに必要な堅牢でスケーラブルなインフラストラクチャを提供します",
+        "components": {
+          "runtime": {
+            "title": "エージェントランタイム環境",
+            "description": "エージェントインスタンスを大規模にデプロイ・管理するためのコンテナ化されたランタイム",
+            "features": ["コンテナオーケストレーション", "オートスケーリング", "リソース割り当て", "分離"],
+            "technologies": ["Kubernetes", "Docker", "Ray", "Serverless Platforms"],
+            "examples": ["エージェントコンテナ", "ランタイムプラットフォーム", "実行環境", "エージェントポッド"]
+          },
+          "dataStorage": {
+            "title": "データ＆ストレージプラットフォーム",
+            "description": "エージェントのデータ、モデル、永続状態のための分散ストレージ",
+            "features": ["分散ストレージ", "モデルバージョニング", "状態の永続化", "バックアップ＆リカバリ"],
+            "technologies": ["S3/Object Storage", "PostgreSQL", "MongoDB", "MinIO"],
+            "examples": ["データレイク", "モデルストア", "ステートデータベース", "ナレッジベース"]
+          },
+          "security": {
+            "title": "セキュリティ＆ガバナンス",
+            "description": "エージェントの認証、認可、コンプライアンスのための包括的なセキュリティフレームワーク",
+            "features": ["エージェント認証", "アクセス制御", "暗号化", "コンプライアンス監視"],
+            "technologies": ["OAuth/OIDC", "Vault", "RBAC", "Zero Trust Architecture"],
+            "examples": ["セキュリティゲートウェイ", "認証サービス", "コンプライアンスエンジン", "トラストフレームワーク"]
+          },
+          "mlops": {
+            "title": "MLOps＆AgentOpsパイプライン",
+            "description": "エージェントの開発、テスト、デプロイのためのCI/CDパイプライン",
+            "features": ["エージェントCI/CD", "A/Bテスト", "段階的ロールアウト", "ロールバック機能"],
+            "technologies": ["MLflow", "Kubeflow", "GitHub Actions", "ArgoCD"],
+            "examples": ["エージェントパイプライン", "デプロイメントシステム", "テストフレームワーク", "リリースマネージャー"]
+          }
+        },
+        "metrics": [
+          "インフラストラクチャ利用率",
+          "デプロイメント頻度",
+          "セキュリティコンプライアンス率",
+          "プラットフォーム信頼性（稼働時間）"
+        ]
+      }
+    },
+    "integrationPatterns": {
+      "title": "エージェント統合パターン",
+      "useForLabel": "用途：",
+      "syncRequestResponse": {
+        "title": "同期リクエスト-レスポンス",
+        "description": "タイムアウト処理を備えた即時レスポンスのための直接エージェント呼び出し。",
+        "useFor": "リアルタイムクエリ、UIインタラクション、重要な意思決定"
+      },
+      "asyncMessageQueue": {
+        "title": "非同期メッセージキュー",
+        "description": "分離されたスケーラブルなエージェントインタラクションのためのキューベースの通信。",
+        "useFor": "バッチ処理、長時間実行タスク、システム統合"
+      },
+      "eventDrivenStreaming": {
+        "title": "イベント駆動ストリーミング",
+        "description": "リアクティブなエージェント動作と複雑なワークフローのためのリアルタイムイベントストリーム。",
+        "useFor": "リアルタイムアナリティクス、モニタリング、マルチエージェント連携"
+      }
+    },
+    "deploymentModels": {
+      "title": "エージェントデプロイメントモデル",
+      "centralizedHub": {
+        "title": "集中型エージェントハブ",
+        "description": "すべてのエージェントが共有リソースとガバナンスを備えた中央クラスターで実行されます。開始時と制御の維持に最適です。"
+      },
+      "distributedNetwork": {
+        "title": "分散型エージェントネットワーク",
+        "description": "回復力とパフォーマンスのために複数のリージョン/クラウドにエージェントを展開します。グローバル運用に最適です。"
+      },
+      "edgeDeployment": {
+        "title": "エッジエージェントデプロイメント",
+        "description": "低レイテンシのローカル意思決定のためのエッジの軽量エージェント。IoTとリアルタイムシナリオに最適です。"
+      },
+      "hybridMultiCloud": {
+        "title": "ハイブリッドマルチクラウド",
+        "description": "最大限の柔軟性とコンプライアンスのために、エージェントがオンプレミス、プライベートクラウド、パブリッククラウドにまたがります。"
+      }
+    },
+    "considerations": {
+      "governanceControl": {
+        "title": "ガバナンス＆制御",
+        "description": "組み込みのガバナンスにより、意思決定と学習の自律性を維持しながら、エージェントが定義された境界内で運用されることを保証します。"
+      },
+      "securityTrust": {
+        "title": "セキュリティ＆トラスト",
+        "description": "エージェント認証、暗号化通信、コンプライアンスのための包括的な監査証跡を備えたゼロトラストアーキテクチャ。"
+      },
+      "observabilityControl": {
+        "title": "オブザーバビリティ＆制御",
+        "description": "リアルタイム監視と介入機能を備えた、エージェントの動作、パフォーマンス、意思決定の完全な可視性。"
+      }
+    }
+  },
+  "agenticGraph": {
+    "title": "Agentic Graphアーキテクチャ",
+    "subtitle": "グラフベースのエージェント連携",
+    "header": {
+      "badge": "テクニカルアーキテクチャ",
+      "title": "Agentic グラフ指向アーキテクチャ",
+      "description": "基本的なRAGからプロダクション品質のAIソリューションへの進化を、グラフベースのコンテキストエンジニアリングとAgentic機能を通じて実現します。"
+    },
+    "evolution": {
+      "title": "Agentic Graph RAGの進化",
+      "stages": {
+        "vectorSearch": {
+          "name": "Vector Search (RAG)",
+          "description": "ユーザークエリに関連するドキュメントとコンテンツを検索します",
+          "capabilities": ["ドキュメント検索", "類似性検索", "コンテンツチャンク"],
+          "limitations": ["ハルシネーションが発生", "コンテキストウィンドウの制限", "関係性を見逃す"],
+          "accuracy": "60%",
+          "reliability": "低"
+        },
+        "graphRag": {
+          "name": "Graph-RAG",
+          "description": "接続されたデータ内のエンティティとパターンを発見します",
+          "capabilities": ["エンティティの関係性", "パターン検出", "ベクトル＋グラフ検索"],
+          "limitations": ["一部ハルシネーションが残存", "複雑なセットアップが必要", "限定的な推論"],
+          "accuracy": "80%",
+          "reliability": "中"
+        },
+        "agenticGraphRag": {
+          "name": "Agentic Graph RAG",
+          "description": "Knowledge Graphに基づくLLMのファンクションコーリングでAgenticアプリを構築します",
+          "capabilities": ["ファンクション/ツールコーリング", "グラフアルゴリズム", "機械学習", "高度な推論"],
+          "limitations": ["専門知識が必要", "より高い計算コスト"],
+          "accuracy": "95%",
+          "reliability": "高"
+        }
+      },
+      "capabilitiesLabel": "機能",
+      "limitationsLabel": "制約",
+      "performanceLabel": "パフォーマンス",
+      "accuracyLabel": "精度",
+      "reliabilityLabel": "信頼性"
+    },
+    "implementation": {
+      "title": "Agentic Graph RAGの実装",
+      "architectureLayers": {
+        "title": "アーキテクチャレイヤー",
+        "knowledgeLayer": {
+          "title": "Knowledgeレイヤー",
+          "description": "エンティティ、関係性、メタデータを格納するNeo4jグラフデータベース"
+        },
+        "embeddingLayer": {
+          "title": "Embeddingレイヤー",
+          "description": "セマンティック類似性検索のためのWeaviateでのベクトル埋め込み"
+        },
+        "agentLayer": {
+          "title": "Agentレイヤー",
+          "description": "ツールコーリング機能とグラフ探索を備えたLangGraphエージェント"
+        },
+        "orchestrationLayer": {
+          "title": "Orchestrationレイヤー",
+          "description": "マルチエージェント連携、タスク計画、実行監視"
+        }
+      },
+      "technologyStack": {
+        "title": "テクノロジースタック",
+        "graphDatabase": {
+          "title": "グラフデータベース",
+          "description": "Neo4j（APOC＆GDS搭載）"
+        },
+        "vectorStore": {
+          "title": "ベクトルストア",
+          "description": "Weaviate Cloud Service"
+        },
+        "llmFramework": {
+          "title": "LLMフレームワーク",
+          "description": "LangChain＆LangGraph"
+        },
+        "aiModels": {
+          "title": "AIモデル",
+          "description": "GPT-4、Claude、Llama"
+        }
+      }
+    },
+    "benefits": {
+      "title": "プロダクション品質のメリット",
+      "accuracy": {
+        "title": "精度",
+        "description": "最小限のハルシネーションでグラウンデッドされたレスポンス"
+      },
+      "context": {
+        "title": "コンテキスト",
+        "description": "グラフを通じた完全なシステム理解"
+      },
+      "responseTime": {
+        "title": "応答時間",
+        "description": "キャッシュされたグラフ探索によるリアルタイムレスポンス"
+      }
+    }
+  },
+  "genAIBox": {
+    "title": "Gen AI in a Box",
+    "subtitle": "オンプレミスAIデプロイメントソリューション",
+    "header": {
+      "badge": "インフラストラクチャソリューション",
+      "title": "Generative AI in a Box",
+      "description": "完全なオンプレミス制御、エンタープライズグレードのセキュリティ、迅速なデプロイメントのための最適化済みモデルを備えた、コスト効率が高くハイスループットなGenerative AIデプロイメント。"
+    },
+    "challenges": {
+      "title": "GenAI導入における3大課題",
+      "description": "データセキュリティへの懸念、パフォーマンスの最適化、インフラストラクチャおよびLLM利用の高コストを含む、GenAI導入における重要な課題に対処します",
+      "security": {
+        "name": "データセキュリティ",
+        "description": "機密データの流出に関する懸念",
+        "solution": "完全なデータ制御を備えたオンプレミスデプロイメント"
+      },
+      "performance": {
+        "name": "パフォーマンス",
+        "description": "時間のかかる最適化プロセス",
+        "solution": "タスク固有のチューニング済み最適化モデル"
+      },
+      "cost": {
+        "name": "高い導入コスト",
+        "description": "インフラストラクチャとLLM利用のコスト",
+        "solution": "最適化されたハードウェアによるオープンソースモデル"
+      },
+      "solutionLabel": "ソリューション："
+    },
+    "architecture": {
+      "title": "Gen AI in a Boxアーキテクチャ",
+      "kapsFramework": "Accion Labs KAPS フレームワーク",
+      "businessAppUI": "ビジネスアプリケーションユーザーインターフェース",
+      "knowledgeAssistant": "ナレッジアシスタント",
+      "generativeBI": "ジェネレーティブBI",
+      "processAutomation": "プロセスオートメーション",
+      "onePaneAPIHub": "OnePane APIハブ",
+      "businessContextGraph": "ビジネスコンテキストグラフ",
+      "llmInfrastructureLayer": "LLMインフラストラクチャレイヤー（例：NVIDIA Nemo）",
+      "custom": "カスタム",
+      "generativeAIDesignBlueprint": "Generative AIデザインブループリント",
+      "operatingSystem": "オペレーティングシステム",
+      "dellLenovoServers": "Dell / Lenovoサーバー",
+      "nvidiaGPUs": "Nvidia GPU",
+      "apiSecurityLayer": "API＆",
+      "securityLabel": "セキュリティ",
+      "layerLabel": "レイヤー",
+      "hardwareInfrastructure": "ハードウェアインフラストラクチャ",
+      "containerOrchestration": "コンテナオーケストレーション",
+      "blueprintComponents": {
+        "modelArchitecture": "モデルアーキテクチャ",
+        "trainingPipeline": "トレーニングパイプライン",
+        "inferenceOptimization": "推論最適化",
+        "deploymentPatterns": "デプロイメントパターン"
+      }
+    },
+    "adoptionBarriers": {
+      "title": "導入障壁の克服",
+      "costEfficiency": {
+        "title": "コスト効率",
+        "benefits": [
+          "最適化されたハードウェア：カスタマイズされたハードウェアソリューションでAIパフォーマンスを最大化",
+          "オンプレミスホスティングオプション：データをローカルに保持してクラウドコストを削減",
+          "オープンソースモデル：ライセンス費用なしで高度なAI機能にアクセス"
+        ]
+      },
+      "accuracy": {
+        "title": "精度",
+        "benefits": [
+          "タスク固有モデル：特定の運用ニーズに合わせたTransformerまたはSSMモデルのカスタマイズ",
+          "モデルのファインチューニング：精度向上のためのモデルの入念なカスタマイズ",
+          "Graph RAGアーキテクチャ：検索拡張生成技術を使用した一貫性の向上"
+        ]
+      },
+      "security": {
+        "title": "セキュリティ",
+        "benefits": [
+          "オンプレミスデータ：ローカルストレージによるデータプライバシーと制御の維持",
+          "アクセス制御：堅牢な管理による機密情報の保護",
+          "ガードレール設定：事前定義されたAI動作ルールによる安全性とコンプライアンスの確保"
+        ]
+      },
+      "accelerators": {
+        "title": "アクセラレーター",
+        "benefits": [
+          "GenAI開発フレームワーク：堅牢なフレームワークでジェネレーティブAIソリューションを迅速に構築",
+          "デプロイ準備済みアプリケーション：事前構成されたアプリケーションの即時利用によるクイックデプロイ",
+          "業界固有ソリューション：特定の業界課題に対応するカスタマイズされたAIソリューション"
+        ]
+      }
+    },
+    "costComparison": {
+      "title": "コスト効率分析",
+      "dellVsCloud": "Dellオンプレミス vs パブリッククラウド",
+      "vsPublicCloudIaaS": "vs パブリッククラウドIaaS",
+      "vsTokenBasedAPI": "vs トークンベースAPI",
+      "moreCostEffective": "3年間でよりコスト効率的",
+      "expectedCost": "70Bパラメーター LLMの想定コスト",
+      "users5k": "5千ユーザー",
+      "users50k": "5万ユーザー",
+      "onPrem": "オンプレミス",
+      "cloud": "クラウド",
+      "savings38": "38%のコスト削減",
+      "savings75": "75%のコスト削減"
+    },
+    "slms": {
+      "title": "Small Language Models (SLM) in the Box",
+      "description": "効率性、高速推論、コスト効率、ドメイン固有のファインチューニングに特化した、パラメーター数を最適化したAIモデル。",
+      "whyUseSLMs": "SLMを使用する理由",
+      "optimizedPerformance": {
+        "title": "最適化されたパフォーマンス",
+        "description": "オンプレミスやエッジデバイスで優れた動作を実現"
+      },
+      "securityCompliance": {
+        "title": "セキュリティ＆コンプライアンス",
+        "description": "管理された環境でのデプロイが可能"
+      },
+      "customizationControl": {
+        "title": "カスタマイゼーション＆制御",
+        "description": "ビジネス固有のタスクへの高い適応性"
+      },
+      "scalability": {
+        "title": "スケーラビリティ",
+        "description": "大規模インフラストラクチャなしのエンタープライズに最適"
+      },
+      "availableModels": "利用可能なモデル"
+    },
+    "implementationJourney": {
+      "title": "導入ジャーニー",
+      "description": "あらゆる段階でのサポートにより、GenAIの成果を加速し、長期的な成功を確保します",
+      "simplify": "AccionとパートナーテクノロジーでAIジャーニーをシンプルに"
+    },
+    "businessBenefits": {
+      "title": "ビジネスメリット",
+      "acceleratedTimeToMarket": {
+        "title": "市場投入時間の短縮",
+        "items": [
+          "デプロイ準備済みビジネスアプリケーション",
+          "カスタムソリューションの迅速構築のための基本フレームワーク",
+          "分析・設計サイクルの短縮"
+        ]
+      },
+      "strategicAdoption": {
+        "title": "戦略的GenAI導入",
+        "items": [
+          "GenAI導入の戦略的ロードマップ",
+          "ユースケースポートフォリオの探索準備",
+          "継続的な機能強化"
+        ]
+      },
+      "dataSecurity": {
+        "title": "データセキュリティとコンプライアンス",
+        "items": [
+          "データ制御のためのオンプレミスデプロイメント",
+          "データ保護規制への準拠",
+          "ヘルスケアや金融などのセクターに不可欠"
+        ]
+      },
+      "customization": {
+        "title": "カスタマイゼーションと制御",
+        "items": [
+          "特定のニーズに合わせたLLMのカスタマイズ",
+          "既存システムとの統合",
+          "専門タスク向けモデルのファインチューニング"
+        ]
+      },
+      "lowLatency": {
+        "title": "低レイテンシとコスト管理",
+        "items": [
+          "リアルタイムアプリケーションのための低レイテンシ実現",
+          "高パフォーマンス＆高精度、小さなフットプリント",
+          "長期的なコスト削減"
+        ]
+      },
+      "finetunedLLM": {
+        "title": "サーバー上のファインチューニング済みLLM",
+        "items": [
+          "事前にファインチューニングされたドメイン固有モデル",
+          "手動アノテーションコストの削減",
+          "高パフォーマンスで汎用性の高いLLMの構築"
+        ]
+      },
+      "closingStatement": "Generative AI in a Boxコンセプトは、最も重要な導入課題を解決するだけでなく、エコシステムのあらゆる側面にわたるジェネレーティブAIの統合を革新することを目指しています。"
+    }
+  },
+  "guardrails": {
+    "title": "Strategic Guardrails",
+    "subtitle": "エンタープライズコンプライアンスと安全性制御",
+    "header": {
+      "badge": "エージェントガバナンス＆セキュリティ",
+      "title": "AIエージェントのためのStrategic Guardrails",
+      "description": "自律型エージェントシステムのための包括的なガバナンスフレームワーク。ポリシー駆動の制御とリアルタイム監視により、安全で信頼性が高く、コンプライアンスに準拠したマルチエージェント運用を保証します。"
+    },
+    "multiAgentProtection": {
+      "title": "マルチエージェントシステムの保護"
+    },
+    "guardrailComponents": {
+      "title": "ガードレールコンポーネント",
+      "agentControls": "エージェント制御",
+      "risksMitigated": "軽減されるリスク",
+      "implementationLabel": "実装",
+      "orchestration": {
+        "name": "エージェントオーケストレーションガードレール",
+        "description": "マルチエージェントシステムのインタラクションを制御・監視します",
+        "controls": [
+          "エージェントロール境界の施行",
+          "エージェント間通信プロトコル",
+          "タスク委任の検証",
+          "エージェント機能の確認",
+          "循環依存の防止"
+        ],
+        "risks": ["エージェント衝突", "タスク重複", "無限ループ", "リソース枯渇"],
+        "implementation": "LangGraphステートマシンによるポリシー駆動オーケストレーション"
+      },
+      "reasoning": {
+        "name": "推論＆意思決定レール",
+        "description": "エージェントの推論チェーンと意思決定プロセスを検証します",
+        "controls": [
+          "Chain-of-thought検証",
+          "推論ステップの確認",
+          "ロジック整合性チェック",
+          "意思決定ツリーの監査",
+          "ハルシネーション検出"
+        ],
+        "risks": ["無効な推論", "ロジックエラー", "誤った結論", "偏った意思決定"],
+        "implementation": "構造化された推論検証を備えたReActパターン"
+      },
+      "memory": {
+        "name": "エージェントメモリガバナンス",
+        "description": "エージェントのメモリシステムを保護・検証します",
+        "controls": [
+          "エージェント間のメモリ分離",
+          "コンテキストウィンドウ管理",
+          "メモリインジェクション防止",
+          "時間的整合性チェック",
+          "メモリ保持ポリシー"
+        ],
+        "risks": ["メモリ破損", "コンテキスト汚染", "データ漏洩", "メモリオーバーフロー"],
+        "implementation": "アクセス制御とバージョニングを備えたベクトルデータベース"
+      },
+      "tool": {
+        "name": "ツール使用認可",
+        "description": "外部ツールとAPIへのエージェントアクセスを制御します",
+        "controls": [
+          "ツール権限マトリクス",
+          "APIレート制限",
+          "資格情報管理",
+          "アクション認可",
+          "出力のサニタイズ"
+        ],
+        "risks": ["不正アクセス", "APIの悪用", "データ流出", "システム侵害"],
+        "implementation": "きめ細かな権限システムを備えたファンクションコーリング"
+      },
+      "collaboration": {
+        "name": "マルチエージェント協調ルール",
+        "description": "エージェント間のインタラクションとチームワークを統制します",
+        "controls": [
+          "通信プロトコルの施行",
+          "メッセージの検証＆フィルタリング",
+          "合意メカニズム",
+          "コンフリクト解決ルール",
+          "チーム編成ポリシー"
+        ],
+        "risks": ["エージェント共謀", "情報カスケード", "デッドロックシナリオ", "信頼違反"],
+        "implementation": "組み込みセーフガードを備えたCrewAI協調フレームワーク"
+      },
+      "compliance": {
+        "name": "規制＆倫理コンプライアンス",
+        "description": "エージェントの動作が規制要件を満たすことを保証します",
+        "controls": [
+          "エージェントのGDPRデータ取り扱い",
+          "説明可能なAI要件",
+          "監査証跡の生成",
+          "バイアスの検出＆軽減",
+          "業界固有の規制"
+        ],
+        "risks": ["法的違反", "倫理的違反", "監査の不合格", "レピュテーション損害"],
+        "implementation": "ポリシーエンジンによる自動コンプライアンスチェック"
+      }
+    },
+    "agentTypes": {
+      "title": "エージェントタイプと必要なガードレール",
+      "responsibilities": "責務：",
+      "requiredGuardrails": "必要なガードレール：",
+      "supervisor": {
+        "name": "Supervisorエージェント",
+        "responsibilities": ["タスク委任", "チーム連携", "リソース配分"]
+      },
+      "specialist": {
+        "name": "Specialistエージェント",
+        "responsibilities": ["ドメイン専門知識", "ツール活用", "データ処理"]
+      },
+      "validator": {
+        "name": "Validatorエージェント",
+        "responsibilities": ["出力検証", "品質保証", "コンプライアンスチェック"]
+      },
+      "monitor": {
+        "name": "Monitorエージェント",
+        "responsibilities": ["システム監視", "パフォーマンス追跡", "異常検知"]
+      }
+    },
+    "technologyStack": {
+      "title": "エージェントガードレール技術スタック",
+      "orchestrationFrameworks": {
+        "title": "オーケストレーションフレームワーク",
+        "description": "マルチエージェント連携＆ガバナンスプラットフォーム",
+        "items": [
+          "ステートマシン用LangGraph",
+          "チーム連携用CrewAI",
+          "エージェント管理用AutoGen",
+          "ワークフローオーケストレーション用Temporal"
+        ]
+      },
+      "validationMonitoring": {
+        "title": "検証＆モニタリング",
+        "description": "リアルタイムのエージェント動作検証とオブザーバビリティ",
+        "items": [
+          "検証用Guardrails AI",
+          "トレーシング用LangSmith",
+          "モニタリング用Weights & Biases",
+          "カスタムポリシーエンジン"
+        ]
+      },
+      "securityCompliance": {
+        "title": "セキュリティ＆コンプライアンス",
+        "description": "自律エージェントのためのエンタープライズグレードセキュリティ",
+        "items": [
+          "LLMセキュリティ用OWASP",
+          "ゼロトラストエージェントアーキテクチャ",
+          "準同型暗号",
+          "監査証跡の生成"
+        ]
+      }
+    },
+    "dashboard": {
+      "title": "エージェントシステムヘルスダッシュボード",
+      "activeAgents": "アクティブエージェント",
+      "policyCompliance": "ポリシーコンプライアンス",
+      "avgDecisionTime": "平均意思決定時間",
+      "observability": "オブザーバビリティ",
+      "collaborationPatterns": {
+        "title": "エージェント協調パターン",
+        "sequentialProcessing": "逐次処理",
+        "parallelExecution": "並列実行",
+        "hierarchicalDelegation": "階層的委任"
+      },
+      "guardrailTriggers": {
+        "title": "ガードレールトリガー",
+        "roleBoundaryViolations": "ロール境界違反",
+        "memoryLimitWarnings": "メモリ制限警告",
+        "toolAccessDenials": "ツールアクセス拒否"
+      },
+      "systemPerformance": {
+        "title": "システムパフォーマンス",
+        "agentSuccessRate": "エージェント成功率",
+        "avgTaskCompletion": "平均タスク完了時間",
+        "resourceUtilization": "リソース利用率"
+      }
+    }
+  }
+}

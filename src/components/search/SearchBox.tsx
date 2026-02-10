@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Fuse, { FuseResult, FuseResultMatch } from 'fuse.js';
 import { MagnifyingGlassIcon, XMarkIcon } from '@heroicons/react/24/outline';
-import searchIndex, { SearchItem } from '../../data/searchIndex';
+import { getLocalizedSearchIndex, SearchItem } from '../../data/searchIndex';
+import { useTranslation } from 'react-i18next';
 
 interface SearchBoxProps {
   onResultClick?: () => void;
@@ -16,9 +17,10 @@ const SearchBox: React.FC<SearchBoxProps> = ({ onResultClick }) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const resultsRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
+  const { t, i18n } = useTranslation('search');
 
-  // Initialize Fuse.js with search configuration
-  const fuse = useMemo(() => new Fuse(searchIndex, {
+  // Initialize Fuse.js with search configuration, rebuild when language changes
+  const fuse = useMemo(() => new Fuse(getLocalizedSearchIndex(), {
     keys: [
       { name: 'title', weight: 0.7 },
       { name: 'description', weight: 0.2 },
@@ -28,7 +30,7 @@ const SearchBox: React.FC<SearchBoxProps> = ({ onResultClick }) => {
     includeScore: true,
     includeMatches: true,
     minMatchCharLength: 2
-  }), []);
+  }), [i18n.language]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Perform search when query changes
   useEffect(() => {
@@ -146,7 +148,7 @@ const SearchBox: React.FC<SearchBoxProps> = ({ onResultClick }) => {
           onChange={(e) => setQuery(e.target.value)}
           onKeyDown={handleKeyDown}
           onFocus={() => query.length >= 2 && setIsOpen(true)}
-          placeholder="Search..."
+          placeholder={t('placeholder')}
           className="w-full pl-9 pr-8 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent bg-gray-50 hover:bg-white transition-colors"
         />
         {query && (
@@ -198,7 +200,7 @@ const SearchBox: React.FC<SearchBoxProps> = ({ onResultClick }) => {
       {/* No Results Message */}
       {isOpen && query.length >= 2 && results.length === 0 && (
         <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg p-4 z-50">
-          <p className="text-sm text-gray-500 text-center">No results found for "{query}"</p>
+          <p className="text-sm text-gray-500 text-center">{t('noResults', { query })}</p>
         </div>
       )}
     </div>

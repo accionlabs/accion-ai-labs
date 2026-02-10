@@ -10,166 +10,95 @@ import {
   CircleStackIcon,
   RocketLaunchIcon
 } from '@heroicons/react/24/outline';
+import { useTranslation } from 'react-i18next';
 
-interface Solution {
+interface SolutionDef {
   id: string;
-  category: string;
-  title: string;
-  description: string;
+  translationKey: string;
+  categoryKey: string;
   icon: React.ElementType;
   color: string;
-  capabilities: string[];
-  outcomes: string[];
+  capabilityKeys: string[];
+  outcomeKeys: string[];
   status: 'deep-dive' | 'showcase-only';
   link?: string;
-  caseStudy?: string;
 }
 
-const solutions: Solution[] = [
-  // Deep Dive Solutions (Featured)
+const solutionDefs: SolutionDef[] = [
   {
     id: 'product-engineering',
-    category: 'Featured Deep Dives',
-    title: 'Product Engineering',
-    description: 'Accelerate product engineering using semantic knowledge graphs, multi-stakeholder validation, and intelligent artifact generation.',
+    translationKey: 'productEngineering',
+    categoryKey: 'featuredDeepDives',
     icon: RocketLaunchIcon,
     color: 'indigo',
-    capabilities: [
-      'Semantic knowledge extraction from documents',
-      'Multi-stakeholder validation workflows',
-      'Automated artifact generation',
-      'Continuous sprint validation'
-    ],
-    outcomes: [
-      '60% faster time to market',
-      '85% reduction in ambiguity',
-      '40% fewer defects'
-    ],
+    capabilityKeys: ['semanticExtraction', 'multiStakeholder', 'automatedArtifact', 'continuousSprint'],
+    outcomeKeys: ['fasterTime', 'reducedAmbiguity', 'fewerDefects'],
     status: 'deep-dive',
     link: '/solutions/product-development',
-    caseStudy: 'Enterprise SaaS Platform'
   },
   {
     id: 'app-reengineering',
-    category: 'Featured Deep Dives',
-    title: 'Application Re-engineering',
-    description: 'Systematically modernize legacy applications using AI-powered analysis, multi-stakeholder validation, and continuous quality monitoring.',
+    translationKey: 'appReengineering',
+    categoryKey: 'featuredDeepDives',
     icon: WrenchScrewdriverIcon,
     color: 'orange',
-    capabilities: [
-      'Automated discovery & assessment',
-      'Multi-stakeholder validation',
-      'AI-powered implementation',
-      'Continuous sprint validation'
-    ],
-    outcomes: [
-      '70% faster modernization',
-      '60% cost reduction',
-      '40% fewer defects'
-    ],
+    capabilityKeys: ['automatedDiscovery', 'multiStakeholder', 'aiImplementation', 'continuousSprint'],
+    outcomeKeys: ['fasterModernization', 'costReduction', 'fewerDefects'],
     status: 'deep-dive',
     link: '/solutions/application-reengineering',
-    caseStudy: 'Phoenix CRM Modernization'
   },
   {
     id: 'portfolio-rat',
-    category: 'Featured Deep Dives',
-    title: 'Portfolio Rationalization',
-    description: 'Intelligent agents that analyze multiple applications to identify overlaps, redundancies, and consolidation opportunities.',
+    translationKey: 'portfolioRat',
+    categoryKey: 'featuredDeepDives',
     icon: CpuChipIcon,
     color: 'blue',
-    capabilities: [
-      'Cross-application analysis',
-      'Functional overlap detection',
-      'Component similarity scoring',
-      'Migration strategy planning'
-    ],
-    outcomes: [
-      '30% reduction in maintenance costs',
-      'Eliminated duplicate functionality',
-      'Unified technology stack'
-    ],
+    capabilityKeys: ['crossApp', 'overlapDetection', 'similarityScoring', 'migrationStrategy'],
+    outcomeKeys: ['maintenanceCost', 'eliminatedDuplicate', 'unifiedStack'],
     status: 'deep-dive',
     link: '/solutions/portfolio-rationalization',
-    caseStudy: 'Global E-commerce Platform'
   },
   {
     id: 'asimov-migration',
-    category: 'Featured Deep Dives',
-    title: 'ASIMOV Legacy Migration',
-    description: 'AI-powered application modernization platform using autonomous agents for code analysis, transformation, and cloud migration.',
+    translationKey: 'asimovMigration',
+    categoryKey: 'featuredDeepDives',
     icon: ArrowPathIcon,
     color: 'purple',
-    capabilities: [
-      'Automated code translation (COBOL to Java)',
-      'Dependency mapping and analysis',
-      'Incremental migration patterns',
-      'Zero-downtime deployment'
-    ],
-    outcomes: [
-      '70% reduction in migration time',
-      '60% cost savings',
-      '99.9% uptime during migration'
-    ],
+    capabilityKeys: ['codeTranslation', 'dependencyMapping', 'incrementalMigration', 'zeroDowntime'],
+    outcomeKeys: ['migrationTime', 'costSavings', 'uptime'],
     status: 'deep-dive',
     link: '/solutions/asimov',
-    caseStudy: 'Global Financial Institution'
   },
   {
     id: 'customer-service-ai',
-    category: 'Featured Deep Dives',
-    title: 'Customer Service AI',
-    description: 'Comprehensive autonomous support system with self-healing bots, agent augmentation, and business optimization.',
+    translationKey: 'customerServiceAi',
+    categoryKey: 'featuredDeepDives',
     icon: PhoneIcon,
     color: 'green',
-    capabilities: [
-      'Self Heal Bot for L0 automation',
-      'Assisted Heal Bot for L1 agents',
-      'Business Optimization Hub',
-      'Multi-channel support'
-    ],
-    outcomes: [
-      '60% auto-resolution rate',
-      '150% agent productivity',
-      '40% cost reduction'
-    ],
+    capabilityKeys: ['selfHealBot', 'assistedHealBot', 'optimizationHub', 'multiChannel'],
+    outcomeKeys: ['autoResolution', 'agentProductivity', 'costReduction'],
     status: 'deep-dive',
     link: '/solutions/customer-service',
-    caseStudy: 'Fortune 500 Telecom'
   },
-
-  // Data Engineering - Showcase Only
   {
     id: 'data-engineering',
-    category: 'Data & Analytics',
-    title: 'Data Engineering',
-    description: 'AI-powered data pipeline optimization, quality management, and automated ETL processes.',
+    translationKey: 'dataEngineering',
+    categoryKey: 'dataAnalytics',
     icon: CircleStackIcon,
     color: 'indigo',
-    capabilities: [
-      'Automated data quality checks',
-      'Intelligent ETL pipeline design',
-      'Real-time anomaly detection',
-      'Data lineage tracking'
-    ],
-    outcomes: [
-      '80% reduction in data errors',
-      '50% faster pipeline development',
-      'Real-time data insights'
-    ],
+    capabilityKeys: ['qualityChecks', 'pipelineDesign', 'anomalyDetection', 'lineageTracking'],
+    outcomeKeys: ['errorReduction', 'fasterPipeline', 'realTimeInsights'],
     status: 'showcase-only',
     link: '/solutions/data-engineering',
-    caseStudy: 'Enterprise Retail'
   }
 ];
 
-const categories = ['Featured Deep Dives', 'Data & Analytics'];
+const categoryKeys = ['featuredDeepDives', 'dataAnalytics'];
 
 const SolutionShowcase: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('Featured Deep Dives');
-  const filteredSolutions = selectedCategory === 'All' 
-    ? solutions 
-    : solutions.filter(s => s.category === selectedCategory);
+  const { t } = useTranslation('solutions');
+  const [selectedCategoryKey, setSelectedCategoryKey] = useState<string>('featuredDeepDives');
+  const filteredSolutions = solutionDefs.filter(s => s.categoryKey === selectedCategoryKey);
 
   const getColorClasses = (color: string) => {
     const colorMap: { [key: string]: string } = {
@@ -188,29 +117,28 @@ const SolutionShowcase: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Solution Showcase</h1>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">{t('showcase.header.title')}</h1>
           <p className="text-lg text-gray-600 max-w-3xl">
-            Explore how our AI agents solve real enterprise challenges. Each solution represents actual 
-            implementations or proven capabilities ready for deployment.
+            {t('showcase.header.description')}
           </p>
         </div>
 
         {/* Category Filter */}
         <div className="mb-8">
           <div className="flex flex-wrap gap-2">
-            {categories.map((category) => (
+            {categoryKeys.map((catKey) => (
               <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
+                key={catKey}
+                onClick={() => setSelectedCategoryKey(catKey)}
                 className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                  selectedCategory === category
+                  selectedCategoryKey === catKey
                     ? 'bg-secondary text-white'
                     : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-300'
                 }`}
               >
-                {category}
+                {t(`showcase.categories.${catKey}`)}
                 <span className="ml-2 text-sm opacity-80">
-                  ({solutions.filter(s => s.category === category).length})
+                  ({solutionDefs.filter(s => s.categoryKey === catKey).length})
                 </span>
               </button>
             ))}
@@ -222,7 +150,8 @@ const SolutionShowcase: React.FC = () => {
           {filteredSolutions.map((solution) => {
             const Icon = solution.icon;
             const isDeepDive = solution.status === 'deep-dive';
-            
+            const sk = `showcase.solutions.${solution.translationKey}`;
+
             return (
               <div
                 key={solution.id}
@@ -232,7 +161,7 @@ const SolutionShowcase: React.FC = () => {
               >
                 {/* Card Header */}
                 <div className={`h-2 bg-gradient-to-r ${getColorClasses(solution.color)}`} />
-                
+
                 {/* Card Body */}
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
@@ -241,22 +170,22 @@ const SolutionShowcase: React.FC = () => {
                     </div>
                     {solution.status === 'deep-dive' && (
                       <span className="px-2 py-1 bg-brand-purple-100 text-brand-purple-600 text-xs font-semibold rounded-full">
-                        Deep Dive
+                        {t('showcase.labels.deepDive')}
                       </span>
                     )}
                   </div>
 
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{solution.title}</h3>
-                  <p className="text-sm text-gray-600 mb-4">{solution.description}</p>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{t(`${sk}.title`)}</h3>
+                  <p className="text-sm text-gray-600 mb-4">{t(`${sk}.description`)}</p>
 
                   {/* Capabilities */}
                   <div className="mb-4">
-                    <h4 className="text-xs font-semibold text-gray-700 uppercase tracking-wide mb-2">Key Capabilities</h4>
+                    <h4 className="text-xs font-semibold text-gray-700 uppercase tracking-wide mb-2">{t('showcase.labels.keyCapabilities')}</h4>
                     <ul className="space-y-1">
-                      {solution.capabilities.slice(0, 3).map((capability, index) => (
+                      {solution.capabilityKeys.slice(0, 3).map((capKey, index) => (
                         <li key={index} className="flex items-start text-xs text-gray-600">
                           <CheckIcon className="h-3 w-3 text-success mr-2 mt-0.5 flex-shrink-0" />
-                          {capability}
+                          {t(`${sk}.capabilities.${capKey}`)}
                         </li>
                       ))}
                     </ul>
@@ -264,22 +193,20 @@ const SolutionShowcase: React.FC = () => {
 
                   {/* Outcomes */}
                   <div className="mb-4">
-                    <h4 className="text-xs font-semibold text-gray-700 uppercase tracking-wide mb-2">Business Outcomes</h4>
+                    <h4 className="text-xs font-semibold text-gray-700 uppercase tracking-wide mb-2">{t('showcase.labels.businessOutcomes')}</h4>
                     <div className="flex flex-wrap gap-2">
-                      {solution.outcomes.slice(0, 2).map((outcome, index) => (
+                      {solution.outcomeKeys.slice(0, 2).map((outKey, index) => (
                         <span key={index} className="text-xs bg-secondary/10 text-secondary px-2 py-1 rounded">
-                          {outcome}
+                          {t(`${sk}.outcomes.${outKey}`)}
                         </span>
                       ))}
                     </div>
                   </div>
 
                   {/* Case Study */}
-                  {solution.caseStudy && (
-                    <div className="text-xs text-gray-500 mb-4">
-                      <span className="font-semibold">Case Study:</span> {solution.caseStudy}
-                    </div>
-                  )}
+                  <div className="text-xs text-gray-500 mb-4">
+                    <span className="font-semibold">{t('showcase.labels.caseStudy')}</span> {t(`${sk}.caseStudy`)}
+                  </div>
 
                   {/* Action Button */}
                   {solution.link && (
@@ -289,7 +216,7 @@ const SolutionShowcase: React.FC = () => {
                         isDeepDive ? 'text-secondary hover:text-brand-blue-700' : 'text-gray-600 hover:text-gray-700'
                       }`}
                     >
-                      {solution.status === 'deep-dive' ? 'Explore Deep Dive' : 'Learn More'}
+                      {solution.status === 'deep-dive' ? t('showcase.labels.exploreDeepDive') : t('showcase.labels.learnMore')}
                       <ArrowRightIcon className="ml-1 h-4 w-4" />
                     </Link>
                   )}
@@ -301,16 +228,15 @@ const SolutionShowcase: React.FC = () => {
 
         {/* Call to Action */}
         <div className="mt-12 bg-innovation-gradient rounded-xl p-8 text-center text-white">
-          <h2 className="text-2xl font-bold mb-4">Ready to Transform Your Enterprise?</h2>
+          <h2 className="text-2xl font-bold mb-4">{t('showcase.cta.title')}</h2>
           <p className="text-lg mb-6 max-w-2xl mx-auto">
-            These solutions represent just a fraction of what's possible. Let's discuss how AI agents 
-            can solve your specific challenges.
+            {t('showcase.cta.description')}
           </p>
           <Link
             to="/contact"
             className="inline-flex items-center px-6 py-3 bg-white text-secondary font-semibold rounded-lg hover:bg-gray-100 transition-colors"
           >
-            Schedule a Consultation
+            {t('showcase.cta.button')}
             <ArrowRightIcon className="ml-2 h-5 w-5" />
           </Link>
         </div>

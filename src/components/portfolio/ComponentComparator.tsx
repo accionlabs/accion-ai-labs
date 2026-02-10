@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useOntology } from '../../contexts/OntologyContext';
 import { OntologyNode } from '../../types/ontology';
 import { OverlapAnalysisEngine, FunctionalOverlapAnalysis, CodeImpactByLevel } from '../../utils/overlapAnalysisAlgorithm';
+import { useTranslation } from 'react-i18next';
 
 interface ComponentGroup {
   level: string;
@@ -18,6 +19,7 @@ interface ComponentGroup {
 }
 
 const ComponentComparator: React.FC = () => {
+  const { t } = useTranslation('portfolio');
   const { state } = useOntology();
   const [functionalGroups, setFunctionalGroups] = useState<ComponentGroup[]>([]);
   const [codeGroups, setCodeGroups] = useState<ComponentGroup[]>([]);
@@ -38,7 +40,7 @@ const ComponentComparator: React.FC = () => {
 
       // Find edges going forward from current node
       const outgoingEdges = state.edges.filter(edge => edge.source === currentId);
-      
+
       outgoingEdges.forEach(edge => {
         const targetNode = state.nodes.find(n => n.id === edge.target);
         if (targetNode && !visited.has(targetNode.id)) {
@@ -57,32 +59,32 @@ const ComponentComparator: React.FC = () => {
 
   const generateAllComparisons = React.useCallback(() => {
     const analysisEngine = new OverlapAnalysisEngine(state.nodes, state.edges);
-    
+
     // 1. Start with functional analysis
     const analysis = analysisEngine.analyzeFunctionalOverlap('functional');
     setOverlapAnalysis(analysis);
-    
-    
+
+
     // Generate functional level comparisons
     const functionalGroups = generateLevelComparisons('functional', analysis);
     setFunctionalGroups(functionalGroups);
-    
+
     // 2. Generate code impact analysis from overlapping functional nodes
     const codeImpact = analysisEngine.findConnectedCodeNodes(analysis.reverseTraversalBasis);
-    
+
     // Create code level comparisons
     const codeGroups = generateCodeComparisons(codeImpact);
     setCodeGroups(codeGroups);
-    
+
     // 3. Reverse traverse from code to architecture and design
     const allCodeNodes = codeImpact.flatMap(level => [...level.phoenix, ...level.apollo, ...level.voyager]);
     const architectureNodes = analysisEngine.reverseTraverseFromCode(allCodeNodes, 'architecture');
     const designNodes = analysisEngine.reverseTraverseFromCode(allCodeNodes, 'design');
-    
+
     // Generate architecture and design comparisons
     const architectureGroups = generateReverseComparisons(architectureNodes, 'architecture');
     const designGroups = generateReverseComparisons(designNodes, 'design');
-    
+
     setArchitectureGroups(architectureGroups);
     setDesignGroups(designGroups);
   }, [state.nodes, state.edges]);
@@ -94,21 +96,21 @@ const ComponentComparator: React.FC = () => {
   const generateLevelComparisons = (ontologyType: string, analysis: FunctionalOverlapAnalysis): ComponentGroup[] => {
     const overlappingGroups: ComponentGroup[] = [];
     const functionalLevels = ['persona', 'outcomes', 'scenarios', 'steps', 'actions'];
-    
+
     // FOLLOW THE ALGORITHM: Start from overlapping nodes and traverse systematically
     const { overlappingNodes, deepestOverlapLevel, divergencePoint } = analysis.functionalBoundary;
-    
+
     // Show systematic traversal through overlapping nodes only, level by level
     for (const level of functionalLevels) {
       // Get overlapping nodes at this level from the analysis
       const phoenixOverlapping = overlappingNodes.phoenix.filter(n => n.level === level);
       const apolloOverlapping = overlappingNodes.apollo.filter(n => n.level === level);
       const voyagerOverlapping = overlappingNodes.voyager.filter(n => n.level === level);
-      
+
       // Only show this level if we have overlapping nodes OR if we've reached the divergence point
       const hasOverlapAtLevel = phoenixOverlapping.length > 0 && apolloOverlapping.length > 0 && voyagerOverlapping.length > 0;
       const isAtOrPastDeepestLevel = functionalLevels.indexOf(level) <= functionalLevels.indexOf(deepestOverlapLevel || 'persona');
-      
+
       if (hasOverlapAtLevel || (isAtOrPastDeepestLevel && level === divergencePoint)) {
         // For overlapping levels, show the overlapping nodes
         if (hasOverlapAtLevel) {
@@ -140,10 +142,10 @@ const ComponentComparator: React.FC = () => {
             calculateSimilarity(phoenix.name, voyager.name) +
             calculateSimilarity(apollo.name, voyager.name)
           ) / 3;
-          
+
           (group as any).similarity = similarity;
           (group as any).isOverlap = true;
-          
+
           overlappingGroups.push(group);
         }
         // For divergence point, show where the overlap stops
@@ -170,13 +172,13 @@ const ComponentComparator: React.FC = () => {
           // Mark as divergence point
           (group as any).isDivergence = true;
           overlappingGroups.push(group);
-          
+
           // Stop here - don't continue past divergence point
           break;
         }
       }
     }
-    
+
     return overlappingGroups;
   };
 
@@ -198,12 +200,12 @@ const ComponentComparator: React.FC = () => {
 
   const generateReverseComparisons = (nodes: OntologyNode[], ontologyType: string): ComponentGroup[] => {
     const groupsByLevel = new Map<string, {phoenix: OntologyNode[], apollo: OntologyNode[], voyager: OntologyNode[]}>();
-    
+
     nodes.forEach(node => {
       if (!groupsByLevel.has(node.level)) {
         groupsByLevel.set(node.level, {phoenix: [], apollo: [], voyager: []});
       }
-      
+
       const levelGroup = groupsByLevel.get(node.level)!;
       if (node.product === 'phoenix') levelGroup.phoenix.push(node);
       else if (node.product === 'apollo') levelGroup.apollo.push(node);
@@ -236,7 +238,7 @@ const ComponentComparator: React.FC = () => {
     return sortedEntries.map(([level, levelNodes]) => ({
       level,
       phoenix: levelNodes.phoenix.length > 0 ? levelNodes.phoenix[0] : undefined,
-      apollo: levelNodes.apollo.length > 0 ? levelNodes.apollo[0] : undefined, 
+      apollo: levelNodes.apollo.length > 0 ? levelNodes.apollo[0] : undefined,
       voyager: levelNodes.voyager.length > 0 ? levelNodes.voyager[0] : undefined,
       inconsistencies: [],
       allNodes: levelNodes,
@@ -253,10 +255,10 @@ const ComponentComparator: React.FC = () => {
 
   const levenshteinDistance = (str1: string, str2: string): number => {
     const matrix = Array(str2.length + 1).fill(null).map(() => Array(str1.length + 1).fill(null));
-    
+
     for (let i = 0; i <= str1.length; i++) matrix[0][i] = i;
     for (let j = 0; j <= str2.length; j++) matrix[j][0] = j;
-    
+
     for (let j = 1; j <= str2.length; j++) {
       for (let i = 1; i <= str1.length; i++) {
         const indicator = str1[i - 1] === str2[j - 1] ? 0 : 1;
@@ -267,7 +269,7 @@ const ComponentComparator: React.FC = () => {
         );
       }
     }
-    
+
     return matrix[str2.length][str1.length];
   };
 
@@ -282,7 +284,7 @@ const ComponentComparator: React.FC = () => {
   };
 
   const formatPropertyValue = (value: any): string => {
-    if (typeof value === 'boolean') return value ? 'Yes' : 'No';
+    if (typeof value === 'boolean') return value ? t('comparator.formatBoolean.yes') : t('comparator.formatBoolean.no');
     if (typeof value === 'object') return JSON.stringify(value, null, 2);
     return String(value);
   };
@@ -290,12 +292,12 @@ const ComponentComparator: React.FC = () => {
 
   const ComponentCard: React.FC<{ node?: OntologyNode; product: string }> = ({ node, product }) => {
     const colors = getProductColor(product);
-    
+
     if (!node) {
       return (
         <div className={`${colors.bg} ${colors.border} border-2 border-dashed rounded-lg p-6 text-center`}>
-          <div className="text-gray-400 text-4xl mb-2">∅</div>
-          <p className="text-gray-500 text-sm">No {product} implementation</p>
+          <div className="text-gray-400 text-4xl mb-2">{'\u2205'}</div>
+          <p className="text-gray-500 text-sm">{t('comparator.componentCard.noImplementation', { product })}</p>
         </div>
       );
     }
@@ -306,12 +308,12 @@ const ComponentComparator: React.FC = () => {
           <div className={`w-3 h-3 ${colors.accent} rounded-full mr-2`}></div>
           <h3 className={`font-semibold ${colors.text} text-lg`}>{node.name}</h3>
         </div>
-        
+
         <p className="text-gray-700 text-sm mb-4">{node.description}</p>
-        
+
         {Object.keys(node.properties).length > 0 && (
           <div className="space-y-3">
-            <h4 className="font-medium text-gray-800 text-sm">Properties:</h4>
+            <h4 className="font-medium text-gray-800 text-sm">{t('comparator.componentCard.properties')}</h4>
             <div className="space-y-2">
               {Object.entries(node.properties).slice(0, 4).map(([key, value]) => (
                 <div key={key} className="flex justify-between items-start">
@@ -325,7 +327,7 @@ const ComponentComparator: React.FC = () => {
               ))}
               {Object.keys(node.properties).length > 4 && (
                 <div className="text-xs text-gray-500 italic">
-                  ... and {Object.keys(node.properties).length - 4} more properties
+                  {t('comparator.componentCard.moreProperties', { count: Object.keys(node.properties).length - 4 })}
                 </div>
               )}
             </div>
@@ -336,11 +338,11 @@ const ComponentComparator: React.FC = () => {
           <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg">
             <div className="flex items-center mb-2">
               <div className="w-2 h-2 bg-red-500 rounded-full mr-2"></div>
-              <span className="text-xs font-medium text-red-800">Issues Found</span>
+              <span className="text-xs font-medium text-red-800">{t('comparator.componentCard.issuesFound')}</span>
             </div>
             <ul className="text-xs text-red-700 space-y-1">
               {node.inconsistencies.slice(0, 2).map((issue, idx) => (
-                <li key={idx}>• {issue}</li>
+                <li key={idx}>{'\u2022'} {issue}</li>
               ))}
             </ul>
           </div>
@@ -354,35 +356,35 @@ const ComponentComparator: React.FC = () => {
   const FunctionalLevelCard: React.FC<{ group: ComponentGroup; index: number }> = ({ group, index }) => {
     const isOverlap = (group as any).isOverlap;
     const isDivergence = (group as any).isDivergence;
-    
+
     let borderColor, bgColor, borderBgColor, statusText, statusColor;
-    
+
     if (isOverlap) {
       borderColor = 'border-green-200';
       bgColor = 'bg-green-50';
       borderBgColor = 'border-green-200';
-      statusText = '✓ Overlapping Nodes';
+      statusText = '\u2713 ' + t('comparator.functionalLevel.overlappingNodes');
       statusColor = 'bg-green-100 text-green-700';
     } else if (isDivergence) {
       borderColor = 'border-red-200';
       bgColor = 'bg-red-50';
       borderBgColor = 'border-red-200';
-      statusText = '⚠ Divergence Point';
+      statusText = '\u26A0 ' + t('comparator.functionalLevel.divergencePoint');
       statusColor = 'bg-red-100 text-red-700';
     } else {
       borderColor = 'border-blue-200';
       bgColor = 'bg-secondary/10';
       borderBgColor = 'border-blue-200';
-      statusText = 'Analysis Level';
+      statusText = t('comparator.functionalLevel.analysisLevel');
       statusColor = 'bg-blue-100 text-secondary';
     }
-    
+
     return (
       <div className={`mb-6 border ${borderColor} rounded-lg overflow-hidden`}>
         <div className={`${bgColor} px-4 py-3 border-b ${borderBgColor}`}>
           <div className="flex items-center justify-between">
             <h4 className="font-semibold text-secondary capitalize">
-              {group.level.replace('_', ' ')} Level {isOverlap ? '(Following Overlap Path)' : isDivergence ? '(Algorithm Stops Here)' : ''}
+              {group.level.replace('_', ' ')} Level {isOverlap ? t('comparator.functionalLevel.followingOverlapPath') : isDivergence ? t('comparator.functionalLevel.algorithmStopsHere') : ''}
             </h4>
             <div className="flex items-center space-x-4">
               <span className={`text-xs px-2 py-1 rounded font-medium ${statusColor}`}>
@@ -390,7 +392,7 @@ const ComponentComparator: React.FC = () => {
               </span>
               {(group as any).allNodes && (
                 <span className="text-xs text-secondary">
-                  {isOverlap ? 'Overlapping:' : 'Available:'} P:{(group as any).allNodes.phoenix.length} A:{(group as any).allNodes.apollo.length} V:{(group as any).allNodes.voyager.length}
+                  {isOverlap ? t('comparator.functionalLevel.overlapping') : t('comparator.functionalLevel.available')} P:{(group as any).allNodes.phoenix.length} A:{(group as any).allNodes.apollo.length} V:{(group as any).allNodes.voyager.length}
                 </span>
               )}
             </div>
@@ -402,72 +404,72 @@ const ComponentComparator: React.FC = () => {
             <ComponentCard node={group.apollo} product="apollo" />
             <ComponentCard node={group.voyager} product="voyager" />
           </div>
-          
+
           {/* Show nodes at this level */}
           {(group as any).allNodes && (
             <div className="mt-4 border-t pt-4">
               <h5 className="text-sm font-semibold text-gray-900 mb-3">
-                {isOverlap ? 'Overlapping Nodes (Used by Algorithm)' : isDivergence ? 'Divergent Nodes (Why Algorithm Stopped)' : 'Nodes at This Level'}
+                {isOverlap ? t('comparator.functionalLevel.overlappingNodesTitle') : isDivergence ? t('comparator.functionalLevel.divergentNodesTitle') : t('comparator.functionalLevel.nodesAtLevel')}
               </h5>
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
                 <div>
                   <h6 className="text-xs font-medium text-red-700 mb-2">
-                    Phoenix {isOverlap ? 'Overlapping' : 'Nodes'} ({(group as any).allNodes.phoenix.length})
+                    Phoenix {isOverlap ? t('comparator.functionalLevel.overlappingNodes') : 'Nodes'} ({(group as any).allNodes.phoenix.length})
                   </h6>
                   <div className="space-y-1">
                     {(group as any).allNodes.phoenix.slice(0, 4).map((node: OntologyNode, i: number) => (
                       <div key={i} className={`text-xs text-gray-600 px-2 py-1 rounded truncate border ${isOverlap ? 'bg-green-50 border-green-200' : isDivergence ? 'bg-red-50 border-red-200' : 'bg-red-50 border-red-200'}`}>
                         <div className="font-medium">{node.name}</div>
-                        {isOverlap && <div className="text-xs text-green-600">✓ In overlap path</div>}
+                        {isOverlap && <div className="text-xs text-green-600">{'\u2713'} {t('comparator.functionalLevel.inOverlapPath')}</div>}
                       </div>
                     ))}
                     {(group as any).allNodes.phoenix.length > 4 && (
-                      <div className="text-xs text-gray-500">...and {(group as any).allNodes.phoenix.length - 4} more</div>
+                      <div className="text-xs text-gray-500">{t('comparator.functionalLevel.andMore', { count: (group as any).allNodes.phoenix.length - 4 })}</div>
                     )}
                   </div>
                 </div>
                 <div>
                   <h6 className="text-xs font-medium text-secondary mb-2">
-                    Apollo {isOverlap ? 'Overlapping' : 'Nodes'} ({(group as any).allNodes.apollo.length})
+                    Apollo {isOverlap ? t('comparator.functionalLevel.overlappingNodes') : 'Nodes'} ({(group as any).allNodes.apollo.length})
                   </h6>
                   <div className="space-y-1">
                     {(group as any).allNodes.apollo.slice(0, 4).map((node: OntologyNode, i: number) => (
                       <div key={i} className={`text-xs text-gray-600 px-2 py-1 rounded truncate border ${isOverlap ? 'bg-green-50 border-green-200' : isDivergence ? 'bg-red-50 border-red-200' : 'bg-secondary/10 border-blue-200'}`}>
                         <div className="font-medium">{node.name}</div>
-                        {isOverlap && <div className="text-xs text-green-600">✓ In overlap path</div>}
+                        {isOverlap && <div className="text-xs text-green-600">{'\u2713'} {t('comparator.functionalLevel.inOverlapPath')}</div>}
                       </div>
                     ))}
                     {(group as any).allNodes.apollo.length > 4 && (
-                      <div className="text-xs text-gray-500">...and {(group as any).allNodes.apollo.length - 4} more</div>
+                      <div className="text-xs text-gray-500">{t('comparator.functionalLevel.andMore', { count: (group as any).allNodes.apollo.length - 4 })}</div>
                     )}
                   </div>
                 </div>
                 <div>
                   <h6 className="text-xs font-medium text-purple-700 mb-2">
-                    Voyager {isOverlap ? 'Overlapping' : 'Nodes'} ({(group as any).allNodes.voyager.length})
+                    Voyager {isOverlap ? t('comparator.functionalLevel.overlappingNodes') : 'Nodes'} ({(group as any).allNodes.voyager.length})
                   </h6>
                   <div className="space-y-1">
                     {(group as any).allNodes.voyager.slice(0, 4).map((node: OntologyNode, i: number) => (
                       <div key={i} className={`text-xs text-gray-600 px-2 py-1 rounded truncate border ${isOverlap ? 'bg-green-50 border-green-200' : isDivergence ? 'bg-red-50 border-red-200' : 'bg-purple-50 border-purple-200'}`}>
                         <div className="font-medium">{node.name}</div>
-                        {isOverlap && <div className="text-xs text-green-600">✓ In overlap path</div>}
+                        {isOverlap && <div className="text-xs text-green-600">{'\u2713'} {t('comparator.functionalLevel.inOverlapPath')}</div>}
                       </div>
                     ))}
                     {(group as any).allNodes.voyager.length > 4 && (
-                      <div className="text-xs text-gray-500">...and {(group as any).allNodes.voyager.length - 4} more</div>
+                      <div className="text-xs text-gray-500">{t('comparator.functionalLevel.andMore', { count: (group as any).allNodes.voyager.length - 4 })}</div>
                     )}
                   </div>
                 </div>
               </div>
             </div>
           )}
-          
+
           {group.inconsistencies.length > 0 && (
             <div className="mt-4 p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
-              <h5 className="text-sm font-medium text-yellow-800 mb-2">Divergence Analysis:</h5>
+              <h5 className="text-sm font-medium text-yellow-800 mb-2">{t('comparator.functionalLevel.divergenceAnalysis')}</h5>
               <ul className="text-sm text-yellow-700 space-y-1">
                 {group.inconsistencies.map((issue, idx) => (
-                  <li key={idx}>• {issue}</li>
+                  <li key={idx}>{'\u2022'} {issue}</li>
                 ))}
               </ul>
             </div>
@@ -482,11 +484,11 @@ const ComponentComparator: React.FC = () => {
       <div className="bg-orange-50 px-4 py-3 border-b border-orange-200">
         <div className="flex items-center justify-between">
           <h4 className="font-semibold text-orange-900 capitalize">
-            {group.level.replace('_', ' ')} Level Code
+            {group.level.replace('_', ' ')} {t('comparator.codeLevel.levelCode')}
           </h4>
           <div className="flex items-center space-x-2 text-sm">
             <span className="text-orange-600 font-medium">
-              Total: {(group as any).totalNodes || 0} nodes
+              {t('comparator.codeLevel.total')} {(group as any).totalNodes || 0} {t('comparator.codeLevel.nodes')}
             </span>
             {(group as any).allNodes && (
               <span className="text-orange-600">
@@ -500,10 +502,10 @@ const ComponentComparator: React.FC = () => {
         {/* Show all connected code nodes directly without arbitrary highlights */}
         {(group as any).allNodes && (
           <div>
-            <h5 className="text-sm font-semibold text-gray-900 mb-3">All Impacted Code Nodes at {group.level.replace('_', ' ')} Level</h5>
+            <h5 className="text-sm font-semibold text-gray-900 mb-3">{t('comparator.codeLevel.allImpactedCode')} {group.level.replace('_', ' ')} {t('comparator.codeLevel.level')}</h5>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
               <div>
-                <h6 className="text-xs font-medium text-red-700 mb-2">Phoenix ({(group as any).allNodes.phoenix.length} nodes)</h6>
+                <h6 className="text-xs font-medium text-red-700 mb-2">Phoenix ({(group as any).allNodes.phoenix.length} {t('comparator.codeLevel.nodes')})</h6>
                 <div className="space-y-1 max-h-48 overflow-y-auto">
                   {(group as any).allNodes.phoenix.length > 0 ? (
                     (group as any).allNodes.phoenix.map((node: OntologyNode, i: number) => (
@@ -513,12 +515,12 @@ const ComponentComparator: React.FC = () => {
                       </div>
                     ))
                   ) : (
-                    <div className="text-xs text-gray-400 italic">No code nodes at this level</div>
+                    <div className="text-xs text-gray-400 italic">{t('comparator.codeLevel.noCodeNodes')}</div>
                   )}
                 </div>
               </div>
               <div>
-                <h6 className="text-xs font-medium text-secondary mb-2">Apollo ({(group as any).allNodes.apollo.length} nodes)</h6>
+                <h6 className="text-xs font-medium text-secondary mb-2">Apollo ({(group as any).allNodes.apollo.length} {t('comparator.codeLevel.nodes')})</h6>
                 <div className="space-y-1 max-h-48 overflow-y-auto">
                   {(group as any).allNodes.apollo.length > 0 ? (
                     (group as any).allNodes.apollo.map((node: OntologyNode, i: number) => (
@@ -528,12 +530,12 @@ const ComponentComparator: React.FC = () => {
                       </div>
                     ))
                   ) : (
-                    <div className="text-xs text-gray-400 italic">No code nodes at this level</div>
+                    <div className="text-xs text-gray-400 italic">{t('comparator.codeLevel.noCodeNodes')}</div>
                   )}
                 </div>
               </div>
               <div>
-                <h6 className="text-xs font-medium text-purple-700 mb-2">Voyager ({(group as any).allNodes.voyager.length} nodes)</h6>
+                <h6 className="text-xs font-medium text-purple-700 mb-2">Voyager ({(group as any).allNodes.voyager.length} {t('comparator.codeLevel.nodes')})</h6>
                 <div className="space-y-1 max-h-48 overflow-y-auto">
                   {(group as any).allNodes.voyager.length > 0 ? (
                     (group as any).allNodes.voyager.map((node: OntologyNode, i: number) => (
@@ -543,7 +545,7 @@ const ComponentComparator: React.FC = () => {
                       </div>
                     ))
                   ) : (
-                    <div className="text-xs text-gray-400 italic">No code nodes at this level</div>
+                    <div className="text-xs text-gray-400 italic">{t('comparator.codeLevel.noCodeNodes')}</div>
                   )}
                 </div>
               </div>
@@ -559,11 +561,11 @@ const ComponentComparator: React.FC = () => {
       <div className="bg-green-50 px-4 py-3 border-b border-green-200">
         <div className="flex items-center justify-between">
           <h4 className="font-semibold text-green-900 capitalize">
-            {group.level.replace('_', ' ')} Architecture
+            {group.level.replace('_', ' ')} {t('comparator.architectureLevel.architecture')}
           </h4>
           <div className="flex items-center space-x-2 text-sm">
             <span className="text-green-600 font-medium">
-              Total: {(group as any).totalNodes || 0} nodes
+              {t('comparator.architectureLevel.total')} {(group as any).totalNodes || 0} {t('comparator.architectureLevel.nodes')}
             </span>
             {(group as any).allNodes && (
               <span className="text-green-600">
@@ -577,10 +579,10 @@ const ComponentComparator: React.FC = () => {
         {/* Show all impacted architecture nodes directly */}
         {(group as any).allNodes && (
           <div>
-            <h5 className="text-sm font-semibold text-gray-900 mb-3">All Impacted Architecture Nodes at {group.level.replace('_', ' ')} Level</h5>
+            <h5 className="text-sm font-semibold text-gray-900 mb-3">{t('comparator.architectureLevel.allImpactedArch')} {group.level.replace('_', ' ')} {t('comparator.architectureLevel.level')}</h5>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
               <div>
-                <h6 className="text-xs font-medium text-red-700 mb-2">Phoenix ({(group as any).allNodes.phoenix.length} nodes)</h6>
+                <h6 className="text-xs font-medium text-red-700 mb-2">Phoenix ({(group as any).allNodes.phoenix.length} {t('comparator.architectureLevel.nodes')})</h6>
                 <div className="space-y-1 max-h-48 overflow-y-auto">
                   {(group as any).allNodes.phoenix.length > 0 ? (
                     (group as any).allNodes.phoenix.map((node: OntologyNode, i: number) => (
@@ -590,12 +592,12 @@ const ComponentComparator: React.FC = () => {
                       </div>
                     ))
                   ) : (
-                    <div className="text-xs text-gray-400 italic">No architecture nodes at this level</div>
+                    <div className="text-xs text-gray-400 italic">{t('comparator.architectureLevel.noArchNodes')}</div>
                   )}
                 </div>
               </div>
               <div>
-                <h6 className="text-xs font-medium text-secondary mb-2">Apollo ({(group as any).allNodes.apollo.length} nodes)</h6>
+                <h6 className="text-xs font-medium text-secondary mb-2">Apollo ({(group as any).allNodes.apollo.length} {t('comparator.architectureLevel.nodes')})</h6>
                 <div className="space-y-1 max-h-48 overflow-y-auto">
                   {(group as any).allNodes.apollo.length > 0 ? (
                     (group as any).allNodes.apollo.map((node: OntologyNode, i: number) => (
@@ -605,12 +607,12 @@ const ComponentComparator: React.FC = () => {
                       </div>
                     ))
                   ) : (
-                    <div className="text-xs text-gray-400 italic">No architecture nodes at this level</div>
+                    <div className="text-xs text-gray-400 italic">{t('comparator.architectureLevel.noArchNodes')}</div>
                   )}
                 </div>
               </div>
               <div>
-                <h6 className="text-xs font-medium text-purple-700 mb-2">Voyager ({(group as any).allNodes.voyager.length} nodes)</h6>
+                <h6 className="text-xs font-medium text-purple-700 mb-2">Voyager ({(group as any).allNodes.voyager.length} {t('comparator.architectureLevel.nodes')})</h6>
                 <div className="space-y-1 max-h-48 overflow-y-auto">
                   {(group as any).allNodes.voyager.length > 0 ? (
                     (group as any).allNodes.voyager.map((node: OntologyNode, i: number) => (
@@ -620,7 +622,7 @@ const ComponentComparator: React.FC = () => {
                       </div>
                     ))
                   ) : (
-                    <div className="text-xs text-gray-400 italic">No architecture nodes at this level</div>
+                    <div className="text-xs text-gray-400 italic">{t('comparator.architectureLevel.noArchNodes')}</div>
                   )}
                 </div>
               </div>
@@ -636,11 +638,11 @@ const ComponentComparator: React.FC = () => {
       <div className="bg-purple-50 px-4 py-3 border-b border-purple-200">
         <div className="flex items-center justify-between">
           <h4 className="font-semibold text-purple-900 capitalize">
-            {group.level.replace('_', ' ')} Design
+            {group.level.replace('_', ' ')} {t('comparator.designLevel.design')}
           </h4>
           <div className="flex items-center space-x-2 text-sm">
             <span className="text-purple-600 font-medium">
-              Total: {(group as any).totalNodes || 0} nodes
+              {t('comparator.designLevel.total')} {(group as any).totalNodes || 0} {t('comparator.designLevel.nodes')}
             </span>
             {(group as any).allNodes && (
               <span className="text-purple-600">
@@ -654,10 +656,10 @@ const ComponentComparator: React.FC = () => {
         {/* Show all impacted design nodes directly */}
         {(group as any).allNodes && (
           <div>
-            <h5 className="text-sm font-semibold text-gray-900 mb-3">All Impacted Design Nodes at {group.level.replace('_', ' ')} Level</h5>
+            <h5 className="text-sm font-semibold text-gray-900 mb-3">{t('comparator.designLevel.allImpactedDesign')} {group.level.replace('_', ' ')} {t('comparator.designLevel.level')}</h5>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
               <div>
-                <h6 className="text-xs font-medium text-red-700 mb-2">Phoenix ({(group as any).allNodes.phoenix.length} nodes)</h6>
+                <h6 className="text-xs font-medium text-red-700 mb-2">Phoenix ({(group as any).allNodes.phoenix.length} {t('comparator.designLevel.nodes')})</h6>
                 <div className="space-y-1 max-h-48 overflow-y-auto">
                   {(group as any).allNodes.phoenix.length > 0 ? (
                     (group as any).allNodes.phoenix.map((node: OntologyNode, i: number) => (
@@ -667,12 +669,12 @@ const ComponentComparator: React.FC = () => {
                       </div>
                     ))
                   ) : (
-                    <div className="text-xs text-gray-400 italic">No design nodes at this level</div>
+                    <div className="text-xs text-gray-400 italic">{t('comparator.designLevel.noDesignNodes')}</div>
                   )}
                 </div>
               </div>
               <div>
-                <h6 className="text-xs font-medium text-secondary mb-2">Apollo ({(group as any).allNodes.apollo.length} nodes)</h6>
+                <h6 className="text-xs font-medium text-secondary mb-2">Apollo ({(group as any).allNodes.apollo.length} {t('comparator.designLevel.nodes')})</h6>
                 <div className="space-y-1 max-h-48 overflow-y-auto">
                   {(group as any).allNodes.apollo.length > 0 ? (
                     (group as any).allNodes.apollo.map((node: OntologyNode, i: number) => (
@@ -682,12 +684,12 @@ const ComponentComparator: React.FC = () => {
                       </div>
                     ))
                   ) : (
-                    <div className="text-xs text-gray-400 italic">No design nodes at this level</div>
+                    <div className="text-xs text-gray-400 italic">{t('comparator.designLevel.noDesignNodes')}</div>
                   )}
                 </div>
               </div>
               <div>
-                <h6 className="text-xs font-medium text-purple-700 mb-2">Voyager ({(group as any).allNodes.voyager.length} nodes)</h6>
+                <h6 className="text-xs font-medium text-purple-700 mb-2">Voyager ({(group as any).allNodes.voyager.length} {t('comparator.designLevel.nodes')})</h6>
                 <div className="space-y-1 max-h-48 overflow-y-auto">
                   {(group as any).allNodes.voyager.length > 0 ? (
                     (group as any).allNodes.voyager.map((node: OntologyNode, i: number) => (
@@ -697,7 +699,7 @@ const ComponentComparator: React.FC = () => {
                       </div>
                     ))
                   ) : (
-                    <div className="text-xs text-gray-400 italic">No design nodes at this level</div>
+                    <div className="text-xs text-gray-400 italic">{t('comparator.designLevel.noDesignNodes')}</div>
                   )}
                 </div>
               </div>
@@ -712,46 +714,46 @@ const ComponentComparator: React.FC = () => {
     <div className="min-h-screen bg-gray-50">
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 py-2 sm:py-4">
-          <h2 className="text-xl font-semibold text-gray-900">Graph Overlap Comparator</h2>
+          <h2 className="text-xl font-semibold text-gray-900">{t('comparator.title')}</h2>
           <p className="text-gray-600 text-sm mt-1">
             {overlapAnalysis ? (
               <>
-                Functional → Code → Architecture/Design • 
-                Deepest overlap: <span className="font-medium text-secondary">{overlapAnalysis.functionalBoundary.deepestOverlapLevel}</span> • 
+                {t('comparator.subtitleWithAnalysis.prefix')} {'\u2022'}
+                {t('comparator.subtitleWithAnalysis.deepestOverlap')} <span className="font-medium text-secondary">{overlapAnalysis.functionalBoundary.deepestOverlapLevel}</span> {'\u2022'}
                 {overlapAnalysis.functionalBoundary.divergencePoint && (
-                  <> Divergence at: <span className="font-medium text-orange-600">{overlapAnalysis.functionalBoundary.divergencePoint}</span></>
+                  <> {t('comparator.subtitleWithAnalysis.divergenceAt')} <span className="font-medium text-orange-600">{overlapAnalysis.functionalBoundary.divergencePoint}</span></>
                 )}
               </>
             ) : (
-              'Algorithmic progression from functional overlap through code to architectural impact'
+              t('comparator.subtitle')
             )}
           </p>
         </div>
       </div>
-      
+
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 py-2 sm:py-4 lg:py-8">
         {/* Analysis Flow Indicator */}
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
-          <h2 className="text-lg font-semibold text-gray-900 mb-4">Analysis Flow Progression</h2>
+          <h2 className="text-lg font-semibold text-gray-900 mb-4">{t('comparator.analysisFlow.title')}</h2>
           <div className="flex items-center justify-center space-x-4">
             <div className="flex items-center">
               <div className="w-10 h-10 bg-secondary/100 rounded-full flex items-center justify-center text-white font-bold">1</div>
-              <span className="ml-2 font-medium text-secondary">Functional Overlap</span>
+              <span className="ml-2 font-medium text-secondary">{t('comparator.analysisFlow.step1')}</span>
             </div>
-            <div className="text-gray-400">→</div>
+            <div className="text-gray-400">{'\u2192'}</div>
             <div className="flex items-center">
               <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold">2</div>
-              <span className="ml-2 font-medium text-orange-800">Code Impact</span>
+              <span className="ml-2 font-medium text-orange-800">{t('comparator.analysisFlow.step2')}</span>
             </div>
-            <div className="text-gray-400">→</div>
+            <div className="text-gray-400">{'\u2192'}</div>
             <div className="flex items-center">
               <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">3</div>
-              <span className="ml-2 font-medium text-green-800">Architecture Impact</span>
+              <span className="ml-2 font-medium text-green-800">{t('comparator.analysisFlow.step3')}</span>
             </div>
-            <div className="text-gray-400">→</div>
+            <div className="text-gray-400">{'\u2192'}</div>
             <div className="flex items-center">
               <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold">4</div>
-              <span className="ml-2 font-medium text-purple-800">Design Impact</span>
+              <span className="ml-2 font-medium text-purple-800">{t('comparator.analysisFlow.step4')}</span>
             </div>
           </div>
         </div>
@@ -760,12 +762,12 @@ const ComponentComparator: React.FC = () => {
         {overlapAnalysis && (
           <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-lg font-semibold text-gray-900">Algorithm Analysis Results</h2>
+              <h2 className="text-lg font-semibold text-gray-900">{t('comparator.algorithmResults.title')}</h2>
               <button
                 onClick={() => setShowAdvancedAnalysis(!showAdvancedAnalysis)}
                 className="text-secondary hover:text-secondary text-sm font-medium"
               >
-                {showAdvancedAnalysis ? 'Hide Algorithm Details' : 'Show Algorithm Details'}
+                {showAdvancedAnalysis ? t('comparator.algorithmResults.hideDetails') : t('comparator.algorithmResults.showDetails')}
               </button>
             </div>
 
@@ -774,31 +776,31 @@ const ComponentComparator: React.FC = () => {
                 <div className="text-2xl font-bold text-secondary capitalize">
                   Persona
                 </div>
-                <div className="text-sm text-gray-600">Starting Overlap</div>
+                <div className="text-sm text-gray-600">{t('comparator.algorithmResults.startingOverlap')}</div>
               </div>
               <div className="text-center p-4 bg-secondary/10 rounded-lg">
                 <div className="text-2xl font-bold text-secondary capitalize">
-                  {overlapAnalysis.functionalBoundary.deepestOverlapLevel || 'None'}
+                  {overlapAnalysis.functionalBoundary.deepestOverlapLevel || t('comparator.algorithmResults.none')}
                 </div>
-                <div className="text-sm text-gray-600">Deepest Overlap</div>
+                <div className="text-sm text-gray-600">{t('comparator.algorithmResults.deepestOverlap')}</div>
               </div>
               <div className="text-center p-4 bg-orange-50 rounded-lg">
                 <div className="text-2xl font-bold text-orange-600 capitalize">
-                  {overlapAnalysis.functionalBoundary.divergencePoint || 'None'}
+                  {overlapAnalysis.functionalBoundary.divergencePoint || t('comparator.algorithmResults.none')}
                 </div>
-                <div className="text-sm text-gray-600">Divergence Point</div>
+                <div className="text-sm text-gray-600">{t('comparator.algorithmResults.divergencePoint')}</div>
               </div>
               <div className="text-center p-4 bg-green-50 rounded-lg">
                 <div className="text-2xl font-bold text-green-600">
                   {codeGroups.length}
                 </div>
-                <div className="text-sm text-gray-600">Code Levels</div>
+                <div className="text-sm text-gray-600">{t('comparator.algorithmResults.codeLevels')}</div>
               </div>
               <div className="text-center p-4 bg-purple-50 rounded-lg">
                 <div className="text-2xl font-bold text-purple-600">
                   {architectureGroups.length + designGroups.length}
                 </div>
-                <div className="text-sm text-gray-600">Arch/Design Impact</div>
+                <div className="text-sm text-gray-600">{t('comparator.algorithmResults.archDesignImpact')}</div>
               </div>
             </div>
 
@@ -806,32 +808,32 @@ const ComponentComparator: React.FC = () => {
               <div className="space-y-4">
                 {overlapAnalysis.implementationDivergence.length > 0 && (
                   <div className="border-t pt-4">
-                    <h3 className="text-md font-medium text-gray-900 mb-3">Implementation Divergence Analysis</h3>
+                    <h3 className="text-md font-medium text-gray-900 mb-3">{t('comparator.divergenceAnalysis.title')}</h3>
                     {overlapAnalysis.implementationDivergence.map((divergence, idx) => (
                       <div key={idx} className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-3">
                         <div className="flex items-center justify-between mb-2">
                           <h4 className="font-medium text-yellow-800 capitalize">
-                            {divergence.level} Level Divergence
+                            {divergence.level} {t('comparator.divergenceAnalysis.levelDivergence')}
                           </h4>
                           <span className="text-sm text-yellow-600">{divergence.divergenceReason}</span>
                         </div>
                         <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 text-sm">
                           <div>
-                            <div className="font-medium text-red-700">Phoenix Approach ({divergence.phoenixApproach.length})</div>
+                            <div className="font-medium text-red-700">{t('comparator.divergenceAnalysis.phoenixApproach')} ({divergence.phoenixApproach.length})</div>
                             <div className="text-gray-600">
-                              {divergence.phoenixApproach.map(n => n.name).join(', ') || 'No implementation'}
+                              {divergence.phoenixApproach.map(n => n.name).join(', ') || t('comparator.divergenceAnalysis.noImplementation')}
                             </div>
                           </div>
                           <div>
-                            <div className="font-medium text-secondary">Apollo Approach ({divergence.apolloApproach.length})</div>
+                            <div className="font-medium text-secondary">{t('comparator.divergenceAnalysis.apolloApproach')} ({divergence.apolloApproach.length})</div>
                             <div className="text-gray-600">
-                              {divergence.apolloApproach.map(n => n.name).join(', ') || 'No implementation'}
+                              {divergence.apolloApproach.map(n => n.name).join(', ') || t('comparator.divergenceAnalysis.noImplementation')}
                             </div>
                           </div>
                           <div>
-                            <div className="font-medium text-purple-700">Voyager Approach ({divergence.voyagerApproach.length})</div>
+                            <div className="font-medium text-purple-700">{t('comparator.divergenceAnalysis.voyagerApproach')} ({divergence.voyagerApproach.length})</div>
                             <div className="text-gray-600">
-                              {divergence.voyagerApproach.map(n => n.name).join(', ') || 'No implementation'}
+                              {divergence.voyagerApproach.map(n => n.name).join(', ') || t('comparator.divergenceAnalysis.noImplementation')}
                             </div>
                           </div>
                         </div>
@@ -851,8 +853,8 @@ const ComponentComparator: React.FC = () => {
               <div className="flex items-center">
                 <div className="w-8 h-8 bg-secondary/100 rounded-full flex items-center justify-center text-white font-bold mr-3">1</div>
                 <div>
-                  <h2 className="text-xl font-semibold text-secondary">Functional Overlap Analysis</h2>
-                  <p className="text-secondary text-sm">Starting with functional ontology to identify shared goals</p>
+                  <h2 className="text-xl font-semibold text-secondary">{t('comparator.functionalOverlap.title')}</h2>
+                  <p className="text-secondary text-sm">{t('comparator.functionalOverlap.subtitle')}</p>
                 </div>
               </div>
             </div>
@@ -869,8 +871,8 @@ const ComponentComparator: React.FC = () => {
               <div className="flex items-center">
                 <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold mr-3">2</div>
                 <div>
-                  <h2 className="text-xl font-semibold text-orange-900">Code Impact Analysis</h2>
-                  <p className="text-orange-700 text-sm">Connected code nodes from overlapping functional areas</p>
+                  <h2 className="text-xl font-semibold text-orange-900">{t('comparator.codeImpact.title')}</h2>
+                  <p className="text-orange-700 text-sm">{t('comparator.codeImpact.subtitle')}</p>
                 </div>
               </div>
             </div>
@@ -887,8 +889,8 @@ const ComponentComparator: React.FC = () => {
               <div className="flex items-center">
                 <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold mr-3">3</div>
                 <div>
-                  <h2 className="text-xl font-semibold text-green-900">Architecture Impact Analysis</h2>
-                  <p className="text-green-700 text-sm">Reverse traversal from code to architectural components</p>
+                  <h2 className="text-xl font-semibold text-green-900">{t('comparator.architectureImpact.title')}</h2>
+                  <p className="text-green-700 text-sm">{t('comparator.architectureImpact.subtitle')}</p>
                 </div>
               </div>
             </div>
@@ -899,8 +901,8 @@ const ComponentComparator: React.FC = () => {
                 ))
               ) : (
                 <div className="text-center py-8 text-gray-500">
-                  <div className="text-4xl mb-2">🏗️</div>
-                  <p>No architecture components connected to overlapping code</p>
+                  <div className="text-4xl mb-2">{'\uD83C\uDFD7\uFE0F'}</div>
+                  <p>{t('comparator.architectureImpact.empty')}</p>
                 </div>
               )}
             </div>
@@ -912,8 +914,8 @@ const ComponentComparator: React.FC = () => {
               <div className="flex items-center">
                 <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-3">4</div>
                 <div>
-                  <h2 className="text-xl font-semibold text-purple-900">Design Impact Analysis</h2>
-                  <p className="text-purple-700 text-sm">Reverse traversal from code to design components</p>
+                  <h2 className="text-xl font-semibold text-purple-900">{t('comparator.designImpact.title')}</h2>
+                  <p className="text-purple-700 text-sm">{t('comparator.designImpact.subtitle')}</p>
                 </div>
               </div>
             </div>
@@ -924,8 +926,8 @@ const ComponentComparator: React.FC = () => {
                 ))
               ) : (
                 <div className="text-center py-8 text-gray-500">
-                  <div className="text-4xl mb-2">🎨</div>
-                  <p>No design components connected to overlapping code</p>
+                  <div className="text-4xl mb-2">{'\uD83C\uDFA8'}</div>
+                  <p>{t('comparator.designImpact.empty')}</p>
                 </div>
               )}
             </div>
@@ -936,11 +938,11 @@ const ComponentComparator: React.FC = () => {
         {!overlapAnalysis && (
           <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-12 text-center">
             <div className="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <span className="text-gray-400 text-2xl">🔍</span>
+              <span className="text-gray-400 text-2xl">{'\uD83D\uDD0D'}</span>
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Analysis Loading...</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('comparator.emptyState.title')}</h3>
             <p className="text-gray-600">
-              Performing comprehensive overlap analysis across all four ontologies.
+              {t('comparator.emptyState.description')}
             </p>
           </div>
         )}

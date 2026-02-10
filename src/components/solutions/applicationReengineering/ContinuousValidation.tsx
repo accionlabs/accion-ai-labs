@@ -11,119 +11,19 @@ import {
   ClockIcon,
   BoltIcon
 } from '@heroicons/react/24/outline';
+import { useTranslation } from 'react-i18next';
 
 const ContinuousValidation: React.FC = () => {
+  const { t } = useTranslation('solutions');
   const [selectedSprint, setSelectedSprint] = useState<number>(3);
 
-  const validationProcess = [
-    {
-      step: 'Extract Current State',
-      description: 'AI agents analyze sprint deliverables to extract updated knowledge graphs',
-      duration: '15 minutes',
-      automated: true
-    },
-    {
-      step: 'Compare with Baseline',
-      description: 'Compare current graphs with target architecture and previous sprint baseline',
-      duration: '5 minutes',
-      automated: true
-    },
-    {
-      step: 'Detect Drift',
-      description: 'Identify architectural violations, missing tests, code quality degradation',
-      duration: '10 minutes',
-      automated: true
-    },
-    {
-      step: 'Generate Report',
-      description: 'Create actionable recommendations and priority remediation tasks',
-      duration: '5 minutes',
-      automated: true
-    },
-    {
-      step: 'Team Review',
-      description: 'Review findings and plan corrections for next sprint',
-      duration: '30 minutes',
-      automated: false
-    }
-  ];
+  const validationProcess = t('appReengineering.continuousValidation.process.steps', { returnObjects: true }) as unknown as { step: string; description: string; duration: string; automated: boolean }[];
 
-  const sprintData = [
-    {
-      sprint: 1,
-      quality: 65,
-      drift: 8,
-      issues: { critical: 3, moderate: 5, low: 8 },
-      improvements: ['Modernized 12 components', 'Added 45 unit tests', 'Refactored authentication module']
-    },
-    {
-      sprint: 2,
-      quality: 72,
-      drift: 5,
-      issues: { critical: 1, moderate: 4, low: 6 },
-      improvements: ['Migrated to design system', 'Improved test coverage to 68%', 'Resolved 2 architecture violations']
-    },
-    {
-      sprint: 3,
-      quality: 78,
-      drift: 3,
-      issues: { critical: 0, moderate: 3, low: 4 },
-      improvements: ['Eliminated all critical debt', 'Added API documentation', 'Refactored data layer']
-    },
-    {
-      sprint: 4,
-      quality: 84,
-      drift: 2,
-      issues: { critical: 0, moderate: 1, low: 3 },
-      improvements: ['Automated integration tests', 'Performance optimization', 'Updated component library']
-    }
-  ];
+  const sprintData = t('appReengineering.continuousValidation.dashboard.sprintData', { returnObjects: true }) as unknown as { sprint: number; quality: number; drift: number; issues: { critical: number; moderate: number; low: number }; improvements: string[] }[];
 
-  const driftExamples = [
-    {
-      type: 'Architecture Violation',
-      severity: 'critical',
-      detected: 'Sprint 2',
-      description: 'New feature directly accessed database bypassing service layer',
-      impact: 'Breaking target architecture pattern',
-      action: 'Refactored to use proper service abstraction',
-      prevented: 'Would have created tech debt requiring 40 hours to fix later'
-    },
-    {
-      type: 'Missing Tests',
-      severity: 'moderate',
-      detected: 'Sprint 1',
-      description: 'Two new API endpoints added without integration tests',
-      impact: 'Test coverage dropped from 75% to 68%',
-      action: 'Added comprehensive test suite in same sprint',
-      prevented: 'Would have increased defect rate and manual testing burden'
-    },
-    {
-      type: 'Code Quality',
-      severity: 'moderate',
-      detected: 'Sprint 3',
-      description: 'Complex business logic in UI components',
-      impact: 'Violating separation of concerns',
-      action: 'Extracted logic into reusable service hooks',
-      prevented: 'Would have made components harder to test and maintain'
-    },
-    {
-      type: 'Design Inconsistency',
-      severity: 'low',
-      detected: 'Sprint 2',
-      description: 'New form used custom styles instead of design system',
-      impact: 'Inconsistent user experience',
-      action: 'Migrated to design system components',
-      prevented: 'Would have created maintenance overhead and UX debt'
-    }
-  ];
+  const driftExamples = t('appReengineering.continuousValidation.driftDetection.examples', { returnObjects: true }) as unknown as { type: string; severity: string; detected: string; description: string; impact: string; action: string; prevented: string }[];
 
-  const qualityMetrics = [
-    { metric: 'Code Coverage', baseline: 45, current: 78, target: 85, unit: '%' },
-    { metric: 'Architecture Score', baseline: 62, current: 84, target: 90, unit: '/100' },
-    { metric: 'Technical Debt', baseline: 147, current: 38, target: 20, unit: 'issues' },
-    { metric: 'Defect Density', baseline: 3.2, current: 1.1, target: 0.5, unit: '/KLOC' }
-  ];
+  const qualityMetrics = t('appReengineering.continuousValidation.qualityTrends.metrics', { returnObjects: true }) as unknown as { metric: string; baseline: number; current: number; target: number; unit: string }[];
 
   const selectedSprintData = sprintData[selectedSprint - 1];
 
@@ -146,18 +46,17 @@ const ContinuousValidation: React.FC = () => {
             className="inline-flex items-center text-orange-600 hover:text-orange-700 mb-4"
           >
             <ArrowLeftIcon className="h-4 w-4 mr-2" />
-            Back to Application Re-engineering
+            {t('appReengineering.continuousValidation.backToOverview')}
           </Link>
 
           <div className="flex items-start justify-between">
             <div>
               <div className="flex items-center mb-4">
                 <ShieldCheckIcon className="h-10 w-10 text-green-600 mr-3" />
-                <h1 className="text-3xl font-bold text-gray-900">Continuous Validation</h1>
+                <h1 className="text-3xl font-bold text-gray-900">{t('appReengineering.continuousValidation.header.title')}</h1>
               </div>
               <p className="text-lg text-gray-600 max-w-3xl">
-                Every sprint, validate that re-engineering improves quality without breaking functionality
-                or drifting from target architecture
+                {t('appReengineering.continuousValidation.header.description')}
               </p>
             </div>
           </div>
@@ -170,24 +69,22 @@ const ContinuousValidation: React.FC = () => {
           <div className="flex items-start">
             <ExclamationTriangleIcon className="h-8 w-8 text-orange-600 mr-4 flex-shrink-0 mt-1" />
             <div>
-              <h2 className="text-xl font-semibold text-gray-900 mb-3">Re-engineering Risk Without Validation</h2>
+              <h2 className="text-xl font-semibold text-gray-900 mb-3">{t('appReengineering.continuousValidation.challenge.title')}</h2>
               <p className="text-gray-700 mb-4">
-                Traditional re-engineering projects often fail because teams don't realize they're drifting from
-                target architecture until it's too late. Without continuous validation, new technical debt
-                accumulates during modernization, defeating the purpose of re-engineering.
+                {t('appReengineering.continuousValidation.challenge.description')}
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="bg-white rounded-lg p-4 border border-orange-100">
-                  <p className="text-sm font-semibold text-gray-900 mb-1">Silent Drift</p>
-                  <p className="text-xs text-gray-600">Architecture violations undetected until code review</p>
+                  <p className="text-sm font-semibold text-gray-900 mb-1">{t('appReengineering.continuousValidation.challenge.silentDrift.title')}</p>
+                  <p className="text-xs text-gray-600">{t('appReengineering.continuousValidation.challenge.silentDrift.description')}</p>
                 </div>
                 <div className="bg-white rounded-lg p-4 border border-orange-100">
-                  <p className="text-sm font-semibold text-gray-900 mb-1">New Debt Created</p>
-                  <p className="text-xs text-gray-600">Re-engineering introduces different technical debt</p>
+                  <p className="text-sm font-semibold text-gray-900 mb-1">{t('appReengineering.continuousValidation.challenge.newDebt.title')}</p>
+                  <p className="text-xs text-gray-600">{t('appReengineering.continuousValidation.challenge.newDebt.description')}</p>
                 </div>
                 <div className="bg-white rounded-lg p-4 border border-orange-100">
-                  <p className="text-sm font-semibold text-gray-900 mb-1">Quality Uncertainty</p>
-                  <p className="text-xs text-gray-600">No objective measure if quality is actually improving</p>
+                  <p className="text-sm font-semibold text-gray-900 mb-1">{t('appReengineering.continuousValidation.challenge.qualityUncertainty.title')}</p>
+                  <p className="text-xs text-gray-600">{t('appReengineering.continuousValidation.challenge.qualityUncertainty.description')}</p>
                 </div>
               </div>
             </div>
@@ -196,10 +93,9 @@ const ContinuousValidation: React.FC = () => {
 
         {/* Sprint-by-Sprint Validation Process */}
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Automated Sprint Validation Process</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('appReengineering.continuousValidation.process.title')}</h2>
           <p className="text-gray-600 mb-6">
-            At the end of each sprint, AI agents automatically extract the current state of your application
-            and compare it with the target architecture and previous baseline to detect any drift.
+            {t('appReengineering.continuousValidation.process.description')}
           </p>
 
           <div className="space-y-4">
@@ -220,7 +116,7 @@ const ContinuousValidation: React.FC = () => {
                       </span>
                       {step.automated && (
                         <span className="px-2 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded-full">
-                          Automated
+                          {t('appReengineering.continuousValidation.process.automated')}
                         </span>
                       )}
                     </div>
@@ -235,10 +131,9 @@ const ContinuousValidation: React.FC = () => {
             <div className="flex items-start">
               <BoltIcon className="h-6 w-6 text-green-600 mr-3 flex-shrink-0 mt-0.5" />
               <div>
-                <p className="text-sm font-semibold text-gray-900 mb-1">Total Time: 65 minutes per sprint</p>
+                <p className="text-sm font-semibold text-gray-900 mb-1">{t('appReengineering.continuousValidation.process.totalTime')}</p>
                 <p className="text-xs text-gray-600">
-                  Only 30 minutes of human time required. Automated analysis provides objective drift
-                  detection that would take hours of manual code review.
+                  {t('appReengineering.continuousValidation.process.totalTimeDetail')}
                 </p>
               </div>
             </div>
@@ -247,7 +142,7 @@ const ContinuousValidation: React.FC = () => {
 
         {/* Sprint Progress Dashboard */}
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Sprint Progress Dashboard</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('appReengineering.continuousValidation.dashboard.title')}</h2>
 
           {/* Sprint Selector */}
           <div className="flex space-x-2 mb-6">
@@ -261,7 +156,7 @@ const ContinuousValidation: React.FC = () => {
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
-                Sprint {sprint.sprint}
+                {t('appReengineering.continuousValidation.dashboard.sprintLabel')} {sprint.sprint}
               </button>
             ))}
           </div>
@@ -270,7 +165,7 @@ const ContinuousValidation: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
             <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-lg p-6 border border-green-200">
               <div className="flex items-center justify-between mb-2">
-                <h3 className="text-sm font-semibold text-gray-700">Quality Score</h3>
+                <h3 className="text-sm font-semibold text-gray-700">{t('appReengineering.continuousValidation.dashboard.qualityScore')}</h3>
                 <ArrowTrendingUpIcon className="h-5 w-5 text-green-600" />
               </div>
               <p className="text-3xl font-bold text-green-600 mb-1">{selectedSprintData.quality}/100</p>
@@ -281,7 +176,7 @@ const ContinuousValidation: React.FC = () => {
 
             <div className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-lg p-6 border border-orange-200">
               <div className="flex items-center justify-between mb-2">
-                <h3 className="text-sm font-semibold text-gray-700">Drift Issues</h3>
+                <h3 className="text-sm font-semibold text-gray-700">{t('appReengineering.continuousValidation.dashboard.driftIssues')}</h3>
                 <ChartBarIcon className="h-5 w-5 text-orange-600" />
               </div>
               <p className="text-3xl font-bold text-orange-600 mb-1">{selectedSprintData.drift}</p>
@@ -294,20 +189,20 @@ const ContinuousValidation: React.FC = () => {
 
             <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-6 border border-blue-200">
               <div className="flex items-center justify-between mb-2">
-                <h3 className="text-sm font-semibold text-gray-700">Issues by Severity</h3>
+                <h3 className="text-sm font-semibold text-gray-700">{t('appReengineering.continuousValidation.dashboard.issuesBySeverity')}</h3>
                 <ExclamationTriangleIcon className="h-5 w-5 text-blue-600" />
               </div>
               <div className="space-y-1">
                 <div className="flex justify-between text-sm">
-                  <span className="text-gray-600">Critical:</span>
+                  <span className="text-gray-600">{t('appReengineering.continuousValidation.dashboard.critical')}</span>
                   <span className="font-semibold text-red-600">{selectedSprintData.issues.critical}</span>
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span className="text-gray-600">Moderate:</span>
+                  <span className="text-gray-600">{t('appReengineering.continuousValidation.dashboard.moderate')}</span>
                   <span className="font-semibold text-orange-600">{selectedSprintData.issues.moderate}</span>
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span className="text-gray-600">Low:</span>
+                  <span className="text-gray-600">{t('appReengineering.continuousValidation.dashboard.low')}</span>
                   <span className="font-semibold text-yellow-600">{selectedSprintData.issues.low}</span>
                 </div>
               </div>
@@ -316,7 +211,7 @@ const ContinuousValidation: React.FC = () => {
 
           {/* Sprint Improvements */}
           <div className="bg-gray-50 rounded-lg p-6">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Sprint {selectedSprint} Improvements</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">{t('appReengineering.continuousValidation.dashboard.sprintLabel')} {selectedSprint} {t('appReengineering.continuousValidation.dashboard.improvements')}</h3>
             <ul className="space-y-2">
               {selectedSprintData.improvements.map((improvement, index) => (
                 <li key={index} className="flex items-start text-sm text-gray-700">
@@ -330,10 +225,9 @@ const ContinuousValidation: React.FC = () => {
 
         {/* Drift Detection Examples */}
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Real Drift Detection Examples</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('appReengineering.continuousValidation.driftDetection.title')}</h2>
           <p className="text-gray-600 mb-6">
-            See how continuous validation caught issues during Phoenix CRM re-engineering that would have
-            created significant technical debt if undetected.
+            {t('appReengineering.continuousValidation.driftDetection.description')}
           </p>
 
           <div className="space-y-4">
@@ -355,11 +249,11 @@ const ContinuousValidation: React.FC = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                   <div>
-                    <p className="text-xs font-semibold text-gray-700 uppercase mb-1">What Was Detected</p>
+                    <p className="text-xs font-semibold text-gray-700 uppercase mb-1">{t('appReengineering.continuousValidation.driftDetection.whatDetected')}</p>
                     <p className="text-sm text-gray-800">{example.description}</p>
                   </div>
                   <div>
-                    <p className="text-xs font-semibold text-gray-700 uppercase mb-1">Impact</p>
+                    <p className="text-xs font-semibold text-gray-700 uppercase mb-1">{t('appReengineering.continuousValidation.driftDetection.impact')}</p>
                     <p className="text-sm text-gray-800">{example.impact}</p>
                   </div>
                 </div>
@@ -369,7 +263,7 @@ const ContinuousValidation: React.FC = () => {
                     <div className="flex items-start">
                       <CheckCircleIcon className="h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
                       <div>
-                        <p className="text-xs font-semibold text-gray-700 mb-1">Action Taken</p>
+                        <p className="text-xs font-semibold text-gray-700 mb-1">{t('appReengineering.continuousValidation.driftDetection.actionTaken')}</p>
                         <p className="text-sm text-gray-800">{example.action}</p>
                       </div>
                     </div>
@@ -378,7 +272,7 @@ const ContinuousValidation: React.FC = () => {
                     <div className="flex items-start">
                       <ShieldCheckIcon className="h-5 w-5 text-blue-600 mr-2 flex-shrink-0 mt-0.5" />
                       <div>
-                        <p className="text-xs font-semibold text-gray-700 mb-1">What We Prevented</p>
+                        <p className="text-xs font-semibold text-gray-700 mb-1">{t('appReengineering.continuousValidation.driftDetection.whatPrevented')}</p>
                         <p className="text-sm text-gray-800">{example.prevented}</p>
                       </div>
                     </div>
@@ -391,15 +285,14 @@ const ContinuousValidation: React.FC = () => {
 
         {/* Quality Improvement Trends */}
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Quality Improvement Trends</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('appReengineering.continuousValidation.qualityTrends.title')}</h2>
           <p className="text-gray-600 mb-6">
-            Track objective quality metrics throughout the re-engineering process to ensure continuous improvement.
+            {t('appReengineering.continuousValidation.qualityTrends.description')}
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {qualityMetrics.map((metric, index) => {
               const progress = ((metric.current - metric.baseline) / (metric.target - metric.baseline)) * 100;
-              const isReverse = metric.metric === 'Technical Debt' || metric.metric === 'Defect Density';
 
               return (
                 <div key={index} className="border border-gray-200 rounded-lg p-6">
@@ -410,21 +303,21 @@ const ContinuousValidation: React.FC = () => {
                       progress >= 50 ? 'bg-blue-100 text-blue-700' :
                       'bg-yellow-100 text-yellow-700'
                     }`}>
-                      {Math.round(progress)}% to target
+                      {Math.round(progress)}% {t('appReengineering.continuousValidation.qualityTrends.toTarget')}
                     </span>
                   </div>
 
                   <div className="space-y-3">
                     <div className="flex justify-between text-sm">
-                      <span className="text-gray-600">Baseline:</span>
+                      <span className="text-gray-600">{t('appReengineering.continuousValidation.qualityTrends.baseline')}</span>
                       <span className="font-semibold text-red-600">{metric.baseline}{metric.unit}</span>
                     </div>
                     <div className="flex justify-between text-sm">
-                      <span className="text-gray-600">Current:</span>
+                      <span className="text-gray-600">{t('appReengineering.continuousValidation.qualityTrends.current')}</span>
                       <span className="font-semibold text-blue-600">{metric.current}{metric.unit}</span>
                     </div>
                     <div className="flex justify-between text-sm">
-                      <span className="text-gray-600">Target:</span>
+                      <span className="text-gray-600">{t('appReengineering.continuousValidation.qualityTrends.target')}</span>
                       <span className="font-semibold text-green-600">{metric.target}{metric.unit}</span>
                     </div>
                   </div>
@@ -450,39 +343,39 @@ const ContinuousValidation: React.FC = () => {
 
         {/* Key Benefits */}
         <div className="bg-gradient-to-r from-green-50 to-teal-50 rounded-xl border border-green-200 p-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Why Continuous Validation Matters</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('appReengineering.continuousValidation.benefits.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Immediate Feedback</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">{t('appReengineering.continuousValidation.benefits.immediateFeedback.title')}</h3>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li className="flex items-start">
                   <CheckCircleIcon className="h-4 w-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span><strong>Catch drift early:</strong> Detect issues within days, not months</span>
+                  <span><strong>{t('appReengineering.continuousValidation.benefits.immediateFeedback.catchDrift')}</strong> {t('appReengineering.continuousValidation.benefits.immediateFeedback.catchDriftDesc')}</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircleIcon className="h-4 w-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span><strong>Lower fix cost:</strong> Issues are 10x cheaper to fix in same sprint</span>
+                  <span><strong>{t('appReengineering.continuousValidation.benefits.immediateFeedback.lowerCost')}</strong> {t('appReengineering.continuousValidation.benefits.immediateFeedback.lowerCostDesc')}</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircleIcon className="h-4 w-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span><strong>Team learning:</strong> Fast feedback improves future development</span>
+                  <span><strong>{t('appReengineering.continuousValidation.benefits.immediateFeedback.teamLearning')}</strong> {t('appReengineering.continuousValidation.benefits.immediateFeedback.teamLearningDesc')}</span>
                 </li>
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Objective Quality Proof</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">{t('appReengineering.continuousValidation.benefits.objectiveProof.title')}</h3>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li className="flex items-start">
                   <CheckCircleIcon className="h-4 w-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span><strong>Measurable progress:</strong> Track quality improvements sprint by sprint</span>
+                  <span><strong>{t('appReengineering.continuousValidation.benefits.objectiveProof.measurable')}</strong> {t('appReengineering.continuousValidation.benefits.objectiveProof.measurableDesc')}</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircleIcon className="h-4 w-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span><strong>Stakeholder confidence:</strong> Data-driven proof of modernization value</span>
+                  <span><strong>{t('appReengineering.continuousValidation.benefits.objectiveProof.stakeholder')}</strong> {t('appReengineering.continuousValidation.benefits.objectiveProof.stakeholderDesc')}</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircleIcon className="h-4 w-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span><strong>Prevent backsliding:</strong> Ensure quality keeps improving, never degrades</span>
+                  <span><strong>{t('appReengineering.continuousValidation.benefits.objectiveProof.prevent')}</strong> {t('appReengineering.continuousValidation.benefits.objectiveProof.preventDesc')}</span>
                 </li>
               </ul>
             </div>

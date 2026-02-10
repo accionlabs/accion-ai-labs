@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import {
   HomeIcon,
   CpuChipIcon,
@@ -28,6 +29,7 @@ import {
   ShieldCheckIcon
 } from '@heroicons/react/24/outline';
 import SearchBox from '../search/SearchBox';
+import LanguageSwitcher from '../common/LanguageSwitcher';
 
 interface MenuItem {
   id: string;
@@ -37,488 +39,489 @@ interface MenuItem {
   children?: MenuItem[];
 }
 
-const menuItems: MenuItem[] = [
-  {
-    id: 'home',
-    label: 'Home',
-    icon: HomeIcon,
-    path: '/'
-  },
-  {
-    id: 'core-technology',
-    label: 'Core Technology',
-    icon: CpuChipIcon,
-    children: [
-      {
-        id: 'semantic-engineering',
-        label: 'Overview',
-        icon: SparklesIcon,
-        path: '/core-technology'
-      },
-      {
-        id: 'kaps-framework',
-        label: 'KAPS Framework',
-        icon: RectangleStackIcon,
-        path: '/core-technology/kaps-framework'
-      },
-      {
-        id: 'agentic-architecture',
-        label: 'Agent Architecture',
-        icon: CubeTransparentIcon,
-        path: '/core-technology/agent-architecture'
-      },
-      {
-        id: 'core-overview',
-        label: 'Breeze.AI',
-        icon: CpuChipIcon,
-        path: '/core-technology/breeze-ai'
-      },
-      {
-        id: 'gen-ai-box',
-        label: 'Gen AI in a Box',
-        icon: BeakerIcon,
-        path: '/core-technology/gen-ai-box'
-      },
-      {
-        id: 'guardrails',
-        label: 'Strategic Guardrails',
-        icon: ScaleIcon,
-        path: '/core-technology/guardrails'
-      }
-    ]
-  },
-  {
-    id: 'solutions',
-    label: 'Solution Showcase',
-    icon: LightBulbIcon,
-    children: [
-      {
-        id: 'solutions-overview',
-        label: 'All Solutions',
-        icon: LightBulbIcon,
-        path: '/solutions'
-      },
-      {
-        id: 'product-engineering-showcase',
-        label: 'Product Engineering',
-        icon: RocketLaunchIcon,
-        path: '/solutions/product-development'
-      },
-      {
-        id: 'app-reengineering-showcase',
-        label: 'Application Re-engineering',
-        icon: WrenchScrewdriverIcon,
-        path: '/solutions/application-reengineering'
-      },
-      {
-        id: 'portfolio-showcase',
-        label: 'Portfolio Rationalization',
-        icon: PuzzlePieceIcon,
-        path: '/solutions/portfolio-rationalization'
-      },
-      {
-        id: 'asimov-showcase',
-        label: 'ASIMOV Legacy Migration',
-        icon: ArrowPathIcon,
-        path: '/solutions/asimov'
-      },
-      {
-        id: 'customer-service-showcase',
-        label: 'Customer Service AI',
-        icon: PhoneIcon,
-        path: '/solutions/customer-service'
-      },
-      {
-        id: 'data-engineering',
-        label: 'Data Engineering',
-        icon: CircleStackIcon,
-        path: '/solutions/data-engineering'
-      }
-    ]
-  },
-  {
-    id: 'live-examples',
-    label: 'Solution Deep Dives',
-    icon: RectangleStackIcon,
-    children: [
-      {
-        id: 'product-engineering-deep',
-        label: 'Product Engineering',
-        icon: RocketLaunchIcon,
-        children: [
-          {
-            id: 'pe-overview',
-            label: 'Overview',
-            icon: RocketLaunchIcon,
-            path: '/solutions/product-development'
-          },
-          {
-            id: 'knowledge-graph-extraction',
-            label: 'Knowledge Graph Extraction',
-            icon: SparklesIcon,
-            path: '/solutions/product-development/extraction'
-          },
-          {
-            id: 'stakeholder-validation',
-            label: 'Stakeholder Validation',
-            icon: UserGroupIcon,
-            path: '/solutions/product-development/validation'
-          },
-          {
-            id: 'implementation-pipeline',
-            label: 'Implementation Pipeline',
-            icon: CodeBracketIcon,
-            path: '/solutions/product-development/implementation'
-          }
-        ]
-      },
-      {
-        id: 'application-reengineering',
-        label: 'Application Re-engineering',
-        icon: WrenchScrewdriverIcon,
-        children: [
-          {
-            id: 'app-reeng-overview',
-            label: 'Overview',
-            icon: WrenchScrewdriverIcon,
-            path: '/solutions/application-reengineering'
-          },
-          {
-            id: 'discovery-assessment',
-            label: 'Discovery & Assessment',
-            icon: SparklesIcon,
-            path: '/solutions/application-reengineering/discovery'
-          },
-          {
-            id: 'reengineering-strategy',
-            label: 'Re-engineering Strategy',
-            icon: UserGroupIcon,
-            path: '/solutions/application-reengineering/strategy'
-          },
-          {
-            id: 'implementation-modernization',
-            label: 'Implementation & Modernization',
-            icon: CodeBracketIcon,
-            path: '/solutions/application-reengineering/implementation'
-          },
-          {
-            id: 'continuous-validation',
-            label: 'Continuous Validation',
-            icon: ShieldCheckIcon,
-            path: '/solutions/application-reengineering/validation'
-          }
-        ]
-      },
-      {
-        id: 'portfolio',
-        label: 'Portfolio Rationalization',
-        icon: PuzzlePieceIcon,
-        children: [
-          {
-            id: 'portfolio-overview',
-            label: 'Overview',
-            icon: DocumentChartBarIcon,
-            path: '/portfolio'
-          },
-          {
-            id: 'graph-explorer',
-            label: 'Ontology Graph Explorer',
-            icon: CubeTransparentIcon,
-            path: '/portfolio/graph-explorer'
-          },
-          {
-            id: 'component-comparator',
-            label: 'Component Comparator',
-            icon: ScaleIcon,
-            path: '/portfolio/component-comparator'
-          },
-          {
-            id: 'rationalization-roadmap',
-            label: 'Rationalization Roadmap',
-            icon: MapIcon,
-            path: '/portfolio/rationalization-roadmap'
-          },
-          {
-            id: 'unified-product',
-            label: 'Unified Product View',
-            icon: BeakerIcon,
-            path: '/portfolio/unified-product'
-          }
-        ]
-      },
-      {
-        id: 'asimov-migration',
-        label: 'ASIMOV Legacy Migration',
-        icon: ArrowPathIcon,
-        children: [
-          {
-            id: 'asimov-overview',
-            label: 'Overview',
-            icon: ArrowPathIcon,
-            path: '/solutions/asimov'
-          },
-          {
-            id: 'discovery-analysis',
-            label: 'Discovery & Analysis',
-            icon: DocumentMagnifyingGlassIcon,
-            path: '/solutions/asimov/discovery'
-          },
-          {
-            id: 'transformation-engine',
-            label: 'Transformation Engine',
-            icon: CpuChipIcon,
-            path: '/solutions/asimov/transformation'
-          },
-          {
-            id: 'migration-patterns',
-            label: 'Migration Patterns',
-            icon: CodeBracketIcon,
-            path: '/solutions/asimov/patterns'
-          },
-          {
-            id: 'success-stories',
-            label: 'Success Stories',
-            icon: ChartBarIcon,
-            path: '/solutions/asimov/success-stories'
-          }
-        ]
-      },
-      {
-        id: 'customer-service-deep',
-        label: 'Customer Service AI',
-        icon: PhoneIcon,
-        children: [
-          {
-            id: 'cs-overview',
-            label: 'Overview',
-            icon: PhoneIcon,
-            path: '/solutions/customer-service'
-          },
-          {
-            id: 'self-heal-bot',
-            label: 'Self Heal Bot',
-            icon: SparklesIcon,
-            path: '/solutions/customer-service/self-heal-bot'
-          },
-          {
-            id: 'assisted-heal-bot',
-            label: 'Assisted Heal Bot',
-            icon: UserGroupIcon,
-            path: '/solutions/customer-service/assisted-heal-bot'
-          },
-          {
-            id: 'optimization-hub',
-            label: 'Optimization Hub',
-            icon: ChartBarIcon,
-            path: '/solutions/customer-service/optimization-hub'
-          },
-          {
-            id: 'implementation',
-            label: 'Implementation',
-            icon: MapIcon,
-            path: '/solutions/customer-service/implementation'
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: 'breeze-process-model',
-    label: 'Breeze.AI Deep Dive',
-    icon: Bars3Icon,
-    children: [
-      {
-        id: 'breeze-challenge',
-        label: 'The Challenge & Solution',
-        icon: LightBulbIcon,
-        children: [
-          {
-            id: 'manual-translation-tax',
-            label: 'Manual Translation Tax',
-            icon: DocumentChartBarIcon,
-            path: '/breeze-process/challenge/manual-translation-tax'
-          },
-          {
-            id: 'traditional-approaches',
-            label: 'Why Traditional Fails',
-            icon: XMarkIcon,
-            path: '/breeze-process/challenge/traditional-approaches'
-          },
-          {
-            id: 'breeze-breakthrough',
-            label: 'Breeze.AI Breakthrough',
-            icon: SparklesIcon,
-            path: '/breeze-process/challenge/breakthrough'
-          },
-          {
-            id: 'revolutionary-capabilities',
-            label: 'Revolutionary Capabilities',
-            icon: RocketLaunchIcon,
-            path: '/breeze-process/challenge/capabilities'
-          },
-          {
-            id: 'legacy-transformation',
-            label: 'Legacy Transformation',
-            icon: ArrowPathIcon,
-            path: '/breeze-process/challenge/legacy'
-          },
-          {
-            id: 'competitive-advantages',
-            label: 'Competitive Advantages',
-            icon: ChartBarIcon,
-            path: '/breeze-process/challenge/advantages'
-          }
-        ]
-      },
-      {
-        id: 'breeze-architecture',
-        label: 'System Architecture',
-        icon: CpuChipIcon,
-        children: [
-          {
-            id: 'architecture-overview',
-            label: 'Architecture Overview',
-            icon: CubeTransparentIcon,
-            path: '/breeze-process/architecture/overview'
-          },
-          {
-            id: 'core-components',
-            label: 'Core Components',
-            icon: PuzzlePieceIcon,
-            path: '/breeze-process/architecture/components'
-          },
-          {
-            id: 'component-interactions',
-            label: 'Component Interactions',
-            icon: ArrowPathIcon,
-            path: '/breeze-process/architecture/interactions'
-          },
-          {
-            id: 'integration-points',
-            label: 'Integration Points',
-            icon: CircleStackIcon,
-            path: '/breeze-process/architecture/integration'
-          },
-          {
-            id: 'scalability-performance',
-            label: 'Scalability & Performance',
-            icon: ArrowTrendingUpIcon,
-            path: '/breeze-process/architecture/scalability'
-          },
-          {
-            id: 'security-compliance',
-            label: 'Security & Compliance',
-            icon: ScaleIcon,
-            path: '/breeze-process/architecture/security'
-          }
-        ]
-      },
-      {
-        id: 'breeze-semantic-model',
-        label: 'Semantic Model',
-        icon: CircleStackIcon,
-        children: [
-          {
-            id: 'semantic-overview',
-            label: 'Framework Overview',
-            icon: DocumentChartBarIcon,
-            path: '/breeze-process/semantic/overview'
-          },
-          {
-            id: 'functional-ontology',
-            label: 'Functional Ontology',
-            icon: BeakerIcon,
-            path: '/breeze-process/semantic/functional'
-          },
-          {
-            id: 'design-ontology',
-            label: 'Design Ontology',
-            icon: PuzzlePieceIcon,
-            path: '/breeze-process/semantic/design'
-          },
-          {
-            id: 'architecture-ontology',
-            label: 'Architecture Ontology',
-            icon: CubeTransparentIcon,
-            path: '/breeze-process/semantic/architecture'
-          },
-          {
-            id: 'code-ontology',
-            label: 'Code Ontology',
-            icon: CodeBracketIcon,
-            path: '/breeze-process/semantic/code'
-          },
-          {
-            id: 'cross-relationships',
-            label: 'Cross-Ontology Relationships',
-            icon: ArrowPathIcon,
-            path: '/breeze-process/semantic/relationships'
-          },
-          {
-            id: 'agents-layer',
-            label: 'Agents Layer',
-            icon: SparklesIcon,
-            path: '/breeze-process/semantic/agents'
-          }
-        ]
-      },
-      {
-        id: 'breeze-process-flow',
-        label: 'Process Flow',
-        icon: ArrowTrendingUpIcon,
-        children: [
-          {
-            id: 'process-overview',
-            label: 'Process Overview',
-            icon: DocumentChartBarIcon,
-            path: '/breeze-process/flow/overview'
-          },
-          {
-            id: 'phase1-foundation',
-            label: 'Phase 1: Foundation',
-            icon: CubeTransparentIcon,
-            path: '/breeze-process/flow/phase1'
-          },
-          {
-            id: 'phase2-evolution',
-            label: 'Phase 2: Evolution',
-            icon: ArrowTrendingUpIcon,
-            path: '/breeze-process/flow/phase2'
-          },
-          {
-            id: 'phase3-semantic-first',
-            label: 'Phase 3: Semantic First',
-            icon: RocketLaunchIcon,
-            path: '/breeze-process/flow/phase3'
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: 'contact',
-    label: 'Get Started',
-    icon: PhoneIcon,
-    path: '/contact'
-  }
-];
-
 const MainSidebar: React.FC = () => {
   const location = useLocation();
   const pathname = location.pathname;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  
+  const { t } = useTranslation('navigation');
+
+  const menuItems: MenuItem[] = useMemo(() => [
+    {
+      id: 'home',
+      label: t('sidebar.home'),
+      icon: HomeIcon,
+      path: '/'
+    },
+    {
+      id: 'core-technology',
+      label: t('sidebar.coreTechnology'),
+      icon: CpuChipIcon,
+      children: [
+        {
+          id: 'semantic-engineering',
+          label: t('sidebar.overview'),
+          icon: SparklesIcon,
+          path: '/core-technology'
+        },
+        {
+          id: 'kaps-framework',
+          label: t('sidebar.kapsFramework'),
+          icon: RectangleStackIcon,
+          path: '/core-technology/kaps-framework'
+        },
+        {
+          id: 'agentic-architecture',
+          label: t('sidebar.agentArchitecture'),
+          icon: CubeTransparentIcon,
+          path: '/core-technology/agent-architecture'
+        },
+        {
+          id: 'core-overview',
+          label: t('sidebar.breezeAI'),
+          icon: CpuChipIcon,
+          path: '/core-technology/breeze-ai'
+        },
+        {
+          id: 'gen-ai-box',
+          label: t('sidebar.genAIInABox'),
+          icon: BeakerIcon,
+          path: '/core-technology/gen-ai-box'
+        },
+        {
+          id: 'guardrails',
+          label: t('sidebar.strategicGuardrails'),
+          icon: ScaleIcon,
+          path: '/core-technology/guardrails'
+        }
+      ]
+    },
+    {
+      id: 'solutions',
+      label: t('sidebar.solutionShowcase'),
+      icon: LightBulbIcon,
+      children: [
+        {
+          id: 'solutions-overview',
+          label: t('sidebar.allSolutions'),
+          icon: LightBulbIcon,
+          path: '/solutions'
+        },
+        {
+          id: 'product-engineering-showcase',
+          label: t('sidebar.productEngineering'),
+          icon: RocketLaunchIcon,
+          path: '/solutions/product-development'
+        },
+        {
+          id: 'app-reengineering-showcase',
+          label: t('sidebar.applicationReengineering'),
+          icon: WrenchScrewdriverIcon,
+          path: '/solutions/application-reengineering'
+        },
+        {
+          id: 'portfolio-showcase',
+          label: t('sidebar.portfolioRationalization'),
+          icon: PuzzlePieceIcon,
+          path: '/solutions/portfolio-rationalization'
+        },
+        {
+          id: 'asimov-showcase',
+          label: t('sidebar.asimovLegacyMigration'),
+          icon: ArrowPathIcon,
+          path: '/solutions/asimov'
+        },
+        {
+          id: 'customer-service-showcase',
+          label: t('sidebar.customerServiceAI'),
+          icon: PhoneIcon,
+          path: '/solutions/customer-service'
+        },
+        {
+          id: 'data-engineering',
+          label: t('sidebar.dataEngineering'),
+          icon: CircleStackIcon,
+          path: '/solutions/data-engineering'
+        }
+      ]
+    },
+    {
+      id: 'live-examples',
+      label: t('sidebar.solutionDeepDives'),
+      icon: RectangleStackIcon,
+      children: [
+        {
+          id: 'product-engineering-deep',
+          label: t('sidebar.productEngineering'),
+          icon: RocketLaunchIcon,
+          children: [
+            {
+              id: 'pe-overview',
+              label: t('sidebar.overview'),
+              icon: RocketLaunchIcon,
+              path: '/solutions/product-development'
+            },
+            {
+              id: 'knowledge-graph-extraction',
+              label: t('sidebar.knowledgeGraphExtraction'),
+              icon: SparklesIcon,
+              path: '/solutions/product-development/extraction'
+            },
+            {
+              id: 'stakeholder-validation',
+              label: t('sidebar.stakeholderValidation'),
+              icon: UserGroupIcon,
+              path: '/solutions/product-development/validation'
+            },
+            {
+              id: 'implementation-pipeline',
+              label: t('sidebar.implementationPipeline'),
+              icon: CodeBracketIcon,
+              path: '/solutions/product-development/implementation'
+            }
+          ]
+        },
+        {
+          id: 'application-reengineering',
+          label: t('sidebar.applicationReengineering'),
+          icon: WrenchScrewdriverIcon,
+          children: [
+            {
+              id: 'app-reeng-overview',
+              label: t('sidebar.overview'),
+              icon: WrenchScrewdriverIcon,
+              path: '/solutions/application-reengineering'
+            },
+            {
+              id: 'discovery-assessment',
+              label: t('sidebar.discoveryAssessment'),
+              icon: SparklesIcon,
+              path: '/solutions/application-reengineering/discovery'
+            },
+            {
+              id: 'reengineering-strategy',
+              label: t('sidebar.reengineeringStrategy'),
+              icon: UserGroupIcon,
+              path: '/solutions/application-reengineering/strategy'
+            },
+            {
+              id: 'implementation-modernization',
+              label: t('sidebar.implementationModernization'),
+              icon: CodeBracketIcon,
+              path: '/solutions/application-reengineering/implementation'
+            },
+            {
+              id: 'continuous-validation',
+              label: t('sidebar.continuousValidation'),
+              icon: ShieldCheckIcon,
+              path: '/solutions/application-reengineering/validation'
+            }
+          ]
+        },
+        {
+          id: 'portfolio',
+          label: t('sidebar.portfolioRationalization'),
+          icon: PuzzlePieceIcon,
+          children: [
+            {
+              id: 'portfolio-overview',
+              label: t('sidebar.overview'),
+              icon: DocumentChartBarIcon,
+              path: '/portfolio'
+            },
+            {
+              id: 'graph-explorer',
+              label: t('sidebar.ontologyGraphExplorer'),
+              icon: CubeTransparentIcon,
+              path: '/portfolio/graph-explorer'
+            },
+            {
+              id: 'component-comparator',
+              label: t('sidebar.componentComparator'),
+              icon: ScaleIcon,
+              path: '/portfolio/component-comparator'
+            },
+            {
+              id: 'rationalization-roadmap',
+              label: t('sidebar.rationalizationRoadmap'),
+              icon: MapIcon,
+              path: '/portfolio/rationalization-roadmap'
+            },
+            {
+              id: 'unified-product',
+              label: t('sidebar.unifiedProductView'),
+              icon: BeakerIcon,
+              path: '/portfolio/unified-product'
+            }
+          ]
+        },
+        {
+          id: 'asimov-migration',
+          label: t('sidebar.asimovLegacyMigration'),
+          icon: ArrowPathIcon,
+          children: [
+            {
+              id: 'asimov-overview',
+              label: t('sidebar.overview'),
+              icon: ArrowPathIcon,
+              path: '/solutions/asimov'
+            },
+            {
+              id: 'discovery-analysis',
+              label: t('sidebar.discoveryAnalysis'),
+              icon: DocumentMagnifyingGlassIcon,
+              path: '/solutions/asimov/discovery'
+            },
+            {
+              id: 'transformation-engine',
+              label: t('sidebar.transformationEngine'),
+              icon: CpuChipIcon,
+              path: '/solutions/asimov/transformation'
+            },
+            {
+              id: 'migration-patterns',
+              label: t('sidebar.migrationPatterns'),
+              icon: CodeBracketIcon,
+              path: '/solutions/asimov/patterns'
+            },
+            {
+              id: 'success-stories',
+              label: t('sidebar.successStories'),
+              icon: ChartBarIcon,
+              path: '/solutions/asimov/success-stories'
+            }
+          ]
+        },
+        {
+          id: 'customer-service-deep',
+          label: t('sidebar.customerServiceAI'),
+          icon: PhoneIcon,
+          children: [
+            {
+              id: 'cs-overview',
+              label: t('sidebar.overview'),
+              icon: PhoneIcon,
+              path: '/solutions/customer-service'
+            },
+            {
+              id: 'self-heal-bot',
+              label: t('sidebar.selfHealBot'),
+              icon: SparklesIcon,
+              path: '/solutions/customer-service/self-heal-bot'
+            },
+            {
+              id: 'assisted-heal-bot',
+              label: t('sidebar.assistedHealBot'),
+              icon: UserGroupIcon,
+              path: '/solutions/customer-service/assisted-heal-bot'
+            },
+            {
+              id: 'optimization-hub',
+              label: t('sidebar.optimizationHub'),
+              icon: ChartBarIcon,
+              path: '/solutions/customer-service/optimization-hub'
+            },
+            {
+              id: 'implementation',
+              label: t('sidebar.implementation'),
+              icon: MapIcon,
+              path: '/solutions/customer-service/implementation'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: 'breeze-process-model',
+      label: t('sidebar.breezeAIDeepDive'),
+      icon: Bars3Icon,
+      children: [
+        {
+          id: 'breeze-challenge',
+          label: t('sidebar.challengeSolution'),
+          icon: LightBulbIcon,
+          children: [
+            {
+              id: 'manual-translation-tax',
+              label: t('sidebar.manualTranslationTax'),
+              icon: DocumentChartBarIcon,
+              path: '/breeze-process/challenge/manual-translation-tax'
+            },
+            {
+              id: 'traditional-approaches',
+              label: t('sidebar.whyTraditionalFails'),
+              icon: XMarkIcon,
+              path: '/breeze-process/challenge/traditional-approaches'
+            },
+            {
+              id: 'breeze-breakthrough',
+              label: t('sidebar.breezeBreakthrough'),
+              icon: SparklesIcon,
+              path: '/breeze-process/challenge/breakthrough'
+            },
+            {
+              id: 'revolutionary-capabilities',
+              label: t('sidebar.revolutionaryCapabilities'),
+              icon: RocketLaunchIcon,
+              path: '/breeze-process/challenge/capabilities'
+            },
+            {
+              id: 'legacy-transformation',
+              label: t('sidebar.legacyTransformation'),
+              icon: ArrowPathIcon,
+              path: '/breeze-process/challenge/legacy'
+            },
+            {
+              id: 'competitive-advantages',
+              label: t('sidebar.competitiveAdvantages'),
+              icon: ChartBarIcon,
+              path: '/breeze-process/challenge/advantages'
+            }
+          ]
+        },
+        {
+          id: 'breeze-architecture',
+          label: t('sidebar.systemArchitecture'),
+          icon: CpuChipIcon,
+          children: [
+            {
+              id: 'architecture-overview',
+              label: t('sidebar.architectureOverview'),
+              icon: CubeTransparentIcon,
+              path: '/breeze-process/architecture/overview'
+            },
+            {
+              id: 'core-components',
+              label: t('sidebar.coreComponents'),
+              icon: PuzzlePieceIcon,
+              path: '/breeze-process/architecture/components'
+            },
+            {
+              id: 'component-interactions',
+              label: t('sidebar.componentInteractions'),
+              icon: ArrowPathIcon,
+              path: '/breeze-process/architecture/interactions'
+            },
+            {
+              id: 'integration-points',
+              label: t('sidebar.integrationPoints'),
+              icon: CircleStackIcon,
+              path: '/breeze-process/architecture/integration'
+            },
+            {
+              id: 'scalability-performance',
+              label: t('sidebar.scalabilityPerformance'),
+              icon: ArrowTrendingUpIcon,
+              path: '/breeze-process/architecture/scalability'
+            },
+            {
+              id: 'security-compliance',
+              label: t('sidebar.securityCompliance'),
+              icon: ScaleIcon,
+              path: '/breeze-process/architecture/security'
+            }
+          ]
+        },
+        {
+          id: 'breeze-semantic-model',
+          label: t('sidebar.semanticModel'),
+          icon: CircleStackIcon,
+          children: [
+            {
+              id: 'semantic-overview',
+              label: t('sidebar.frameworkOverview'),
+              icon: DocumentChartBarIcon,
+              path: '/breeze-process/semantic/overview'
+            },
+            {
+              id: 'functional-ontology',
+              label: t('sidebar.functionalOntology'),
+              icon: BeakerIcon,
+              path: '/breeze-process/semantic/functional'
+            },
+            {
+              id: 'design-ontology',
+              label: t('sidebar.designOntology'),
+              icon: PuzzlePieceIcon,
+              path: '/breeze-process/semantic/design'
+            },
+            {
+              id: 'architecture-ontology',
+              label: t('sidebar.architectureOntology'),
+              icon: CubeTransparentIcon,
+              path: '/breeze-process/semantic/architecture'
+            },
+            {
+              id: 'code-ontology',
+              label: t('sidebar.codeOntology'),
+              icon: CodeBracketIcon,
+              path: '/breeze-process/semantic/code'
+            },
+            {
+              id: 'cross-relationships',
+              label: t('sidebar.crossOntologyRelationships'),
+              icon: ArrowPathIcon,
+              path: '/breeze-process/semantic/relationships'
+            },
+            {
+              id: 'agents-layer',
+              label: t('sidebar.agentsLayer'),
+              icon: SparklesIcon,
+              path: '/breeze-process/semantic/agents'
+            }
+          ]
+        },
+        {
+          id: 'breeze-process-flow',
+          label: t('sidebar.processFlow'),
+          icon: ArrowTrendingUpIcon,
+          children: [
+            {
+              id: 'process-overview',
+              label: t('sidebar.processOverview'),
+              icon: DocumentChartBarIcon,
+              path: '/breeze-process/flow/overview'
+            },
+            {
+              id: 'phase1-foundation',
+              label: t('sidebar.phase1Foundation'),
+              icon: CubeTransparentIcon,
+              path: '/breeze-process/flow/phase1'
+            },
+            {
+              id: 'phase2-evolution',
+              label: t('sidebar.phase2Evolution'),
+              icon: ArrowTrendingUpIcon,
+              path: '/breeze-process/flow/phase2'
+            },
+            {
+              id: 'phase3-semantic-first',
+              label: t('sidebar.phase3SemanticFirst'),
+              icon: RocketLaunchIcon,
+              path: '/breeze-process/flow/phase3'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: 'contact',
+      label: t('sidebar.getStarted'),
+      icon: PhoneIcon,
+      path: '/contact'
+    }
+  ], [t]);
+
   // Initialize expanded sections based on current path
   const getInitialExpandedSections = () => {
     const expanded = new Set<string>();
-    
+
     // Auto-expand ONLY the section that contains the active path
     menuItems.forEach(item => {
       if (item.children) {
         const shouldExpand = item.children.some(child => {
           if (child.path && pathname.startsWith(child.path)) return true;
           if (child.children) {
-            return child.children.some(grandchild => 
+            return child.children.some(grandchild =>
               grandchild.path && pathname.startsWith(grandchild.path)
             );
           }
@@ -540,23 +543,23 @@ const MainSidebar: React.FC = () => {
         }
       }
     });
-    
+
     return expanded;
   };
-  
+
   const [expandedSections, setExpandedSections] = useState<Set<string>>(getInitialExpandedSections());
 
   // Update expanded sections when location changes
   useEffect(() => {
     const expanded = new Set<string>();
-    
+
     // Auto-expand ONLY the section that contains the active path
     menuItems.forEach(item => {
       if (item.children) {
         const shouldExpand = item.children.some(child => {
           if (child.path && pathname.startsWith(child.path)) return true;
           if (child.children) {
-            return child.children.some(grandchild => 
+            return child.children.some(grandchild =>
               grandchild.path && pathname.startsWith(grandchild.path)
             );
           }
@@ -578,16 +581,16 @@ const MainSidebar: React.FC = () => {
         }
       }
     });
-    
+
     setExpandedSections(expanded);
-  }, [pathname]);
+  }, [pathname, menuItems]);
 
   const toggleSection = (sectionId: string) => {
     const newExpanded = new Set<string>();
-    
+
     // Find if this is a top-level section
     const isTopLevel = menuItems.some(item => item.id === sectionId);
-    
+
     if (isTopLevel) {
       // For top-level sections, collapse all others and toggle this one
       if (!expandedSections.has(sectionId)) {
@@ -609,7 +612,7 @@ const MainSidebar: React.FC = () => {
           }
         }
       });
-      
+
       // Toggle the nested section
       if (expandedSections.has(sectionId)) {
         // Closing nested section
@@ -617,7 +620,7 @@ const MainSidebar: React.FC = () => {
         newExpanded.add(sectionId);
       }
     }
-    
+
     setExpandedSections(newExpanded);
   };
 
@@ -652,7 +655,7 @@ const MainSidebar: React.FC = () => {
     const hasChildren = item.children && item.children.length > 0;
     const isExpanded = expandedSections.has(item.id);
     const Icon = item.icon;
-    
+
     // Check if this parent item should be highlighted
     const hasActiveChild = hasChildren && isParentActive(item);
 
@@ -663,7 +666,7 @@ const MainSidebar: React.FC = () => {
             onClick={() => !isMobile && toggleSection(item.id)}
             className={`
               w-full flex items-center justify-between px-3 py-2 rounded-lg relative group
-              ${hasActiveChild ? 'bg-blue-50 text-blue-700' : 'text-gray-700'} 
+              ${hasActiveChild ? 'bg-blue-50 text-blue-700' : 'text-gray-700'}
               hover:bg-gray-100 transition-colors
               ${depth > 0 ? 'ml-3' : ''}
               ${isMobile ? 'cursor-default' : ''}
@@ -675,7 +678,7 @@ const MainSidebar: React.FC = () => {
               <span className="text-sm font-medium">{item.label}</span>
             </div>
             {!isMobile && (
-              <ChevronRightIcon 
+              <ChevronRightIcon
                 className={`h-4 w-4 text-gray-400 transition-transform ${isExpanded ? 'rotate-90' : ''}`}
               />
             )}
@@ -690,7 +693,7 @@ const MainSidebar: React.FC = () => {
     }
 
     const marginClass = depth === 1 ? 'ml-8' : depth === 2 ? 'ml-12' : depth > 2 ? 'ml-16' : '';
-    
+
     return (
       <Link
         key={item.id}
@@ -699,8 +702,8 @@ const MainSidebar: React.FC = () => {
         className={`
           flex items-center px-3 py-2 rounded-lg mb-1 transition-colors relative group
           ${marginClass}
-          ${isActive(item.path) 
-            ? 'bg-brand-blue-50 text-secondary border-l-4 border-secondary' 
+          ${isActive(item.path)
+            ? 'bg-brand-blue-50 text-secondary border-l-4 border-secondary'
             : 'text-gray-700 hover:bg-gray-100'
           }
         `}
@@ -748,7 +751,7 @@ const MainSidebar: React.FC = () => {
               <span className="font-bold text-gray-900">Accion AI Labs</span>
             </Link>
           </div>
-          
+
           {/* Desktop header */}
           <div className="hidden md:flex md:items-center md:justify-between md:w-full">
             <Link to="/" className="flex items-center">
@@ -757,6 +760,7 @@ const MainSidebar: React.FC = () => {
               </div>
               <span className="font-bold text-gray-900">Accion AI Labs</span>
             </Link>
+            <LanguageSwitcher />
           </div>
         </div>
 
@@ -780,7 +784,7 @@ const MainSidebar: React.FC = () => {
 
       {/* Overlay for mobile */}
       {isMobileMenuOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black bg-opacity-50 z-[9997] md:hidden"
           onClick={() => setIsMobileMenuOpen(false)}
         />

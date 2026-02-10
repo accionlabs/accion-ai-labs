@@ -14,79 +14,53 @@ import {
   PuzzlePieceIcon,
   ChartBarIcon
 } from '@heroicons/react/24/outline';
+import { useTranslation } from 'react-i18next';
 
 const PortfolioRationalizationShowcase: React.FC = () => {
+  const { t } = useTranslation('solutions');
   const capabilities = [
     {
       icon: MagnifyingGlassCircleIcon,
-      title: "Semantic Analysis",
-      description: "Deep understanding of application functionality across different technology stacks"
+      titleKey: 'portfolioRationalization.capabilities.semanticAnalysis.title',
+      descriptionKey: 'portfolioRationalization.capabilities.semanticAnalysis.description'
     },
     {
       icon: DocumentDuplicateIcon,
-      title: "Overlap Detection",
-      description: "AI-powered identification of functional redundancies and duplications"
+      titleKey: 'portfolioRationalization.capabilities.overlapDetection.title',
+      descriptionKey: 'portfolioRationalization.capabilities.overlapDetection.description'
     },
     {
       icon: PuzzlePieceIcon,
-      title: "Integration Mapping",
-      description: "Comprehensive analysis of system dependencies and data flows"
+      titleKey: 'portfolioRationalization.capabilities.integrationMapping.title',
+      descriptionKey: 'portfolioRationalization.capabilities.integrationMapping.description'
     },
     {
       icon: ScaleIcon,
-      title: "Consolidation Planning",
-      description: "Strategic recommendations for application merger and retirement"
+      titleKey: 'portfolioRationalization.capabilities.consolidationPlanning.title',
+      descriptionKey: 'portfolioRationalization.capabilities.consolidationPlanning.description'
     }
   ];
 
-  const metrics = [
-    { label: "Applications", value: "500+", subtext: "Analyzed" },
-    { label: "Cost Reduction", value: "35%", subtext: "Average savings" },
-    { label: "Redundancy", value: "42%", subtext: "Identified overlaps" },
-    { label: "Time to Value", value: "8 weeks", subtext: "Full assessment" }
-  ];
+  const metricKeys = ['applications', 'costReduction', 'redundancy', 'timeToValue'] as const;
 
-  const ontologyLayers = [
-    {
-      name: "Functional",
-      description: "Business capabilities and user journeys",
-      examples: ["Customer onboarding", "Order processing", "Payment handling"]
-    },
-    {
-      name: "Design",
-      description: "System patterns and architectural decisions",
-      examples: ["Microservices", "Event-driven", "API gateway"]
-    },
-    {
-      name: "Architecture",
-      description: "Technology stack and infrastructure",
-      examples: ["Cloud platforms", "Databases", "Message queues"]
-    },
-    {
-      name: "Code",
-      description: "Implementation details and libraries",
-      examples: ["Frameworks", "Dependencies", "Code patterns"]
-    }
-  ];
+  const ontologyLayerKeys = ['functional', 'design', 'architecture', 'code'] as const;
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
       {/* Header */}
       <div className="mb-12">
         <div className="flex items-center justify-between mb-6">
-          <h1 className="text-3xl font-bold text-gray-900">Portfolio Rationalization</h1>
+          <h1 className="text-3xl font-bold text-gray-900">{t('portfolioRationalization.header.title')}</h1>
           <Link
             to="/portfolio"
             className="inline-flex items-center px-4 py-2 bg-innovation-gradient text-white rounded-lg hover:from-brand-blue-700 hover:to-brand-purple-700 transition-all"
           >
-            View Deep Dive
+            {t('portfolioRationalization.header.viewDeepDive')}
             <ArrowRightIcon className="ml-2 h-4 w-4" />
           </Link>
         </div>
         <p className="text-lg text-gray-600 max-w-4xl">
-          AI-driven application portfolio analysis that identifies redundancies, overlaps, and 
-          consolidation opportunities across your entire software estate using our four-ontology 
-          semantic framework.
+          {t('portfolioRationalization.header.description')}
         </p>
       </div>
 
@@ -97,18 +71,18 @@ const PortfolioRationalizationShowcase: React.FC = () => {
             <CubeTransparentIcon className="h-8 w-8 text-white" />
           </div>
           <div className="ml-4">
-            <h2 className="text-2xl font-bold text-gray-900">Optimize Your Application Portfolio</h2>
-            <p className="text-gray-600">Semantic analysis reveals hidden redundancies and consolidation opportunities</p>
+            <h2 className="text-2xl font-bold text-gray-900">{t('portfolioRationalization.hero.title')}</h2>
+            <p className="text-gray-600">{t('portfolioRationalization.hero.subtitle')}</p>
           </div>
         </div>
 
         {/* Key Metrics */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
-          {metrics.map((metric, idx) => (
-            <div key={idx} className="bg-white rounded-lg p-4">
-              <div className="text-2xl font-bold text-gray-900">{metric.value}</div>
-              <div className="text-sm font-semibold text-gray-700">{metric.label}</div>
-              <div className="text-xs text-gray-500">{metric.subtext}</div>
+          {metricKeys.map((key) => (
+            <div key={key} className="bg-white rounded-lg p-4">
+              <div className="text-2xl font-bold text-gray-900">{t(`portfolioRationalization.metrics.${key}.value`)}</div>
+              <div className="text-sm font-semibold text-gray-700">{t(`portfolioRationalization.metrics.${key}.label`)}</div>
+              <div className="text-xs text-gray-500">{t(`portfolioRationalization.metrics.${key}.subtext`)}</div>
             </div>
           ))}
         </div>
@@ -116,18 +90,18 @@ const PortfolioRationalizationShowcase: React.FC = () => {
 
       {/* Four Ontology Framework */}
       <div className="mb-12">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Four-Ontology Semantic Framework</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('portfolioRationalization.framework.title')}</h2>
         <div className="bg-gradient-to-br from-gray-50 to-secondary/10 rounded-xl p-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {ontologyLayers.map((layer, idx) => (
-              <div key={idx} className="bg-white rounded-lg p-6 border-2 border-secondary hover:shadow-lg transition-all">
+            {ontologyLayerKeys.map((layerKey, idx) => (
+              <div key={layerKey} className="bg-white rounded-lg p-6 border-2 border-secondary hover:shadow-lg transition-all">
                 <div className="flex items-center justify-between mb-3">
-                  <h3 className="font-semibold text-gray-900">{layer.name}</h3>
-                  <span className="text-xs bg-secondary/10 text-secondary px-2 py-1 rounded">Layer {idx + 1}</span>
+                  <h3 className="font-semibold text-gray-900">{t(`portfolioRationalization.framework.layers.${layerKey}.name`)}</h3>
+                  <span className="text-xs bg-secondary/10 text-secondary px-2 py-1 rounded">{t('portfolioRationalization.framework.layerLabel')} {idx + 1}</span>
                 </div>
-                <p className="text-sm text-gray-600 mb-3">{layer.description}</p>
+                <p className="text-sm text-gray-600 mb-3">{t(`portfolioRationalization.framework.layers.${layerKey}.description`)}</p>
                 <div className="space-y-1">
-                  {layer.examples.map((example, exIdx) => (
+                  {(t(`portfolioRationalization.framework.layers.${layerKey}.examples`, { returnObjects: true }) as unknown as string[]).map((example: string, exIdx: number) => (
                     <div key={exIdx} className="text-xs text-gray-500 flex items-start">
                       <span className="text-secondary mr-2">•</span>
                       {example}
@@ -142,7 +116,7 @@ const PortfolioRationalizationShowcase: React.FC = () => {
 
       {/* Core Capabilities */}
       <div className="mb-12">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Core Capabilities</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('portfolioRationalization.capabilities.title')}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {capabilities.map((capability, idx) => (
             <div key={idx} className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all">
@@ -151,8 +125,8 @@ const PortfolioRationalizationShowcase: React.FC = () => {
                   <capability.icon className="h-6 w-6 text-brand-purple-600" />
                 </div>
                 <div className="ml-4">
-                  <h3 className="font-semibold text-gray-900 mb-2">{capability.title}</h3>
-                  <p className="text-sm text-gray-600">{capability.description}</p>
+                  <h3 className="font-semibold text-gray-900 mb-2">{t(capability.titleKey)}</h3>
+                  <p className="text-sm text-gray-600">{t(capability.descriptionKey)}</p>
                 </div>
               </div>
             </div>
@@ -162,7 +136,7 @@ const PortfolioRationalizationShowcase: React.FC = () => {
 
       {/* Analysis Process */}
       <div className="mb-12">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Rationalization Process</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('portfolioRationalization.process.title')}</h2>
         <div className="bg-white border border-gray-200 rounded-xl p-8">
           <div className="space-y-6">
             <div className="flex items-start">
@@ -170,14 +144,14 @@ const PortfolioRationalizationShowcase: React.FC = () => {
                 1
               </div>
               <div className="ml-4 flex-1">
-                <h3 className="font-semibold text-gray-900 mb-2">Discovery & Ingestion</h3>
+                <h3 className="font-semibold text-gray-900 mb-2">{t('portfolioRationalization.process.steps.discovery.title')}</h3>
                 <p className="text-sm text-gray-600 mb-2">
-                  Automated discovery and semantic analysis of all applications in your portfolio
+                  {t('portfolioRationalization.process.steps.discovery.description')}
                 </p>
                 <div className="flex items-center space-x-4 text-xs text-gray-500">
-                  <span>Duration: 1-2 weeks</span>
+                  <span>{t('portfolioRationalization.process.steps.discovery.duration')}</span>
                   <span>•</span>
-                  <span>500+ apps analyzed</span>
+                  <span>{t('portfolioRationalization.process.steps.discovery.metric')}</span>
                 </div>
               </div>
             </div>
@@ -187,14 +161,14 @@ const PortfolioRationalizationShowcase: React.FC = () => {
                 2
               </div>
               <div className="ml-4 flex-1">
-                <h3 className="font-semibold text-gray-900 mb-2">Overlap Analysis</h3>
+                <h3 className="font-semibold text-gray-900 mb-2">{t('portfolioRationalization.process.steps.overlap.title')}</h3>
                 <p className="text-sm text-gray-600 mb-2">
-                  AI-powered detection of functional redundancies across all four ontology layers
+                  {t('portfolioRationalization.process.steps.overlap.description')}
                 </p>
                 <div className="flex items-center space-x-4 text-xs text-gray-500">
-                  <span>Duration: 2-3 weeks</span>
+                  <span>{t('portfolioRationalization.process.steps.overlap.duration')}</span>
                   <span>•</span>
-                  <span>42% average overlap found</span>
+                  <span>{t('portfolioRationalization.process.steps.overlap.metric')}</span>
                 </div>
               </div>
             </div>
@@ -204,14 +178,14 @@ const PortfolioRationalizationShowcase: React.FC = () => {
                 3
               </div>
               <div className="ml-4 flex-1">
-                <h3 className="font-semibold text-gray-900 mb-2">Consolidation Planning</h3>
+                <h3 className="font-semibold text-gray-900 mb-2">{t('portfolioRationalization.process.steps.consolidation.title')}</h3>
                 <p className="text-sm text-gray-600 mb-2">
-                  Strategic recommendations for application merger, modernization, or retirement
+                  {t('portfolioRationalization.process.steps.consolidation.description')}
                 </p>
                 <div className="flex items-center space-x-4 text-xs text-gray-500">
-                  <span>Duration: 1-2 weeks</span>
+                  <span>{t('portfolioRationalization.process.steps.consolidation.duration')}</span>
                   <span>•</span>
-                  <span>Detailed roadmap provided</span>
+                  <span>{t('portfolioRationalization.process.steps.consolidation.metric')}</span>
                 </div>
               </div>
             </div>
@@ -221,14 +195,14 @@ const PortfolioRationalizationShowcase: React.FC = () => {
                 4
               </div>
               <div className="ml-4 flex-1">
-                <h3 className="font-semibold text-gray-900 mb-2">Implementation Support</h3>
+                <h3 className="font-semibold text-gray-900 mb-2">{t('portfolioRationalization.process.steps.implementation.title')}</h3>
                 <p className="text-sm text-gray-600 mb-2">
-                  Ongoing guidance and automation support for portfolio optimization
+                  {t('portfolioRationalization.process.steps.implementation.description')}
                 </p>
                 <div className="flex items-center space-x-4 text-xs text-gray-500">
-                  <span>Duration: Ongoing</span>
+                  <span>{t('portfolioRationalization.process.steps.implementation.duration')}</span>
                   <span>•</span>
-                  <span>35% cost reduction achieved</span>
+                  <span>{t('portfolioRationalization.process.steps.implementation.metric')}</span>
                 </div>
               </div>
             </div>
@@ -238,17 +212,17 @@ const PortfolioRationalizationShowcase: React.FC = () => {
 
       {/* Visual Analysis Example */}
       <div className="mb-12">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Visual Portfolio Analysis</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('portfolioRationalization.visualAnalysis.title')}</h2>
         <div className="bg-gradient-to-r from-brand-purple-50 to-secondary/10 rounded-xl p-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white rounded-lg p-6 border border-brand-purple-200">
               <div className="flex items-center mb-3">
                 <ChartPieIcon className="h-6 w-6 text-brand-purple-600 mr-2" />
-                <h3 className="font-semibold text-gray-900">Coverage Analysis</h3>
+                <h3 className="font-semibold text-gray-900">{t('portfolioRationalization.visualAnalysis.coverageAnalysis.title')}</h3>
               </div>
               <div className="space-y-2">
                 <div className="flex justify-between text-sm">
-                  <span className="text-gray-600">Analyzed</span>
+                  <span className="text-gray-600">{t('portfolioRationalization.visualAnalysis.coverageAnalysis.analyzed')}</span>
                   <span className="font-semibold">100%</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2">
@@ -260,11 +234,11 @@ const PortfolioRationalizationShowcase: React.FC = () => {
             <div className="bg-white rounded-lg p-6 border border-secondary">
               <div className="flex items-center mb-3">
                 <ServerStackIcon className="h-6 w-6 text-secondary mr-2" />
-                <h3 className="font-semibold text-gray-900">Redundancy Detection</h3>
+                <h3 className="font-semibold text-gray-900">{t('portfolioRationalization.visualAnalysis.redundancyDetection.title')}</h3>
               </div>
               <div className="space-y-2">
                 <div className="flex justify-between text-sm">
-                  <span className="text-gray-600">Overlaps</span>
+                  <span className="text-gray-600">{t('portfolioRationalization.visualAnalysis.redundancyDetection.overlaps')}</span>
                   <span className="font-semibold">42%</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2">
@@ -276,11 +250,11 @@ const PortfolioRationalizationShowcase: React.FC = () => {
             <div className="bg-white rounded-lg p-6 border border-success">
               <div className="flex items-center mb-3">
                 <CurrencyDollarIcon className="h-6 w-6 text-success mr-2" />
-                <h3 className="font-semibold text-gray-900">Cost Savings</h3>
+                <h3 className="font-semibold text-gray-900">{t('portfolioRationalization.visualAnalysis.costSavings.title')}</h3>
               </div>
               <div className="space-y-2">
                 <div className="flex justify-between text-sm">
-                  <span className="text-gray-600">Reduction</span>
+                  <span className="text-gray-600">{t('portfolioRationalization.visualAnalysis.costSavings.reduction')}</span>
                   <span className="font-semibold">35%</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2">
@@ -294,50 +268,50 @@ const PortfolioRationalizationShowcase: React.FC = () => {
 
       {/* AI Agent Teams */}
       <div className="mb-12">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Intelligent Agent Teams</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('portfolioRationalization.agentTeams.title')}</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-white rounded-lg p-6 border-2 border-secondary">
             <div className="flex items-center mb-3">
               <SparklesIcon className="h-6 w-6 text-secondary mr-2" />
-              <h3 className="font-semibold text-gray-900">Discovery Agents</h3>
+              <h3 className="font-semibold text-gray-900">{t('portfolioRationalization.agentTeams.discovery.title')}</h3>
             </div>
             <p className="text-sm text-gray-600 mb-3">
-              Crawl codebases and documentation to build semantic models
+              {t('portfolioRationalization.agentTeams.discovery.description')}
             </p>
             <ul className="text-xs text-gray-500 space-y-1">
-              <li>• Code parsers</li>
-              <li>• API analyzers</li>
-              <li>• Doc extractors</li>
+              {(t('portfolioRationalization.agentTeams.discovery.items', { returnObjects: true }) as unknown as string[]).map((item: string, idx: number) => (
+                <li key={idx}>• {item}</li>
+              ))}
             </ul>
           </div>
 
           <div className="bg-white rounded-lg p-6 border-2 border-brand-purple-200">
             <div className="flex items-center mb-3">
               <ChartBarIcon className="h-6 w-6 text-brand-purple-600 mr-2" />
-              <h3 className="font-semibold text-gray-900">Analysis Agents</h3>
+              <h3 className="font-semibold text-gray-900">{t('portfolioRationalization.agentTeams.analysis.title')}</h3>
             </div>
             <p className="text-sm text-gray-600 mb-3">
-              Identify patterns, overlaps, and optimization opportunities
+              {t('portfolioRationalization.agentTeams.analysis.description')}
             </p>
             <ul className="text-xs text-gray-500 space-y-1">
-              <li>• Pattern matchers</li>
-              <li>• Overlap detectors</li>
-              <li>• Cost analyzers</li>
+              {(t('portfolioRationalization.agentTeams.analysis.items', { returnObjects: true }) as unknown as string[]).map((item: string, idx: number) => (
+                <li key={idx}>• {item}</li>
+              ))}
             </ul>
           </div>
 
           <div className="bg-white rounded-lg p-6 border-2 border-success">
             <div className="flex items-center mb-3">
               <ArrowPathIcon className="h-6 w-6 text-success mr-2" />
-              <h3 className="font-semibold text-gray-900">Planning Agents</h3>
+              <h3 className="font-semibold text-gray-900">{t('portfolioRationalization.agentTeams.planning.title')}</h3>
             </div>
             <p className="text-sm text-gray-600 mb-3">
-              Generate consolidation strategies and migration paths
+              {t('portfolioRationalization.agentTeams.planning.description')}
             </p>
             <ul className="text-xs text-gray-500 space-y-1">
-              <li>• Strategy builders</li>
-              <li>• Risk assessors</li>
-              <li>• Roadmap generators</li>
+              {(t('portfolioRationalization.agentTeams.planning.items', { returnObjects: true }) as unknown as string[]).map((item: string, idx: number) => (
+                <li key={idx}>• {item}</li>
+              ))}
             </ul>
           </div>
         </div>
@@ -345,28 +319,28 @@ const PortfolioRationalizationShowcase: React.FC = () => {
 
       {/* Success Story */}
       <div className="bg-white border border-gray-200 rounded-xl p-8">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Success Story</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('portfolioRationalization.successStory.title')}</h2>
         <div className="border-l-4 border-secondary pl-6">
-          <h3 className="font-semibold text-gray-900 mb-2">Global E-commerce Platform</h3>
+          <h3 className="font-semibold text-gray-900 mb-2">{t('portfolioRationalization.successStory.client')}</h3>
           <p className="text-gray-600 mb-4">
-            Analyzed 500+ applications across multiple business units to identify consolidation opportunities
+            {t('portfolioRationalization.successStory.description')}
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div>
-              <div className="text-2xl font-bold text-secondary">127</div>
-              <div className="text-sm text-gray-600">Apps retired</div>
+              <div className="text-2xl font-bold text-secondary">{t('portfolioRationalization.successStory.appsRetired.value')}</div>
+              <div className="text-sm text-gray-600">{t('portfolioRationalization.successStory.appsRetired.label')}</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-brand-purple-600">35%</div>
-              <div className="text-sm text-gray-600">Cost reduction</div>
+              <div className="text-2xl font-bold text-brand-purple-600">{t('portfolioRationalization.successStory.costReduction.value')}</div>
+              <div className="text-sm text-gray-600">{t('portfolioRationalization.successStory.costReduction.label')}</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-success">60%</div>
-              <div className="text-sm text-gray-600">Faster delivery</div>
+              <div className="text-2xl font-bold text-success">{t('portfolioRationalization.successStory.fasterDelivery.value')}</div>
+              <div className="text-sm text-gray-600">{t('portfolioRationalization.successStory.fasterDelivery.label')}</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-warning">8 weeks</div>
-              <div className="text-sm text-gray-600">To insights</div>
+              <div className="text-2xl font-bold text-warning">{t('portfolioRationalization.successStory.timeToInsights.value')}</div>
+              <div className="text-sm text-gray-600">{t('portfolioRationalization.successStory.timeToInsights.label')}</div>
             </div>
           </div>
         </div>

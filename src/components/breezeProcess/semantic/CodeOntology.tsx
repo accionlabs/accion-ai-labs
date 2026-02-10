@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface CodeOntologyNewProps {
   onNavigate?: (screenId: string) => void;
@@ -6,62 +7,91 @@ interface CodeOntologyNewProps {
 }
 
 const CodeOntologyNew: React.FC<CodeOntologyNewProps> = () => {
-  const technologyStacks = [
+  const { t } = useTranslation('breezeProcess');
+
+  const frontendLayers = React.useMemo(() => [
+    { layer: t('semantic.code.frontendLayers.items.0.layer'), description: t('semantic.code.frontendLayers.items.0.description'), example: t('semantic.code.frontendLayers.items.0.example') },
+    { layer: t('semantic.code.frontendLayers.items.1.layer'), description: t('semantic.code.frontendLayers.items.1.description'), example: t('semantic.code.frontendLayers.items.1.example') },
+    { layer: t('semantic.code.frontendLayers.items.2.layer'), description: t('semantic.code.frontendLayers.items.2.description'), example: t('semantic.code.frontendLayers.items.2.example') },
+    { layer: t('semantic.code.frontendLayers.items.3.layer'), description: t('semantic.code.frontendLayers.items.3.description'), example: t('semantic.code.frontendLayers.items.3.example') },
+    { layer: t('semantic.code.frontendLayers.items.4.layer'), description: t('semantic.code.frontendLayers.items.4.description'), example: t('semantic.code.frontendLayers.items.4.example') },
+    { layer: t('semantic.code.frontendLayers.items.5.layer'), description: t('semantic.code.frontendLayers.items.5.description'), example: t('semantic.code.frontendLayers.items.5.example') }
+  ], [t]);
+
+  const backendLayers = React.useMemo(() => [
+    { layer: t('semantic.code.backendLayers.items.0.layer'), description: t('semantic.code.backendLayers.items.0.description'), example: t('semantic.code.backendLayers.items.0.example') },
+    { layer: t('semantic.code.backendLayers.items.1.layer'), description: t('semantic.code.backendLayers.items.1.description'), example: t('semantic.code.backendLayers.items.1.example') },
+    { layer: t('semantic.code.backendLayers.items.2.layer'), description: t('semantic.code.backendLayers.items.2.description'), example: t('semantic.code.backendLayers.items.2.example') },
+    { layer: t('semantic.code.backendLayers.items.3.layer'), description: t('semantic.code.backendLayers.items.3.description'), example: t('semantic.code.backendLayers.items.3.example') },
+    { layer: t('semantic.code.backendLayers.items.4.layer'), description: t('semantic.code.backendLayers.items.4.description'), example: t('semantic.code.backendLayers.items.4.example') },
+    { layer: t('semantic.code.backendLayers.items.5.layer'), description: t('semantic.code.backendLayers.items.5.description'), example: t('semantic.code.backendLayers.items.5.example') }
+  ], [t]);
+
+  const dataLayers = React.useMemo(() => [
+    { layer: t('semantic.code.dataLayers.items.0.layer'), description: t('semantic.code.dataLayers.items.0.description'), example: t('semantic.code.dataLayers.items.0.example') },
+    { layer: t('semantic.code.dataLayers.items.1.layer'), description: t('semantic.code.dataLayers.items.1.description'), example: t('semantic.code.dataLayers.items.1.example') },
+    { layer: t('semantic.code.dataLayers.items.2.layer'), description: t('semantic.code.dataLayers.items.2.description'), example: t('semantic.code.dataLayers.items.2.example') },
+    { layer: t('semantic.code.dataLayers.items.3.layer'), description: t('semantic.code.dataLayers.items.3.description'), example: t('semantic.code.dataLayers.items.3.example') },
+    { layer: t('semantic.code.dataLayers.items.4.layer'), description: t('semantic.code.dataLayers.items.4.description'), example: t('semantic.code.dataLayers.items.4.example') },
+    { layer: t('semantic.code.dataLayers.items.5.layer'), description: t('semantic.code.dataLayers.items.5.description'), example: t('semantic.code.dataLayers.items.5.example') }
+  ], [t]);
+
+  const technologyStacks = React.useMemo(() => [
     {
-      category: "Frontend",
+      category: t('semantic.code.technologyStacks.frontend.category'),
       color: "bg-brand-blue-50 border-secondary",
       stacks: [
         {
-          name: "React/TypeScript",
-          applications: "Create React App, Next.js App, Micro-frontend",
-          components: "React Components, Custom Hooks, Context Providers",
-          functions: "Event handlers, useEffect, useState, Custom hooks"
+          name: t('semantic.code.technologyStacks.frontend.stacks.0.name'),
+          applications: t('semantic.code.technologyStacks.frontend.stacks.0.applications'),
+          components: t('semantic.code.technologyStacks.frontend.stacks.0.components'),
+          functions: t('semantic.code.technologyStacks.frontend.stacks.0.functions')
         },
         {
-          name: "Vue.js",
-          applications: "Vue CLI App, Nuxt.js App, Vue Micro-frontend", 
-          components: "Vue Components, Composables, Directives",
-          functions: "Methods, Computed properties, Watchers"
+          name: t('semantic.code.technologyStacks.frontend.stacks.1.name'),
+          applications: t('semantic.code.technologyStacks.frontend.stacks.1.applications'),
+          components: t('semantic.code.technologyStacks.frontend.stacks.1.components'),
+          functions: t('semantic.code.technologyStacks.frontend.stacks.1.functions')
         }
       ]
     },
     {
-      category: "Backend",
+      category: t('semantic.code.technologyStacks.backend.category'),
       color: "bg-success-50 border-success",
       stacks: [
         {
-          name: "Node.js/Express",
-          applications: "Express Server, Serverless Functions, Microservices",
-          components: "Controllers, Services, Repositories, Middleware",
-          functions: "Route handlers, Business logic methods, Database operations"
+          name: t('semantic.code.technologyStacks.backend.stacks.0.name'),
+          applications: t('semantic.code.technologyStacks.backend.stacks.0.applications'),
+          components: t('semantic.code.technologyStacks.backend.stacks.0.components'),
+          functions: t('semantic.code.technologyStacks.backend.stacks.0.functions')
         },
         {
-          name: "Java/Spring",
-          applications: "Spring Boot Apps, Microservices, WAR deployments",
-          components: "Controllers, Services, Repositories, Configurations", 
-          functions: "REST endpoints, Service methods, Repository operations"
+          name: t('semantic.code.technologyStacks.backend.stacks.1.name'),
+          applications: t('semantic.code.technologyStacks.backend.stacks.1.applications'),
+          components: t('semantic.code.technologyStacks.backend.stacks.1.components'),
+          functions: t('semantic.code.technologyStacks.backend.stacks.1.functions')
         }
       ]
     },
     {
-      category: "Data",
-      color: "bg-brand-purple-50 border-brand-purple-600", 
+      category: t('semantic.code.technologyStacks.data.category'),
+      color: "bg-brand-purple-50 border-brand-purple-600",
       stacks: [
         {
-          name: "SQL Database",
-          applications: "Database instances, Data warehouses, OLAP systems",
-          components: "Tables, Views, Stored procedures, Functions",
-          functions: "SQL queries, Stored procedures, Triggers"
+          name: t('semantic.code.technologyStacks.data.stacks.0.name'),
+          applications: t('semantic.code.technologyStacks.data.stacks.0.applications'),
+          components: t('semantic.code.technologyStacks.data.stacks.0.components'),
+          functions: t('semantic.code.technologyStacks.data.stacks.0.functions')
         },
         {
-          name: "Data Pipeline",
-          applications: "Apache Airflow, Apache Kafka, ETL platforms",
-          components: "DAGs, Operators, Processors, Transformers",
-          functions: "Task functions, Stream processors, Data transformations"
+          name: t('semantic.code.technologyStacks.data.stacks.1.name'),
+          applications: t('semantic.code.technologyStacks.data.stacks.1.applications'),
+          components: t('semantic.code.technologyStacks.data.stacks.1.components'),
+          functions: t('semantic.code.technologyStacks.data.stacks.1.functions')
         }
       ]
     }
-  ];
+  ], [t]);
 
   return (
     <div className="max-w-6xl mx-auto">
@@ -69,21 +99,19 @@ const CodeOntologyNew: React.FC<CodeOntologyNewProps> = () => {
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-gray-800 mb-4">
           <span className="bg-gradient-to-r from-warning to-error bg-clip-text text-transparent">
-            Code Ontology
+            {t('semantic.code.header.title')}
           </span>
         </h1>
-        
+
         <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-          Physical implementation units - the actual executable code that realizes architecture and functionality. 
-          This ontology represents the concrete code structures organized by frontend, backend, and data concerns, 
-          with technology-specific implementations.
+          {t('semantic.code.header.description')}
         </p>
       </div>
 
       {/* Visual Layered Structure */}
       <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-        <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">Code Ontology Structure</h3>
-        
+        <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">{t('semantic.code.structure.title')}</h3>
+
         <div className="space-y-6">
           {/* Frontend Code Layers */}
           <div className="p-6 bg-brand-blue-50 rounded-xl border-2 border-secondary">
@@ -91,17 +119,10 @@ const CodeOntologyNew: React.FC<CodeOntologyNewProps> = () => {
               <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center">
                 <span className="text-white font-bold">F</span>
               </div>
-              <h4 className="text-xl font-bold text-secondary">Frontend Code Layers</h4>
+              <h4 className="text-xl font-bold text-secondary">{t('semantic.code.frontendLayers.title')}</h4>
             </div>
             <div className="space-y-3">
-              {[
-                { layer: "Applications", description: "Deployable frontend units", example: "React App, Vue SPA, Mobile App" },
-                { layer: "Modules", description: "Logical feature groupings", example: "ProductModule, UserModule, CartModule" },
-                { layer: "Components", description: "UI implementation units", example: "ProductCard, LoginForm, NavigationHeader" },
-                { layer: "Functions/Hooks", description: "Executable UI logic", example: "useProductData(), handleSubmit(), validateForm()" },
-                { layer: "Properties/State", description: "UI data units", example: "isLoading, userInput, selectedItems[]" },
-                { layer: "Configurations", description: "Frontend settings", example: "webpack.config, environment.json, routing.config" }
-              ].map((tier, index) => (
+              {frontendLayers.map((tier, index) => (
                 <div key={index} className="flex items-center gap-3 p-3 bg-white rounded-lg border border-secondary">
                   <div className="w-6 h-6 bg-brand-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">
                     {index + 1}
@@ -122,17 +143,10 @@ const CodeOntologyNew: React.FC<CodeOntologyNewProps> = () => {
               <div className="w-12 h-12 bg-success rounded-full flex items-center justify-center">
                 <span className="text-white font-bold">B</span>
               </div>
-              <h4 className="text-xl font-bold text-success-800">Backend Code Layers</h4>
+              <h4 className="text-xl font-bold text-success-800">{t('semantic.code.backendLayers.title')}</h4>
             </div>
             <div className="space-y-3">
-              {[
-                { layer: "Applications", description: "Deployable backend units", example: "API Service, Microservice, Serverless Function" },
-                { layer: "Modules", description: "Business domain groupings", example: "ProductModule, OrderModule, PaymentModule" },
-                { layer: "Classes/Services", description: "Business logic units", example: "ProductService, OrderController, PaymentProcessor" },
-                { layer: "Functions/Methods", description: "Executable operations", example: "createProduct(), processPayment(), GET /api/orders" },
-                { layer: "Properties/Fields", description: "Data units", example: "productId, orderTotal, apiEndpoints" },
-                { layer: "Configurations", description: "Backend settings", example: "database.config, service.yaml, security.properties" }
-              ].map((tier, index) => (
+              {backendLayers.map((tier, index) => (
                 <div key={index} className="flex items-center gap-3 p-3 bg-white rounded-lg border border-success">
                   <div className="w-6 h-6 bg-success-600 text-white rounded-full flex items-center justify-center text-xs font-bold">
                     {index + 1}
@@ -153,17 +167,10 @@ const CodeOntologyNew: React.FC<CodeOntologyNewProps> = () => {
               <div className="w-12 h-12 bg-brand-purple-600 rounded-full flex items-center justify-center">
                 <span className="text-white font-bold">D</span>
               </div>
-              <h4 className="text-xl font-bold text-brand-purple-800">Data Code Layers</h4>
+              <h4 className="text-xl font-bold text-brand-purple-800">{t('semantic.code.dataLayers.title')}</h4>
             </div>
             <div className="space-y-3">
-              {[
-                { layer: "Applications", description: "Data processing units", example: "ETL Pipeline, Analytics Engine, Data Sync Service" },
-                { layer: "Modules", description: "Data domain groupings", example: "CustomerDataModule, ProductDataModule, AnalyticsModule" },
-                { layer: "Classes/Processors", description: "Data transformation units", example: "DataValidator, SchemaMapper, AnalyticsProcessor" },
-                { layer: "Functions/Queries", description: "Data operations", example: "transformProduct(), validateSchema(), SELECT * FROM products" },
-                { layer: "Properties/Schemas", description: "Data structure definitions", example: "productSchema, customerFields, analyticsMetrics" },
-                { layer: "Configurations", description: "Data settings", example: "pipeline.yaml, schema.json, database.properties" }
-              ].map((tier, index) => (
+              {dataLayers.map((tier, index) => (
                 <div key={index} className="flex items-center gap-3 p-3 bg-white rounded-lg border border-brand-purple-600">
                   <div className="w-6 h-6 bg-brand-purple-600 text-white rounded-full flex items-center justify-center text-xs font-bold">
                     {index + 1}
@@ -182,31 +189,31 @@ const CodeOntologyNew: React.FC<CodeOntologyNewProps> = () => {
 
       {/* Technology-Specific Implementations */}
       <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-        <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">Technology-Specific Sub-Ontologies</h3>
-        
+        <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">{t('semantic.code.technologyStacks.title')}</h3>
+
         <div className="space-y-8">
           {technologyStacks.map((category, categoryIndex) => (
             <div key={categoryIndex} className={`p-6 rounded-lg border-2 ${category.color}`}>
-              <h4 className="text-xl font-bold text-gray-800 mb-6 text-center">{category.category} Technology Stacks</h4>
-              
+              <h4 className="text-xl font-bold text-gray-800 mb-6 text-center">{category.category} {t('semantic.code.technologyStacks.stacksSuffix')}</h4>
+
               <div className="space-y-6">
                 {category.stacks.map((stack, stackIndex) => (
                   <div key={stackIndex} className="bg-white p-6 rounded-lg border shadow-sm">
                     <h5 className="text-lg font-bold text-gray-800 mb-4">{stack.name}</h5>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                       <div className="p-3 bg-warning-50 rounded border border-warning">
-                        <div className="font-semibold text-warning-800 mb-2">Applications</div>
+                        <div className="font-semibold text-warning-800 mb-2">{t('semantic.code.technologyStacks.applicationsLabel')}</div>
                         <div className="text-sm text-gray-700">{stack.applications}</div>
                       </div>
-                      
+
                       <div className="p-3 bg-brand-blue-50 rounded border border-secondary">
-                        <div className="font-semibold text-secondary mb-2">Components/Classes</div>
+                        <div className="font-semibold text-secondary mb-2">{t('semantic.code.technologyStacks.componentsLabel')}</div>
                         <div className="text-sm text-gray-700">{stack.components}</div>
                       </div>
-                      
+
                       <div className="p-3 bg-success-50 rounded border border-success">
-                        <div className="font-semibold text-success-800 mb-2">Functions/Methods</div>
+                        <div className="font-semibold text-success-800 mb-2">{t('semantic.code.technologyStacks.functionsLabel')}</div>
                         <div className="text-sm text-gray-700">{stack.functions}</div>
                       </div>
                     </div>
@@ -220,39 +227,39 @@ const CodeOntologyNew: React.FC<CodeOntologyNewProps> = () => {
 
       {/* Code Ontology Benefits */}
       <div className="bg-gradient-to-r from-warning-50 to-error-50 rounded-xl p-8 border-l-4 border-warning">
-        <h3 className="text-2xl font-bold text-gray-800 mb-6">Code Ontology Benefits</h3>
+        <h3 className="text-2xl font-bold text-gray-800 mb-6">{t('semantic.code.benefits.title')}</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <h4 className="font-bold text-lg text-gray-800 mb-3">Implementation Clarity</h4>
+            <h4 className="font-bold text-lg text-gray-800 mb-3">{t('semantic.code.benefits.clarity.title')}</h4>
             <div className="space-y-2">
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-warning rounded-full mt-2"></div>
-                <span className="text-gray-700">Clear technology-specific structures for each concern</span>
+                <span className="text-gray-700">{t('semantic.code.benefits.clarity.items.0')}</span>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-error rounded-full mt-2"></div>
-                <span className="text-gray-700">Consistent patterns across different technology stacks</span>
+                <span className="text-gray-700">{t('semantic.code.benefits.clarity.items.1')}</span>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-brand-pink-600 rounded-full mt-2"></div>
-                <span className="text-gray-700">Standardized organization from applications to properties</span>
+                <span className="text-gray-700">{t('semantic.code.benefits.clarity.items.2')}</span>
               </div>
             </div>
           </div>
           <div>
-            <h4 className="font-bold text-lg text-gray-800 mb-3">Development Benefits</h4>
+            <h4 className="font-bold text-lg text-gray-800 mb-3">{t('semantic.code.benefits.development.title')}</h4>
             <div className="space-y-2">
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-brand-indigo-600 rounded-full mt-2"></div>
-                <span className="text-gray-700">Faster onboarding with clear code structure</span>
+                <span className="text-gray-700">{t('semantic.code.benefits.development.items.0')}</span>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-brand-purple-600 rounded-full mt-2"></div>
-                <span className="text-gray-700">Improved maintainability through consistent patterns</span>
+                <span className="text-gray-700">{t('semantic.code.benefits.development.items.1')}</span>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-info rounded-full mt-2"></div>
-                <span className="text-gray-700">Enhanced reusability of components and functions</span>
+                <span className="text-gray-700">{t('semantic.code.benefits.development.items.2')}</span>
               </div>
             </div>
           </div>

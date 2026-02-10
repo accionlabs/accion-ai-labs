@@ -1,18 +1,19 @@
 import React, { useEffect, useRef, useState } from 'react';
 import * as d3 from 'd3';
-import { 
-  phoenixCodeNodes, 
-  phoenixCodeEdges, 
+import {
+  phoenixCodeNodes,
+  phoenixCodeEdges,
   derivedMappings,
   CodeNode,
   CodeEdge,
-  DerivedMapping 
+  DerivedMapping
 } from '../../data/technicalDebtData';
-import { 
+import {
   phoenixAllNodes,
   phoenixAllEdges
 } from '../../data/phoenixOntologyData';
 import { OntologyNode, OntologyEdge } from '../../types/ontology';
+import { useTranslation } from 'react-i18next';
 
 interface FilterOptions {
   showCode: boolean;
@@ -24,6 +25,7 @@ interface FilterOptions {
 }
 
 const TechnicalDebtGraphExplorer: React.FC = () => {
+  const { t } = useTranslation('technicalDebt');
   const svgRef = useRef<SVGSVGElement>(null);
   const [selectedNode, setSelectedNode] = useState<any>(null);
   const [filters, setFilters] = useState<FilterOptions>({
@@ -42,12 +44,12 @@ const TechnicalDebtGraphExplorer: React.FC = () => {
 
   const getFilteredNodes = () => {
     let allNodes: any[] = [];
-    
+
     // Add code nodes if enabled
     if (filters.showCode) {
       allNodes = [...allNodes, ...phoenixCodeNodes];
     }
-    
+
     // Add ontology nodes based on filters
     const ontologyNodes = phoenixAllNodes.filter(node => {
       if (node.type === 'functional' && !filters.showFunctional) return false;
@@ -55,28 +57,28 @@ const TechnicalDebtGraphExplorer: React.FC = () => {
       if (node.type === 'architecture' && !filters.showArchitecture) return false;
       return true;
     });
-    
+
     allNodes = [...allNodes, ...ontologyNodes];
-    
+
     return allNodes;
   };
 
   const getFilteredEdges = () => {
     const nodes = getFilteredNodes();
     const nodeIds = new Set(nodes.map(n => n.id));
-    
+
     let allEdges: any[] = [];
-    
+
     // Add code edges if code nodes are shown
     if (filters.showCode) {
-      const codeEdges = phoenixCodeEdges.filter(edge => 
+      const codeEdges = phoenixCodeEdges.filter(edge =>
         nodeIds.has(edge.source) && nodeIds.has(edge.target)
       );
       allEdges = [...allEdges, ...codeEdges];
     }
-    
+
     // Add ontology edges
-    const ontologyEdges = phoenixAllEdges.filter(edge => 
+    const ontologyEdges = phoenixAllEdges.filter(edge =>
       nodeIds.has(edge.source) && nodeIds.has(edge.target)
     );
     allEdges = [...allEdges, ...ontologyEdges];
@@ -266,20 +268,20 @@ const TechnicalDebtGraphExplorer: React.FC = () => {
       .attr('font-size', '14px')
       .text((d) => {
         // Icons for ontology nodes
-        if (d.type === 'functional') return '🎯';
-        if (d.type === 'design') return '🎨';
-        if (d.type === 'architecture') return '🏗️';
-        
+        if (d.type === 'functional') return '\uD83C\uDFAF';
+        if (d.type === 'design') return '\uD83C\uDFA8';
+        if (d.type === 'architecture') return '\uD83C\uDFD7\uFE0F';
+
         // Icons for code nodes
         switch(d.subtype) {
-          case 'component': return '🧩';
-          case 'service': return '⚙️';
-          case 'controller': return '🎮';
-          case 'model': return '📊';
-          case 'repository': return '🗄️';
-          case 'view': return '👁️';
-          case 'utility': return '🔧';
-          default: return '📦';
+          case 'component': return '\uD83E\uDDE9';
+          case 'service': return '\u2699\uFE0F';
+          case 'controller': return '\uD83C\uDFAE';
+          case 'model': return '\uD83D\uDCCA';
+          case 'repository': return '\uD83D\uDDC4\uFE0F';
+          case 'view': return '\uD83D\uDC41\uFE0F';
+          case 'utility': return '\uD83D\uDD27';
+          default: return '\uD83D\uDCE6';
         }
       });
 
@@ -319,9 +321,9 @@ const TechnicalDebtGraphExplorer: React.FC = () => {
     <div className="min-h-screen bg-gray-50">
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 py-2 sm:py-4">
-          <h2 className="text-xl font-semibold text-gray-900">Phoenix CRM Graph Explorer</h2>
+          <h2 className="text-xl font-semibold text-gray-900">{t('graphExplorer.header.title')}</h2>
           <p className="text-gray-600 text-sm mt-1">
-            Visualizing complete four-ontology structure and code relationships
+            {t('graphExplorer.header.description')}
           </p>
         </div>
       </div>
@@ -329,8 +331,8 @@ const TechnicalDebtGraphExplorer: React.FC = () => {
       <div className="flex flex-col md:flex-row h-[calc(100vh-8rem)]">
         {/* Filter Panel - collapsible on mobile */}
         <div className="w-full md:w-64 bg-white border-r border-gray-200 p-4 overflow-y-auto md:h-full max-h-96 md:max-h-none">
-          <h3 className="font-semibold text-gray-900 mb-4">Ontology Filters</h3>
-          
+          <h3 className="font-semibold text-gray-900 mb-4">{t('graphExplorer.filters.title')}</h3>
+
           <div className="space-y-3">
             <label className="flex items-center">
               <input
@@ -339,9 +341,9 @@ const TechnicalDebtGraphExplorer: React.FC = () => {
                 onChange={(e) => setFilters({...filters, showCode: e.target.checked})}
                 className="mr-2"
               />
-              <span className="text-sm font-medium">Code Graph</span>
+              <span className="text-sm font-medium">{t('graphExplorer.filters.codeGraph')}</span>
             </label>
-            
+
             <label className="flex items-center">
               <input
                 type="checkbox"
@@ -349,9 +351,9 @@ const TechnicalDebtGraphExplorer: React.FC = () => {
                 onChange={(e) => setFilters({...filters, showFunctional: e.target.checked})}
                 className="mr-2"
               />
-              <span className="text-sm font-medium">Functional</span>
+              <span className="text-sm font-medium">{t('graphExplorer.filters.functional')}</span>
             </label>
-            
+
             <label className="flex items-center">
               <input
                 type="checkbox"
@@ -359,9 +361,9 @@ const TechnicalDebtGraphExplorer: React.FC = () => {
                 onChange={(e) => setFilters({...filters, showDesign: e.target.checked})}
                 className="mr-2"
               />
-              <span className="text-sm font-medium">Design</span>
+              <span className="text-sm font-medium">{t('graphExplorer.filters.design')}</span>
             </label>
-            
+
             <label className="flex items-center">
               <input
                 type="checkbox"
@@ -369,13 +371,13 @@ const TechnicalDebtGraphExplorer: React.FC = () => {
                 onChange={(e) => setFilters({...filters, showArchitecture: e.target.checked})}
                 className="mr-2"
               />
-              <span className="text-sm font-medium">Architecture</span>
+              <span className="text-sm font-medium">{t('graphExplorer.filters.architecture')}</span>
             </label>
           </div>
 
           <div className="border-t border-gray-200 mt-4 pt-4">
-            <h4 className="font-medium text-gray-900 mb-3">Display Options</h4>
-            
+            <h4 className="font-medium text-gray-900 mb-3">{t('graphExplorer.displayOptions.title')}</h4>
+
             <label className="flex items-center mb-3">
               <input
                 type="checkbox"
@@ -383,9 +385,9 @@ const TechnicalDebtGraphExplorer: React.FC = () => {
                 onChange={(e) => setFilters({...filters, showDerivedMappings: e.target.checked})}
                 className="mr-2"
               />
-              <span className="text-sm">Show Ontology Mappings</span>
+              <span className="text-sm">{t('graphExplorer.displayOptions.showOntologyMappings')}</span>
             </label>
-            
+
             <label className="flex items-center">
               <input
                 type="checkbox"
@@ -393,54 +395,54 @@ const TechnicalDebtGraphExplorer: React.FC = () => {
                 onChange={(e) => setFilters({...filters, highlightDebtNodes: e.target.checked})}
                 className="mr-2"
               />
-              <span className="text-sm">Highlight High Complexity</span>
+              <span className="text-sm">{t('graphExplorer.displayOptions.highlightHighComplexity')}</span>
             </label>
           </div>
 
           {/* Legend */}
           <div className="border-t border-gray-200 mt-4 pt-4">
-            <h4 className="font-medium text-gray-900 mb-3">Legend</h4>
+            <h4 className="font-medium text-gray-900 mb-3">{t('graphExplorer.legend.title')}</h4>
             <div className="space-y-2 text-xs">
               <div className="flex items-center">
                 <div className="w-3 h-3 bg-secondary-light border-2 border-secondary rounded-full mr-2"></div>
-                <span>Functional</span>
+                <span>{t('graphExplorer.legend.functional')}</span>
               </div>
               <div className="flex items-center">
                 <div className="w-3 h-3 bg-brand-purple-100 border-2 border-brand-purple-500 rounded-full mr-2"></div>
-                <span>Design</span>
+                <span>{t('graphExplorer.legend.design')}</span>
               </div>
               <div className="flex items-center">
                 <div className="w-3 h-3 bg-success-light border-2 border-success rounded-full mr-2"></div>
-                <span>Architecture</span>
+                <span>{t('graphExplorer.legend.architecture')}</span>
               </div>
               <div className="flex items-center">
                 <div className="w-3 h-3 bg-warning-light border-2 border-warning rounded-full mr-2"></div>
-                <span>Code</span>
+                <span>{t('graphExplorer.legend.code')}</span>
               </div>
             </div>
 
             <div className="mt-4 space-y-2 text-xs">
-              <h5 className="font-medium">Edge Types:</h5>
+              <h5 className="font-medium">{t('graphExplorer.legend.edgeTypes')}</h5>
               <div className="flex items-center">
                 <div className="w-8 h-0.5 bg-secondary mr-2"></div>
-                <span>Imports</span>
+                <span>{t('graphExplorer.legend.imports')}</span>
               </div>
               <div className="flex items-center">
                 <div className="w-8 h-0.5 bg-success mr-2"></div>
-                <span>Calls</span>
+                <span>{t('graphExplorer.legend.calls')}</span>
               </div>
               <div className="flex items-center">
                 <div className="w-8 h-0.5 bg-error mr-2"></div>
-                <span>Accesses DB</span>
+                <span>{t('graphExplorer.legend.accessesDb')}</span>
               </div>
               <div className="flex items-center">
                 <div className="w-8 h-0.5 bg-brand-purple-500 mr-2"></div>
-                <span>Uses</span>
+                <span>{t('graphExplorer.legend.uses')}</span>
               </div>
               {filters.showDerivedMappings && (
                 <div className="flex items-center">
                   <div className="w-8 h-0.5 bg-warning mr-2" style={{ borderTop: '2px dashed #D97706' }}></div>
-                  <span>Derives To</span>
+                  <span>{t('graphExplorer.legend.derivesTo')}</span>
                 </div>
               )}
             </div>
@@ -450,23 +452,23 @@ const TechnicalDebtGraphExplorer: React.FC = () => {
         {/* Graph Area */}
         <div className="flex-1 relative min-h-96">
           <svg ref={svgRef} className="w-full h-full min-h-96"></svg>
-          
+
           {/* Node Details - Desktop */}
           {selectedNode && (
             <div className="hidden md:block absolute top-4 right-4 bg-white rounded-lg shadow-lg p-4 w-80">
               <h3 className="font-semibold text-gray-900 mb-2">{selectedNode.name}</h3>
               <div className="space-y-1 text-sm">
-                <div><span className="font-medium">Type:</span> {selectedNode.type}</div>
-                <div><span className="font-medium">Subtype:</span> {selectedNode.subtype}</div>
-                <div><span className="font-medium">File:</span> <code className="text-xs bg-gray-100 px-1">{selectedNode.file}</code></div>
-                <div><span className="font-medium">Language:</span> {selectedNode.language}</div>
+                <div><span className="font-medium">{t('graphExplorer.nodeDetails.type')}</span> {selectedNode.type}</div>
+                <div><span className="font-medium">{t('graphExplorer.nodeDetails.subtype')}</span> {selectedNode.subtype}</div>
+                <div><span className="font-medium">{t('graphExplorer.nodeDetails.file')}</span> <code className="text-xs bg-gray-100 px-1">{selectedNode.file}</code></div>
+                <div><span className="font-medium">{t('graphExplorer.nodeDetails.language')}</span> {selectedNode.language}</div>
                 {selectedNode.framework && (
-                  <div><span className="font-medium">Framework:</span> {selectedNode.framework}</div>
+                  <div><span className="font-medium">{t('graphExplorer.nodeDetails.framework')}</span> {selectedNode.framework}</div>
                 )}
-                <div><span className="font-medium">Lines of Code:</span> {selectedNode.linesOfCode}</div>
+                <div><span className="font-medium">{t('graphExplorer.nodeDetails.linesOfCode')}</span> {selectedNode.linesOfCode}</div>
                 {selectedNode.complexity && (
                   <div>
-                    <span className="font-medium">Complexity:</span> 
+                    <span className="font-medium">{t('graphExplorer.nodeDetails.complexity')}</span>
                     <span className={`ml-2 ${selectedNode.complexity > 10 ? 'text-red-600 font-bold' : ''}`}>
                       {selectedNode.complexity}
                     </span>
@@ -474,7 +476,7 @@ const TechnicalDebtGraphExplorer: React.FC = () => {
                 )}
                 {selectedNode.dependencies && selectedNode.dependencies.length > 0 && (
                   <div>
-                    <span className="font-medium">Dependencies:</span>
+                    <span className="font-medium">{t('graphExplorer.nodeDetails.dependencies')}</span>
                     <ul className="mt-1 ml-4 text-xs">
                       {selectedNode.dependencies.map((dep: string) => (
                         <li key={dep}>• {dep}</li>
@@ -483,10 +485,10 @@ const TechnicalDebtGraphExplorer: React.FC = () => {
                   </div>
                 )}
               </div>
-              
+
               {filters.showDerivedMappings && (
                 <div className="mt-3 pt-3 border-t border-gray-200">
-                  <h4 className="font-medium text-sm mb-1">Derived Mappings:</h4>
+                  <h4 className="font-medium text-sm mb-1">{t('graphExplorer.nodeDetails.derivedMappings')}</h4>
                   <div className="space-y-1 text-xs">
                     {derivedMappings
                       .filter(m => m.codeNodeId === selectedNode.id)
@@ -502,23 +504,23 @@ const TechnicalDebtGraphExplorer: React.FC = () => {
                   </div>
                 </div>
               )}
-              
+
               <button
                 onClick={() => setSelectedNode(null)}
                 className="mt-3 text-xs text-gray-500 hover:text-gray-700"
               >
-                Close
+                {t('graphExplorer.nodeDetails.close')}
               </button>
             </div>
           )}
-          
+
           {/* Node Details - Mobile Modal */}
           {selectedNode && (
             <div className="md:hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
               <div className="bg-white rounded-lg shadow-lg w-full max-w-md max-h-96 overflow-y-auto">
                 <div className="p-4 border-b border-gray-200">
                   <div className="flex items-center justify-between">
-                    <h3 className="text-lg font-semibold">Node Details</h3>
+                    <h3 className="text-lg font-semibold">{t('graphExplorer.nodeDetails.title')}</h3>
                     <button
                       onClick={() => setSelectedNode(null)}
                       className="p-2 hover:bg-gray-100 rounded"
@@ -532,17 +534,17 @@ const TechnicalDebtGraphExplorer: React.FC = () => {
                 <div className="p-4">
                   <h3 className="font-semibold text-gray-900 mb-2">{selectedNode.name}</h3>
                   <div className="space-y-1 text-sm">
-                    <div><span className="font-medium">Type:</span> {selectedNode.type}</div>
-                    <div><span className="font-medium">Subtype:</span> {selectedNode.subtype}</div>
-                    <div><span className="font-medium">File:</span> <code className="text-xs bg-gray-100 px-1">{selectedNode.file}</code></div>
-                    <div><span className="font-medium">Language:</span> {selectedNode.language}</div>
+                    <div><span className="font-medium">{t('graphExplorer.nodeDetails.type')}</span> {selectedNode.type}</div>
+                    <div><span className="font-medium">{t('graphExplorer.nodeDetails.subtype')}</span> {selectedNode.subtype}</div>
+                    <div><span className="font-medium">{t('graphExplorer.nodeDetails.file')}</span> <code className="text-xs bg-gray-100 px-1">{selectedNode.file}</code></div>
+                    <div><span className="font-medium">{t('graphExplorer.nodeDetails.language')}</span> {selectedNode.language}</div>
                     {selectedNode.framework && (
-                      <div><span className="font-medium">Framework:</span> {selectedNode.framework}</div>
+                      <div><span className="font-medium">{t('graphExplorer.nodeDetails.framework')}</span> {selectedNode.framework}</div>
                     )}
-                    <div><span className="font-medium">Lines of Code:</span> {selectedNode.linesOfCode}</div>
+                    <div><span className="font-medium">{t('graphExplorer.nodeDetails.linesOfCode')}</span> {selectedNode.linesOfCode}</div>
                     {selectedNode.complexity && (
                       <div>
-                        <span className="font-medium">Complexity:</span> 
+                        <span className="font-medium">{t('graphExplorer.nodeDetails.complexity')}</span>
                         <span className={`ml-2 ${selectedNode.complexity > 10 ? 'text-red-600 font-bold' : ''}`}>
                           {selectedNode.complexity}
                         </span>

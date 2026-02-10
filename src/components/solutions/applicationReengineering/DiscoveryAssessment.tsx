@@ -16,58 +16,40 @@ import {
   ShieldCheckIcon
 } from '@heroicons/react/24/outline';
 import AnimatedExtractionProcess from '../../technicalDebt/AnimatedExtractionProcess';
+import { useTranslation } from 'react-i18next';
 
 const DiscoveryAssessment: React.FC = () => {
+  const { t } = useTranslation('solutions');
   const [selectedOntology, setSelectedOntology] = useState<'functional' | 'design' | 'architecture' | 'code'>('functional');
 
   const ontologies = {
     functional: {
-      title: 'Functional Ontology',
+      title: t('appReengineering.discovery.ontologies.functional.title'),
       icon: ChartBarIcon,
       color: 'blue',
-      description: 'What the system actually does - extracted features, business logic, and user workflows',
-      insights: [
-        '427 functional capabilities identified',
-        '89 undocumented features discovered',
-        '23 deprecated functions still in use',
-        '156 business rules extracted'
-      ]
+      description: t('appReengineering.discovery.ontologies.functional.description'),
+      insights: t('appReengineering.discovery.ontologies.functional.insights', { returnObjects: true }) as unknown as string[]
     },
     design: {
-      title: 'Design Ontology',
+      title: t('appReengineering.discovery.ontologies.design.title'),
       icon: PaintBrushIcon,
       color: 'purple',
-      description: 'User interface patterns, components, and interaction flows across the application',
-      insights: [
-        '342 UI components cataloged',
-        '78 duplicate component variations',
-        '12 inconsistent design patterns',
-        '45 accessibility violations'
-      ]
+      description: t('appReengineering.discovery.ontologies.design.description'),
+      insights: t('appReengineering.discovery.ontologies.design.insights', { returnObjects: true }) as unknown as string[]
     },
     architecture: {
-      title: 'Architecture Ontology',
+      title: t('appReengineering.discovery.ontologies.architecture.title'),
       icon: CubeIcon,
       color: 'green',
-      description: 'System structure, services, APIs, data models, and infrastructure dependencies',
-      insights: [
-        '147 architecture violations detected',
-        '23 tightly coupled modules',
-        '67 API inconsistencies',
-        '34 database anti-patterns'
-      ]
+      description: t('appReengineering.discovery.ontologies.architecture.description'),
+      insights: t('appReengineering.discovery.ontologies.architecture.insights', { returnObjects: true }) as unknown as string[]
     },
     code: {
-      title: 'Code Ontology',
+      title: t('appReengineering.discovery.ontologies.code.title'),
       icon: CodeBracketIcon,
       color: 'orange',
-      description: 'Implementation details, code quality metrics, dependencies, and technical debt',
-      insights: [
-        '312 code smells identified',
-        '1,247 components analyzed',
-        '186 dependencies mapped',
-        '45% code duplication detected'
-      ]
+      description: t('appReengineering.discovery.ontologies.code.description'),
+      insights: t('appReengineering.discovery.ontologies.code.insights', { returnObjects: true }) as unknown as string[]
     }
   };
 
@@ -75,36 +57,36 @@ const DiscoveryAssessment: React.FC = () => {
 
   const debtCategories = [
     {
-      category: 'Critical Issues',
+      category: t('appReengineering.discovery.debtCategories.critical.category'),
       count: 147,
       color: 'red',
       icon: ExclamationTriangleIcon,
-      description: 'Architecture violations requiring immediate attention',
-      examples: ['Layer boundary violations', 'Circular dependencies', 'Security vulnerabilities']
+      description: t('appReengineering.discovery.debtCategories.critical.description'),
+      examples: t('appReengineering.discovery.debtCategories.critical.examples', { returnObjects: true }) as unknown as string[]
     },
     {
-      category: 'Code Quality',
+      category: t('appReengineering.discovery.debtCategories.codeQuality.category'),
       count: 312,
       color: 'orange',
       icon: CodeBracketIcon,
-      description: 'Code smells affecting maintainability',
-      examples: ['Duplicate code blocks', 'Complex methods (>50 lines)', 'Poor naming conventions']
+      description: t('appReengineering.discovery.debtCategories.codeQuality.description'),
+      examples: t('appReengineering.discovery.debtCategories.codeQuality.examples', { returnObjects: true }) as unknown as string[]
     },
     {
-      category: 'Missing Tests',
+      category: t('appReengineering.discovery.debtCategories.missingTests.category'),
       count: 234,
       color: 'yellow',
       icon: BugAntIcon,
-      description: 'Components lacking adequate test coverage',
-      examples: ['0% coverage on critical paths', 'No integration tests', 'Manual testing only']
+      description: t('appReengineering.discovery.debtCategories.missingTests.description'),
+      examples: t('appReengineering.discovery.debtCategories.missingTests.examples', { returnObjects: true }) as unknown as string[]
     },
     {
-      category: 'Performance',
+      category: t('appReengineering.discovery.debtCategories.performance.category'),
       count: 89,
       color: 'purple',
       icon: ServerIcon,
-      description: 'Performance bottlenecks and inefficiencies',
-      examples: ['N+1 queries', 'Unoptimized algorithms', 'Memory leaks']
+      description: t('appReengineering.discovery.debtCategories.performance.description'),
+      examples: t('appReengineering.discovery.debtCategories.performance.examples', { returnObjects: true }) as unknown as string[]
     }
   ];
 
@@ -126,43 +108,40 @@ const DiscoveryAssessment: React.FC = () => {
         {/* Header */}
         <div className="mb-8">
           <Link to="/solutions/application-reengineering" className="text-sm text-orange-600 hover:text-orange-700 mb-2 inline-block">
-            ← Back to Overview
+            &larr; {t('appReengineering.discovery.backToOverview')}
           </Link>
-          <h1 className="text-3xl font-bold text-gray-900">Discovery & Assessment</h1>
+          <h1 className="text-3xl font-bold text-gray-900">{t('appReengineering.discovery.header.title')}</h1>
           <p className="mt-2 text-gray-600">
-            Comprehensive analysis of Phoenix CRM to understand current state and identify technical debt
+            {t('appReengineering.discovery.header.description')}
           </p>
         </div>
 
         {/* Case Study Context */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Case Study: Phoenix CRM</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">{t('appReengineering.discovery.caseStudy.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div>
-              <h3 className="font-semibold text-gray-900 mb-2">System Overview</h3>
+              <h3 className="font-semibold text-gray-900 mb-2">{t('appReengineering.discovery.caseStudy.systemOverview')}</h3>
               <ul className="space-y-1 text-sm text-gray-600">
-                <li>• 8 years in production</li>
-                <li>• ~500K lines of code</li>
-                <li>• PHP monolith + microservices</li>
-                <li>• 12,000+ active users</li>
+                {(t('appReengineering.discovery.caseStudy.systemOverviewItems', { returnObjects: true }) as unknown as string[]).map((item, idx) => (
+                  <li key={idx}>• {item}</li>
+                ))}
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Technical Stack</h3>
+              <h3 className="font-semibold text-gray-900 mb-2">{t('appReengineering.discovery.caseStudy.technicalStack')}</h3>
               <ul className="space-y-1 text-sm text-gray-600">
-                <li>• PHP, Node.js, Python</li>
-                <li>• MySQL + MongoDB</li>
-                <li>• 427 API endpoints</li>
-                <li>• 143 database tables</li>
+                {(t('appReengineering.discovery.caseStudy.technicalStackItems', { returnObjects: true }) as unknown as string[]).map((item, idx) => (
+                  <li key={idx}>• {item}</li>
+                ))}
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Challenges</h3>
+              <h3 className="font-semibold text-gray-900 mb-2">{t('appReengineering.discovery.caseStudy.challenges')}</h3>
               <ul className="space-y-1 text-sm text-gray-600">
-                <li>• 3 teams, inconsistent practices</li>
-                <li>• Outdated documentation</li>
-                <li>• Knowledge silos</li>
-                <li>• Accumulated technical debt</li>
+                {(t('appReengineering.discovery.caseStudy.challengesItems', { returnObjects: true }) as unknown as string[]).map((item, idx) => (
+                  <li key={idx}>• {item}</li>
+                ))}
               </ul>
             </div>
           </div>
@@ -170,55 +149,34 @@ const DiscoveryAssessment: React.FC = () => {
 
         {/* Step 1: Automated Extraction */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Step 1: AI-Powered Knowledge Extraction</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">{t('appReengineering.discovery.step1.title')}</h2>
           <p className="text-sm text-gray-600 mb-6">
-            Our AI agents analyzed Phoenix CRM's codebase to build comprehensive knowledge graphs across
-            four dimensions. This process is fully automated and typically takes 2-4 hours for a 500K LOC application.
+            {t('appReengineering.discovery.step1.description')}
           </p>
 
           <AnimatedExtractionProcess />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
             <div className="bg-blue-50 rounded-lg p-4">
-              <h3 className="font-semibold text-gray-900 mb-3">What We Analyze</h3>
+              <h3 className="font-semibold text-gray-900 mb-3">{t('appReengineering.discovery.step1.whatWeAnalyze')}</h3>
               <ul className="space-y-2 text-sm text-gray-700">
-                <li className="flex items-start">
-                  <CheckCircleIcon className="h-4 w-4 text-blue-600 mr-2 mt-0.5" />
-                  <span>Source code across all languages</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircleIcon className="h-4 w-4 text-blue-600 mr-2 mt-0.5" />
-                  <span>API definitions and contracts</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircleIcon className="h-4 w-4 text-blue-600 mr-2 mt-0.5" />
-                  <span>Database schemas and migrations</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircleIcon className="h-4 w-4 text-blue-600 mr-2 mt-0.5" />
-                  <span>Configuration and deployment files</span>
-                </li>
+                {(t('appReengineering.discovery.step1.analyzeItems', { returnObjects: true }) as unknown as string[]).map((item, idx) => (
+                  <li key={idx} className="flex items-start">
+                    <CheckCircleIcon className="h-4 w-4 text-blue-600 mr-2 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="bg-purple-50 rounded-lg p-4">
-              <h3 className="font-semibold text-gray-900 mb-3">What We Discover</h3>
+              <h3 className="font-semibold text-gray-900 mb-3">{t('appReengineering.discovery.step1.whatWeDiscover')}</h3>
               <ul className="space-y-2 text-sm text-gray-700">
-                <li className="flex items-start">
-                  <CheckCircleIcon className="h-4 w-4 text-purple-600 mr-2 mt-0.5" />
-                  <span>Undocumented features and behaviors</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircleIcon className="h-4 w-4 text-purple-600 mr-2 mt-0.5" />
-                  <span>Hidden dependencies and coupling</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircleIcon className="h-4 w-4 text-purple-600 mr-2 mt-0.5" />
-                  <span>Architecture violations and anti-patterns</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircleIcon className="h-4 w-4 text-purple-600 mr-2 mt-0.5" />
-                  <span>Code quality issues and duplications</span>
-                </li>
+                {(t('appReengineering.discovery.step1.discoverItems', { returnObjects: true }) as unknown as string[]).map((item, idx) => (
+                  <li key={idx} className="flex items-start">
+                    <CheckCircleIcon className="h-4 w-4 text-purple-600 mr-2 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -226,10 +184,9 @@ const DiscoveryAssessment: React.FC = () => {
 
         {/* Step 2: Four Ontology Graphs */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Step 2: Explore Knowledge Graphs</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">{t('appReengineering.discovery.step2.title')}</h2>
           <p className="text-sm text-gray-600 mb-6">
-            The extraction process produces four interconnected knowledge graphs that capture different
-            aspects of Phoenix CRM:
+            {t('appReengineering.discovery.step2.description')}
           </p>
 
           {/* Ontology Selector */}
@@ -270,7 +227,7 @@ const DiscoveryAssessment: React.FC = () => {
             </div>
 
             <div className="bg-white rounded-lg p-4">
-              <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Insights from Phoenix CRM:</h4>
+              <h4 className="text-sm font-semibold text-gray-900 mb-3">{t('appReengineering.discovery.step2.keyInsights')}</h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 {currentOntology.insights.map((insight, idx) => (
                   <div key={idx} className="flex items-start text-sm text-gray-700">
@@ -283,10 +240,9 @@ const DiscoveryAssessment: React.FC = () => {
 
             <div className="mt-4 bg-blue-100 border border-blue-200 rounded-lg p-3">
               <p className="text-sm text-blue-800">
-                <strong>💡 Interactive Explorer:</strong> The full graph explorer allows you to navigate
-                relationships, filter by patterns, and drill down into specific components.{' '}
+                <strong>{t('appReengineering.discovery.step2.interactiveExplorer')}</strong> {t('appReengineering.discovery.step2.interactiveExplorerDesc')}{' '}
                 <Link to="/technical-debt/graph-explorer" className="underline font-semibold">
-                  Try the interactive version →
+                  {t('appReengineering.discovery.step2.tryInteractive')}
                 </Link>
               </p>
             </div>
@@ -295,10 +251,9 @@ const DiscoveryAssessment: React.FC = () => {
 
         {/* Step 3: Technical Debt Assessment */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Step 3: Technical Debt Assessment</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">{t('appReengineering.discovery.step3.title')}</h2>
           <p className="text-sm text-gray-600 mb-6">
-            By analyzing the knowledge graphs and comparing them against best practices, we identified
-            and categorized technical debt across Phoenix CRM:
+            {t('appReengineering.discovery.step3.description')}
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -319,7 +274,7 @@ const DiscoveryAssessment: React.FC = () => {
                     </div>
                   </div>
                   <div className="bg-white rounded p-3">
-                    <p className="text-xs font-semibold text-gray-700 mb-2">Examples:</p>
+                    <p className="text-xs font-semibold text-gray-700 mb-2">{t('appReengineering.discovery.step3.examples')}</p>
                     <ul className="space-y-1">
                       {category.examples.map((example, idx) => (
                         <li key={idx} className="text-xs text-gray-600">• {example}</li>
@@ -335,15 +290,14 @@ const DiscoveryAssessment: React.FC = () => {
             <div className="flex items-start">
               <ShieldCheckIcon className="h-6 w-6 text-green-600 mr-3 flex-shrink-0 mt-0.5" />
               <div>
-                <h4 className="font-semibold text-gray-900 mb-2">Impact Analysis</h4>
+                <h4 className="font-semibold text-gray-900 mb-2">{t('appReengineering.discovery.step3.impactAnalysis.title')}</h4>
                 <p className="text-sm text-gray-700 mb-2">
-                  Our AI agents quantified the business impact of addressing this technical debt:
+                  {t('appReengineering.discovery.step3.impactAnalysis.description')}
                 </p>
                 <ul className="space-y-1 text-sm text-gray-700">
-                  <li>• <strong>35% reduction</strong> in maintenance costs within 6 months</li>
-                  <li>• <strong>50% faster</strong> feature delivery after re-engineering</li>
-                  <li>• <strong>4x fewer</strong> production incidents in modernized modules</li>
-                  <li>• <strong>60% improvement</strong> in developer satisfaction scores</li>
+                  {(t('appReengineering.discovery.step3.impactAnalysis.items', { returnObjects: true }) as unknown as string[]).map((item, idx) => (
+                    <li key={idx}>• {item}</li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -352,48 +306,46 @@ const DiscoveryAssessment: React.FC = () => {
 
         {/* Assessment Summary */}
         <div className="bg-gradient-to-r from-orange-50 to-red-50 rounded-xl border border-orange-200 p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Discovery Complete: What We Learned</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">{t('appReengineering.discovery.summary.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
             <div className="bg-white rounded-lg p-4">
               <DocumentTextIcon className="h-6 w-6 text-blue-600 mb-2" />
-              <p className="font-semibold text-gray-900">Comprehensive Understanding</p>
+              <p className="font-semibold text-gray-900">{t('appReengineering.discovery.summary.comprehensive.title')}</p>
               <p className="text-sm text-gray-600 mt-1">
-                Four complete ontology graphs documenting all aspects of the system
+                {t('appReengineering.discovery.summary.comprehensive.description')}
               </p>
             </div>
             <div className="bg-white rounded-lg p-4">
               <ExclamationTriangleIcon className="h-6 w-6 text-orange-600 mb-2" />
-              <p className="font-semibold text-gray-900">782 Issues Identified</p>
+              <p className="font-semibold text-gray-900">{t('appReengineering.discovery.summary.issues.title')}</p>
               <p className="text-sm text-gray-600 mt-1">
-                Categorized, prioritized, and quantified for impact
+                {t('appReengineering.discovery.summary.issues.description')}
               </p>
             </div>
             <div className="bg-white rounded-lg p-4">
               <ChartBarIcon className="h-6 w-6 text-green-600 mb-2" />
-              <p className="font-semibold text-gray-900">Clear ROI Path</p>
+              <p className="font-semibold text-gray-900">{t('appReengineering.discovery.summary.roi.title')}</p>
               <p className="text-sm text-gray-600 mt-1">
-                Projected 35% cost savings and 50% velocity improvement
+                {t('appReengineering.discovery.summary.roi.description')}
               </p>
             </div>
           </div>
           <p className="text-sm text-gray-700">
-            With a complete understanding of Phoenix CRM's current state and technical debt, we can now
-            create a strategic re-engineering plan with validated stakeholder input.
+            {t('appReengineering.discovery.summary.conclusion')}
           </p>
         </div>
 
         {/* Next Step */}
         <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-xl p-6 text-white">
-          <h2 className="text-xl font-semibold mb-2">Next: Re-engineering Strategy</h2>
+          <h2 className="text-xl font-semibold mb-2">{t('appReengineering.discovery.nextStep.title')}</h2>
           <p className="text-sm mb-4 opacity-90">
-            With comprehensive discovery complete, we'll create a strategic modernization plan with
-            validation from all key stakeholders.
+            {t('appReengineering.discovery.nextStep.description')}
           </p>
           <Link
             to="/solutions/application-reengineering/strategy"
             className="inline-flex items-center px-4 py-2 bg-white text-orange-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
           >
-            View Re-engineering Strategy
+            {t('appReengineering.discovery.nextStep.button')}
             <ArrowRightIcon className="ml-2 h-4 w-4" />
           </Link>
         </div>

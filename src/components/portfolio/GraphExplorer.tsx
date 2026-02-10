@@ -4,8 +4,10 @@ import * as d3 from 'd3';
 import { useOntology } from '../../contexts/OntologyContext';
 import FilterPanel from '../common/FilterPanel';
 import NodeDetailsPanel from '../common/NodeDetailsPanel';
+import { useTranslation } from 'react-i18next';
 
 const GraphExplorer: React.FC = () => {
+  const { t } = useTranslation('portfolio');
   const svgRef = useRef<SVGSVGElement>(null);
   const simulationRef = useRef<any>(null);
   const { state, getFilteredNodes, getFilteredEdges } = useOntology();
@@ -23,7 +25,7 @@ const GraphExplorer: React.FC = () => {
     }
 
     setIsLoading(true);
-    
+
     // Small delay to show loading state and prevent rapid re-renders
     const timer = setTimeout(() => {
       try {
@@ -77,7 +79,7 @@ const GraphExplorer: React.FC = () => {
         .attr("text-anchor", "middle")
         .attr("fill", "#6b7280")
         .style("font-size", "16px")
-        .text("No nodes match the current filters");
+        .text(t('graphExplorer.noNodesMatch'));
       return;
     }
 
@@ -110,7 +112,7 @@ const GraphExplorer: React.FC = () => {
         code: '#f59e0b'
       };
       const baseColor = colors[node.type as keyof typeof colors] || '#6b7280';
-      
+
       // Make root nodes darker
       if (node.level === 'root') {
         const rootColors = {
@@ -121,7 +123,7 @@ const GraphExplorer: React.FC = () => {
         };
         return rootColors[node.type as keyof typeof rootColors] || '#374151';
       }
-      
+
       return baseColor;
     };
 
@@ -146,7 +148,7 @@ const GraphExplorer: React.FC = () => {
         .force("charge", d3.forceManyBody().strength(-300))
         .force("center", d3.forceCenter(width / 2, height / 2))
         .force("collision", d3.forceCollide().radius(25));
-      
+
       // Store simulation reference for cleanup
       simulationRef.current = simulation;
     } catch (error) {
@@ -167,7 +169,7 @@ const GraphExplorer: React.FC = () => {
         // Color edges by relationship type
         const edgeColors = {
           implements: "#3b82f6",
-          supports: "#10b981", 
+          supports: "#10b981",
           requires: "#f59e0b",
           triggers: "#8b5cf6",
           validates: "#ef4444",
@@ -237,7 +239,7 @@ const GraphExplorer: React.FC = () => {
         if (d.level === 'root') {
           return 25;
         }
-        
+
         const hasInconsistencies = d.inconsistencies && d.inconsistencies.length > 0;
         return hasInconsistencies && showInconsistencies ? 18 : 15;
       })
@@ -277,7 +279,7 @@ const GraphExplorer: React.FC = () => {
         .text((d: any) => {
           const typeLabels = {
             functional: 'F',
-            design: 'D', 
+            design: 'D',
             architecture: 'A',
             code: 'C'
           };
@@ -337,7 +339,7 @@ const GraphExplorer: React.FC = () => {
 
         // Highlight connected nodes
         node.style("opacity", (nodeData: any) => {
-          const isConnected = edgesCopy.some((edge: any) => 
+          const isConnected = edgesCopy.some((edge: any) =>
             (edge.source.id === d.id && edge.target.id === nodeData.id) ||
             (edge.target.id === d.id && edge.source.id === nodeData.id)
           );
@@ -352,7 +354,7 @@ const GraphExplorer: React.FC = () => {
           const hasInconsistencies = d.inconsistencies && d.inconsistencies.length > 0;
           baseRadius = hasInconsistencies && showInconsistencies ? 18 : 15;
         }
-        
+
         d3.select(this).select("circle")
           .transition()
           .duration(200)
@@ -395,25 +397,25 @@ const GraphExplorer: React.FC = () => {
     <div className="min-h-screen bg-gray-50">
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 py-2 sm:py-4">
-          <h2 className="text-xl font-semibold text-gray-900">Graph Explorer</h2>
+          <h2 className="text-xl font-semibold text-gray-900">{t('graphExplorer.title')}</h2>
           <p className="text-gray-600 text-sm mt-1">
-            Interactive visualization of {getFilteredNodes().length} nodes and {getFilteredEdges().length} relationships
+            {t('graphExplorer.subtitle', { nodeCount: getFilteredNodes().length, edgeCount: getFilteredEdges().length })}
           </p>
         </div>
       </div>
-      
+
       <div className="flex flex-col md:flex-row h-screen">
         {/* Tool Sidebar - collapsible on mobile */}
         <div className="w-full md:w-80 bg-gray-50 border-r border-gray-200 p-4 md:p-6 overflow-y-auto md:h-full max-h-96 md:max-h-none">
-          <FilterPanel 
+          <FilterPanel
             showInconsistencies={showInconsistencies}
             onToggleInconsistencies={() => setShowInconsistencies(!showInconsistencies)}
             multiOntologyMode={true}
           />
-          
+
           {/* Display Options */}
           <div className="mt-6 bg-white rounded-lg shadow-sm border border-gray-200 p-4">
-            <h3 className="text-sm font-semibold text-gray-900 mb-3">Display Options</h3>
+            <h3 className="text-sm font-semibold text-gray-900 mb-3">{t('graphExplorer.displayOptions.title')}</h3>
             <label className="flex items-center mb-3">
               <input
                 type="checkbox"
@@ -422,18 +424,18 @@ const GraphExplorer: React.FC = () => {
                 className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
               />
               <span className="ml-2 text-sm text-gray-600">
-                Show Type Labels
+                {t('graphExplorer.displayOptions.showTypeLabels')}
               </span>
             </label>
           </div>
-          
+
           {/* Legend */}
           <div className="mt-6 bg-white rounded-lg shadow-sm border border-gray-200 p-4">
-            <h3 className="text-sm font-semibold text-gray-900 mb-3">Legend</h3>
-            
+            <h3 className="text-sm font-semibold text-gray-900 mb-3">{t('graphExplorer.legend.title')}</h3>
+
             {/* Ontology Types */}
             <div className="mb-4">
-              <h4 className="text-xs font-medium text-gray-700 mb-2">Ontology Types</h4>
+              <h4 className="text-xs font-medium text-gray-700 mb-2">{t('graphExplorer.legend.ontologyTypes')}</h4>
               <div className="space-y-2">
                 {[
                   { type: 'functional', color: '#3b82f6', label: 'Functional' },
@@ -442,8 +444,8 @@ const GraphExplorer: React.FC = () => {
                   { type: 'code', color: '#f59e0b', label: 'Code' }
                 ].map(item => (
                   <div key={item.type} className="flex items-center space-x-2">
-                    <div 
-                      className="w-3 h-3 rounded-full" 
+                    <div
+                      className="w-3 h-3 rounded-full"
                       style={{ backgroundColor: item.color }}
                     ></div>
                     <span className="text-xs text-gray-600">{item.label}</span>
@@ -454,7 +456,7 @@ const GraphExplorer: React.FC = () => {
 
             {/* Product Borders */}
             <div className="mb-4">
-              <h4 className="text-xs font-medium text-gray-700 mb-2">Product Borders</h4>
+              <h4 className="text-xs font-medium text-gray-700 mb-2">{t('graphExplorer.legend.productBorders')}</h4>
               <div className="space-y-2">
                 {[
                   { product: 'phoenix', color: '#ef4444', label: 'Phoenix' },
@@ -462,8 +464,8 @@ const GraphExplorer: React.FC = () => {
                   { product: 'voyager', color: '#8b5cf6', label: 'Voyager' }
                 ].map(item => (
                   <div key={item.product} className="flex items-center space-x-2">
-                    <div 
-                      className="w-3 h-3 rounded-full border-2" 
+                    <div
+                      className="w-3 h-3 rounded-full border-2"
                       style={{ borderColor: item.color, backgroundColor: 'white' }}
                     ></div>
                     <span className="text-xs text-gray-600">{item.label}</span>
@@ -474,7 +476,7 @@ const GraphExplorer: React.FC = () => {
 
             {/* Edge Types */}
             <div className="mb-4">
-              <h4 className="text-xs font-medium text-gray-700 mb-2">Relationship Types</h4>
+              <h4 className="text-xs font-medium text-gray-700 mb-2">{t('graphExplorer.legend.relationshipTypes')}</h4>
               <div className="grid grid-cols-2 gap-1 text-xs">
                 {[
                   { type: 'implements', color: '#3b82f6' },
@@ -487,8 +489,8 @@ const GraphExplorer: React.FC = () => {
                   { type: 'manages', color: '#6366f1' }
                 ].map(item => (
                   <div key={item.type} className="flex items-center space-x-1">
-                    <div 
-                      className="w-3 h-0.5" 
+                    <div
+                      className="w-3 h-0.5"
                       style={{ backgroundColor: item.color }}
                     ></div>
                     <span className="text-xs text-gray-600 capitalize">{item.type}</span>
@@ -500,15 +502,15 @@ const GraphExplorer: React.FC = () => {
             {/* Inconsistency Indicators */}
             {showInconsistencies && (
               <div>
-                <h4 className="text-xs font-medium text-gray-700 mb-2">Inconsistencies</h4>
+                <h4 className="text-xs font-medium text-gray-700 mb-2">{t('graphExplorer.legend.inconsistencies')}</h4>
                 <div className="space-y-2">
                   <div className="flex items-center space-x-2">
                     <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                    <span className="text-xs text-gray-600">Node Issues</span>
+                    <span className="text-xs text-gray-600">{t('graphExplorer.legend.nodeIssues')}</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <div className="w-6 h-0.5 bg-red-500" style={{ content: '', borderTop: '2px dashed #ef4444' }}></div>
-                    <span className="text-xs text-gray-600">Edge Issues</span>
+                    <span className="text-xs text-gray-600">{t('graphExplorer.legend.edgeIssues')}</span>
                   </div>
                 </div>
               </div>
@@ -522,44 +524,44 @@ const GraphExplorer: React.FC = () => {
             <div className="absolute inset-0 bg-white bg-opacity-75 flex items-center justify-center z-10">
               <div className="text-center">
                 <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-                <p className="text-gray-600">Loading graph...</p>
+                <p className="text-gray-600">{t('graphExplorer.loading')}</p>
               </div>
             </div>
           )}
-          
+
           <div className="h-full bg-white min-h-96">
             <svg ref={svgRef} className="w-full h-full min-h-96"></svg>
           </div>
 
           {/* Graph Controls */}
           <div className="absolute top-4 right-4 bg-white rounded-lg shadow-sm border border-gray-200 p-2 hidden sm:block">
-            <div className="text-xs text-gray-500 text-center mb-2">Graph Controls</div>
+            <div className="text-xs text-gray-500 text-center mb-2">{t('graphExplorer.controls.title')}</div>
             <div className="space-y-1 text-xs text-gray-600">
-              <div>• Drag nodes to reposition</div>
-              <div>• Scroll to zoom</div>
-              <div>• Click node for details</div>
-              <div>• Hover to highlight connections</div>
-              <div>• Select multiple ontologies</div>
-              <div>• Toggle type/level labels</div>
+              <div>{'\u2022'} {t('graphExplorer.controls.drag')}</div>
+              <div>{'\u2022'} {t('graphExplorer.controls.scroll')}</div>
+              <div>{'\u2022'} {t('graphExplorer.controls.click')}</div>
+              <div>{'\u2022'} {t('graphExplorer.controls.hover')}</div>
+              <div>{'\u2022'} {t('graphExplorer.controls.selectOntologies')}</div>
+              <div>{'\u2022'} {t('graphExplorer.controls.toggleLabels')}</div>
             </div>
           </div>
         </div>
 
         {/* Node Details Panel */}
         <div className="hidden md:block">
-          <NodeDetailsPanel 
-            nodeId={selectedNodeId} 
-            onClose={() => setSelectedNodeId(null)} 
+          <NodeDetailsPanel
+            nodeId={selectedNodeId}
+            onClose={() => setSelectedNodeId(null)}
           />
         </div>
-        
+
         {/* Mobile Node Details Modal */}
         {selectedNodeId && (
           <div className="md:hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
             <div className="bg-white rounded-lg shadow-lg w-full max-w-md max-h-96 overflow-y-auto">
               <div className="p-4 border-b border-gray-200">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-lg font-semibold">Node Details</h3>
+                  <h3 className="text-lg font-semibold">{t('graphExplorer.nodeDetails')}</h3>
                   <button
                     onClick={() => setSelectedNodeId(null)}
                     className="p-2 hover:bg-gray-100 rounded"
@@ -571,9 +573,9 @@ const GraphExplorer: React.FC = () => {
                 </div>
               </div>
               <div className="p-4">
-                <NodeDetailsPanel 
-                  nodeId={selectedNodeId} 
-                  onClose={() => setSelectedNodeId(null)} 
+                <NodeDetailsPanel
+                  nodeId={selectedNodeId}
+                  onClose={() => setSelectedNodeId(null)}
                 />
               </div>
             </div>

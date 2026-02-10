@@ -1,5 +1,5 @@
 import React from 'react';
-import { 
+import {
   CpuChipIcon,
   ServerStackIcon,
   CloudArrowUpIcon,
@@ -20,205 +20,188 @@ import {
   WrenchScrewdriverIcon,
   QueueListIcon
 } from '@heroicons/react/24/outline';
+import { useTranslation } from 'react-i18next';
 
 const AgenticArchitecture: React.FC = () => {
+  const { t } = useTranslation('coreTechnology');
+
   // Architecture layers for AI Agentic Systems
   const architectureLayers = [
     {
       id: 'agent-layer',
-      name: 'Agent Orchestration Layer',
+      name: t('agentArchitecture.layers.agentOrchestration.name'),
       color: 'purple',
       icon: RocketLaunchIcon,
-      tagline: 'Multi-Agent Coordination & Governance',
-      description: 'The brain of the agentic system - orchestrates, coordinates, and governs autonomous agents across the enterprise',
-      importance: 'Critical for managing agent lifecycles, preventing conflicts, and ensuring goal alignment',
+      tagline: t('agentArchitecture.layers.agentOrchestration.tagline'),
+      description: t('agentArchitecture.layers.agentOrchestration.description'),
+      importance: t('agentArchitecture.layers.agentOrchestration.importance'),
       components: [
         {
-          title: 'Agent Registry & Discovery',
-          description: 'Central catalog of all agents, their capabilities, APIs, and current status',
+          title: t('agentArchitecture.layers.agentOrchestration.components.registry.title'),
+          description: t('agentArchitecture.layers.agentOrchestration.components.registry.description'),
           icon: DocumentMagnifyingGlassIcon,
-          features: ['Agent capability indexing', 'Dynamic agent discovery', 'Version management', 'Agent health monitoring'],
-          technologies: ['Service Mesh', 'Agent Protocol Standards', 'GraphQL Federation', 'mDNS Discovery'],
-          examples: ['Agent Yellow Pages', 'Capability Matching Engine', 'Agent DNS Service', 'Skills Marketplace']
+          features: t('agentArchitecture.layers.agentOrchestration.components.registry.features', { returnObjects: true }) as unknown as string[],
+          technologies: t('agentArchitecture.layers.agentOrchestration.components.registry.technologies', { returnObjects: true }) as unknown as string[],
+          examples: t('agentArchitecture.layers.agentOrchestration.components.registry.examples', { returnObjects: true }) as unknown as string[]
         },
         {
-          title: 'Multi-Agent Orchestrator',
-          description: 'Coordinates complex workflows across multiple specialized agents with task decomposition',
+          title: t('agentArchitecture.layers.agentOrchestration.components.orchestrator.title'),
+          description: t('agentArchitecture.layers.agentOrchestration.components.orchestrator.description'),
           icon: CogIcon,
-          features: ['Task planning & decomposition', 'Agent assignment optimization', 'Workflow choreography', 'Deadlock prevention'],
-          technologies: ['LangGraph', 'AutoGen', 'CrewAI', 'Temporal Workflows'],
-          examples: ['Mission Control Center', 'Agent Conductor', 'Task Distribution Engine', 'Workflow Manager']
+          features: t('agentArchitecture.layers.agentOrchestration.components.orchestrator.features', { returnObjects: true }) as unknown as string[],
+          technologies: t('agentArchitecture.layers.agentOrchestration.components.orchestrator.technologies', { returnObjects: true }) as unknown as string[],
+          examples: t('agentArchitecture.layers.agentOrchestration.components.orchestrator.examples', { returnObjects: true }) as unknown as string[]
         },
         {
-          title: 'Agent Communication Bus',
-          description: 'High-performance messaging infrastructure for inter-agent communication and collaboration',
+          title: t('agentArchitecture.layers.agentOrchestration.components.communicationBus.title'),
+          description: t('agentArchitecture.layers.agentOrchestration.components.communicationBus.description'),
           icon: ArrowsRightLeftIcon,
-          features: ['Async message passing', 'Event streaming', 'Protocol translation', 'Message prioritization'],
-          technologies: ['Apache Kafka', 'NATS', 'RabbitMQ', 'gRPC'],
-          examples: ['Agent Message Broker', 'Event Hub', 'Communication Gateway', 'Protocol Bridge']
+          features: t('agentArchitecture.layers.agentOrchestration.components.communicationBus.features', { returnObjects: true }) as unknown as string[],
+          technologies: t('agentArchitecture.layers.agentOrchestration.components.communicationBus.technologies', { returnObjects: true }) as unknown as string[],
+          examples: t('agentArchitecture.layers.agentOrchestration.components.communicationBus.examples', { returnObjects: true }) as unknown as string[]
         },
         {
-          title: 'Goal & Policy Engine',
-          description: 'Ensures agents operate within boundaries and align with organizational objectives',
+          title: t('agentArchitecture.layers.agentOrchestration.components.policyEngine.title'),
+          description: t('agentArchitecture.layers.agentOrchestration.components.policyEngine.description'),
           icon: ShieldCheckIcon,
-          features: ['Goal decomposition', 'Policy enforcement', 'Constraint satisfaction', 'Compliance validation'],
-          technologies: ['Policy as Code', 'OPA (Open Policy Agent)', 'Constraint Solvers', 'Rule Engines'],
-          examples: ['Goal Alignment System', 'Policy Governor', 'Constraint Manager', 'Compliance Enforcer']
+          features: t('agentArchitecture.layers.agentOrchestration.components.policyEngine.features', { returnObjects: true }) as unknown as string[],
+          technologies: t('agentArchitecture.layers.agentOrchestration.components.policyEngine.technologies', { returnObjects: true }) as unknown as string[],
+          examples: t('agentArchitecture.layers.agentOrchestration.components.policyEngine.examples', { returnObjects: true }) as unknown as string[]
         }
       ],
-      metrics: [
-        'Agent coordination efficiency',
-        'Task completion rate',
-        'Inter-agent communication latency',
-        'Policy compliance score'
-      ]
+      metrics: t('agentArchitecture.layers.agentOrchestration.metrics', { returnObjects: true }) as unknown as string[]
     },
     {
       id: 'cognitive-layer',
-      name: 'Cognitive Processing Layer',
+      name: t('agentArchitecture.layers.cognitiveProcessing.name'),
       color: 'blue',
       icon: CpuChipIcon,
-      tagline: 'Intelligence, Reasoning & Learning Core',
-      description: 'The cognitive engine that powers agent intelligence - handles reasoning, learning, and decision-making',
-      importance: 'Enables agents to think, reason, learn, and make intelligent decisions autonomously',
+      tagline: t('agentArchitecture.layers.cognitiveProcessing.tagline'),
+      description: t('agentArchitecture.layers.cognitiveProcessing.description'),
+      importance: t('agentArchitecture.layers.cognitiveProcessing.importance'),
       components: [
         {
-          title: 'LLM Gateway & Router',
-          description: 'Intelligent routing of requests to appropriate language models with fallback and load balancing',
+          title: t('agentArchitecture.layers.cognitiveProcessing.components.llmGateway.title'),
+          description: t('agentArchitecture.layers.cognitiveProcessing.components.llmGateway.description'),
           icon: GlobeAltIcon,
-          features: ['Model selection logic', 'Load balancing', 'Fallback strategies', 'Cost optimization'],
-          technologies: ['LiteLLM', 'LangChain', 'OpenRouter', 'Model Gateway APIs'],
-          examples: ['LLM Traffic Manager', 'Model Router', 'Intelligence Gateway', 'AI Request Broker']
+          features: t('agentArchitecture.layers.cognitiveProcessing.components.llmGateway.features', { returnObjects: true }) as unknown as string[],
+          technologies: t('agentArchitecture.layers.cognitiveProcessing.components.llmGateway.technologies', { returnObjects: true }) as unknown as string[],
+          examples: t('agentArchitecture.layers.cognitiveProcessing.components.llmGateway.examples', { returnObjects: true }) as unknown as string[]
         },
         {
-          title: 'Reasoning & Planning Engine',
-          description: 'Advanced reasoning capabilities including chain-of-thought, tree-of-thought, and planning algorithms',
+          title: t('agentArchitecture.layers.cognitiveProcessing.components.reasoningEngine.title'),
+          description: t('agentArchitecture.layers.cognitiveProcessing.components.reasoningEngine.description'),
           icon: BoltIcon,
-          features: ['Chain-of-thought reasoning', 'Multi-step planning', 'Hypothesis generation', 'Causal inference'],
-          technologies: ['ReAct Framework', 'Tree of Thoughts', 'MCTS Planning', 'Causal AI'],
-          examples: ['Reasoning Engine', 'Planning System', 'Thought Processor', 'Strategy Generator']
+          features: t('agentArchitecture.layers.cognitiveProcessing.components.reasoningEngine.features', { returnObjects: true }) as unknown as string[],
+          technologies: t('agentArchitecture.layers.cognitiveProcessing.components.reasoningEngine.technologies', { returnObjects: true }) as unknown as string[],
+          examples: t('agentArchitecture.layers.cognitiveProcessing.components.reasoningEngine.examples', { returnObjects: true }) as unknown as string[]
         },
         {
-          title: 'Memory & Context Management',
-          description: 'Persistent memory systems for maintaining context, learning from experience, and knowledge accumulation',
+          title: t('agentArchitecture.layers.cognitiveProcessing.components.memoryContext.title'),
+          description: t('agentArchitecture.layers.cognitiveProcessing.components.memoryContext.description'),
           icon: CircleStackIcon,
-          features: ['Long-term memory', 'Working memory', 'Episodic recall', 'Context switching'],
-          technologies: ['Vector Databases', 'Graph Databases', 'Redis', 'Memory Networks'],
-          examples: ['Agent Memory Bank', 'Context Store', 'Experience Database', 'Knowledge Repository']
+          features: t('agentArchitecture.layers.cognitiveProcessing.components.memoryContext.features', { returnObjects: true }) as unknown as string[],
+          technologies: t('agentArchitecture.layers.cognitiveProcessing.components.memoryContext.technologies', { returnObjects: true }) as unknown as string[],
+          examples: t('agentArchitecture.layers.cognitiveProcessing.components.memoryContext.examples', { returnObjects: true }) as unknown as string[]
         },
         {
-          title: 'Learning & Adaptation System',
-          description: 'Continuous learning mechanisms that enable agents to improve from feedback and experience',
+          title: t('agentArchitecture.layers.cognitiveProcessing.components.learningAdaptation.title'),
+          description: t('agentArchitecture.layers.cognitiveProcessing.components.learningAdaptation.description'),
           icon: ChartBarIcon,
-          features: ['Reinforcement learning', 'Few-shot learning', 'Transfer learning', 'Online learning'],
-          technologies: ['RLHF', 'Fine-tuning Pipelines', 'Active Learning', 'Meta-Learning'],
-          examples: ['Learning Engine', 'Adaptation System', 'Feedback Processor', 'Improvement Module']
+          features: t('agentArchitecture.layers.cognitiveProcessing.components.learningAdaptation.features', { returnObjects: true }) as unknown as string[],
+          technologies: t('agentArchitecture.layers.cognitiveProcessing.components.learningAdaptation.technologies', { returnObjects: true }) as unknown as string[],
+          examples: t('agentArchitecture.layers.cognitiveProcessing.components.learningAdaptation.examples', { returnObjects: true }) as unknown as string[]
         }
       ],
-      metrics: [
-        'Reasoning accuracy',
-        'Planning success rate',
-        'Memory retrieval precision',
-        'Learning curve improvement'
-      ]
+      metrics: t('agentArchitecture.layers.cognitiveProcessing.metrics', { returnObjects: true }) as unknown as string[]
     },
     {
       id: 'execution-layer',
-      name: 'Execution & Integration Layer',
+      name: t('agentArchitecture.layers.executionIntegration.name'),
       color: 'green',
       icon: ServerStackIcon,
-      tagline: 'Tools, Actions & System Integration',
-      description: 'The hands of the agentic system - executes actions, integrates with tools, and interacts with external systems',
-      importance: 'Bridges the gap between agent intelligence and real-world actions across enterprise systems',
+      tagline: t('agentArchitecture.layers.executionIntegration.tagline'),
+      description: t('agentArchitecture.layers.executionIntegration.description'),
+      importance: t('agentArchitecture.layers.executionIntegration.importance'),
       components: [
         {
-          title: 'Tool Registry & Execution',
-          description: 'Catalog and execution framework for tools, APIs, and functions that agents can use',
+          title: t('agentArchitecture.layers.executionIntegration.components.toolRegistry.title'),
+          description: t('agentArchitecture.layers.executionIntegration.components.toolRegistry.description'),
           icon: WrenchScrewdriverIcon,
-          features: ['Tool discovery', 'Dynamic tool loading', 'Safe execution sandbox', 'Tool chaining'],
-          technologies: ['Function Calling', 'Tool Protocols', 'API Gateways', 'Sandbox Environments'],
-          examples: ['Tool Library', 'Action Executor', 'Function Registry', 'API Catalog']
+          features: t('agentArchitecture.layers.executionIntegration.components.toolRegistry.features', { returnObjects: true }) as unknown as string[],
+          technologies: t('agentArchitecture.layers.executionIntegration.components.toolRegistry.technologies', { returnObjects: true }) as unknown as string[],
+          examples: t('agentArchitecture.layers.executionIntegration.components.toolRegistry.examples', { returnObjects: true }) as unknown as string[]
         },
         {
-          title: 'Enterprise Integration Hub',
-          description: 'Connectors and adapters for seamless integration with enterprise systems and databases',
+          title: t('agentArchitecture.layers.executionIntegration.components.integrationHub.title'),
+          description: t('agentArchitecture.layers.executionIntegration.components.integrationHub.description'),
           icon: CubeTransparentIcon,
-          features: ['System connectors', 'Data adapters', 'Protocol conversion', 'Transaction management'],
-          technologies: ['Apache Camel', 'MuleSoft', 'Zapier APIs', 'Enterprise Service Bus'],
-          examples: ['Integration Gateway', 'System Bridge', 'Enterprise Connector', 'Data Access Layer']
+          features: t('agentArchitecture.layers.executionIntegration.components.integrationHub.features', { returnObjects: true }) as unknown as string[],
+          technologies: t('agentArchitecture.layers.executionIntegration.components.integrationHub.technologies', { returnObjects: true }) as unknown as string[],
+          examples: t('agentArchitecture.layers.executionIntegration.components.integrationHub.examples', { returnObjects: true }) as unknown as string[]
         },
         {
-          title: 'Workflow Execution Engine',
-          description: 'Executes complex multi-step workflows with error handling, retries, and state management',
+          title: t('agentArchitecture.layers.executionIntegration.components.workflowEngine.title'),
+          description: t('agentArchitecture.layers.executionIntegration.components.workflowEngine.description'),
           icon: QueueListIcon,
-          features: ['State machines', 'Saga patterns', 'Compensation logic', 'Parallel execution'],
-          technologies: ['Temporal', 'Apache Airflow', 'Step Functions', 'Camunda'],
-          examples: ['Workflow Runner', 'Process Engine', 'Task Executor', 'State Manager']
+          features: t('agentArchitecture.layers.executionIntegration.components.workflowEngine.features', { returnObjects: true }) as unknown as string[],
+          technologies: t('agentArchitecture.layers.executionIntegration.components.workflowEngine.technologies', { returnObjects: true }) as unknown as string[],
+          examples: t('agentArchitecture.layers.executionIntegration.components.workflowEngine.examples', { returnObjects: true }) as unknown as string[]
         },
         {
-          title: 'Monitoring & Observability',
-          description: 'Real-time monitoring of agent actions, performance metrics, and system health',
+          title: t('agentArchitecture.layers.executionIntegration.components.monitoring.title'),
+          description: t('agentArchitecture.layers.executionIntegration.components.monitoring.description'),
           icon: SignalIcon,
-          features: ['Action logging', 'Performance tracking', 'Anomaly detection', 'Audit trails'],
-          technologies: ['OpenTelemetry', 'Prometheus', 'Grafana', 'ELK Stack'],
-          examples: ['Agent Monitor', 'Observability Platform', 'Performance Tracker', 'Audit System']
+          features: t('agentArchitecture.layers.executionIntegration.components.monitoring.features', { returnObjects: true }) as unknown as string[],
+          technologies: t('agentArchitecture.layers.executionIntegration.components.monitoring.technologies', { returnObjects: true }) as unknown as string[],
+          examples: t('agentArchitecture.layers.executionIntegration.components.monitoring.examples', { returnObjects: true }) as unknown as string[]
         }
       ],
-      metrics: [
-        'Tool execution success rate',
-        'Integration reliability',
-        'Workflow completion time',
-        'System availability'
-      ]
+      metrics: t('agentArchitecture.layers.executionIntegration.metrics', { returnObjects: true }) as unknown as string[]
     },
     {
       id: 'infrastructure-layer',
-      name: 'Infrastructure & Platform Layer',
+      name: t('agentArchitecture.layers.infrastructurePlatform.name'),
       color: 'orange',
       icon: CloudArrowUpIcon,
-      tagline: 'Scalable Foundation & DevOps',
-      description: 'The foundation that ensures agents run reliably, scale efficiently, and deploy seamlessly',
-      importance: 'Provides the robust, scalable infrastructure needed for enterprise-grade agent deployments',
+      tagline: t('agentArchitecture.layers.infrastructurePlatform.tagline'),
+      description: t('agentArchitecture.layers.infrastructurePlatform.description'),
+      importance: t('agentArchitecture.layers.infrastructurePlatform.importance'),
       components: [
         {
-          title: 'Agent Runtime Environment',
-          description: 'Containerized runtime for deploying and managing agent instances at scale',
+          title: t('agentArchitecture.layers.infrastructurePlatform.components.runtime.title'),
+          description: t('agentArchitecture.layers.infrastructurePlatform.components.runtime.description'),
           icon: CubeTransparentIcon,
-          features: ['Container orchestration', 'Auto-scaling', 'Resource allocation', 'Isolation'],
-          technologies: ['Kubernetes', 'Docker', 'Ray', 'Serverless Platforms'],
-          examples: ['Agent Containers', 'Runtime Platform', 'Execution Environment', 'Agent Pods']
+          features: t('agentArchitecture.layers.infrastructurePlatform.components.runtime.features', { returnObjects: true }) as unknown as string[],
+          technologies: t('agentArchitecture.layers.infrastructurePlatform.components.runtime.technologies', { returnObjects: true }) as unknown as string[],
+          examples: t('agentArchitecture.layers.infrastructurePlatform.components.runtime.examples', { returnObjects: true }) as unknown as string[]
         },
         {
-          title: 'Data & Storage Platform',
-          description: 'Distributed storage for agent data, models, and persistent state',
+          title: t('agentArchitecture.layers.infrastructurePlatform.components.dataStorage.title'),
+          description: t('agentArchitecture.layers.infrastructurePlatform.components.dataStorage.description'),
           icon: CircleStackIcon,
-          features: ['Distributed storage', 'Model versioning', 'State persistence', 'Backup & recovery'],
-          technologies: ['S3/Object Storage', 'PostgreSQL', 'MongoDB', 'MinIO'],
-          examples: ['Data Lake', 'Model Store', 'State Database', 'Knowledge Base']
+          features: t('agentArchitecture.layers.infrastructurePlatform.components.dataStorage.features', { returnObjects: true }) as unknown as string[],
+          technologies: t('agentArchitecture.layers.infrastructurePlatform.components.dataStorage.technologies', { returnObjects: true }) as unknown as string[],
+          examples: t('agentArchitecture.layers.infrastructurePlatform.components.dataStorage.examples', { returnObjects: true }) as unknown as string[]
         },
         {
-          title: 'Security & Governance',
-          description: 'Comprehensive security framework for agent authentication, authorization, and compliance',
+          title: t('agentArchitecture.layers.infrastructurePlatform.components.security.title'),
+          description: t('agentArchitecture.layers.infrastructurePlatform.components.security.description'),
           icon: LockClosedIcon,
-          features: ['Agent authentication', 'Access control', 'Encryption', 'Compliance monitoring'],
-          technologies: ['OAuth/OIDC', 'Vault', 'RBAC', 'Zero Trust Architecture'],
-          examples: ['Security Gateway', 'Auth Service', 'Compliance Engine', 'Trust Framework']
+          features: t('agentArchitecture.layers.infrastructurePlatform.components.security.features', { returnObjects: true }) as unknown as string[],
+          technologies: t('agentArchitecture.layers.infrastructurePlatform.components.security.technologies', { returnObjects: true }) as unknown as string[],
+          examples: t('agentArchitecture.layers.infrastructurePlatform.components.security.examples', { returnObjects: true }) as unknown as string[]
         },
         {
-          title: 'MLOps & AgentOps Pipeline',
-          description: 'CI/CD pipelines for agent development, testing, and deployment',
+          title: t('agentArchitecture.layers.infrastructurePlatform.components.mlops.title'),
+          description: t('agentArchitecture.layers.infrastructurePlatform.components.mlops.description'),
           icon: CommandLineIcon,
-          features: ['Agent CI/CD', 'A/B testing', 'Gradual rollouts', 'Rollback capabilities'],
-          technologies: ['MLflow', 'Kubeflow', 'GitHub Actions', 'ArgoCD'],
-          examples: ['Agent Pipeline', 'Deployment System', 'Testing Framework', 'Release Manager']
+          features: t('agentArchitecture.layers.infrastructurePlatform.components.mlops.features', { returnObjects: true }) as unknown as string[],
+          technologies: t('agentArchitecture.layers.infrastructurePlatform.components.mlops.technologies', { returnObjects: true }) as unknown as string[],
+          examples: t('agentArchitecture.layers.infrastructurePlatform.components.mlops.examples', { returnObjects: true }) as unknown as string[]
         }
       ],
-      metrics: [
-        'Infrastructure utilization',
-        'Deployment frequency',
-        'Security compliance rate',
-        'Platform reliability (uptime)'
-      ]
+      metrics: t('agentArchitecture.layers.infrastructurePlatform.metrics', { returnObjects: true }) as unknown as string[]
     }
   ];
 
@@ -263,69 +246,67 @@ const AgenticArchitecture: React.FC = () => {
         {/* Header */}
         <div className="mb-8">
           <div className="inline-block px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-semibold mb-4">
-            Enterprise Agent Architecture
+            {t('agentArchitecture.header.badge')}
           </div>
-          <h1 className="text-3xl font-bold text-gray-900">Agentic AI Architecture Blueprint</h1>
+          <h1 className="text-3xl font-bold text-gray-900">{t('agentArchitecture.header.title')}</h1>
           <p className="mt-2 text-gray-600 max-w-3xl">
-            A comprehensive architectural framework for building, deploying, and managing autonomous AI agents at enterprise scale. 
-            Each layer provides critical capabilities that enable agents to think, act, and learn independently while maintaining 
-            governance and reliability.
+            {t('agentArchitecture.header.description')}
           </p>
         </div>
 
         {/* Architecture Overview Diagram */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Layered Agent Architecture</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">{t('agentArchitecture.layeredArchitecture.title')}</h2>
           <div className="bg-gradient-to-b from-purple-50 via-blue-50 via-green-50 to-orange-50 rounded-lg p-6">
             <div className="space-y-3">
               {/* Visual representation of layers */}
               <div className="bg-purple-100 border-2 border-purple-300 rounded-lg p-4 text-center">
-                <span className="font-semibold text-purple-800">🎯 Agent Orchestration Layer</span>
-                <p className="text-xs text-purple-600 mt-1">Multi-Agent Coordination & Governance</p>
+                <span className="font-semibold text-purple-800">{t('agentArchitecture.layeredArchitecture.agentOrchestration')}</span>
+                <p className="text-xs text-purple-600 mt-1">{t('agentArchitecture.layeredArchitecture.agentOrchestrationSub')}</p>
               </div>
               <div className="bg-blue-100 border-2 border-blue-300 rounded-lg p-4 text-center">
-                <span className="font-semibold text-blue-800">🧠 Cognitive Processing Layer</span>
-                <p className="text-xs text-blue-600 mt-1">Intelligence, Reasoning & Learning</p>
+                <span className="font-semibold text-blue-800">{t('agentArchitecture.layeredArchitecture.cognitiveProcessing')}</span>
+                <p className="text-xs text-blue-600 mt-1">{t('agentArchitecture.layeredArchitecture.cognitiveProcessingSub')}</p>
               </div>
               <div className="bg-green-100 border-2 border-green-300 rounded-lg p-4 text-center">
-                <span className="font-semibold text-green-800">⚡ Execution & Integration Layer</span>
-                <p className="text-xs text-green-600 mt-1">Tools, Actions & System Integration</p>
+                <span className="font-semibold text-green-800">{t('agentArchitecture.layeredArchitecture.executionIntegration')}</span>
+                <p className="text-xs text-green-600 mt-1">{t('agentArchitecture.layeredArchitecture.executionIntegrationSub')}</p>
               </div>
               <div className="bg-orange-100 border-2 border-orange-300 rounded-lg p-4 text-center">
-                <span className="font-semibold text-orange-800">🏗️ Infrastructure & Platform Layer</span>
-                <p className="text-xs text-orange-600 mt-1">Scalable Foundation & DevOps</p>
+                <span className="font-semibold text-orange-800">{t('agentArchitecture.layeredArchitecture.infrastructurePlatform')}</span>
+                <p className="text-xs text-orange-600 mt-1">{t('agentArchitecture.layeredArchitecture.infrastructurePlatformSub')}</p>
               </div>
             </div>
           </div>
-          
+
           {/* Key Architecture Principles */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-6">
             <div className="text-center">
               <div className="text-2xl mb-2">🔄</div>
-              <h4 className="text-sm font-semibold text-gray-900">Loosely Coupled</h4>
+              <h4 className="text-sm font-semibold text-gray-900">{t('agentArchitecture.layeredArchitecture.principles.looselyCoupled.title')}</h4>
               <p className="text-xs text-gray-600 mt-1">
-                Agents operate independently with well-defined interfaces
+                {t('agentArchitecture.layeredArchitecture.principles.looselyCoupled.description')}
               </p>
             </div>
             <div className="text-center">
               <div className="text-2xl mb-2">📈</div>
-              <h4 className="text-sm font-semibold text-gray-900">Horizontally Scalable</h4>
+              <h4 className="text-sm font-semibold text-gray-900">{t('agentArchitecture.layeredArchitecture.principles.horizontallyScalable.title')}</h4>
               <p className="text-xs text-gray-600 mt-1">
-                Add more agents as needed without architectural changes
+                {t('agentArchitecture.layeredArchitecture.principles.horizontallyScalable.description')}
               </p>
             </div>
             <div className="text-center">
               <div className="text-2xl mb-2">🛡️</div>
-              <h4 className="text-sm font-semibold text-gray-900">Secure by Design</h4>
+              <h4 className="text-sm font-semibold text-gray-900">{t('agentArchitecture.layeredArchitecture.principles.secureByDesign.title')}</h4>
               <p className="text-xs text-gray-600 mt-1">
-                Zero-trust principles with agent authentication & authorization
+                {t('agentArchitecture.layeredArchitecture.principles.secureByDesign.description')}
               </p>
             </div>
             <div className="text-center">
               <div className="text-2xl mb-2">🎭</div>
-              <h4 className="text-sm font-semibold text-gray-900">Event-Driven</h4>
+              <h4 className="text-sm font-semibold text-gray-900">{t('agentArchitecture.layeredArchitecture.principles.eventDriven.title')}</h4>
               <p className="text-xs text-gray-600 mt-1">
-                Asynchronous communication enables real-time responsiveness
+                {t('agentArchitecture.layeredArchitecture.principles.eventDriven.description')}
               </p>
             </div>
           </div>
@@ -333,24 +314,24 @@ const AgenticArchitecture: React.FC = () => {
 
         {/* Critical Capabilities Banner */}
         <div className="bg-gradient-to-r from-purple-600 to-orange-600 rounded-xl shadow-lg p-6 mb-8 text-white">
-          <h3 className="text-xl font-bold mb-3">Why This Architecture Enables True Agent Autonomy</h3>
+          <h3 className="text-xl font-bold mb-3">{t('agentArchitecture.autonomyBanner.title')}</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div>
-              <h4 className="font-semibold mb-2">🤖 Agent-First Design</h4>
+              <h4 className="font-semibold mb-2">{t('agentArchitecture.autonomyBanner.agentFirstDesign.title')}</h4>
               <p className="text-sm text-purple-100">
-                Built specifically for autonomous agents, not retrofitted from traditional architectures.
+                {t('agentArchitecture.autonomyBanner.agentFirstDesign.description')}
               </p>
             </div>
             <div>
-              <h4 className="font-semibold mb-2">🔮 Cognitive Capabilities</h4>
+              <h4 className="font-semibold mb-2">{t('agentArchitecture.autonomyBanner.cognitiveCapabilities.title')}</h4>
               <p className="text-sm text-purple-100">
-                Native support for reasoning, planning, learning, and memory at the architectural level.
+                {t('agentArchitecture.autonomyBanner.cognitiveCapabilities.description')}
               </p>
             </div>
             <div>
-              <h4 className="font-semibold mb-2">🌐 Enterprise Ready</h4>
+              <h4 className="font-semibold mb-2">{t('agentArchitecture.autonomyBanner.enterpriseReady.title')}</h4>
               <p className="text-sm text-purple-100">
-                Production-grade with security, governance, and compliance built into every layer.
+                {t('agentArchitecture.autonomyBanner.enterpriseReady.description')}
               </p>
             </div>
           </div>
@@ -361,7 +342,7 @@ const AgenticArchitecture: React.FC = () => {
           {architectureLayers.map((layer, layerIndex) => {
             const colors = getColorClasses(layer.color);
             const LayerIcon = layer.icon;
-            
+
             return (
               <div key={layer.id} className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
                 {/* Layer Header */}
@@ -375,13 +356,13 @@ const AgenticArchitecture: React.FC = () => {
                         <div className="flex items-center mb-2">
                           <h2 className="text-2xl font-bold text-gray-900">{layer.name}</h2>
                           <span className={`ml-3 px-2 py-1 ${colors.bg} ${colors.text} rounded-full text-xs font-semibold`}>
-                            Layer {layerIndex + 1}
+                            {t('agentArchitecture.layers.layer')} {layerIndex + 1}
                           </span>
                         </div>
-                        <p className="text-lg font-medium text-gray-700">🏗️ {layer.tagline}</p>
+                        <p className="text-lg font-medium text-gray-700">{layer.tagline}</p>
                         <p className="text-sm text-gray-600 mt-2">{layer.description}</p>
                         <p className="text-sm font-medium text-gray-700 mt-3">
-                          <span className="font-semibold">Why Critical:</span> {layer.importance}
+                          <span className="font-semibold">{t('agentArchitecture.layers.whyCritical')}</span> {layer.importance}
                         </p>
                       </div>
                     </div>
@@ -391,12 +372,12 @@ const AgenticArchitecture: React.FC = () => {
                 <div className="p-6">
                   {/* Components */}
                   <div className="mb-8">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-4">Core Components</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4">{t('agentArchitecture.layers.coreComponents')}</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {layer.components.map((component, index) => {
                         const ComponentIcon = component.icon;
                         return (
-                          <div 
+                          <div
                             key={index}
                             className={`border border-gray-200 rounded-lg p-4 hover:border-${layer.color}-300 ${colors.hoverBg} transition-all`}
                           >
@@ -409,13 +390,13 @@ const AgenticArchitecture: React.FC = () => {
                                 <p className="text-sm text-gray-600">{component.description}</p>
                               </div>
                             </div>
-                            
+
                             {/* Features */}
                             <div className="mb-3">
-                              <p className="text-xs font-semibold text-gray-700 mb-2">Key Features:</p>
+                              <p className="text-xs font-semibold text-gray-700 mb-2">{t('agentArchitecture.layers.keyFeatures')}</p>
                               <div className="flex flex-wrap gap-2">
                                 {component.features.map((feature, idx) => (
-                                  <span 
+                                  <span
                                     key={idx}
                                     className="inline-block px-2 py-1 bg-gray-50 text-xs text-gray-600 rounded"
                                   >
@@ -424,13 +405,13 @@ const AgenticArchitecture: React.FC = () => {
                                 ))}
                               </div>
                             </div>
-                            
+
                             {/* Technologies */}
                             <div className="mb-3">
-                              <p className="text-xs font-semibold text-gray-700 mb-2">Technologies:</p>
+                              <p className="text-xs font-semibold text-gray-700 mb-2">{t('agentArchitecture.layers.technologies')}</p>
                               <div className="flex flex-wrap gap-2">
                                 {component.technologies.map((tech, idx) => (
-                                  <span 
+                                  <span
                                     key={idx}
                                     className={`inline-block px-2 py-1 ${colors.lightBg} text-xs ${colors.text} rounded`}
                                   >
@@ -439,13 +420,13 @@ const AgenticArchitecture: React.FC = () => {
                                 ))}
                               </div>
                             </div>
-                            
+
                             {/* Implementation Examples */}
                             <div>
-                              <p className="text-xs font-semibold text-gray-700 mb-2">Implementation Examples:</p>
+                              <p className="text-xs font-semibold text-gray-700 mb-2">{t('agentArchitecture.layers.implementationExamples')}</p>
                               <div className="flex flex-wrap gap-2">
                                 {component.examples.map((example, idx) => (
-                                  <span 
+                                  <span
                                     key={idx}
                                     className="inline-block px-2 py-1 bg-green-50 text-xs text-green-700 rounded"
                                   >
@@ -462,7 +443,7 @@ const AgenticArchitecture: React.FC = () => {
 
                   {/* Success Metrics */}
                   <div className="bg-gray-50 rounded-lg p-4">
-                    <h4 className="text-sm font-semibold text-gray-900 mb-3">Layer Success Metrics</h4>
+                    <h4 className="text-sm font-semibold text-gray-900 mb-3">{t('agentArchitecture.layers.layerSuccessMetrics')}</h4>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                       {layer.metrics.map((metric, idx) => (
                         <div key={idx} className="text-center">
@@ -480,36 +461,36 @@ const AgenticArchitecture: React.FC = () => {
 
         {/* Integration Patterns */}
         <div className="mt-8 bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">Agent Integration Patterns</h3>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('agentArchitecture.integrationPatterns.title')}</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="border border-gray-200 rounded-lg p-4">
               <div className="text-2xl mb-2">🔗</div>
-              <h4 className="font-semibold text-gray-900 mb-2">Synchronous Request-Response</h4>
+              <h4 className="font-semibold text-gray-900 mb-2">{t('agentArchitecture.integrationPatterns.syncRequestResponse.title')}</h4>
               <p className="text-sm text-gray-600 mb-2">
-                Direct agent invocation for immediate responses with timeout handling.
+                {t('agentArchitecture.integrationPatterns.syncRequestResponse.description')}
               </p>
               <p className="text-xs text-gray-500">
-                <span className="font-semibold">Use for:</span> Real-time queries, UI interactions, critical decisions
+                <span className="font-semibold">{t('agentArchitecture.integrationPatterns.useForLabel')}</span> {t('agentArchitecture.integrationPatterns.syncRequestResponse.useFor')}
               </p>
             </div>
             <div className="border border-gray-200 rounded-lg p-4">
               <div className="text-2xl mb-2">📨</div>
-              <h4 className="font-semibold text-gray-900 mb-2">Asynchronous Message Queue</h4>
+              <h4 className="font-semibold text-gray-900 mb-2">{t('agentArchitecture.integrationPatterns.asyncMessageQueue.title')}</h4>
               <p className="text-sm text-gray-600 mb-2">
-                Queue-based communication for decoupled, scalable agent interactions.
+                {t('agentArchitecture.integrationPatterns.asyncMessageQueue.description')}
               </p>
               <p className="text-xs text-gray-500">
-                <span className="font-semibold">Use for:</span> Batch processing, long-running tasks, system integration
+                <span className="font-semibold">{t('agentArchitecture.integrationPatterns.useForLabel')}</span> {t('agentArchitecture.integrationPatterns.asyncMessageQueue.useFor')}
               </p>
             </div>
             <div className="border border-gray-200 rounded-lg p-4">
               <div className="text-2xl mb-2">🌊</div>
-              <h4 className="font-semibold text-gray-900 mb-2">Event-Driven Streaming</h4>
+              <h4 className="font-semibold text-gray-900 mb-2">{t('agentArchitecture.integrationPatterns.eventDrivenStreaming.title')}</h4>
               <p className="text-sm text-gray-600 mb-2">
-                Real-time event streams for reactive agent behaviors and complex workflows.
+                {t('agentArchitecture.integrationPatterns.eventDrivenStreaming.description')}
               </p>
               <p className="text-xs text-gray-500">
-                <span className="font-semibold">Use for:</span> Real-time analytics, monitoring, multi-agent coordination
+                <span className="font-semibold">{t('agentArchitecture.integrationPatterns.useForLabel')}</span> {t('agentArchitecture.integrationPatterns.eventDrivenStreaming.useFor')}
               </p>
             </div>
           </div>
@@ -517,15 +498,15 @@ const AgenticArchitecture: React.FC = () => {
 
         {/* Deployment Models */}
         <div className="mt-8 bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">Agent Deployment Models</h3>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('agentArchitecture.deploymentModels.title')}</h3>
           <div className="space-y-4">
             <div className="flex items-start">
               <div className="bg-blue-100 text-blue-700 rounded-full w-8 h-8 flex items-center justify-center font-semibold text-sm mr-4 flex-shrink-0">
                 1
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900">Centralized Agent Hub</h4>
-                <p className="text-sm text-gray-600">All agents run in a central cluster with shared resources and governance. Best for starting out and maintaining control.</p>
+                <h4 className="font-semibold text-gray-900">{t('agentArchitecture.deploymentModels.centralizedHub.title')}</h4>
+                <p className="text-sm text-gray-600">{t('agentArchitecture.deploymentModels.centralizedHub.description')}</p>
               </div>
             </div>
             <div className="flex items-start">
@@ -533,8 +514,8 @@ const AgenticArchitecture: React.FC = () => {
                 2
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900">Distributed Agent Network</h4>
-                <p className="text-sm text-gray-600">Agents deployed across multiple regions/clouds for resilience and performance. Ideal for global operations.</p>
+                <h4 className="font-semibold text-gray-900">{t('agentArchitecture.deploymentModels.distributedNetwork.title')}</h4>
+                <p className="text-sm text-gray-600">{t('agentArchitecture.deploymentModels.distributedNetwork.description')}</p>
               </div>
             </div>
             <div className="flex items-start">
@@ -542,8 +523,8 @@ const AgenticArchitecture: React.FC = () => {
                 3
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900">Edge Agent Deployment</h4>
-                <p className="text-sm text-gray-600">Lightweight agents at the edge for low-latency, local decision-making. Perfect for IoT and real-time scenarios.</p>
+                <h4 className="font-semibold text-gray-900">{t('agentArchitecture.deploymentModels.edgeDeployment.title')}</h4>
+                <p className="text-sm text-gray-600">{t('agentArchitecture.deploymentModels.edgeDeployment.description')}</p>
               </div>
             </div>
             <div className="flex items-start">
@@ -551,8 +532,8 @@ const AgenticArchitecture: React.FC = () => {
                 4
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900">Hybrid Multi-Cloud</h4>
-                <p className="text-sm text-gray-600">Agents span on-premise, private cloud, and public cloud for maximum flexibility and compliance.</p>
+                <h4 className="font-semibold text-gray-900">{t('agentArchitecture.deploymentModels.hybridMultiCloud.title')}</h4>
+                <p className="text-sm text-gray-600">{t('agentArchitecture.deploymentModels.hybridMultiCloud.description')}</p>
               </div>
             </div>
           </div>
@@ -562,26 +543,23 @@ const AgenticArchitecture: React.FC = () => {
         <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="bg-white rounded-lg border border-gray-200 p-4">
             <span className="text-2xl mb-2">⚖️</span>
-            <h4 className="text-sm font-semibold text-gray-900 mb-2">Governance & Control</h4>
+            <h4 className="text-sm font-semibold text-gray-900 mb-2">{t('agentArchitecture.considerations.governanceControl.title')}</h4>
             <p className="text-xs text-gray-600">
-              Built-in governance ensures agents operate within defined boundaries while maintaining 
-              autonomy for decision-making and learning.
+              {t('agentArchitecture.considerations.governanceControl.description')}
             </p>
           </div>
           <div className="bg-white rounded-lg border border-gray-200 p-4">
             <span className="text-2xl mb-2">🔐</span>
-            <h4 className="text-sm font-semibold text-gray-900 mb-2">Security & Trust</h4>
+            <h4 className="text-sm font-semibold text-gray-900 mb-2">{t('agentArchitecture.considerations.securityTrust.title')}</h4>
             <p className="text-xs text-gray-600">
-              Zero-trust architecture with agent authentication, encrypted communication, and 
-              comprehensive audit trails for compliance.
+              {t('agentArchitecture.considerations.securityTrust.description')}
             </p>
           </div>
           <div className="bg-white rounded-lg border border-gray-200 p-4">
             <span className="text-2xl mb-2">📊</span>
-            <h4 className="text-sm font-semibold text-gray-900 mb-2">Observability & Control</h4>
+            <h4 className="text-sm font-semibold text-gray-900 mb-2">{t('agentArchitecture.considerations.observabilityControl.title')}</h4>
             <p className="text-xs text-gray-600">
-              Complete visibility into agent behavior, performance, and decisions with real-time 
-              monitoring and intervention capabilities.
+              {t('agentArchitecture.considerations.observabilityControl.description')}
             </p>
           </div>
         </div>

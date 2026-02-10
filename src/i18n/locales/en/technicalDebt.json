@@ -1,0 +1,382 @@
+{
+  "overview": {
+    "title": "Technical Debt Assessment",
+    "subtitle": "AI-powered analysis and remediation planning",
+    "header": {
+      "title": "Technical Debt Analysis Deep Dive",
+      "description": "How we identify, quantify, and remediate technical debt using semantic ontology analysis"
+    },
+    "hiddenCost": {
+      "title": "The Hidden Cost of Technical Debt",
+      "description": "Technical debt silently accumulates in every codebase, creating a compound effect that slows development, increases bugs, and makes systems harder to maintain. Studies show that organizations spend",
+      "budgetHighlight": " 40% of their IT budget",
+      "descriptionEnd": " just managing technical debt.",
+      "stats": {
+        "slower": "23% slower",
+        "slowerLabel": "Feature delivery",
+        "moreBugs": "4x more bugs",
+        "moreBugsLabel": "In debt-heavy modules",
+        "annualCost": "$85B annually",
+        "annualCostLabel": "US enterprises alone",
+        "timeSpent": "60% of time",
+        "timeSpentLabel": "Dealing with bad code"
+      }
+    },
+    "caseStudy": {
+      "title": "Case Study: Phoenix CRM Application",
+      "description": "To demonstrate our technical debt analysis approach, we'll examine <strong>Phoenix CRM</strong>, a real-world enterprise CRM system that has evolved over 8 years:",
+      "legacyArchitecture": "Legacy Architecture:",
+      "legacyArchitectureDesc": "Started as PHP monolith, partially migrated to microservices",
+      "mixedTechnology": "Mixed Technology:",
+      "mixedTechnologyDesc": "PHP, Node.js, Python services with MySQL and MongoDB",
+      "teamChallenges": "Team Challenges:",
+      "teamChallengesDesc": "3 different teams, inconsistent practices, knowledge silos",
+      "documentationGap": "Documentation Gap:",
+      "documentationGapDesc": "Outdated docs, undocumented features, lost requirements",
+      "byTheNumbers": "Phoenix by the Numbers",
+      "linesOfCode": "Lines of Code:",
+      "components": "Components:",
+      "dependencies": "Dependencies:",
+      "databaseTables": "Database Tables:",
+      "apiEndpoints": "API Endpoints:",
+      "activeUsers": "Active Users:"
+    },
+    "solution": {
+      "title": "Our Solution: Semantic Ontology Analysis",
+      "description": "Traditional static analysis tools only scratch the surface. Our approach uses AI agents to build a comprehensive understanding of your system across four critical dimensions:",
+      "whatWeAnalyze": "What We Analyze",
+      "codeStructure": "<strong>Code Structure:</strong> Components, dependencies, quality metrics",
+      "businessLogic": "<strong>Business Logic:</strong> Features vs. implementation alignment",
+      "architecture": "<strong>Architecture:</strong> Layer violations, anti-patterns, coupling",
+      "designPatterns": "<strong>Design Patterns:</strong> UI consistency, component duplication",
+      "whatWeDeliver": "What We Deliver",
+      "debtQuantification": "<strong>Debt Quantification:</strong> Precise metrics and impact analysis",
+      "rootCauses": "<strong>Root Causes:</strong> Why debt accumulated and where",
+      "riskAssessment": "<strong>Risk Assessment:</strong> Business impact and urgency scoring",
+      "actionPlan": "<strong>Action Plan:</strong> Prioritized remediation roadmap"
+    },
+    "findings": {
+      "title": "What We Found in Phoenix CRM",
+      "criticalIssues": "Critical Issues",
+      "criticalIssuesDesc": "Architecture violations requiring immediate attention",
+      "codeSmells": "Code Smells",
+      "codeSmellsDesc": "Duplicate code, complex methods, poor naming",
+      "missingFeatures": "Missing Features",
+      "missingFeaturesDesc": "Documented requirements not implemented",
+      "estimatedImpact": "<strong>Estimated Impact:</strong> Addressing these issues would reduce maintenance costs by 35% and accelerate feature delivery by 50% within 6 months."
+    },
+    "explore": {
+      "title": "Explore the Phoenix Analysis",
+      "agentExtraction": "1. Agent Extraction",
+      "agentExtractionDesc": "See how AI agents analyzed Phoenix's codebase",
+      "viewProcess": "View process →",
+      "knowledgeGraphs": "2. Knowledge Graphs",
+      "knowledgeGraphsDesc": "Explore the four ontology graphs we extracted",
+      "viewGraphs": "View graphs →",
+      "debtAssessment": "3. Debt Assessment",
+      "debtAssessmentDesc": "Detailed breakdown of identified issues",
+      "viewFindings": "View findings →",
+      "actionPlan": "4. Action Plan",
+      "actionPlanDesc": "Prioritized roadmap for debt reduction",
+      "viewRoadmap": "View roadmap →"
+    }
+  },
+  "assessment": {
+    "title": "Technical Debt Assessment",
+    "subtitle": "Comprehensive analysis of code quality issues and architectural violations",
+    "metrics": {
+      "overallScore": "Overall Score",
+      "severitySuffix": "/10 severity",
+      "architecture": "Architecture",
+      "design": "Design",
+      "functional": "Functional",
+      "codeQuality": "Code Quality"
+    },
+    "ontologyResults": {
+      "title": "Ontology Extraction Results",
+      "codeGraph": "Code Graph",
+      "nodes": "nodes",
+      "edges": "edges",
+      "gapsFound": "5 gaps found",
+      "inconsistencies": "3 inconsistencies",
+      "violations": "3 violations",
+      "mappings": "Mappings",
+      "total": "total",
+      "crossOntology": "Cross-ontology"
+    },
+    "codeAnalysis": {
+      "title": "Code Analysis Details",
+      "codeComponents": "Code Components",
+      "groundTruthNodes": "Ground truth nodes",
+      "linesOfCode": "Lines of Code",
+      "acrossAllFiles": "Across all files",
+      "codeEdges": "Code Edges",
+      "dependenciesLabel": "Dependencies",
+      "avgComplexity": "Avg Complexity"
+    },
+    "issues": {
+      "title": "Technical Debt Issues",
+      "filters": {
+        "allCategories": "All Categories",
+        "architecture": "Architecture",
+        "design": "Design",
+        "functional": "Functional",
+        "codeQuality": "Code Quality",
+        "allSeverities": "All Severities",
+        "critical": "Critical",
+        "high": "High",
+        "medium": "Medium",
+        "low": "Low"
+      },
+      "summary": {
+        "totalIssues": "Total Issues",
+        "totalEffort": "Total Effort",
+        "avgImpact": "Avg Impact",
+        "criticalIssues": "Critical Issues"
+      },
+      "table": {
+        "issue": "Issue",
+        "severity": "Severity",
+        "impact": "Impact",
+        "effort": "Effort",
+        "risk": "Risk"
+      }
+    },
+    "issueDetail": {
+      "description": "Description",
+      "recommendation": "Recommendation",
+      "impactScore": "Impact Score",
+      "effortEstimate": "Effort Estimate",
+      "riskLevel": "Risk Level",
+      "affectedCodeNodes": "Affected Code Nodes"
+    }
+  },
+  "agentAnalysis": {
+    "title": "Agent Analysis",
+    "subtitle": "AI agent-based debt analysis",
+    "header": {
+      "title": "Agent-Based Ontology Extraction",
+      "description": "Demonstration of how AI agents process code and documentation to extract ontologies"
+    },
+    "codeAssets": {
+      "title": "Code Assets",
+      "phpFiles": "PHP Files",
+      "jsFiles": "JavaScript Files",
+      "totalLinesOfCode": "Total Lines of Code",
+      "componentsIdentified": "Components Identified",
+      "source": "Source:"
+    },
+    "documentAssets": {
+      "title": "Document Assets",
+      "requirementsDocs": "Requirements Docs",
+      "designDocs": "Design Docs",
+      "architectureDocs": "Architecture Docs",
+      "totalDocuments": "Total Documents",
+      "source": "Source:"
+    },
+    "extractionProcess": {
+      "title": "Extraction Process Flow",
+      "keySteps": "Key Process Steps",
+      "step1": "1. Collect all code and documentation artifacts",
+      "step2": "2. Four specialized agents process in parallel",
+      "step3": "3. Each agent generates its ontology graph",
+      "step4": "4. Cross-ontology mappings are established",
+      "step5": "5. Unified knowledge graph is created",
+      "benefits": "Benefits",
+      "benefit1": "Comprehensive system understanding",
+      "benefit2": "Automated gap identification",
+      "benefit3": "Violation detection",
+      "benefit4": "Impact analysis capability",
+      "benefit5": "Refactoring guidance"
+    },
+    "agentCapabilities": {
+      "title": "Agent Capabilities",
+      "agents": {
+        "code": {
+          "title": "Code Agent",
+          "description": "Analyzes source code to build the ground truth code graph",
+          "input1": "Source Code Files",
+          "input2": "Dependencies",
+          "input3": "Configurations",
+          "output1": "Code Graph",
+          "output2": "Dependency Map",
+          "output3": "Complexity Metrics"
+        },
+        "functional": {
+          "title": "Functional Agent",
+          "description": "Extracts business requirements and functional behaviors from documentation",
+          "input1": "Requirements Docs",
+          "input2": "User Stories",
+          "input3": "User Manuals",
+          "output1": "Functional Hierarchy",
+          "output2": "Use Cases",
+          "output3": "Functional Gaps"
+        },
+        "design": {
+          "title": "Design Agent",
+          "description": "Identifies UI/UX patterns and design components",
+          "input1": "Design Mockups",
+          "input2": "Style Guides",
+          "input3": "UI Code",
+          "output1": "Design System",
+          "output2": "Component Library",
+          "output3": "User Journeys"
+        },
+        "architecture": {
+          "title": "Architecture Agent",
+          "description": "Maps system architecture and identifies patterns and violations",
+          "input1": "Architecture Docs",
+          "input2": "API Specs",
+          "input3": "System Code",
+          "output1": "Architecture Layers",
+          "output2": "Service Map",
+          "output3": "Violations"
+        }
+      },
+      "agentSuffix": "Agent",
+      "processes": "Processes:",
+      "produces": "Produces:",
+      "sampleProcessing": "Sample Processing",
+      "extractsRequirements": "Extracts: Requirements, User Stories, Acceptance Criteria",
+      "analyzesDependencies": "Analyzes: Dependencies, Complexity, Patterns",
+      "mapsComponents": "Maps: Components, Layouts, Interactions",
+      "identifiesLayers": "Identifies: Layers, Services, Patterns"
+    },
+    "analysisExamples": {
+      "functionalGapTitle": "Example: Functional Gap Detection",
+      "architectureViolationTitle": "Example: Architecture Violation Detection",
+      "designInconsistencyTitle": "Example: Design Inconsistency Detection",
+      "codeQualityTitle": "Example: Code Quality Analysis",
+      "functionalGapDesc": "How the Functional Agent identifies gaps by comparing documentation against code",
+      "architectureViolationDesc": "How the Architecture Agent identifies violations of architectural principles",
+      "designInconsistencyDesc": "How the Design Agent identifies UI/UX inconsistencies and duplication",
+      "codeQualityDesc": "How the Code Agent analyzes source code for quality issues",
+      "implementedRequirements": "Implemented Requirements",
+      "functionalGaps": "Functional Gaps",
+      "sourceLabel": "Source:",
+      "foundInCode": "Found in code:",
+      "noImplementation": "No implementation found in code",
+      "locationLabel": "Location:",
+      "fixLabel": "Fix:",
+      "detectionMethodArchitecture": "<strong>Detection Method:</strong> The Architecture Agent analyzes code structure, dependencies, and architectural documentation to identify violations of design principles like separation of concerns, service boundaries, and layered architecture.",
+      "examplesFound": "Examples found:",
+      "impactLabel": "Impact:",
+      "recommendationLabel": "Recommendation:",
+      "detectionMethodDesign": "<strong>Detection Method:</strong> The Design Agent analyzes UI code, stylesheets, and design documentation to identify duplicate components, inconsistent patterns, and deviations from design system guidelines.",
+      "codeComplexity": "Code Complexity",
+      "cyclomaticComplexity": "Cyclomatic Complexity",
+      "maxNestingDepth": "Max Nesting Depth",
+      "longMethods": "Long Methods",
+      "codeDuplication": "Code Duplication",
+      "duplicateBlocks": "Duplicate Blocks",
+      "linesDuplicated": "Lines Duplicated",
+      "duplicationPercent": "Duplication %",
+      "codeSmellsTitle": "Code Smells",
+      "godClasses": "God Classes",
+      "deadCode": "Dead Code",
+      "magicNumbers": "Magic Numbers",
+      "topIssuesByFile": "Top Issues by File",
+      "detectionMethodCode": "<strong>Detection Method:</strong> The Code Agent performs static analysis on source code to identify complexity issues, duplication, code smells, and violations of coding standards. This forms the ground truth for all other ontology mappings.",
+      "functionalNote": "<strong>Note:</strong> Functional gaps can only be identified when requirements exist in documentation but have no corresponding implementation in code. This demonstrates the value of processing both code and documentation artifacts."
+    }
+  },
+  "graphExplorer": {
+    "title": "Debt Graph Explorer",
+    "subtitle": "Visualize debt relationships",
+    "header": {
+      "title": "Phoenix CRM Graph Explorer",
+      "description": "Visualizing complete four-ontology structure and code relationships"
+    },
+    "filters": {
+      "title": "Ontology Filters",
+      "codeGraph": "Code Graph",
+      "functional": "Functional",
+      "design": "Design",
+      "architecture": "Architecture"
+    },
+    "displayOptions": {
+      "title": "Display Options",
+      "showOntologyMappings": "Show Ontology Mappings",
+      "highlightHighComplexity": "Highlight High Complexity"
+    },
+    "legend": {
+      "title": "Legend",
+      "functional": "Functional",
+      "design": "Design",
+      "architecture": "Architecture",
+      "code": "Code",
+      "edgeTypes": "Edge Types:",
+      "imports": "Imports",
+      "calls": "Calls",
+      "accessesDb": "Accesses DB",
+      "uses": "Uses",
+      "derivesTo": "Derives To"
+    },
+    "nodeDetails": {
+      "title": "Node Details",
+      "type": "Type:",
+      "subtype": "Subtype:",
+      "file": "File:",
+      "language": "Language:",
+      "framework": "Framework:",
+      "linesOfCode": "Lines of Code:",
+      "complexity": "Complexity:",
+      "dependencies": "Dependencies:",
+      "derivedMappings": "Derived Mappings:",
+      "close": "Close"
+    }
+  },
+  "remediation": {
+    "title": "Remediation Roadmap",
+    "subtitle": "Prioritized debt reduction",
+    "header": {
+      "title": "Remediation Roadmap",
+      "description": "Prioritized action plan for systematic debt reduction"
+    },
+    "summary": {
+      "totalIssues": "Total Issues",
+      "totalEffort": "Total Effort",
+      "expectedImpact": "Expected Impact",
+      "timeline": "Timeline"
+    },
+    "phases": {
+      "title": "Remediation Phases",
+      "viewTimeline": "Timeline View",
+      "viewImpact": "Impact Matrix",
+      "viewEffort": "Effort Analysis",
+      "phase1Name": "Phase 1: Critical Fixes",
+      "phase1Desc": "Address security vulnerabilities and architectural violations",
+      "phase2Name": "Phase 2: Design & Functional",
+      "phase2Desc": "Improve UI consistency and close functional gaps",
+      "phase3Name": "Phase 3: Code Quality",
+      "phase3Desc": "Refactor and optimize codebase",
+      "effortLabel": "Effort",
+      "impactLabel": "Impact",
+      "risk": "RISK",
+      "issues": "issues",
+      "pts": "pts"
+    },
+    "impactMatrix": {
+      "title": "Impact vs Effort Matrix",
+      "highImpactLowEffort": "High Impact / Low Effort",
+      "highImpactHighEffort": "High Impact / High Effort",
+      "lowImpactLowEffort": "Low Impact / Low Effort",
+      "lowImpactHighEffort": "Low Impact / High Effort",
+      "critical": "Critical",
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
+    },
+    "effortAnalysis": {
+      "title": "Effort Distribution Analysis",
+      "sprints": "Sprints:",
+      "issues": "Issues:",
+      "avgPerSprint": "Avg per Sprint:",
+      "resourceTitle": "Resource Recommendations",
+      "teamSize": "Estimated team size: 3-4 developers",
+      "sprintDuration": "Sprint duration: 2 weeks",
+      "totalTimeline": "Total timeline: {{weeks}} weeks ({{months}} months)",
+      "recommendedApproach": "Recommended approach: Start with Phase 1 critical fixes in parallel tracks"
+    }
+  }
+}

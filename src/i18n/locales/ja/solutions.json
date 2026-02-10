@@ -1,0 +1,4852 @@
+{
+  "showcase": {
+    "header": {
+      "title": "ソリューションショーケース",
+      "description": "AIエージェントが実際のエンタープライズ課題をどのように解決するかをご覧ください。各ソリューションは、実際の導入事例または導入可能な実証済みの機能を表しています。"
+    },
+    "categories": {
+      "featuredDeepDives": "注目のディープダイブ",
+      "dataAnalytics": "データ＆アナリティクス"
+    },
+    "labels": {
+      "keyCapabilities": "主要機能",
+      "businessOutcomes": "ビジネス成果",
+      "caseStudy": "導入事例：",
+      "deepDive": "ディープダイブ",
+      "exploreDeepDive": "ディープダイブを探索",
+      "learnMore": "詳細を見る"
+    },
+    "solutions": {
+      "productEngineering": {
+        "title": "プロダクトエンジニアリング",
+        "description": "セマンティック Knowledge Graph、マルチステークホルダーバリデーション、インテリジェントなアーティファクト生成を活用して、プロダクトエンジニアリングを加速します。",
+        "capabilities": {
+          "semanticExtraction": "ドキュメントからのセマンティック知識抽出",
+          "multiStakeholder": "マルチステークホルダーバリデーションワークフロー",
+          "automatedArtifact": "自動アーティファクト生成",
+          "continuousSprint": "継続的スプリントバリデーション"
+        },
+        "outcomes": {
+          "fasterTime": "市場投入までの期間を60%短縮",
+          "reducedAmbiguity": "曖昧さを85%削減",
+          "fewerDefects": "欠陥を40%削減"
+        },
+        "caseStudy": "エンタープライズSaaSプラットフォーム"
+      },
+      "appReengineering": {
+        "title": "アプリケーションリエンジニアリング",
+        "description": "AI駆動の分析、マルチステークホルダーバリデーション、継続的な品質モニタリングを活用して、レガシーアプリケーションを体系的にモダナイズします。",
+        "capabilities": {
+          "automatedDiscovery": "自動ディスカバリーとアセスメント",
+          "multiStakeholder": "マルチステークホルダーバリデーション",
+          "aiImplementation": "AI駆動の実装",
+          "continuousSprint": "継続的スプリントバリデーション"
+        },
+        "outcomes": {
+          "fasterModernization": "モダナイゼーションを70%高速化",
+          "costReduction": "コストを60%削減",
+          "fewerDefects": "欠陥を40%削減"
+        },
+        "caseStudy": "Phoenix CRM モダナイゼーション"
+      },
+      "portfolioRat": {
+        "title": "ポートフォリオ合理化",
+        "description": "複数のアプリケーションを分析し、重複、冗長性、統合の機会を特定するインテリジェントエージェントです。",
+        "capabilities": {
+          "crossApp": "クロスアプリケーション分析",
+          "overlapDetection": "機能重複の検出",
+          "similarityScoring": "コンポーネント類似度スコアリング",
+          "migrationStrategy": "移行戦略の立案"
+        },
+        "outcomes": {
+          "maintenanceCost": "保守コストを30%削減",
+          "eliminatedDuplicate": "重複機能の排除",
+          "unifiedStack": "統合テクノロジースタック"
+        },
+        "caseStudy": "グローバルEコマースプラットフォーム"
+      },
+      "asimovMigration": {
+        "title": "ASIMOV レガシー移行",
+        "description": "自律型エージェントによるコード分析、変換、クラウド移行を実現するAI駆動のアプリケーションモダナイゼーションプラットフォームです。",
+        "capabilities": {
+          "codeTranslation": "自動コード変換（COBOL から Java）",
+          "dependencyMapping": "依存関係のマッピングと分析",
+          "incrementalMigration": "段階的移行パターン",
+          "zeroDowntime": "ゼロダウンタイムデプロイメント"
+        },
+        "outcomes": {
+          "migrationTime": "移行時間を70%削減",
+          "costSavings": "コストを60%削減",
+          "uptime": "移行中の稼働率99.9%"
+        },
+        "caseStudy": "グローバル金融機関"
+      },
+      "customerServiceAi": {
+        "title": "カスタマーサービスAI",
+        "description": "自己修復ボット、エージェント支援、ビジネス最適化を備えた包括的な自律型サポートシステムです。",
+        "capabilities": {
+          "selfHealBot": "L0自動化のためのSelf Heal Bot",
+          "assistedHealBot": "L1エージェント向けAssisted Heal Bot",
+          "optimizationHub": "ビジネス最適化ハブ",
+          "multiChannel": "マルチチャネルサポート"
+        },
+        "outcomes": {
+          "autoResolution": "自動解決率60%",
+          "agentProductivity": "エージェント生産性150%向上",
+          "costReduction": "コストを40%削減"
+        },
+        "caseStudy": "Fortune 500 通信企業"
+      },
+      "dataEngineering": {
+        "title": "データエンジニアリング",
+        "description": "AI駆動のデータパイプライン最適化、品質管理、自動ETLプロセスです。",
+        "capabilities": {
+          "qualityChecks": "自動データ品質チェック",
+          "pipelineDesign": "インテリジェントETLパイプライン設計",
+          "anomalyDetection": "リアルタイム異常検知",
+          "lineageTracking": "データリネージ追跡"
+        },
+        "outcomes": {
+          "errorReduction": "データエラーを80%削減",
+          "fasterPipeline": "パイプライン開発を50%高速化",
+          "realTimeInsights": "リアルタイムデータインサイト"
+        },
+        "caseStudy": "エンタープライズ小売業"
+      }
+    },
+    "cta": {
+      "title": "エンタープライズの変革を始めませんか？",
+      "description": "これらのソリューションは、実現可能なことのほんの一部です。AIエージェントがお客様固有の課題をどのように解決できるか、ぜひご相談ください。",
+      "button": "コンサルテーションを予約"
+    }
+  },
+  "dataEngineering": {
+    "header": {
+      "title": "エンタープライズデータ変革プラットフォーム",
+      "subtitle": "自律型エージェントによるAI駆動データエンジニアリング",
+      "viewDeepDive": "ディープダイブを見る"
+    },
+    "hero": {
+      "title": "大規模な自律型データエンジニアリング",
+      "description": "当社のAI駆動データプラットフォームは、データライフサイクル全体を自律的に管理する専門エージェントを採用しています。インテリジェントな取り込みとリアルタイム処理から、自動ガバナンスと最適化まで、エージェントがデータインフラストラクチャを24時間365日最高効率で稼働させます。",
+      "metrics": {
+        "processing": {
+          "value": "10TB+",
+          "label": "時間あたりの処理量"
+        },
+        "uptime": {
+          "value": "99.99%",
+          "label": "パイプライン稼働率"
+        },
+        "costReduction": {
+          "value": "70%",
+          "label": "コスト削減"
+        },
+        "latency": {
+          "value": "<100ms",
+          "label": "クエリレイテンシ"
+        }
+      },
+      "scheduleDemo": "デモを予約",
+      "viewCaseStudies": "導入事例を見る",
+      "architectureTitle": "エージェント駆動アーキテクチャ"
+    },
+    "architecture": {
+      "layers": {
+        "dataSources": {
+          "name": "データソース",
+          "components": [
+            "データベース",
+            "API",
+            "IoTデバイス",
+            "ファイル",
+            "ストリーム"
+          ],
+          "color": "from-green-400 to-green-600"
+        },
+        "ingestionLayer": {
+          "name": "取り込みレイヤー",
+          "components": [
+            "エージェントコレクター",
+            "スキーマバリデーター",
+            "フォーマットコンバーター"
+          ],
+          "color": "from-blue-400 to-blue-600"
+        },
+        "processingEngine": {
+          "name": "処理エンジン",
+          "components": [
+            "Sparkエージェント",
+            "Flinkプロセッサー",
+            "Kafka Streams"
+          ],
+          "color": "from-purple-400 to-purple-600"
+        },
+        "storageLake": {
+          "name": "ストレージ＆レイク",
+          "components": [
+            "Delta Lake",
+            "Icebergテーブル",
+            "ベクトルストア"
+          ],
+          "color": "from-indigo-400 to-indigo-600"
+        },
+        "analyticsAi": {
+          "name": "アナリティクス＆AI",
+          "components": [
+            "MLパイプライン",
+            "BIダッシュボード",
+            "RAGシステム"
+          ],
+          "color": "from-pink-400 to-pink-600"
+        }
+      }
+    },
+    "agents": {
+      "title": "専門データエージェント",
+      "tabs": {
+        "ingestion": "インテリジェントデータ取り込み",
+        "processing": "自律型処理",
+        "governance": "データガバナンス＆セキュリティ"
+      },
+      "ingestion": {
+        "schemaDiscovery": {
+          "name": "スキーマディスカバリーエージェント",
+          "role": "変化するデータスキーマを自動的に検出し適応します",
+          "capabilities": [
+            "動的スキーマ推論",
+            "異常検知",
+            "フォーマット最適化"
+          ],
+          "performance": "10TB/時間の処理"
+        },
+        "pipelineOrchestrator": {
+          "name": "パイプラインオーケストレーター",
+          "role": "複雑なETL/ELTワークフローを自律的に管理します",
+          "capabilities": [
+            "依存関係の解決",
+            "障害回復",
+            "負荷分散"
+          ],
+          "performance": "稼働率99.99%"
+        },
+        "qualityGuardian": {
+          "name": "品質ガーディアン",
+          "role": "継続的なバリデーションによりデータ品質を確保します",
+          "capabilities": [
+            "リアルタイムバリデーション",
+            "ドリフト検出",
+            "自動修正"
+          ],
+          "performance": "エラー率0.01%未満"
+        }
+      },
+      "processing": {
+        "transformation": {
+          "name": "変換エージェント",
+          "role": "複雑なビジネスルールと変換を適用します",
+          "capabilities": [
+            "ML ベースの変換",
+            "パターン認識",
+            "最適化"
+          ],
+          "performance": "従来の5倍高速"
+        },
+        "aggregationOptimizer": {
+          "name": "集計オプティマイザー",
+          "role": "データ集計とサマリーをインテリジェントに最適化します",
+          "capabilities": [
+            "クエリ最適化",
+            "キャッシュ戦略",
+            "並列処理"
+          ],
+          "performance": "コストを80%削減"
+        },
+        "streamProcessor": {
+          "name": "ストリームプロセッサー",
+          "role": "リアルタイムデータストリームを低レイテンシで処理します",
+          "capabilities": [
+            "イベント処理",
+            "ウィンドウ操作",
+            "状態管理"
+          ],
+          "performance": "レイテンシ100ms未満"
+        }
+      },
+      "governance": {
+        "complianceMonitor": {
+          "name": "コンプライアンスモニター",
+          "role": "すべてのデータ操作における規制コンプライアンスを確保します",
+          "capabilities": [
+            "GDPR/CCPAコンプライアンス",
+            "監査ログ",
+            "ポリシー適用"
+          ],
+          "performance": "コンプライアンス率100%"
+        },
+        "lineageTracker": {
+          "name": "リネージトラッカー",
+          "role": "完全なデータリネージと影響分析を維持します",
+          "capabilities": [
+            "エンドツーエンドの追跡",
+            "影響予測",
+            "バージョン管理"
+          ],
+          "performance": "完全な透明性"
+        },
+        "securitySentinel": {
+          "name": "セキュリティセンチネル",
+          "role": "インテリジェントなマスキングにより機密データを保護します",
+          "capabilities": [
+            "PII検出",
+            "動的マスキング",
+            "アクセス制御"
+          ],
+          "performance": "侵害ゼロ"
+        }
+      }
+    },
+    "successStories": {
+      "title": "成功事例",
+      "labels": {
+        "challenge": "課題",
+        "solution": "ソリューション",
+        "keyMetrics": "主要指標"
+      },
+      "realTimeAnalytics": {
+        "title": "リアルタイムアナリティクスプラットフォーム",
+        "industry": "Eコマース",
+        "challenge": "1日1億件以上のイベントをサブ秒のアナリティクスで処理する",
+        "solution": "インテリジェントキャッシュを備えたマルチエージェントストリーミングアーキテクチャ",
+        "metricKeys": [
+          "eventProcessing",
+          "queryLatency",
+          "costSavings",
+          "dataAccuracy"
+        ],
+        "metrics": {
+          "eventProcessing": {
+            "value": "150M/日",
+            "label": "イベント処理"
+          },
+          "queryLatency": {
+            "value": "<50ms",
+            "label": "クエリレイテンシ"
+          },
+          "costSavings": {
+            "value": "65%",
+            "label": "コスト削減"
+          },
+          "dataAccuracy": {
+            "value": "99.99%",
+            "label": "データ精度"
+          }
+        }
+      },
+      "unifiedLakehouse": {
+        "title": "統合データレイクハウス",
+        "industry": "金融サービス",
+        "challenge": "50以上のデータソースを統合プラットフォームに統合する",
+        "solution": "自動ガバナンスを備えたエージェントオーケストレーションレイクハウス",
+        "metricKeys": [
+          "sourcesIntegrated",
+          "processingTime",
+          "storageOptimization",
+          "complianceScore"
+        ],
+        "metrics": {
+          "sourcesIntegrated": {
+            "value": "73",
+            "label": "統合されたソース"
+          },
+          "processingTime": {
+            "value": "-85%",
+            "label": "処理時間"
+          },
+          "storageOptimization": {
+            "value": "70%",
+            "label": "ストレージ最適化"
+          },
+          "complianceScore": {
+            "value": "100%",
+            "label": "コンプライアンススコア"
+          }
+        }
+      },
+      "iotPipeline": {
+        "title": "IoTデータパイプライン",
+        "industry": "製造業",
+        "challenge": "10,000台以上のデバイスからのセンサーデータをリアルタイムで処理する",
+        "solution": "予知保全を備えたエッジツークラウドエージェントパイプライン",
+        "metricKeys": [
+          "devicesConnected",
+          "anomalyDetection",
+          "downtimeReduction",
+          "roi"
+        ],
+        "metrics": {
+          "devicesConnected": {
+            "value": "15,000",
+            "label": "接続デバイス"
+          },
+          "anomalyDetection": {
+            "value": "<1s",
+            "label": "異常検知"
+          },
+          "downtimeReduction": {
+            "value": "90%",
+            "label": "ダウンタイム削減"
+          },
+          "roi": {
+            "value": "450%",
+            "label": "ROI"
+          }
+        }
+      }
+    },
+    "implementation": {
+      "title": "導入ジャーニー",
+      "phases": {
+        "assessment": {
+          "phase": "アセスメント",
+          "weeks": "2-3",
+          "activities": [
+            "データランドスケープ分析",
+            "アーキテクチャレビュー",
+            "要件収集"
+          ]
+        },
+        "design": {
+          "phase": "設計",
+          "weeks": "3-4",
+          "activities": [
+            "エージェントアーキテクチャ設計",
+            "パイプラインブループリント作成",
+            "セキュリティ計画"
+          ]
+        },
+        "build": {
+          "phase": "構築",
+          "weeks": "8-12",
+          "activities": [
+            "エージェント開発",
+            "パイプライン構築",
+            "テストとバリデーション"
+          ]
+        },
+        "deploy": {
+          "phase": "デプロイ",
+          "weeks": "2-3",
+          "activities": [
+            "本番環境ロールアウト",
+            "モニタリング設定",
+            "パフォーマンスチューニング"
+          ]
+        },
+        "optimize": {
+          "phase": "最適化",
+          "weeks": "継続的",
+          "activities": [
+            "エージェント学習",
+            "コスト最適化",
+            "スケール管理"
+          ]
+        }
+      }
+    }
+  },
+  "portfolioRationalization": {
+    "header": {
+      "title": "ポートフォリオ合理化",
+      "viewDeepDive": "ディープダイブを見る",
+      "description": "4つの Ontology セマンティックフレームワークを使用して、ソフトウェア資産全体の冗長性、重複、統合の機会を特定するAI駆動のアプリケーションポートフォリオ分析です。"
+    },
+    "hero": {
+      "title": "アプリケーションポートフォリオを最適化",
+      "subtitle": "セマンティック分析が隠れた冗長性と統合の機会を明らかにします"
+    },
+    "metrics": {
+      "applications": {
+        "value": "500+",
+        "label": "アプリケーション",
+        "subtext": "分析済み"
+      },
+      "costReduction": {
+        "value": "35%",
+        "label": "コスト削減",
+        "subtext": "平均的な削減額"
+      },
+      "redundancy": {
+        "value": "42%",
+        "label": "冗長性",
+        "subtext": "特定された重複"
+      },
+      "timeToValue": {
+        "value": "8週間",
+        "label": "価値実現までの期間",
+        "subtext": "フルアセスメント"
+      }
+    },
+    "framework": {
+      "title": "4つの Ontology セマンティックフレームワーク",
+      "layerLabel": "レイヤー",
+      "layers": {
+        "functional": {
+          "name": "機能",
+          "description": "ビジネス機能とユーザージャーニー",
+          "examples": [
+            "顧客オンボーディング",
+            "注文処理",
+            "決済処理"
+          ]
+        },
+        "design": {
+          "name": "デザイン",
+          "description": "システムパターンとアーキテクチャ上の判断",
+          "examples": [
+            "microservices",
+            "イベント駆動",
+            "APIゲートウェイ"
+          ]
+        },
+        "architecture": {
+          "name": "アーキテクチャ",
+          "description": "テクノロジースタックとインフラストラクチャ",
+          "examples": [
+            "クラウドプラットフォーム",
+            "データベース",
+            "メッセージキュー"
+          ]
+        },
+        "code": {
+          "name": "コード",
+          "description": "実装の詳細とライブラリ",
+          "examples": [
+            "フレームワーク",
+            "依存関係",
+            "コードパターン"
+          ]
+        }
+      }
+    },
+    "capabilities": {
+      "title": "コア機能",
+      "semanticAnalysis": {
+        "title": "セマンティック分析",
+        "description": "異なるテクノロジースタック間でのアプリケーション機能の深い理解"
+      },
+      "overlapDetection": {
+        "title": "重複検出",
+        "description": "AI駆動の機能冗長性と重複の特定"
+      },
+      "integrationMapping": {
+        "title": "インテグレーションマッピング",
+        "description": "システム依存関係とデータフローの包括的な分析"
+      },
+      "consolidationPlanning": {
+        "title": "統合計画",
+        "description": "アプリケーションの統合と廃止に関する戦略的提言"
+      }
+    },
+    "process": {
+      "title": "合理化プロセス",
+      "steps": {
+        "discovery": {
+          "title": "ディスカバリーと取り込み",
+          "description": "ポートフォリオ内のすべてのアプリケーションの自動ディスカバリーとセマンティック分析",
+          "duration": "期間：1〜2週間",
+          "metric": "500以上のアプリケーションを分析"
+        },
+        "overlap": {
+          "title": "重複分析",
+          "description": "4つの Ontology レイヤー全体にわたるAI駆動の機能冗長性検出",
+          "duration": "期間：2〜3週間",
+          "metric": "平均42%の重複を発見"
+        },
+        "consolidation": {
+          "title": "統合計画",
+          "description": "アプリケーションの統合、モダナイゼーション、または廃止に関する戦略的提言",
+          "duration": "期間：1〜2週間",
+          "metric": "詳細なロードマップを提供"
+        },
+        "implementation": {
+          "title": "導入サポート",
+          "description": "ポートフォリオ最適化に向けた継続的なガイダンスと自動化サポート",
+          "duration": "期間：継続的",
+          "metric": "35%のコスト削減を達成"
+        }
+      }
+    },
+    "visualAnalysis": {
+      "title": "ビジュアルポートフォリオ分析",
+      "coverageAnalysis": {
+        "title": "カバレッジ分析",
+        "analyzed": "分析済み"
+      },
+      "redundancyDetection": {
+        "title": "冗長性検出",
+        "overlaps": "重複"
+      },
+      "costSavings": {
+        "title": "コスト削減",
+        "reduction": "削減"
+      }
+    },
+    "agentTeams": {
+      "title": "インテリジェントエージェントチーム",
+      "discovery": {
+        "title": "ディスカバリーエージェント",
+        "description": "コードベースとドキュメントをクロールしてセマンティックモデルを構築します",
+        "items": [
+          "コードパーサー",
+          "APIアナライザー",
+          "ドキュメントエクストラクター"
+        ]
+      },
+      "analysis": {
+        "title": "分析エージェント",
+        "description": "パターン、重複、最適化の機会を特定します",
+        "items": [
+          "パターンマッチャー",
+          "重複検出器",
+          "コストアナライザー"
+        ]
+      },
+      "planning": {
+        "title": "計画エージェント",
+        "description": "統合戦略と移行パスを生成します",
+        "items": [
+          "戦略ビルダー",
+          "リスクアセッサー",
+          "ロードマップジェネレーター"
+        ]
+      }
+    },
+    "successStory": {
+      "title": "成功事例",
+      "client": "グローバルEコマースプラットフォーム",
+      "description": "複数の事業部門にまたがる500以上のアプリケーションを分析し、統合の機会を特定しました",
+      "appsRetired": {
+        "value": "127",
+        "label": "廃止されたアプリ"
+      },
+      "costReduction": {
+        "value": "35%",
+        "label": "コスト削減"
+      },
+      "fasterDelivery": {
+        "value": "60%",
+        "label": "デリバリーの高速化"
+      },
+      "timeToInsights": {
+        "value": "8週間",
+        "label": "インサイトまでの期間"
+      }
+    }
+  },
+  "technicalDebt": {
+    "header": {
+      "title": "技術的負債管理",
+      "viewDeepDive": "ディープダイブを見る",
+      "description": "ビジネス継続性を維持しながら、技術的負債を特定、定量化、体系的に排除するAI駆動の技術的負債アセスメントおよび改善プラットフォームです。"
+    },
+    "hero": {
+      "title": "技術的負債を戦略的優位性に変える",
+      "subtitle": "エンタープライズ規模での自動分析、優先順位付け、改善"
+    },
+    "metrics": {
+      "codeCoverage": {
+        "value": "2M+ LOC",
+        "label": "コードカバレッジ",
+        "subtext": "1日あたりの分析量"
+      },
+      "debtReduction": {
+        "value": "47%",
+        "label": "負債削減",
+        "subtext": "平均的な改善"
+      },
+      "timeSaved": {
+        "value": "60%",
+        "label": "時間節約",
+        "subtext": "アセスメントフェーズにおいて"
+      },
+      "roi": {
+        "value": "3.2x",
+        "label": "ROI",
+        "subtext": "初年度内"
+      }
+    },
+    "capabilities": {
+      "title": "コア機能",
+      "codeAnalysis": {
+        "title": "自律型コード分析",
+        "description": "マルチエージェントシステムが数百万行のコードを分析し、負債パターンを特定します"
+      },
+      "riskQuantification": {
+        "title": "リスク定量化",
+        "description": "AI駆動のリスクスコアリングとビジネスインパクト評価"
+      },
+      "predictiveAnalytics": {
+        "title": "予測分析",
+        "description": "技術的負債の蓄積と保守コストを予測します"
+      },
+      "securityDetection": {
+        "title": "セキュリティ脆弱性検出",
+        "description": "レガシーコードのセキュリティリスクとコンプライアンス違反を特定します"
+      }
+    },
+    "process": {
+      "title": "導入プロセス",
+      "phases": {
+        "discovery": {
+          "phase": "ディスカバリー",
+          "duration": "1週間",
+          "activities": {
+            "codebaseScanning": "コードベーススキャン",
+            "dependencyMapping": "依存関係マッピング",
+            "architectureAnalysis": "アーキテクチャ分析"
+          }
+        },
+        "assessment": {
+          "phase": "アセスメント",
+          "duration": "2週間",
+          "activities": {
+            "debtQuantification": "負債の定量化",
+            "riskScoring": "リスクスコアリング",
+            "impactAnalysis": "インパクト分析"
+          }
+        },
+        "planning": {
+          "phase": "計画",
+          "duration": "1週間",
+          "activities": {
+            "remediationRoadmap": "改善ロードマップ",
+            "priorityMatrix": "優先度マトリックス",
+            "resourcePlanning": "リソース計画"
+          }
+        },
+        "execution": {
+          "phase": "実行",
+          "duration": "継続的",
+          "activities": {
+            "automatedRefactoring": "自動リファクタリング",
+            "codeModernization": "コードモダナイゼーション",
+            "continuousMonitoring": "継続的モニタリング"
+          }
+        }
+      }
+    },
+    "architecture": {
+      "title": "マルチエージェントアーキテクチャ",
+      "analysis": {
+        "title": "分析エージェント",
+        "description": "コード解析、パターン検出、依存関係分析に特化したエージェント",
+        "agents": {
+          "codeParser": "コードパーサー",
+          "patternDetector": "パターン検出器",
+          "dependencyMapper": "依存関係マッパー"
+        }
+      },
+      "assessment": {
+        "title": "アセスメントエージェント",
+        "description": "リスクスコアリング、インパクト分析、優先順位付けアルゴリズム",
+        "agents": {
+          "riskScorer": "リスクスコアラー",
+          "impactAnalyzer": "インパクトアナライザー",
+          "priorityEngine": "優先度エンジン"
+        }
+      },
+      "remediation": {
+        "title": "改善エージェント",
+        "description": "自動リファクタリング、コード生成、移行計画",
+        "agents": {
+          "refactorBot": "リファクタリングボット",
+          "codeGenerator": "コードジェネレーター",
+          "migrationPlanner": "移行プランナー"
+        }
+      }
+    },
+    "successStories": {
+      "title": "成功事例",
+      "financial": {
+        "title": "Fortune 500 金融サービス",
+        "description": "5M以上のLOCを持つレガシーバンキングシステム全体の技術的負債を47%削減しました",
+        "faster": "60%高速化",
+        "saved": "$2.3M削減"
+      },
+      "ecommerce": {
+        "title": "グローバルEコマースプラットフォーム",
+        "description": "稼働率99.99%を維持しながら microservices アーキテクチャをモダナイズしました",
+        "performance": "パフォーマンス3倍",
+        "downtime": "ダウンタイムゼロ"
+      }
+    }
+  },
+  "productDevelopment": {
+    "title": "プロダクト開発",
+    "subtitle": "セマンティックファーストのプロダクトエンジニアリング",
+    "overview": {
+      "header": {
+        "title": "AI駆動プロダクトエンジニアリング",
+        "description": "セマンティック Knowledge Graph、マルチステークホルダーバリデーション、インテリジェントなアーティファクト生成を活用して、コンセプトからコードまでのプロダクトエンジニアリングを加速します"
+      },
+      "metrics": {
+        "fasterTime": {
+          "metric": "60%",
+          "label": "市場投入の高速化",
+          "description": "プロダクトリリースサイクルの加速"
+        },
+        "reducedAmbiguity": {
+          "metric": "85%",
+          "label": "曖昧さの削減",
+          "description": "明確でバリデーション済みの要件"
+        },
+        "fewerDefects": {
+          "metric": "40%",
+          "label": "欠陥の削減",
+          "description": "TDDと継続的バリデーション"
+        },
+        "higherVelocity": {
+          "metric": "70%",
+          "label": "ベロシティの向上",
+          "description": "並行開発ワークフロー"
+        }
+      },
+      "challenge": {
+        "title": "課題：手動変換コスト",
+        "description": "従来のプロダクトエンジニアリングは「手動変換コスト」に悩まされています。これは、異なるステークホルダー間で要件を手動で変換するコストのかかるプロセスです。ビジネス要件は機能仕様書になり、ユーザーストーリーになり、デザインになり、最終的にコードになります。各変換は遅延、曖昧さ、潜在的なエラーを生みます。",
+        "delays": {
+          "title": "数週間の遅延",
+          "description": "チーム間の引き継ぎがすべてを遅らせます"
+        },
+        "lostInTranslation": {
+          "title": "伝達ロス",
+          "description": "要件が役割間を移動する際にドリフトします"
+        },
+        "technicalDebt": {
+          "title": "技術的負債",
+          "description": "実装が元の意図から乖離します"
+        }
+      },
+      "capabilities": {
+        "title": "AI駆動開発機能",
+        "semanticExtraction": {
+          "title": "セマンティック知識抽出",
+          "description": "AIエージェントが要件、会話、図表を分析し、包括的な Knowledge Graph を構築します",
+          "features": [
+            "マルチソースドキュメント分析",
+            "会話トランスクリプトマイニング",
+            "図表の解釈",
+            "4つの Ontology グラフ生成"
+          ]
+        },
+        "stakeholderValidation": {
+          "title": "マルチステークホルダーバリデーション",
+          "description": "プロダクトオーナー、BA、UXデザイナー、アーキテクト向けにロール固有のアーティファクトを生成します",
+          "features": [
+            "PO向け機能仕様書",
+            "BA向けエピックとユーザーストーリー",
+            "UX向けユーザーフロー図",
+            "アーキテクト向けアーキテクチャ図"
+          ]
+        },
+        "artifactGeneration": {
+          "title": "インテリジェントアーティファクト生成",
+          "description": "バリデーション済みの Knowledge Graph からデザインシステム、プロトタイプ、テストスクリプトを自動作成します",
+          "features": [
+            "デザインシステムとコンポーネントライブラリ",
+            "インタラクティブプロトタイプ",
+            "Gherkin/BDDテストスクリプト",
+            "反復パターンのコード生成"
+          ]
+        },
+        "sprintValidation": {
+          "title": "継続的スプリントバリデーション",
+          "description": "毎スプリント、エージェントが更新されたグラフをベースラインと比較し、ドリフトを検出して技術的負債を防止します",
+          "features": [
+            "スプリントごとの自動グラフ抽出",
+            "ドリフト検出とギャップ分析",
+            "ステークホルダー再バリデーショントリガー",
+            "技術的負債の防止"
+          ]
+        }
+      },
+      "workflow": {
+        "title": "仕組み：エンドツーエンドワークフロー",
+        "step1": {
+          "title": "Knowledge Graph の抽出",
+          "description": "AIエージェントが要件ドキュメント、会話トランスクリプト、図表、その他のアーティファクトを分析し、機能、デザイン、アーキテクチャ、コードの4つの包括的な Ontology グラフを自動的に構築します。"
+        },
+        "step2": {
+          "title": "マルチステークホルダーバリデーション",
+          "description": "Knowledge Graph からロール固有のアーティファクトを生成します。プロダクトオーナーは機能仕様書を検証し、ビジネスアナリストはエピック/ストーリーをレビューし、UXデザイナーはユーザーフローを確認し、アーキテクトはシステム設計を承認します。"
+        },
+        "step3": {
+          "title": "実装アーティファクトの生成",
+          "description": "バリデーション後、デザインシステム、インタラクティブプロトタイプ、Gherkinテストスクリプト、反復パターンの動作コードを自動生成します。開発者は生成されたコードを検証し拡張します。"
+        },
+        "step4": {
+          "title": "継続的スプリントバリデーション",
+          "description": "毎スプリント、エージェントが更新された Knowledge Graph を抽出し、ベースラインと比較します。ドリフト、ギャップ、不整合があればステークホルダーの再バリデーションをトリガーし、技術的負債の蓄積を防止します。"
+        }
+      },
+      "agentEcosystem": {
+        "title": "マルチエージェント開発エコシステム",
+        "extraction": "抽出エージェント",
+        "validation": "バリデーションエージェント",
+        "implementation": "実装エージェント",
+        "continuous": "継続的バリデーション",
+        "extractionAgents": {
+          "agent1": "ドキュメントアナライザー",
+          "agent2": "会話マイニングエージェント",
+          "agent3": "図表インタープリター",
+          "agent4": "クロスリファレンスバリデーター"
+        },
+        "validationAgents": {
+          "agent1": "機能仕様書ジェネレーター",
+          "agent2": "ユーザーストーリーライター",
+          "agent3": "UXフローマッパー",
+          "agent4": "アーキテクチャバリデーター"
+        },
+        "implementationAgents": {
+          "agent1": "デザインシステムジェネレーター",
+          "agent2": "プロトタイプビルダー",
+          "agent3": "テストスクリプトライター",
+          "agent4": "コードジェネレーター"
+        },
+        "continuousAgents": {
+          "agent1": "グラフ抽出エージェント",
+          "agent2": "ドリフト検出エージェント",
+          "agent3": "ギャップ分析エージェント",
+          "agent4": "再バリデーショントリガー"
+        }
+      },
+      "benefits": {
+        "title": "なぜこれが重要なのか",
+        "speedQuality": {
+          "title": "スピードと品質",
+          "tdd": "テスト駆動開発：",
+          "tddDesc": "初日からのGherkinスクリプトが品質を保証します",
+          "parallel": "並行ワークフロー：",
+          "parallelDesc": "デザイン、アーキテクチャ、コードが同時に進行します",
+          "faster": "高速イテレーション：",
+          "fasterDesc": "変更がすべてのアーティファクトに自動的に伝播します"
+        },
+        "preventDebt": {
+          "title": "技術的負債の防止",
+          "continuous": "継続的バリデーション：",
+          "continuousDesc": "負債になる前にドリフトを検出します",
+          "singleSource": "唯一の信頼できる情報源：",
+          "singleSourceDesc": "Knowledge Graph が全員の足並みを揃えます",
+          "automated": "自動ドリフト検出：",
+          "automatedDesc": "AIが実装とデザインの乖離を監視します"
+        }
+      },
+      "nav": {
+        "explore": "探索",
+        "extraction": {
+          "label": "Knowledge Graph 抽出",
+          "description": "要件からグラフを導出する方法をご覧ください"
+        },
+        "validation": {
+          "label": "ステークホルダーバリデーション",
+          "description": "異なる役割向けの4つのバリデーショントラック"
+        },
+        "implementation": {
+          "label": "実装パイプライン",
+          "description": "アーティファクト、プロトタイプ、コード生成"
+        }
+      }
+    },
+    "extraction": {
+      "title": "Knowledge Graph 抽出",
+      "subtitle": "ドメイン知識をグラフに抽出",
+      "backToOverview": "概要に戻る",
+      "header": {
+        "title": "Knowledge Graph 抽出",
+        "description": "AIエージェントが要件、会話、図表を包括的な Knowledge Graph に変換する方法"
+      },
+      "inputSources": {
+        "title": "ステップ1：複数の入力ソース",
+        "description": "当社のAIエージェントは、プロダクト開発プロセスにおける多様なアーティファクトを処理できます：",
+        "examples": "例：",
+        "sources": {
+          "requirements": {
+            "title": "要件ドキュメント",
+            "description": "PRD、BRD、機能仕様書、機能リクエスト",
+            "examples": [
+              "プロダクト要件定義書（PRD）",
+              "ビジネス要件定義書（BRD）",
+              "機能リクエストチケット",
+              "規制コンプライアンス文書"
+            ]
+          },
+          "conversations": {
+            "title": "会話トランスクリプト",
+            "description": "議事録、ステークホルダーインタビュー、ブレインストーミングセッション",
+            "examples": [
+              "ステークホルダーインタビュートランスクリプト",
+              "スプリント計画録音",
+              "デザインレビューディスカッション",
+              "顧客フィードバックセッション"
+            ]
+          },
+          "visual": {
+            "title": "ビジュアルアーティファクト",
+            "description": "ワイヤーフレーム、モックアップ、アーキテクチャ図、フローチャート",
+            "examples": [
+              "Figma/Sketchワイヤーフレーム",
+              "アーキテクチャ図",
+              "プロセスフローチャート",
+              "ホワイトボード写真"
+            ]
+          },
+          "existing": {
+            "title": "既存システム",
+            "description": "現在のコードベース、API、データベーススキーマ、ドキュメント",
+            "examples": [
+              "ソースコードリポジトリ",
+              "APIドキュメント",
+              "データベーススキーマ",
+              "レガシーシステムドキュメント"
+            ]
+          }
+        }
+      },
+      "extraction": {
+        "title": "ステップ2：AI駆動の抽出",
+        "description": "専門エージェントが協力して知識を抽出・構造化します：",
+        "agents": {
+          "documentAnalyzer": {
+            "name": "ドキュメントアナライザー",
+            "description": "要件ドキュメントを解析して機能、ルール、制約を抽出します",
+            "capabilities": [
+              "自然言語理解",
+              "エンティティ抽出",
+              "要件分類",
+              "依存関係の特定"
+            ]
+          },
+          "conversationMining": {
+            "name": "会話マイニングエージェント",
+            "description": "会議のトランスクリプトを分析して意思決定とアクションアイテムを把握します",
+            "capabilities": [
+              "話者の特定",
+              "意思決定の抽出",
+              "アクションアイテムの追跡",
+              "センチメント分析"
+            ]
+          },
+          "diagramInterpreter": {
+            "name": "図表インタープリター",
+            "description": "ビジュアルアーティファクトを処理して構造とフロー情報を抽出します",
+            "capabilities": [
+              "形状認識",
+              "フロー分析",
+              "コンポーネントの特定",
+              "関係性のマッピング"
+            ]
+          },
+          "crossReferenceValidator": {
+            "name": "クロスリファレンスバリデーター",
+            "description": "抽出されたすべての知識間の整合性を確保します",
+            "capabilities": [
+              "矛盾の検出",
+              "ギャップ分析",
+              "完全性チェック",
+              "クロスソースバリデーション"
+            ]
+          }
+        }
+      },
+      "ontologies": {
+        "title": "ステップ3：4つの包括的 Ontology",
+        "description": "抽出プロセスは、プロダクトのさまざまな側面を捉える4つの相互接続された Knowledge Graph を生成します：",
+        "functional": {
+          "title": "機能 Ontology",
+          "description": "ビジネス機能、特徴、ユーザージャーニー、ビジネスルールを捉えます",
+          "extractedFrom": [
+            "要件ドキュメント",
+            "ステークホルダーインタビュー",
+            "機能リクエスト"
+          ]
+        },
+        "design": {
+          "title": "デザイン Ontology",
+          "description": "画面、コンポーネント、インタラクション、ユーザーエクスペリエンスフローをマッピングします",
+          "extractedFrom": [
+            "ワイヤーフレームとモックアップ",
+            "UXリサーチ",
+            "デザイン仕様"
+          ]
+        },
+        "architecture": {
+          "title": "アーキテクチャ Ontology",
+          "description": "サービス、API、データモデル、システム依存関係を定義します",
+          "extractedFrom": [
+            "アーキテクチャ図",
+            "APIドキュメント",
+            "システム仕様"
+          ]
+        },
+        "code": {
+          "title": "コード Ontology",
+          "description": "クラス、メソッド、依存関係、実装パターンをドキュメント化します",
+          "extractedFrom": [
+            "ソースコード分析",
+            "コードドキュメント",
+            "テスト仕様"
+          ]
+        }
+      },
+      "sampleGraph": "サンプル Knowledge Graph：",
+      "relationships": "関係性：",
+      "extractedFrom": "抽出元：",
+      "crossOntology": {
+        "title": "クロス Ontology 関係性",
+        "description": "セマンティックエンジニアリングの力は、Ontology 間の接続にあります：",
+        "functionalDesign": {
+          "title": "機能 → デザイン",
+          "description": "各機能要件は特定のUI画面とインタラクションにマッピングされます",
+          "example": "例：「ユーザー認証」機能 → ログイン画面 + パスワードリセットフロー"
+        },
+        "designArchitecture": {
+          "title": "デザイン → アーキテクチャ",
+          "description": "UIコンポーネントがバックエンドサービスとAPI要件を決定します",
+          "example": "例：ログイン画面 → 認証サービス + ユーザーAPIエンドポイント"
+        },
+        "architectureCode": {
+          "title": "アーキテクチャ → コード",
+          "description": "システムアーキテクチャが実装構造を定義します",
+          "example": "例：認証サービス → AuthControllerクラス + メソッド"
+        },
+        "codeFunctional": {
+          "title": "コード → 機能",
+          "description": "実装がすべての機能がカバーされていることを検証します",
+          "example": "例：AuthController → 「ユーザー認証」が実装されていることを検証"
+        }
+      },
+      "benefits": {
+        "title": "Knowledge Graph が重要な理由",
+        "singleSource": {
+          "title": "唯一の信頼できる情報源",
+          "description": "すべてのステークホルダーが同じバリデーション済み Knowledge Graph から作業し、ミスコミュニケーションを排除します"
+        },
+        "consistency": {
+          "title": "自動整合性",
+          "description": "1つの Ontology への変更が関連するグラフの更新を自動的に提案します"
+        },
+        "traceability": {
+          "title": "トレーサビリティ",
+          "description": "すべての要件をコンセプトからデザイン、アーキテクチャ、コードまで追跡します"
+        }
+      },
+      "nextStep": {
+        "title": "次へ：ステークホルダーバリデーション",
+        "description": "Knowledge Graph が抽出されたら、プロダクトオーナー、ビジネスアナリスト、UXデザイナー、アーキテクトによるバリデーションのためのロール固有のアーティファクトを生成します。",
+        "button": "バリデーションプロセスを見る"
+      }
+    },
+    "validation": {
+      "title": "ステークホルダーバリデーション",
+      "subtitle": "マルチステークホルダーの整合",
+      "backToOverview": "概要に戻る",
+      "header": {
+        "title": "マルチステークホルダーバリデーション",
+        "description": "ロール固有のアーティファクト生成とバリデーションワークフローにより、全員の足並みが揃います"
+      },
+      "philosophy": {
+        "title": "ヒューマンインザループバリデーション",
+        "description": "AIエージェントが知識を抽出・構造化する一方で、バリデーションには人間の専門知識が不可欠です。各ステークホルダーの役割に合わせたアーティファクトを生成し、すべてのビュー間の整合性を維持しながら、担当する側面を検証できるようにします。",
+        "roleViews": "ロール固有のビュー",
+        "syncFeedback": "同期されたフィードバック",
+        "singleSource": "唯一の信頼できる情報源"
+      },
+      "tracks": {
+        "title": "4つのバリデーショントラック",
+        "whatsIncluded": "含まれるもの：",
+        "validationWorkflow": "バリデーションワークフロー：",
+        "samplePreview": "サンプルアーティファクトプレビュー：",
+        "labels": {
+          "feature": "機能：",
+          "acceptanceCriteria": "受入基準：",
+          "businessRules": "ビジネスルール：",
+          "epic": "エピック：",
+          "storyPoints": "ストーリーポイント：",
+          "acceptance": "受入：",
+          "mainFlow": "メインフロー：",
+          "alternativePaths": "代替パス：",
+          "apiEndpoints": "APIエンドポイント：",
+          "dependencies": "依存関係："
+        },
+        "po": {
+          "title": "機能仕様書",
+          "stakeholder": "プロダクトオーナー",
+          "artifact": "機能仕様書",
+          "description": "AIが Knowledge Graph から包括的な機能仕様書を生成し、プロダクトオーナーが検証できる機能とビジネスルールを中心に構成します。",
+          "includes": [
+            "受入基準付き機能説明",
+            "ビジネスルールと制約",
+            "ユーザージャーニーマッピング",
+            "優先度と依存関係マトリックス",
+            "機能ごとの成功指標"
+          ],
+          "workflow": [
+            {
+              "step": "生成",
+              "description": "AIが Knowledge Graph から仕様書を作成"
+            },
+            {
+              "step": "レビュー",
+              "description": "POが機能とルールをレビュー"
+            },
+            {
+              "step": "フィードバック",
+              "description": "POが承認と変更を記録"
+            },
+            {
+              "step": "更新",
+              "description": "グラフの更新がすべてのビューに伝播"
+            }
+          ],
+          "sampleContent": {
+            "feature": "ユーザー認証",
+            "description": "ユーザーはメール/パスワードまたはOAuthプロバイダー（Google、GitHub）を使用して認証できます。JWTトークンによるセッション管理を行います。",
+            "acceptanceCriteria": [
+              "ユーザーがメールとパスワードで登録できること",
+              "ユーザーが有効な資格情報でログインできること",
+              "ユーザーがGoogle OAuthで認証できること",
+              "無効な資格情報で適切なエラーメッセージが表示されること"
+            ],
+            "businessRules": [
+              "パスワードは大文字小文字混合で8文字以上であること",
+              "5回のログイン失敗後、30分間アカウントがロックされること",
+              "JWTトークンは24時間後に期限切れになること"
+            ]
+          }
+        },
+        "ba": {
+          "title": "エピックとユーザーストーリー",
+          "stakeholder": "ビジネスアナリスト",
+          "artifact": "エピックおよびユーザーストーリーコレクション",
+          "description": "AIが機能仕様書を適切に構造化されたエピックとユーザーストーリーに分解し、ストーリーポイントと受入基準を付与します。",
+          "includes": [
+            "機能にマッピングされたエピック",
+            "ストーリーポイント付きユーザーストーリー",
+            "ストーリーごとの受入基準",
+            "ストーリー間の依存関係",
+            "スプリント計画の提案"
+          ],
+          "workflow": [
+            {
+              "step": "分解",
+              "description": "AIが仕様書からエピックとストーリーを作成"
+            },
+            {
+              "step": "見積もり",
+              "description": "AIがストーリーポイントを提案"
+            },
+            {
+              "step": "レビュー",
+              "description": "BAがスコープと見積もりを検証"
+            },
+            {
+              "step": "改善",
+              "description": "BAが調整し承認"
+            }
+          ],
+          "sampleContent": {
+            "epic": "ユーザー認証エピック",
+            "stories": [
+              {
+                "title": "ユーザーとして、メールとパスワードで登録できること",
+                "points": 5,
+                "acceptance": [
+                  "登録フォームが入力を検証すること",
+                  "確認メールが送信されること",
+                  "ユーザーがログインにリダイレクトされること"
+                ]
+              },
+              {
+                "title": "ユーザーとして、有効な資格情報でログインできること",
+                "points": 3,
+                "acceptance": [
+                  "ログインフォームがメール/パスワードを受け付けること",
+                  "JWTトークンが生成されること",
+                  "ユーザーがダッシュボードにリダイレクトされること"
+                ]
+              },
+              {
+                "title": "ユーザーとして、忘れたパスワードをリセットできること",
+                "points": 5,
+                "acceptance": [
+                  "リセットリンクがメールで送信されること",
+                  "新しいパスワードが要件を満たすこと",
+                  "古いセッションが無効化されること"
+                ]
+              }
+            ]
+          }
+        },
+        "ux": {
+          "title": "ユーザーフロー図",
+          "stakeholder": "UXデザイナー",
+          "artifact": "ユーザーフローおよびインタラクションマップ",
+          "description": "AIがデザイン Ontology からユーザーフロー図を生成し、画面ごとのナビゲーション、インタラクション、代替パスを表示します。",
+          "includes": [
+            "画面ごとのナビゲーションフロー",
+            "インタラクション仕様",
+            "エラー状態の処理",
+            "代替パスとエッジケース",
+            "アクセシビリティへの配慮"
+          ],
+          "workflow": [
+            {
+              "step": "フローマッピング",
+              "description": "AIがデザイン Ontology からフローを生成"
+            },
+            {
+              "step": "可視化",
+              "description": "フローがインタラクティブ図として表示"
+            },
+            {
+              "step": "レビュー",
+              "description": "UXがユーザビリティと完全性を検証"
+            },
+            {
+              "step": "イテレーション",
+              "description": "UXがフローとインタラクションを改善"
+            }
+          ],
+          "sampleContent": {
+            "flow": "ユーザーフロー：ログイン認証",
+            "steps": [
+              "ユーザーがログインページに遷移",
+              "ユーザーがメールとパスワードを入力",
+              "システムが資格情報を検証",
+              "成功時：ダッシュボードにリダイレクト",
+              "失敗時：エラー表示、リトライ可能"
+            ],
+            "alternativePaths": [
+              "パスワード忘れフロー",
+              "OAuthプロバイダー選択",
+              "ログイン失敗後のアカウントロック"
+            ]
+          }
+        },
+        "architect": {
+          "title": "アーキテクチャ図",
+          "stakeholder": "アーキテクト",
+          "artifact": "システムアーキテクチャドキュメント",
+          "description": "AIがアーキテクチャ Ontology からアーキテクチャ図を生成し、サービス、API、データフロー、デプロイメントトポロジーを表示します。",
+          "includes": [
+            "サービスアーキテクチャ図",
+            "APIエンドポイント仕様",
+            "データモデル関係",
+            "インフラストラクチャ要件",
+            "セキュリティアーキテクチャ"
+          ],
+          "workflow": [
+            {
+              "step": "設計",
+              "description": "AIが Ontology からアーキテクチャを生成"
+            },
+            {
+              "step": "分析",
+              "description": "アーキテクトがサービス境界をレビュー"
+            },
+            {
+              "step": "検証",
+              "description": "アーキテクトがスケーラビリティとセキュリティを確認"
+            },
+            {
+              "step": "承認",
+              "description": "アーキテクチャベースラインが設定"
+            }
+          ],
+          "sampleContent": {
+            "component": "コンポーネント：認証サービス",
+            "apis": [
+              "POST /api/auth/register",
+              "POST /api/auth/login",
+              "POST /api/auth/refresh",
+              "DELETE /api/auth/logout"
+            ],
+            "dependencies": [
+              "ユーザーデータベース（PostgreSQL）",
+              "Redis（セッションキャッシュ）",
+              "メールサービス（SendGrid）",
+              "OAuthプロバイダー（Google、GitHub）"
+            ]
+          }
+        }
+      },
+      "sprintValidation": {
+        "title": "継続的スプリントバリデーション",
+        "description": "初回のバリデーションは始まりに過ぎません。毎スプリント、AIエージェントが進化するコードベースから更新された Knowledge Graph を抽出し、バリデーション済みベースラインと比較します。",
+        "step1": {
+          "title": "現在の状態を抽出",
+          "description": "各スプリントの終了時に、エージェントが更新されたコードベースを分析し、現在の実装を反映する新しい Knowledge Graph を抽出します。"
+        },
+        "step2": {
+          "title": "ドリフトとギャップを検出",
+          "description": "AIが現在のグラフをベースラインと比較し、ドリフト（意図しない逸脱）、ギャップ（未実装）、不整合を特定します。"
+        },
+        "step3": {
+          "title": "再バリデーションをトリガー",
+          "description": "重要な変更についてステークホルダーに通知し、ドリフトが意図的なものか修正が必要かを検証し、技術的負債を防止します。"
+        },
+        "driftExample": {
+          "title": "例：ドリフト検出アラート",
+          "detectedChange": "検出された変更：",
+          "changeDescription": "AuthServiceに新しい「EmailService」依存関係が追加されました",
+          "changeDetail": "この依存関係は元のバリデーション済みアーキテクチャ図にはありませんでした。",
+          "recommendedAction": "推奨アクション：",
+          "ifIntentional": "意図的な場合：アーキテクトが承認しベースラインを更新",
+          "ifUnintended": "意図しない場合：開発者が依存関係を削除するか承認を求める"
+        }
+      },
+      "benefits": {
+        "title": "継続的バリデーションが重要な理由",
+        "preventDebt": {
+          "title": "技術的負債の防止",
+          "items": [
+            "実装のドリフトを負債になる前に検出",
+            "デザインとコードの同期を確保",
+            "変更をリアルタイムで記録"
+          ]
+        },
+        "maintainQuality": {
+          "title": "品質の維持",
+          "items": [
+            "継続的バリデーションがコード品質を向上",
+            "バリデーション済み仕様に基づくテスト駆動開発",
+            "リリース後の欠陥を削減"
+          ]
+        }
+      },
+      "nextStep": {
+        "title": "次へ：実装パイプライン",
+        "description": "すべてのステークホルダーがアーティファクトを検証したら、デザインシステム、プロトタイプ、テストスクリプト、本番対応コードの生成による実装に移ります。",
+        "button": "実装プロセスを見る"
+      }
+    },
+    "implementation": {
+      "title": "実装パイプライン",
+      "subtitle": "継続的セマンティックデリバリー",
+      "backToOverview": "概要に戻る",
+      "header": {
+        "title": "実装パイプライン",
+        "description": "バリデーション済み Knowledge Graph から本番対応のアーティファクトとコードへ"
+      },
+      "gateway": {
+        "title": "バリデーションゲートウェイ",
+        "description": "4人のステークホルダー（プロダクトオーナー、ビジネスアナリスト、UXデザイナー、アーキテクト）全員がそれぞれのアーティファクトを検証した後にのみ実装が開始されます。これにより、コード生成前に堅固で承認された基盤が確保されます。",
+        "functionalApproved": "機能仕様書承認済み",
+        "storiesApproved": "ユーザーストーリー承認済み",
+        "flowsApproved": "ユーザーフロー承認済み",
+        "architectureApproved": "アーキテクチャ承認済み"
+      },
+      "artifacts": {
+        "title": "自動アーティファクト生成",
+        "generatedOutputs": "生成出力：",
+        "keyBenefits": "主なメリット：",
+        "sampleOutput": "サンプル出力：",
+        "forLabel": "対象：",
+        "design": {
+          "title": "デザインシステムとコンポーネントライブラリ",
+          "description": "AIがバリデーション済みデザイン Ontology から包括的なデザインシステムを生成し、コンポーネントライブラリ、デザイントークン、スタイルガイドを含みます。",
+          "stakeholder": "UXデザイナー / フロントエンド開発者",
+          "outputs": [
+            "バリアント付きコンポーネントライブラリ",
+            "デザイントークン（色、スペーシング、タイポグラフィ）",
+            "レスポンシブレイアウト仕様",
+            "アクセシビリティガイドライン"
+          ],
+          "benefits": [
+            "アプリケーション全体で一貫したUI",
+            "フロントエンド開発の高速化",
+            "デザインとコードの整合",
+            "自動スタイルドキュメント"
+          ],
+          "sample": {
+            "component": "コンポーネント：Button",
+            "variants": [
+              "Primary",
+              "Secondary",
+              "Outline",
+              "Ghost"
+            ],
+            "tokens": [
+              "--color-primary: #10B981",
+              "--font-size-sm: 0.875rem",
+              "--spacing-md: 1rem",
+              "--border-radius: 0.5rem"
+            ]
+          }
+        },
+        "prototype": {
+          "title": "インタラクティブプロトタイプ",
+          "description": "AIがユーザーフロー図からクリック可能なプロトタイプを作成し、開発前の迅速なユーザーテストを可能にします。",
+          "stakeholder": "UXデザイナー / プロダクトオーナー",
+          "outputs": [
+            "クリック可能な画面プロトタイプ",
+            "ナビゲーションフローシミュレーション",
+            "インタラクション状態プレビュー",
+            "ユーザーテストスクリプト"
+          ],
+          "benefits": [
+            "早期のユーザーフィードバック",
+            "開発の手戻り削減",
+            "ステークホルダーの整合",
+            "ユーザビリティの検証"
+          ],
+          "sample": {
+            "prototype": "プロトタイプ：ログインフロー",
+            "features": [
+              "バリデーション付きインタラクティブフォームフィールド",
+              "エラー状態のデモンストレーション",
+              "OAuthプロバイダー選択",
+              "成功時リダイレクトアニメーション"
+            ]
+          }
+        },
+        "tests": {
+          "title": "Gherkin / BDD テストスクリプト",
+          "description": "AIが機能仕様書から包括的なテストスクリプトを生成し、初日からのテスト駆動開発を実現します。",
+          "stakeholder": "QAエンジニア / ビジネスアナリスト",
+          "outputs": [
+            "Gherkinフィーチャーファイル",
+            "ステップ定義テンプレート",
+            "テストデータジェネレーター",
+            "要件へのカバレッジマッピング"
+          ],
+          "benefits": [
+            "初日からのテスト駆動開発",
+            "要件トレーサビリティ",
+            "自動リグレッションテスト",
+            "リビングドキュメンテーション"
+          ],
+          "sample": {
+            "feature": "ユーザー認証",
+            "scenarios": [
+              {
+                "name": "ログイン成功",
+                "steps": [
+                  "ユーザーがログインページにいる場合",
+                  "有効なメールとパスワードを入力すると",
+                  "ダッシュボードにリダイレクトされること",
+                  "JWTトークンがクッキーに保存されること"
+                ]
+              },
+              {
+                "name": "無効なパスワードでのログイン失敗",
+                "steps": [
+                  "ユーザーがログインページにいる場合",
+                  "有効なメールと間違ったパスワードを入力すると",
+                  "エラーメッセージが表示されること",
+                  "失敗試行カウンターが増加すること"
+                ]
+              }
+            ]
+          }
+        },
+        "code": {
+          "title": "生成コードとスキャフォールディング",
+          "description": "AIがバリデーション済みアーキテクチャに従い、反復パターン用の本番対応コードを生成し、開発者が複雑なロジックに集中できるようにします。",
+          "stakeholder": "開発者",
+          "outputs": [
+            "APIエンドポイントスキャフォールディング",
+            "データモデル実装",
+            "CRUD操作テンプレート",
+            "インテグレーションボイラープレート"
+          ],
+          "benefits": [
+            "開発立ち上げの高速化",
+            "一貫したコードパターン",
+            "アーキテクチャコンプライアンス",
+            "ボイラープレート作業の削減"
+          ],
+          "sample": {
+            "generated": "生成：AuthController（アーキテクチャ Ontology より）"
+          }
+        }
+      },
+      "parallel": {
+        "title": "並行開発ワークフロー",
+        "description": "手動およびセマンティック（AI支援）開発が並行して進み、品質を維持しながらベロシティを最大化します。",
+        "manual": {
+          "title": "手動開発トラック",
+          "description": "開発者は人間の判断を必要とする複雑で創造的かつビジネスクリティカルな機能に取り組みます。",
+          "items": [
+            "新しいアルゴリズムとビジネスロジック",
+            "複雑なインテグレーションとワークフロー",
+            "パフォーマンス最適化",
+            "セキュリティクリティカルなコンポーネント"
+          ]
+        },
+        "semantic": {
+          "title": "セマンティック開発トラック",
+          "description": "AIエージェントがアーキテクチャとデザインのガイドラインに従い、反復パターンのコードを生成します。",
+          "items": [
+            "CRUD操作とデータアクセスレイヤー",
+            "APIエンドポイントとコントローラー",
+            "フォームバリデーションとデータモデル",
+            "ボイラープレートとスキャフォールディングコード"
+          ]
+        },
+        "timelineComparison": "並行タイムライン比較",
+        "traditional": "従来の順次アプローチ：",
+        "traditionalTimeline": "一般的なタイムライン：16〜20週間",
+        "breeze": "Breeze.AI 並行アプローチ：",
+        "breezeTimeline": "一般的なタイムライン：6〜8週間（60%高速化）"
+      },
+      "agentEcosystem": {
+        "title": "実装エージェントエコシステム",
+        "design": "デザインエージェント",
+        "prototype": "プロトタイプエージェント",
+        "test": "テストエージェント",
+        "code": "コードエージェント",
+        "designAgents": [
+          "スタイルガイドジェネレーター",
+          "コンポーネントライブラリビルダー",
+          "トークンシステムクリエーター",
+          "アクセシビリティチェッカー"
+        ],
+        "prototypeAgents": [
+          "画面ジェネレーター",
+          "インタラクションシミュレーター",
+          "ナビゲーションフロービルダー",
+          "ユーザーテストスクリプトライター"
+        ],
+        "testAgents": [
+          "Gherkinライター",
+          "ステップ定義ジェネレーター",
+          "テストデータビルダー",
+          "カバレッジアナライザー"
+        ],
+        "codeAgents": [
+          "APIスキャフォルダー",
+          "モデルジェネレーター",
+          "CRUDテンプレートビルダー",
+          "インテグレーションコードライター"
+        ]
+      },
+      "outcomes": {
+        "title": "主要成果",
+        "velocity": {
+          "title": "ベロシティ70%向上",
+          "description": "並行ワークフローとコード生成が開発を劇的に加速します"
+        },
+        "defects": {
+          "title": "欠陥40%削減",
+          "description": "初日からのTDDと継続的バリデーションが品質を保証します"
+        },
+        "livingDocs": {
+          "title": "リビングドキュメンテーション",
+          "description": "Knowledge Graph とアーティファクトがコードと同期し続けます"
+        }
+      },
+      "cta": {
+        "title": "Breeze.AI の詳細",
+        "description": "手動とセマンティック開発がどのように連携するかの詳細については、包括的な Breeze.AI ディープダイブドキュメントをご覧ください。",
+        "button": "Breezeプロセスフローを見る"
+      }
+    }
+  },
+  "appReengineering": {
+    "title": "アプリケーションリエンジニアリング",
+    "subtitle": "レガシーアプリケーションモダナイゼーション",
+    "overview": {
+      "header": {
+        "title": "アプリケーションリエンジニアリング",
+        "description": "AI駆動の分析、マルチステークホルダー検証、継続的な品質モニタリングを活用して、レガシーアプリケーションを体系的にモダナイズします"
+      },
+      "challenge": {
+        "title": "リエンジニアリングの課題",
+        "description": "レガシーアプリケーションはビジネスの足かせとなりますが、従来のリエンジニアリングはリスクが高く、コストがかかり、しばしば失敗します。組織は、増大する技術的負債と共存するか、重要な機能を損なうリスクのあるモダナイゼーションに踏み切るかという難しい選択に直面しています。",
+        "annualSpend": {
+          "title": "年間850億ドル",
+          "description": "米国企業が技術的負債に費やす金額"
+        },
+        "slower": {
+          "title": "23%遅い",
+          "description": "負債の大きいシステムでの機能提供速度"
+        },
+        "timeSpent": {
+          "title": "時間の60%",
+          "description": "開発者が不良コードの対処に費やす時間"
+        }
+      },
+      "metrics": {
+        "fasterModernization": {
+          "metric": "70%",
+          "label": "モダナイゼーションの高速化",
+          "description": "AI駆動のアセスメントと自動化"
+        },
+        "costReduction": {
+          "metric": "60%",
+          "label": "コスト削減",
+          "description": "従来のリエンジニアリングとの比較"
+        },
+        "fewerDefects": {
+          "metric": "40%",
+          "label": "欠陥の削減",
+          "description": "継続的検証がリグレッションを防止"
+        },
+        "zeroDowntime": {
+          "metric": "0",
+          "label": "ゼロダウンタイム",
+          "description": "段階的デプロイメント戦略"
+        }
+      },
+      "capabilities": {
+        "title": "包括的リエンジニアリングソリューション",
+        "discovery": {
+          "title": "ディスカバリーとアセスメント",
+          "description": "AIエージェントがレガシーコードベースを分析し、包括的なKnowledge Graphを構築して技術的負債を特定します",
+          "features": [
+            "自動コードベース分析",
+            "4Ontology知識抽出",
+            "技術的負債の分類",
+            "影響とROIのアセスメント"
+          ]
+        },
+        "strategy": {
+          "title": "リエンジニアリング戦略",
+          "description": "マルチステークホルダー検証がモダナイゼーション目標とターゲットアーキテクチャの整合を確保します",
+          "features": [
+            "現行 vs ターゲットアーキテクチャ",
+            "マルチステークホルダー検証トラック",
+            "段階的リエンジニアリングロードマップ",
+            "リスク軽減計画"
+          ]
+        },
+        "implementation": {
+          "title": "実装とモダナイゼーション",
+          "description": "手動とAI駆動の並列ワークフローが品質を維持しながらモダナイゼーションを加速します",
+          "features": [
+            "AI駆動のリファクタリング",
+            "自動テスト生成",
+            "デザインシステムのモダナイゼーション",
+            "段階的デプロイメント"
+          ]
+        },
+        "validation": {
+          "title": "継続的検証",
+          "description": "スプリントごとの品質トラッキングにより、新たな負債を生まずにリエンジニアリングが品質を向上させます",
+          "features": [
+            "自動ドリフト検出",
+            "品質スコアトラッキング",
+            "スプリントごとの比較",
+            "ステークホルダー再検証トリガー"
+          ]
+        }
+      },
+      "journey": {
+        "title": "体系的リエンジニアリングジャーニー",
+        "phases": {
+          "discovery": {
+            "phase": "ディスカバリーとアセスメント",
+            "duration": "2〜3週間",
+            "description": "AI駆動の知識抽出を活用したレガシーアプリケーションの包括的分析",
+            "activities": [
+              "コードベース分析",
+              "Knowledge Graph抽出",
+              "技術的負債のアセスメント",
+              "影響分析"
+            ]
+          },
+          "strategy": {
+            "phase": "リエンジニアリング戦略",
+            "duration": "2〜3週間",
+            "description": "ターゲットアーキテクチャとモダナイゼーションロードマップを定義するマルチステークホルダー計画",
+            "activities": [
+              "ターゲットアーキテクチャ設計",
+              "ステークホルダー検証",
+              "段階的ロードマップの作成",
+              "リスク評価"
+            ]
+          },
+          "implementation": {
+            "phase": "実装とモダナイゼーション",
+            "duration": "8〜16週間",
+            "description": "手動とAI駆動の並列ワークフローがモダナイゼーション計画を実行します",
+            "activities": [
+              "AI駆動のリファクタリング",
+              "手動エキスパート作業",
+              "テスト生成",
+              "段階的デプロイメント"
+            ]
+          },
+          "continuous": {
+            "phase": "継続的検証",
+            "duration": "スプリントごとに継続",
+            "description": "毎スプリント、品質が向上しアーキテクチャがターゲットに沿っているか検証します",
+            "activities": [
+              "ドリフト検出",
+              "品質スコアリング",
+              "ステークホルダーレポート",
+              "技術的負債トラッキング"
+            ]
+          }
+        }
+      },
+      "caseStudy": {
+        "title": "ケーススタディ：Phoenix CRMモダナイゼーション",
+        "description": "Phoenix CRMは50万行のコードを持つ8年前のエンタープライズアプリケーションで、蓄積された技術的負債、混合テクノロジースタック、一貫性のないプラクティスに悩まされていました。100%の稼働率を維持し、すべてのビジネス機能を保持しながら、体系的にリエンジニアリングを行いました。",
+        "criticalIssues": {
+          "value": "147",
+          "label": "重大な問題を修正",
+          "description": "アーキテクチャ違反を解決"
+        },
+        "maintenanceCost": {
+          "value": "35%",
+          "label": "保守コスト削減",
+          "description": "リエンジニアリング6ヶ月後"
+        },
+        "fasterDelivery": {
+          "value": "50%",
+          "label": "機能提供の高速化",
+          "description": "モダナイゼーション後の速度"
+        }
+      },
+      "differentiators": {
+        "title": "当社のアプローチが機能する理由",
+        "riskMitigation": {
+          "title": "リスク軽減",
+          "incremental": "段階的アプローチ：",
+          "incrementalDesc": "小さな検証済み変更がリスクを削減します",
+          "automated": "自動テスト：",
+          "automatedDesc": "包括的テストスイートがリグレッションを検出します",
+          "continuous": "継続的検証：",
+          "continuousDesc": "毎スプリント品質の向上を検証します"
+        },
+        "acceleratedDelivery": {
+          "title": "加速されたデリバリー",
+          "ai": "AI自動化：",
+          "aiDesc": "繰り返しパターンの自動リファクタリング",
+          "parallel": "並列ワークフロー：",
+          "parallelDesc": "手動＋AIの同時作業",
+          "living": "生きたドキュメント：",
+          "livingDesc": "コードの進化に応じて自動更新"
+        }
+      },
+      "nav": {
+        "explore": "詳しく見る",
+        "discovery": {
+          "label": "ディスカバリーとアセスメント",
+          "description": "Knowledge Graphを抽出し技術的負債を評価"
+        },
+        "strategy": {
+          "label": "リエンジニアリング戦略",
+          "description": "マルチステークホルダー計画とターゲットアーキテクチャ"
+        },
+        "implementation": {
+          "label": "実装とモダナイゼーション",
+          "description": "AI駆動のリファクタリングとアーティファクト生成"
+        },
+        "validation": {
+          "label": "継続的検証",
+          "description": "スプリントごとの品質トラッキングとドリフト検出"
+        }
+      }
+    },
+    "discovery": {
+      "backToOverview": "概要に戻る",
+      "header": {
+        "title": "ディスカバリーとアセスメント",
+        "description": "Phoenix CRMの現状を理解し技術的負債を特定するための包括的分析"
+      },
+      "caseStudy": {
+        "title": "ケーススタディ：Phoenix CRM",
+        "systemOverview": "システム概要",
+        "technicalStack": "技術スタック",
+        "challenges": "課題",
+        "systemOverviewItems": [
+          "8年前のエンタープライズCRMアプリケーション",
+          "50万行以上のコード",
+          "150以上のデータベーステーブル",
+          "45のサードパーティ統合"
+        ],
+        "technicalStackItems": [
+          "Java 8（非推奨）、Spring 3.x",
+          "jQueryとReactの混合フロントエンド",
+          "モノリシックアーキテクチャ",
+          "Oracleデータベース + Redisキャッシュ"
+        ],
+        "challengesItems": [
+          "増加する保守コスト",
+          "遅い機能提供（6週間以上）",
+          "頻繁な本番障害",
+          "開発者のオンボーディングに3ヶ月以上"
+        ]
+      },
+      "ontologies": {
+        "functional": {
+          "title": "機能Ontology",
+          "description": "Phoenix CRMにおけるすべてのビジネス機能、ユーザーワークフロー、ビジネスルールをマッピングします",
+          "insights": [
+            "47の独立したビジネス機能を特定",
+            "23のユーザーワークフローパスをマッピング",
+            "156のビジネスルールを文書化",
+            "12の冗長な機能実装を発見"
+          ]
+        },
+        "design": {
+          "title": "デザインOntology",
+          "description": "すべてのUI画面、コンポーネント、インタラクション、ユーザーエクスペリエンスパターンを記述します",
+          "insights": [
+            "89のユニーク画面を特定",
+            "jQuery/Reactの混合コンポーネントパターン",
+            "モジュール間で一貫性のないデザイン言語",
+            "15の重複UIコンポーネントを発見"
+          ]
+        },
+        "architecture": {
+          "title": "アーキテクチャOntology",
+          "description": "モノリス内のサービス、API、データモデル、システム依存関係を文書化します",
+          "insights": [
+            "密結合のモノリシックアーキテクチャ",
+            "147のAPIエンドポイント、うち34が未文書化",
+            "循環依存を持つ複雑なデータベース",
+            "サービス境界の欠如"
+          ]
+        },
+        "code": {
+          "title": "コードOntology",
+          "description": "コードレベルでクラス、メソッド、依存関係、実装パターンを分析します",
+          "insights": [
+            "50万行以上のコードを分析",
+            "コード重複率：23%",
+            "テストカバレッジ：わずか18%",
+            "複雑度の閾値を超える89のクラス"
+          ]
+        }
+      },
+      "debtCategories": {
+        "critical": {
+          "category": "アーキテクチャ違反",
+          "description": "スケーラビリティと保守性に影響する構造的問題",
+          "examples": [
+            "モジュール間の循環依存",
+            "2000行を超えるGodクラス",
+            "UIレイヤーからの直接データベースアクセス",
+            "ハードコードされた設定値"
+          ]
+        },
+        "codeQuality": {
+          "category": "コード品質の問題",
+          "description": "可読性を低下させバグリスクを増加させるコードパターン",
+          "examples": [
+            "重複コードブロック（23%の重複）",
+            "循環的複雑度が20を超えるメソッド",
+            "一貫性のない命名規則",
+            "45のメソッドでエラーハンドリングが欠如"
+          ]
+        },
+        "missingTests": {
+          "category": "テストカバレッジの不足",
+          "description": "リグレッションリスクを増加させるテストのギャップ",
+          "examples": [
+            "ユニットテストカバレッジはわずか18%",
+            "APIの60%で統合テストなし",
+            "エンドツーエンドテストシナリオの欠如",
+            "パフォーマンステストベースラインなし"
+          ]
+        },
+        "performance": {
+          "category": "パフォーマンスとスケーラビリティ",
+          "description": "アプリケーションのパフォーマンスとスケール能力に影響する問題",
+          "examples": [
+            "34のエンドポイントでN+1クエリパターン",
+            "最適化されていないデータベースクエリ（12件が5秒超）",
+            "頻繁にアクセスされるデータのキャッシュ欠如",
+            "バッチ操作の同期処理"
+          ]
+        }
+      },
+      "step1": {
+        "title": "ステップ1：AI駆動の知識抽出",
+        "description": "当社のAIエージェントがPhoenix CRMのコードベースを分析し、4つの次元にわたる包括的なKnowledge Graphを構築しました。このプロセスは完全に自動化されており、50万行のアプリケーションで通常2〜4時間かかります。",
+        "whatWeAnalyze": "分析対象",
+        "whatWeDiscover": "発見内容",
+        "analyzeItems": [
+          "全モジュールのソースコード",
+          "データベーススキーマと関係",
+          "APIエンドポイントとコントラクト",
+          "設定ファイルと依存関係",
+          "テストスイートとカバレッジ"
+        ],
+        "discoverItems": [
+          "ビジネス機能とルール",
+          "アーキテクチャパターンと違反",
+          "技術的負債のカテゴリ",
+          "セキュリティ脆弱性",
+          "パフォーマンスボトルネック"
+        ]
+      },
+      "step2": {
+        "title": "ステップ2：Knowledge Graphの探索",
+        "description": "抽出プロセスにより、Phoenix CRMのさまざまな側面を捉える4つの相互接続されたKnowledge Graphが生成されます：",
+        "keyInsights": "Phoenix CRMからの主要インサイト：",
+        "interactiveExplorer": "インタラクティブエクスプローラー：",
+        "interactiveExplorerDesc": "技術的負債グラフエクスプローラーでKnowledge Graph全体をインタラクティブに探索できます。",
+        "tryInteractive": "インタラクティブエクスプローラーを試す"
+      },
+      "step3": {
+        "title": "ステップ3：技術的負債のアセスメント",
+        "description": "Knowledge Graphを分析しベストプラクティスと比較することで、Phoenix CRM全体の技術的負債を特定・分類しました：",
+        "examples": "例：",
+        "impactAnalysis": {
+          "title": "影響分析",
+          "description": "当社のAIエージェントが、この技術的負債への対処によるビジネスインパクトを定量化しました：",
+          "items": [
+            "保守コスト35%削減の見込み",
+            "機能提供速度50%向上の見込み",
+            "本番障害60%削減の見込み",
+            "6ヶ月でROIの損益分岐点"
+          ]
+        }
+      },
+      "summary": {
+        "title": "ディスカバリー完了：学んだこと",
+        "comprehensive": {
+          "title": "包括的な理解",
+          "description": "システムのすべての側面を文書化する4つの完全なOntologyグラフ"
+        },
+        "issues": {
+          "title": "782の問題を特定",
+          "description": "カテゴリ分類、優先順位付け、影響の定量化済み"
+        },
+        "roi": {
+          "title": "明確なROIパス",
+          "description": "35%のコスト削減と50%の速度向上を予測"
+        },
+        "conclusion": "Phoenix CRMの現状と技術的負債を完全に理解した上で、ステークホルダーの検証を受けた戦略的リエンジニアリング計画を策定できます。"
+      },
+      "nextStep": {
+        "title": "次へ：リエンジニアリング戦略",
+        "description": "包括的なディスカバリーが完了したら、すべての主要ステークホルダーの検証を受けた戦略的モダナイゼーション計画を策定します。",
+        "button": "リエンジニアリング戦略を見る"
+      }
+    },
+    "strategy": {
+      "backToOverview": "概要に戻る",
+      "header": {
+        "title": "リエンジニアリング戦略",
+        "description": "Phoenix CRMのマルチステークホルダー検証を伴う戦略的モダナイゼーション計画"
+      },
+      "philosophy": {
+        "title": "検証済みモダナイゼーション戦略",
+        "description": "リエンジニアリングは、すべてのステークホルダーがターゲット状態に合意したときに成功します。発見されたKnowledge Graphからロール固有のアーティファクトを生成し、実装開始前に各ステークホルダーが担当する側面を検証できるようにします。",
+        "preserveValue": "ビジネス価値の保持",
+        "improveUx": "ユーザーエクスペリエンスの改善",
+        "modernizeArch": "アーキテクチャのモダナイズ",
+        "eliminateDebt": "技術的負債の排除"
+      },
+      "tracks": {
+        "title": "4つの検証トラック",
+        "whatsIncluded": "含まれるもの：",
+        "phoenixExample": "Phoenix CRMの例：",
+        "business": {
+          "title": "ビジネス仕様",
+          "stakeholder": "ビジネスオーナー",
+          "artifact": "ビジネスリエンジニアリング仕様",
+          "description": "AIが既存機能を保持しつつモダナイゼーションの機会を特定するビジネス仕様を生成し、ビジネスオーナーが検証します。",
+          "includes": [
+            "機能保持チェックリスト",
+            "ビジネスルール移行計画",
+            "ユーザー影響評価",
+            "モダナイゼーションの機会",
+            "各変更のリスク軽減"
+          ],
+          "sample": "Phoenix CRM：47のビジネス機能すべてを保持状態付きでマッピング。リエンジニアリング中の強化対象として3つの機能を特定。"
+        },
+        "ba": {
+          "title": "リエンジニアリングストーリー",
+          "stakeholder": "ビジネスアナリスト",
+          "artifact": "リエンジニアリングエピック＆ストーリーコレクション",
+          "description": "AIがリエンジニアリング計画を構造化されたエピックとストーリーに分解し、現状からターゲット状態へのトレーサビリティを確保します。",
+          "includes": [
+            "モジュールごとのリエンジニアリングエピック",
+            "受入基準付き移行ストーリー",
+            "依存関係とシーケンス",
+            "ストーリーごとの工数見積もり",
+            "ロールバック基準"
+          ],
+          "sample": "Phoenix CRM：23のリエンジニアリングエピックを作成、156のストーリーに分解。平均5ストーリーポイント。"
+        },
+        "ux": {
+          "title": "UI/UXモダナイゼーション計画",
+          "stakeholder": "UXデザイナー",
+          "artifact": "UI/UXモダナイゼーション仕様",
+          "description": "AIが馴染みのあるワークフローを維持しながらデザインの不整合に対処するUI/UXモダナイゼーション計画を生成します。",
+          "includes": [
+            "現行UIパターンのインベントリ",
+            "ターゲットデザインシステム仕様",
+            "画面ごとの移行計画",
+            "インタラクション改善",
+            "アクセシビリティコンプライアンスチェックリスト"
+          ],
+          "sample": "Phoenix CRM：3つの不整合なUIフレームワークを置換する統一デザインシステム。89の画面を新しいコンポーネントライブラリにマッピング。"
+        },
+        "architect": {
+          "title": "ターゲットアーキテクチャ",
+          "stakeholder": "アーキテクト",
+          "artifact": "ターゲットアーキテクチャドキュメント",
+          "description": "AIが発見されたKnowledge Graphに基づき、特定されたアーキテクチャ違反と技術的負債を解決するターゲットアーキテクチャを生成します。",
+          "includes": [
+            "サービス境界の定義",
+            "APIモダナイゼーション計画",
+            "データモデル移行戦略",
+            "インフラストラクチャ要件",
+            "セキュリティアーキテクチャの更新"
+          ],
+          "sample": "Phoenix CRM：密結合モノリスを置換する8つの境界づけられたコンテキストを持つモジュラーモノリス。147のアーキテクチャ違反を解決。"
+        }
+      },
+      "architecture": {
+        "title": "現行 vs ターゲットアーキテクチャ",
+        "current": "現行アーキテクチャ",
+        "target": "ターゲットアーキテクチャ",
+        "migrationStrategy": "移行戦略：",
+        "currentItems": [
+          "モノリシックJavaアプリケーション",
+          "密結合モジュール",
+          "単一のOracleデータベース",
+          "jQuery＋混合Reactフロントエンド",
+          "手動デプロイメントプロセス"
+        ],
+        "targetItems": [
+          "明確な境界を持つモジュラーモノリス",
+          "疎結合の境界づけられたコンテキスト",
+          "コンテキストごとのデータベース戦略",
+          "統一されたReactフロントエンド",
+          "自動テスト付きCI/CDパイプライン"
+        ],
+        "migrationStrategyDesc": "Strangler Figパターン - 100%の稼働率を維持しながらモジュールを段階的に置換。各モジュールは個別に移行、検証、デプロイされます。"
+      },
+      "roadmap": {
+        "title": "段階的リエンジニアリングロードマップ",
+        "description": "段階的アプローチがリスク、価値提供、ビジネス継続性のバランスを取ります：",
+        "risk": "リスク",
+        "phases": [
+          {
+            "phase": "基盤と短期成果",
+            "duration": "1〜4週目",
+            "focus": "CI/CDの構築、テストカバレッジの追加、重大なアーキテクチャ違反の修正",
+            "deliverables": [
+              "CI/CDパイプライン",
+              "テストハーネス",
+              "重大な修正",
+              "モニタリング設定"
+            ],
+            "risk": "低"
+          },
+          {
+            "phase": "モジュール抽出",
+            "duration": "5〜12週目",
+            "focus": "最初の境界づけられたコンテキストの抽出、サービス境界の確立",
+            "deliverables": [
+              "最初のモジュール抽出",
+              "APIコントラクト定義",
+              "データベース分離",
+              "統合テスト"
+            ],
+            "risk": "中"
+          },
+          {
+            "phase": "フロントエンドモダナイゼーション",
+            "duration": "9〜16週目",
+            "focus": "フロントエンドフレームワークの統一、デザインシステムの実装",
+            "deliverables": [
+              "統一されたReactフロントエンド",
+              "デザインシステム",
+              "コンポーネントライブラリ",
+              "UX改善"
+            ],
+            "risk": "中"
+          },
+          {
+            "phase": "完全モダナイゼーション",
+            "duration": "13〜24週目",
+            "focus": "残りのモジュール抽出の完了、パフォーマンスの最適化",
+            "deliverables": [
+              "全モジュール抽出完了",
+              "パフォーマンス最適化",
+              "完全なテストカバレッジ",
+              "ドキュメント完成"
+            ],
+            "risk": "低"
+          }
+        ]
+      },
+      "validationGateway": {
+        "title": "検証ゲートウェイ",
+        "description": "4人すべてのステークホルダーがそれぞれのアーティファクトを承認した後にのみ実装を開始します。これにより、モダナイゼーション目標の整合が確保され、手戻りが削減され、リスクが軽減されます。",
+        "approvals": [
+          "ビジネス仕様承認済み",
+          "リエンジニアリングストーリー承認済み",
+          "UI/UX計画承認済み",
+          "ターゲットアーキテクチャ承認済み"
+        ]
+      },
+      "nextStep": {
+        "title": "次へ：実装とモダナイゼーション",
+        "description": "検証済みの戦略に基づき、AI駆動の自動化と人間の専門知識を並行して活用してリエンジニアリングを実行します。",
+        "button": "実装プロセスを見る"
+      }
+    },
+    "implementationModernization": {
+      "backToOverview": "概要に戻る",
+      "header": {
+        "title": "実装とモダナイゼーション",
+        "description": "手動＋自動化並列ワークフローによるAI駆動のリファクタリングとモダナイゼーション"
+      },
+      "gateway": {
+        "title": "全ステークホルダーが承認",
+        "description": "検証済みのターゲットアーキテクチャとモダナイゼーション目標に関するステークホルダーの合意に基づき実装を開始します。",
+        "businessApproved": "ビジネス仕様承認済み",
+        "storiesApproved": "リエンジニアリングストーリー承認済み",
+        "uxApproved": "UI/UXフロー承認済み",
+        "archApproved": "ターゲットアーキテクチャ承認済み"
+      },
+      "tracks": {
+        "title": "4つのモダナイゼーショントラック",
+        "outputs": "アウトプット：",
+        "approach": "アプローチ：",
+        "design": {
+          "title": "UI/UXモダナイゼーション",
+          "description": "不整合なUIフレームワークを統一デザインシステムとモダンなユーザーエクスペリエンスに置換します",
+          "outputs": [
+            "統一されたReactコンポーネントライブラリ",
+            "デザイントークンシステム",
+            "モダナイズされた画面レイアウト",
+            "アクセシビリティ改善"
+          ],
+          "approach": "検証済みデザインシステムを信頼の源として、jQuery/混合フレームワークから統一Reactコンポーネントへ画面ごとに段階的移行します。"
+        },
+        "architecture": {
+          "title": "アーキテクチャモダナイゼーション",
+          "description": "モノリシックアーキテクチャを明確なサービス境界を持つモジュラーモノリスに変換します",
+          "outputs": [
+            "境界づけられたコンテキストの実装",
+            "APIゲートウェイ設定",
+            "データベース移行スクリプト",
+            "サービス間通信パターン"
+          ],
+          "approach": "モジュールごとの抽出によるStrangler Figパターン。各境界づけられたコンテキストは後方互換性を維持しながら個別に抽出、テスト、デプロイされます。"
+        },
+        "testing": {
+          "title": "テストスイート生成",
+          "description": "安全なリファクタリングとリグレッション防止のための包括的テストカバレッジを構築します",
+          "outputs": [
+            "モジュールごとのユニットテストスイート",
+            "統合テストフレームワーク",
+            "エンドツーエンドテストシナリオ",
+            "パフォーマンステストベースライン"
+          ],
+          "approach": "AIが機能とアーキテクチャのOntologyからテストを生成し、リファクタリング開始前にすべてのビジネス機能とAPIエンドポイントにカバレッジを確保します。"
+        },
+        "code": {
+          "title": "コードリファクタリング",
+          "description": "ビジネスロジックを保持しながら技術的負債を体系的にリファクタリングで排除します",
+          "outputs": [
+            "リファクタリング済みモジュールコード",
+            "更新された依存関係グラフ",
+            "コード品質レポート",
+            "移行ドキュメント"
+          ],
+          "approach": "AIが反復的なリファクタリングパターン（命名、構造、パターン）を処理し、開発者は複雑なビジネスロジックの変更とアーキテクチャの意思決定に集中します。"
+        }
+      },
+      "parallel": {
+        "title": "並列リエンジニアリングワークフロー",
+        "description": "手動のエキスパート作業とAI駆動の自動化が並行して進み、品質を維持しながら速度を最大化します。",
+        "manual": {
+          "title": "エキスパート手動作業",
+          "description": "開発者は複雑なビジネスロジック、重要なリファクタリング、アーキテクチャの意思決定に集中します。",
+          "items": [
+            "複雑なビジネスロジック移行",
+            "アーキテクチャの意思決定とトレードオフ",
+            "セキュリティクリティカルなリファクタリング",
+            "サードパーティ統合の更新"
+          ]
+        },
+        "ai": {
+          "title": "AI駆動の自動化",
+          "description": "AIエージェントが反復的なリファクタリング、テスト生成、コード品質改善を処理します。",
+          "items": [
+            "自動テスト生成",
+            "コードスタイルとパターンのリファクタリング",
+            "APIスキャフォールディングと移行",
+            "ドキュメント生成"
+          ]
+        },
+        "timelineComparison": "タイムライン比較",
+        "traditional": "従来のリエンジニアリング：",
+        "traditionalTimeline": "一般的なタイムライン：20〜24週間",
+        "breeze": "Breeze AIリエンジニアリング：",
+        "breezeTimeline": "一般的なタイムライン：12〜16週間（40%高速化）"
+      },
+      "agentEcosystem": {
+        "title": "リエンジニアリングエージェントエコシステム",
+        "design": "デザインエージェント",
+        "architecture": "アーキテクチャエージェント",
+        "testing": "テストエージェント",
+        "refactoring": "リファクタリングエージェント",
+        "designAgents": [
+          "コンポーネントマイグレーター",
+          "デザイントークンジェネレーター",
+          "レイアウトモダナイザー",
+          "アクセシビリティ監査"
+        ],
+        "architectureAgents": [
+          "モジュールエクストラクター",
+          "APIゲートウェイビルダー",
+          "データベースマイグレーター",
+          "依存関係リゾルバー"
+        ],
+        "testingAgents": [
+          "ユニットテストジェネレーター",
+          "統合テストビルダー",
+          "E2Eシナリオライター",
+          "パフォーマンスベースラインクリエーター"
+        ],
+        "refactoringAgents": [
+          "コードパターンアップデーター",
+          "命名規則エンフォーサー",
+          "デッドコードエリミネーター",
+          "依存関係アップデーター"
+        ]
+      },
+      "outcomes": {
+        "title": "実装成果",
+        "faster": {
+          "title": "40%高速化",
+          "description": "並列ワークフローがリエンジニアリングを大幅に加速します"
+        },
+        "downtime": {
+          "title": "ゼロダウンタイム",
+          "description": "自動ロールバック付きの段階的デプロイメント"
+        },
+        "livingDocs": {
+          "title": "生きたドキュメント",
+          "description": "システムの進化に応じてドキュメントが自動更新"
+        }
+      },
+      "nextStep": {
+        "title": "次へ：継続的検証",
+        "description": "リエンジニアリング中、スプリントごとの継続的検証により、品質が実際に向上し新たな技術的負債が生まれていないことを確認します。",
+        "button": "継続的検証を見る"
+      }
+    },
+    "continuousValidation": {
+      "backToOverview": "アプリケーションリエンジニアリングに戻る",
+      "header": {
+        "title": "継続的検証",
+        "description": "毎スプリント、リエンジニアリングが機能を損なうことなく、ターゲットアーキテクチャからドリフトすることなく、品質を向上させていることを検証します"
+      },
+      "challenge": {
+        "title": "検証なしのリエンジニアリングリスク",
+        "description": "従来のリエンジニアリングプロジェクトは、手遅れになるまでターゲットアーキテクチャからのドリフトに気づかないため、しばしば失敗します。継続的検証がなければ、モダナイゼーション中に新たな技術的負債が蓄積され、リエンジニアリングの目的が失われます。",
+        "silentDrift": {
+          "title": "サイレントドリフト",
+          "description": "コードレビューまでアーキテクチャ違反が検出されない"
+        },
+        "newDebt": {
+          "title": "新たな負債の発生",
+          "description": "リエンジニアリングが異なる技術的負債を生む"
+        },
+        "qualityUncertainty": {
+          "title": "品質の不確実性",
+          "description": "品質が実際に向上しているかの客観的指標がない"
+        }
+      },
+      "process": {
+        "title": "自動スプリント検証プロセス",
+        "description": "各スプリントの終了時に、AIエージェントがアプリケーションの現在の状態を自動的に抽出し、ターゲットアーキテクチャと前回のベースラインと比較してドリフトを検出します。",
+        "automated": "自動",
+        "totalTime": "合計時間：スプリントあたり65分",
+        "totalTimeDetail": "人間の時間はわずか30分。自動分析が、手動コードレビューで数時間かかる客観的なドリフト検出を提供します。",
+        "steps": [
+          {
+            "step": "現在のKnowledge Graphを抽出",
+            "description": "AIエージェントが更新されたコードベースを分析し、現在の実装状態を反映する最新のKnowledge Graphを抽出します。",
+            "duration": "15分",
+            "automated": true
+          },
+          {
+            "step": "ベースラインと比較",
+            "description": "現在のグラフを検証済みベースラインと比較し、ドリフト、ギャップ、不整合を特定します。",
+            "duration": "10分",
+            "automated": true
+          },
+          {
+            "step": "ドリフトレポートを生成",
+            "description": "検出されたすべての変更を重大度と影響でカテゴリ分類した詳細レポートを作成します。",
+            "duration": "5分",
+            "automated": true
+          },
+          {
+            "step": "ステークホルダーレビュー",
+            "description": "関連するステークホルダーがフラグされた変更をレビューし、意図的か修正が必要かを判断します。",
+            "duration": "30分",
+            "automated": false
+          },
+          {
+            "step": "ベースラインを更新",
+            "description": "承認された変更が次のスプリント比較のためにベースラインに反映されます。",
+            "duration": "5分",
+            "automated": true
+          }
+        ]
+      },
+      "dashboard": {
+        "title": "スプリント進捗ダッシュボード",
+        "sprintLabel": "スプリント",
+        "qualityScore": "品質スコア",
+        "driftIssues": "ドリフトの問題",
+        "issuesBySeverity": "重大度別の問題",
+        "critical": "重大：",
+        "moderate": "中程度：",
+        "low": "軽度：",
+        "improvements": "改善",
+        "sprintData": [
+          {
+            "sprint": 1,
+            "quality": 42,
+            "drift": 12,
+            "issues": {
+              "critical": 5,
+              "moderate": 4,
+              "low": 3
+            },
+            "improvements": [
+              "CI/CDパイプラインを確立",
+              "テストハーネスを展開",
+              "12のアーキテクチャ違反を修正",
+              "モニタリングとアラートを設定"
+            ]
+          },
+          {
+            "sprint": 2,
+            "quality": 58,
+            "drift": 8,
+            "issues": {
+              "critical": 2,
+              "moderate": 3,
+              "low": 3
+            },
+            "improvements": [
+              "最初の境界づけられたコンテキストを抽出（ユーザー管理）",
+              "ユニットテストカバレッジを35%に向上",
+              "ユーザーモジュールのデータベース移行を完了",
+              "APIドキュメントを生成"
+            ]
+          },
+          {
+            "sprint": 3,
+            "quality": 71,
+            "drift": 5,
+            "issues": {
+              "critical": 1,
+              "moderate": 2,
+              "low": 2
+            },
+            "improvements": [
+              "2番目の境界づけられたコンテキストを抽出（注文管理）",
+              "フロントエンド移行を開始（React統一）",
+              "統合テストスイートを拡張",
+              "パフォーマンスベースラインを確立"
+            ]
+          },
+          {
+            "sprint": 4,
+            "quality": 82,
+            "drift": 3,
+            "issues": {
+              "critical": 0,
+              "moderate": 1,
+              "low": 2
+            },
+            "improvements": [
+              "3番目の境界づけられたコンテキストを抽出（レポート）",
+              "デザインシステムを完全実装",
+              "テストカバレッジが65%に到達",
+              "重大なアーキテクチャ違反がゼロに"
+            ]
+          },
+          {
+            "sprint": 5,
+            "quality": 91,
+            "drift": 2,
+            "issues": {
+              "critical": 0,
+              "moderate": 0,
+              "low": 2
+            },
+            "improvements": [
+              "全モジュールを抽出しデプロイ完了",
+              "フロントエンドをReactに完全移行",
+              "テストカバレッジが82%に到達",
+              "全エンドポイントでパフォーマンスが40%向上"
+            ]
+          }
+        ]
+      },
+      "driftDetection": {
+        "title": "実際のドリフト検出事例",
+        "description": "Phoenix CRMリエンジニアリング中に継続的検証がどのように問題を検出したかをご覧ください。検出されなければ重大な技術的負債になっていた問題です。",
+        "whatDetected": "検出された内容",
+        "impact": "影響",
+        "actionTaken": "実施したアクション",
+        "whatPrevented": "防止した事態",
+        "examples": [
+          {
+            "type": "アーキテクチャ境界違反",
+            "severity": "critical",
+            "detected": "スプリント2 - 自動検出",
+            "description": "注文モジュールからユーザーサービスAPIの境界を迂回した直接データベース呼び出し",
+            "impact": "排除中のモジュール間密結合の再導入",
+            "action": "開発者がコードを更新し、直接DB アクセスの代わりにユーザーサービスAPIエンドポイントを使用",
+            "prevented": "保守問題の主要原因であったモノリシック結合パターンの再導入"
+          },
+          {
+            "type": "テストカバレッジの不足",
+            "severity": "moderate",
+            "detected": "スプリント3 - 自動検出",
+            "description": "対応する統合テストなしで新しい決済処理エンドポイントが追加",
+            "impact": "将来の変更時にリグレッション保護のない重要なビジネスフロー",
+            "action": "AIエージェントが機能Ontologyから統合テストを生成、開発者がレビューし承認",
+            "prevented": "収益に影響する可能性のある将来のスプリントでの決済処理バグ"
+          },
+          {
+            "type": "デザインシステムの逸脱",
+            "severity": "low",
+            "detected": "スプリント3 - 自動検出",
+            "description": "デザインシステムのボタンコンポーネントの代わりにカスタムボタンコンポーネントが作成",
+            "impact": "重複コンポーネントによるUI不整合と保守負担の増加",
+            "action": "開発者がカスタムコンポーネントをデザインシステムのボタンバリアントに置換",
+            "prevented": "統一デザインシステムを損なうカスタムコンポーネントの段階的蓄積"
+          }
+        ]
+      },
+      "qualityTrends": {
+        "title": "品質改善トレンド",
+        "description": "リエンジニアリングプロセスを通じて客観的な品質指標を追跡し、継続的な改善を確保します。",
+        "toTarget": "ターゲットまで",
+        "baseline": "ベースライン：",
+        "current": "現在：",
+        "target": "ターゲット：",
+        "metrics": [
+          {
+            "metric": "テストカバレッジ",
+            "baseline": 18,
+            "current": 72,
+            "target": 85,
+            "unit": "%"
+          },
+          {
+            "metric": "コード重複",
+            "baseline": 23,
+            "current": 8,
+            "target": 5,
+            "unit": "%"
+          },
+          {
+            "metric": "アーキテクチャ準拠",
+            "baseline": 34,
+            "current": 89,
+            "target": 95,
+            "unit": "%"
+          },
+          {
+            "metric": "パフォーマンススコア",
+            "baseline": 45,
+            "current": 78,
+            "target": 90,
+            "unit": "/100"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "継続的検証が重要な理由",
+        "immediateFeedback": {
+          "title": "即座のフィードバック",
+          "catchDrift": "早期にドリフトを検出：",
+          "catchDriftDesc": "数ヶ月ではなく数日以内に問題を検出",
+          "lowerCost": "修正コストの低減：",
+          "lowerCostDesc": "同じスプリント内での修正は10倍低コスト",
+          "teamLearning": "チームの学習：",
+          "teamLearningDesc": "迅速なフィードバックが将来の開発を改善"
+        },
+        "objectiveProof": {
+          "title": "客観的品質証明",
+          "measurable": "測定可能な進捗：",
+          "measurableDesc": "品質の改善をスプリントごとに追跡",
+          "stakeholder": "ステークホルダーの信頼：",
+          "stakeholderDesc": "データ駆動のモダナイゼーション価値の証明",
+          "prevent": "後退の防止：",
+          "preventDesc": "品質が向上し続け、低下しないことを保証"
+        }
+      }
+    }
+  },
+  "asimov": {
+    "title": "ASIMOVレガシーマイグレーション",
+    "subtitle": "AI駆動のアプリケーションモダナイゼーション",
+    "overview": {
+      "header": {
+        "title": "ASIMOVレガシーマイグレーションプラットフォーム",
+        "description": "Autonomous System for Intelligent Migration and Optimization - AI駆動のエージェントを活用してレガシーアプリケーションをモダンなクラウドネイティブアーキテクチャに変革します"
+      },
+      "capabilities": {
+        "title": "AI駆動のマイグレーション機能",
+        "discovery": {
+          "title": "AI駆動のディスカバリー",
+          "description": "自律型エージェントがレガシーシステムを分析し、包括的なKnowledge Graphを作成します",
+          "features": [
+            "LLM理解によるディープコード分析",
+            "自動依存関係マッピング",
+            "ビジネスロジック抽出",
+            "隠れたパターンの発見"
+          ]
+        },
+        "transformation": {
+          "title": "インテリジェント変換",
+          "description": "コードモダナイゼーションと最適化のためのマルチエージェントオーケストレーション",
+          "features": [
+            "自動コードリファクタリング",
+            "言語変換（COBOLからJava）",
+            "アーキテクチャモダナイゼーション",
+            "パフォーマンス最適化"
+          ]
+        },
+        "cloudNative": {
+          "title": "クラウドネイティブマイグレーション",
+          "description": "エージェント駆動のコンテナ化とクラウドデプロイメント戦略",
+          "features": [
+            "microservices抽出",
+            "コンテナオーケストレーション",
+            "自動スケーリング設定",
+            "Infrastructure as Code"
+          ]
+        },
+        "zeroRisk": {
+          "title": "ゼロリスク実行",
+          "description": "継続的検証とロールバック機能により安全なマイグレーションを保証します",
+          "features": [
+            "並行稼働検証",
+            "自動テスト生成",
+            "リアルタイムモニタリング",
+            "即時ロールバック機能"
+          ]
+        }
+      },
+      "methodology": {
+        "title": "実証済みのマイグレーション方法論",
+        "keyDeliverables": "主要成果物：",
+        "phases": {
+          "discoveryAssessment": {
+            "phase": "ディスカバリーとアセスメント",
+            "duration": "2〜4週間",
+            "description": "レガシー環境の包括的分析",
+            "deliverables": [
+              "完全なシステムインベントリ",
+              "依存関係マッピング",
+              "リスク評価マトリクス",
+              "マイグレーションロードマップ"
+            ]
+          },
+          "planningDesign": {
+            "phase": "計画と設計",
+            "duration": "3〜5週間",
+            "description": "詳細なマイグレーション戦略とアーキテクチャ",
+            "deliverables": [
+              "ターゲットアーキテクチャブループリント",
+              "マイグレーションパターンカタログ",
+              "リソース配分計画",
+              "成功指標の定義"
+            ]
+          },
+          "iterativeTransformation": {
+            "phase": "反復的変換",
+            "duration": "3〜6ヶ月",
+            "description": "継続的検証を伴う段階的モダナイゼーション",
+            "deliverables": [
+              "モダナイズされたコンポーネント",
+              "APIインターフェース",
+              "テスト自動化スイート",
+              "パフォーマンスベンチマーク"
+            ]
+          },
+          "deploymentOptimization": {
+            "phase": "デプロイメントと最適化",
+            "duration": "2〜4週間",
+            "description": "本番展開とパフォーマンスチューニング",
+            "deliverables": [
+              "本番デプロイメント",
+              "モニタリングダッシュボード",
+              "最適化レポート",
+              "知識移転"
+            ]
+          }
+        }
+      },
+      "valueProposition": {
+        "migrationTime": {
+          "metric": "70%",
+          "label": "マイグレーション時間の削減",
+          "description": "AI自動化が変換を加速"
+        },
+        "codeCoverage": {
+          "metric": "85%",
+          "label": "コードカバレッジ",
+          "description": "自動テストが品質を保証"
+        },
+        "costSavings": {
+          "metric": "60%",
+          "label": "コスト削減",
+          "description": "従来のマイグレーションとの比較"
+        },
+        "uptime": {
+          "metric": "99.9%",
+          "label": "マイグレーション中の稼働率",
+          "description": "ゼロダウンタイムデプロイメント戦略"
+        }
+      },
+      "agentEcosystem": {
+        "title": "マルチエージェントマイグレーションエコシステム",
+        "discovery": "ディスカバリーエージェント",
+        "transformation": "変換エージェント",
+        "validation": "検証エージェント",
+        "discoveryAgents": [
+          "コード分析エージェント",
+          "依存関係マッパー",
+          "ビジネスロジックエクストラクター",
+          "ドキュメントジェネレーター"
+        ],
+        "transformationAgents": [
+          "コードトランスレーター",
+          "リファクタリングエージェント",
+          "APIデザイナー",
+          "テストジェネレーター"
+        ],
+        "validationAgents": [
+          "品質バリデーター",
+          "パフォーマンスモニター",
+          "セキュリティスキャナー",
+          "コンプライアンスチェッカー"
+        ]
+      },
+      "nav": {
+        "explore": "詳しく見る",
+        "discoveryAnalysis": "ディスカバリーと分析",
+        "transformationEngine": "変換エンジン",
+        "migrationPatterns": "マイグレーションパターン",
+        "successStories": "成功事例"
+      }
+    },
+    "discovery": {
+      "title": "ディスカバリーと分析",
+      "subtitle": "レガシーシステムのディープ分析",
+      "header": {
+        "title": "ディスカバリーと分析エンジン",
+        "subtitle": "AI駆動のレガシーシステムディープ分析"
+      },
+      "agents": {
+        "title": "専門ディスカバリーエージェント",
+        "capabilities": "機能：",
+        "codeAnalysis": {
+          "name": "コード分析エージェント",
+          "description": "LLMを使用したレガシーコードのディープセマンティック分析",
+          "capabilities": [
+            "30以上の言語の構文解析",
+            "ビジネスロジック抽出",
+            "コード品質評価",
+            "技術的負債の定量化"
+          ],
+          "metrics": {
+            "linesAnalyzed": {
+              "label": "分析行数",
+              "value": "10M+"
+            },
+            "accuracy": {
+              "label": "精度",
+              "value": "95%"
+            },
+            "speed": {
+              "label": "速度",
+              "value": "100K LOC/時間"
+            }
+          }
+        },
+        "dependencyMapper": {
+          "name": "依存関係マッパー",
+          "description": "システム依存関係と統合の自動検出",
+          "capabilities": [
+            "データベース関係マッピング",
+            "API依存関係追跡",
+            "ライブラリバージョン分析",
+            "外部システム識別"
+          ],
+          "metrics": {
+            "dependenciesFound": {
+              "label": "検出された依存関係",
+              "value": "5000+"
+            },
+            "depth": {
+              "label": "深度",
+              "value": "10レベル"
+            },
+            "coverage": {
+              "label": "カバレッジ",
+              "value": "99%"
+            }
+          }
+        },
+        "documentationGenerator": {
+          "name": "ドキュメントジェネレーター",
+          "description": "コード分析からのAI駆動ドキュメント作成",
+          "capabilities": [
+            "自動APIドキュメント",
+            "ビジネスプロセス抽出",
+            "データフロー図",
+            "システムアーキテクチャドキュメント"
+          ],
+          "metrics": {
+            "pagesGenerated": {
+              "label": "生成ページ数",
+              "value": "1000+"
+            },
+            "completeness": {
+              "label": "完全性",
+              "value": "90%"
+            },
+            "timeSaved": {
+              "label": "時間削減",
+              "value": "80%"
+            }
+          }
+        },
+        "riskAssessment": {
+          "name": "リスク評価ボット",
+          "description": "マイグレーションリスクと複雑度要因を特定します",
+          "capabilities": [
+            "セキュリティ脆弱性の検出",
+            "パフォーマンスボトルネック分析",
+            "コンプライアンスギャップの特定",
+            "マイグレーション複雑度スコアリング"
+          ],
+          "metrics": {
+            "risksIdentified": {
+              "label": "特定されたリスク",
+              "value": "平均150"
+            },
+            "falsePositives": {
+              "label": "偽陽性率",
+              "value": "<5%"
+            },
+            "priorityAccuracy": {
+              "label": "優先度精度",
+              "value": "92%"
+            }
+          }
+        }
+      },
+      "results": {
+        "title": "分析結果ダッシュボード",
+        "tabs": {
+          "codebase": "コードベース分析",
+          "dependencies": "依存関係マップ",
+          "risks": "リスク評価"
+        },
+        "codebase": {
+          "languageDistribution": "言語分布",
+          "codeQualityMetrics": "コード品質メトリクス",
+          "lines": "行"
+        },
+        "dependencies": {
+          "systemDependencies": "システム依存関係",
+          "libraryAnalysis": "ライブラリ分析",
+          "critical": "重大"
+        },
+        "risks": {
+          "criticalRisks": "重大なリスク",
+          "complexityFactors": "複雑度要因",
+          "impactLabel": "影響：",
+          "probabilityLabel": "確率：",
+          "mitigationLabel": "軽減策："
+        }
+      },
+      "process": {
+        "title": "自動ディスカバリープロセス",
+        "activeAgents": "稼働中のエージェント：",
+        "stepLabel": "ステップ",
+        "steps": {
+          "initialScan": {
+            "name": "初期スキャン",
+            "duration": "2〜3日",
+            "description": "コードベースとインフラストラクチャ全体の自動スキャン",
+            "agents": [
+              "コードスキャナー",
+              "インフラストラクチャマッパー"
+            ]
+          },
+          "deepAnalysis": {
+            "name": "ディープ分析",
+            "duration": "1週間",
+            "description": "ビジネスロジックとパターンのLLM駆動分析",
+            "agents": [
+              "コード分析エージェント",
+              "パターン認識ボット"
+            ]
+          },
+          "dependencyMapping": {
+            "name": "依存関係マッピング",
+            "duration": "3〜4日",
+            "description": "すべてのシステム依存関係の完全マッピング",
+            "agents": [
+              "依存関係マッパー",
+              "統合アナライザー"
+            ]
+          },
+          "riskAssessment": {
+            "name": "リスク評価",
+            "duration": "2〜3日",
+            "description": "包括的リスク分析と軽減計画",
+            "agents": [
+              "リスク評価ボット",
+              "コンプライアンスチェッカー"
+            ]
+          },
+          "reportGeneration": {
+            "name": "レポート生成",
+            "duration": "1〜2日",
+            "description": "分析レポートと提言の自動生成",
+            "agents": [
+              "ドキュメントジェネレーター",
+              "レポートビルダー"
+            ]
+          }
+        }
+      }
+    },
+    "transformation": {
+      "title": "変換エンジン",
+      "subtitle": "自動コード変換",
+      "header": {
+        "title": "変換エンジン",
+        "subtitle": "AI駆動のコード変換とモダナイゼーション"
+      },
+      "agents": {
+        "title": "変換エージェント",
+        "coreCapabilities": "コア機能：",
+        "codeTranslator": {
+          "name": "コードトランスレーターエージェント",
+          "description": "LLM駆動の言語間コード変換",
+          "capabilities": [
+            "COBOLからJava/C#/Python",
+            "セマンティック保持",
+            "イディオマティックコード生成",
+            "パフォーマンス最適化"
+          ],
+          "performance": {
+            "translationSpeed": {
+              "label": "変換速度",
+              "value": "50K LOC/日"
+            },
+            "accuracy": {
+              "label": "精度",
+              "value": "98%"
+            },
+            "manualReview": {
+              "label": "手動レビュー",
+              "value": "<5%"
+            }
+          }
+        },
+        "refactoring": {
+          "name": "リファクタリングエージェント",
+          "description": "インテリジェントなコード再構成と最適化",
+          "capabilities": [
+            "デザインパターンの適用",
+            "コードスメルの排除",
+            "パフォーマンス改善",
+            "セキュリティ強化"
+          ],
+          "performance": {
+            "patternsApplied": {
+              "label": "適用パターン",
+              "value": "200+"
+            },
+            "codeQuality": {
+              "label": "コード品質",
+              "value": "+40%"
+            },
+            "techDebt": {
+              "label": "技術的負債",
+              "value": "-60%"
+            }
+          }
+        },
+        "apiDesigner": {
+          "name": "APIデザイナーエージェント",
+          "description": "自動APIレイヤー生成と最適化",
+          "capabilities": [
+            "RESTful API生成",
+            "GraphQLスキーマ作成",
+            "OpenAPIドキュメント",
+            "後方互換性"
+          ],
+          "performance": {
+            "apisGenerated": {
+              "label": "生成API数",
+              "value": "500+"
+            },
+            "documentation": {
+              "label": "ドキュメント",
+              "value": "100%"
+            },
+            "compliance": {
+              "label": "準拠",
+              "value": "完全"
+            }
+          }
+        },
+        "testGenerator": {
+          "name": "テストジェネレーターエージェント",
+          "description": "包括的テストスイート生成",
+          "capabilities": [
+            "ユニットテスト作成",
+            "統合テスト設計",
+            "パフォーマンステストスクリプト",
+            "テストデータ生成"
+          ],
+          "performance": {
+            "coverage": {
+              "label": "カバレッジ",
+              "value": "95%"
+            },
+            "testCases": {
+              "label": "テストケース",
+              "value": "10K+"
+            },
+            "executionTime": {
+              "label": "実行時間",
+              "value": "-30%"
+            }
+          }
+        }
+      },
+      "patterns": {
+        "title": "変換パターン",
+        "pipeline": "変換パイプライン",
+        "agentLabel": "エージェント：",
+        "outputLabel": "出力：",
+        "cobolToJava": {
+          "title": "COBOLからJavaへの変換",
+          "description": "メインフレームCOBOLからモダンJavaへの完全マイグレーション",
+          "steps": {
+            "codeAnalysis": {
+              "phase": "コード分析",
+              "description": "COBOLプログラムを解析しビジネスロジックを抽出",
+              "agent": "COBOLパーサーエージェント",
+              "output": "抽象構文木"
+            },
+            "patternMapping": {
+              "phase": "パターンマッピング",
+              "description": "COBOL構造をJavaパターンにマッピング",
+              "agent": "パターン認識エージェント",
+              "output": "変換ルール"
+            },
+            "codeGeneration": {
+              "phase": "コード生成",
+              "description": "等価なJavaコードを生成",
+              "agent": "Javaジェネレーターエージェント",
+              "output": "Javaソースコード"
+            },
+            "optimization": {
+              "phase": "最適化",
+              "description": "Javaのベストプラクティスと最適化を適用",
+              "agent": "最適化エージェント",
+              "output": "最適化済みJavaコード"
+            },
+            "testing": {
+              "phase": "テスト",
+              "description": "包括的テストを生成し実行",
+              "agent": "テストジェネレーターエージェント",
+              "output": "テストスイートと結果"
+            }
+          },
+          "metrics": {
+            "successRate": {
+              "label": "成功率",
+              "value": "95%"
+            },
+            "performanceGain": {
+              "label": "パフォーマンス向上",
+              "value": "+200%"
+            },
+            "codeReduction": {
+              "label": "コード削減",
+              "value": "40%"
+            },
+            "timeSaved": {
+              "label": "時間削減",
+              "value": "70%"
+            }
+          }
+        },
+        "monolithToMicroservices": {
+          "title": "モノリスからmicroservicesへ",
+          "description": "モノリシックアプリケーションをmicroservicesに分解",
+          "steps": {
+            "domainAnalysis": {
+              "phase": "ドメイン分析",
+              "description": "境界づけられたコンテキストとサービス境界を特定",
+              "agent": "ドメインアナライザーエージェント",
+              "output": "サービスマップ"
+            },
+            "dependencyExtraction": {
+              "phase": "依存関係抽出",
+              "description": "依存関係を抽出し分離",
+              "agent": "依存関係エージェント",
+              "output": "依存関係グラフ"
+            },
+            "serviceGeneration": {
+              "phase": "サービス生成",
+              "description": "個別のmicroservicesを作成",
+              "agent": "サービスジェネレーターエージェント",
+              "output": "microservices"
+            },
+            "apiCreation": {
+              "phase": "API作成",
+              "description": "サービス間通信APIを生成",
+              "agent": "APIデザイナーエージェント",
+              "output": "APIコントラクト"
+            },
+            "containerization": {
+              "phase": "コンテナ化",
+              "description": "サービスをコンテナにパッケージ",
+              "agent": "コンテナエージェント",
+              "output": "Dockerイメージ"
+            }
+          },
+          "metrics": {
+            "servicesCreated": {
+              "label": "作成サービス数",
+              "value": "平均25"
+            },
+            "deploymentSpeed": {
+              "label": "デプロイ速度",
+              "value": "+10倍"
+            },
+            "scalability": {
+              "label": "スケーラビリティ",
+              "value": "無制限"
+            },
+            "maintenance": {
+              "label": "保守",
+              "value": "-50%"
+            }
+          }
+        },
+        "databaseModernization": {
+          "title": "データベースモダナイゼーション",
+          "description": "レガシーデータベースをモダンプラットフォームに移行",
+          "steps": {
+            "schemaAnalysis": {
+              "phase": "スキーマ分析",
+              "description": "既存データベーススキーマを分析",
+              "agent": "スキーマアナライザーエージェント",
+              "output": "スキーマレポート"
+            },
+            "dataProfiling": {
+              "phase": "データプロファイリング",
+              "description": "データパターンと品質をプロファイリング",
+              "agent": "データプロファイラーエージェント",
+              "output": "データ品質レポート"
+            },
+            "schemaTransformation": {
+              "phase": "スキーマ変換",
+              "description": "ターゲットデータベース用にスキーマを変換",
+              "agent": "スキーマトランスフォーマーエージェント",
+              "output": "新スキーマ"
+            },
+            "dataMigration": {
+              "phase": "データ移行",
+              "description": "検証付きでデータを移行",
+              "agent": "データ移行エージェント",
+              "output": "移行済みデータ"
+            },
+            "performanceTuning": {
+              "phase": "パフォーマンスチューニング",
+              "description": "クエリとインデックスを最適化",
+              "agent": "パフォーマンスエージェント",
+              "output": "最適化済みデータベース"
+            }
+          },
+          "metrics": {
+            "dataIntegrity": {
+              "label": "データ整合性",
+              "value": "100%"
+            },
+            "queryPerformance": {
+              "label": "クエリパフォーマンス",
+              "value": "+300%"
+            },
+            "storageReduction": {
+              "label": "ストレージ削減",
+              "value": "40%"
+            },
+            "downtime": {
+              "label": "ダウンタイム",
+              "value": "ゼロ"
+            }
+          }
+        }
+      },
+      "tools": {
+        "title": "AI駆動ツール",
+        "llmCodeAnalyzer": {
+          "name": "LLMコードアナライザー",
+          "description": "GPT-4駆動のコード理解",
+          "features": [
+            "セマンティック分析",
+            "意図抽出",
+            "パターン認識"
+          ]
+        },
+        "astProcessor": {
+          "name": "ASTプロセッサー",
+          "description": "抽象構文木の操作",
+          "features": [
+            "構文解析木",
+            "コード変換",
+            "構文検証"
+          ]
+        },
+        "semanticPreserver": {
+          "name": "セマンティックプリザーバー",
+          "description": "ビジネスロジックの整合性を維持",
+          "features": [
+            "ロジック検証",
+            "動作テスト",
+            "リグレッション防止"
+          ]
+        },
+        "performanceOptimizer": {
+          "name": "パフォーマンスオプティマイザー",
+          "description": "自動パフォーマンス改善",
+          "features": [
+            "アルゴリズム最適化",
+            "メモリ管理",
+            "クエリチューニング"
+          ]
+        }
+      }
+    },
+    "patterns": {
+      "title": "マイグレーションパターン",
+      "subtitle": "実証済みのマイグレーション戦略",
+      "header": {
+        "title": "マイグレーションパターン",
+        "subtitle": "レガシーモダナイゼーション成功のための実証済みパターン"
+      },
+      "select": "マイグレーションパターンを選択",
+      "bestFor": "最適な用途：",
+      "approach": "マイグレーションアプローチ：",
+      "benefits": "主なメリット：",
+      "agents": "専門エージェント：",
+      "timeline": "タイムライン",
+      "riskLevel": "リスクレベル",
+      "complexity": "複雑度",
+      "riskLevels": {
+        "low": "低",
+        "medium": "中",
+        "high": "高",
+        "veryLow": "非常に低い"
+      },
+      "complexityLevels": {
+        "low": "低",
+        "medium": "中",
+        "high": "高"
+      },
+      "migrationPatterns": {
+        "stranglerFig": {
+          "name": "Strangler Figパターン",
+          "description": "レガシーシステムコンポーネントを段階的にモダンサービスに置換",
+          "bestFor": "複雑なビジネスロジックを持つ大規模モノリシックアプリケーション",
+          "approach": [
+            "レガシーシステム内のモジュール境界を特定",
+            "レガシーと並行して新サービスを作成",
+            "段階的にトラフィックを新サービスにルーティング",
+            "準備ができたらレガシーコンポーネントを廃止"
+          ],
+          "benefits": [
+            "ゼロダウンタイムマイグレーション",
+            "段階的リスク管理",
+            "各ステップでのロールバック機能",
+            "継続的な価値提供"
+          ],
+          "agents": {
+            "boundaryIdentifier": {
+              "name": "境界識別エージェント",
+              "role": "自然なサービス境界を検出"
+            },
+            "trafficRouter": {
+              "name": "トラフィックルーターエージェント",
+              "role": "段階的なトラフィック移行を管理"
+            },
+            "validation": {
+              "name": "検証エージェント",
+              "role": "機能の同等性を保証"
+            },
+            "decommission": {
+              "name": "廃止エージェント",
+              "role": "レガシーコンポーネントを安全に削除"
+            }
+          },
+          "timeline": "6〜18ヶ月",
+          "riskLevel": "低",
+          "complexity": "中"
+        },
+        "bigBang": {
+          "name": "ビッグバンマイグレーション",
+          "description": "単一の協調的取り組みでシステムを完全置換",
+          "bestFor": "明確な境界を持つ小〜中規模システム",
+          "approach": [
+            "完全な分析と計画フェーズ",
+            "並行して新システム全体を構築",
+            "包括的なテストと検証",
+            "新システムへの一括切り替え"
+          ],
+          "benefits": [
+            "全体的に高速なマイグレーション",
+            "最初からクリーンなアーキテクチャ",
+            "ハイブリッド状態管理が不要",
+            "長期的な複雑度の低減"
+          ],
+          "agents": {
+            "fullSystemAnalyzer": {
+              "name": "フルシステムアナライザー",
+              "role": "システム全体の理解"
+            },
+            "parallelBuilder": {
+              "name": "並列ビルダーエージェント",
+              "role": "新システムを構築"
+            },
+            "cutoverOrchestrator": {
+              "name": "カットオーバーオーケストレーター",
+              "role": "移行を管理"
+            },
+            "rollbackManager": {
+              "name": "ロールバックマネージャー",
+              "role": "障害シナリオを処理"
+            }
+          },
+          "timeline": "3〜6ヶ月",
+          "riskLevel": "高",
+          "complexity": "低"
+        },
+        "parallelRun": {
+          "name": "並行稼働パターン",
+          "description": "検証のために旧システムと新システムを同時稼働",
+          "bestFor": "データ損失ゼロが必要なミッションクリティカルシステム",
+          "approach": [
+            "レガシーと並行して新システムをデプロイ",
+            "両システムにすべてのトランザクションを複製",
+            "検証のためにアウトプットを比較",
+            "信頼度が高まった後にプライマリシステムを切り替え"
+          ],
+          "benefits": [
+            "切り替え前の100%検証",
+            "データ損失リスクゼロ",
+            "パフォーマンス比較",
+            "段階的なチームトレーニング"
+          ],
+          "agents": {
+            "transactionDuplicator": {
+              "name": "トランザクション複製エージェント",
+              "role": "すべての操作をコピー"
+            },
+            "outputComparator": {
+              "name": "アウトプット比較エージェント",
+              "role": "結果の一致を検証"
+            },
+            "discrepancyResolver": {
+              "name": "不一致解決エージェント",
+              "role": "不一致を処理"
+            },
+            "switchoverAgent": {
+              "name": "切替エージェント",
+              "role": "最終移行を管理"
+            }
+          },
+          "timeline": "4〜8ヶ月",
+          "riskLevel": "非常に低い",
+          "complexity": "高"
+        },
+        "databaseFirst": {
+          "name": "データベースファーストマイグレーション",
+          "description": "アプリケーション変換前にデータレイヤーをモダナイズ",
+          "bestFor": "複雑なスキーマを持つデータ中心アプリケーション",
+          "approach": [
+            "モダンデータベースプラットフォームに移行",
+            "データ抽象化レイヤーを実装",
+            "アプリケーションロジックを段階的にモダナイズ",
+            "新データベース機能に最適化"
+          ],
+          "benefits": [
+            "即座のパフォーマンス向上",
+            "アプリケーションマイグレーションの簡素化",
+            "データガバナンスの改善",
+            "クラウド対応データプラットフォーム"
+          ],
+          "agents": {
+            "schemaMigration": {
+              "name": "スキーママイグレーションエージェント",
+              "role": "データベーススキーマを変換"
+            },
+            "dataSync": {
+              "name": "データ同期エージェント",
+              "role": "データ整合性を維持"
+            },
+            "queryOptimizer": {
+              "name": "クエリオプティマイザー",
+              "role": "クエリを書き換え最適化"
+            },
+            "performanceMonitor": {
+              "name": "パフォーマンスモニター",
+              "role": "マイグレーションの影響を追跡"
+            }
+          },
+          "timeline": "3〜9ヶ月",
+          "riskLevel": "中",
+          "complexity": "中"
+        },
+        "hybridBridge": {
+          "name": "ハイブリッドブリッジパターン",
+          "description": "旧システムと新システム間の統合レイヤーを作成",
+          "bestFor": "広範なサードパーティ統合を持つシステム",
+          "approach": [
+            "APIブリッジレイヤーを構築",
+            "ブリッジの背後でコンポーネントを移行",
+            "後方互換性を維持",
+            "レガシーAPIを段階的に廃止"
+          ],
+          "benefits": [
+            "統合の中断なし",
+            "柔軟なマイグレーションスケジュール",
+            "APIモダナイゼーション",
+            "パートナーシステムとの互換性"
+          ],
+          "agents": {
+            "apiBridgeBuilder": {
+              "name": "APIブリッジビルダー",
+              "role": "互換性レイヤーを作成"
+            },
+            "protocolTranslator": {
+              "name": "プロトコルトランスレーター",
+              "role": "フォーマット変換を処理"
+            },
+            "integrationMonitor": {
+              "name": "統合モニター",
+              "role": "API使用状況を追跡"
+            },
+            "deprecationManager": {
+              "name": "廃止マネージャー",
+              "role": "APIライフサイクルを管理"
+            }
+          },
+          "timeline": "6〜12ヶ月",
+          "riskLevel": "低",
+          "complexity": "高"
+        }
+      },
+      "comparison": {
+        "title": "パターン比較マトリクス",
+        "factor": "要因",
+        "factors": {
+          "migrationSpeed": "マイグレーション速度",
+          "riskLevel": "リスクレベル",
+          "costEfficiency": "コスト効率",
+          "complexity": "複雑度"
+        }
+      },
+      "implementationProcess": {
+        "title": "パターン実装プロセス",
+        "stepLabel": "ステップ",
+        "steps": {
+          "patternSelection": {
+            "title": "パターン選択",
+            "description": "AIエージェントがシステムを分析し最適なパターンを推奨",
+            "duration": "1週間"
+          },
+          "architectureDesign": {
+            "title": "アーキテクチャ設計",
+            "description": "選択されたパターンに基づきターゲットアーキテクチャを設計",
+            "duration": "2〜3週間"
+          },
+          "agentConfiguration": {
+            "title": "エージェント設定",
+            "description": "専門マイグレーションエージェントを設定しトレーニング",
+            "duration": "1〜2週間"
+          },
+          "pilotMigration": {
+            "title": "パイロットマイグレーション",
+            "description": "検証のためにパイロットコンポーネントでパターンを実行",
+            "duration": "2〜4週間"
+          },
+          "fullExecution": {
+            "title": "本格実行",
+            "description": "システム全体にパターンを展開",
+            "duration": "3〜12ヶ月"
+          }
+        }
+      }
+    },
+    "successStories": {
+      "title": "成功事例",
+      "subtitle": "ケーススタディと成果",
+      "header": {
+        "title": "成功事例",
+        "subtitle": "ASIMOVによる実際の変革事例"
+      },
+      "platformMetrics": "プラットフォーム影響指標",
+      "featured": "注目の成功事例",
+      "challenge": "課題",
+      "solution": "ソリューション",
+      "results": "結果",
+      "timeToMarket": "市場投入までの時間",
+      "costSavings": "コスト削減",
+      "performance": "パフォーマンス",
+      "availability": "可用性",
+      "additionalBenefits": "追加のメリット：",
+      "industryDistribution": "業界分布",
+      "projectsByIndustry": "業界別プロジェクト",
+      "whySucceeds": "ASIMOVが成功する理由",
+      "projects": "プロジェクト",
+      "aggregateMetrics": {
+        "totalProjects": {
+          "value": "500+",
+          "label": "総プロジェクト数"
+        },
+        "averageTimeSaved": {
+          "value": "70%",
+          "label": "平均時間削減"
+        },
+        "totalCostSavings": {
+          "value": "$2B+",
+          "label": "総コスト削減"
+        },
+        "successRate": {
+          "value": "98%",
+          "label": "成功率"
+        },
+        "linesOfCodeMigrated": {
+          "value": "500M+",
+          "label": "移行コード行数"
+        },
+        "averageROI": {
+          "value": "450%",
+          "label": "平均ROI"
+        }
+      },
+      "stories": {
+        "financial": {
+          "client": "グローバル金融機関",
+          "industry": "銀行＆金融",
+          "project": "コアバンキングシステムモダナイゼーション",
+          "challengeDescription": "1500万行のCOBOLコードを持つ40年前のメインフレームシステム",
+          "challengeDetails": [
+            "毎日3000以上のバッチジョブが稼働",
+            "200以上のダウンストリームシステムとの統合",
+            "24時間365日の可用性要件",
+            "1日あたり50億ドルの取引量"
+          ],
+          "solutionApproach": "AI駆動変換によるStrangler Figパターン",
+          "solutionAgents": [
+            "COBOL分析エージェント - 1500万行のコードを解析",
+            "依存関係マッパー - 5000以上の依存関係を特定",
+            "Javaジェネレーター - モダンmicroservicesを作成",
+            "テスト自動化エージェント - 50Kのテストケースを生成"
+          ],
+          "resultsTimeToMarket": "18ヶ月（従来の5年と比較）",
+          "resultsCostSavings": "$12M（60%削減）",
+          "resultsPerformance": "トランザクション速度が10倍向上",
+          "resultsAvailability": "稼働率99.99%を維持",
+          "resultsBenefits": [
+            "クラウドネイティブアーキテクチャを実現",
+            "DevOpsプラクティスを導入",
+            "APIファーストアプローチで新チャネルを実現",
+            "技術的負債を80%削減"
+          ],
+          "testimonialQuote": "ASIMOVのAIエージェントは、私たちが想像していたよりも速くレガシーシステムを変革しました。自動コード変換とテストにより、数年分の手作業を節約できました。",
+          "testimonialAuthor": "CTO、グローバル金融機関"
+        },
+        "healthcare": {
+          "client": "国立医療機関",
+          "industry": "ヘルスケア",
+          "project": "患者管理システムマイグレーション",
+          "challengeDescription": "複雑な統合を持つレガシーVB6とPowerBuilderアプリケーション",
+          "challengeDetails": [
+            "500以上のフォームと画面",
+            "HIPAAコンプライアンス要件",
+            "50以上のシステムとのリアルタイム統合",
+            "10TBの患者データ"
+          ],
+          "solutionApproach": "ゼロリスクマイグレーションのための並行稼働パターン",
+          "solutionAgents": [
+            "VB6パーサーエージェント - レガシーコードベースを分析",
+            "コンプライアンスチェッカー - HIPAAコンプライアンスを確保",
+            "Reactジェネレーター - モダンUIを作成",
+            "データ移行エージェント - 患者データを安全に移行"
+          ],
+          "resultsTimeToMarket": "12ヶ月",
+          "resultsCostSavings": "$8M（55%削減）",
+          "resultsPerformance": "患者データ取得が5倍高速化",
+          "resultsAvailability": "マイグレーション中のダウンタイムゼロ",
+          "resultsBenefits": [
+            "モバイルファーストレスポンシブデザイン",
+            "リアルタイムアナリティクスダッシュボード",
+            "自動コンプライアンスレポート",
+            "セキュリティ機能の強化"
+          ],
+          "testimonialQuote": "並行稼働アプローチにより完全な信頼を得ました。切り替え前にすべてのトランザクションを検証し、患者ケアへの影響がないことを確認しました。",
+          "testimonialAuthor": "テクノロジー担当VP、医療機関"
+        },
+        "retail": {
+          "client": "Fortune 500小売企業",
+          "industry": "リテール＆Eコマース",
+          "project": "Eコマースプラットフォームモダナイゼーション",
+          "challengeDescription": "ピーク負荷に対応できないモノリシックJavaアプリケーション",
+          "challengeDetails": [
+            "200万行のJavaコード",
+            "ブラックフライデーのクラッシュで1000万ドル以上の損失",
+            "水平スケーリング不可",
+            "6ヶ月のリリースサイクル"
+          ],
+          "solutionApproach": "インテリジェント分解によるmicroservices抽出",
+          "solutionAgents": [
+            "ドメインアナライザー - サービス境界を特定",
+            "APIデザイナー - サービスコントラクトを作成",
+            "コンテナエージェント - コンテナ化を自動化",
+            "パフォーマンスオプティマイザー - スケール向けにチューニング"
+          ],
+          "resultsTimeToMarket": "9ヶ月",
+          "resultsCostSavings": "インフラコスト$6M削減",
+          "resultsPerformance": "スケーラビリティが200%向上",
+          "resultsAvailability": "ブラックフライデーの5倍のトラフィックに対応",
+          "resultsBenefits": [
+            "毎日のデプロイメントが可能に",
+            "ピーク時の自動スケーリング",
+            "A/Bテスト機能",
+            "AWSコストを40%削減"
+          ],
+          "testimonialQuote": "ASIMOVエージェントはモノリスを完璧に分解しました。月次リリースから毎日のデプロイメントに移行し、ついにブラックフライデーを克服しました。",
+          "testimonialAuthor": "チーフアーキテクト、Fortune 500小売企業"
+        },
+        "government": {
+          "client": "政府機関",
+          "industry": "公共セクター",
+          "project": "レガシーシステムクラウドマイグレーション",
+          "challengeDescription": "老朽化したインフラストラクチャ上で稼働する重要な市民サービス",
+          "challengeDetails": [
+            "複数のプログラミング言語（COBOL、C、Perl）",
+            "厳格なセキュリティとコンプライアンス要件",
+            "限られたドキュメント",
+            "5000万件の市民レコード"
+          ],
+          "solutionApproach": "段階的モダナイゼーションを伴うデータベースファーストマイグレーション",
+          "solutionAgents": [
+            "マルチ言語パーサー - 多様なコードベースを分析",
+            "セキュリティスキャナー - 脆弱性を特定",
+            "クラウドアーキテクトエージェント - AWSアーキテクチャを設計",
+            "ドキュメントジェネレーター - 欠けているドキュメントを作成"
+          ],
+          "resultsTimeToMarket": "15ヶ月",
+          "resultsCostSavings": "5年間で$15M削減",
+          "resultsPerformance": "レスポンスタイムが8倍向上",
+          "resultsAvailability": "稼働率99.95%を達成",
+          "resultsBenefits": [
+            "FedRAMPコンプライアンスを達成",
+            "ディザスタリカバリを実装",
+            "セルフサービスポータルを開設",
+            "市民からの苦情を70%削減"
+          ],
+          "testimonialQuote": "AIエージェントは、私たちのチーム以上に複雑なレガシーシステムを理解しました。ドキュメント生成だけで数ヶ月の作業を節約できました。",
+          "testimonialAuthor": "IT部門ディレクター、政府機関"
+        }
+      },
+      "industryBreakdown": {
+        "financialServices": {
+          "industry": "金融サービス",
+          "projects": 145
+        },
+        "healthcare": {
+          "industry": "ヘルスケア",
+          "projects": 95
+        },
+        "retail": {
+          "industry": "リテール",
+          "projects": 80
+        },
+        "government": {
+          "industry": "政府",
+          "projects": 70
+        },
+        "manufacturing": {
+          "industry": "製造業",
+          "projects": 60
+        },
+        "others": {
+          "industry": "その他",
+          "projects": 50
+        }
+      },
+      "whySucceedsReasons": {
+        "aiPowered": {
+          "title": "AI駆動の理解",
+          "description": "LLMがレガシーコードのセマンティクスを理解"
+        },
+        "incremental": {
+          "title": "段階的アプローチ",
+          "description": "リスク管理された段階的マイグレーション"
+        },
+        "automation": {
+          "title": "大規模な自動化",
+          "description": "手作業を70%削減"
+        },
+        "provenPatterns": {
+          "title": "実証済みパターン",
+          "description": "実戦で検証されたマイグレーション戦略"
+        }
+      }
+    }
+  },
+  "customerService": {
+    "title": "カスタマーサービスAI",
+    "subtitle": "自己修復ボットによる自律型サポート",
+    "overview": {
+      "badge": "自律型サポートソリューション",
+      "header": {
+        "title": "カスタマーサービス＆サポート",
+        "description": "自律型エージェントを搭載したGenAIエンジンを核とする自動ITサポートシステムで、インテリジェントでスケーラブル、コスト効率の高いカスタマーサービスを提供します。"
+      },
+      "benefits": {
+        "title": "マネージドサービスにおけるGen AIのメリット",
+        "improvement": "改善",
+        "reducedTickets": {
+          "title": "サポートチケットの削減",
+          "description": "人間のエージェントに流れるサポートチケット数の大幅な削減",
+          "metric": "60-80%"
+        },
+        "improvedProductivity": {
+          "title": "エージェント生産性の向上",
+          "description": "AI支援による平均対応時間の短縮",
+          "metric": "250%"
+        },
+        "processOptimization": {
+          "title": "ビジネスプロセス最適化",
+          "description": "継続的改善のためのデータ駆動型インサイト",
+          "metric": "リアルタイム"
+        },
+        "enhancedUx": {
+          "title": "ユーザーエクスペリエンスの向上",
+          "description": "即座の解決を提供するセルフサービス機能",
+          "metric": "24/7"
+        }
+      },
+      "pillars": {
+        "title": "ソリューションアーキテクチャ",
+        "aiServiceDesk": {
+          "title": "AI搭載サービスデスク",
+          "description": "会話型AIとインテリジェント仮想アシスタントにより、解決を自動化し、セルフサービスを強化し、即座のサポートを提供します。",
+          "capabilities": {
+            "nlu": "自然言語理解",
+            "multiChannel": "マルチチャネルサポート",
+            "ticketResolution": "チケット解決の自動化",
+            "contextAware": "コンテキストを意識した応答"
+          }
+        },
+        "proactiveProblem": {
+          "title": "プロアクティブな問題管理",
+          "description": "予測分析とAI駆動のインサイトにより、インシデントの予測と防止、容量の最適化、サービス可用性の確保を行います。",
+          "capabilities": {
+            "prediction": "インシデント予測",
+            "pattern": "パターン認識",
+            "capacity": "容量最適化",
+            "monitoring": "サービス可用性モニタリング"
+          }
+        },
+        "knowledgeMgmt": {
+          "title": "インテリジェントナレッジ管理",
+          "description": "動的ナレッジベースを作成し、コンテキストに応じた情報を提供し、ユーザーとITスタッフの両方がすぐにアクセスできる専門知識を提供します。",
+          "capabilities": {
+            "dynamicKb": "動的ナレッジベース",
+            "contextual": "コンテキストに応じた情報提供",
+            "selfLearning": "自己学習システム",
+            "expertCapture": "専門知識の取得"
+          }
+        },
+        "itOps": {
+          "title": "最適化されたIT運用",
+          "description": "ワークフローの合理化、コード修正の自動化、AI駆動の自動化とインサイトによる変更管理の強化を行います。",
+          "capabilities": {
+            "workflow": "ワークフロー自動化",
+            "codeRemediation": "コード修正",
+            "changeMgmt": "変更管理",
+            "processOpt": "プロセス最適化"
+          }
+        },
+        "visibility": {
+          "title": "可視性と制御の強化",
+          "description": "AIドリブンのアナリティクスとレポートにより、ITパフォーマンスのリアルタイムインサイト、SLA予測、リソース配分の最適化を実現します。",
+          "capabilities": {
+            "dashboards": "リアルタイムダッシュボード",
+            "slaPrediction": "SLA予測",
+            "resourceOpt": "リソース最適化",
+            "analytics": "パフォーマンスアナリティクス"
+          }
+        }
+      },
+      "keyMetrics": {
+        "availability": {
+          "label": "可用性",
+          "value": "24/7"
+        },
+        "languages": {
+          "label": "対応言語",
+          "value": "50+"
+        },
+        "costReduction": {
+          "label": "コスト削減",
+          "value": "65%"
+        },
+        "fcr": {
+          "label": "初回解決率",
+          "value": "78%"
+        }
+      },
+      "nav": {
+        "title": "ソリューションコンポーネントを探索",
+        "selfHealBot": {
+          "title": "Self Heal Bot",
+          "description": "セルフサービス機能による自律的解決"
+        },
+        "assistedHealBot": {
+          "title": "Assisted Heal Bot",
+          "description": "L1チーム向けAI支援サポート"
+        },
+        "optimizationHub": {
+          "title": "ビジネス最適化ハブ",
+          "description": "継続的改善のためのアナリティクスとインサイト"
+        },
+        "implementationPlan": {
+          "title": "導入計画",
+          "description": "段階的なデプロイメントアプローチ"
+        },
+        "learnMore": "詳しく見る"
+      },
+      "roi": {
+        "title": "期待されるビジネスインパクト",
+        "selfHealValue": "40% → 60%",
+        "selfHeal": "Q4までの自己修復解決率",
+        "traditionalValue": "80% → 20%",
+        "traditional": "従来型サポートの削減",
+        "selfFundingValue": "自己資金型",
+        "selfFunding": "コスト削減がAI拡大を資金化"
+      }
+    },
+    "selfHealBot": {
+      "title": "Self Heal Bot",
+      "subtitle": "自律的問題解決",
+      "badge": "自律的解決レイヤー",
+      "header": {
+        "title": "Self Heal Bot",
+        "description": "インテリジェントなセルフサービス機能と自然言語理解により、一般的な問題に対して即座の自律的解決を提供する最前線の防衛ラインです。"
+      },
+      "metrics": {
+        "autoResolution": "自動解決率",
+        "responseTime": "応答時間",
+        "languages": "対応言語",
+        "satisfaction": "ユーザー満足度"
+      },
+      "capabilities": {
+        "title": "コア機能",
+        "capabilitiesLabel": "機能",
+        "technologies": "テクノロジー",
+        "performance": "パフォーマンス",
+        "chatbot": {
+          "name": "セルフサービスチャットボット",
+          "description": "自律的な問題解決のためのインテリジェント会話型インターフェース",
+          "capabilities": {
+            "nlu": "95%の精度の自然言語理解",
+            "context": "コンテキストを意識した会話管理",
+            "multiTurn": "マルチターン対話サポート",
+            "intent": "意図分類とエンティティ抽出",
+            "dynamic": "動的レスポンス生成"
+          },
+          "metrics": {
+            "responseTime": "応答時間",
+            "responseTimeValue": "1秒未満",
+            "resolutionRate": "解決率",
+            "resolutionRateValue": "60%",
+            "userSatisfaction": "ユーザー満足度",
+            "userSatisfactionValue": "4.7/5"
+          }
+        },
+        "personalization": {
+          "name": "パーソナライズドエクスペリエンス",
+          "description": "ユーザーの履歴と好みに基づいたカスタマイズされたインタラクション",
+          "capabilities": {
+            "profileTracking": "ユーザープロファイルと履歴の追跡",
+            "preferenceLearning": "好みの学習と適応",
+            "roleBasedCustomization": "役割ベースのレスポンスカスタマイズ",
+            "contextRetention": "過去のインタラクションコンテキストの保持",
+            "personalizedRecs": "パーソナライズされたソリューション推奨"
+          },
+          "metrics": {
+            "personalizationAccuracy": "パーソナライゼーション精度",
+            "personalizationAccuracyValue": "92%",
+            "contextRetention": "コンテキスト保持率",
+            "contextRetentionValue": "100%",
+            "userEngagement": "ユーザーエンゲージメント",
+            "userEngagementValue": "+45%"
+          }
+        },
+        "automation": {
+          "name": "自動コミュニケーション",
+          "description": "プロアクティブかつ自動化された顧客エンゲージメント",
+          "capabilities": {
+            "ticketCreation": "チケットの自動作成とルーティング",
+            "proactiveNotification": "プロアクティブな問題通知",
+            "followUp": "フォローアップコミュニケーションのスケジューリング",
+            "statusUpdate": "ステータス更新の自動化",
+            "resolution": "解決確認ワークフロー"
+          },
+          "metrics": {
+            "automationRate": "自動化率",
+            "automationRateValue": "85%",
+            "timeSaved": "時間削減",
+            "timeSavedValue": "70%",
+            "errorReduction": "エラー削減",
+            "errorReductionValue": "95%"
+          }
+        },
+        "multilingual": {
+          "name": "多言語サポート",
+          "description": "リアルタイム翻訳による50以上の言語でのグローバルサポート",
+          "capabilities": {
+            "langDetection": "リアルタイム言語検出",
+            "neuralTranslation": "ニューラル機械翻訳",
+            "culturalContext": "文化的コンテキストの適応",
+            "multilingualKb": "多言語ナレッジベース",
+            "crossLangEntity": "言語横断エンティティ認識"
+          },
+          "metrics": {
+            "languagesSupported": "対応言語数",
+            "languagesSupportedValue": "50+",
+            "translationAccuracy": "翻訳精度",
+            "translationAccuracyValue": "98%",
+            "globalCoverage": "グローバルカバレッジ",
+            "globalCoverageValue": "195カ国"
+          }
+        }
+      },
+      "useCases": {
+        "title": "一般的なユースケース",
+        "resolution": "解決：",
+        "satisfaction": "満足度：",
+        "passwordReset": {
+          "title": "パスワードリセット",
+          "channel": "Webチャット",
+          "steps": {
+            "step1": "ユーザーがパスワードリセットをリクエストしてチャットを開始",
+            "step2": "ボットがセキュリティ質問で本人確認",
+            "step3": "パスワードリセットリンクの自動生成",
+            "step4": "確認とフォローアップ手順"
+          },
+          "resolution": "完全自動 - 45秒",
+          "satisfaction": "5/5"
+        },
+        "accountUpdate": {
+          "title": "アカウント情報の更新",
+          "channel": "モバイルアプリ",
+          "steps": {
+            "step1": "ユーザーがアカウント情報の変更をリクエスト",
+            "step2": "ボットがリクエストと権限を検証",
+            "step3": "更新プロセスをガイド",
+            "step4": "変更を確認し通知を送信"
+          },
+          "resolution": "完全自動 - 2分",
+          "satisfaction": "4.8/5"
+        },
+        "serviceStatus": {
+          "title": "サービスステータス照会",
+          "channel": "音声アシスタント",
+          "steps": {
+            "step1": "問い合わせの音声テキスト変換",
+            "step2": "リアルタイムサービスステータスチェック",
+            "step3": "自然言語レスポンスの生成",
+            "step4": "メールによる詳細レポートのオプション"
+          },
+          "resolution": "完全自動 - 30秒",
+          "satisfaction": "4.9/5"
+        }
+      },
+      "channels": {
+        "title": "オムニチャネルサポート",
+        "status": "ステータス：",
+        "ofVolume": "のボリューム",
+        "webChat": {
+          "name": "Webチャット",
+          "status": "アクティブ",
+          "volume": "45%"
+        },
+        "mobileApp": {
+          "name": "モバイルアプリ",
+          "status": "アクティブ",
+          "volume": "30%"
+        },
+        "email": {
+          "name": "メール",
+          "status": "アクティブ",
+          "volume": "15%"
+        },
+        "voice": {
+          "name": "音声",
+          "status": "アクティブ",
+          "volume": "10%"
+        }
+      },
+      "architecture": {
+        "title": "Self Heal Botアーキテクチャ",
+        "inputLayer": {
+          "title": "入力レイヤー",
+          "description": "音声、チャット、メール、モバイルアプリ"
+        },
+        "nlpProcessing": {
+          "title": "NLP処理",
+          "description": "意図認識、エンティティ抽出、コンテキスト管理"
+        },
+        "automatedResolution": {
+          "title": "自動解決",
+          "description": "ナレッジベース、API呼び出し、ワークフロー実行"
+        },
+        "responseDelivery": {
+          "title": "レスポンス配信",
+          "description": "パーソナライズドレスポンス、多言語サポート、フォローアップアクション"
+        }
+      }
+    },
+    "assistedHealBot": {
+      "title": "Assisted Heal Bot",
+      "subtitle": "人間とAIの協調サポート",
+      "badge": "エージェント拡張レイヤー",
+      "header": {
+        "title": "Assisted Heal Bot",
+        "description": "L1サポートエージェント向けのAI駆動拡張ツールで、リアルタイム支援、自動ドキュメント作成、インテリジェントルーティングにより、生産性と品質を大幅に向上させます。"
+      },
+      "metrics": {
+        "productivity": "エージェント生産性",
+        "handleTime": "対応時間",
+        "fcr": "初回解決率",
+        "csat": "CSATスコア"
+      },
+      "agents": {
+        "title": "AIエージェントコンポーネント",
+        "coreCapabilities": "コア機能",
+        "techStack": "テクノロジースタック",
+        "impactMetrics": "影響指標",
+        "conversational": {
+          "name": "会話型アシスタント",
+          "role": "L1エージェント拡張",
+          "capabilities": {
+            "responseSuggestions": "リアルタイムレスポンス提案",
+            "conversationGuidance": "コンテキストを意識した会話ガイダンス",
+            "sentimentAlerts": "センチメント分析とエスカレーションアラート",
+            "kbIntegration": "ナレッジベース統合",
+            "multiChannel": "マルチチャネル会話管理"
+          },
+          "metrics": {
+            "responseQuality": "レスポンス品質",
+            "responseQualityValue": "+85%",
+            "agentEfficiency": "エージェント効率",
+            "agentEfficiencyValue": "+150%",
+            "escalationReduction": "エスカレーション削減",
+            "escalationReductionValue": "40%"
+          }
+        },
+        "summarizer": {
+          "name": "通話サマライザー",
+          "role": "インタラクション文書化",
+          "capabilities": {
+            "transcription": "通話の自動書き起こし",
+            "keyPoints": "要点の抽出",
+            "actionItems": "アクションアイテムの特定",
+            "sentimentTracking": "センチメント追跡",
+            "followUpRecs": "フォローアップ推奨"
+          },
+          "metrics": {
+            "summaryAccuracy": "要約精度",
+            "summaryAccuracyValue": "95%",
+            "timeSaved": "時間削減",
+            "timeSavedValue": "10分/通話",
+            "documentationQuality": "ドキュメント品質",
+            "documentationQualityValue": "+90%"
+          }
+        },
+        "creator": {
+          "name": "チケットクリエーター",
+          "role": "チケット管理の自動化",
+          "capabilities": {
+            "autoGeneration": "チケットの自動生成",
+            "priorityClassification": "優先度分類",
+            "categoryAssignment": "カテゴリ割り当て",
+            "slaCalculation": "SLA計算",
+            "routingOptimization": "ルーティング最適化"
+          },
+          "metrics": {
+            "creationSpeed": "作成速度",
+            "creationSpeedValue": "5秒",
+            "accuracy": "精度",
+            "accuracyValue": "98%",
+            "manualWorkReduction": "手作業削減",
+            "manualWorkReductionValue": "75%"
+          }
+        },
+        "triaging": {
+          "name": "チケットトリアージ",
+          "role": "インテリジェントルーティングと優先度付け",
+          "capabilities": {
+            "skillBasedRouting": "スキルベースルーティング",
+            "urgencyDetection": "緊急度検出",
+            "workloadBalancing": "ワークロードバランシング",
+            "expertiseMatching": "専門知識マッチング",
+            "queueOptimization": "キュー最適化"
+          },
+          "metrics": {
+            "routingAccuracy": "ルーティング精度",
+            "routingAccuracyValue": "94%",
+            "resolutionTime": "解決時間",
+            "resolutionTimeValue": "-35%",
+            "fcr": "初回解決率",
+            "fcrValue": "+22%"
+          }
+        },
+        "diagnostics": {
+          "name": "チケット診断",
+          "role": "根本原因分析",
+          "capabilities": {
+            "automatedTroubleshooting": "自動トラブルシューティング",
+            "logAnalysis": "ログ分析",
+            "patternRecognition": "パターン認識",
+            "similarIssue": "類似問題検出",
+            "resolutionPrediction": "解決予測"
+          },
+          "metrics": {
+            "diagnosticAccuracy": "診断精度",
+            "diagnosticAccuracyValue": "89%",
+            "timeToDiagnosis": "診断までの時間",
+            "timeToDiagnosisValue": "-60%",
+            "resolutionRate": "解決率",
+            "resolutionRateValue": "+45%"
+          }
+        },
+        "recommender": {
+          "name": "解決推奨エンジン",
+          "role": "ソリューションガイダンス",
+          "capabilities": {
+            "solutionRanking": "ソリューション推奨ランキング",
+            "stepByStep": "ステップバイステップガイダンス",
+            "alternativeSolutions": "代替ソリューション",
+            "successScoring": "成功確率スコアリング",
+            "historicalAnalysis": "過去の解決分析"
+          },
+          "metrics": {
+            "recommendationAccuracy": "推奨精度",
+            "recommendationAccuracyValue": "91%",
+            "resolutionSuccess": "解決成功率",
+            "resolutionSuccessValue": "+55%",
+            "agentConfidence": "エージェントの自信度",
+            "agentConfidenceValue": "+70%"
+          }
+        }
+      },
+      "workflows": {
+        "title": "インテリジェントワークフローオーケストレーション",
+        "priority": "優先度",
+        "outcome": "結果",
+        "timeSaved": "時間削減",
+        "complexTechnical": {
+          "title": "複雑な技術的問題",
+          "severity": "高",
+          "steps": {
+            "step1": "L1エージェントの初期トラブルシューティングを支援",
+            "step2": "自動根本原因分析を実行",
+            "step3": "トップ3の解決戦略を提案",
+            "step4": "調査結果を含む詳細チケットを作成",
+            "step5": "インタラクションと解決手順を文書化"
+          },
+          "outcome": "L2エスカレーションなしで問題を解決",
+          "timeReduction": "45%"
+        },
+        "highVolume": {
+          "title": "高ボリューム期間",
+          "severity": "中",
+          "steps": {
+            "step1": "着信リクエストをインテリジェントにルーティング",
+            "step2": "リアルタイムのエージェント支援を提供",
+            "step3": "追跡用のチケットを自動生成",
+            "step4": "レビュー用のバッチサマリーを作成"
+          },
+          "outcome": "遅延なしで通常の3倍のボリュームを処理",
+          "timeReduction": "60%"
+        }
+      },
+      "performance": {
+        "title": "パフォーマンス影響分析",
+        "metric": "指標",
+        "beforeAI": "AI導入前",
+        "withBot": "Assisted Bot導入後",
+        "improvement": "改善",
+        "data": {
+          "agentProductivity": {
+            "label": "エージェント生産性",
+            "before": "20チケット/日",
+            "after": "50チケット/日",
+            "improvement": "+150%"
+          },
+          "averageHandleTime": {
+            "label": "平均対応時間",
+            "before": "15分",
+            "after": "6分",
+            "improvement": "-60%"
+          },
+          "fcr": {
+            "label": "初回解決率",
+            "before": "45%",
+            "after": "67%",
+            "improvement": "+49%"
+          },
+          "csat": {
+            "label": "顧客満足度",
+            "before": "3.8/5",
+            "after": "4.6/5",
+            "improvement": "+21%"
+          }
+        }
+      },
+      "integration": {
+        "title": "シームレスな統合",
+        "itsm": "ITSMプラットフォーム",
+        "communication": "コミュニケーションチャネル",
+        "knowledge": "ナレッジシステム",
+        "itsmItems": [
+          "ServiceNow",
+          "Jira Service Management",
+          "Zendesk",
+          "Freshservice"
+        ],
+        "communicationItems": [
+          "Microsoft Teams",
+          "Slack",
+          "メールシステム",
+          "音声/VoIP"
+        ],
+        "knowledgeItems": [
+          "Confluence",
+          "SharePoint",
+          "カスタムナレッジベース",
+          "ドキュメントリポジトリ"
+        ]
+      }
+    },
+    "optimizationHub": {
+      "title": "ビジネス最適化ハブ",
+      "subtitle": "AI駆動のプロセス最適化",
+      "badge": "インテリジェンス＆最適化レイヤー",
+      "header": {
+        "title": "ビジネス最適化ハブ",
+        "description": "サポートデータを実用的なビジネスインサイトに変換するAI駆動アナリティクスエンジンで、継続的な最適化とプロアクティブなサービス改善を実現します。"
+      },
+      "metrics": {
+        "weeklyInsights": "週間インサイト",
+        "processAutomation": "プロセス自動化",
+        "efficiencyGain": "効率改善",
+        "predictionAccuracy": "予測精度"
+      },
+      "analytics": {
+        "title": "アナリティクス＆インテリジェンスコンポーネント",
+        "capabilities": "機能",
+        "currentInsights": "現在のインサイト",
+        "trend": {
+          "name": "トレンド分析",
+          "description": "サポートチケットと顧客インタラクションのパターンとトレンドを特定",
+          "capabilities": {
+            "volumeForecasting": "チケットボリューム予測",
+            "seasonalPattern": "季節パターン検出",
+            "categoryTrending": "問題カテゴリのトレンド",
+            "peakTime": "ピーク時間の特定",
+            "resolutionPatterns": "解決時間パターン"
+          },
+          "insights": {
+            "weeklyPattern": {
+              "metric": "週間パターン",
+              "value": "月曜日が35%のボリュームでピーク"
+            },
+            "topIssue": {
+              "metric": "トップ問題トレンド",
+              "value": "パスワードリセットが25%増加"
+            },
+            "seasonalSpike": {
+              "metric": "季節的スパイク",
+              "value": "Q4に40%増加"
+            }
+          }
+        },
+        "sentiment": {
+          "name": "センチメント分析",
+          "description": "顧客の感情と満足度トレンドをモニタリング・分析",
+          "capabilities": {
+            "realTimeTracking": "リアルタイムセンチメント追跡",
+            "emotionDetection": "会話中の感情検出",
+            "satisfactionTrend": "満足度トレンド分析",
+            "frustrationPoints": "フラストレーションポイントの特定",
+            "agentCorrelation": "エージェントパフォーマンスとの相関"
+          },
+          "insights": {
+            "overallSentiment": {
+              "metric": "全体的センチメント",
+              "value": "72%がポジティブ"
+            },
+            "frustrationPoints": {
+              "metric": "フラストレーションポイント",
+              "value": "3つの主要領域を特定"
+            },
+            "csatCorrelation": {
+              "metric": "CSATとの相関",
+              "value": "解決時間と0.85"
+            }
+          }
+        },
+        "process": {
+          "name": "プロセスアナライザー",
+          "description": "サポートプロセスのワークフロー最適化とボトルネック特定",
+          "capabilities": {
+            "bottleneck": "ワークフローボトルネックの検出",
+            "processMining": "プロセスマイニングと最適化",
+            "automationOpportunity": "自動化機会の特定",
+            "slaCompliance": "SLAコンプライアンス追跡",
+            "resourceUtilization": "リソース活用分析"
+          },
+          "insights": {
+            "mainBottleneck": {
+              "metric": "主なボトルネック",
+              "value": "L2エスカレーションキュー"
+            },
+            "automationPotential": {
+              "metric": "自動化ポテンシャル",
+              "value": "チケットの45%"
+            },
+            "slaCompliance": {
+              "metric": "SLAコンプライアンス",
+              "value": "94%期限内"
+            }
+          }
+        },
+        "proactive": {
+          "name": "プロアクティブコミュニケーション",
+          "description": "問題を予測し顧客にプロアクティブに連絡",
+          "capabilities": {
+            "issuePrediction": "問題予測モデリング",
+            "alertGeneration": "プロアクティブアラート生成",
+            "impactAssessment": "顧客影響評価",
+            "timingOptimization": "コミュニケーションタイミング最適化",
+            "preventiveAction": "予防措置の推奨"
+          },
+          "insights": {
+            "issuesPrevented": {
+              "metric": "防止された問題",
+              "value": "2,400件/月"
+            },
+            "customerReach": {
+              "metric": "顧客リーチ",
+              "value": "影響前に85%"
+            },
+            "ticketReduction": {
+              "metric": "チケット削減",
+              "value": "アラート済み問題で32%"
+            }
+          }
+        },
+        "training": {
+          "name": "トレーニング＆ナレッジキュレーター",
+          "description": "知識ギャップを特定しターゲットトレーニングプログラムを作成",
+          "capabilities": {
+            "gapAnalysis": "知識ギャップ分析",
+            "trainingNeed": "トレーニングニーズの特定",
+            "contentRec": "コンテンツ推奨",
+            "skillAssessment": "エージェントスキル評価",
+            "learningPath": "学習パスの最適化"
+          },
+          "insights": {
+            "knowledgeGaps": {
+              "metric": "知識ギャップ",
+              "value": "12の領域を特定"
+            },
+            "trainingImpact": {
+              "metric": "トレーニング効果",
+              "value": "解決率+28%"
+            },
+            "contentCreated": {
+              "metric": "作成コンテンツ",
+              "value": "45件の新記事/月"
+            }
+          }
+        },
+        "advancedAnalytics": {
+          "name": "高度なアナリティクス",
+          "description": "予測モデリングとAIインサイトによるディープダイブアナリティクス",
+          "capabilities": {
+            "predictiveModeling": "予測モデリング",
+            "rootCause": "根本原因分析",
+            "journeyMapping": "カスタマージャーニーマッピング",
+            "agentPerformance": "エージェントパフォーマンスアナリティクス",
+            "costBenefit": "費用対効果分析"
+          },
+          "insights": {
+            "costSavings": {
+              "metric": "コスト削減",
+              "value": "年間$2.5M"
+            },
+            "predictionAccuracy": {
+              "metric": "予測精度",
+              "value": "ボリューム予測89%"
+            },
+            "roi": {
+              "metric": "ROI",
+              "value": "6ヶ月で340%"
+            }
+          }
+        }
+      },
+      "dashboard": {
+        "title": "リアルタイム最適化ダッシュボード",
+        "target": "ターゲット：",
+        "categories": {
+          "operationalEfficiency": {
+            "title": "運用効率",
+            "ticketVolume": "チケットボリューム削減",
+            "aht": "平均対応時間",
+            "fcr": "初回解決率",
+            "automationRate": "自動化率"
+          },
+          "customerExperience": {
+            "title": "顧客体験",
+            "csat": "顧客満足度",
+            "nps": "ネットプロモータースコア",
+            "ces": "顧客努力スコア",
+            "resolutionQuality": "解決品質"
+          },
+          "businessImpact": {
+            "title": "ビジネスインパクト",
+            "costPerContact": "コンタクトあたりのコスト",
+            "agentProductivity": "エージェント生産性",
+            "revenueProtection": "収益保護",
+            "churnPrevention": "解約防止"
+          }
+        }
+      },
+      "feedbackLoop": {
+        "title": "継続的改善フィードバックループ",
+        "stages": {
+          "dataCollection": {
+            "stage": "データ収集",
+            "description": "全チャネルにわたるインタラクションデータの継続的収集",
+            "volume": "100K+インタラクション/日"
+          },
+          "analysisInsights": {
+            "stage": "分析＆インサイト",
+            "description": "パターンと機会を特定するAI駆動分析",
+            "volume": "500+インサイト/週"
+          },
+          "recommendations": {
+            "stage": "推奨の生成",
+            "description": "プロセス改善のための実用的な推奨",
+            "volume": "50+推奨/週"
+          },
+          "implementation": {
+            "stage": "実装",
+            "description": "改善の自動および手動実装",
+            "volume": "20+改善/週"
+          },
+          "impactMeasurement": {
+            "stage": "影響測定",
+            "description": "実施された変更の影響を追跡・測定",
+            "volume": "リアルタイムモニタリング"
+          }
+        }
+      },
+      "impact": {
+        "title": "予測されるビジネスインパクト",
+        "efficiencyTimeline": "効率改善タイムライン",
+        "costModel": "コスト最適化モデル",
+        "currentCost": "現在のコスト",
+        "projectedSavings": "予測される削減額",
+        "futureCost": "将来のコスト",
+        "selfFunding": "自己資金型モデル：削減額をAI拡大に再投資",
+        "q1": {
+          "label": "Q1：自己修復の導入",
+          "value": "効率20%"
+        },
+        "q2": {
+          "label": "Q2：プロセス最適化",
+          "value": "効率35%"
+        },
+        "q3": {
+          "label": "Q3：完全自動化",
+          "value": "効率50%"
+        },
+        "q4": {
+          "label": "Q4：AI最適化",
+          "value": "効率65%"
+        },
+        "currentCostValue": "$5.2M/年",
+        "projectedSavingsValue": "-$2.5M/年",
+        "futureCostValue": "$2.7M/年"
+      }
+    },
+    "implementationRoadmap": {
+      "title": "導入ロードマップ",
+      "subtitle": "デプロイメント計画と実行",
+      "badge": "デプロイメント戦略",
+      "header": {
+        "title": "導入ロードマップ",
+        "description": "最小限の混乱と最大限の採用を確保する段階的アプローチによる、自律型カスタマーサービスソリューションを展開するための16週間の構造化された導入計画です。"
+      },
+      "timeline": {
+        "title": "プロジェクトタイムライン",
+        "week": "週",
+        "milestones": {
+          "projectKickoff": "プロジェクトキックオフ",
+          "requirementsComplete": "要件定義完了",
+          "integrationStart": "統合開始",
+          "coreSystemsConnected": "コアシステム接続",
+          "pilotLaunch": "パイロット開始",
+          "pilotValidation": "パイロット検証",
+          "productionReady": "本番準備完了",
+          "fullDeployment": "本格展開"
+        }
+      },
+      "phases": {
+        "title": "導入フェーズ",
+        "duration": "期間：",
+        "objectives": "主要目標",
+        "deliverables": "成果物",
+        "activities": "主要アクティビティ",
+        "phase1": {
+          "name": "フェーズ1：要件と計画",
+          "duration": "2〜3週間",
+          "objectives": {
+            "obj1": "顧客ニーズとペインポイントの理解",
+            "obj2": "統合要件の特定",
+            "obj3": "カスタマイズ範囲の定義",
+            "obj4": "セキュリティとコンプライアンスニーズの評価",
+            "obj5": "デプロイメント戦略の確定"
+          },
+          "deliverables": {
+            "del1": "要件ドキュメント",
+            "del2": "統合アーキテクチャ",
+            "del3": "セキュリティ評価",
+            "del4": "プロジェクトタイムライン",
+            "del5": "成功指標の定義"
+          },
+          "activities": {
+            "act1": {
+              "task": "ステークホルダーインタビュー",
+              "owner": "プロジェクトマネージャー",
+              "duration": "3日"
+            },
+            "act2": {
+              "task": "システム評価",
+              "owner": "テクニカルアーキテクト",
+              "duration": "5日"
+            },
+            "act3": {
+              "task": "プロセスマッピング",
+              "owner": "ビジネスアナリスト",
+              "duration": "4日"
+            },
+            "act4": {
+              "task": "コンプライアンスレビュー",
+              "owner": "セキュリティチーム",
+              "duration": "2日"
+            }
+          }
+        },
+        "phase2": {
+          "name": "フェーズ2：設定と統合",
+          "duration": "3〜4週間",
+          "objectives": {
+            "obj1": "AI仮想アシスタントの展開",
+            "obj2": "ITSMプラットフォームとの統合",
+            "obj3": "ナレッジベースのカスタマイズ",
+            "obj4": "自動化ルールの設定",
+            "obj5": "マルチチャネルサポートの設定"
+          },
+          "deliverables": {
+            "del1": "設定済みAIエージェント",
+            "del2": "システム統合",
+            "del3": "ナレッジベースインポート",
+            "del4": "自動化ワークフロー",
+            "del5": "チャネル設定"
+          },
+          "activities": {
+            "act1": {
+              "task": "AIエージェントデプロイメント",
+              "owner": "AIエンジニア",
+              "duration": "5日"
+            },
+            "act2": {
+              "task": "ITSM統合",
+              "owner": "統合チーム",
+              "duration": "7日"
+            },
+            "act3": {
+              "task": "ナレッジベース設定",
+              "owner": "コンテンツチーム",
+              "duration": "5日"
+            },
+            "act4": {
+              "task": "ワークフロー自動化",
+              "owner": "プロセスエンジニア",
+              "duration": "4日"
+            }
+          }
+        },
+        "phase3": {
+          "name": "フェーズ3：パイロット開発",
+          "duration": "4〜6週間",
+          "objectives": {
+            "obj1": "パイロットユーザーへの限定展開",
+            "obj2": "ユーザートレーニングと採用",
+            "obj3": "パフォーマンスモニタリング",
+            "obj4": "フィードバック収集",
+            "obj5": "反復的改善"
+          },
+          "deliverables": {
+            "del1": "パイロットデプロイメント",
+            "del2": "トレーニング資料",
+            "del3": "パフォーマンスレポート",
+            "del4": "フィードバック分析",
+            "del5": "最適化推奨"
+          },
+          "activities": {
+            "act1": {
+              "task": "パイロットユーザー選定",
+              "owner": "プロジェクトマネージャー",
+              "duration": "2日"
+            },
+            "act2": {
+              "task": "トレーニング実施",
+              "owner": "トレーニングチーム",
+              "duration": "5日"
+            },
+            "act3": {
+              "task": "パフォーマンスモニタリング",
+              "owner": "運用チーム",
+              "duration": "継続"
+            },
+            "act4": {
+              "task": "フィードバック分析",
+              "owner": "ビジネスアナリスト",
+              "duration": "週次"
+            }
+          }
+        },
+        "phase4": {
+          "name": "フェーズ4：スケールと本番",
+          "duration": "継続",
+          "objectives": {
+            "obj1": "全社展開",
+            "obj2": "ライブパフォーマンスモニタリング",
+            "obj3": "継続的学習の実装",
+            "obj4": "継続的サポートと機能強化",
+            "obj5": "ROIトラッキングと最適化"
+          },
+          "deliverables": {
+            "del1": "本番デプロイメント",
+            "del2": "パフォーマンスダッシュボード",
+            "del3": "最適化レポート",
+            "del4": "ROI分析",
+            "del5": "機能強化ロードマップ"
+          },
+          "activities": {
+            "act1": {
+              "task": "本番展開",
+              "owner": "運用チーム",
+              "duration": "10日"
+            },
+            "act2": {
+              "task": "パフォーマンスモニタリング",
+              "owner": "運用チーム",
+              "duration": "継続"
+            },
+            "act3": {
+              "task": "モデル最適化",
+              "owner": "AIエンジニア",
+              "duration": "月次"
+            },
+            "act4": {
+              "task": "機能強化デリバリー",
+              "owner": "開発チーム",
+              "duration": "四半期"
+            }
+          }
+        }
+      },
+      "risks": {
+        "title": "リスク管理",
+        "risk": "リスク",
+        "impact": "影響",
+        "probability": "確率",
+        "mitigation": "軽減戦略",
+        "data": {
+          "integrationComplexity": {
+            "risk": "統合の複雑さ",
+            "impact": "高",
+            "probability": "中",
+            "mitigation": "徹底的なシステム評価と段階的統合アプローチ"
+          },
+          "userAdoption": {
+            "risk": "ユーザー採用",
+            "impact": "高",
+            "probability": "低",
+            "mitigation": "包括的なトレーニングプログラムと変更管理"
+          },
+          "dataQuality": {
+            "risk": "データ品質",
+            "impact": "中",
+            "probability": "中",
+            "mitigation": "移行前のデータクレンジングとバリデーション"
+          },
+          "performanceIssues": {
+            "risk": "パフォーマンス問題",
+            "impact": "中",
+            "probability": "低",
+            "mitigation": "パイロット中の負荷テストとパフォーマンス最適化"
+          }
+        }
+      },
+      "successMetrics": {
+        "title": "成功指標とKPI",
+        "baseline": "ベースライン",
+        "target": "ターゲット",
+        "timeline": "タイムライン：",
+        "data": {
+          "ticketResolution": {
+            "metric": "チケット解決率",
+            "baseline": "45%",
+            "target": "78%",
+            "timeline": "3ヶ月目"
+          },
+          "aht": {
+            "metric": "平均対応時間",
+            "baseline": "15分",
+            "target": "6分",
+            "timeline": "2ヶ月目"
+          },
+          "csat": {
+            "metric": "顧客満足度",
+            "baseline": "3.8/5",
+            "target": "4.6/5",
+            "timeline": "4ヶ月目"
+          },
+          "costPerContact": {
+            "metric": "コンタクトあたりのコスト",
+            "baseline": "$15",
+            "target": "$5.25",
+            "timeline": "6ヶ月目"
+          },
+          "agentProductivity": {
+            "metric": "エージェント生産性",
+            "baseline": "100%",
+            "target": "250%",
+            "timeline": "4ヶ月目"
+          },
+          "fcr": {
+            "metric": "初回解決率",
+            "baseline": "40%",
+            "target": "67%",
+            "timeline": "3ヶ月目"
+          }
+        }
+      },
+      "techStack": {
+        "title": "テクノロジースタック",
+        "categories": {
+          "genAiTools": {
+            "category": "GenAIツール",
+            "items": [
+              "OpenAI GPT-4",
+              "Claude",
+              "カスタムNLPパイプライン",
+              "ファインチューニング済みモデル"
+            ]
+          },
+          "itsmPlatforms": {
+            "category": "ITSMプラットフォーム",
+            "items": [
+              "ServiceNow",
+              "Jira Service Management",
+              "Zendesk",
+              "Freshservice"
+            ]
+          },
+          "integrationTools": {
+            "category": "統合ツール",
+            "items": [
+              "UiPath RPA",
+              "Automation Anywhere",
+              "APIゲートウェイ",
+              "Webhookサービス"
+            ]
+          },
+          "cloudInfra": {
+            "category": "クラウドインフラストラクチャ",
+            "items": [
+              "AWS",
+              "Azure",
+              "Google Cloud",
+              "Kubernetes"
+            ]
+          },
+          "securityFramework": {
+            "category": "セキュリティフレームワーク",
+            "items": [
+              "エンドツーエンド暗号化",
+              "RBAC",
+              "OAuth 2.0",
+              "監査ログ"
+            ]
+          }
+        }
+      },
+      "roi": {
+        "title": "ROI予測",
+        "breakeven": "損益分岐点",
+        "breakevenValue": "6ヶ月目",
+        "annualSavings": "年間削減額",
+        "annualSavingsValue": "$2.5M+",
+        "threeYearRoi": "3年間ROI",
+        "threeYearRoiValue": "340%"
+      }
+    }
+  }
+}

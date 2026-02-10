@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { 
+import {
   ShieldCheckIcon,
   LockClosedIcon,
   DocumentCheckIcon,
@@ -16,130 +16,89 @@ import {
   SparklesIcon,
   ScaleIcon
 } from '@heroicons/react/24/outline';
+import { useTranslation } from 'react-i18next';
 
 const StrategicGuardrails: React.FC = () => {
+  const { t, i18n } = useTranslation('coreTechnology');
+  const svgSuffix = i18n.language.startsWith('ja') ? '-ja' : '';
   const [selectedRail, setSelectedRail] = useState<string>('orchestration');
 
   const guardrails = {
     orchestration: {
-      name: 'Agent Orchestration Guardrails',
+      name: t('guardrails.guardrailComponents.orchestration.name'),
       icon: CpuChipIcon,
       color: 'blue',
-      description: 'Control and monitor multi-agent system interactions',
-      controls: [
-        'Agent role boundaries enforcement',
-        'Cross-agent communication protocols',
-        'Task delegation validation',
-        'Agent capability verification',
-        'Circular dependency prevention'
-      ],
-      risks: ['Agent conflicts', 'Task duplication', 'Infinite loops', 'Resource exhaustion'],
-      implementation: 'Policy-driven orchestration with LangGraph state machines'
+      description: t('guardrails.guardrailComponents.orchestration.description'),
+      controls: t('guardrails.guardrailComponents.orchestration.controls', { returnObjects: true }) as unknown as string[],
+      risks: t('guardrails.guardrailComponents.orchestration.risks', { returnObjects: true }) as unknown as string[],
+      implementation: t('guardrails.guardrailComponents.orchestration.implementation')
     },
     reasoning: {
-      name: 'Reasoning & Decision Rails',
+      name: t('guardrails.guardrailComponents.reasoning.name'),
       icon: SparklesIcon,
       color: 'purple',
-      description: 'Validate agent reasoning chains and decision processes',
-      controls: [
-        'Chain-of-thought validation',
-        'Reasoning step verification',
-        'Logic consistency checks',
-        'Decision tree auditing',
-        'Hallucination detection'
-      ],
-      risks: ['Invalid reasoning', 'Logic errors', 'False conclusions', 'Biased decisions'],
-      implementation: 'ReAct pattern with structured reasoning validation'
+      description: t('guardrails.guardrailComponents.reasoning.description'),
+      controls: t('guardrails.guardrailComponents.reasoning.controls', { returnObjects: true }) as unknown as string[],
+      risks: t('guardrails.guardrailComponents.reasoning.risks', { returnObjects: true }) as unknown as string[],
+      implementation: t('guardrails.guardrailComponents.reasoning.implementation')
     },
     memory: {
-      name: 'Agent Memory Governance',
+      name: t('guardrails.guardrailComponents.memory.name'),
       icon: BeakerIcon,
       color: 'green',
-      description: 'Secure and validate agent memory systems',
-      controls: [
-        'Memory isolation between agents',
-        'Context window management',
-        'Memory injection prevention',
-        'Temporal consistency checks',
-        'Memory retention policies'
-      ],
-      risks: ['Memory corruption', 'Context poisoning', 'Data leakage', 'Memory overflow'],
-      implementation: 'Vector database with access control and versioning'
+      description: t('guardrails.guardrailComponents.memory.description'),
+      controls: t('guardrails.guardrailComponents.memory.controls', { returnObjects: true }) as unknown as string[],
+      risks: t('guardrails.guardrailComponents.memory.risks', { returnObjects: true }) as unknown as string[],
+      implementation: t('guardrails.guardrailComponents.memory.implementation')
     },
     tool: {
-      name: 'Tool Usage Authorization',
+      name: t('guardrails.guardrailComponents.tool.name'),
       icon: CommandLineIcon,
       color: 'orange',
-      description: 'Control agent access to external tools and APIs',
-      controls: [
-        'Tool permission matrix',
-        'API rate limiting',
-        'Credential management',
-        'Action authorization',
-        'Output sanitization'
-      ],
-      risks: ['Unauthorized access', 'API abuse', 'Data exfiltration', 'System compromise'],
-      implementation: 'Function calling with granular permission system'
+      description: t('guardrails.guardrailComponents.tool.description'),
+      controls: t('guardrails.guardrailComponents.tool.controls', { returnObjects: true }) as unknown as string[],
+      risks: t('guardrails.guardrailComponents.tool.risks', { returnObjects: true }) as unknown as string[],
+      implementation: t('guardrails.guardrailComponents.tool.implementation')
     },
     collaboration: {
-      name: 'Multi-Agent Collaboration Rules',
+      name: t('guardrails.guardrailComponents.collaboration.name'),
       icon: UserGroupIcon,
       color: 'indigo',
-      description: 'Govern agent-to-agent interactions and teamwork',
-      controls: [
-        'Communication protocol enforcement',
-        'Message validation & filtering',
-        'Consensus mechanisms',
-        'Conflict resolution rules',
-        'Team formation policies'
-      ],
-      risks: ['Agent collusion', 'Information cascade', 'Deadlock scenarios', 'Trust violations'],
-      implementation: 'CrewAI collaboration framework with built-in safeguards'
+      description: t('guardrails.guardrailComponents.collaboration.description'),
+      controls: t('guardrails.guardrailComponents.collaboration.controls', { returnObjects: true }) as unknown as string[],
+      risks: t('guardrails.guardrailComponents.collaboration.risks', { returnObjects: true }) as unknown as string[],
+      implementation: t('guardrails.guardrailComponents.collaboration.implementation')
     },
     compliance: {
-      name: 'Regulatory & Ethical Compliance',
+      name: t('guardrails.guardrailComponents.compliance.name'),
       icon: ScaleIcon,
       color: 'red',
-      description: 'Ensure agent behavior meets regulatory requirements',
-      controls: [
-        'GDPR data handling for agents',
-        'Explainable AI requirements',
-        'Audit trail generation',
-        'Bias detection & mitigation',
-        'Industry-specific regulations'
-      ],
-      risks: ['Legal violations', 'Ethical breaches', 'Audit failures', 'Reputation damage'],
-      implementation: 'Automated compliance checking with policy engines'
+      description: t('guardrails.guardrailComponents.compliance.description'),
+      controls: t('guardrails.guardrailComponents.compliance.controls', { returnObjects: true }) as unknown as string[],
+      risks: t('guardrails.guardrailComponents.compliance.risks', { returnObjects: true }) as unknown as string[],
+      implementation: t('guardrails.guardrailComponents.compliance.implementation')
     }
   };
 
-  const agentFlow = [
-    { stage: 'Request Receipt', rails: ['orchestration', 'compliance'] },
-    { stage: 'Agent Selection', rails: ['orchestration', 'tool'] },
-    { stage: 'Task Execution', rails: ['reasoning', 'memory'] },
-    { stage: 'Agent Collaboration', rails: ['collaboration', 'memory'] },
-    { stage: 'Response Assembly', rails: ['reasoning', 'compliance'] }
-  ];
-
   const agentTypes = [
     {
-      name: 'Supervisor Agent',
-      responsibilities: ['Task delegation', 'Team coordination', 'Resource allocation'],
+      name: t('guardrails.agentTypes.supervisor.name'),
+      responsibilities: t('guardrails.agentTypes.supervisor.responsibilities', { returnObjects: true }) as unknown as string[],
       guardrails: ['orchestration', 'collaboration']
     },
     {
-      name: 'Specialist Agents',
-      responsibilities: ['Domain expertise', 'Tool usage', 'Data processing'],
+      name: t('guardrails.agentTypes.specialist.name'),
+      responsibilities: t('guardrails.agentTypes.specialist.responsibilities', { returnObjects: true }) as unknown as string[],
       guardrails: ['tool', 'reasoning', 'memory']
     },
     {
-      name: 'Validator Agent',
-      responsibilities: ['Output verification', 'Quality assurance', 'Compliance checking'],
+      name: t('guardrails.agentTypes.validator.name'),
+      responsibilities: t('guardrails.agentTypes.validator.responsibilities', { returnObjects: true }) as unknown as string[],
       guardrails: ['compliance', 'reasoning']
     },
     {
-      name: 'Monitor Agent',
-      responsibilities: ['System observation', 'Performance tracking', 'Anomaly detection'],
+      name: t('guardrails.agentTypes.monitor.name'),
+      responsibilities: t('guardrails.agentTypes.monitor.responsibilities', { returnObjects: true }) as unknown as string[],
       guardrails: ['all']
     }
   ];
@@ -150,23 +109,22 @@ const StrategicGuardrails: React.FC = () => {
         {/* Header */}
         <div className="mb-8">
           <div className="inline-block px-3 py-1 bg-red-100 text-red-700 rounded-full text-xs font-semibold mb-4">
-            Agent Governance & Security
+            {t('guardrails.header.badge')}
           </div>
-          <h1 className="text-3xl font-bold text-gray-900">Strategic Guardrails for AI Agents</h1>
+          <h1 className="text-3xl font-bold text-gray-900">{t('guardrails.header.title')}</h1>
           <p className="mt-2 text-gray-600 max-w-3xl">
-            Comprehensive governance framework for autonomous agent systems. Ensuring safe, reliable, and compliant 
-            multi-agent operations through policy-driven controls and real-time monitoring.
+            {t('guardrails.header.description')}
           </p>
         </div>
 
         {/* Agent System Flow with Guardrails */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 mb-8">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6">Multi-Agent System Protection</h2>
-          
+          <h2 className="text-2xl font-semibold text-gray-900 mb-6">{t('guardrails.multiAgentProtection.title')}</h2>
+
           {/* Static Flow Diagram */}
           <div className="overflow-x-auto pb-4">
-            <img 
-              src={`${process.env.PUBLIC_URL}/assets/diagrams/strategic-guardrails.svg`}
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/diagrams/strategic-guardrails${svgSuffix}.svg`}
               alt="Multi-Agent Orchestration Pipeline with Strategic Guardrails"
               className="w-full h-auto min-w-[800px]"
             />
@@ -175,15 +133,15 @@ const StrategicGuardrails: React.FC = () => {
 
         {/* Guardrail Selection Buttons */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 mb-8">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6">Guardrail Components</h2>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-6">{t('guardrails.guardrailComponents.title')}</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
             {Object.entries(guardrails).map(([key, rail]) => (
               <button
                 key={key}
                 onClick={() => setSelectedRail(key)}
                 className={`p-4 rounded-lg border-2 transition-all ${
-                  selectedRail === key 
-                    ? `border-${rail.color}-500 bg-${rail.color}-50` 
+                  selectedRail === key
+                    ? `border-${rail.color}-500 bg-${rail.color}-50`
                     : 'border-gray-200 hover:border-gray-300'
                 }`}
               >
@@ -213,7 +171,7 @@ const StrategicGuardrails: React.FC = () => {
                   <div>
                     <h4 className="text-sm font-semibold text-gray-700 mb-3 flex items-center">
                       <CheckCircleIcon className="h-4 w-4 mr-2 text-green-600" />
-                      Agent Controls
+                      {t('guardrails.guardrailComponents.agentControls')}
                     </h4>
                     <ul className="space-y-2">
                       {rail.controls.map((control, index) => (
@@ -229,7 +187,7 @@ const StrategicGuardrails: React.FC = () => {
                   <div>
                     <h4 className="text-sm font-semibold text-gray-700 mb-3 flex items-center">
                       <ExclamationTriangleIcon className="h-4 w-4 mr-2 text-yellow-600" />
-                      Risks Mitigated
+                      {t('guardrails.guardrailComponents.risksMitigated')}
                     </h4>
                     <ul className="space-y-2">
                       {rail.risks.map((risk, index) => (
@@ -245,7 +203,7 @@ const StrategicGuardrails: React.FC = () => {
                   <div>
                     <h4 className="text-sm font-semibold text-gray-700 mb-3 flex items-center">
                       <ArrowPathIcon className="h-4 w-4 mr-2 text-blue-600" />
-                      Implementation
+                      {t('guardrails.guardrailComponents.implementationLabel')}
                     </h4>
                     <p className="text-sm text-gray-600 bg-gray-50 rounded-lg p-3">
                       {rail.implementation}
@@ -260,13 +218,13 @@ const StrategicGuardrails: React.FC = () => {
 
         {/* Agent Types and Their Guardrails */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 mb-8">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6">Agent Types & Required Guardrails</h2>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-6">{t('guardrails.agentTypes.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {agentTypes.map((agent, index) => (
               <div key={index} className="border border-gray-200 rounded-lg p-4">
                 <h3 className="font-semibold text-gray-900 mb-2 text-sm">{agent.name}</h3>
                 <div className="mb-3">
-                  <p className="text-xs text-gray-500 mb-2">Responsibilities:</p>
+                  <p className="text-xs text-gray-500 mb-2">{t('guardrails.agentTypes.responsibilities')}</p>
                   <ul className="text-xs text-gray-600 space-y-1">
                     {agent.responsibilities.map((resp, idx) => (
                       <li key={idx}>• {resp}</li>
@@ -274,7 +232,7 @@ const StrategicGuardrails: React.FC = () => {
                   </ul>
                 </div>
                 <div>
-                  <p className="text-xs text-gray-500 mb-2">Required Guardrails:</p>
+                  <p className="text-xs text-gray-500 mb-2">{t('guardrails.agentTypes.requiredGuardrails')}</p>
                   <div className="flex flex-wrap gap-1">
                     {agent.guardrails.map((g, idx) => (
                       <span key={idx} className="px-2 py-1 bg-blue-50 text-blue-700 rounded text-xs">
@@ -290,44 +248,41 @@ const StrategicGuardrails: React.FC = () => {
 
         {/* Technology Stack for Agent Guardrails */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 mb-8">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6">Agent Guardrails Technology Stack</h2>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-6">{t('guardrails.technologyStack.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="border-l-4 border-blue-500 pl-4">
-              <h3 className="font-semibold text-gray-900 mb-2">Orchestration Frameworks</h3>
+              <h3 className="font-semibold text-gray-900 mb-2">{t('guardrails.technologyStack.orchestrationFrameworks.title')}</h3>
               <p className="text-sm text-gray-600 mb-3">
-                Multi-agent coordination and governance platforms
+                {t('guardrails.technologyStack.orchestrationFrameworks.description')}
               </p>
               <ul className="text-xs text-gray-500 space-y-1">
-                <li>• LangGraph for state machines</li>
-                <li>• CrewAI for team coordination</li>
-                <li>• AutoGen for agent management</li>
-                <li>• Temporal for workflow orchestration</li>
+                {(t('guardrails.technologyStack.orchestrationFrameworks.items', { returnObjects: true }) as unknown as string[]).map((item, idx) => (
+                  <li key={idx}>• {item}</li>
+                ))}
               </ul>
             </div>
-            
+
             <div className="border-l-4 border-purple-500 pl-4">
-              <h3 className="font-semibold text-gray-900 mb-2">Validation & Monitoring</h3>
+              <h3 className="font-semibold text-gray-900 mb-2">{t('guardrails.technologyStack.validationMonitoring.title')}</h3>
               <p className="text-sm text-gray-600 mb-3">
-                Real-time agent behavior validation and observability
+                {t('guardrails.technologyStack.validationMonitoring.description')}
               </p>
               <ul className="text-xs text-gray-500 space-y-1">
-                <li>• Guardrails AI for validation</li>
-                <li>• LangSmith for tracing</li>
-                <li>• Weights & Biases for monitoring</li>
-                <li>• Custom policy engines</li>
+                {(t('guardrails.technologyStack.validationMonitoring.items', { returnObjects: true }) as unknown as string[]).map((item, idx) => (
+                  <li key={idx}>• {item}</li>
+                ))}
               </ul>
             </div>
-            
+
             <div className="border-l-4 border-green-500 pl-4">
-              <h3 className="font-semibold text-gray-900 mb-2">Security & Compliance</h3>
+              <h3 className="font-semibold text-gray-900 mb-2">{t('guardrails.technologyStack.securityCompliance.title')}</h3>
               <p className="text-sm text-gray-600 mb-3">
-                Enterprise-grade security for autonomous agents
+                {t('guardrails.technologyStack.securityCompliance.description')}
               </p>
               <ul className="text-xs text-gray-500 space-y-1">
-                <li>• OWASP for LLM security</li>
-                <li>• Zero-trust agent architecture</li>
-                <li>• Homomorphic encryption</li>
-                <li>• Audit trail generation</li>
+                {(t('guardrails.technologyStack.securityCompliance.items', { returnObjects: true }) as unknown as string[]).map((item, idx) => (
+                  <li key={idx}>• {item}</li>
+                ))}
               </ul>
             </div>
           </div>
@@ -335,80 +290,80 @@ const StrategicGuardrails: React.FC = () => {
 
         {/* Agent System Metrics Dashboard */}
         <div className="bg-gradient-to-r from-red-50 to-orange-50 rounded-xl border border-gray-200 p-8">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6">Agent System Health Dashboard</h2>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-6">{t('guardrails.dashboard.title')}</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="bg-white rounded-lg p-4 text-center">
               <CpuChipIcon className="h-6 w-6 text-blue-600 mx-auto mb-2" />
               <p className="text-2xl font-bold text-gray-900">12</p>
-              <p className="text-xs text-gray-600">Active Agents</p>
+              <p className="text-xs text-gray-600">{t('guardrails.dashboard.activeAgents')}</p>
             </div>
             <div className="bg-white rounded-lg p-4 text-center">
               <ShieldCheckIcon className="h-6 w-6 text-green-600 mx-auto mb-2" />
               <p className="text-2xl font-bold text-gray-900">100%</p>
-              <p className="text-xs text-gray-600">Policy Compliance</p>
+              <p className="text-xs text-gray-600">{t('guardrails.dashboard.policyCompliance')}</p>
             </div>
             <div className="bg-white rounded-lg p-4 text-center">
               <SparklesIcon className="h-6 w-6 text-purple-600 mx-auto mb-2" />
               <p className="text-2xl font-bold text-gray-900">0.02s</p>
-              <p className="text-xs text-gray-600">Avg Decision Time</p>
+              <p className="text-xs text-gray-600">{t('guardrails.dashboard.avgDecisionTime')}</p>
             </div>
             <div className="bg-white rounded-lg p-4 text-center">
               <EyeIcon className="h-6 w-6 text-orange-600 mx-auto mb-2" />
               <p className="text-2xl font-bold text-gray-900">Full</p>
-              <p className="text-xs text-gray-600">Observability</p>
+              <p className="text-xs text-gray-600">{t('guardrails.dashboard.observability')}</p>
             </div>
           </div>
 
           <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="bg-white/80 rounded-lg p-4">
-              <h3 className="text-sm font-semibold text-gray-700 mb-2">Agent Collaboration Patterns</h3>
+              <h3 className="text-sm font-semibold text-gray-700 mb-2">{t('guardrails.dashboard.collaborationPatterns.title')}</h3>
               <div className="space-y-2">
                 <div className="flex justify-between text-xs">
-                  <span className="text-gray-600">Sequential Processing</span>
+                  <span className="text-gray-600">{t('guardrails.dashboard.collaborationPatterns.sequentialProcessing')}</span>
                   <span className="font-semibold">45%</span>
                 </div>
                 <div className="flex justify-between text-xs">
-                  <span className="text-gray-600">Parallel Execution</span>
+                  <span className="text-gray-600">{t('guardrails.dashboard.collaborationPatterns.parallelExecution')}</span>
                   <span className="font-semibold">35%</span>
                 </div>
                 <div className="flex justify-between text-xs">
-                  <span className="text-gray-600">Hierarchical Delegation</span>
+                  <span className="text-gray-600">{t('guardrails.dashboard.collaborationPatterns.hierarchicalDelegation')}</span>
                   <span className="font-semibold">20%</span>
                 </div>
               </div>
             </div>
 
             <div className="bg-white/80 rounded-lg p-4">
-              <h3 className="text-sm font-semibold text-gray-700 mb-2">Guardrail Triggers</h3>
+              <h3 className="text-sm font-semibold text-gray-700 mb-2">{t('guardrails.dashboard.guardrailTriggers.title')}</h3>
               <div className="space-y-2">
                 <div className="flex justify-between text-xs">
-                  <span className="text-gray-600">Role Boundary Violations</span>
+                  <span className="text-gray-600">{t('guardrails.dashboard.guardrailTriggers.roleBoundaryViolations')}</span>
                   <span className="font-semibold text-green-600">0</span>
                 </div>
                 <div className="flex justify-between text-xs">
-                  <span className="text-gray-600">Memory Limit Warnings</span>
+                  <span className="text-gray-600">{t('guardrails.dashboard.guardrailTriggers.memoryLimitWarnings')}</span>
                   <span className="font-semibold text-yellow-600">3</span>
                 </div>
                 <div className="flex justify-between text-xs">
-                  <span className="text-gray-600">Tool Access Denials</span>
+                  <span className="text-gray-600">{t('guardrails.dashboard.guardrailTriggers.toolAccessDenials')}</span>
                   <span className="font-semibold text-green-600">2</span>
                 </div>
               </div>
             </div>
 
             <div className="bg-white/80 rounded-lg p-4">
-              <h3 className="text-sm font-semibold text-gray-700 mb-2">System Performance</h3>
+              <h3 className="text-sm font-semibold text-gray-700 mb-2">{t('guardrails.dashboard.systemPerformance.title')}</h3>
               <div className="space-y-2">
                 <div className="flex justify-between text-xs">
-                  <span className="text-gray-600">Agent Success Rate</span>
+                  <span className="text-gray-600">{t('guardrails.dashboard.systemPerformance.agentSuccessRate')}</span>
                   <span className="font-semibold text-green-600">98.5%</span>
                 </div>
                 <div className="flex justify-between text-xs">
-                  <span className="text-gray-600">Avg Task Completion</span>
+                  <span className="text-gray-600">{t('guardrails.dashboard.systemPerformance.avgTaskCompletion')}</span>
                   <span className="font-semibold">1.2s</span>
                 </div>
                 <div className="flex justify-between text-xs">
-                  <span className="text-gray-600">Resource Utilization</span>
+                  <span className="text-gray-600">{t('guardrails.dashboard.systemPerformance.resourceUtilization')}</span>
                   <span className="font-semibold">67%</span>
                 </div>
               </div>

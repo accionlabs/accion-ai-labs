@@ -1,0 +1,96 @@
+{
+  "header": {
+    "badge": "はじめましょう",
+    "title": "最適なソリューションを一緒に構築しましょう",
+    "description": "カスタムAIエージェントでエンタープライズを変革する準備はできていますか？お客様の固有の課題について話し合い、当社がどのようにお手伝いできるかをご相談ください。"
+  },
+  "companyInfo": {
+    "title": "Accion Labs",
+    "description": "Accion Labsは、AI駆動のデジタルトランスフォーメーションを専門とするテクノロジーサービス企業です。最先端のテクノロジーを活用して複雑なビジネス課題を解決するカスタムソリューションの構築において、エンタープライズ企業と提携しています。",
+    "usOffice": {
+      "label": "米国オフィス",
+      "address": "1225 Washington Pike #401\nBridgeville, PA 15017\nUnited States"
+    },
+    "email": {
+      "label": "メール"
+    },
+    "website": {
+      "label": "ウェブサイト"
+    }
+  },
+  "nextSteps": {
+    "title": "次のステップは？",
+    "step1": {
+      "title": "ディスカバリーコール",
+      "description": "お客様の課題と目標を理解するためのお電話を設定いたします"
+    },
+    "step2": {
+      "title": "ソリューション設計",
+      "description": "お客様のニーズに合わせたカスタムAIエージェントソリューションを設計します"
+    },
+    "step3": {
+      "title": "パイロットプログラム",
+      "description": "パイロットを通じて価値を実証し、アプローチを最適化します"
+    },
+    "step4": {
+      "title": "本格導入",
+      "description": "当社のサポートのもと、エンタープライズ全体にソリューションを展開します"
+    }
+  },
+  "form": {
+    "title": "お問い合わせ",
+    "firstName": "名 *",
+    "lastName": "姓 *",
+    "workEmail": "業務用メールアドレス *",
+    "company": "会社名 *",
+    "phone": "電話番号",
+    "interest": {
+      "label": "ご関心のある分野 *",
+      "placeholder": "選択してください",
+      "technicalDebt": "技術的負債分析",
+      "portfolio": "ポートフォリオ合理化",
+      "supportAutomation": "サポート自動化（L0/L1/L2）",
+      "customerOnboarding": "カスタマーオンボーディング",
+      "analytics": "インテリジェントアナリティクス",
+      "custom": "カスタムソリューション",
+      "other": "その他"
+    },
+    "message": {
+      "label": "課題についてお聞かせください",
+      "placeholder": "現在の課題と実現したいことについてご記入ください..."
+    },
+    "consent": "Accion LabsからBreeze.AIおよび関連サービスに関する情報を受け取ることに同意します。いつでも配信停止できることを理解しています。",
+    "submit": "メッセージを送信",
+    "requiredFields": "* 必須項目"
+  },
+  "alternativeContact": {
+    "demo": {
+      "title": "デモのご予約",
+      "description": "当社のソリューションを実際にご覧いただけるパーソナライズされたデモをご予約ください"
+    },
+    "technical": {
+      "title": "技術的なご相談",
+      "description": "技術要件について当社のアーキテクトとお話しください"
+    }
+  },
+  "globalPresence": {
+    "title": "グローバルプレゼンス",
+    "description": "Accion Labsは複数の大陸にオフィスとデリバリーセンターを持ち、世界中のクライアントにサービスを提供しています。グローバルなプレゼンスにより、お客様のエンタープライズがどこで事業を展開していてもサポートいたします。",
+    "northAmerica": {
+      "title": "北米",
+      "locations": "United States"
+    },
+    "asiaPacific": {
+      "title": "アジア太平洋",
+      "locations": "India, Singapore"
+    },
+    "europe": {
+      "title": "ヨーロッパ",
+      "locations": "United Kingdom"
+    },
+    "middleEast": {
+      "title": "中東",
+      "locations": "UAE"
+    }
+  }
+}

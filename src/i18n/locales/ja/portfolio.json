@@ -1,0 +1,740 @@
+{
+  "overview": {
+    "title": "ポートフォリオ合理化",
+    "subtitle": "体系的なUX合理化を通じて製品ポートフォリオを分析・最適化します",
+    "demoScenario": {
+      "title": "デモシナリオ：エンタープライズ認証",
+      "description": "エンタープライズポートフォリオ内の3つの異なる製品がユーザー認証をどのように処理しているかを探索し、標準化と最適化の機会を発見します。",
+      "phoenix": {
+        "subtitle": "レガシーPHP/MySQLシステム",
+        "features": {
+          "auth": "基本的なユーザー名/パスワード認証",
+          "rendering": "サーバーレンダリングPHPページ",
+          "interactions": "jQueryベースのインタラクション",
+          "hashing": "MD5パスワードハッシュ（安全でない）",
+          "database": "MySQLデータベース"
+        }
+      },
+      "apollo": {
+        "subtitle": "モダンReact SPA",
+        "features": {
+          "auth": "二要素認証付きメールベース認証",
+          "spa": "JWTトークンを使用したReact SPA",
+          "architecture": "モダンコンポーネントアーキテクチャ",
+          "hashing": "bcryptパスワードハッシュ",
+          "database": "MongoDBデータベース"
+        }
+      },
+      "voyager": {
+        "subtitle": "Vue.jsダッシュボード",
+        "features": {
+          "auth": "SAMLによるSSO連携",
+          "architecture": "Vue.jsマイクロフロントエンドアーキテクチャ",
+          "processing": "リアルタイムデータ処理",
+          "security": "エンタープライズグレードのセキュリティ",
+          "database": "ElasticSearchバックエンド"
+        }
+      }
+    },
+    "step1": {
+      "label": "ステップ1",
+      "title": "エージェントベースの抽出",
+      "description": "AIエージェントが各製品のコードベースとドキュメントから4つのオントロジーグラフ（コード、機能、デザイン、アーキテクチャ）を自動的に抽出し、分析用の構造化されたKnowledge Graphを作成します。",
+      "imageAlt": "ポートフォリオ抽出プロセス"
+    },
+    "step2": {
+      "label": "ステップ2",
+      "title": "合理化と戦略選定",
+      "description": "抽出されたグラフの重複が分析され、デザインとアーキテクチャの並行合理化トラックに分割されます。3つの実装戦略が比較され、それぞれのコードへの影響が示されます。",
+      "imageAlt": "ポートフォリオ合理化プロセス",
+      "note": {
+        "title": "製品固有のオントロジーに関する注記：",
+        "content": "コア合理化フレームワークは4つの主要オントロジー（コード、機能、デザイン、アーキテクチャ）に焦点を当てていますが、実際の製品にはユーザーコンテキストグラフ、マスターデータモデル、ワークフロー、ビジネスルールなどの追加的な製品固有オントロジーが含まれることがよくあります。合理化戦略は、同じ体系的な分析と統合の原則を適用することで、これらの製品固有のデータモデルにも対応し、曖昧さのない完全な統合を実現します。"
+      }
+    },
+    "tools": {
+      "title": "インタラクティブ分析ツール",
+      "graphExplorer": {
+        "title": "オントロジーグラフエクスプローラー",
+        "description": "フィルタリングとドリルダウン機能を備えた完全な4オントロジーグラフ構造を探索します",
+        "badge": "インタラクティブ"
+      },
+      "comparator": {
+        "title": "コンポーネントコンパレーター",
+        "description": "製品間の認証コンポーネントを並列比較します",
+        "badge": "分析"
+      },
+      "roadmap": {
+        "title": "合理化ロードマップ",
+        "description": "戦略比較、デザインおよびアーキテクチャトラックを含む完全なロードマップ",
+        "badge": "計画"
+      },
+      "unifiedProduct": {
+        "title": "統合製品ビュー",
+        "description": "合理化によってすべての機能を統合した製品がどのように作成されるかをご覧ください",
+        "badge": "成果"
+      }
+    }
+  },
+  "comparator": {
+    "title": "グラフ重複コンパレーター",
+    "subtitle": "機能的重複からコードを経てアーキテクチャへの影響に至るアルゴリズムの進行",
+    "subtitleWithAnalysis": {
+      "prefix": "機能 → コード → アーキテクチャ/デザイン",
+      "deepestOverlap": "最深の重複：",
+      "divergenceAt": "分岐点："
+    },
+    "analysisFlow": {
+      "title": "分析フローの進行",
+      "step1": "機能的重複",
+      "step2": "コードへの影響",
+      "step3": "アーキテクチャへの影響",
+      "step4": "デザインへの影響"
+    },
+    "algorithmResults": {
+      "title": "アルゴリズム分析結果",
+      "hideDetails": "アルゴリズムの詳細を非表示",
+      "showDetails": "アルゴリズムの詳細を表示",
+      "startingOverlap": "開始時の重複",
+      "deepestOverlap": "最深の重複",
+      "divergencePoint": "分岐点",
+      "codeLevels": "コードレベル",
+      "archDesignImpact": "アーキテクチャ/デザインへの影響",
+      "none": "なし"
+    },
+    "divergenceAnalysis": {
+      "title": "実装分岐分析",
+      "levelDivergence": "レベル分岐",
+      "phoenixApproach": "Phoenixのアプローチ",
+      "apolloApproach": "Apolloのアプローチ",
+      "voyagerApproach": "Voyagerのアプローチ",
+      "noImplementation": "実装なし"
+    },
+    "functionalOverlap": {
+      "title": "機能的重複分析",
+      "subtitle": "共通の目標を特定するための機能オントロジーから開始"
+    },
+    "codeImpact": {
+      "title": "コード影響分析",
+      "subtitle": "重複する機能領域から接続されたコードノード"
+    },
+    "architectureImpact": {
+      "title": "アーキテクチャ影響分析",
+      "subtitle": "コードからアーキテクチャコンポーネントへの逆走査",
+      "empty": "重複するコードに接続されたアーキテクチャコンポーネントはありません"
+    },
+    "designImpact": {
+      "title": "デザイン影響分析",
+      "subtitle": "コードからデザインコンポーネントへの逆走査",
+      "empty": "重複するコードに接続されたデザインコンポーネントはありません"
+    },
+    "emptyState": {
+      "title": "分析を読み込み中...",
+      "description": "4つすべてのオントロジーにわたる包括的な重複分析を実行しています。"
+    },
+    "componentCard": {
+      "noImplementation": "{{product}}の実装はありません",
+      "properties": "プロパティ：",
+      "moreProperties": "... 他{{count}}件のプロパティ",
+      "issuesFound": "検出された問題"
+    },
+    "functionalLevel": {
+      "followingOverlapPath": "（重複パスを追跡中）",
+      "algorithmStopsHere": "（アルゴリズムはここで停止）",
+      "overlappingNodes": "重複ノード",
+      "divergencePoint": "分岐点",
+      "analysisLevel": "分析レベル",
+      "overlapping": "重複：",
+      "available": "利用可能：",
+      "overlappingNodesTitle": "重複ノード（アルゴリズムが使用）",
+      "divergentNodesTitle": "分岐ノード（アルゴリズム停止の理由）",
+      "nodesAtLevel": "このレベルのノード",
+      "inOverlapPath": "重複パス内",
+      "andMore": "...他{{count}}件",
+      "divergenceAnalysis": "分岐分析："
+    },
+    "codeLevel": {
+      "levelCode": "レベルコード",
+      "total": "合計：",
+      "nodes": "ノード",
+      "allImpactedCode": "影響を受けるすべてのコードノード（",
+      "level": "レベル",
+      "noCodeNodes": "このレベルにコードノードはありません"
+    },
+    "architectureLevel": {
+      "architecture": "アーキテクチャ",
+      "total": "合計：",
+      "nodes": "ノード",
+      "allImpactedArch": "影響を受けるすべてのアーキテクチャノード（",
+      "level": "レベル",
+      "noArchNodes": "このレベルにアーキテクチャノードはありません"
+    },
+    "designLevel": {
+      "design": "デザイン",
+      "total": "合計：",
+      "nodes": "ノード",
+      "allImpactedDesign": "影響を受けるすべてのデザインノード（",
+      "level": "レベル",
+      "noDesignNodes": "このレベルにデザインノードはありません"
+    },
+    "formatBoolean": {
+      "yes": "はい",
+      "no": "いいえ"
+    }
+  },
+  "graphExplorer": {
+    "title": "グラフエクスプローラー",
+    "subtitle": "{{nodeCount}}ノードと{{edgeCount}}リレーションシップのインタラクティブな可視化",
+    "noNodesMatch": "現在のフィルターに一致するノードはありません",
+    "displayOptions": {
+      "title": "表示オプション",
+      "showTypeLabels": "タイプラベルを表示"
+    },
+    "legend": {
+      "title": "凡例",
+      "ontologyTypes": "オントロジータイプ",
+      "productBorders": "製品の境界線",
+      "relationshipTypes": "リレーションシップタイプ",
+      "inconsistencies": "不整合",
+      "nodeIssues": "ノードの問題",
+      "edgeIssues": "エッジの問題"
+    },
+    "loading": "グラフを読み込み中...",
+    "controls": {
+      "title": "グラフコントロール",
+      "drag": "ノードをドラッグして位置を変更",
+      "scroll": "スクロールでズーム",
+      "click": "ノードをクリックして詳細を表示",
+      "hover": "ホバーで接続をハイライト",
+      "selectOntologies": "複数のオントロジーを選択",
+      "toggleLabels": "タイプ/レベルラベルを切り替え"
+    },
+    "nodeDetails": "ノード詳細"
+  },
+  "roadmap": {
+    "title": "合理化ロードマップ",
+    "subtitle": "統合ポートフォリオに向けた戦略比較、デザインおよびアーキテクチャ合理化トラック",
+    "strategyComparison": {
+      "title": "合理化戦略の比較",
+      "description": "異なるリスクプロファイル、タイムライン、コードへの影響を持つ3つの実装戦略。"
+    },
+    "strategy1": {
+      "title": "戦略1：ビッグバン置換",
+      "risk": "高リスク",
+      "timeline": "12〜18ヶ月",
+      "approach": {
+        "title": "アプローチ",
+        "description": "3つの製品すべてを統合ソリューションに一括置換"
+      },
+      "codeChanges": {
+        "title": "コード変更",
+        "description": "コードベースの約80%を置換 - 58コンポーネントに影響"
+      },
+      "designImpact": {
+        "title": "デザインへの影響",
+        "items": {
+          "overhaul": "UIの全面刷新",
+          "library": "新しいコンポーネントライブラリ",
+          "training": "大規模なトレーニングが必要"
+        }
+      },
+      "architectureImpact": {
+        "title": "アーキテクチャへの影響",
+        "items": {
+          "migration": "システム全体の移行",
+          "dataMigration": "データの完全移行",
+          "rewrites": "サービスの書き直し"
+        }
+      },
+      "cost": "コスト：",
+      "costValue": "$$$$$",
+      "downtime": "ダウンタイム：",
+      "downtimeValue": "大規模"
+    },
+    "strategy2": {
+      "title": "戦略2：段階的移行",
+      "risk": "中リスク",
+      "timeline": "18〜24ヶ月",
+      "approach": {
+        "title": "アプローチ",
+        "description": "Phoenix（最もレガシー）から順に製品を1つずつ移行"
+      },
+      "codeChanges": {
+        "title": "コード変更",
+        "description": "フェーズごとに約30% - 製品あたり17〜20コンポーネント"
+      },
+      "designImpact": {
+        "title": "デザインへの影響",
+        "items": {
+          "updates": "段階的なUI更新",
+          "adoption": "プログレッシブなコンポーネント導入",
+          "training": "段階的なトレーニング"
+        }
+      },
+      "architectureImpact": {
+        "title": "アーキテクチャへの影響",
+        "items": {
+          "migration": "サービスごとの移行",
+          "versioning": "APIバージョニングが必要",
+          "integration": "一時的な統合レイヤー"
+        }
+      },
+      "cost": "コスト：",
+      "costValue": "$$$$",
+      "downtime": "ダウンタイム：",
+      "downtimeValue": "フェーズごとに最小限"
+    },
+    "strategy3": {
+      "title": "戦略3：Strangler Figパターン",
+      "recommended": "推奨",
+      "risk": "低リスク",
+      "timeline": "24〜30ヶ月",
+      "approach": {
+        "title": "アプローチ",
+        "description": "既存と並行して統合コンポーネントを構築し、段階的に置換"
+      },
+      "codeChanges": {
+        "title": "コード変更",
+        "description": "約10〜15%ずつ増分 - 一度に5〜8コンポーネント"
+      },
+      "designImpact": {
+        "title": "デザインへの影響",
+        "items": {
+          "adoption": "段階的なデザインシステムの導入",
+          "testing": "A/Bテストが可能",
+          "feedback": "継続的なユーザーフィードバック"
+        }
+      },
+      "architectureImpact": {
+        "title": "アーキテクチャへの影響",
+        "items": {
+          "facade": "Facadeパターンの実装",
+          "consolidation": "段階的なバックエンド統合",
+          "deployment": "ゼロダウンタイムデプロイ"
+        }
+      },
+      "cost": "コスト：",
+      "costValue": "$$$",
+      "downtime": "ダウンタイム：",
+      "downtimeValue": "なし",
+      "bestBalance": "リスク、コスト、事業継続性の最適なバランス"
+    },
+    "viewSelector": {
+      "architecture": "アーキテクチャ合理化",
+      "design": "デザイン合理化",
+      "code": "コード合理化"
+    },
+    "architectureView": {
+      "unifiedComponents": {
+        "title": "統合アーキテクチャコンポーネント",
+        "description": "重複する機能分析から導出された統合アーキテクチャパターン"
+      },
+      "authService": {
+        "title": "認証サービス",
+        "layer": "サービス",
+        "description": "すべての認証フローを処理する統合認証サービス",
+        "features": {
+          "oauth": "OAuth 2.0 / SAMLサポート",
+          "jwt": "JWTトークン管理",
+          "session": "セッション管理"
+        },
+        "consolidates": "統合対象：",
+        "phoenix": "P: 3サービス",
+        "apollo": "A: 2サービス",
+        "voyager": "V: 2サービス"
+      },
+      "apiGateway": {
+        "title": "APIゲートウェイ",
+        "layer": "レイヤー",
+        "description": "一貫性のあるエンドポイントを持つ統合APIゲートウェイ",
+        "features": {
+          "rest": "RESTful API設計",
+          "graphql": "GraphQLサポート",
+          "rateLimit": "レート制限"
+        },
+        "consolidates": "統合対象：",
+        "phoenix": "P: 12エンドポイント",
+        "apollo": "A: 8エンドポイント",
+        "voyager": "V: 10エンドポイント"
+      },
+      "dataLayer": {
+        "title": "データアクセスレイヤー",
+        "layer": "レイヤー",
+        "description": "統合されたデータアクセスパターンとリポジトリ",
+        "features": {
+          "repository": "リポジトリパターン",
+          "orm": "ORM抽象化",
+          "caching": "キャッシュ戦略"
+        },
+        "consolidates": "統合対象：",
+        "phoenix": "P: MySQL",
+        "apollo": "A: MongoDB",
+        "voyager": "V: ElasticSearch"
+      },
+      "userModule": {
+        "title": "ユーザー管理モジュール",
+        "layer": "モジュール",
+        "description": "統合されたユーザー管理機能",
+        "features": {
+          "profile": "プロファイル管理",
+          "rbac": "ロールベースアクセス",
+          "permissions": "権限システム"
+        },
+        "replaces": "置換対象：",
+        "phoenix": "P: 4モジュール",
+        "apollo": "A: 3モジュール",
+        "voyager": "V: 3モジュール"
+      },
+      "securityLayer": {
+        "title": "セキュリティレイヤー",
+        "layer": "レイヤー",
+        "description": "統合されたセキュリティパターンとポリシー",
+        "features": {
+          "encryption": "暗号化標準",
+          "headers": "セキュリティヘッダー",
+          "audit": "監査ログ"
+        },
+        "improves": "改善点：",
+        "improvement": "全製品にわたる一貫したセキュリティ"
+      },
+      "infrastructure": {
+        "title": "インフラストラクチャルート",
+        "layer": "ルート",
+        "description": "統合されたデプロイとインフラストラクチャ",
+        "features": {
+          "containers": "コンテナオーケストレーション",
+          "cicd": "CI/CDパイプライン",
+          "monitoring": "モニタリング設定"
+        },
+        "benefits": "メリット：",
+        "benefit": "単一のデプロイ戦略"
+      },
+      "mappingVisualization": {
+        "title": "アーキテクチャマッピング可視化",
+        "description": "既存のアーキテクチャコンポーネントから統合アーキテクチャパターンへのマッピング"
+      },
+      "migrationStrategy": {
+        "title": "アーキテクチャ移行戦略",
+        "phase1": {
+          "title": "フェーズ1：サービス統合",
+          "description": "認証およびユーザー管理サービスの統合",
+          "phoenix": {
+            "title": "Phoenix",
+            "items": {
+              "extract": "認証ロジックの抽出",
+              "facade": "サービスファサードの作成"
+            }
+          },
+          "apollo": {
+            "title": "Apollo",
+            "items": {
+              "jwt": "JWT処理の適応",
+              "token": "トークン形式の統一"
+            }
+          },
+          "voyager": {
+            "title": "Voyager",
+            "items": {
+              "saml": "SAMLの統合",
+              "sso": "SSOの標準化"
+            }
+          }
+        },
+        "phase2": {
+          "title": "フェーズ2：API統合",
+          "description": "バージョン管理されたエンドポイントを持つ統合APIゲートウェイの作成",
+          "apiDesign": {
+            "title": "API設計",
+            "items": {
+              "rest": "RESTful標準",
+              "openapi": "OpenAPI仕様"
+            }
+          },
+          "gatewaySetup": {
+            "title": "ゲートウェイ設定",
+            "items": {
+              "routes": "ルーティング設定",
+              "loadBalancing": "ロードバランシング"
+            }
+          },
+          "migration": {
+            "title": "移行",
+            "items": {
+              "cutover": "段階的な切り替え",
+              "compat": "後方互換性"
+            }
+          }
+        },
+        "phase3": {
+          "title": "フェーズ3：データレイヤー統合",
+          "description": "統合データアクセスパターンの実装",
+          "dataAbstraction": {
+            "title": "データ抽象化",
+            "items": {
+              "repository": "リポジトリパターン",
+              "queryBuilders": "クエリビルダー"
+            }
+          },
+          "migrationStrategy": {
+            "title": "移行戦略",
+            "items": {
+              "schema": "スキーママッピング",
+              "sync": "データ同期ツール"
+            }
+          },
+          "performance": {
+            "title": "パフォーマンス",
+            "items": {
+              "caching": "キャッシュレイヤー",
+              "queryOpt": "クエリ最適化"
+            }
+          }
+        }
+      }
+    },
+    "designView": {
+      "unifiedComponents": {
+        "title": "統合デザインシステムコンポーネント"
+      },
+      "mapsFrom": "マッピング元：",
+      "mappingVisualization": {
+        "title": "デザインマッピング可視化"
+      }
+    },
+    "codeView": {
+      "unifiedCode": {
+        "title": "統合コード実装"
+      },
+      "consolidates": "統合対象：",
+      "noMappings": "直接的なコードマッピングは見つかりません",
+      "mappingVisualization": {
+        "title": "コードマッピング可視化",
+        "description": "コードマッピングはデザイン接続から導出されます：既存コード → 既存デザイン → 統合デザイン → 統合コード"
+      }
+    },
+    "implementationRoadmap": {
+      "title": "統合実装ロードマップ",
+      "description": "アーキテクチャ、デザイン、コードの合理化トラックを統合した包括的なロードマップ",
+      "phase1": {
+        "title": "フェーズ1：アーキテクチャ基盤",
+        "description": "統合アーキテクチャパターンとサービス境界の確立",
+        "servicesLayer": {
+          "title": "サービスレイヤー",
+          "items": {
+            "consolidateAuth": "認証サービスの統合",
+            "unifyApi": "APIゲートウェイの統一",
+            "standardizeData": "データアクセスの標準化"
+          }
+        },
+        "infrastructure": {
+          "title": "インフラストラクチャ",
+          "items": {
+            "containers": "コンテナオーケストレーション",
+            "cicd": "CI/CDパイプライン",
+            "monitoring": "モニタリング設定"
+          }
+        },
+        "securityLayer": {
+          "title": "セキュリティレイヤー",
+          "items": {
+            "authPatterns": "統合認証パターン",
+            "tokenMgmt": "トークン管理",
+            "policies": "セキュリティポリシー"
+          }
+        }
+      },
+      "phase2": {
+        "title": "フェーズ2：統合デザインシステム",
+        "description": "UIパターンを統合するアトミックデザインコンポーネントの作成",
+        "componentLibrary": {
+          "title": "コンポーネントライブラリ",
+          "items": {
+            "atomsMolecules": "アトムとモレキュール",
+            "organismsTemplates": "オーガニズムとテンプレート",
+            "tokens": "デザイントークン"
+          }
+        },
+        "styleGuide": {
+          "title": "スタイルガイド",
+          "items": {
+            "color": "カラーシステム",
+            "typography": "タイポグラフィスケール",
+            "spacing": "スペーシングルール"
+          }
+        },
+        "documentation": {
+          "title": "ドキュメント",
+          "items": {
+            "componentDocs": "コンポーネントドキュメント",
+            "guidelines": "使用ガイドライン",
+            "bestPractices": "ベストプラクティス"
+          }
+        }
+      },
+      "phase3": {
+        "title": "フェーズ3：コード統合",
+        "description": "製品間で統合コンポーネントとサービスを実装",
+        "frontendCode": {
+          "title": "フロントエンドコード",
+          "items": {
+            "react": "Reactコンポーネント",
+            "state": "状態管理",
+            "api": "API連携"
+          }
+        },
+        "backendServices": {
+          "title": "バックエンドサービス",
+          "items": {
+            "modules": "サービスモジュール",
+            "logic": "ビジネスロジック",
+            "dataModels": "データモデル"
+          }
+        },
+        "sharedLibraries": {
+          "title": "共有ライブラリ",
+          "items": {
+            "utils": "ユーティリティ関数",
+            "hooks": "共通フック",
+            "validation": "バリデーションロジック"
+          }
+        }
+      },
+      "phase4": {
+        "title": "フェーズ4：移行とデプロイ",
+        "description": "選定した合理化戦略に従った段階的な移行",
+        "stranglerFig": {
+          "title": "Strangler Figパターン",
+          "items": {
+            "incremental": "段階的な置換",
+            "featureFlags": "フィーチャーフラグ",
+            "abTesting": "A/Bテスト"
+          }
+        },
+        "qa": {
+          "title": "品質保証",
+          "items": {
+            "regression": "回帰テスト",
+            "perfMonitoring": "パフォーマンスモニタリング",
+            "userAcceptance": "ユーザー受入テスト"
+          }
+        },
+        "deprecation": {
+          "title": "廃止",
+          "items": {
+            "legacyRemoval": "レガシーコードの削除",
+            "dbCleanup": "データベースクリーンアップ",
+            "docsUpdate": "ドキュメントの更新"
+          }
+        }
+      }
+    },
+    "svgLabels": {
+      "phoenixDesign": "Phoenixデザイン",
+      "apolloDesign": "Apolloデザイン",
+      "voyagerDesign": "Voyagerデザイン",
+      "unifiedDesignSystem": "統合デザインシステム",
+      "phoenixCode": "Phoenixコード",
+      "apolloCode": "Apolloコード",
+      "voyagerCode": "Voyagerコード",
+      "unifiedCodeImplementation": "統合コード実装",
+      "phoenixArchitecture": "Phoenixアーキテクチャ",
+      "apolloArchitecture": "Apolloアーキテクチャ",
+      "voyagerArchitecture": "Voyagerアーキテクチャ",
+      "unifiedArchitecture": "統合アーキテクチャ"
+    }
+  },
+  "unifiedProduct": {
+    "title": "統合製品の作成",
+    "subtitle": "合理化プロセスが、重複する機能グラフの曖昧さなく、すべての機能を統合した製品をどのように作成するかをご覧ください",
+    "breadcrumb": {
+      "portfolio": "ポートフォリオ合理化",
+      "current": "統合製品ビュー"
+    },
+    "process": {
+      "title": "合理化プロセス",
+      "steps": {
+        "identify": {
+          "title": "重複する機能の特定",
+          "description": "機能グラフを分析し、製品間で共通の認証パターンを特定します"
+        },
+        "extract": {
+          "title": "コア機能の抽出",
+          "description": "各製品の実装から必須の認証機能を抽出します"
+        },
+        "eliminate": {
+          "title": "冗長性の排除",
+          "description": "重複する実装を削除し、類似の機能を統合します"
+        },
+        "create": {
+          "title": "統合アーキテクチャの作成",
+          "description": "必要なすべてのアウトカムを網羅する統合認証プラットフォームを設計します"
+        }
+      }
+    },
+    "visualization": {
+      "title": "統合の可視化",
+      "steps": {
+        "sourceProducts": "認証機能が重複する3つの個別の製品",
+        "productFeatures": "各製品が独自の認証実装と機能を持っています",
+        "overlapAnalysis": "製品間の共通パターンと重複機能を特定",
+        "consolidation": "すべての機能を統合プラットフォームに統合",
+        "unifiedProduct": "統合認証プラットフォームコンテナを作成",
+        "completeUnion": "すべての製品のすべての機能が統合プラットフォームに保持"
+      },
+      "stepLabels": {
+        "sourceProducts": "ソース製品",
+        "featureAnalysis": "機能分析",
+        "overlapAnalysis": "重複分析",
+        "consolidation": "統合",
+        "unifiedPlatform": "統合プラットフォーム",
+        "completeUnion": "完全統合"
+      }
+    },
+    "benefits": {
+      "title": "統合製品のメリット",
+      "noAmbiguity": {
+        "title": "機能的な曖昧さの排除",
+        "description": "統合製品は重複する機能グラフを排除し、すべてのユースケースに対して明確で曖昧さのない認証パスを提供します。"
+      },
+      "completeCoverage": {
+        "title": "完全な機能カバレッジ",
+        "description": "Phoenix、Apollo、Voyagerのすべてのアウトカムが統合プラットフォームに保持・強化され、機能の欠落がないことを保証します。"
+      },
+      "optimizedArch": {
+        "title": "最適化されたアーキテクチャ",
+        "description": "合理化された製品は3つの製品すべてのベストプラクティスを活用し、より保守性と拡張性に優れたソリューションを実現します。"
+      }
+    },
+    "featureMapping": {
+      "title": "機能マッピング",
+      "description": "個別製品の機能が統合プラットフォームにどのようにマッピングされるかをご覧ください：",
+      "sourceProducts": "ソース製品",
+      "unifiedPlatform": "統合プラットフォーム"
+    },
+    "implementationRoadmap": {
+      "title": "実装ロードマップ",
+      "phase1": {
+        "title": "フェーズ1：分析",
+        "description": "3つの製品すべてにわたる機能的重複の完全な分析"
+      },
+      "phase2": {
+        "title": "フェーズ2：設計",
+        "description": "統合認証アーキテクチャとAPI仕様の作成"
+      },
+      "phase3": {
+        "title": "フェーズ3：移行",
+        "description": "既存製品の統合プラットフォームへの段階的な移行"
+      },
+      "phase4": {
+        "title": "フェーズ4：最適化",
+        "description": "使用パターンに基づくパフォーマンスチューニングと機能強化"
+      }
+    },
+    "cta": {
+      "title": "統合製品を探索する準備はできましたか？",
+      "description": "合理化プロセスをさらに深く掘り下げ、統合アーキテクチャがすべての重要な機能を保持しながらどのように冗長性を排除するかをご覧ください。",
+      "viewRoadmap": "合理化ロードマップを表示",
+      "exploreGraphs": "オントロジーグラフを探索"
+    }
+  }
+}

@@ -13,47 +13,49 @@ import {
   PaintBrushIcon,
   CubeIcon
 } from '@heroicons/react/24/outline';
+import { useTranslation } from 'react-i18next';
 
 const KnowledgeGraphExtraction: React.FC = () => {
+  const { t } = useTranslation('solutions');
   const [selectedOntology, setSelectedOntology] = useState<'functional' | 'design' | 'architecture' | 'code'>('functional');
 
   const inputSources = [
     {
       icon: DocumentTextIcon,
-      title: 'Requirements Documents',
-      description: 'PRDs, specifications, feature briefs',
-      examples: ['Product requirements documents', 'Technical specifications', 'Feature descriptions', 'Business requirements'],
+      title: t('productDevelopment.extraction.inputSources.sources.requirements.title'),
+      description: t('productDevelopment.extraction.inputSources.sources.requirements.description'),
+      examples: t('productDevelopment.extraction.inputSources.sources.requirements.examples', { returnObjects: true }) as unknown as string[],
       color: 'blue'
     },
     {
       icon: ChatBubbleLeftRightIcon,
-      title: 'Conversation Transcripts',
-      description: 'Stakeholder meetings, user interviews',
-      examples: ['Product planning meetings', 'User research sessions', 'Design critiques', 'Technical discussions'],
+      title: t('productDevelopment.extraction.inputSources.sources.conversations.title'),
+      description: t('productDevelopment.extraction.inputSources.sources.conversations.description'),
+      examples: t('productDevelopment.extraction.inputSources.sources.conversations.examples', { returnObjects: true }) as unknown as string[],
       color: 'purple'
     },
     {
       icon: PhotoIcon,
-      title: 'Visual Artifacts',
-      description: 'Wireframes, diagrams, mockups',
-      examples: ['UI wireframes', 'System diagrams', 'User flow sketches', 'Architecture blueprints'],
+      title: t('productDevelopment.extraction.inputSources.sources.visual.title'),
+      description: t('productDevelopment.extraction.inputSources.sources.visual.description'),
+      examples: t('productDevelopment.extraction.inputSources.sources.visual.examples', { returnObjects: true }) as unknown as string[],
       color: 'green'
     },
     {
       icon: CpuChipIcon,
-      title: 'Existing Systems',
-      description: 'Legacy code, APIs, documentation',
-      examples: ['Source code repositories', 'API documentation', 'Database schemas', 'Technical documentation'],
+      title: t('productDevelopment.extraction.inputSources.sources.existing.title'),
+      description: t('productDevelopment.extraction.inputSources.sources.existing.description'),
+      examples: t('productDevelopment.extraction.inputSources.sources.existing.examples', { returnObjects: true }) as unknown as string[],
       color: 'orange'
     }
   ];
 
   const ontologies = {
     functional: {
-      title: 'Functional Ontology',
+      title: t('productDevelopment.extraction.ontologies.functional.title'),
       icon: ChartBarIcon,
       color: 'blue',
-      description: 'Captures what the system should do - features, user needs, business rules',
+      description: t('productDevelopment.extraction.ontologies.functional.description'),
       nodes: [
         { label: 'User Management', type: 'feature' },
         { label: 'Authentication', type: 'capability' },
@@ -65,13 +67,13 @@ const KnowledgeGraphExtraction: React.FC = () => {
         { from: 'Authentication', to: 'Role-Based Access', label: 'enables' },
         { from: 'User Management', to: 'Profile Management', label: 'includes' }
       ],
-      extractedFrom: ['Requirements documents', 'Stakeholder conversations', 'User stories']
+      extractedFrom: t('productDevelopment.extraction.ontologies.functional.extractedFrom', { returnObjects: true }) as unknown as string[]
     },
     design: {
-      title: 'Design Ontology',
+      title: t('productDevelopment.extraction.ontologies.design.title'),
       icon: PaintBrushIcon,
       color: 'purple',
-      description: 'Defines how users interact with the system - UI components, flows, patterns',
+      description: t('productDevelopment.extraction.ontologies.design.description'),
       nodes: [
         { label: 'Login Screen', type: 'screen' },
         { label: 'Email Input', type: 'component' },
@@ -83,13 +85,13 @@ const KnowledgeGraphExtraction: React.FC = () => {
         { from: 'Login Screen', to: 'Password Input', label: 'contains' },
         { from: 'Login Screen', to: 'Login Button', label: 'contains' }
       ],
-      extractedFrom: ['Wireframes', 'Design mockups', 'User flow diagrams']
+      extractedFrom: t('productDevelopment.extraction.ontologies.design.extractedFrom', { returnObjects: true }) as unknown as string[]
     },
     architecture: {
-      title: 'Architecture Ontology',
+      title: t('productDevelopment.extraction.ontologies.architecture.title'),
       icon: CubeIcon,
       color: 'green',
-      description: 'Describes system structure - services, APIs, data models, infrastructure',
+      description: t('productDevelopment.extraction.ontologies.architecture.description'),
       nodes: [
         { label: 'Auth Service', type: 'service' },
         { label: 'User API', type: 'api' },
@@ -101,13 +103,13 @@ const KnowledgeGraphExtraction: React.FC = () => {
         { from: 'Auth Service', to: 'User DB', label: 'reads/writes' },
         { from: 'Auth Service', to: 'JWT Token', label: 'generates' }
       ],
-      extractedFrom: ['Architecture diagrams', 'Technical discussions', 'API specs']
+      extractedFrom: t('productDevelopment.extraction.ontologies.architecture.extractedFrom', { returnObjects: true }) as unknown as string[]
     },
     code: {
-      title: 'Code Ontology',
+      title: t('productDevelopment.extraction.ontologies.code.title'),
       icon: CodeBracketIcon,
       color: 'orange',
-      description: 'Maps implementation details - modules, classes, functions, dependencies',
+      description: t('productDevelopment.extraction.ontologies.code.description'),
       nodes: [
         { label: 'AuthController', type: 'class' },
         { label: 'login()', type: 'method' },
@@ -119,7 +121,7 @@ const KnowledgeGraphExtraction: React.FC = () => {
         { from: 'login()', to: 'validateCredentials()', label: 'calls' },
         { from: 'login()', to: 'generateToken()', label: 'calls' }
       ],
-      extractedFrom: ['Existing codebases', 'Code reviews', 'Technical specs']
+      extractedFrom: t('productDevelopment.extraction.ontologies.code.extractedFrom', { returnObjects: true }) as unknown as string[]
     }
   };
 
@@ -127,24 +129,24 @@ const KnowledgeGraphExtraction: React.FC = () => {
 
   const extractionAgents = [
     {
-      name: 'Document Analyzer Agent',
-      description: 'Extracts structured information from unstructured documents',
-      capabilities: ['NLP-based entity extraction', 'Relationship inference', 'Requirement classification']
+      name: t('productDevelopment.extraction.extraction.agents.documentAnalyzer.name'),
+      description: t('productDevelopment.extraction.extraction.agents.documentAnalyzer.description'),
+      capabilities: t('productDevelopment.extraction.extraction.agents.documentAnalyzer.capabilities', { returnObjects: true }) as unknown as string[]
     },
     {
-      name: 'Conversation Mining Agent',
-      description: 'Analyzes meeting transcripts and captures implicit requirements',
-      capabilities: ['Intent detection', 'Decision tracking', 'Concern identification']
+      name: t('productDevelopment.extraction.extraction.agents.conversationMining.name'),
+      description: t('productDevelopment.extraction.extraction.agents.conversationMining.description'),
+      capabilities: t('productDevelopment.extraction.extraction.agents.conversationMining.capabilities', { returnObjects: true }) as unknown as string[]
     },
     {
-      name: 'Diagram Interpreter Agent',
-      description: 'Converts visual artifacts into structured graph representations',
-      capabilities: ['OCR & shape recognition', 'Flow interpretation', 'Layout understanding']
+      name: t('productDevelopment.extraction.extraction.agents.diagramInterpreter.name'),
+      description: t('productDevelopment.extraction.extraction.agents.diagramInterpreter.description'),
+      capabilities: t('productDevelopment.extraction.extraction.agents.diagramInterpreter.capabilities', { returnObjects: true }) as unknown as string[]
     },
     {
-      name: 'Cross-Reference Validator',
-      description: 'Ensures consistency across all extracted ontologies',
-      capabilities: ['Conflict detection', 'Gap analysis', 'Completeness checking']
+      name: t('productDevelopment.extraction.extraction.agents.crossReferenceValidator.name'),
+      description: t('productDevelopment.extraction.extraction.agents.crossReferenceValidator.description'),
+      capabilities: t('productDevelopment.extraction.extraction.agents.crossReferenceValidator.capabilities', { returnObjects: true }) as unknown as string[]
     }
   ];
 
@@ -164,19 +166,19 @@ const KnowledgeGraphExtraction: React.FC = () => {
         {/* Header */}
         <div className="mb-8">
           <Link to="/solutions/product-development" className="text-sm text-green-600 hover:text-green-700 mb-2 inline-block">
-            ← Back to Overview
+            &larr; {t('productDevelopment.extraction.backToOverview')}
           </Link>
-          <h1 className="text-3xl font-bold text-gray-900">Knowledge Graph Extraction</h1>
+          <h1 className="text-3xl font-bold text-gray-900">{t('productDevelopment.extraction.header.title')}</h1>
           <p className="mt-2 text-gray-600">
-            How AI agents transform requirements, conversations, and diagrams into comprehensive knowledge graphs
+            {t('productDevelopment.extraction.header.description')}
           </p>
         </div>
 
         {/* Input Sources */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Step 1: Multiple Input Sources</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">{t('productDevelopment.extraction.inputSources.title')}</h2>
           <p className="text-sm text-gray-600 mb-6">
-            Our AI agents can process diverse artifacts from your product development process:
+            {t('productDevelopment.extraction.inputSources.description')}
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -193,7 +195,7 @@ const KnowledgeGraphExtraction: React.FC = () => {
                     </div>
                   </div>
                   <div className="ml-10">
-                    <p className="text-xs font-semibold text-gray-700 mb-2">Examples:</p>
+                    <p className="text-xs font-semibold text-gray-700 mb-2">{t('productDevelopment.extraction.inputSources.examples')}</p>
                     <ul className="space-y-1">
                       {source.examples.map((example, idx) => (
                         <li key={idx} className="text-xs text-gray-600">• {example}</li>
@@ -208,9 +210,9 @@ const KnowledgeGraphExtraction: React.FC = () => {
 
         {/* Extraction Process Visualization */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Step 2: AI-Powered Extraction</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">{t('productDevelopment.extraction.extraction.title')}</h2>
           <p className="text-sm text-gray-600 mb-6">
-            Specialized agents work together to extract and structure knowledge:
+            {t('productDevelopment.extraction.extraction.description')}
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -238,9 +240,9 @@ const KnowledgeGraphExtraction: React.FC = () => {
 
         {/* Four Ontologies */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Step 3: Four Comprehensive Ontologies</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">{t('productDevelopment.extraction.ontologies.title')}</h2>
           <p className="text-sm text-gray-600 mb-6">
-            The extraction process produces four interconnected knowledge graphs that capture different aspects of your product:
+            {t('productDevelopment.extraction.ontologies.description')}
           </p>
 
           {/* Ontology Selector */}
@@ -282,7 +284,7 @@ const KnowledgeGraphExtraction: React.FC = () => {
 
             {/* Graph Visualization (Simplified) */}
             <div className="bg-white rounded-lg p-6 mb-4">
-              <p className="text-xs font-semibold text-gray-700 mb-4">Sample Knowledge Graph:</p>
+              <p className="text-xs font-semibold text-gray-700 mb-4">{t('productDevelopment.extraction.sampleGraph')}</p>
               <div className="flex flex-wrap gap-4 items-center justify-center min-h-[200px]">
                 {currentOntology.nodes.map((node, idx) => (
                   <div key={idx} className="relative">
@@ -294,7 +296,7 @@ const KnowledgeGraphExtraction: React.FC = () => {
                 ))}
               </div>
               <div className="mt-4 pt-4 border-t border-gray-200">
-                <p className="text-xs font-semibold text-gray-700 mb-2">Relationships:</p>
+                <p className="text-xs font-semibold text-gray-700 mb-2">{t('productDevelopment.extraction.relationships')}</p>
                 <div className="space-y-1">
                   {currentOntology.edges.map((edge, idx) => (
                     <p key={idx} className="text-xs text-gray-600">
@@ -311,7 +313,7 @@ const KnowledgeGraphExtraction: React.FC = () => {
 
             {/* Extracted From */}
             <div className="bg-white rounded-lg p-4">
-              <p className="text-xs font-semibold text-gray-700 mb-2">Extracted from:</p>
+              <p className="text-xs font-semibold text-gray-700 mb-2">{t('productDevelopment.extraction.extractedFrom')}</p>
               <div className="flex flex-wrap gap-2">
                 {currentOntology.extractedFrom.map((source, idx) => (
                   <span key={idx} className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">
@@ -325,45 +327,45 @@ const KnowledgeGraphExtraction: React.FC = () => {
 
         {/* Cross-Ontology Relationships */}
         <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border border-blue-200 p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Cross-Ontology Relationships</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">{t('productDevelopment.extraction.crossOntology.title')}</h2>
           <p className="text-sm text-gray-600 mb-4">
-            The power of semantic engineering comes from connections between ontologies:
+            {t('productDevelopment.extraction.crossOntology.description')}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-white rounded-lg p-4">
-              <h4 className="text-sm font-semibold text-gray-900 mb-2">Functional → Design</h4>
+              <h4 className="text-sm font-semibold text-gray-900 mb-2">{t('productDevelopment.extraction.crossOntology.functionalDesign.title')}</h4>
               <p className="text-xs text-gray-600 mb-2">
-                Each functional requirement maps to specific UI screens and interactions
+                {t('productDevelopment.extraction.crossOntology.functionalDesign.description')}
               </p>
               <p className="text-xs text-gray-500 italic">
-                Example: "User Authentication" feature → Login Screen + Password Reset Flow
+                {t('productDevelopment.extraction.crossOntology.functionalDesign.example')}
               </p>
             </div>
             <div className="bg-white rounded-lg p-4">
-              <h4 className="text-sm font-semibold text-gray-900 mb-2">Design → Architecture</h4>
+              <h4 className="text-sm font-semibold text-gray-900 mb-2">{t('productDevelopment.extraction.crossOntology.designArchitecture.title')}</h4>
               <p className="text-xs text-gray-600 mb-2">
-                UI components drive backend service and API requirements
+                {t('productDevelopment.extraction.crossOntology.designArchitecture.description')}
               </p>
               <p className="text-xs text-gray-500 italic">
-                Example: Login Screen → Auth Service + User API endpoints
+                {t('productDevelopment.extraction.crossOntology.designArchitecture.example')}
               </p>
             </div>
             <div className="bg-white rounded-lg p-4">
-              <h4 className="text-sm font-semibold text-gray-900 mb-2">Architecture → Code</h4>
+              <h4 className="text-sm font-semibold text-gray-900 mb-2">{t('productDevelopment.extraction.crossOntology.architectureCode.title')}</h4>
               <p className="text-xs text-gray-600 mb-2">
-                System architecture defines implementation structure
+                {t('productDevelopment.extraction.crossOntology.architectureCode.description')}
               </p>
               <p className="text-xs text-gray-500 italic">
-                Example: Auth Service → AuthController class + methods
+                {t('productDevelopment.extraction.crossOntology.architectureCode.example')}
               </p>
             </div>
             <div className="bg-white rounded-lg p-4">
-              <h4 className="text-sm font-semibold text-gray-900 mb-2">Code → Functional</h4>
+              <h4 className="text-sm font-semibold text-gray-900 mb-2">{t('productDevelopment.extraction.crossOntology.codeFunctional.title')}</h4>
               <p className="text-xs text-gray-600 mb-2">
-                Implementation validates that all features are covered
+                {t('productDevelopment.extraction.crossOntology.codeFunctional.description')}
               </p>
               <p className="text-xs text-gray-500 italic">
-                Example: AuthController → validates "User Authentication" is implemented
+                {t('productDevelopment.extraction.crossOntology.codeFunctional.example')}
               </p>
             </div>
           </div>
@@ -371,27 +373,27 @@ const KnowledgeGraphExtraction: React.FC = () => {
 
         {/* Key Benefits */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Why Knowledge Graphs Matter</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">{t('productDevelopment.extraction.benefits.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center">
               <SparklesIcon className="h-10 w-10 text-blue-600 mx-auto mb-3" />
-              <h3 className="font-semibold text-gray-900 mb-2">Single Source of Truth</h3>
+              <h3 className="font-semibold text-gray-900 mb-2">{t('productDevelopment.extraction.benefits.singleSource.title')}</h3>
               <p className="text-sm text-gray-600">
-                All stakeholders work from the same validated knowledge graphs, eliminating miscommunication
+                {t('productDevelopment.extraction.benefits.singleSource.description')}
               </p>
             </div>
             <div className="text-center">
               <CheckCircleIcon className="h-10 w-10 text-green-600 mx-auto mb-3" />
-              <h3 className="font-semibold text-gray-900 mb-2">Automatic Consistency</h3>
+              <h3 className="font-semibold text-gray-900 mb-2">{t('productDevelopment.extraction.benefits.consistency.title')}</h3>
               <p className="text-sm text-gray-600">
-                Changes to one ontology automatically suggest updates to related graphs
+                {t('productDevelopment.extraction.benefits.consistency.description')}
               </p>
             </div>
             <div className="text-center">
               <ChartBarIcon className="h-10 w-10 text-purple-600 mx-auto mb-3" />
-              <h3 className="font-semibold text-gray-900 mb-2">Traceability</h3>
+              <h3 className="font-semibold text-gray-900 mb-2">{t('productDevelopment.extraction.benefits.traceability.title')}</h3>
               <p className="text-sm text-gray-600">
-                Track every requirement from concept through design, architecture, to code
+                {t('productDevelopment.extraction.benefits.traceability.description')}
               </p>
             </div>
           </div>
@@ -399,16 +401,15 @@ const KnowledgeGraphExtraction: React.FC = () => {
 
         {/* Next Step */}
         <div className="bg-gradient-to-r from-green-600 to-teal-600 rounded-xl p-6 text-white">
-          <h2 className="text-xl font-semibold mb-2">Next: Stakeholder Validation</h2>
+          <h2 className="text-xl font-semibold mb-2">{t('productDevelopment.extraction.nextStep.title')}</h2>
           <p className="text-sm mb-4 opacity-90">
-            Once knowledge graphs are extracted, we generate role-specific artifacts for validation by Product Owners,
-            Business Analysts, UX Designers, and Architects.
+            {t('productDevelopment.extraction.nextStep.description')}
           </p>
           <Link
             to="/solutions/product-development/validation"
             className="inline-flex items-center px-4 py-2 bg-white text-green-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
           >
-            View Validation Process
+            {t('productDevelopment.extraction.nextStep.button')}
             <ArrowRightIcon className="ml-2 h-4 w-4" />
           </Link>
         </div>

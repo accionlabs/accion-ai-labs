@@ -2,599 +2,566 @@ import React from 'react';
 import TopicLayout from '../layouts/TopicLayout';
 import { TopicConfig } from '../layouts/types';
 import componentInteractionsDiagram from '../assets/componentInteractionsDiagram.svg';
+import componentInteractionsDiagramJa from '../assets/ja/componentInteractionsDiagram.svg';
+import { useTranslation } from 'react-i18next';
+import { useLocalizedSvg } from '../assets/useLocalizedSvg';
 
 interface ComponentInteractionsNewProps {
   onNavigate?: (screenId: string) => void;
   onNext?: () => void;
 }
 
-// Configuration for Component Interactions topic - kept within the component
-const componentInteractionsConfig: TopicConfig = {
-  "id": "component-interactions",
-  "title": "Component Interactions",
-  "slides": [
-    {
-      "id": "component-interactions-main",
-      "sections": [
-        {
-
-          "id": "prominentDisplay-section-1",
-
-          "type": "prominentDisplay",
-
-          "content": {
-            "title": "Component Interactions",
-            "titleGradient": "from-brand-purple-600 to-brand-pink-600",
-            "description": "How Breeze.AI components communicate and collaborate through event-driven architecture, shared semantic understanding, and intelligent orchestration patterns.",
-            "alignment": "center",
-            "variant": "header"
-          }
-        },
-        {
-
-          "id": "flexibleGrid-section-2",
-
-          "type": "flexibleGrid",
-
-          "content": {
-            "title": "Interaction Architecture Overview",
-            "description": "Breeze.AI uses an event-driven, semantic-aware interaction model where components communicate through well-defined interfaces while maintaining shared context.",
-            "layout": "single",
-            "items": [
-              {
-                "id": "central-architecture",
-                "title": "Component Interaction Flow",
-                "description": "All components interact through a central Knowledge Graph that serves as the single source of truth, with specialized engines handling different aspects of the development process.",
-                "backgroundColor": "bg-gradient-to-br from-purple-50 to-pink-50",
-                "gridSpan": "full-row",
-                "svgDiagram": {
-                  "src": componentInteractionsDiagram,
-                  "alt": "Component Interaction Flow Diagram",
-                  "width": "100%",
-                  "height": "auto",
-                  "viewBox": "0 0 600 384",
-                  "preserveAspectRatio": "xMidYMid meet",
-                  "className": "border border-gray-200 rounded-lg bg-white p-4 max-w-full h-auto"
-                }
-              }
-            ],
-            "variant": "content",
-            "containerStyle": "gradient"
-          }
-        },
-        {
-
-          "id": "flexibleGrid-section-3",
-
-          "type": "flexibleGrid",
-
-          "content": {
-            "title": "Core Interaction Components",
-            "layout": "grid-2",
-            "items": [
-              {
-                "id": "specification-engine",
-                "title": "📋 Specification Engine",
-                "subtitle": "Requirements → Semantics",
-                "description": "Converts human requirements into machine-readable semantic form",
-                "backgroundColor": "bg-warning-50",
-                "borderColor": "border-warning-300",
-                "color": "text-yellow-800"
-              },
-              {
-                "id": "agent-platform",
-                "title": "🤖 Agent Platform",
-                "subtitle": "Task Orchestration",
-                "description": "Coordinates specialized AI agents to execute development tasks",
-                "backgroundColor": "bg-error-50",
-                "borderColor": "border-error-300",
-                "color": "text-red-800"
-              },
-              {
-                "id": "knowledge-graph",
-                "title": "🔗 Knowledge Graph",
-                "subtitle": "Central Truth Source",
-                "description": "Maintains semantic relationships and serves as the central coordination hub",
-                "backgroundColor": "bg-brand-blue-50",
-                "borderColor": "border-secondary-300",
-                "color": "text-blue-800"
-              },
-              {
-                "id": "generation-engine",
-                "title": "⚙️ Generation Engine",
-                "subtitle": "Semantics → Code",
-                "description": "Transforms semantic specifications into executable implementations",
-                "backgroundColor": "bg-success-50",
-                "borderColor": "border-success-300",
-                "color": "text-green-800"
-              },
-              {
-                "id": "quality-engine",
-                "title": "✅ Quality Engine",
-                "subtitle": "Validation & Compliance",
-                "description": "Ensures all outputs meet quality, security, and compliance standards",
-                "backgroundColor": "bg-brand-indigo-50",
-                "borderColor": "border-brand-indigo-300",
-                "color": "text-indigo-800"
-              }
-            ],
-            "variant": "content"
-          }
-        },
-        {
-
-          "id": "flexibleGrid-section-4",
-
-          "type": "flexibleGrid",
-
-          "content": {
-            "title": "Information Flow Patterns",
-            "layout": "grid-4",
-            "items": [
-              {
-                "id": "requirements-flow",
-                "title": "Requirements Flow",
-                "description": "Specification Engine → Knowledge Graph",
-                "icon": "🟡",
-                "backgroundColor": "bg-warning-50",
-                "borderColor": "border-warning-200"
-              },
-              {
-                "id": "agent-coordination",
-                "title": "Agent Coordination",
-                "description": "Agent Platform ↔ Knowledge Graph",
-                "icon": "🔴",
-                "backgroundColor": "bg-error-50",
-                "borderColor": "border-error-200"
-              },
-              {
-                "id": "implementation-flow",
-                "title": "Implementation Flow",
-                "description": "Knowledge Graph → Generation Engine",
-                "icon": "🟢",
-                "backgroundColor": "bg-success-50",
-                "borderColor": "border-success-200"
-              },
-              {
-                "id": "quality-feedback",
-                "title": "Quality Feedback",
-                "description": "Quality Engine → Knowledge Graph",
-                "icon": "🟣",
-                "backgroundColor": "bg-brand-indigo-50",
-                "borderColor": "border-brand-indigo-200"
-              }
-            ],
-            "variant": "content"
-          }
-        },
-        {
-
-          "id": "flexibleGrid-section-5",
-
-          "type": "flexibleGrid",
-
-          "content": {
-            "title": "Event-Driven Communication",
-            "description": "Components communicate through semantic events that carry rich contextual information, enabling intelligent routing and processing decisions.",
-            "layout": "grid-2",
-            "items": [
-              {
-                "id": "semantic-event-structure",
-                "title": "Semantic Event Structure",
-                "backgroundColor": "bg-brand-purple-50",
-                "borderColor": "border-brand-purple-200",
-                "items": [
-                  "event: \"requirement.updated\"",
-                  "source: \"specification.engine\"",
-                  "ontology: \"functional\"",
-                  "entity: \"user-story-123\"",
-                  "changes: [\"acceptance-criteria\"]",
-                  "impact: [\"design\", \"architecture\"]"
-                ]
-              },
-              {
-                "id": "event-categories",
-                "title": "Event Categories",
-                "backgroundColor": "bg-brand-blue-50",
-                "borderColor": "border-secondary-200",
-                "items": [
-                  "Knowledge Events: Ontology updates, validation results",
-                  "Process Events: Task completion, workflow state changes",
-                  "Quality Events: Validation failures, compliance alerts",
-                  "User Events: Approval decisions, manual overrides"
-                ]
-              }
-            ],
-            "variant": "content"
-          }
-        },
-        {
-
-          "id": "sequentialContent-section-6",
-
-          "type": "sequentialContent",
-
-          "content": {
-            "title": "Event Flow Example",
-            "layout": "vertical",
-            "steps": [
-              {
-                "id": "requirement-change",
-                "number": 1,
-                "title": "Requirement Change",
-                "description": "User updates acceptance criteria in specification engine",
-                "color": "bg-brand-purple-500",
-                "backgroundColor": "bg-brand-purple-50"
-              },
-              {
-                "id": "impact-analysis",
-                "number": 2,
-                "title": "Impact Analysis",
-                "description": "Knowledge graph identifies affected design and code elements",
-                "color": "bg-brand-blue-500",
-                "backgroundColor": "bg-brand-blue-50"
-              },
-              {
-                "id": "agent-orchestration",
-                "number": 3,
-                "title": "Agent Orchestration",
-                "description": "Relevant agents receive update tasks with full context",
-                "color": "bg-success-500",
-                "backgroundColor": "bg-success-50"
-              },
-              {
-                "id": "synchronized-update",
-                "number": 4,
-                "title": "Synchronized Update",
-                "description": "All affected components update simultaneously",
-                "color": "bg-warning-500",
-                "backgroundColor": "bg-warning-50"
-              }
-            ],
-            "variant": "timeline"
-          }
-        },
-        {
-
-          "id": "flexibleGrid-section-7",
-
-          "type": "flexibleGrid",
-
-          "content": {
-            "title": "Agent Coordination Patterns",
-            "description": "Specialized AI agents work together through sophisticated coordination patterns that ensure consistent, high-quality outcomes.",
-            "layout": "grid-3",
-            "items": [
-              {
-                "id": "sequential-coordination",
-                "title": "Sequential Coordination",
-                "description": "Agents work in predefined sequences where output from one agent becomes input for the next.",
-                "backgroundColor": "bg-warning-50",
-                "borderColor": "border-warning-200",
-                "items": [
-                  "Example: Specification Agent → Design Agent → Implementation Agent → Test Agent",
-                  "Benefits: Guaranteed consistency, Clear dependency management, Predictable execution flow"
-                ]
-              },
-              {
-                "id": "parallel-coordination",
-                "title": "Parallel Coordination",
-                "description": "Multiple agents work simultaneously on different aspects of the same semantic specification.",
-                "backgroundColor": "bg-success-50",
-                "borderColor": "border-success-200",
-                "items": [
-                  "Example: Frontend Agent || Backend Agent || Database Agent || Test Agent",
-                  "Benefits: Faster execution time, Resource optimization, Independent validation"
-                ]
-              },
-              {
-                "id": "collaborative-coordination",
-                "title": "Collaborative Coordination",
-                "description": "Agents actively communicate and negotiate to resolve conflicts and optimize outcomes.",
-                "backgroundColor": "bg-brand-blue-50",
-                "borderColor": "border-secondary-200",
-                "items": [
-                  "Example: Performance Agent ↔ Security Agent ↔ Cost Agent",
-                  "Benefits: Optimal trade-offs, Conflict resolution, Adaptive behavior"
-                ]
-              }
-            ],
-            "variant": "content"
-          }
-        },
-        {
-
-          "id": "flexibleGrid-section-8",
-
-          "type": "flexibleGrid",
-
-          "content": {
-            "title": "Data Flow and State Management",
-            "layout": "grid-2",
-            "items": [
-              {
-                "id": "centralized-knowledge",
-                "title": "Centralized Knowledge State",
-                "description": "The knowledge graph serves as the single source of truth, with all components maintaining consistent views of the current state.",
-                "backgroundColor": "bg-brand-indigo-50",
-                "borderColor": "border-brand-indigo-200",
-                "items": [
-                  "Version Control: All changes tracked with full history",
-                  "Consistency Guarantees: ACID properties for critical updates",
-                  "Event Sourcing: State reconstructable from event log",
-                  "Conflict Resolution: Automatic and manual resolution strategies"
-                ]
-              },
-              {
-                "id": "distributed-caching",
-                "title": "Distributed Caching",
-                "description": "Components maintain local caches of relevant knowledge subsets for performance while ensuring consistency.",
-                "backgroundColor": "bg-info-50",
-                "borderColor": "border-info-200",
-                "items": [
-                  "Smart Invalidation: Cache updates based on semantic dependencies",
-                  "Prefetching: Anticipate data needs based on workflow patterns",
-                  "Eventual Consistency: Balanced performance and consistency"
-                ]
-              }
-            ],
-            "variant": "content"
-          }
-        },
-        {
-
-          "id": "sequentialContent-section-9",
-
-          "type": "sequentialContent",
-
-          "content": {
-            "title": "State Synchronization Flow",
-            "layout": "vertical",
-            "steps": [
-              {
-                "id": "state-change-detection",
-                "number": 1,
-                "title": "State Change Detection",
-                "description": "Knowledge graph detects semantic changes and calculates impact scope",
-                "color": "bg-brand-indigo-500",
-                "backgroundColor": "bg-brand-indigo-50"
-              },
-              {
-                "id": "dependency-analysis",
-                "number": 2,
-                "title": "Dependency Analysis",
-                "description": "System identifies all components affected by the change",
-                "color": "bg-brand-blue-500",
-                "backgroundColor": "bg-brand-blue-50"
-              },
-              {
-                "id": "coordinated-update",
-                "number": 3,
-                "title": "Coordinated Update",
-                "description": "All affected components receive updates in dependency order",
-                "color": "bg-success-500",
-                "backgroundColor": "bg-success-50"
-              },
-              {
-                "id": "validation-confirmation",
-                "number": 4,
-                "title": "Validation & Confirmation",
-                "description": "Components validate changes and confirm successful update",
-                "color": "bg-info-500",
-                "backgroundColor": "bg-info-50"
-              }
-            ],
-            "variant": "timeline"
-          }
-        },
-        {
-
-          "id": "flexibleGrid-section-10",
-
-          "type": "flexibleGrid",
-
-          "content": {
-            "title": "Quality Assurance Interactions",
-            "description": "Quality validation is deeply integrated into component interactions, ensuring standards are maintained throughout all processes.",
-            "layout": "grid-3",
-            "items": [
-              {
-                "id": "continuous-validation",
-                "title": "Continuous Validation",
-                "description": "Quality checks occur at every interaction point, not just at final stages.",
-                "backgroundColor": "bg-error-50",
-                "borderColor": "border-error-200",
-                "items": [
-                  "Pre-flight Checks: Validate inputs before processing",
-                  "In-process Monitoring: Real-time quality metrics during execution",
-                  "Post-processing Validation: Comprehensive output verification",
-                  "Rollback Capabilities: Automatic reversion on quality failures"
-                ]
-              },
-              {
-                "id": "quality-gates",
-                "title": "Quality Gates",
-                "description": "Mandatory quality checkpoints that must pass before proceeding to next stages.",
-                "backgroundColor": "bg-warning-50",
-                "borderColor": "border-warning-200",
-                "items": [
-                  "Specification Gates: Requirements completeness and consistency",
-                  "Design Gates: Architecture compliance and usability standards",
-                  "Implementation Gates: Code quality and security standards",
-                  "Deployment Gates: Performance and reliability requirements"
-                ]
-              },
-              {
-                "id": "quality-interaction-pattern",
-                "title": "Quality Interaction Pattern",
-                "description": "Step-by-step quality validation workflow",
-                "backgroundColor": "bg-gradient-to-br from-red-50 to-orange-50",
-                "borderColor": "border-gray-200",
-                "processSteps": [
-                  {
-                    "icon": "📝",
-                    "title": "Component Action",
-                    "description": "Agent performs development task",
-                    "backgroundColor": "bg-white",
-                    "iconColor": "bg-brand-blue-500"
-                  },
-                  {
-                    "icon": "✓",
-                    "title": "Quality Validation",
-                    "description": "Quality engine validates output",
-                    "backgroundColor": "bg-white",
-                    "iconColor": "bg-error-500"
-                  },
-                  {
-                    "icon": "✓",
-                    "title": "Pass: Continue",
-                    "description": "Validation passes, next component proceeds",
-                    "backgroundColor": "bg-white",
-                    "iconColor": "bg-success-500"
-                  },
-                  {
-                    "icon": "⚠",
-                    "title": "Fail: Remediate",
-                    "description": "Validation fails, automatic retry or human intervention",
-                    "backgroundColor": "bg-white",
-                    "iconColor": "bg-warning-500"
-                  }
-                ]
-              }
-            ],
-            "variant": "process-flow"
-          }
-        },
-        {
-
-          "id": "flexibleGrid-section-11",
-
-          "type": "flexibleGrid",
-
-          "content": {
-            "title": "Human-in-the-Loop Integration",
-            "description": "Human stakeholders are seamlessly integrated into component interactions at strategic decision points without disrupting automated workflows.",
-            "layout": "grid-3",
-            "items": [
-              {
-                "id": "strategic-decisions",
-                "title": "Strategic Decision Points",
-                "backgroundColor": "bg-brand-purple-50",
-                "borderColor": "border-brand-purple-200",
-                "items": [
-                  "Requirement Ambiguity: Clarification requests to stakeholders",
-                  "Architecture Trade-offs: Performance vs. cost decisions",
-                  "Design Alternatives: UX approach selection",
-                  "Quality Exceptions: Standards deviation approvals"
-                ]
-              },
-              {
-                "id": "approval-workflows",
-                "title": "Approval Workflows",
-                "backgroundColor": "bg-brand-pink-50",
-                "borderColor": "border-brand-pink-200",
-                "items": [
-                  "Specification Reviews: Product owner approvals",
-                  "Architecture Reviews: Technical architect sign-offs",
-                  "Design Reviews: UX designer validations",
-                  "Security Reviews: Security team approvals"
-                ]
-              },
-              {
-                "id": "collaborative-refinement",
-                "title": "Collaborative Refinement",
-                "backgroundColor": "bg-info-50",
-                "borderColor": "border-info-200",
-                "items": [
-                  "Iterative Improvement: Human feedback incorporation",
-                  "Knowledge Enhancement: Domain expert input",
-                  "Exception Handling: Edge case resolution",
-                  "Learning Integration: Pattern improvement"
-                ]
-              }
-            ],
-            "variant": "content"
-          }
-        },
-        {
-
-          "id": "flexibleGrid-section-12",
-
-          "type": "flexibleGrid",
-
-          "content": {
-            "title": "Interaction Benefits",
-            "backgroundColor": "from-purple-50 to-pink-50",
-            "borderColor": "border-brand-purple-500",
-            "categories": [
-              {
-                "title": "Technical Benefits",
-                "color": "purple",
-                "benefits": [
-                  "Consistency: Shared semantic understanding ensures alignment",
-                  "Efficiency: Event-driven architecture minimizes unnecessary work",
-                  "Scalability: Components can scale independently based on demand",
-                  "Reliability: Built-in error handling and recovery mechanisms"
-                ]
-              },
-              {
-                "title": "Business Benefits",
-                "color": "pink",
-                "benefits": [
-                  "Quality Assurance: Continuous validation throughout processes",
-                  "Traceability: Complete audit trail of all interactions",
-                  "Flexibility: Components can evolve without breaking interactions",
-                  "Human Empowerment: Strategic decision-making preserved for humans"
-                ]
-              }
-            ],
-            "variant": "benefits",
-            "containerStyle": "gradient"
-          }
-        },
-        {
-
-          "id": "prominentDisplay-section-13",
-
-          "type": "prominentDisplay",
-
-          "content": {
-            "title": "Understanding Integration Points",
-            "description": "These interaction patterns enable Breeze.AI to integrate seamlessly with existing development tools, infrastructure, and organizational processes.",
-            "buttonText": "Explore Integration Points",
-            "backgroundGradient": "from-brand-purple-600 to-brand-pink-600",
-            "variant": "cta",
-            "items": [
-              {
-                "id": "tool-integration",
-                "title": "Tool Integration",
-                "description": "IDEs, CI/CD pipelines, project management tools",
-                "backgroundColor": "bg-white/20"
-              },
-              {
-                "id": "infrastructure-integration",
-                "title": "Infrastructure Integration",
-                "description": "Cloud platforms, databases, monitoring systems",
-                "backgroundColor": "bg-white/20"
-              },
-              {
-                "id": "process-integration",
-                "title": "Process Integration",
-                "description": "Existing workflows, approval processes, governance",
-                "backgroundColor": "bg-white/20"
-              }
-            ]
-          }
-        }
-      ]
-    }
-  ]
-};
-
 const ComponentInteractionsNew: React.FC<ComponentInteractionsNewProps> = ({ onNavigate, onNext }) => {
+  const { t } = useTranslation('breezeProcess');
+  const l = useLocalizedSvg();
+
+  const config: TopicConfig = React.useMemo(() => ({
+    "id": "component-interactions",
+    "title": t('architecture.componentInteractions.configTitle'),
+    "slides": [
+      {
+        "id": "component-interactions-main",
+        "sections": [
+          {
+            "id": "prominentDisplay-section-1",
+            "type": "prominentDisplay",
+            "content": {
+              "title": t('architecture.componentInteractions.header.title'),
+              "titleGradient": "from-brand-purple-600 to-brand-pink-600",
+              "description": t('architecture.componentInteractions.header.description'),
+              "alignment": "center",
+              "variant": "header"
+            }
+          },
+          {
+            "id": "flexibleGrid-section-2",
+            "type": "flexibleGrid",
+            "content": {
+              "title": t('architecture.componentInteractions.interactionArchitecture.title'),
+              "description": t('architecture.componentInteractions.interactionArchitecture.description'),
+              "layout": "single",
+              "items": [
+                {
+                  "id": "central-architecture",
+                  "title": t('architecture.componentInteractions.interactionArchitecture.diagram.title'),
+                  "description": t('architecture.componentInteractions.interactionArchitecture.diagram.description'),
+                  "backgroundColor": "bg-gradient-to-br from-purple-50 to-pink-50",
+                  "gridSpan": "full-row",
+                  "svgDiagram": {
+                    "src": l(componentInteractionsDiagram, componentInteractionsDiagramJa),
+                    "alt": t('architecture.componentInteractions.interactionArchitecture.diagram.alt'),
+                    "width": "100%",
+                    "height": "auto",
+                    "viewBox": "0 0 600 384",
+                    "preserveAspectRatio": "xMidYMid meet",
+                    "className": "border border-gray-200 rounded-lg bg-white p-4 max-w-full h-auto"
+                  }
+                }
+              ],
+              "variant": "content",
+              "containerStyle": "gradient"
+            }
+          },
+          {
+            "id": "flexibleGrid-section-3",
+            "type": "flexibleGrid",
+            "content": {
+              "title": t('architecture.componentInteractions.coreInteractionComponents.title'),
+              "layout": "grid-2",
+              "items": [
+                {
+                  "id": "specification-engine",
+                  "title": t('architecture.componentInteractions.coreInteractionComponents.specificationEngine.title'),
+                  "subtitle": t('architecture.componentInteractions.coreInteractionComponents.specificationEngine.subtitle'),
+                  "description": t('architecture.componentInteractions.coreInteractionComponents.specificationEngine.description'),
+                  "backgroundColor": "bg-warning-50",
+                  "borderColor": "border-warning-300",
+                  "color": "text-yellow-800"
+                },
+                {
+                  "id": "agent-platform",
+                  "title": t('architecture.componentInteractions.coreInteractionComponents.agentPlatform.title'),
+                  "subtitle": t('architecture.componentInteractions.coreInteractionComponents.agentPlatform.subtitle'),
+                  "description": t('architecture.componentInteractions.coreInteractionComponents.agentPlatform.description'),
+                  "backgroundColor": "bg-error-50",
+                  "borderColor": "border-error-300",
+                  "color": "text-red-800"
+                },
+                {
+                  "id": "knowledge-graph",
+                  "title": t('architecture.componentInteractions.coreInteractionComponents.knowledgeGraph.title'),
+                  "subtitle": t('architecture.componentInteractions.coreInteractionComponents.knowledgeGraph.subtitle'),
+                  "description": t('architecture.componentInteractions.coreInteractionComponents.knowledgeGraph.description'),
+                  "backgroundColor": "bg-brand-blue-50",
+                  "borderColor": "border-secondary-300",
+                  "color": "text-blue-800"
+                },
+                {
+                  "id": "generation-engine",
+                  "title": t('architecture.componentInteractions.coreInteractionComponents.generationEngine.title'),
+                  "subtitle": t('architecture.componentInteractions.coreInteractionComponents.generationEngine.subtitle'),
+                  "description": t('architecture.componentInteractions.coreInteractionComponents.generationEngine.description'),
+                  "backgroundColor": "bg-success-50",
+                  "borderColor": "border-success-300",
+                  "color": "text-green-800"
+                },
+                {
+                  "id": "quality-engine",
+                  "title": t('architecture.componentInteractions.coreInteractionComponents.qualityEngine.title'),
+                  "subtitle": t('architecture.componentInteractions.coreInteractionComponents.qualityEngine.subtitle'),
+                  "description": t('architecture.componentInteractions.coreInteractionComponents.qualityEngine.description'),
+                  "backgroundColor": "bg-brand-indigo-50",
+                  "borderColor": "border-brand-indigo-300",
+                  "color": "text-indigo-800"
+                }
+              ],
+              "variant": "content"
+            }
+          },
+          {
+            "id": "flexibleGrid-section-4",
+            "type": "flexibleGrid",
+            "content": {
+              "title": t('architecture.componentInteractions.informationFlowPatterns.title'),
+              "layout": "grid-4",
+              "items": [
+                {
+                  "id": "requirements-flow",
+                  "title": t('architecture.componentInteractions.informationFlowPatterns.requirementsFlow.title'),
+                  "description": t('architecture.componentInteractions.informationFlowPatterns.requirementsFlow.description'),
+                  "icon": "🟡",
+                  "backgroundColor": "bg-warning-50",
+                  "borderColor": "border-warning-200"
+                },
+                {
+                  "id": "agent-coordination",
+                  "title": t('architecture.componentInteractions.informationFlowPatterns.agentCoordination.title'),
+                  "description": t('architecture.componentInteractions.informationFlowPatterns.agentCoordination.description'),
+                  "icon": "🔴",
+                  "backgroundColor": "bg-error-50",
+                  "borderColor": "border-error-200"
+                },
+                {
+                  "id": "implementation-flow",
+                  "title": t('architecture.componentInteractions.informationFlowPatterns.implementationFlow.title'),
+                  "description": t('architecture.componentInteractions.informationFlowPatterns.implementationFlow.description'),
+                  "icon": "🟢",
+                  "backgroundColor": "bg-success-50",
+                  "borderColor": "border-success-200"
+                },
+                {
+                  "id": "quality-feedback",
+                  "title": t('architecture.componentInteractions.informationFlowPatterns.qualityFeedback.title'),
+                  "description": t('architecture.componentInteractions.informationFlowPatterns.qualityFeedback.description'),
+                  "icon": "🟣",
+                  "backgroundColor": "bg-brand-indigo-50",
+                  "borderColor": "border-brand-indigo-200"
+                }
+              ],
+              "variant": "content"
+            }
+          },
+          {
+            "id": "flexibleGrid-section-5",
+            "type": "flexibleGrid",
+            "content": {
+              "title": t('architecture.componentInteractions.eventDrivenCommunication.title'),
+              "description": t('architecture.componentInteractions.eventDrivenCommunication.description'),
+              "layout": "grid-2",
+              "items": [
+                {
+                  "id": "semantic-event-structure",
+                  "title": t('architecture.componentInteractions.eventDrivenCommunication.semanticEventStructure.title'),
+                  "backgroundColor": "bg-brand-purple-50",
+                  "borderColor": "border-brand-purple-200",
+                  "items": [
+                    t('architecture.componentInteractions.eventDrivenCommunication.semanticEventStructure.items.0'),
+                    t('architecture.componentInteractions.eventDrivenCommunication.semanticEventStructure.items.1'),
+                    t('architecture.componentInteractions.eventDrivenCommunication.semanticEventStructure.items.2'),
+                    t('architecture.componentInteractions.eventDrivenCommunication.semanticEventStructure.items.3'),
+                    t('architecture.componentInteractions.eventDrivenCommunication.semanticEventStructure.items.4'),
+                    t('architecture.componentInteractions.eventDrivenCommunication.semanticEventStructure.items.5')
+                  ]
+                },
+                {
+                  "id": "event-categories",
+                  "title": t('architecture.componentInteractions.eventDrivenCommunication.eventCategories.title'),
+                  "backgroundColor": "bg-brand-blue-50",
+                  "borderColor": "border-secondary-200",
+                  "items": [
+                    t('architecture.componentInteractions.eventDrivenCommunication.eventCategories.items.0'),
+                    t('architecture.componentInteractions.eventDrivenCommunication.eventCategories.items.1'),
+                    t('architecture.componentInteractions.eventDrivenCommunication.eventCategories.items.2'),
+                    t('architecture.componentInteractions.eventDrivenCommunication.eventCategories.items.3')
+                  ]
+                }
+              ],
+              "variant": "content"
+            }
+          },
+          {
+            "id": "sequentialContent-section-6",
+            "type": "sequentialContent",
+            "content": {
+              "title": t('architecture.componentInteractions.eventFlowExample.title'),
+              "layout": "vertical",
+              "steps": [
+                {
+                  "id": "requirement-change",
+                  "number": 1,
+                  "title": t('architecture.componentInteractions.eventFlowExample.steps.requirementChange.title'),
+                  "description": t('architecture.componentInteractions.eventFlowExample.steps.requirementChange.description'),
+                  "color": "bg-brand-purple-500",
+                  "backgroundColor": "bg-brand-purple-50"
+                },
+                {
+                  "id": "impact-analysis",
+                  "number": 2,
+                  "title": t('architecture.componentInteractions.eventFlowExample.steps.impactAnalysis.title'),
+                  "description": t('architecture.componentInteractions.eventFlowExample.steps.impactAnalysis.description'),
+                  "color": "bg-brand-blue-500",
+                  "backgroundColor": "bg-brand-blue-50"
+                },
+                {
+                  "id": "agent-orchestration",
+                  "number": 3,
+                  "title": t('architecture.componentInteractions.eventFlowExample.steps.agentOrchestration.title'),
+                  "description": t('architecture.componentInteractions.eventFlowExample.steps.agentOrchestration.description'),
+                  "color": "bg-success-500",
+                  "backgroundColor": "bg-success-50"
+                },
+                {
+                  "id": "synchronized-update",
+                  "number": 4,
+                  "title": t('architecture.componentInteractions.eventFlowExample.steps.synchronizedUpdate.title'),
+                  "description": t('architecture.componentInteractions.eventFlowExample.steps.synchronizedUpdate.description'),
+                  "color": "bg-warning-500",
+                  "backgroundColor": "bg-warning-50"
+                }
+              ],
+              "variant": "timeline"
+            }
+          },
+          {
+            "id": "flexibleGrid-section-7",
+            "type": "flexibleGrid",
+            "content": {
+              "title": t('architecture.componentInteractions.agentCoordinationPatterns.title'),
+              "description": t('architecture.componentInteractions.agentCoordinationPatterns.description'),
+              "layout": "grid-3",
+              "items": [
+                {
+                  "id": "sequential-coordination",
+                  "title": t('architecture.componentInteractions.agentCoordinationPatterns.sequential.title'),
+                  "description": t('architecture.componentInteractions.agentCoordinationPatterns.sequential.description'),
+                  "backgroundColor": "bg-warning-50",
+                  "borderColor": "border-warning-200",
+                  "items": [
+                    t('architecture.componentInteractions.agentCoordinationPatterns.sequential.items.0'),
+                    t('architecture.componentInteractions.agentCoordinationPatterns.sequential.items.1')
+                  ]
+                },
+                {
+                  "id": "parallel-coordination",
+                  "title": t('architecture.componentInteractions.agentCoordinationPatterns.parallel.title'),
+                  "description": t('architecture.componentInteractions.agentCoordinationPatterns.parallel.description'),
+                  "backgroundColor": "bg-success-50",
+                  "borderColor": "border-success-200",
+                  "items": [
+                    t('architecture.componentInteractions.agentCoordinationPatterns.parallel.items.0'),
+                    t('architecture.componentInteractions.agentCoordinationPatterns.parallel.items.1')
+                  ]
+                },
+                {
+                  "id": "collaborative-coordination",
+                  "title": t('architecture.componentInteractions.agentCoordinationPatterns.collaborative.title'),
+                  "description": t('architecture.componentInteractions.agentCoordinationPatterns.collaborative.description'),
+                  "backgroundColor": "bg-brand-blue-50",
+                  "borderColor": "border-secondary-200",
+                  "items": [
+                    t('architecture.componentInteractions.agentCoordinationPatterns.collaborative.items.0'),
+                    t('architecture.componentInteractions.agentCoordinationPatterns.collaborative.items.1')
+                  ]
+                }
+              ],
+              "variant": "content"
+            }
+          },
+          {
+            "id": "flexibleGrid-section-8",
+            "type": "flexibleGrid",
+            "content": {
+              "title": t('architecture.componentInteractions.dataFlowStateManagement.title'),
+              "layout": "grid-2",
+              "items": [
+                {
+                  "id": "centralized-knowledge",
+                  "title": t('architecture.componentInteractions.dataFlowStateManagement.centralizedKnowledge.title'),
+                  "description": t('architecture.componentInteractions.dataFlowStateManagement.centralizedKnowledge.description'),
+                  "backgroundColor": "bg-brand-indigo-50",
+                  "borderColor": "border-brand-indigo-200",
+                  "items": [
+                    t('architecture.componentInteractions.dataFlowStateManagement.centralizedKnowledge.items.0'),
+                    t('architecture.componentInteractions.dataFlowStateManagement.centralizedKnowledge.items.1'),
+                    t('architecture.componentInteractions.dataFlowStateManagement.centralizedKnowledge.items.2'),
+                    t('architecture.componentInteractions.dataFlowStateManagement.centralizedKnowledge.items.3')
+                  ]
+                },
+                {
+                  "id": "distributed-caching",
+                  "title": t('architecture.componentInteractions.dataFlowStateManagement.distributedCaching.title'),
+                  "description": t('architecture.componentInteractions.dataFlowStateManagement.distributedCaching.description'),
+                  "backgroundColor": "bg-info-50",
+                  "borderColor": "border-info-200",
+                  "items": [
+                    t('architecture.componentInteractions.dataFlowStateManagement.distributedCaching.items.0'),
+                    t('architecture.componentInteractions.dataFlowStateManagement.distributedCaching.items.1'),
+                    t('architecture.componentInteractions.dataFlowStateManagement.distributedCaching.items.2')
+                  ]
+                }
+              ],
+              "variant": "content"
+            }
+          },
+          {
+            "id": "sequentialContent-section-9",
+            "type": "sequentialContent",
+            "content": {
+              "title": t('architecture.componentInteractions.stateSynchronizationFlow.title'),
+              "layout": "vertical",
+              "steps": [
+                {
+                  "id": "state-change-detection",
+                  "number": 1,
+                  "title": t('architecture.componentInteractions.stateSynchronizationFlow.steps.stateChangeDetection.title'),
+                  "description": t('architecture.componentInteractions.stateSynchronizationFlow.steps.stateChangeDetection.description'),
+                  "color": "bg-brand-indigo-500",
+                  "backgroundColor": "bg-brand-indigo-50"
+                },
+                {
+                  "id": "dependency-analysis",
+                  "number": 2,
+                  "title": t('architecture.componentInteractions.stateSynchronizationFlow.steps.dependencyAnalysis.title'),
+                  "description": t('architecture.componentInteractions.stateSynchronizationFlow.steps.dependencyAnalysis.description'),
+                  "color": "bg-brand-blue-500",
+                  "backgroundColor": "bg-brand-blue-50"
+                },
+                {
+                  "id": "coordinated-update",
+                  "number": 3,
+                  "title": t('architecture.componentInteractions.stateSynchronizationFlow.steps.coordinatedUpdate.title'),
+                  "description": t('architecture.componentInteractions.stateSynchronizationFlow.steps.coordinatedUpdate.description'),
+                  "color": "bg-success-500",
+                  "backgroundColor": "bg-success-50"
+                },
+                {
+                  "id": "validation-confirmation",
+                  "number": 4,
+                  "title": t('architecture.componentInteractions.stateSynchronizationFlow.steps.validationConfirmation.title'),
+                  "description": t('architecture.componentInteractions.stateSynchronizationFlow.steps.validationConfirmation.description'),
+                  "color": "bg-info-500",
+                  "backgroundColor": "bg-info-50"
+                }
+              ],
+              "variant": "timeline"
+            }
+          },
+          {
+            "id": "flexibleGrid-section-10",
+            "type": "flexibleGrid",
+            "content": {
+              "title": t('architecture.componentInteractions.qualityAssuranceInteractions.title'),
+              "description": t('architecture.componentInteractions.qualityAssuranceInteractions.description'),
+              "layout": "grid-3",
+              "items": [
+                {
+                  "id": "continuous-validation",
+                  "title": t('architecture.componentInteractions.qualityAssuranceInteractions.continuousValidation.title'),
+                  "description": t('architecture.componentInteractions.qualityAssuranceInteractions.continuousValidation.description'),
+                  "backgroundColor": "bg-error-50",
+                  "borderColor": "border-error-200",
+                  "items": [
+                    t('architecture.componentInteractions.qualityAssuranceInteractions.continuousValidation.items.0'),
+                    t('architecture.componentInteractions.qualityAssuranceInteractions.continuousValidation.items.1'),
+                    t('architecture.componentInteractions.qualityAssuranceInteractions.continuousValidation.items.2'),
+                    t('architecture.componentInteractions.qualityAssuranceInteractions.continuousValidation.items.3')
+                  ]
+                },
+                {
+                  "id": "quality-gates",
+                  "title": t('architecture.componentInteractions.qualityAssuranceInteractions.qualityGates.title'),
+                  "description": t('architecture.componentInteractions.qualityAssuranceInteractions.qualityGates.description'),
+                  "backgroundColor": "bg-warning-50",
+                  "borderColor": "border-warning-200",
+                  "items": [
+                    t('architecture.componentInteractions.qualityAssuranceInteractions.qualityGates.items.0'),
+                    t('architecture.componentInteractions.qualityAssuranceInteractions.qualityGates.items.1'),
+                    t('architecture.componentInteractions.qualityAssuranceInteractions.qualityGates.items.2'),
+                    t('architecture.componentInteractions.qualityAssuranceInteractions.qualityGates.items.3')
+                  ]
+                },
+                {
+                  "id": "quality-interaction-pattern",
+                  "title": t('architecture.componentInteractions.qualityAssuranceInteractions.qualityInteractionPattern.title'),
+                  "description": t('architecture.componentInteractions.qualityAssuranceInteractions.qualityInteractionPattern.description'),
+                  "backgroundColor": "bg-gradient-to-br from-red-50 to-orange-50",
+                  "borderColor": "border-gray-200",
+                  "processSteps": [
+                    {
+                      "icon": "📝",
+                      "title": t('architecture.componentInteractions.qualityAssuranceInteractions.qualityInteractionPattern.processSteps.componentAction.title'),
+                      "description": t('architecture.componentInteractions.qualityAssuranceInteractions.qualityInteractionPattern.processSteps.componentAction.description'),
+                      "backgroundColor": "bg-white",
+                      "iconColor": "bg-brand-blue-500"
+                    },
+                    {
+                      "icon": "✓",
+                      "title": t('architecture.componentInteractions.qualityAssuranceInteractions.qualityInteractionPattern.processSteps.qualityValidation.title'),
+                      "description": t('architecture.componentInteractions.qualityAssuranceInteractions.qualityInteractionPattern.processSteps.qualityValidation.description'),
+                      "backgroundColor": "bg-white",
+                      "iconColor": "bg-error-500"
+                    },
+                    {
+                      "icon": "✓",
+                      "title": t('architecture.componentInteractions.qualityAssuranceInteractions.qualityInteractionPattern.processSteps.passContinue.title'),
+                      "description": t('architecture.componentInteractions.qualityAssuranceInteractions.qualityInteractionPattern.processSteps.passContinue.description'),
+                      "backgroundColor": "bg-white",
+                      "iconColor": "bg-success-500"
+                    },
+                    {
+                      "icon": "⚠",
+                      "title": t('architecture.componentInteractions.qualityAssuranceInteractions.qualityInteractionPattern.processSteps.failRemediate.title'),
+                      "description": t('architecture.componentInteractions.qualityAssuranceInteractions.qualityInteractionPattern.processSteps.failRemediate.description'),
+                      "backgroundColor": "bg-white",
+                      "iconColor": "bg-warning-500"
+                    }
+                  ]
+                }
+              ],
+              "variant": "process-flow"
+            }
+          },
+          {
+            "id": "flexibleGrid-section-11",
+            "type": "flexibleGrid",
+            "content": {
+              "title": t('architecture.componentInteractions.humanInTheLoopIntegration.title'),
+              "description": t('architecture.componentInteractions.humanInTheLoopIntegration.description'),
+              "layout": "grid-3",
+              "items": [
+                {
+                  "id": "strategic-decisions",
+                  "title": t('architecture.componentInteractions.humanInTheLoopIntegration.strategicDecisions.title'),
+                  "backgroundColor": "bg-brand-purple-50",
+                  "borderColor": "border-brand-purple-200",
+                  "items": [
+                    t('architecture.componentInteractions.humanInTheLoopIntegration.strategicDecisions.items.0'),
+                    t('architecture.componentInteractions.humanInTheLoopIntegration.strategicDecisions.items.1'),
+                    t('architecture.componentInteractions.humanInTheLoopIntegration.strategicDecisions.items.2'),
+                    t('architecture.componentInteractions.humanInTheLoopIntegration.strategicDecisions.items.3')
+                  ]
+                },
+                {
+                  "id": "approval-workflows",
+                  "title": t('architecture.componentInteractions.humanInTheLoopIntegration.approvalWorkflows.title'),
+                  "backgroundColor": "bg-brand-pink-50",
+                  "borderColor": "border-brand-pink-200",
+                  "items": [
+                    t('architecture.componentInteractions.humanInTheLoopIntegration.approvalWorkflows.items.0'),
+                    t('architecture.componentInteractions.humanInTheLoopIntegration.approvalWorkflows.items.1'),
+                    t('architecture.componentInteractions.humanInTheLoopIntegration.approvalWorkflows.items.2'),
+                    t('architecture.componentInteractions.humanInTheLoopIntegration.approvalWorkflows.items.3')
+                  ]
+                },
+                {
+                  "id": "collaborative-refinement",
+                  "title": t('architecture.componentInteractions.humanInTheLoopIntegration.collaborativeRefinement.title'),
+                  "backgroundColor": "bg-info-50",
+                  "borderColor": "border-info-200",
+                  "items": [
+                    t('architecture.componentInteractions.humanInTheLoopIntegration.collaborativeRefinement.items.0'),
+                    t('architecture.componentInteractions.humanInTheLoopIntegration.collaborativeRefinement.items.1'),
+                    t('architecture.componentInteractions.humanInTheLoopIntegration.collaborativeRefinement.items.2'),
+                    t('architecture.componentInteractions.humanInTheLoopIntegration.collaborativeRefinement.items.3')
+                  ]
+                }
+              ],
+              "variant": "content"
+            }
+          },
+          {
+            "id": "flexibleGrid-section-12",
+            "type": "flexibleGrid",
+            "content": {
+              "title": t('architecture.componentInteractions.interactionBenefits.title'),
+              "backgroundColor": "from-purple-50 to-pink-50",
+              "borderColor": "border-brand-purple-500",
+              "categories": [
+                {
+                  "title": t('architecture.componentInteractions.interactionBenefits.technical.title'),
+                  "color": "purple",
+                  "benefits": [
+                    t('architecture.componentInteractions.interactionBenefits.technical.items.0'),
+                    t('architecture.componentInteractions.interactionBenefits.technical.items.1'),
+                    t('architecture.componentInteractions.interactionBenefits.technical.items.2'),
+                    t('architecture.componentInteractions.interactionBenefits.technical.items.3')
+                  ]
+                },
+                {
+                  "title": t('architecture.componentInteractions.interactionBenefits.business.title'),
+                  "color": "pink",
+                  "benefits": [
+                    t('architecture.componentInteractions.interactionBenefits.business.items.0'),
+                    t('architecture.componentInteractions.interactionBenefits.business.items.1'),
+                    t('architecture.componentInteractions.interactionBenefits.business.items.2'),
+                    t('architecture.componentInteractions.interactionBenefits.business.items.3')
+                  ]
+                }
+              ],
+              "variant": "benefits",
+              "containerStyle": "gradient"
+            }
+          },
+          {
+            "id": "prominentDisplay-section-13",
+            "type": "prominentDisplay",
+            "content": {
+              "title": t('architecture.componentInteractions.cta.title'),
+              "description": t('architecture.componentInteractions.cta.description'),
+              "buttonText": t('architecture.componentInteractions.cta.buttonText'),
+              "backgroundGradient": "from-brand-purple-600 to-brand-pink-600",
+              "variant": "cta",
+              "items": [
+                {
+                  "id": "tool-integration",
+                  "title": t('architecture.componentInteractions.cta.toolIntegration.title'),
+                  "description": t('architecture.componentInteractions.cta.toolIntegration.description'),
+                  "backgroundColor": "bg-white/20"
+                },
+                {
+                  "id": "infrastructure-integration",
+                  "title": t('architecture.componentInteractions.cta.infrastructureIntegration.title'),
+                  "description": t('architecture.componentInteractions.cta.infrastructureIntegration.description'),
+                  "backgroundColor": "bg-white/20"
+                },
+                {
+                  "id": "process-integration",
+                  "title": t('architecture.componentInteractions.cta.processIntegration.title'),
+                  "description": t('architecture.componentInteractions.cta.processIntegration.description'),
+                  "backgroundColor": "bg-white/20"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }), [t, l]);
+
   return (
-    <TopicLayout 
-      config={componentInteractionsConfig}
+    <TopicLayout
+      config={config}
       onNavigate={onNavigate}
       onNext={onNext}
     />

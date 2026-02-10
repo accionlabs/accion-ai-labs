@@ -1,8 +1,8 @@
 import React from 'react';
-import { 
-  ChatBubbleBottomCenterTextIcon, 
-  ChartBarIcon, 
-  CogIcon, 
+import {
+  ChatBubbleBottomCenterTextIcon,
+  ChartBarIcon,
+  CogIcon,
   CpuChipIcon,
   DocumentTextIcon,
   MagnifyingGlassIcon,
@@ -21,249 +21,209 @@ import {
   ChartPieIcon,
   CloudArrowUpIcon
 } from '@heroicons/react/24/outline';
+import { useTranslation } from 'react-i18next';
 
 const KAPSFramework: React.FC = () => {
+  const { t, i18n } = useTranslation('coreTechnology');
+  const svgSuffix = i18n.language.startsWith('ja') ? '-ja' : '';
+
   // Portfolio data for AI Agentic Solutions
   const portfolios = [
     {
       id: 'knowledge',
-      name: 'Knowledge Portfolio',
+      name: t('kaps.portfolios.knowledge.name'),
       color: 'blue',
       icon: ChatBubbleBottomCenterTextIcon,
-      tagline: 'Autonomous Knowledge Agents',
-      description: 'Deploy intelligent agents that autonomously process, understand, and generate content from unstructured data with reasoning capabilities',
-      businessValue: 'Self-organizing knowledge agents that learn and improve continuously',
-      impact: 'Autonomous agents handle complex knowledge tasks without human intervention',
+      tagline: t('kaps.portfolios.knowledge.tagline'),
+      description: t('kaps.portfolios.knowledge.description'),
+      businessValue: t('kaps.portfolios.knowledge.businessValue'),
+      impact: t('kaps.portfolios.knowledge.impact'),
       timeToValue: '2-4 weeks',
       complexity: 'Low',
       maturityLevel: 'Beginner',
       useCases: [
         {
-          title: 'Document Processing Agent Network',
-          description: 'Multi-agent system where specialized agents collaborate to extract, validate, and enrich information from documents',
+          title: t('kaps.portfolios.knowledge.useCases.documentProcessing.title'),
+          description: t('kaps.portfolios.knowledge.useCases.documentProcessing.description'),
           icon: DocumentTextIcon,
-          benefits: ['Autonomous document understanding', 'Self-correcting accuracy', 'Agent learns from feedback'],
-          examples: ['Contract Analysis Agent', 'Compliance Review Agent', 'Invoice Processing Swarm', 'Legal Research Assistant'],
-          technologies: ['LangChain Agents', 'AutoGPT', 'Semantic Memory Systems', 'RAG Pipelines']
+          benefits: t('kaps.portfolios.knowledge.useCases.documentProcessing.benefits', { returnObjects: true }) as unknown as string[],
+          examples: t('kaps.portfolios.knowledge.useCases.documentProcessing.examples', { returnObjects: true }) as unknown as string[],
+          technologies: t('kaps.portfolios.knowledge.useCases.documentProcessing.technologies', { returnObjects: true }) as unknown as string[]
         },
         {
-          title: 'Conversational AI Agent Ecosystem',
-          description: 'Orchestrated agent teams that handle complex multi-turn conversations with memory, context, and goal-seeking behavior',
+          title: t('kaps.portfolios.knowledge.useCases.conversationalAI.title'),
+          description: t('kaps.portfolios.knowledge.useCases.conversationalAI.description'),
           icon: ChatBubbleBottomCenterTextIcon,
-          benefits: ['Goal-oriented dialogue', 'Multi-agent handoffs', 'Persistent memory across sessions'],
-          examples: ['Customer Success Agent Team', 'Technical Support Bot Network', 'Sales Agent Orchestration', 'HR Assistant Collective'],
-          technologies: ['Agent Orchestration Frameworks', 'Memory Networks', 'Tool-Using Agents', 'Chain-of-Thought Reasoning']
+          benefits: t('kaps.portfolios.knowledge.useCases.conversationalAI.benefits', { returnObjects: true }) as unknown as string[],
+          examples: t('kaps.portfolios.knowledge.useCases.conversationalAI.examples', { returnObjects: true }) as unknown as string[],
+          technologies: t('kaps.portfolios.knowledge.useCases.conversationalAI.technologies', { returnObjects: true }) as unknown as string[]
         },
         {
-          title: 'Content Generation Agent Factory',
-          description: 'Autonomous agents that plan, create, review, and optimize content with minimal human oversight',
+          title: t('kaps.portfolios.knowledge.useCases.contentGeneration.title'),
+          description: t('kaps.portfolios.knowledge.useCases.contentGeneration.description'),
           icon: SparklesIcon,
-          benefits: ['Self-improving content quality', 'Multi-agent review process', 'Adaptive style learning'],
-          examples: ['Marketing Campaign Agent', 'Technical Writing Assistant', 'Creative Brief Generator', 'Social Media Agent Network'],
-          technologies: ['CrewAI', 'Agent Feedback Loops', 'Fine-tuned LLM Agents', 'Prompt Chaining Systems']
+          benefits: t('kaps.portfolios.knowledge.useCases.contentGeneration.benefits', { returnObjects: true }) as unknown as string[],
+          examples: t('kaps.portfolios.knowledge.useCases.contentGeneration.examples', { returnObjects: true }) as unknown as string[],
+          technologies: t('kaps.portfolios.knowledge.useCases.contentGeneration.technologies', { returnObjects: true }) as unknown as string[]
         },
         {
-          title: 'Knowledge Mining Agent Swarm',
-          description: 'Distributed agents that autonomously discover, connect, and synthesize knowledge from multiple sources',
+          title: t('kaps.portfolios.knowledge.useCases.knowledgeMining.title'),
+          description: t('kaps.portfolios.knowledge.useCases.knowledgeMining.description'),
           icon: MagnifyingGlassIcon,
-          benefits: ['Autonomous knowledge graph building', 'Cross-domain synthesis', 'Proactive insight generation'],
-          examples: ['Research Discovery Agents', 'Competitive Intelligence Network', 'Patent Analysis Swarm', 'Market Research Collective'],
-          technologies: ['Graph Neural Networks', 'Agent-based Web Crawling', 'Embedding-based Agents', 'Knowledge Graph Agents']
+          benefits: t('kaps.portfolios.knowledge.useCases.knowledgeMining.benefits', { returnObjects: true }) as unknown as string[],
+          examples: t('kaps.portfolios.knowledge.useCases.knowledgeMining.examples', { returnObjects: true }) as unknown as string[],
+          technologies: t('kaps.portfolios.knowledge.useCases.knowledgeMining.technologies', { returnObjects: true }) as unknown as string[]
         }
       ],
-      architectureComponents: [
-        'Agent Orchestration Platform',
-        'Shared Memory & Context Store',
-        'Tool Registry for Agents',
-        'Agent Communication Protocol',
-        'Feedback & Learning Loop System'
-      ],
-      successMetrics: [
-        'Agent autonomy level',
-        'Task completion without intervention',
-        'Agent learning rate',
-        'Multi-agent collaboration efficiency'
-      ]
+      architectureComponents: t('kaps.portfolios.knowledge.architectureComponents', { returnObjects: true }) as unknown as string[],
+      successMetrics: t('kaps.portfolios.knowledge.successMetrics', { returnObjects: true }) as unknown as string[]
     },
     {
       id: 'analytics',
-      name: 'Analytics Portfolio',
+      name: t('kaps.portfolios.analytics.name'),
       color: 'purple',
       icon: ChartBarIcon,
-      tagline: 'Intelligent Analytics Agents',
-      description: 'Deploy autonomous analyst agents that proactively discover insights, predict outcomes, and recommend actions from structured data',
-      businessValue: 'Self-directed analytics agents that anticipate needs and act on insights',
-      impact: 'Proactive intelligence agents that identify opportunities before humans ask',
+      tagline: t('kaps.portfolios.analytics.tagline'),
+      description: t('kaps.portfolios.analytics.description'),
+      businessValue: t('kaps.portfolios.analytics.businessValue'),
+      impact: t('kaps.portfolios.analytics.impact'),
       timeToValue: '4-8 weeks',
       complexity: 'Medium',
       maturityLevel: 'Intermediate',
       useCases: [
         {
-          title: 'Predictive Analytics Agent Team',
-          description: 'Collaborative agents that autonomously build, validate, and deploy predictive models with continuous learning',
+          title: t('kaps.portfolios.analytics.useCases.predictiveAnalytics.title'),
+          description: t('kaps.portfolios.analytics.useCases.predictiveAnalytics.description'),
           icon: ChartPieIcon,
-          benefits: ['Self-optimizing models', 'Autonomous feature engineering', 'Proactive anomaly detection'],
-          examples: ['Demand Forecasting Agent', 'Risk Assessment Network', 'Churn Prediction Swarm', 'Revenue Optimization Agent'],
-          technologies: ['AutoML Agents', 'Model Selection Agents', 'Feature Engineering Bots', 'Ensemble Agent Networks']
+          benefits: t('kaps.portfolios.analytics.useCases.predictiveAnalytics.benefits', { returnObjects: true }) as unknown as string[],
+          examples: t('kaps.portfolios.analytics.useCases.predictiveAnalytics.examples', { returnObjects: true }) as unknown as string[],
+          technologies: t('kaps.portfolios.analytics.useCases.predictiveAnalytics.technologies', { returnObjects: true }) as unknown as string[]
         },
         {
-          title: 'Anomaly Detection Agent Network',
-          description: 'Distributed agents that continuously monitor data streams, learn normal patterns, and coordinate responses to anomalies',
+          title: t('kaps.portfolios.analytics.useCases.anomalyDetection.title'),
+          description: t('kaps.portfolios.analytics.useCases.anomalyDetection.description'),
           icon: ShieldCheckIcon,
-          benefits: ['Adaptive threshold learning', 'Coordinated incident response', 'Root cause analysis automation'],
-          examples: ['Fraud Detection Swarm', 'Security Threat Hunters', 'Quality Control Agents', 'System Health Monitors'],
-          technologies: ['Streaming Agent Architectures', 'Unsupervised Learning Agents', 'Alert Correlation Agents', 'Response Automation Bots']
+          benefits: t('kaps.portfolios.analytics.useCases.anomalyDetection.benefits', { returnObjects: true }) as unknown as string[],
+          examples: t('kaps.portfolios.analytics.useCases.anomalyDetection.examples', { returnObjects: true }) as unknown as string[],
+          technologies: t('kaps.portfolios.analytics.useCases.anomalyDetection.technologies', { returnObjects: true }) as unknown as string[]
         },
         {
-          title: 'Customer Intelligence Agent Collective',
-          description: 'Multi-agent system that builds living customer profiles, predicts behaviors, and orchestrates personalized experiences',
+          title: t('kaps.portfolios.analytics.useCases.customerIntelligence.title'),
+          description: t('kaps.portfolios.analytics.useCases.customerIntelligence.description'),
           icon: UserGroupIcon,
-          benefits: ['Real-time profile evolution', 'Predictive journey mapping', 'Autonomous personalization'],
-          examples: ['Customer 360 Agent', 'Behavior Prediction Network', 'Recommendation Agent Swarm', 'Engagement Optimization Bots'],
-          technologies: ['Graph-based Agent Systems', 'Reinforcement Learning Agents', 'Multi-Armed Bandit Agents', 'Collaborative Filtering Agents']
+          benefits: t('kaps.portfolios.analytics.useCases.customerIntelligence.benefits', { returnObjects: true }) as unknown as string[],
+          examples: t('kaps.portfolios.analytics.useCases.customerIntelligence.examples', { returnObjects: true }) as unknown as string[],
+          technologies: t('kaps.portfolios.analytics.useCases.customerIntelligence.technologies', { returnObjects: true }) as unknown as string[]
         },
         {
-          title: 'Business Intelligence Agent Assistant',
-          description: 'Autonomous agents that interpret business questions, explore data, and generate insights with explanations',
+          title: t('kaps.portfolios.analytics.useCases.businessIntelligence.title'),
+          description: t('kaps.portfolios.analytics.useCases.businessIntelligence.description'),
           icon: PresentationChartLineIcon,
-          benefits: ['Natural language to insights', 'Hypothesis testing agents', 'Automated insight narratives'],
-          examples: ['Executive Analytics Agent', 'KPI Monitoring Swarm', 'Insight Discovery Network', 'Report Generation Collective'],
-          technologies: ['SQL-generating Agents', 'Visualization Agents', 'Statistical Analysis Bots', 'Narrative Generation Agents']
+          benefits: t('kaps.portfolios.analytics.useCases.businessIntelligence.benefits', { returnObjects: true }) as unknown as string[],
+          examples: t('kaps.portfolios.analytics.useCases.businessIntelligence.examples', { returnObjects: true }) as unknown as string[],
+          technologies: t('kaps.portfolios.analytics.useCases.businessIntelligence.technologies', { returnObjects: true }) as unknown as string[]
         }
       ],
-      architectureComponents: [
-        'Analytics Agent Hub',
-        'Model Registry & Versioning',
-        'Feature Store for Agents',
-        'Stream Processing Agent Layer',
-        'Insight Action Pipeline'
-      ],
-      successMetrics: [
-        'Proactive insight generation rate',
-        'Agent-discovered opportunities',
-        'Prediction accuracy improvement',
-        'Time to insight reduction'
-      ]
+      architectureComponents: t('kaps.portfolios.analytics.architectureComponents', { returnObjects: true }) as unknown as string[],
+      successMetrics: t('kaps.portfolios.analytics.successMetrics', { returnObjects: true }) as unknown as string[]
     },
     {
       id: 'process',
-      name: 'Process Portfolio',
+      name: t('kaps.portfolios.process.name'),
       color: 'green',
       icon: CogIcon,
-      tagline: 'Autonomous Process Agents',
-      description: 'Deploy cognitive agents that autonomously execute, optimize, and evolve business processes with decision-making capabilities',
-      businessValue: 'Self-managing process agents that adapt and improve workflows continuously',
-      impact: 'Intelligent automation that thinks, decides, and acts like expert humans',
+      tagline: t('kaps.portfolios.process.tagline'),
+      description: t('kaps.portfolios.process.description'),
+      businessValue: t('kaps.portfolios.process.businessValue'),
+      impact: t('kaps.portfolios.process.impact'),
       timeToValue: '6-12 weeks',
       complexity: 'High',
       maturityLevel: 'Advanced',
       useCases: [
         {
-          title: 'Intelligent Process Automation Swarm',
-          description: 'Multi-agent systems where specialized agents handle different process steps, negotiate handoffs, and optimize flow',
+          title: t('kaps.portfolios.process.useCases.processAutomation.title'),
+          description: t('kaps.portfolios.process.useCases.processAutomation.description'),
           icon: CogIcon,
-          benefits: ['Self-orchestrating workflows', 'Dynamic process optimization', 'Exception handling agents'],
-          examples: ['Claims Processing Network', 'Loan Origination Swarm', 'Supply Chain Agents', 'Order Fulfillment Collective'],
-          technologies: ['Process Mining Agents', 'Decision Agents', 'Workflow Orchestration Bots', 'RPA + AI Agent Integration']
+          benefits: t('kaps.portfolios.process.useCases.processAutomation.benefits', { returnObjects: true }) as unknown as string[],
+          examples: t('kaps.portfolios.process.useCases.processAutomation.examples', { returnObjects: true }) as unknown as string[],
+          technologies: t('kaps.portfolios.process.useCases.processAutomation.technologies', { returnObjects: true }) as unknown as string[]
         },
         {
-          title: 'Cognitive Decision Agent Network',
-          description: 'Expert agents that analyze context, weigh options, and make complex decisions with explainable reasoning',
+          title: t('kaps.portfolios.process.useCases.cognitiveDecision.title'),
+          description: t('kaps.portfolios.process.useCases.cognitiveDecision.description'),
           icon: LightBulbIcon,
-          benefits: ['Autonomous decision making', 'Multi-criteria optimization', 'Explainable agent reasoning'],
-          examples: ['Credit Approval Agent', 'Treatment Recommendation System', 'Investment Advisory Network', 'Resource Allocation Swarm'],
-          technologies: ['Expert System Agents', 'Reasoning Engines', 'Multi-Agent Negotiation', 'Explainable AI Agents']
+          benefits: t('kaps.portfolios.process.useCases.cognitiveDecision.benefits', { returnObjects: true }) as unknown as string[],
+          examples: t('kaps.portfolios.process.useCases.cognitiveDecision.examples', { returnObjects: true }) as unknown as string[],
+          technologies: t('kaps.portfolios.process.useCases.cognitiveDecision.technologies', { returnObjects: true }) as unknown as string[]
         },
         {
-          title: 'Dynamic Workflow Optimization Agents',
-          description: 'Agents that continuously monitor, learn, and restructure processes for optimal performance',
+          title: t('kaps.portfolios.process.useCases.workflowOptimization.title'),
+          description: t('kaps.portfolios.process.useCases.workflowOptimization.description'),
           icon: ArrowPathIcon,
-          benefits: ['Self-healing processes', 'Bottleneck prediction', 'Autonomous re-routing'],
-          examples: ['Manufacturing Flow Optimizer', 'Call Center Router Agent', 'Logistics Planning Swarm', 'Service Scheduling Network'],
-          technologies: ['Reinforcement Learning Agents', 'Digital Twin Agents', 'Simulation-based Agents', 'Optimization Algorithm Bots']
+          benefits: t('kaps.portfolios.process.useCases.workflowOptimization.benefits', { returnObjects: true }) as unknown as string[],
+          examples: t('kaps.portfolios.process.useCases.workflowOptimization.examples', { returnObjects: true }) as unknown as string[],
+          technologies: t('kaps.portfolios.process.useCases.workflowOptimization.technologies', { returnObjects: true }) as unknown as string[]
         },
         {
-          title: 'Compliance & Governance Agent Force',
-          description: 'Vigilant agents that monitor, enforce, and adapt to regulatory requirements across all processes',
+          title: t('kaps.portfolios.process.useCases.complianceGovernance.title'),
+          description: t('kaps.portfolios.process.useCases.complianceGovernance.description'),
           icon: ShieldCheckIcon,
-          benefits: ['Continuous compliance monitoring', 'Regulatory change adaptation', 'Automated audit trails'],
-          examples: ['GDPR Compliance Agent', 'AML Monitoring Network', 'Quality Assurance Swarm', 'Risk Management Collective'],
-          technologies: ['Policy Engine Agents', 'Regulation Parsing Bots', 'Audit Trail Agents', 'Compliance Reasoning Systems']
+          benefits: t('kaps.portfolios.process.useCases.complianceGovernance.benefits', { returnObjects: true }) as unknown as string[],
+          examples: t('kaps.portfolios.process.useCases.complianceGovernance.examples', { returnObjects: true }) as unknown as string[],
+          technologies: t('kaps.portfolios.process.useCases.complianceGovernance.technologies', { returnObjects: true }) as unknown as string[]
         }
       ],
-      architectureComponents: [
-        'Process Agent Orchestrator',
-        'Decision Engine Framework',
-        'Agent Task Queue System',
-        'Process Memory & Learning Store',
-        'Inter-Agent Communication Bus'
-      ],
-      successMetrics: [
-        'Process autonomy percentage',
-        'Agent decision accuracy',
-        'Self-optimization rate',
-        'Human intervention reduction'
-      ]
+      architectureComponents: t('kaps.portfolios.process.architectureComponents', { returnObjects: true }) as unknown as string[],
+      successMetrics: t('kaps.portfolios.process.successMetrics', { returnObjects: true }) as unknown as string[]
     },
     {
       id: 'systems',
-      name: 'Systems Portfolio',
+      name: t('kaps.portfolios.systems.name'),
       color: 'orange',
       icon: CpuChipIcon,
-      tagline: 'AI Development & Infrastructure Agents',
-      description: 'Deploy sophisticated agents that autonomously develop code, manage infrastructure, and optimize entire technology ecosystems',
-      businessValue: 'Self-evolving technology agents that build, test, and maintain systems',
-      impact: 'Autonomous IT agents that act as virtual engineering teams',
+      tagline: t('kaps.portfolios.systems.tagline'),
+      description: t('kaps.portfolios.systems.description'),
+      businessValue: t('kaps.portfolios.systems.businessValue'),
+      impact: t('kaps.portfolios.systems.impact'),
       timeToValue: '8-16 weeks',
       complexity: 'Very High',
       maturityLevel: 'Expert',
       useCases: [
         {
-          title: 'Code Generation Agent Collective',
-          description: 'Teams of specialized agents that collaboratively design, implement, review, and refactor code autonomously',
+          title: t('kaps.portfolios.systems.useCases.codeGeneration.title'),
+          description: t('kaps.portfolios.systems.useCases.codeGeneration.description'),
           icon: CodeBracketIcon,
-          benefits: ['Autonomous feature development', 'Multi-agent code review', 'Self-documenting systems'],
-          examples: ['Full-Stack Development Agent', 'Legacy Migration Swarm', 'API Builder Network', 'Code Modernization Collective'],
-          technologies: ['GitHub Copilot Agents', 'Code Generation LLMs', 'AST Manipulation Agents', 'Devin-style Agents']
+          benefits: t('kaps.portfolios.systems.useCases.codeGeneration.benefits', { returnObjects: true }) as unknown as string[],
+          examples: t('kaps.portfolios.systems.useCases.codeGeneration.examples', { returnObjects: true }) as unknown as string[],
+          technologies: t('kaps.portfolios.systems.useCases.codeGeneration.technologies', { returnObjects: true }) as unknown as string[]
         },
         {
-          title: 'Intelligent Testing Agent Army',
-          description: 'Autonomous agents that generate tests, find bugs, and ensure quality through collaborative testing strategies',
+          title: t('kaps.portfolios.systems.useCases.testing.title'),
+          description: t('kaps.portfolios.systems.useCases.testing.description'),
           icon: BeakerIcon,
-          benefits: ['Self-generating test suites', 'Autonomous bug hunting', 'Self-healing test maintenance'],
-          examples: ['Test Generation Swarm', 'Security Testing Agents', 'Performance Testing Network', 'Chaos Engineering Bots'],
-          technologies: ['Test Generation Agents', 'Fuzzing Bots', 'Property-based Testing Agents', 'Test Optimization Networks']
+          benefits: t('kaps.portfolios.systems.useCases.testing.benefits', { returnObjects: true }) as unknown as string[],
+          examples: t('kaps.portfolios.systems.useCases.testing.examples', { returnObjects: true }) as unknown as string[],
+          technologies: t('kaps.portfolios.systems.useCases.testing.technologies', { returnObjects: true }) as unknown as string[]
         },
         {
-          title: 'AIOps Agent Ecosystem',
-          description: 'Infrastructure agents that predict issues, optimize resources, and maintain system health autonomously',
+          title: t('kaps.portfolios.systems.useCases.aiops.title'),
+          description: t('kaps.portfolios.systems.useCases.aiops.description'),
           icon: ServerStackIcon,
-          benefits: ['Predictive maintenance', 'Self-healing infrastructure', 'Autonomous scaling decisions'],
-          examples: ['Incident Response Team', 'Capacity Planning Agents', 'Cost Optimization Swarm', 'Security Operations Center'],
-          technologies: ['Monitoring Agents', 'Root Cause Analysis Bots', 'Remediation Agents', 'Infrastructure-as-Code Agents']
+          benefits: t('kaps.portfolios.systems.useCases.aiops.benefits', { returnObjects: true }) as unknown as string[],
+          examples: t('kaps.portfolios.systems.useCases.aiops.examples', { returnObjects: true }) as unknown as string[],
+          technologies: t('kaps.portfolios.systems.useCases.aiops.technologies', { returnObjects: true }) as unknown as string[]
         },
         {
-          title: 'DevOps Automation Agent Pipeline',
-          description: 'End-to-end autonomous agents that manage CI/CD, deployments, and release strategies without human intervention',
+          title: t('kaps.portfolios.systems.useCases.devops.title'),
+          description: t('kaps.portfolios.systems.useCases.devops.description'),
           icon: CloudArrowUpIcon,
-          benefits: ['Autonomous deployment decisions', 'Self-optimizing pipelines', 'Intelligent rollback agents'],
-          examples: ['Release Management Agent', 'Pipeline Optimization Network', 'Deployment Strategy Swarm', 'GitOps Agent Collective'],
-          technologies: ['Pipeline Automation Agents', 'Deployment Decision Bots', 'Canary Analysis Agents', 'Configuration Management Agents']
+          benefits: t('kaps.portfolios.systems.useCases.devops.benefits', { returnObjects: true }) as unknown as string[],
+          examples: t('kaps.portfolios.systems.useCases.devops.examples', { returnObjects: true }) as unknown as string[],
+          technologies: t('kaps.portfolios.systems.useCases.devops.technologies', { returnObjects: true }) as unknown as string[]
         }
       ],
-      architectureComponents: [
-        'Development Agent Platform',
-        'Code Intelligence Engine',
-        'Test Agent Framework',
-        'Infrastructure Agent Hub',
-        'DevSecOps Agent Pipeline'
-      ],
-      successMetrics: [
-        'Autonomous development velocity',
-        'Agent-generated code quality',
-        'Self-remediation success rate',
-        'Infrastructure optimization score'
-      ]
+      architectureComponents: t('kaps.portfolios.systems.architectureComponents', { returnObjects: true }) as unknown as string[],
+      successMetrics: t('kaps.portfolios.systems.successMetrics', { returnObjects: true }) as unknown as string[]
     }
   ];
 
@@ -308,51 +268,49 @@ const KAPSFramework: React.FC = () => {
         {/* Header */}
         <div className="mb-8">
           <div className="inline-block px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-semibold mb-4">
-            AI Agentic Framework
+            {t('kaps.header.badge')}
           </div>
-          <h1 className="text-3xl font-bold text-gray-900">KAPS Framework for Autonomous AI Agents</h1>
+          <h1 className="text-3xl font-bold text-gray-900">{t('kaps.header.title')}</h1>
           <p className="mt-2 text-gray-600 max-w-3xl">
-            A comprehensive framework for deploying autonomous AI agents across four strategic portfolios. These are not 
-            traditional software solutions but intelligent, self-directed agents that reason, learn, and act autonomously 
-            to transform enterprise operations.
+            {t('kaps.header.description')}
           </p>
         </div>
 
         {/* Framework Overview */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Agentic AI Architecture Overview</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">{t('kaps.frameworkOverview.title')}</h2>
           <div className="flex justify-center mb-6">
-            <img 
-              src={`${process.env.PUBLIC_URL}/assets/diagrams/kaps-framework.svg`}
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/diagrams/kaps-framework${svgSuffix}.svg`}
               alt="KAPS Framework - AI Agent Portfolios"
               className="w-full max-w-5xl h-auto"
             />
           </div>
-          
+
           {/* Agentic Principles */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-6">
             <div className="bg-blue-50 rounded-lg p-4">
-              <h4 className="text-sm font-semibold text-blue-900 mb-2">🤖 Autonomous Operation</h4>
+              <h4 className="text-sm font-semibold text-blue-900 mb-2">🤖 {t('kaps.frameworkOverview.principles.autonomousOperation.title')}</h4>
               <p className="text-xs text-blue-700">
-                Agents operate independently, making decisions and taking actions without constant human oversight.
+                {t('kaps.frameworkOverview.principles.autonomousOperation.description')}
               </p>
             </div>
             <div className="bg-purple-50 rounded-lg p-4">
-              <h4 className="text-sm font-semibold text-purple-900 mb-2">🧠 Continuous Learning</h4>
+              <h4 className="text-sm font-semibold text-purple-900 mb-2">🧠 {t('kaps.frameworkOverview.principles.continuousLearning.title')}</h4>
               <p className="text-xs text-purple-700">
-                Agents learn from interactions, feedback, and outcomes to improve their performance over time.
+                {t('kaps.frameworkOverview.principles.continuousLearning.description')}
               </p>
             </div>
             <div className="bg-green-50 rounded-lg p-4">
-              <h4 className="text-sm font-semibold text-green-900 mb-2">🔄 Multi-Agent Collaboration</h4>
+              <h4 className="text-sm font-semibold text-green-900 mb-2">🔄 {t('kaps.frameworkOverview.principles.multiAgentCollaboration.title')}</h4>
               <p className="text-xs text-green-700">
-                Agents work in teams, negotiating tasks, sharing knowledge, and coordinating complex workflows.
+                {t('kaps.frameworkOverview.principles.multiAgentCollaboration.description')}
               </p>
             </div>
             <div className="bg-orange-50 rounded-lg p-4">
-              <h4 className="text-sm font-semibold text-orange-900 mb-2">🎯 Goal-Oriented Behavior</h4>
+              <h4 className="text-sm font-semibold text-orange-900 mb-2">🎯 {t('kaps.frameworkOverview.principles.goalOrientedBehavior.title')}</h4>
               <p className="text-xs text-orange-700">
-                Agents pursue objectives autonomously, planning steps and adapting strategies to achieve goals.
+                {t('kaps.frameworkOverview.principles.goalOrientedBehavior.description')}
               </p>
             </div>
           </div>
@@ -360,24 +318,24 @@ const KAPSFramework: React.FC = () => {
 
         {/* Agent Capabilities Banner */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl shadow-lg p-6 mb-8 text-white">
-          <h3 className="text-xl font-bold mb-3">What Makes These Solutions Agentic?</h3>
+          <h3 className="text-xl font-bold mb-3">{t('kaps.agentCapabilities.title')}</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div>
-              <h4 className="font-semibold mb-2">⚡ Proactive Action</h4>
+              <h4 className="font-semibold mb-2">⚡ {t('kaps.agentCapabilities.proactiveAction.title')}</h4>
               <p className="text-sm text-blue-100">
-                Agents don't wait for commands - they identify opportunities and act on them autonomously.
+                {t('kaps.agentCapabilities.proactiveAction.description')}
               </p>
             </div>
             <div>
-              <h4 className="font-semibold mb-2">🔮 Reasoning & Planning</h4>
+              <h4 className="font-semibold mb-2">🔮 {t('kaps.agentCapabilities.reasoningPlanning.title')}</h4>
               <p className="text-sm text-blue-100">
-                Using chain-of-thought and other techniques, agents reason through problems and plan solutions.
+                {t('kaps.agentCapabilities.reasoningPlanning.description')}
               </p>
             </div>
             <div>
-              <h4 className="font-semibold mb-2">🛠️ Tool Usage</h4>
+              <h4 className="font-semibold mb-2">🛠️ {t('kaps.agentCapabilities.toolUsage.title')}</h4>
               <p className="text-sm text-blue-100">
-                Agents autonomously select and use tools, APIs, and other agents to accomplish their goals.
+                {t('kaps.agentCapabilities.toolUsage.description')}
               </p>
             </div>
           </div>
@@ -388,7 +346,7 @@ const KAPSFramework: React.FC = () => {
           {portfolios.map((portfolio, portfolioIndex) => {
             const colors = getColorClasses(portfolio.color);
             const PortfolioIcon = portfolio.icon;
-            
+
             return (
               <div key={portfolio.id} className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
                 {/* Portfolio Header */}
@@ -402,7 +360,7 @@ const KAPSFramework: React.FC = () => {
                         <div className="flex items-center mb-2">
                           <h2 className="text-2xl font-bold text-gray-900">{portfolio.name}</h2>
                           <span className={`ml-3 px-2 py-1 ${colors.bg} ${colors.text} rounded-full text-xs font-semibold`}>
-                            Agent Portfolio {portfolioIndex + 1}
+                            {t('kaps.portfolios.agentPortfolio')} {portfolioIndex + 1}
                           </span>
                         </div>
                         <p className="text-lg font-medium text-gray-700">🤖 {portfolio.tagline}</p>
@@ -410,23 +368,23 @@ const KAPSFramework: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   {/* Portfolio Metrics */}
                   <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mt-6">
                     <div className="bg-white rounded-lg p-3">
-                      <p className="text-xs text-gray-500 mb-1">Time to Deploy</p>
+                      <p className="text-xs text-gray-500 mb-1">{t('kaps.portfolios.timeToDeploy')}</p>
                       <p className="text-sm font-semibold text-gray-900">{portfolio.timeToValue}</p>
                     </div>
                     <div className="bg-white rounded-lg p-3">
-                      <p className="text-xs text-gray-500 mb-1">Complexity</p>
+                      <p className="text-xs text-gray-500 mb-1">{t('kaps.portfolios.complexity')}</p>
                       <p className="text-sm font-semibold text-gray-900">{portfolio.complexity}</p>
                     </div>
                     <div className="bg-white rounded-lg p-3">
-                      <p className="text-xs text-gray-500 mb-1">AI Maturity</p>
+                      <p className="text-xs text-gray-500 mb-1">{t('kaps.portfolios.aiMaturity')}</p>
                       <p className="text-sm font-semibold text-gray-900">{portfolio.maturityLevel}</p>
                     </div>
                     <div className="bg-white rounded-lg p-3 md:col-span-2">
-                      <p className="text-xs text-gray-500 mb-1">Agent Value Proposition</p>
+                      <p className="text-xs text-gray-500 mb-1">{t('kaps.portfolios.agentValueProposition')}</p>
                       <p className="text-sm font-semibold text-gray-900">{portfolio.businessValue}</p>
                     </div>
                   </div>
@@ -435,12 +393,12 @@ const KAPSFramework: React.FC = () => {
                 <div className="p-6">
                   {/* Use Cases */}
                   <div className="mb-8">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-4">Agentic Use Cases</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4">{t('kaps.portfolios.agenticUseCases')}</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {portfolio.useCases.map((useCase, index) => {
                         const UseCaseIcon = useCase.icon;
                         return (
-                          <div 
+                          <div
                             key={index}
                             className={`border border-gray-200 rounded-lg p-4 hover:border-${portfolio.color}-300 ${colors.hoverBg} transition-all`}
                           >
@@ -453,13 +411,13 @@ const KAPSFramework: React.FC = () => {
                                 <p className="text-sm text-gray-600">{useCase.description}</p>
                               </div>
                             </div>
-                            
+
                             {/* Agent Capabilities */}
                             <div className="mb-3">
-                              <p className="text-xs font-semibold text-gray-700 mb-2">Agent Capabilities:</p>
+                              <p className="text-xs font-semibold text-gray-700 mb-2">{t('kaps.portfolios.agentCapabilities')}</p>
                               <div className="flex flex-wrap gap-2">
                                 {useCase.benefits.map((benefit, idx) => (
-                                  <span 
+                                  <span
                                     key={idx}
                                     className="inline-block px-2 py-1 bg-green-50 text-xs text-green-700 rounded"
                                   >
@@ -468,13 +426,13 @@ const KAPSFramework: React.FC = () => {
                                 ))}
                               </div>
                             </div>
-                            
+
                             {/* Agent Examples */}
                             <div className="mb-3">
-                              <p className="text-xs font-semibold text-gray-700 mb-2">Agent Implementations:</p>
+                              <p className="text-xs font-semibold text-gray-700 mb-2">{t('kaps.portfolios.agentImplementations')}</p>
                               <div className="flex flex-wrap gap-2">
                                 {useCase.examples.map((example, idx) => (
-                                  <span 
+                                  <span
                                     key={idx}
                                     className={`inline-block px-2 py-1 ${colors.lightBg} text-xs ${colors.text} rounded`}
                                   >
@@ -483,14 +441,14 @@ const KAPSFramework: React.FC = () => {
                                 ))}
                               </div>
                             </div>
-                            
+
                             {/* Agent Technologies */}
                             {useCase.technologies && (
                               <div>
-                                <p className="text-xs font-semibold text-gray-700 mb-2">Agent Technologies:</p>
+                                <p className="text-xs font-semibold text-gray-700 mb-2">{t('kaps.portfolios.agentTechnologies')}</p>
                                 <div className="flex flex-wrap gap-2">
                                   {useCase.technologies.map((tech, idx) => (
-                                    <span 
+                                    <span
                                       key={idx}
                                       className="inline-block px-2 py-1 bg-gray-100 text-xs text-gray-600 rounded"
                                     >
@@ -510,7 +468,7 @@ const KAPSFramework: React.FC = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* Architecture Components */}
                     <div className="bg-gray-50 rounded-lg p-4">
-                      <h4 className="text-sm font-semibold text-gray-900 mb-3">Agent Infrastructure</h4>
+                      <h4 className="text-sm font-semibold text-gray-900 mb-3">{t('kaps.portfolios.agentInfrastructure')}</h4>
                       <ul className="space-y-2">
                         {portfolio.architectureComponents.map((component, idx) => (
                           <li key={idx} className="flex items-start">
@@ -523,7 +481,7 @@ const KAPSFramework: React.FC = () => {
 
                     {/* Success Metrics */}
                     <div className="bg-gray-50 rounded-lg p-4">
-                      <h4 className="text-sm font-semibold text-gray-900 mb-3">Agent Success Metrics</h4>
+                      <h4 className="text-sm font-semibold text-gray-900 mb-3">{t('kaps.portfolios.agentSuccessMetrics')}</h4>
                       <ul className="space-y-2">
                         {portfolio.successMetrics.map((metric, idx) => (
                           <li key={idx} className="flex items-start">
@@ -542,15 +500,15 @@ const KAPSFramework: React.FC = () => {
 
         {/* Agent Deployment Roadmap */}
         <div className="mt-8 bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">Agent Deployment Roadmap</h3>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('kaps.deploymentRoadmap.title')}</h3>
           <div className="space-y-4">
             <div className="flex items-start">
               <div className="bg-blue-100 text-blue-700 rounded-full w-8 h-8 flex items-center justify-center font-semibold text-sm mr-4 flex-shrink-0">
                 1
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900">Phase 1: Knowledge Agents (Weeks 1-4)</h4>
-                <p className="text-sm text-gray-600">Deploy conversational and document processing agents for immediate autonomous knowledge handling.</p>
+                <h4 className="font-semibold text-gray-900">{t('kaps.deploymentRoadmap.phase1.title')}</h4>
+                <p className="text-sm text-gray-600">{t('kaps.deploymentRoadmap.phase1.description')}</p>
               </div>
             </div>
             <div className="flex items-start">
@@ -558,8 +516,8 @@ const KAPSFramework: React.FC = () => {
                 2
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900">Phase 2: Analytics Agents (Weeks 5-12)</h4>
-                <p className="text-sm text-gray-600">Launch predictive and analytical agents that proactively discover insights and opportunities.</p>
+                <h4 className="font-semibold text-gray-900">{t('kaps.deploymentRoadmap.phase2.title')}</h4>
+                <p className="text-sm text-gray-600">{t('kaps.deploymentRoadmap.phase2.description')}</p>
               </div>
             </div>
             <div className="flex items-start">
@@ -567,8 +525,8 @@ const KAPSFramework: React.FC = () => {
                 3
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900">Phase 3: Process Agents (Weeks 13-24)</h4>
-                <p className="text-sm text-gray-600">Deploy autonomous process agents that execute complex workflows with decision-making capabilities.</p>
+                <h4 className="font-semibold text-gray-900">{t('kaps.deploymentRoadmap.phase3.title')}</h4>
+                <p className="text-sm text-gray-600">{t('kaps.deploymentRoadmap.phase3.description')}</p>
               </div>
             </div>
             <div className="flex items-start">
@@ -576,8 +534,8 @@ const KAPSFramework: React.FC = () => {
                 4
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900">Phase 4: System Agents (Weeks 25+)</h4>
-                <p className="text-sm text-gray-600">Implement development and infrastructure agents that autonomously build and maintain systems.</p>
+                <h4 className="font-semibold text-gray-900">{t('kaps.deploymentRoadmap.phase4.title')}</h4>
+                <p className="text-sm text-gray-600">{t('kaps.deploymentRoadmap.phase4.description')}</p>
               </div>
             </div>
           </div>
@@ -587,26 +545,23 @@ const KAPSFramework: React.FC = () => {
         <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="bg-white rounded-lg border border-gray-200 p-4">
             <span className="text-2xl mb-2">🧠</span>
-            <h4 className="text-sm font-semibold text-gray-900 mb-2">Cognitive Autonomy</h4>
+            <h4 className="text-sm font-semibold text-gray-900 mb-2">{t('kaps.differentiators.cognitiveAutonomy.title')}</h4>
             <p className="text-xs text-gray-600">
-              Unlike traditional automation, our agents think, reason, and make decisions independently, 
-              adapting to new situations without reprogramming.
+              {t('kaps.differentiators.cognitiveAutonomy.description')}
             </p>
           </div>
           <div className="bg-white rounded-lg border border-gray-200 p-4">
             <span className="text-2xl mb-2">🤝</span>
-            <h4 className="text-sm font-semibold text-gray-900 mb-2">Agent Collaboration</h4>
+            <h4 className="text-sm font-semibold text-gray-900 mb-2">{t('kaps.differentiators.agentCollaboration.title')}</h4>
             <p className="text-xs text-gray-600">
-              Agents work in teams, delegating tasks, sharing insights, and coordinating complex 
-              multi-step processes across the enterprise.
+              {t('kaps.differentiators.agentCollaboration.description')}
             </p>
           </div>
           <div className="bg-white rounded-lg border border-gray-200 p-4">
             <span className="text-2xl mb-2">📈</span>
-            <h4 className="text-sm font-semibold text-gray-900 mb-2">Self-Improvement</h4>
+            <h4 className="text-sm font-semibold text-gray-900 mb-2">{t('kaps.differentiators.selfImprovement.title')}</h4>
             <p className="text-xs text-gray-600">
-              Agents learn from every interaction, continuously improving their performance and 
-              discovering new ways to achieve objectives.
+              {t('kaps.differentiators.selfImprovement.description')}
             </p>
           </div>
         </div>

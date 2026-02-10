@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { 
+import {
   ArrowRightIcon,
   CheckCircleIcon,
   ClockIcon,
@@ -10,6 +10,7 @@ import {
   UserGroupIcon
 } from '@heroicons/react/24/outline';
 import { technicalDebtIssues, TechnicalDebtIssue } from '../../data/technicalDebtData';
+import { useTranslation } from 'react-i18next';
 
 interface Sprint {
   id: string;
@@ -32,26 +33,27 @@ interface RemediationPhase {
 }
 
 const RemediationRoadmap: React.FC = () => {
+  const { t } = useTranslation('technicalDebt');
   const [selectedPhase, setSelectedPhase] = useState<number>(0);
   const [viewMode, setViewMode] = useState<'timeline' | 'impact' | 'effort'>('timeline');
 
   // Group issues into phases based on priority and dependencies
   const remediationPhases = useMemo<RemediationPhase[]>(() => {
     // Phase 1: Critical Security & Architecture Issues
-    const phase1Issues = technicalDebtIssues.filter(i => 
-      i.severity === 'critical' || 
+    const phase1Issues = technicalDebtIssues.filter(i =>
+      i.severity === 'critical' ||
       (i.category === 'architecture' && i.severity === 'high')
     );
 
     // Phase 2: Design & Functional Improvements
-    const phase2Issues = technicalDebtIssues.filter(i => 
-      !phase1Issues.includes(i) && 
+    const phase2Issues = technicalDebtIssues.filter(i =>
+      !phase1Issues.includes(i) &&
       (i.category === 'design' || i.category === 'functional')
     );
 
     // Phase 3: Code Quality & Optimization
-    const phase3Issues = technicalDebtIssues.filter(i => 
-      !phase1Issues.includes(i) && 
+    const phase3Issues = technicalDebtIssues.filter(i =>
+      !phase1Issues.includes(i) &&
       !phase2Issues.includes(i)
     );
 
@@ -95,31 +97,31 @@ const RemediationRoadmap: React.FC = () => {
 
     return [
       {
-        name: 'Phase 1: Critical Fixes',
-        description: 'Address security vulnerabilities and architectural violations',
+        name: t('remediation.phases.phase1Name'),
+        description: t('remediation.phases.phase1Desc'),
         sprints: createSprints(phase1Issues, 'phase1'),
         totalEffort: phase1Issues.reduce((sum, i) => sum + i.effort, 0),
         totalImpact: phase1Issues.reduce((sum, i) => sum + i.impact, 0),
         riskLevel: 'high'
       },
       {
-        name: 'Phase 2: Design & Functional',
-        description: 'Improve UI consistency and close functional gaps',
+        name: t('remediation.phases.phase2Name'),
+        description: t('remediation.phases.phase2Desc'),
         sprints: createSprints(phase2Issues, 'phase2'),
         totalEffort: phase2Issues.reduce((sum, i) => sum + i.effort, 0),
         totalImpact: phase2Issues.reduce((sum, i) => sum + i.impact, 0),
         riskLevel: 'medium'
       },
       {
-        name: 'Phase 3: Code Quality',
-        description: 'Refactor and optimize codebase',
+        name: t('remediation.phases.phase3Name'),
+        description: t('remediation.phases.phase3Desc'),
         sprints: createSprints(phase3Issues, 'phase3'),
         totalEffort: phase3Issues.reduce((sum, i) => sum + i.effort, 0),
         totalImpact: phase3Issues.reduce((sum, i) => sum + i.impact, 0),
         riskLevel: 'low'
       }
     ];
-  }, []);
+  }, [t]);
 
   const totalMetrics = {
     effort: remediationPhases.reduce((sum, p) => sum + p.totalEffort, 0),
@@ -153,9 +155,9 @@ const RemediationRoadmap: React.FC = () => {
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 py-4 sm:py-6 lg:py-8">
         <div className="mb-8">
-          <h1 className="text-2xl font-bold text-gray-900">Remediation Roadmap</h1>
+          <h1 className="text-2xl font-bold text-gray-900">{t('remediation.header.title')}</h1>
           <p className="mt-2 text-gray-600">
-            Prioritized action plan for systematic debt reduction
+            {t('remediation.header.description')}
           </p>
         </div>
 
@@ -165,28 +167,28 @@ const RemediationRoadmap: React.FC = () => {
             <div>
               <div className="flex items-center mb-2">
                 <ExclamationTriangleIcon className="h-5 w-5 mr-2" />
-                <span className="text-blue-100">Total Issues</span>
+                <span className="text-blue-100">{t('remediation.summary.totalIssues')}</span>
               </div>
               <div className="text-3xl font-bold">{totalMetrics.issues}</div>
             </div>
             <div>
               <div className="flex items-center mb-2">
                 <ClockIcon className="h-5 w-5 mr-2" />
-                <span className="text-blue-100">Total Effort</span>
+                <span className="text-blue-100">{t('remediation.summary.totalEffort')}</span>
               </div>
               <div className="text-3xl font-bold">{totalMetrics.effort} pts</div>
             </div>
             <div>
               <div className="flex items-center mb-2">
                 <ArrowTrendingUpIcon className="h-5 w-5 mr-2" />
-                <span className="text-blue-100">Expected Impact</span>
+                <span className="text-blue-100">{t('remediation.summary.expectedImpact')}</span>
               </div>
               <div className="text-3xl font-bold">{totalMetrics.impact}</div>
             </div>
             <div>
               <div className="flex items-center mb-2">
                 <CalendarIcon className="h-5 w-5 mr-2" />
-                <span className="text-blue-100">Timeline</span>
+                <span className="text-blue-100">{t('remediation.summary.timeline')}</span>
               </div>
               <div className="text-3xl font-bold">{estimatedTimeline} weeks</div>
             </div>
@@ -196,37 +198,37 @@ const RemediationRoadmap: React.FC = () => {
         {/* View Mode Selector */}
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 mb-8">
           <div className="flex items-center justify-between">
-            <h2 className="font-semibold text-gray-900">Remediation Phases</h2>
+            <h2 className="font-semibold text-gray-900">{t('remediation.phases.title')}</h2>
             <div className="flex gap-2">
               <button
                 onClick={() => setViewMode('timeline')}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                  viewMode === 'timeline' 
-                    ? 'bg-blue-100 text-blue-700' 
+                  viewMode === 'timeline'
+                    ? 'bg-blue-100 text-blue-700'
                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                 }`}
               >
-                Timeline View
+                {t('remediation.phases.viewTimeline')}
               </button>
               <button
                 onClick={() => setViewMode('impact')}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                  viewMode === 'impact' 
-                    ? 'bg-blue-100 text-blue-700' 
+                  viewMode === 'impact'
+                    ? 'bg-blue-100 text-blue-700'
                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                 }`}
               >
-                Impact Matrix
+                {t('remediation.phases.viewImpact')}
               </button>
               <button
                 onClick={() => setViewMode('effort')}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                  viewMode === 'effort' 
-                    ? 'bg-blue-100 text-blue-700' 
+                  viewMode === 'effort'
+                    ? 'bg-blue-100 text-blue-700'
                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                 }`}
               >
-                Effort Analysis
+                {t('remediation.phases.viewEffort')}
               </button>
             </div>
           </div>
@@ -237,7 +239,7 @@ const RemediationRoadmap: React.FC = () => {
           <div className="space-y-6">
             {remediationPhases.map((phase, phaseIndex) => (
               <div key={phaseIndex} className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-                <div 
+                <div
                   className={`p-6 cursor-pointer ${selectedPhase === phaseIndex ? 'bg-blue-50' : ''}`}
                   onClick={() => setSelectedPhase(phaseIndex)}
                 >
@@ -257,15 +259,15 @@ const RemediationRoadmap: React.FC = () => {
                     </div>
                     <div className="flex items-center gap-6">
                       <div className="text-right">
-                        <div className="text-sm text-gray-500">Effort</div>
-                        <div className="font-semibold">{phase.totalEffort} pts</div>
+                        <div className="text-sm text-gray-500">{t('remediation.phases.effortLabel')}</div>
+                        <div className="font-semibold">{phase.totalEffort} {t('remediation.phases.pts')}</div>
                       </div>
                       <div className="text-right">
-                        <div className="text-sm text-gray-500">Impact</div>
+                        <div className="text-sm text-gray-500">{t('remediation.phases.impactLabel')}</div>
                         <div className="font-semibold">{phase.totalImpact}</div>
                       </div>
                       <div className={`px-3 py-1 rounded-full text-sm font-medium border ${getRiskColor(phase.riskLevel)}`}>
-                        {phase.riskLevel.toUpperCase()} RISK
+                        {phase.riskLevel.toUpperCase()} {t('remediation.phases.risk')}
                       </div>
                     </div>
                   </div>
@@ -279,10 +281,10 @@ const RemediationRoadmap: React.FC = () => {
                             <h4 className="font-medium text-gray-900">{sprint.name}</h4>
                             <div className="flex items-center gap-4 text-sm">
                               <span className="text-gray-500">
-                                {sprint.issues.length} issues
+                                {sprint.issues.length} {t('remediation.phases.issues')}
                               </span>
                               <span className="text-gray-500">
-                                {sprint.totalEffort} pts
+                                {sprint.totalEffort} {t('remediation.phases.pts')}
                               </span>
                             </div>
                           </div>
@@ -303,7 +305,7 @@ const RemediationRoadmap: React.FC = () => {
                                     {issue.severity}
                                   </span>
                                   <span className="text-xs text-gray-500">
-                                    {issue.effort} pts
+                                    {issue.effort} {t('remediation.phases.pts')}
                                   </span>
                                 </div>
                               </div>
@@ -322,23 +324,23 @@ const RemediationRoadmap: React.FC = () => {
         {/* Impact Matrix View */}
         {viewMode === 'impact' && (
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-            <h3 className="text-lg font-semibold text-gray-900 mb-6">Impact vs Effort Matrix</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-6">{t('remediation.impactMatrix.title')}</h3>
             <div className="relative h-96 border-2 border-gray-200 rounded-lg">
               {/* Quadrant labels */}
-              <div className="absolute top-2 left-2 text-sm text-gray-500">High Impact / Low Effort</div>
-              <div className="absolute top-2 right-2 text-sm text-gray-500">High Impact / High Effort</div>
-              <div className="absolute bottom-2 left-2 text-sm text-gray-500">Low Impact / Low Effort</div>
-              <div className="absolute bottom-2 right-2 text-sm text-gray-500">Low Impact / High Effort</div>
-              
+              <div className="absolute top-2 left-2 text-sm text-gray-500">{t('remediation.impactMatrix.highImpactLowEffort')}</div>
+              <div className="absolute top-2 right-2 text-sm text-gray-500">{t('remediation.impactMatrix.highImpactHighEffort')}</div>
+              <div className="absolute bottom-2 left-2 text-sm text-gray-500">{t('remediation.impactMatrix.lowImpactLowEffort')}</div>
+              <div className="absolute bottom-2 right-2 text-sm text-gray-500">{t('remediation.impactMatrix.lowImpactHighEffort')}</div>
+
               {/* Grid lines */}
               <div className="absolute top-1/2 w-full border-t border-gray-300"></div>
               <div className="absolute left-1/2 h-full border-l border-gray-300"></div>
-              
+
               {/* Plot issues */}
               {technicalDebtIssues.map(issue => {
                 const x = (issue.effort / 30) * 100; // Max effort ~30
                 const y = 100 - (issue.impact / 10) * 100; // Invert Y axis
-                
+
                 return (
                   <div
                     key={issue.id}
@@ -357,19 +359,19 @@ const RemediationRoadmap: React.FC = () => {
             <div className="flex justify-center mt-4 gap-6">
               <div className="flex items-center">
                 <div className="w-3 h-3 bg-red-500 rounded-full mr-2"></div>
-                <span className="text-sm">Critical</span>
+                <span className="text-sm">{t('remediation.impactMatrix.critical')}</span>
               </div>
               <div className="flex items-center">
                 <div className="w-3 h-3 bg-orange-500 rounded-full mr-2"></div>
-                <span className="text-sm">High</span>
+                <span className="text-sm">{t('remediation.impactMatrix.high')}</span>
               </div>
               <div className="flex items-center">
                 <div className="w-3 h-3 bg-yellow-500 rounded-full mr-2"></div>
-                <span className="text-sm">Medium</span>
+                <span className="text-sm">{t('remediation.impactMatrix.medium')}</span>
               </div>
               <div className="flex items-center">
                 <div className="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
-                <span className="text-sm">Low</span>
+                <span className="text-sm">{t('remediation.impactMatrix.low')}</span>
               </div>
             </div>
           </div>
@@ -378,16 +380,16 @@ const RemediationRoadmap: React.FC = () => {
         {/* Effort Analysis View */}
         {viewMode === 'effort' && (
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-            <h3 className="text-lg font-semibold text-gray-900 mb-6">Effort Distribution Analysis</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-6">{t('remediation.effortAnalysis.title')}</h3>
             <div className="space-y-6">
               {remediationPhases.map((phase, index) => (
                 <div key={index}>
                   <div className="flex items-center justify-between mb-2">
                     <span className="font-medium text-gray-900">{phase.name}</span>
-                    <span className="text-sm text-gray-500">{phase.totalEffort} pts</span>
+                    <span className="text-sm text-gray-500">{phase.totalEffort} {t('remediation.phases.pts')}</span>
                   </div>
                   <div className="relative bg-gray-200 rounded-full h-8">
-                    <div 
+                    <div
                       className={`absolute top-0 left-0 h-full rounded-full flex items-center justify-center text-white text-sm font-medium ${
                         index === 0 ? 'bg-red-500' :
                         index === 1 ? 'bg-yellow-500' :
@@ -400,13 +402,13 @@ const RemediationRoadmap: React.FC = () => {
                   </div>
                   <div className="mt-2 grid grid-cols-3 gap-4 text-sm">
                     <div>
-                      <span className="text-gray-500">Sprints:</span> {phase.sprints.length}
+                      <span className="text-gray-500">{t('remediation.effortAnalysis.sprints')}</span> {phase.sprints.length}
                     </div>
                     <div>
-                      <span className="text-gray-500">Issues:</span> {phase.sprints.reduce((sum, s) => sum + s.issues.length, 0)}
+                      <span className="text-gray-500">{t('remediation.effortAnalysis.issues')}</span> {phase.sprints.reduce((sum, s) => sum + s.issues.length, 0)}
                     </div>
                     <div>
-                      <span className="text-gray-500">Avg per Sprint:</span> {Math.round(phase.totalEffort / phase.sprints.length)} pts
+                      <span className="text-gray-500">{t('remediation.effortAnalysis.avgPerSprint')}</span> {Math.round(phase.totalEffort / phase.sprints.length)} {t('remediation.phases.pts')}
                     </div>
                   </div>
                 </div>
@@ -414,12 +416,12 @@ const RemediationRoadmap: React.FC = () => {
             </div>
 
             <div className="mt-8 p-4 bg-blue-50 rounded-lg">
-              <h4 className="font-medium text-blue-900 mb-2">Resource Recommendations</h4>
+              <h4 className="font-medium text-blue-900 mb-2">{t('remediation.effortAnalysis.resourceTitle')}</h4>
               <div className="text-sm text-blue-700 space-y-1">
-                <div>• Estimated team size: 3-4 developers</div>
-                <div>• Sprint duration: 2 weeks</div>
-                <div>• Total timeline: {estimatedTimeline} weeks ({Math.round(estimatedTimeline / 4)} months)</div>
-                <div>• Recommended approach: Start with Phase 1 critical fixes in parallel tracks</div>
+                <div>• {t('remediation.effortAnalysis.teamSize')}</div>
+                <div>• {t('remediation.effortAnalysis.sprintDuration')}</div>
+                <div>• {t('remediation.effortAnalysis.totalTimeline', { weeks: estimatedTimeline, months: Math.round(estimatedTimeline / 4) })}</div>
+                <div>• {t('remediation.effortAnalysis.recommendedApproach')}</div>
               </div>
             </div>
           </div>

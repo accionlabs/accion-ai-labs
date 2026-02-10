@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { CheckCircleIcon, ArrowRightIcon, CubeTransparentIcon } from '@heroicons/react/24/outline';
 import AnimatedSVG, { AnimationStep } from '../common/AnimatedSVG';
 import { getPublicAssetUrl } from '../../utils/assetHelper';
+import { useTranslation } from 'react-i18next';
 
 interface ProductNode {
   id: string;
@@ -13,6 +14,7 @@ interface ProductNode {
 }
 
 const UnifiedProductView: React.FC = () => {
+  const { t } = useTranslation('portfolio');
   const [selectedFeature, setSelectedFeature] = useState<string | null>(null);
 
   const products: ProductNode[] = [

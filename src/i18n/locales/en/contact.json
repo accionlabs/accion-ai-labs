@@ -1,0 +1,96 @@
+{
+  "header": {
+    "badge": "Get Started",
+    "title": "Let's Build Your Solution",
+    "description": "Ready to transform your enterprise with custom AI agents? Get in touch with our team to discuss your unique challenges and explore how we can help."
+  },
+  "companyInfo": {
+    "title": "Accion Labs",
+    "description": "Accion Labs is a technology services company specializing in AI-driven digital transformation. We partner with enterprises to build custom solutions that leverage cutting-edge technology to solve complex business challenges.",
+    "usOffice": {
+      "label": "United States Office",
+      "address": "1225 Washington Pike #401\nBridgeville, PA 15017\nUnited States"
+    },
+    "email": {
+      "label": "Email"
+    },
+    "website": {
+      "label": "Website"
+    }
+  },
+  "nextSteps": {
+    "title": "What Happens Next?",
+    "step1": {
+      "title": "Discovery Call",
+      "description": "We'll schedule a call to understand your challenges and objectives"
+    },
+    "step2": {
+      "title": "Solution Design",
+      "description": "Our team will design a custom AI agent solution for your needs"
+    },
+    "step3": {
+      "title": "Pilot Program",
+      "description": "Start with a pilot to demonstrate value and refine the approach"
+    },
+    "step4": {
+      "title": "Full Implementation",
+      "description": "Scale the solution across your enterprise with our support"
+    }
+  },
+  "form": {
+    "title": "Start a Conversation",
+    "firstName": "First Name *",
+    "lastName": "Last Name *",
+    "workEmail": "Work Email *",
+    "company": "Company *",
+    "phone": "Phone Number",
+    "interest": {
+      "label": "I'm interested in... *",
+      "placeholder": "Select an option",
+      "technicalDebt": "Technical Debt Analysis",
+      "portfolio": "Portfolio Rationalization",
+      "supportAutomation": "Support Automation (L0/L1/L2)",
+      "customerOnboarding": "Customer Onboarding",
+      "analytics": "Intelligent Analytics",
+      "custom": "Custom Solution",
+      "other": "Other"
+    },
+    "message": {
+      "label": "Tell us about your challenge",
+      "placeholder": "Describe your current challenges and what you're hoping to achieve..."
+    },
+    "consent": "I agree to receive communications from Accion Labs about Breeze.AI and related services. I understand I can unsubscribe at any time.",
+    "submit": "Send Message",
+    "requiredFields": "* Required fields"
+  },
+  "alternativeContact": {
+    "demo": {
+      "title": "Schedule a Demo",
+      "description": "Book a personalized demo to see our solutions in action"
+    },
+    "technical": {
+      "title": "Technical Discussion",
+      "description": "Speak with our architects about your technical requirements"
+    }
+  },
+  "globalPresence": {
+    "title": "Global Presence",
+    "description": "Accion Labs serves clients worldwide with offices and delivery centers across multiple continents. Our global presence ensures we can support your enterprise wherever you operate.",
+    "northAmerica": {
+      "title": "North America",
+      "locations": "United States"
+    },
+    "asiaPacific": {
+      "title": "Asia Pacific",
+      "locations": "India, Singapore"
+    },
+    "europe": {
+      "title": "Europe",
+      "locations": "United Kingdom"
+    },
+    "middleEast": {
+      "title": "Middle East",
+      "locations": "UAE"
+    }
+  }
+}

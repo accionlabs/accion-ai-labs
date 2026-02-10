@@ -1,0 +1,146 @@
+{
+  "header": {
+    "technology": "Technology",
+    "solutions": "Solutions",
+    "getStarted": "Get Started"
+  },
+  "hero": {
+    "badge": "Enterprise AI Solutions by Accion Labs",
+    "titleLine1": "Enterprise AI Built on",
+    "titleLine2": "Knowledge Graphs & Semantic Understanding",
+    "subtitle": "While others chase the latest models, we solve the enterprise AI challenge: delivering predictable, explainable results that align with your business guidelines.",
+    "stats": "50+ GenAI projects delivered. Zero hallucinations. Full traceability. AI that understands relationships, not just keywords.",
+    "exploreTechnology": "Explore Our Technology",
+    "viewSolutions": "View Solution Examples"
+  },
+  "knowledgeGraphs": {
+    "title": "Why Knowledge Graphs Matter for Enterprise AI",
+    "subtitle": "The difference between AI that works in demos and AI that works in production",
+    "predictable": {
+      "title": "Predictable & Reliable",
+      "description": "Every decision traceable to source data. No surprises, no hallucinations.",
+      "point1": "Consistent outputs for same queries",
+      "point2": "Full audit trail for compliance",
+      "point3": "Grounded in your actual data"
+    },
+    "explainable": {
+      "title": "Explainable & Transparent",
+      "description": "Understand not just what, but why. Perfect for regulated industries.",
+      "point1": "Visual reasoning paths",
+      "point2": "Relationship-based insights",
+      "point3": "Business-friendly explanations"
+    },
+    "productivity": {
+      "title": "10x Productivity",
+      "description": "AI that understands context delivers results, not more work.",
+      "point1": "Multi-hop reasoning capability",
+      "point2": "Handles complex dependencies",
+      "point3": "Works within your guidelines"
+    }
+  },
+  "platform": {
+    "title": "Our Semantic Engineering Platform",
+    "subtitle": "Five integrated components that work together to deliver accurate, reliable AI solutions",
+    "kaps": {
+      "title": "KAPS Framework",
+      "description": "GenAI adoption framework with graph-based context engineering"
+    },
+    "agentArchitecture": {
+      "title": "Agent Architecture",
+      "description": "Multi-agent orchestration for complex problem-solving"
+    },
+    "breezeAI": {
+      "title": "Breeze.AI",
+      "description": "End-to-end semantic engineering delivery platform"
+    },
+    "genAIBox": {
+      "title": "Gen AI in a Box",
+      "description": "On-premise installation for secure, local AI deployment"
+    },
+    "guardrails": {
+      "title": "Strategic Guardrails",
+      "description": "Enterprise compliance and safety controls"
+    }
+  },
+  "deepDives": {
+    "title": "Featured Solutions with Deep Dives",
+    "productEngineering": {
+      "title": "Product Engineering",
+      "description": "Accelerate product engineering with semantic knowledge graphs and multi-stakeholder validation.",
+      "cta": "View Showcase → Deep Dive"
+    },
+    "appReengineering": {
+      "title": "Application Re-engineering",
+      "description": "Systematically modernize legacy applications with AI-powered analysis and continuous validation.",
+      "cta": "View Showcase → Deep Dive"
+    },
+    "portfolioRationalization": {
+      "title": "Portfolio Rationalization",
+      "description": "Analyze multiple applications to identify overlaps and consolidation opportunities.",
+      "cta": "View Showcase → Deep Dive"
+    },
+    "asimov": {
+      "title": "ASIMOV Legacy Migration",
+      "description": "AI-powered application modernization with autonomous code transformation.",
+      "cta": "View Deep Dive"
+    },
+    "customerService": {
+      "title": "Customer Service AI",
+      "description": "Autonomous support system with self-healing bots and agent augmentation.",
+      "cta": "View Deep Dive"
+    }
+  },
+  "video": {
+    "title": "Building Autonomous Enterprises",
+    "description": "Knowledge Graphs + Agentic AI = Autonomous operations that stay within guardrails. AI agents that understand your business context, relationships, and constraints.",
+    "descriptionMobile": "AI that understands your business.",
+    "fallback": "Your browser does not support the video tag."
+  },
+  "solutionCategories": {
+    "title": "Solutions That Scale With Your Business",
+    "subtitle": "Every solution built on our Knowledge Graph foundation — ensuring consistency, compliance, and continuous improvement as your business evolves.",
+    "engineering": {
+      "title": "Engineering Excellence",
+      "description": "Code analysis, technical debt reduction, migration planning, and architectural optimization.",
+      "point1": "Code Review Automation",
+      "point2": "Dependency Analysis",
+      "point3": "Security Vulnerability Detection"
+    },
+    "operational": {
+      "title": "Operational Intelligence",
+      "description": "Automated support tiers, incident response, and performance optimization.",
+      "point1": "L0/L1/L2 Support Automation",
+      "point2": "Incident Root Cause Analysis",
+      "point3": "Performance Monitoring"
+    },
+    "businessAutomation": {
+      "title": "Business Automation",
+      "description": "Customer onboarding, compliance validation, and documentation generation.",
+      "point1": "B2B Platform Onboarding",
+      "point2": "Compliance Checking",
+      "point3": "Auto-Documentation"
+    },
+    "analytics": {
+      "title": "Intelligent Analytics",
+      "description": "Just-in-time dashboards, natural language reporting, and predictive insights.",
+      "point1": "Natural Language Queries",
+      "point2": "Custom Dashboard Generation",
+      "point3": "Predictive Analytics"
+    },
+    "interfaces": {
+      "title": "Next-Gen Interfaces",
+      "description": "Conversational UI, voice-driven development, and AR/VR visualizations.",
+      "point1": "Conversational Coding",
+      "point2": "Voice Commands",
+      "point3": "Immersive Debugging"
+    },
+    "custom": {
+      "title": "Your Custom Solution",
+      "description": "Have a unique challenge? Let's build a solution together."
+    }
+  },
+  "cta": {
+    "title": "Ready to Transform Your Enterprise?",
+    "subtitle": "Let's discuss how custom AI agents can solve your unique challenges."
+  }
+}
